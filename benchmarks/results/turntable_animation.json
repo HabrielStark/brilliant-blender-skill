@@ -1,0 +1,176 @@
+{
+  "skill_plus_tools": {
+    "task_id": "turntable_animation",
+    "mode": "skill_plus_tools",
+    "pass": true,
+    "visual_score": 100,
+    "technical_score": 100,
+    "runtime_seconds": 11.0,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "neutral"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": {
+      "frame_count": 3,
+      "frames": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png"
+      ],
+      "pairs": [
+        {
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "mean_rgb_delta": 0.1285526156425476,
+          "max_rgb_delta": 0.729411780834198,
+          "mean_luma_delta": 0.1265067309141159,
+          "changed_pixel_ratio": 0.5339506172839507
+        },
+        {
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png",
+          "mean_rgb_delta": 0.1285533457994461,
+          "max_rgb_delta": 0.729411780834198,
+          "mean_luma_delta": 0.1265074461698532,
+          "changed_pixel_ratio": 0.5339506172839507
+        }
+      ],
+      "max_mean_rgb_delta": 0.1285533457994461,
+      "max_changed_pixel_ratio": 0.5339506172839507,
+      "requested_frames": [
+        1,
+        60,
+        120
+      ]
+    },
+    "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "turntable_animation",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 30,
+    "technical_score": 60,
+    "runtime_seconds": 7.1,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": {
+      "frame_count": 0,
+      "pairs": [],
+      "max_mean_rgb_delta": 0.0,
+      "max_changed_pixel_ratio": 0.0,
+      "requested_frames": [
+        1,
+        126,
+        250
+      ]
+    },
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Cylinder'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Cylinder",
+      "score 30 < min 84",
+      "subject objects 1 < min 30",
+      "visible subject objects 0 < min 26",
+      "missing named subject parts: product, ring, dial, indicator, lens, focus, grip, fin",
+      "subject faces 34 < min 1400",
+      "subject modifiers 0 < min 18",
+      "subject materials 0 < min 7",
+      "subject material node count 0 < min 5",
+      "subject procedural materials 0 < min 2",
+      "animation required but no keyframes",
+      "GLB animation clip required but none exported",
+      "keyframed objects 0 < min 10",
+      "animation frame delta 0.0000 < min 0.0060",
+      "animation changed pixel ratio 0.0000 < min 0.0120",
+      "sampled moving objects 0 < min 10",
+      "sampled rotation delta 0.00 < min 3.00"
+    ]
+  },
+  "adversarial_slop_static_product_no_animation_clip": {
+    "task_id": "turntable_animation",
+    "mode": "adversarial_slop_static_product_no_animation_clip",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 9.9,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "dark"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": {
+      "frame_count": 3,
+      "frames": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png"
+      ],
+      "pairs": [
+        {
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
+          "mean_rgb_delta": 0.0,
+          "max_rgb_delta": 0.0,
+          "mean_luma_delta": 0.0,
+          "changed_pixel_ratio": 0.0
+        },
+        {
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png",
+          "mean_rgb_delta": 0.0,
+          "max_rgb_delta": 0.0,
+          "mean_luma_delta": 0.0,
+          "changed_pixel_ratio": 0.0
+        }
+      ],
+      "max_mean_rgb_delta": 0.0,
+      "max_changed_pixel_ratio": 0.0,
+      "requested_frames": [
+        1,
+        126,
+        250
+      ]
+    },
+    "failures": [
+      "render has no discernible silhouette/detail",
+      "score 79 < min 84",
+      "subject objects 1 < min 30",
+      "visible subject objects 1 < min 26",
+      "subject faces 34 < min 1400",
+      "subject modifiers 1 < min 18",
+      "subject materials 1 < min 7",
+      "subject material node count 2 < min 5",
+      "subject procedural materials 0 < min 2",
+      "animation required but no keyframes",
+      "GLB animation clip required but none exported",
+      "keyframed objects 0 < min 10",
+      "animation frame delta 0.0000 < min 0.0060",
+      "animation changed pixel ratio 0.0000 < min 0.0120",
+      "sampled moving objects 0 < min 10",
+      "sampled rotation delta 0.00 < min 3.00"
+    ]
+  }
+}

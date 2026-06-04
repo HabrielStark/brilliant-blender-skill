@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1",
+  "task_id": "product_hero_watch",
+  "brief": "Cinematic 3D product hero of a futuristic watch on a dark reflective surface",
+  "output_mode": "web_asset",
+  "quality_profile": "auto",
+  "max_iterations": 6,
+  "target": {
+    "render_resolution": [1920, 1080],
+    "preview_resolution": [960, 540],
+    "final_format": ["blend", "png", "glb"],
+    "web_runtime": "react-three-fiber"
+  },
+  "style": {
+    "mood": "premium, cinematic, sharp, high contrast",
+    "palette": ["black", "cold blue", "brushed metal", "soft white highlights"],
+    "camera_language": "macro product lens, shallow depth of field",
+    "lighting_language": "large softbox key, rim light, subtle HDRI-style fill"
+  },
+  "constraints": {
+    "no_paid_apis": true,
+    "no_unlicensed_assets": true,
+    "safe_hardware_budget": true,
+    "max_glb_mb": 20,
+    "max_texture_resolution": 2048
+  },
+  "references": [],
+  "success_criteria": {
+    "scene_not_empty": true,
+    "subject_visible": true,
+    "camera_framed": true,
+    "lighting_valid": true,
+    "web_export_loads": true,
+    "visual_score_min": 80
+  },
+  "seed": 42
+}

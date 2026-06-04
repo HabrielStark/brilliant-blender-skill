@@ -1,0 +1,92 @@
+{
+  "skill_plus_tools": {
+    "task_id": "scene_repair",
+    "mode": "skill_plus_tools",
+    "pass": true,
+    "visual_score": 100,
+    "technical_score": 100,
+    "runtime_seconds": 4.8,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_skill_plus_tools\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "warm_red_bias"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": 0.8848720002629435,
+    "animation_frame_proof": null,
+    "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "scene_repair",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 24,
+    "technical_score": 40,
+    "runtime_seconds": 3.8,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Cube'",
+      "object has default/auto name: 'Cube.001'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Cube",
+      "important object has no material: Cube.001",
+      "score 24 < min 84",
+      "subject objects 2 < min 28",
+      "visible subject objects 0 < min 24",
+      "missing named subject parts: repaired, base, panel, accent, handle, hinge, screw, label, tick",
+      "distinct visible named-part objects 0 < min 16",
+      "named-part total coverage 0.0000 < min 0.1600",
+      "subject modifiers 0 < min 13",
+      "subject materials 0 < min 6",
+      "subject material node count 0 < min 5",
+      "subject procedural materials 0 < min 1"
+    ]
+  },
+  "adversarial_slop_renamed_box_no_repair_craft": {
+    "task_id": "scene_repair",
+    "mode": "adversarial_slop_renamed_box_no_repair_craft",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 4.5,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "warm_red_bias"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": 0.8630497822980913,
+    "animation_frame_proof": null,
+    "failures": [
+      "render has no discernible silhouette/detail",
+      "render is too flat for visual acceptance",
+      "score 79 < min 84",
+      "subject objects 1 < min 28",
+      "visible subject objects 1 < min 24",
+      "distinct visible named-part objects 1 < min 16",
+      "subject modifiers 1 < min 13",
+      "subject materials 1 < min 6",
+      "subject material node count 2 < min 5",
+      "subject procedural materials 0 < min 1"
+    ]
+  }
+}

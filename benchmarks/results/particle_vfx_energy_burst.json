@@ -1,0 +1,110 @@
+{
+  "skill_plus_tools": {
+    "task_id": "particle_vfx_energy_burst",
+    "mode": "skill_plus_tools",
+    "pass": true,
+    "visual_score": 97,
+    "technical_score": 100,
+    "runtime_seconds": 5.4,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\particle_vfx_energy_burst_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\particle_vfx_energy_burst_skill_plus_tools\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "dark",
+      "blue_cyan_bias",
+      "dark_blue_cyan"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "particle_vfx_energy_burst",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 33,
+    "technical_score": 60,
+    "runtime_seconds": 3.7,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\particle_vfx_energy_burst_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Sphere'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Sphere",
+      "score 33 < min 86",
+      "subject objects 1 < min 46",
+      "visible subject objects 0 < min 36",
+      "subject depth layers 1 < min 4",
+      "missing named subject parts: core, spark, trail, ring, particle",
+      "subject faces 512 < min 1200",
+      "subject modifiers 0 < min 38",
+      "smooth subject objects 0 < min 5",
+      "craft detail objects 0 < min 70",
+      "missing craft roles: energy_streak, surface_microdetail",
+      "curved detail objects 0 < min 18",
+      "subject materials 0 < min 4",
+      "subject material node count 0 < min 5",
+      "subject procedural materials 0 < min 2",
+      "missing subject material features: noise_bump, noise_color_ramp",
+      "emissive materials 0 < min 3",
+      "particle systems 0 < min 1",
+      "total particles 0 < min 150"
+    ]
+  },
+  "adversarial_slop_named_glow_no_particles": {
+    "task_id": "particle_vfx_energy_burst",
+    "mode": "adversarial_slop_named_glow_no_particles",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 4.6,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "dark",
+      "blue_cyan_bias",
+      "dark_blue_cyan"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "dark render lacks readable subject detail",
+      "score 79 < min 86",
+      "subject objects 2 < min 46",
+      "visible subject objects 2 < min 36",
+      "subject depth layers 1 < min 4",
+      "subject faces 1088 < min 1200",
+      "subject modifiers 0 < min 38",
+      "smooth subject objects 2 < min 5",
+      "craft detail objects 0 < min 70",
+      "missing craft roles: energy_streak, surface_microdetail",
+      "curved detail objects 2 < min 18",
+      "subject materials 1 < min 4",
+      "subject material node count 2 < min 5",
+      "subject procedural materials 0 < min 2",
+      "missing subject material features: noise_bump, noise_color_ramp",
+      "emissive materials 1 < min 3",
+      "particle systems 0 < min 1",
+      "total particles 0 < min 150"
+    ]
+  }
+}

@@ -1,0 +1,255 @@
+"""Web integration code generation (pure Python; SRS 14.4 / 14.5 / 42).
+
+Generates a vanilla three.js viewer, a React-Three-Fiber component, a Drei
+ScrollControls scroll variant and a GSAP ScrollTrigger variant, plus a
+``camera_path.json`` sampled from a scroll timeline. No network, no build step
+required to *generate*; the files are validated separately by the Node tooling.
+"""
+from __future__ import annotations
+
+import json
+import posixpath
+import re
+from html import escape
+from pathlib import Path
+
+from .workspace import WorkspaceResolver
+
+_GLB_ASSET_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._/-]*\.glb$")
+
+
+def _safe_glb_name(glb_name: str) -> str:
+    """Return a safe relative GLB asset path for generated browser code."""
+    name = str(glb_name).replace("\\", "/")
+    normalized = posixpath.normpath(name)
+    if (
+        not name
+        or name.startswith(("/", "./"))
+        or "://" in name
+        or normalized in ("", ".")
+        or normalized.startswith("../")
+        or normalized == ".."
+        or not _GLB_ASSET_RE.fullmatch(normalized)
+    ):
+        raise ValueError(f"invalid GLB asset name: {glb_name!r}")
+    return normalized
+
+
+def _js_string(value: str) -> str:
+    return json.dumps(value)
+
+
+def camera_path_json(segments: list[dict], samples: list[dict] | None = None) -> dict:
+    """Build the camera path document mapping scroll 0..1 to camera state."""
+    return {
+        "schema": "camera_path/0.1",
+        "segments": segments,
+        "samples": samples or [],
+        "note": "scroll 0..1 maps to camera position/quaternion or animation time",
+    }
+
+
+def densify_camera_samples(samples: list[dict], steps_per_segment: int = 8) -> list[dict]:
+    """Linearly interpolate camera samples so scroll motion is smooth enough to verify."""
+    if len(samples) < 2:
+        return list(samples)
+    steps = max(2, int(steps_per_segment))
+    dense: list[dict] = []
+    for idx, (a, b) in enumerate(zip(samples, samples[1:])):
+        for step in range(steps):
+            if idx and step == 0:
+                continue
+            t = step / steps
+            item: dict = {"t": (idx + t) / (len(samples) - 1)}
+            for key in ("position", "target"):
+                if key in a and key in b:
+                    av = [float(v) for v in a[key]]
+                    bv = [float(v) for v in b[key]]
+                    item[key] = [av[i] + (bv[i] - av[i]) * t for i in range(min(len(av), len(bv)))]
+            dense.append(item)
+    last = dict(samples[-1])
+    last.setdefault("t", 1.0)
+    dense.append(last)
+    return dense
+
+
+def threejs_viewer_html(glb_name: str = "scene.glb", title: str = "3D Scene") -> str:
+    glb = _js_string(_safe_glb_name(glb_name))
+    safe_title = escape(title, quote=True)
+    return f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>{safe_title}</title>
+<style>html,body{{margin:0;height:100%;background:#08090c}}#c{{width:100vw;height:100vh;display:block}}
+#poster{{position:fixed;inset:0;object-fit:cover;width:100%;height:100%}}</style>
+</head><body>
+<canvas id="c"></canvas>
+<script type="importmap">{{"imports":{{"three":"https://unpkg.com/three@0.160.0/build/three.module.js",
+"three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {{ GLTFLoader }} from 'three/addons/loaders/GLTFLoader.js';
+// Performance budget: keep draw calls low; dispose on unmount.
+const canvas=document.getElementById('c');
+const renderer=new THREE.WebGLRenderer({{canvas,antialias:true,alpha:true}});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+const scene=new THREE.Scene();
+let camera=new THREE.PerspectiveCamera(50,innerWidth/innerHeight,0.1,100);
+camera.position.set(0,1,4);
+scene.add(new THREE.HemisphereLight(0xffffff,0x222233,1.0));
+let mixer=null; const clock=new THREE.Clock();
+new GLTFLoader().load({glb},(g)=>{{
+  scene.add(g.scene);
+  if(g.cameras&&g.cameras.length) camera=g.cameras[0];
+  if(g.animations&&g.animations.length){{mixer=new THREE.AnimationMixer(g.scene);
+    g.animations.forEach(c=>mixer.clipAction(c).play());}}
+}},undefined,(e)=>console.error('GLB load error',e));
+function resize(){{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth,innerHeight);}}
+addEventListener('resize',resize);resize();
+(function loop(){{requestAnimationFrame(loop);if(mixer)mixer.update(clock.getDelta());
+  renderer.render(scene,camera);}})();
+</script></body></html>
+"""
+
+
+def r3f_component(glb_name: str = "scene.glb", component: str = "Scene") -> str:
+    asset = _safe_glb_name(glb_name)
+    public_asset = _js_string(f"/{asset}")
+    return f"""import {{ Suspense }} from 'react';
+import {{ Canvas }} from '@react-three/fiber';
+import {{ useGLTF, Environment, OrbitControls }} from '@react-three/drei';
+
+// Generated by blender-cinematic-agent-skill. Place {asset} in /public.
+function Model() {{
+  const {{ scene, animations }} = useGLTF({public_asset});
+  return <primitive object={{scene}} />;
+}}
+useGLTF.preload({public_asset});
+
+export default function {component}() {{
+  return (
+    <Canvas dpr={{[1, 2]}} camera={{{{ position: [0, 1, 4], fov: 50 }}}}>
+      <Suspense fallback={{null}}>
+        <ambientLight intensity={{0.6}} />
+        <Model />
+        <Environment preset="studio" />
+        <OrbitControls makeDefault />
+      </Suspense>
+    </Canvas>
+  );
+}}
+"""
+
+
+def r3f_scroll_component(glb_name: str = "scene.glb", pages: float = 4.0) -> str:
+    asset = _safe_glb_name(glb_name)
+    public_asset = _js_string(f"/{asset}")
+    return f"""import {{ Suspense, useRef }} from 'react';
+import {{ Canvas, useFrame }} from '@react-three/fiber';
+import {{ useGLTF, ScrollControls, useScroll }} from '@react-three/drei';
+import cameraPath from './camera_path.json';
+
+function sampleCamera(t) {{
+  const segs = cameraPath.samples;
+  if (!segs.length) return null;
+  const i = Math.min(segs.length - 1, Math.floor(t * (segs.length - 1)));
+  return segs[i];
+}}
+
+function Rig({{ children }}) {{
+  const scroll = useScroll();
+  useFrame((state) => {{
+    const t = scroll.offset; // 0..1 (respects reduced-motion via prefers-reduced-motion)
+    const s = sampleCamera(t);
+    if (s && s.position) state.camera.position.set(...s.position);
+    if (s && s.target) state.camera.lookAt(...s.target);
+  }});
+  return children;
+}}
+
+function Model() {{ const {{ scene }} = useGLTF({public_asset}); return <primitive object={{scene}} />; }}
+useGLTF.preload({public_asset});
+
+export default function ScrollHero() {{
+  const reduced = typeof window !== 'undefined' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  return (
+    <Canvas dpr={{[1, 2]}} camera={{{{ position: [0, 1, 4], fov: 50 }}}}>
+      <ambientLight intensity={{0.6}} />
+      <Suspense fallback={{null}}>
+        <ScrollControls pages={{{pages}}} damping={{reduced ? 0 : 0.2}}>
+          <Rig><Model /></Rig>
+        </ScrollControls>
+      </Suspense>
+    </Canvas>
+  );
+}}
+"""
+
+
+def gsap_scrolltrigger_js(glb_name: str = "scene.glb") -> str:
+    glb = _js_string(_safe_glb_name(glb_name))
+    return f"""// GSAP ScrollTrigger camera timeline (scrubbed). Requires gsap + ScrollTrigger.
+import * as THREE from 'three';
+import {{ GLTFLoader }} from 'three/addons/loaders/GLTFLoader.js';
+import gsap from 'gsap';
+import {{ ScrollTrigger }} from 'gsap/ScrollTrigger';
+import cameraPath from './camera_path.json';
+gsap.registerPlugin(ScrollTrigger);
+
+export function initScrollScene(canvas, {{ glb = {glb} }} = {{}}) {{
+  const renderer = new THREE.WebGLRenderer({{ canvas, antialias: true, alpha: true }});
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(50, innerWidth / innerHeight, 0.1, 100);
+  camera.position.set(0, 1, 4);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x222233, 1.0));
+  new GLTFLoader().load(glb, (g) => scene.add(g.scene));
+  const proxy = {{ t: 0 }};
+  gsap.to(proxy, {{ t: 1, ease: 'none',
+    scrollTrigger: {{ trigger: '#hero', start: 'top top', end: 'bottom bottom', scrub: true }},
+    onUpdate() {{
+      const s = cameraPath.samples;
+      if (!s.length) return;
+      const k = s[Math.min(s.length - 1, Math.floor(proxy.t * (s.length - 1)))];
+      if (k.position) camera.position.set(...k.position);
+      if (k.target) camera.lookAt(...k.target);
+    }} }});
+  function resize() {{ camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
+    renderer.setSize(innerWidth, innerHeight); }}
+  addEventListener('resize', resize); resize();
+  (function loop() {{ requestAnimationFrame(loop); renderer.render(scene, camera); }})();
+}}
+"""
+
+
+def generate_integration(
+    out_dir: str | Path,
+    resolver=None,
+    glb_name: str = "scene.glb",
+    runtime: str = "react-three-fiber",
+    scroll_segments: list[dict] | None = None,
+    scroll_samples: list[dict] | None = None,
+    pages: float = 4.0,
+) -> dict[str, str]:
+    """Write integration files into ``out_dir``; return {logical_name: path}."""
+    out = Path(out_dir).expanduser().resolve()
+    writer = resolver or WorkspaceResolver([out])
+    glb_name = _safe_glb_name(glb_name)
+
+    def _write(rel: str, content: str) -> str:
+        target = out / rel
+        return str(writer.write_text(target, content))
+
+    written: dict[str, str] = {}
+    written["threejs_html"] = _write("index.html", threejs_viewer_html(glb_name))
+    if runtime in ("react-three-fiber", "three"):
+        written["r3f_component"] = _write("Scene.jsx", r3f_component(glb_name))
+    if scroll_segments is not None:
+        written["camera_path"] = _write(
+            "camera_path.json",
+            json.dumps(camera_path_json(scroll_segments, densify_camera_samples(scroll_samples or [])), indent=2),
+        )
+        written["r3f_scroll"] = _write("ScrollHero.jsx", r3f_scroll_component(glb_name, pages))
+        written["gsap_scroll"] = _write("scroll_scene.js", gsap_scrolltrigger_js(glb_name))
+    return written

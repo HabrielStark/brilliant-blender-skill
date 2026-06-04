@@ -1,0 +1,101 @@
+{
+  "skill_plus_tools": {
+    "task_id": "organic_soft_surface_study",
+    "mode": "skill_plus_tools",
+    "pass": true,
+    "visual_score": 97,
+    "technical_score": 100,
+    "runtime_seconds": 5.3,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_skill_plus_tools\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "warm_red_bias"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "organic_soft_surface_study",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 33,
+    "technical_score": 60,
+    "runtime_seconds": 3.8,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Sphere'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Sphere",
+      "score 33 < min 86",
+      "subject objects 1 < min 24",
+      "visible subject objects 0 < min 22",
+      "subject depth layers 1 < min 4",
+      "missing named subject parts: organic, fluted, petal, leaf, fold, dew, stem",
+      "subject faces 512 < min 1600",
+      "subject modifiers 0 < min 42",
+      "smooth subject objects 0 < min 30",
+      "craft detail objects 0 < min 80",
+      "missing craft roles: organic_surface, surface_microdetail",
+      "curved detail objects 0 < min 30",
+      "subject materials 0 < min 6",
+      "subject material node count 0 < min 5",
+      "subject procedural materials 0 < min 4",
+      "missing subject material features: noise_bump, noise_color_ramp, wave_bump"
+    ]
+  },
+  "adversarial_slop_keyword_blob_without_surface_craft": {
+    "task_id": "organic_soft_surface_study",
+    "mode": "adversarial_slop_keyword_blob_without_surface_craft",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 4.5,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "warm_red_bias"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "render has no discernible silhouette/detail",
+      "render is too flat for visual acceptance",
+      "score 79 < min 86",
+      "subject objects 1 < min 24",
+      "visible subject objects 1 < min 22",
+      "subject depth layers 1 < min 4",
+      "subject faces 512 < min 1600",
+      "subject modifiers 0 < min 42",
+      "smooth subject objects 1 < min 30",
+      "craft detail objects 0 < min 80",
+      "missing craft roles: organic_surface, surface_microdetail",
+      "curved detail objects 1 < min 30",
+      "subject materials 1 < min 6",
+      "subject material node count 2 < min 5",
+      "subject procedural materials 0 < min 4",
+      "missing subject material features: noise_bump, noise_color_ramp, wave_bump"
+    ]
+  }
+}

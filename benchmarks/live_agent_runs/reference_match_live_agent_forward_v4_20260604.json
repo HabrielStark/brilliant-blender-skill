@@ -1,0 +1,1613 @@
+{
+  "id": "reference_match_live_agent_forward_v4_20260604",
+  "scenario_id": "reference_match_prompt",
+  "source_agent": "019e91a3-d875-74e3-a60d-4167625f6f15",
+  "model": "inherited-codex-subagent",
+  "created_at": "2026-06-04",
+  "raw_output": {
+    "metadata": {
+      "claim_level": "live_agent_raw_output",
+      "agent_label": "forward-test-subagent-reference-v4",
+      "skill_path": "C:\\Users\\User\\Desktop\\blenderskill\\SKILL.md",
+      "generated_at_note": "Generated on 2026-06-04 from the updated Blender Cinematic Skill as structured recipe output only; Blender was not run.",
+      "reference_image_note": "benchmarks/references/reference_match.png was provided to the live agent"
+    },
+    "scenario_id": "reference_match_prompt",
+    "run_id": "reference_match_live_agent_forward_v4_20260604",
+    "prompt": "Match the supplied reference: a dark premium product on a reflective surface with layered body anatomy, smoked inset panels, blue rim light, crisp white edge highlights, lens detail, sensor, side grooves, bevels, and contact reflection.",
+    "recipe": {
+      "operations": [
+        {
+          "op": "ensure_standard_collections"
+        },
+        {
+          "op": "set_scene_metadata",
+          "data": {
+            "task_type": "reference_match",
+            "reference_observation": "Attached reference is a nearly black frontal horizontal product on a dark navy background, with sparse blue and white strokes: lens on the right, small sensor on the left, stacked left-side grooves, thin top strip, bottom reflection dashes, blue right rim, crisp white top and bottom edge highlights.",
+            "composition_contract": "Preserve dark silhouette, sparse accents, lens-right/sensor-left placement, visible blue rim, white bevel edges, reflective floor dashes, and low brightness/high contrast."
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v4_nearly_black_absorptive_body",
+            "preset": "metallic_roughness_pbr",
+            "pbr": {
+              "base_color": [
+                0.003,
+                0.004,
+                0.006,
+                1.0
+              ],
+              "metallic": 0.18,
+              "roughness": 0.42,
+              "clearcoat": 0.22
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 46.0,
+              "bump_strength": 0.012,
+              "edge_wear": "subtle",
+              "roughness_variation": {
+                "noise_scale": 72.0,
+                "detail": 9,
+                "min_roughness": 0.32,
+                "max_roughness": 0.58
+              }
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v4_smoked_inset_panel",
+            "preset": "frosted_glass",
+            "pbr": {
+              "base_color": [
+                0.001,
+                0.004,
+                0.009,
+                0.72
+              ],
+              "metallic": 0.0,
+              "roughness": 0.2,
+              "clearcoat": 0.42,
+              "alpha": 0.74,
+              "transmission": 0.22
+            },
+            "procedural": {
+              "scanlines": true,
+              "scanline_scale": 110.0,
+              "scanline_strength": 0.08,
+              "roughness_variation": {
+                "noise_scale": 88.0,
+                "detail": 7,
+                "min_roughness": 0.15,
+                "max_roughness": 0.34
+              }
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v4_blue_rim_emission",
+            "preset": "emissive_neon",
+            "pbr": {
+              "base_color": [
+                0.04,
+                0.28,
+                1.0,
+                1.0
+              ],
+              "roughness": 0.18,
+              "emission_color": [
+                0.02,
+                0.22,
+                1.0,
+                1.0
+              ],
+              "emission_strength": 1.65
+            },
+            "procedural": {
+              "scanlines": true,
+              "scanline_scale": 64.0,
+              "scanline_strength": 0.04
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v4_dim_blue_groove",
+            "preset": "emissive_neon",
+            "pbr": {
+              "base_color": [
+                0.01,
+                0.09,
+                0.24,
+                1.0
+              ],
+              "roughness": 0.36,
+              "emission_color": [
+                0.0,
+                0.09,
+                0.42,
+                1.0
+              ],
+              "emission_strength": 0.55
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v4_crisp_white_bevel_light",
+            "preset": "emissive_neon",
+            "pbr": {
+              "base_color": [
+                0.72,
+                0.86,
+                1.0,
+                1.0
+              ],
+              "roughness": 0.18,
+              "emission_color": [
+                0.72,
+                0.9,
+                1.0,
+                1.0
+              ],
+              "emission_strength": 1.18
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v4_right_lens_blue_glass",
+            "preset": "glass_clear",
+            "pbr": {
+              "base_color": [
+                0.005,
+                0.028,
+                0.065,
+                0.82
+              ],
+              "roughness": 0.08,
+              "clearcoat": 0.75,
+              "alpha": 0.82,
+              "transmission": 0.42,
+              "ior": 1.52,
+              "emission_color": [
+                0.0,
+                0.08,
+                0.32,
+                1.0
+              ],
+              "emission_strength": 0.22
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 95.0,
+              "bump_strength": 0.006
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v4_black_lens_core",
+            "preset": "glass_clear",
+            "pbr": {
+              "base_color": [
+                0.0,
+                0.001,
+                0.003,
+                0.92
+              ],
+              "roughness": 0.04,
+              "clearcoat": 0.9,
+              "alpha": 0.92,
+              "transmission": 0.18,
+              "ior": 1.6
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v4_reflective_navy_floor",
+            "preset": "glossy_plastic",
+            "pbr": {
+              "base_color": [
+                0.006,
+                0.011,
+                0.028,
+                1.0
+              ],
+              "metallic": 0.0,
+              "roughness": 0.18,
+              "clearcoat": 0.55
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 34.0,
+              "bump_strength": 0.004,
+              "roughness_variation": {
+                "noise_scale": 60.0,
+                "detail": 6,
+                "min_roughness": 0.12,
+                "max_roughness": 0.3
+              }
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v4_soft_contact_reflection",
+            "preset": "water_simple",
+            "pbr": {
+              "base_color": [
+                0.015,
+                0.03,
+                0.09,
+                0.45
+              ],
+              "roughness": 0.16,
+              "alpha": 0.46,
+              "clearcoat": 0.7,
+              "transmission": 0.12
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v4_deep_navy_background",
+            "preset": "matte_plastic",
+            "pbr": {
+              "base_color": [
+                0.006,
+                0.011,
+                0.025,
+                1.0
+              ],
+              "roughness": 0.82
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 28.0,
+              "bump_strength": 0.002
+            }
+          }
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "plane",
+          "name": "v4_dark_reflective_floor",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            3.6,
+            2.2,
+            1.0
+          ],
+          "collection": "ENVIRONMENT"
+        },
+        {
+          "op": "assign_material",
+          "target": "v4_dark_reflective_floor",
+          "material": "v4_reflective_navy_floor"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cube",
+          "name": "v4_dark_navy_background_wall",
+          "location": [
+            0.0,
+            0.76,
+            0.82
+          ],
+          "scale": [
+            3.8,
+            0.035,
+            1.65
+          ],
+          "collection": "ENVIRONMENT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v4_dark_navy_background_wall",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v4_dark_navy_background_wall",
+          "material": "v4_deep_navy_background"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v4_broad_soft_contact_reflection_under_body",
+          "location": [
+            0.0,
+            -0.35,
+            0.012
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "size": [
+            1.45,
+            0.22
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_soft_contact_reflection",
+          "role": "contact_reflection"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cube",
+          "name": "v4_lower_rounded_black_base_shadow",
+          "location": [
+            0.0,
+            -0.28,
+            0.28
+          ],
+          "scale": [
+            1.18,
+            0.22,
+            0.095
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v4_lower_rounded_black_base_shadow",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v4_lower_rounded_black_base_shadow",
+          "material": "v4_nearly_black_absorptive_body"
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "v4_lower_rounded_black_base_shadow",
+          "width": 0.055,
+          "segments": 12
+        },
+        {
+          "op": "add_modifier",
+          "target": "v4_lower_rounded_black_base_shadow",
+          "modifier": "WEIGHTED_NORMAL",
+          "params": {
+            "keep_sharp": true
+          }
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cube",
+          "name": "v4_main_flat_nearly_black_body_shell",
+          "location": [
+            0.0,
+            -0.31,
+            0.49
+          ],
+          "scale": [
+            1.04,
+            0.16,
+            0.31
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v4_main_flat_nearly_black_body_shell",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v4_main_flat_nearly_black_body_shell",
+          "material": "v4_nearly_black_absorptive_body"
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "v4_main_flat_nearly_black_body_shell",
+          "width": 0.045,
+          "segments": 10
+        },
+        {
+          "op": "add_modifier",
+          "target": "v4_main_flat_nearly_black_body_shell",
+          "modifier": "WEIGHTED_NORMAL",
+          "params": {
+            "keep_sharp": true
+          }
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cube",
+          "name": "v4_inner_smoked_front_inset_panel",
+          "location": [
+            0.03,
+            -0.406,
+            0.53
+          ],
+          "scale": [
+            0.84,
+            0.016,
+            0.205
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v4_inner_smoked_front_inset_panel",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v4_inner_smoked_front_inset_panel",
+          "material": "v4_smoked_inset_panel"
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "v4_inner_smoked_front_inset_panel",
+          "width": 0.018,
+          "segments": 5
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cube",
+          "name": "v4_top_raised_black_strip_body",
+          "location": [
+            0.0,
+            -0.34,
+            0.82
+          ],
+          "scale": [
+            0.88,
+            0.065,
+            0.035
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v4_top_raised_black_strip_body",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v4_top_raised_black_strip_body",
+          "material": "v4_nearly_black_absorptive_body"
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "v4_top_raised_black_strip_body",
+          "width": 0.025,
+          "segments": 8
+        },
+        {
+          "op": "add_modifier",
+          "target": "v4_top_raised_black_strip_body",
+          "modifier": "WEIGHTED_NORMAL",
+          "params": {
+            "keep_sharp": true
+          }
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v4_crisp_white_top_bevel_highlight_strip",
+          "points": [
+            [
+              -0.72,
+              -0.425,
+              0.852
+            ],
+            [
+              -0.18,
+              -0.425,
+              0.852
+            ],
+            [
+              0.15,
+              -0.425,
+              0.858
+            ],
+            [
+              0.75,
+              -0.425,
+              0.858
+            ]
+          ],
+          "bevel_depth": 0.006,
+          "resolution": 2,
+          "collection": "SUBJECT",
+          "material": "v4_crisp_white_bevel_light",
+          "parent": "v4_top_raised_black_strip_body",
+          "role": "bevel_highlight"
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v4_thin_blue_top_panel_line",
+          "points": [
+            [
+              -0.58,
+              -0.427,
+              0.742
+            ],
+            [
+              0.53,
+              -0.427,
+              0.742
+            ]
+          ],
+          "bevel_depth": 0.0045,
+          "resolution": 1,
+          "collection": "SUBJECT",
+          "material": "v4_blue_rim_emission",
+          "parent": "v4_inner_smoked_front_inset_panel",
+          "role": "top_strip"
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v4_crisp_white_bottom_bevel_edge",
+          "points": [
+            [
+              -0.58,
+              -0.43,
+              0.35
+            ],
+            [
+              0.58,
+              -0.43,
+              0.35
+            ]
+          ],
+          "bevel_depth": 0.006,
+          "resolution": 1,
+          "collection": "SUBJECT",
+          "material": "v4_crisp_white_bevel_light",
+          "parent": "v4_main_flat_nearly_black_body_shell",
+          "role": "bevel_highlight"
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v4_right_edge_blue_rim_light",
+          "points": [
+            [
+              0.94,
+              -0.43,
+              0.35
+            ],
+            [
+              0.9,
+              -0.43,
+              0.52
+            ],
+            [
+              0.86,
+              -0.43,
+              0.73
+            ]
+          ],
+          "bevel_depth": 0.009,
+          "resolution": 4,
+          "collection": "SUBJECT",
+          "material": "v4_blue_rim_emission",
+          "parent": "v4_main_flat_nearly_black_body_shell",
+          "role": "blue_rim_light"
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v4_right_lower_blue_bevel_kick",
+          "points": [
+            [
+              0.72,
+              -0.432,
+              0.35
+            ],
+            [
+              0.93,
+              -0.432,
+              0.35
+            ]
+          ],
+          "bevel_depth": 0.005,
+          "resolution": 1,
+          "collection": "SUBJECT",
+          "material": "v4_blue_rim_emission",
+          "parent": "v4_main_flat_nearly_black_body_shell",
+          "role": "bevel_highlight"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "torus",
+          "name": "v4_right_lens_outer_blue_bevel_ring",
+          "location": [
+            0.48,
+            -0.446,
+            0.54
+          ],
+          "rotation": [
+            1.5708,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.205,
+            0.205,
+            0.032
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v4_right_lens_outer_blue_bevel_ring",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v4_right_lens_outer_blue_bevel_ring",
+          "material": "v4_blue_rim_emission"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v4_right_lens_outer_blue_bevel_ring",
+          "smooth": true
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "torus",
+          "name": "v4_right_lens_inner_black_bevel_ring",
+          "location": [
+            0.48,
+            -0.452,
+            0.54
+          ],
+          "rotation": [
+            1.5708,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.155,
+            0.155,
+            0.02
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v4_right_lens_inner_black_bevel_ring",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v4_right_lens_inner_black_bevel_ring",
+          "material": "v4_nearly_black_absorptive_body"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v4_right_lens_inner_black_bevel_ring",
+          "smooth": true
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cylinder",
+          "name": "v4_right_lens_blue_glass_disc",
+          "location": [
+            0.48,
+            -0.463,
+            0.54
+          ],
+          "rotation": [
+            1.5708,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.135,
+            0.135,
+            0.018
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v4_right_lens_blue_glass_disc",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v4_right_lens_blue_glass_disc",
+          "material": "v4_right_lens_blue_glass"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v4_right_lens_blue_glass_disc",
+          "smooth": true
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cylinder",
+          "name": "v4_right_lens_black_core_disc",
+          "location": [
+            0.475,
+            -0.476,
+            0.56
+          ],
+          "rotation": [
+            1.5708,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.078,
+            0.078,
+            0.012
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v4_right_lens_black_core_disc",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v4_right_lens_black_core_disc",
+          "material": "v4_black_lens_core"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v4_right_lens_black_core_disc",
+          "smooth": true
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "uv_sphere",
+          "name": "v4_right_lens_crescent_white_glint",
+          "location": [
+            0.43,
+            -0.486,
+            0.61
+          ],
+          "scale": [
+            0.027,
+            0.007,
+            0.027
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v4_right_lens_crescent_white_glint",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v4_right_lens_crescent_white_glint",
+          "material": "v4_crisp_white_bevel_light"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v4_right_lens_crescent_white_glint",
+          "smooth": true
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v4_right_lens_lower_blue_arc_glint",
+          "points": [
+            [
+              0.39,
+              -0.488,
+              0.47
+            ],
+            [
+              0.48,
+              -0.49,
+              0.44
+            ],
+            [
+              0.59,
+              -0.488,
+              0.48
+            ]
+          ],
+          "bevel_depth": 0.0055,
+          "resolution": 8,
+          "collection": "SUBJECT",
+          "material": "v4_blue_rim_emission",
+          "parent": "v4_right_lens_blue_glass_disc",
+          "role": "lens_glint"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "torus",
+          "name": "v4_left_sensor_blue_bevel_ring",
+          "location": [
+            -0.52,
+            -0.452,
+            0.59
+          ],
+          "rotation": [
+            1.5708,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.085,
+            0.085,
+            0.016
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v4_left_sensor_blue_bevel_ring",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v4_left_sensor_blue_bevel_ring",
+          "material": "v4_blue_rim_emission"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v4_left_sensor_blue_bevel_ring",
+          "smooth": true
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cylinder",
+          "name": "v4_left_sensor_glass_disc",
+          "location": [
+            -0.52,
+            -0.464,
+            0.59
+          ],
+          "rotation": [
+            1.5708,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.055,
+            0.055,
+            0.012
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v4_left_sensor_glass_disc",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v4_left_sensor_glass_disc",
+          "material": "v4_right_lens_blue_glass"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v4_left_sensor_glass_disc",
+          "smooth": true
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "uv_sphere",
+          "name": "v4_left_sensor_white_dot_glint",
+          "location": [
+            -0.553,
+            -0.482,
+            0.626
+          ],
+          "scale": [
+            0.018,
+            0.006,
+            0.018
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v4_left_sensor_white_dot_glint",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v4_left_sensor_white_dot_glint",
+          "material": "v4_crisp_white_bevel_light"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v4_left_sensor_white_dot_glint",
+          "smooth": true
+        },
+        {
+          "op": "create_linear_markers",
+          "name_prefix": "v4_left_side_groove_blue_tick",
+          "start": [
+            -0.82,
+            -0.44,
+            0.39
+          ],
+          "step": [
+            0.0,
+            0.0,
+            0.045
+          ],
+          "count": 7,
+          "size": [
+            0.105,
+            0.01,
+            0.006
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_dim_blue_groove",
+          "parent": "v4_main_flat_nearly_black_body_shell",
+          "role": "side_groove"
+        },
+        {
+          "op": "create_linear_markers",
+          "name_prefix": "v4_left_inner_short_smoked_groove",
+          "start": [
+            -0.7,
+            -0.443,
+            0.43
+          ],
+          "step": [
+            0.0,
+            0.0,
+            0.05
+          ],
+          "count": 4,
+          "size": [
+            0.065,
+            0.009,
+            0.005
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_smoked_inset_panel",
+          "parent": "v4_main_flat_nearly_black_body_shell",
+          "role": "side_groove"
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v4_left_face_white_lower_bevel_fragment",
+          "points": [
+            [
+              -0.77,
+              -0.431,
+              0.35
+            ],
+            [
+              -0.61,
+              -0.431,
+              0.35
+            ]
+          ],
+          "bevel_depth": 0.0045,
+          "resolution": 1,
+          "collection": "SUBJECT",
+          "material": "v4_crisp_white_bevel_light",
+          "parent": "v4_main_flat_nearly_black_body_shell",
+          "role": "bevel_highlight"
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v4_left_upper_dim_blue_bevel_fragment",
+          "points": [
+            [
+              -0.9,
+              -0.431,
+              0.61
+            ],
+            [
+              -0.86,
+              -0.431,
+              0.51
+            ]
+          ],
+          "bevel_depth": 0.005,
+          "resolution": 3,
+          "collection": "SUBJECT",
+          "material": "v4_blue_rim_emission",
+          "parent": "v4_main_flat_nearly_black_body_shell",
+          "role": "bevel_highlight"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v4_smoked_right_side_inset_slope",
+          "location": [
+            0.78,
+            -0.438,
+            0.52
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.08
+          ],
+          "size": [
+            0.08,
+            0.34
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_smoked_inset_panel",
+          "parent": "v4_main_flat_nearly_black_body_shell",
+          "bevel_width": 0.006,
+          "role": "smoked_inset_panel"
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v4_right_side_blue_outer_bevel_stroke",
+          "points": [
+            [
+              0.83,
+              -0.447,
+              0.38
+            ],
+            [
+              0.81,
+              -0.447,
+              0.55
+            ],
+            [
+              0.78,
+              -0.447,
+              0.73
+            ]
+          ],
+          "bevel_depth": 0.006,
+          "resolution": 5,
+          "collection": "SUBJECT",
+          "material": "v4_blue_rim_emission",
+          "parent": "v4_smoked_right_side_inset_slope",
+          "role": "blue_rim_light"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v4_top_black_cap_shadow_under_strip",
+          "location": [
+            0.0,
+            -0.438,
+            0.785
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "size": [
+            0.86,
+            0.028
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_smoked_inset_panel",
+          "parent": "v4_top_raised_black_strip_body",
+          "bevel_width": 0.004,
+          "role": "top_strip"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v4_bottom_white_reflection_dash_01",
+          "location": [
+            -0.5,
+            -0.39,
+            0.16
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "size": [
+            0.095,
+            0.014
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_crisp_white_bevel_light",
+          "role": "contact_reflection"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v4_bottom_white_reflection_dash_02",
+          "location": [
+            -0.27,
+            -0.39,
+            0.16
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "size": [
+            0.095,
+            0.014
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_crisp_white_bevel_light",
+          "role": "contact_reflection"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v4_bottom_white_reflection_dash_03",
+          "location": [
+            -0.04,
+            -0.39,
+            0.16
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "size": [
+            0.095,
+            0.014
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_crisp_white_bevel_light",
+          "role": "contact_reflection"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v4_bottom_white_reflection_dash_04",
+          "location": [
+            0.19,
+            -0.39,
+            0.16
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "size": [
+            0.095,
+            0.014
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_crisp_white_bevel_light",
+          "role": "contact_reflection"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v4_bottom_white_reflection_dash_05",
+          "location": [
+            0.42,
+            -0.39,
+            0.16
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "size": [
+            0.095,
+            0.014
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_crisp_white_bevel_light",
+          "role": "contact_reflection"
+        },
+        {
+          "op": "create_linear_markers",
+          "name_prefix": "v4_lower_blue_reflection_dash",
+          "start": [
+            -0.42,
+            -0.43,
+            0.105
+          ],
+          "step": [
+            0.26,
+            0.0,
+            0.0
+          ],
+          "count": 4,
+          "size": [
+            0.095,
+            0.012,
+            0.006
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_blue_rim_emission",
+          "role": "contact_reflection"
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v4_underbody_faint_blue_bevel_reflection",
+          "points": [
+            [
+              -0.55,
+              -0.43,
+              0.22
+            ],
+            [
+              -0.14,
+              -0.43,
+              0.205
+            ],
+            [
+              0.34,
+              -0.43,
+              0.21
+            ],
+            [
+              0.64,
+              -0.43,
+              0.225
+            ]
+          ],
+          "bevel_depth": 0.0035,
+          "resolution": 4,
+          "collection": "SUBJECT",
+          "material": "v4_dim_blue_groove",
+          "role": "contact_reflection"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v4_right_lens_black_occlusion_patch",
+          "location": [
+            0.52,
+            -0.489,
+            0.585
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.55
+          ],
+          "size": [
+            0.07,
+            0.034
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_nearly_black_absorptive_body",
+          "parent": "v4_right_lens_black_core_disc",
+          "bevel_width": 0.002,
+          "role": "lens_detail"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v4_left_sensor_black_occlusion_edge",
+          "location": [
+            -0.49,
+            -0.486,
+            0.606
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.6
+          ],
+          "size": [
+            0.035,
+            0.019
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_nearly_black_absorptive_body",
+          "parent": "v4_left_sensor_glass_disc",
+          "bevel_width": 0.0015,
+          "role": "sensor_detail"
+        },
+        {
+          "op": "create_surface_microdetails",
+          "name_prefix": "v4_subtle_panel_scanline",
+          "pattern": "straight",
+          "start": [
+            -0.39,
+            -0.451,
+            0.462
+          ],
+          "step": [
+            0.0,
+            0.0,
+            0.027
+          ],
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "count": 8,
+          "length": 0.63,
+          "bevel_depth": 0.0015,
+          "waviness": 0.0,
+          "collection": "SUBJECT",
+          "material": "v4_smoked_inset_panel",
+          "parent": "v4_inner_smoked_front_inset_panel",
+          "role": "smoked_panel_texture",
+          "seed": 4404
+        },
+        {
+          "op": "create_surface_microdetails",
+          "name_prefix": "v4_lens_concentric_blue_micro_arc",
+          "pattern": "arc",
+          "center": [
+            0.48,
+            -0.492,
+            0.54
+          ],
+          "radius": 0.13,
+          "count": 5,
+          "length": 0.24,
+          "bevel_depth": 0.0018,
+          "waviness": 0.0,
+          "collection": "SUBJECT",
+          "material": "v4_dim_blue_groove",
+          "parent": "v4_right_lens_blue_glass_disc",
+          "role": "lens_detail",
+          "seed": 4405
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v4_top_left_tiny_white_bevel_spec",
+          "location": [
+            -0.68,
+            -0.438,
+            0.83
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "size": [
+            0.08,
+            0.007
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_crisp_white_bevel_light",
+          "parent": "v4_top_raised_black_strip_body",
+          "bevel_width": 0.001,
+          "role": "bevel_highlight"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v4_top_right_tiny_white_bevel_spec",
+          "location": [
+            0.68,
+            -0.438,
+            0.836
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "size": [
+            0.08,
+            0.007
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_crisp_white_bevel_light",
+          "parent": "v4_top_raised_black_strip_body",
+          "bevel_width": 0.001,
+          "role": "bevel_highlight"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v4_left_body_black_side_lobe",
+          "location": [
+            -0.94,
+            -0.39,
+            0.31
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "size": [
+            0.18,
+            0.16
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_nearly_black_absorptive_body",
+          "parent": "v4_lower_rounded_black_base_shadow",
+          "bevel_width": 0.025,
+          "role": "layered_body_anatomy"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v4_right_body_black_side_lobe",
+          "location": [
+            0.98,
+            -0.39,
+            0.31
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "size": [
+            0.18,
+            0.16
+          ],
+          "collection": "SUBJECT",
+          "material": "v4_nearly_black_absorptive_body",
+          "parent": "v4_lower_rounded_black_base_shadow",
+          "bevel_width": 0.025,
+          "role": "layered_body_anatomy"
+        },
+        {
+          "op": "create_lighting_rig",
+          "schema": {
+            "lighting_rig": "dramatic_rim_reference_match",
+            "world": {
+              "color": [
+                0.004,
+                0.008,
+                0.02
+              ],
+              "strength": 0.08
+            },
+            "volumetric": false,
+            "lights": [
+              {
+                "name": "v4_extremely_soft_blue_background_lift",
+                "type": "AREA",
+                "power": 18.0,
+                "size": 3.2,
+                "color": [
+                  0.03,
+                  0.08,
+                  0.24
+                ],
+                "position_role": "low navy background gradient",
+                "location": [
+                  0.0,
+                  1.4,
+                  0.65
+                ]
+              },
+              {
+                "name": "v4_right_blue_edge_rim_light",
+                "type": "AREA",
+                "power": 60.0,
+                "size": 0.42,
+                "color": [
+                  0.02,
+                  0.18,
+                  1.0
+                ],
+                "position_role": "right edge blue rim",
+                "location": [
+                  1.25,
+                  -0.55,
+                  0.66
+                ]
+              },
+              {
+                "name": "v4_thin_top_white_strip_light",
+                "type": "AREA",
+                "power": 28.0,
+                "size": 0.38,
+                "color": [
+                  0.78,
+                  0.9,
+                  1.0
+                ],
+                "position_role": "thin crisp top highlight",
+                "location": [
+                  0.0,
+                  -0.7,
+                  1.05
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "op": "create_camera",
+          "schema": {
+            "camera_name": "v4_frontal_reference_match_camera",
+            "preset": "macro_product",
+            "target": "v4_main_flat_nearly_black_body_shell",
+            "location": [
+              0.0,
+              -3.55,
+              0.55
+            ],
+            "look_at": [
+              0.0,
+              -0.38,
+              0.48
+            ],
+            "composition": {
+              "rule": "frontal_centered_reference_match",
+              "subject_screen_coverage": 0.48,
+              "safe_margin": 0.26,
+              "leading_lines": false
+            },
+            "lens": {
+              "focal_length_mm": 72.0,
+              "sensor_width_mm": 36.0,
+              "dof": true,
+              "focus_target": "v4_right_lens_blue_glass_disc",
+              "aperture_fstop": 5.6
+            }
+          }
+        },
+        {
+          "op": "apply_post",
+          "schema": {
+            "post_preset": "cinematic_contrast",
+            "view_transform": "Filmic",
+            "look": "Medium High Contrast",
+            "exposure": -0.55,
+            "gamma": 1.0,
+            "effects": {
+              "bloom": "subtle",
+              "vignette": "medium",
+              "mist": false,
+              "color_balance": "cool"
+            },
+            "save_raw_render": true
+          }
+        }
+      ]
+    }
+  }
+}

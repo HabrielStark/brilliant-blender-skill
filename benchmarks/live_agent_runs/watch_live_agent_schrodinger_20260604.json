@@ -1,0 +1,1353 @@
+{
+  "id": "watch_live_agent_schrodinger_20260604",
+  "scenario_id": "product_watch_prompt",
+  "source_agent": "Codex subagent Schrodinger",
+  "model": "inherited parent model",
+  "created_at": "2026-06-04",
+  "raw_output": {
+    "metadata": {
+      "agent_label": "Codex live agent",
+      "skill_path": "C:\\Users\\User\\Desktop\\blenderskill\\SKILL.md",
+      "generated_at_note": "2026-06-04; structured recipe JSON only; Blender was not run",
+      "claim_level": "live_agent_raw_output"
+    },
+    "prompt": "Create a premium Blender product render of a luxury watch: faceted case, dial, hands, logo, crown, strap, bevelled edge highlights, warm studio reflections, and a macro camera. It must not look like default primitives.",
+    "recipe": {
+      "operations": [
+        {
+          "op": "ensure_standard_collections"
+        },
+        {
+          "op": "set_scene_metadata",
+          "data": {
+            "task": "premium_luxury_watch_product_render",
+            "intent": "faceted machined watch with authored details, warm studio reflections, macro product camera",
+            "no_blender_run": true
+          }
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "plane",
+          "name": "warm_reflective_studio_floor",
+          "size": 18,
+          "collection": "ENVIRONMENT"
+        },
+        {
+          "op": "create_faceted_hero_body",
+          "name": "luxury_watch_faceted_case_body",
+          "location": [
+            0,
+            0,
+            0.42
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1.18,
+            1.18,
+            0.22
+          ],
+          "radius": 1.08,
+          "height": 0.58,
+          "segments": 64,
+          "rings": 16,
+          "facet_twist_degrees": 10,
+          "shoulder": 0.46,
+          "waist": 0.18,
+          "crown_height": 0.04,
+          "pavilion_height": 0.04,
+          "facet_depth": 0.075,
+          "cap_top": true,
+          "cap_bottom": true,
+          "bevel_width": 0.035,
+          "collection": "SUBJECT",
+          "material": "warm_brushed_platinum_facets"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "luxury_watch_faceted_case_body",
+          "smooth": true
+        },
+        {
+          "op": "add_modifier",
+          "target": "luxury_watch_faceted_case_body",
+          "modifier": "WEIGHTED_NORMAL",
+          "params": {
+            "keep_sharp": true
+          }
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "torus",
+          "name": "polished_beveled_bezel_ring",
+          "size": 2.35,
+          "location": [
+            0,
+            0,
+            0.62
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            0.13
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "polished_beveled_bezel_ring",
+          "scale": true
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "polished_beveled_bezel_ring",
+          "smooth": true
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "polished_beveled_bezel_ring",
+          "width": 0.018,
+          "segments": 4
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cylinder",
+          "name": "deep_charcoal_sunburst_dial",
+          "size": 1.78,
+          "location": [
+            0,
+            0,
+            0.665
+          ],
+          "scale": [
+            1,
+            1,
+            0.025
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "deep_charcoal_sunburst_dial",
+          "scale": true
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "deep_charcoal_sunburst_dial",
+          "smooth": true
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cylinder",
+          "name": "raised_sapphire_crystal_glass",
+          "size": 1.86,
+          "location": [
+            0,
+            0,
+            0.735
+          ],
+          "scale": [
+            1,
+            1,
+            0.032
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "raised_sapphire_crystal_glass",
+          "scale": true
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "raised_sapphire_crystal_glass",
+          "smooth": true
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "raised_sapphire_crystal_glass",
+          "width": 0.012,
+          "segments": 5
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cylinder",
+          "name": "knurled_side_crown",
+          "size": 0.34,
+          "location": [
+            1.36,
+            0,
+            0.47
+          ],
+          "rotation": [
+            0,
+            90,
+            0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            0.42
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "knurled_side_crown",
+          "scale": true
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "knurled_side_crown",
+          "smooth": true
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "knurled_side_crown",
+          "width": 0.014,
+          "segments": 3
+        },
+        {
+          "op": "create_grille",
+          "name_prefix": "crown_knurl_cut",
+          "start": [
+            1.54,
+            -0.16,
+            0.47
+          ],
+          "step": [
+            0,
+            0.032,
+            0
+          ],
+          "count": 11,
+          "slat_size": [
+            0.018,
+            0.012,
+            0.18
+          ],
+          "rotation": [
+            0,
+            90,
+            0
+          ],
+          "collection": "SUBJECT",
+          "material": "dark_recess_shadow",
+          "parent": "knurled_side_crown",
+          "role": "grille"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cube",
+          "name": "upper_tapered_alligator_leather_strap",
+          "size": 1,
+          "location": [
+            0,
+            2.05,
+            0.31
+          ],
+          "scale": [
+            0.47,
+            1.5,
+            0.075
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "upper_tapered_alligator_leather_strap",
+          "scale": true
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "upper_tapered_alligator_leather_strap",
+          "width": 0.065,
+          "segments": 5
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cube",
+          "name": "lower_tapered_alligator_leather_strap",
+          "size": 1,
+          "location": [
+            0,
+            -2.05,
+            0.31
+          ],
+          "scale": [
+            0.47,
+            1.5,
+            0.075
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "lower_tapered_alligator_leather_strap",
+          "scale": true
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "lower_tapered_alligator_leather_strap",
+          "width": 0.065,
+          "segments": 5
+        },
+        {
+          "op": "create_linear_markers",
+          "name_prefix": "upper_strap_edge_stitch",
+          "start": [
+            -0.36,
+            1.0,
+            0.405
+          ],
+          "step": [
+            0,
+            0.22,
+            0
+          ],
+          "count": 10,
+          "size": [
+            0.025,
+            0.075,
+            0.018
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "collection": "SUBJECT",
+          "material": "warm_cream_stitching"
+        },
+        {
+          "op": "create_linear_markers",
+          "name_prefix": "upper_strap_edge_stitch_right",
+          "start": [
+            0.36,
+            1.0,
+            0.405
+          ],
+          "step": [
+            0,
+            0.22,
+            0
+          ],
+          "count": 10,
+          "size": [
+            0.025,
+            0.075,
+            0.018
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "collection": "SUBJECT",
+          "material": "warm_cream_stitching"
+        },
+        {
+          "op": "create_linear_markers",
+          "name_prefix": "lower_strap_edge_stitch",
+          "start": [
+            -0.36,
+            -1.0,
+            0.405
+          ],
+          "step": [
+            0,
+            -0.22,
+            0
+          ],
+          "count": 10,
+          "size": [
+            0.025,
+            0.075,
+            0.018
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "collection": "SUBJECT",
+          "material": "warm_cream_stitching"
+        },
+        {
+          "op": "create_linear_markers",
+          "name_prefix": "lower_strap_edge_stitch_right",
+          "start": [
+            0.36,
+            -1.0,
+            0.405
+          ],
+          "step": [
+            0,
+            -0.22,
+            0
+          ],
+          "count": 10,
+          "size": [
+            0.025,
+            0.075,
+            0.018
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "collection": "SUBJECT",
+          "material": "warm_cream_stitching"
+        },
+        {
+          "op": "create_surface_microdetails",
+          "name_prefix": "leather_grain_upper",
+          "pattern": "linear",
+          "start": [
+            -0.22,
+            1.04,
+            0.427
+          ],
+          "step": [
+            0.07,
+            0.08,
+            0
+          ],
+          "direction": [
+            0,
+            1,
+            0
+          ],
+          "count": 26,
+          "length": 0.12,
+          "bevel_depth": 0.0028,
+          "waviness": 0.018,
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "collection": "SUBJECT",
+          "material": "subtle_leather_grain_highlight",
+          "parent": "upper_tapered_alligator_leather_strap",
+          "role": "surface_microdetail",
+          "seed": 21
+        },
+        {
+          "op": "create_surface_microdetails",
+          "name_prefix": "leather_grain_lower",
+          "pattern": "linear",
+          "start": [
+            -0.22,
+            -1.04,
+            0.427
+          ],
+          "step": [
+            0.07,
+            -0.08,
+            0
+          ],
+          "direction": [
+            0,
+            -1,
+            0
+          ],
+          "count": 26,
+          "length": 0.12,
+          "bevel_depth": 0.0028,
+          "waviness": 0.018,
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "collection": "SUBJECT",
+          "material": "subtle_leather_grain_highlight",
+          "parent": "lower_tapered_alligator_leather_strap",
+          "role": "surface_microdetail",
+          "seed": 33
+        },
+        {
+          "op": "create_radial_markers",
+          "name_prefix": "applied_gold_hour_marker",
+          "center": [
+            0,
+            0,
+            0.785
+          ],
+          "radius": 0.72,
+          "count": 12,
+          "size": [
+            0.052,
+            0.17,
+            0.025
+          ],
+          "collection": "SUBJECT",
+          "material": "polished_warm_gold_indices"
+        },
+        {
+          "op": "create_panel_cutlines",
+          "name_prefix": "dial_sunburst_engraving",
+          "start": [
+            -0.58,
+            0,
+            0.792
+          ],
+          "step": [
+            0.105,
+            0,
+            0
+          ],
+          "count": 12,
+          "size": [
+            0.035,
+            0.92,
+            0.008
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "collection": "SUBJECT",
+          "material": "subtle_dial_engraving",
+          "parent": "deep_charcoal_sunburst_dial",
+          "role": "panel_cutline"
+        },
+        {
+          "op": "create_text_label",
+          "name": "applied_watch_logo",
+          "text": "AURUM",
+          "location": [
+            0,
+            -0.25,
+            0.825
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "size": 0.135,
+          "align_x": "CENTER",
+          "align_y": "CENTER",
+          "extrude": 0.004,
+          "collection": "SUBJECT",
+          "material": "polished_warm_gold_indices",
+          "parent": "deep_charcoal_sunburst_dial",
+          "role": "text_label"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "logo_cartouche_shadow_plate",
+          "location": [
+            0,
+            -0.25,
+            0.812
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.42,
+            0.1,
+            0.008
+          ],
+          "collection": "SUBJECT",
+          "material": "dark_recess_shadow",
+          "parent": "deep_charcoal_sunburst_dial",
+          "bevel_width": 0.004,
+          "role": "decal_plane"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cube",
+          "name": "faceted_gold_minute_hand",
+          "size": 1,
+          "location": [
+            0.19,
+            0.22,
+            0.842
+          ],
+          "rotation": [
+            0,
+            0,
+            -41
+          ],
+          "scale": [
+            0.042,
+            0.61,
+            0.023
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "faceted_gold_minute_hand",
+          "scale": true
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "faceted_gold_minute_hand",
+          "width": 0.01,
+          "segments": 2
+        },
+        {
+          "op": "add_modifier",
+          "target": "faceted_gold_minute_hand",
+          "modifier": "WEIGHTED_NORMAL",
+          "params": {
+            "keep_sharp": true
+          }
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cube",
+          "name": "faceted_gold_hour_hand",
+          "size": 1,
+          "location": [
+            -0.11,
+            0.06,
+            0.852
+          ],
+          "rotation": [
+            0,
+            0,
+            61
+          ],
+          "scale": [
+            0.052,
+            0.39,
+            0.026
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "faceted_gold_hour_hand",
+          "scale": true
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "faceted_gold_hour_hand",
+          "width": 0.011,
+          "segments": 2
+        },
+        {
+          "op": "add_modifier",
+          "target": "faceted_gold_hour_hand",
+          "modifier": "WEIGHTED_NORMAL",
+          "params": {
+            "keep_sharp": true
+          }
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cylinder",
+          "name": "polished_center_pin_cap",
+          "size": 0.17,
+          "location": [
+            0,
+            0,
+            0.868
+          ],
+          "scale": [
+            1,
+            1,
+            0.13
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "polished_center_pin_cap",
+          "scale": true
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "polished_center_pin_cap",
+          "smooth": true
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "polished_center_pin_cap",
+          "width": 0.008,
+          "segments": 3
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "warm_softbox_reflection_on_glass",
+          "location": [
+            -0.22,
+            -0.38,
+            0.883
+          ],
+          "rotation": [
+            0,
+            0,
+            -24
+          ],
+          "size": [
+            0.12,
+            0.84,
+            0.01
+          ],
+          "collection": "SUBJECT",
+          "material": "warm_softbox_reflection_material",
+          "parent": "raised_sapphire_crystal_glass",
+          "bevel_width": 0.003,
+          "role": "decal_plane"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "case_bevel_gold_edge_catchlight_left",
+          "location": [
+            -0.78,
+            -0.58,
+            0.72
+          ],
+          "rotation": [
+            0,
+            0,
+            20
+          ],
+          "size": [
+            0.06,
+            0.48,
+            0.012
+          ],
+          "collection": "SUBJECT",
+          "material": "warm_edge_catchlight_gold",
+          "parent": "luxury_watch_faceted_case_body",
+          "bevel_width": 0.004,
+          "role": "decal_plane"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "case_bevel_gold_edge_catchlight_right",
+          "location": [
+            0.82,
+            -0.5,
+            0.69
+          ],
+          "rotation": [
+            0,
+            0,
+            -18
+          ],
+          "size": [
+            0.052,
+            0.46,
+            0.012
+          ],
+          "collection": "SUBJECT",
+          "material": "warm_edge_catchlight_gold",
+          "parent": "luxury_watch_faceted_case_body",
+          "bevel_width": 0.004,
+          "role": "decal_plane"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cube",
+          "name": "brushed_gold_buckle_bridge",
+          "size": 1,
+          "location": [
+            0,
+            -2.78,
+            0.42
+          ],
+          "scale": [
+            0.76,
+            0.24,
+            0.075
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "brushed_gold_buckle_bridge",
+          "scale": true
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "brushed_gold_buckle_bridge",
+          "width": 0.019,
+          "segments": 3
+        },
+        {
+          "op": "create_fastener_pattern",
+          "name_prefix": "bezel_micro_screw",
+          "pattern": "radial",
+          "center": [
+            0,
+            0,
+            0.748
+          ],
+          "radius": 1.02,
+          "count": 8,
+          "size": 0.045,
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "collection": "SUBJECT",
+          "material": "polished_warm_gold_indices",
+          "parent": "polished_beveled_bezel_ring",
+          "role": "fastener"
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "warm_brushed_platinum_facets",
+            "preset": "brushed_metal",
+            "target_objects": [
+              "luxury_watch_faceted_case_body",
+              "polished_beveled_bezel_ring",
+              "knurled_side_crown"
+            ],
+            "pbr": {
+              "base_color": [
+                0.62,
+                0.56,
+                0.47,
+                1
+              ],
+              "metallic": 1,
+              "roughness": 0.28,
+              "clearcoat": 0.35
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 92,
+              "bump_strength": 0.025,
+              "anisotropic": 0.72,
+              "anisotropic_rotation": 0.36,
+              "edge_wear": "subtle",
+              "color_ramp": {
+                "noise_scale": 54,
+                "detail": 12,
+                "colors": [
+                  [
+                    0.32,
+                    0.29,
+                    0.24,
+                    1
+                  ],
+                  [
+                    0.95,
+                    0.84,
+                    0.62,
+                    1
+                  ]
+                ],
+                "low_position": 0.12,
+                "high_position": 1
+              },
+              "roughness_variation": {
+                "noise_scale": 44,
+                "detail": 10,
+                "min_roughness": 0.18,
+                "max_roughness": 0.44
+              }
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "deep_charcoal_sunburst_material",
+            "preset": "painted_metal",
+            "target_objects": [
+              "deep_charcoal_sunburst_dial"
+            ],
+            "pbr": {
+              "base_color": [
+                0.018,
+                0.017,
+                0.016,
+                1
+              ],
+              "metallic": 0.35,
+              "roughness": 0.42
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 34,
+              "bump_strength": 0.012,
+              "wave": {
+                "scale": 48,
+                "distortion": 1.8,
+                "bump_strength": 0.025
+              },
+              "color_ramp": {
+                "noise_scale": 28,
+                "detail": 8,
+                "colors": [
+                  [
+                    0.01,
+                    0.01,
+                    0.012,
+                    1
+                  ],
+                  [
+                    0.12,
+                    0.105,
+                    0.08,
+                    1
+                  ]
+                ],
+                "low_position": 0.18,
+                "high_position": 0.92
+              }
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "slightly_tinted_sapphire_glass",
+            "preset": "glass_clear",
+            "target_objects": [
+              "raised_sapphire_crystal_glass"
+            ],
+            "pbr": {
+              "base_color": [
+                0.72,
+                0.86,
+                0.95,
+                1
+              ],
+              "roughness": 0.025,
+              "alpha": 0.42,
+              "transmission": 1,
+              "ior": 1.52,
+              "clearcoat": 0.7
+            },
+            "export_policy": {
+              "web_safe": true,
+              "bake_if_needed": true,
+              "fallback_material": "metallic_roughness_pbr"
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "polished_warm_gold_indices",
+            "preset": "brushed_metal",
+            "target_objects": [
+              "faceted_gold_minute_hand",
+              "faceted_gold_hour_hand",
+              "polished_center_pin_cap",
+              "brushed_gold_buckle_bridge"
+            ],
+            "pbr": {
+              "base_color": [
+                1,
+                0.72,
+                0.28,
+                1
+              ],
+              "metallic": 1,
+              "roughness": 0.2,
+              "clearcoat": 0.45
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 64,
+              "bump_strength": 0.012,
+              "edge_wear": "subtle",
+              "roughness_variation": {
+                "noise_scale": 38,
+                "detail": 8,
+                "min_roughness": 0.14,
+                "max_roughness": 0.35
+              }
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "espresso_alligator_leather",
+            "preset": "fabric",
+            "target_objects": [
+              "upper_tapered_alligator_leather_strap",
+              "lower_tapered_alligator_leather_strap"
+            ],
+            "pbr": {
+              "base_color": [
+                0.055,
+                0.028,
+                0.016,
+                1
+              ],
+              "roughness": 0.72
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 70,
+              "bump_strength": 0.055,
+              "checker": {
+                "scale": 18,
+                "colors": [
+                  [
+                    0.04,
+                    0.02,
+                    0.014,
+                    1
+                  ],
+                  [
+                    0.14,
+                    0.075,
+                    0.034,
+                    1
+                  ]
+                ]
+              },
+              "wave": {
+                "scale": 22,
+                "distortion": 4.5,
+                "bump_strength": 0.035
+              },
+              "roughness_variation": {
+                "noise_scale": 60,
+                "detail": 12,
+                "min_roughness": 0.58,
+                "max_roughness": 0.88
+              }
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "warm_cream_stitching",
+            "preset": "fabric",
+            "pbr": {
+              "base_color": [
+                0.86,
+                0.76,
+                0.56,
+                1
+              ],
+              "roughness": 0.82
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 32,
+              "bump_strength": 0.02
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "subtle_leather_grain_highlight",
+            "preset": "fabric",
+            "pbr": {
+              "base_color": [
+                0.18,
+                0.095,
+                0.042,
+                1
+              ],
+              "roughness": 0.76
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 90,
+              "bump_strength": 0.015
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "subtle_dial_engraving",
+            "preset": "painted_metal",
+            "pbr": {
+              "base_color": [
+                0.19,
+                0.15,
+                0.1,
+                1
+              ],
+              "metallic": 0.25,
+              "roughness": 0.52
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "dark_recess_shadow",
+            "preset": "matte_plastic",
+            "pbr": {
+              "base_color": [
+                0.006,
+                0.005,
+                0.004,
+                1
+              ],
+              "roughness": 0.9
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "warm_softbox_reflection_material",
+            "preset": "emissive_neon",
+            "pbr": {
+              "base_color": [
+                1,
+                0.72,
+                0.46,
+                1
+              ],
+              "emission_color": [
+                1,
+                0.72,
+                0.46,
+                1
+              ],
+              "emission_strength": 1.15,
+              "alpha": 0.55
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "warm_edge_catchlight_gold",
+            "preset": "emissive_neon",
+            "pbr": {
+              "base_color": [
+                1,
+                0.62,
+                0.22,
+                1
+              ],
+              "emission_color": [
+                1,
+                0.62,
+                0.22,
+                1
+              ],
+              "emission_strength": 0.9,
+              "alpha": 0.72
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "glossy_warm_studio_floor",
+            "preset": "glossy_plastic",
+            "target_objects": [
+              "warm_reflective_studio_floor"
+            ],
+            "pbr": {
+              "base_color": [
+                0.035,
+                0.028,
+                0.022,
+                1
+              ],
+              "roughness": 0.16,
+              "clearcoat": 0.55
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 18,
+              "bump_strength": 0.006,
+              "roughness_variation": {
+                "noise_scale": 20,
+                "detail": 6,
+                "min_roughness": 0.11,
+                "max_roughness": 0.24
+              }
+            }
+          }
+        },
+        {
+          "op": "assign_material",
+          "target": "faceted_gold_minute_hand",
+          "material": "polished_warm_gold_indices"
+        },
+        {
+          "op": "assign_material",
+          "target": "faceted_gold_hour_hand",
+          "material": "polished_warm_gold_indices"
+        },
+        {
+          "op": "assign_material",
+          "target": "polished_center_pin_cap",
+          "material": "polished_warm_gold_indices"
+        },
+        {
+          "op": "assign_material",
+          "target": "brushed_gold_buckle_bridge",
+          "material": "polished_warm_gold_indices"
+        },
+        {
+          "op": "assign_material",
+          "target": "upper_tapered_alligator_leather_strap",
+          "material": "espresso_alligator_leather"
+        },
+        {
+          "op": "assign_material",
+          "target": "lower_tapered_alligator_leather_strap",
+          "material": "espresso_alligator_leather"
+        },
+        {
+          "op": "create_lighting_rig",
+          "schema": {
+            "lighting_rig": "warm_repair_studio",
+            "lights": [
+              {
+                "name": "large_warm_softbox_left_reflection",
+                "type": "AREA",
+                "power": 760,
+                "size": 6.5,
+                "color": [
+                  1,
+                  0.78,
+                  0.55
+                ],
+                "position_role": "front_left_high",
+                "location": [
+                  -3.2,
+                  -4.5,
+                  4.8
+                ]
+              },
+              {
+                "name": "thin_gold_rim_strip_right",
+                "type": "AREA",
+                "power": 340,
+                "size": 1.2,
+                "color": [
+                  1,
+                  0.67,
+                  0.32
+                ],
+                "position_role": "rim",
+                "location": [
+                  3.3,
+                  -1.0,
+                  2.0
+                ]
+              },
+              {
+                "name": "dial_soft_fill_overhead",
+                "type": "AREA",
+                "power": 170,
+                "size": 3.0,
+                "color": [
+                  1,
+                  0.9,
+                  0.76
+                ],
+                "position_role": "top_fill",
+                "location": [
+                  0,
+                  1.4,
+                  4.2
+                ]
+              }
+            ],
+            "world": {
+              "color": [
+                0.055,
+                0.043,
+                0.033
+              ],
+              "strength": 0.32
+            },
+            "volumetric": false
+          }
+        },
+        {
+          "op": "create_camera",
+          "schema": {
+            "camera_name": "macro_camera_warm_luxury_watch",
+            "preset": "macro_product",
+            "target": "luxury_watch_faceted_case_body",
+            "location": [
+              4.6,
+              -5.8,
+              3.35
+            ],
+            "look_at": [
+              0,
+              0,
+              0.58
+            ],
+            "composition": {
+              "rule": "rule_of_thirds_center_bias",
+              "subject_screen_coverage": 0.72,
+              "safe_margin": 0.11,
+              "leading_lines": true
+            },
+            "lens": {
+              "focal_length_mm": 85,
+              "sensor_width_mm": 36,
+              "dof": true,
+              "focus_target": "applied_watch_logo",
+              "aperture_fstop": 2.8
+            }
+          }
+        },
+        {
+          "op": "apply_post",
+          "schema": {
+            "post_preset": "clean_product",
+            "view_transform": "Filmic",
+            "look": "Medium High Contrast",
+            "exposure": 0.05,
+            "gamma": 1,
+            "effects": {
+              "bloom": "subtle",
+              "vignette": "subtle",
+              "mist": false,
+              "color_balance": "warm"
+            },
+            "save_raw_render": true
+          }
+        },
+        {
+          "op": "set_scene_metadata",
+          "data": {
+            "final_camera": "macro_camera_warm_luxury_watch",
+            "required_parts": [
+              "faceted case",
+              "dial",
+              "hands",
+              "logo",
+              "crown",
+              "strap",
+              "bevelled edge highlights",
+              "warm studio reflections",
+              "macro camera"
+            ],
+            "anti_default_primitive_strategy": "faceted hero body, bevelled weighted-normal metal, craft label/decal/cutline/fastener/microdetail operations, procedural shaders"
+          }
+        }
+      ]
+    }
+  }
+}

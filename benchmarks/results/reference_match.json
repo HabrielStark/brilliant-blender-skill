@@ -1,0 +1,136 @@
+{
+  "skill_plus_tools": {
+    "task_id": "reference_match",
+    "mode": "skill_plus_tools",
+    "pass": true,
+    "visual_score": 98,
+    "technical_score": 100,
+    "runtime_seconds": 4.9,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_skill_plus_tools\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "very_dark",
+      "blue_cyan_bias",
+      "dark_blue_cyan"
+    ],
+    "reference_metrics": {
+      "ssim": 0.7477930943072052,
+      "palette_similarity": 0.963032625450261,
+      "reference_image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\references\\reference_match.png",
+      "saliency_iou": 0.18295088210889998,
+      "edge_iou": 0.10880040578239919,
+      "saliency_center_delta": 0.24603406552609028,
+      "saliency_coverage_delta": 0.02045524691358025,
+      "mean_brightness_delta": 0.001621432602405548,
+      "contrast_delta": 7.845461368560791e-06,
+      "edge_density_delta": 0.019398148148148144
+    },
+    "palette_similarity": 0.963032625450261,
+    "animation_frame_proof": null,
+    "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "reference_match",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 29,
+    "technical_score": 60,
+    "runtime_seconds": 3.7,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Cube'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Cube",
+      "reference match requested but no reference metrics were provided",
+      "score 29 < min 88",
+      "subject objects 1 < min 22",
+      "visible subject objects 0 < min 18",
+      "subject depth layers 1 < min 5",
+      "missing named subject parts: body, inset, rim, highlight, groove, reflection, lens, sensor, bevel",
+      "distinct visible named-part objects 0 < min 16",
+      "named-part total coverage 0.0000 < min 0.0800",
+      "subject faces 6 < min 520",
+      "subject modifiers 0 < min 18",
+      "subject materials 0 < min 6",
+      "subject material node count 0 < min 5",
+      "subject procedural materials 0 < min 2",
+      "missing subject material features: noise_bump, noise_color_ramp",
+      "emissive materials 0 < min 2",
+      "palette similarity 0.00 < min 0.72",
+      "reference SSIM 0.00 < min 0.28",
+      "reference saliency IoU 0.00 < min 0.14",
+      "reference edge IoU 0.00 < min 0.08",
+      "reference center delta 1.000 > max 0.300",
+      "reference coverage delta 1.000 > max 0.080",
+      "reference brightness delta 1.000 > max 0.025",
+      "reference contrast delta 1.000 > max 0.006"
+    ]
+  },
+  "adversarial_slop_named_lit_box": {
+    "task_id": "reference_match",
+    "mode": "adversarial_slop_named_lit_box",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 4.6,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_adversarial_slop_named_lit_box\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "very_dark"
+    ],
+    "reference_metrics": {
+      "ssim": 0.36781103513500796,
+      "palette_similarity": 0.9413798966961806,
+      "reference_image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\references\\reference_match.png",
+      "saliency_iou": 0.053573281856487534,
+      "edge_iou": 0.02704626334519573,
+      "saliency_center_delta": 0.16801235922686278,
+      "saliency_coverage_delta": 0.25893518518518516,
+      "mean_brightness_delta": 0.059537507593631744,
+      "contrast_delta": 0.013167858123779297,
+      "edge_density_delta": 0.02613425925925926
+    },
+    "palette_similarity": 0.9413798966961806,
+    "animation_frame_proof": null,
+    "failures": [
+      "dark render lacks readable subject detail",
+      "score 79 < min 88",
+      "subject objects 2 < min 22",
+      "visible subject objects 2 < min 18",
+      "subject depth layers 2 < min 5",
+      "missing named subject parts: reflection",
+      "distinct visible named-part objects 2 < min 16",
+      "subject faces 12 < min 520",
+      "subject modifiers 1 < min 18",
+      "subject materials 2 < min 6",
+      "subject material node count 2 < min 5",
+      "subject procedural materials 0 < min 2",
+      "missing subject material features: noise_bump, noise_color_ramp",
+      "emissive materials 1 < min 2",
+      "reference saliency IoU 0.05 < min 0.14",
+      "reference edge IoU 0.03 < min 0.08",
+      "reference coverage delta 0.259 > max 0.080",
+      "reference brightness delta 0.060 > max 0.025",
+      "reference contrast delta 0.013 > max 0.006"
+    ]
+  }
+}

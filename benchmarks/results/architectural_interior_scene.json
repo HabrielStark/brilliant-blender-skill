@@ -1,0 +1,107 @@
+{
+  "skill_plus_tools": {
+    "task_id": "architectural_interior_scene",
+    "mode": "skill_plus_tools",
+    "pass": true,
+    "visual_score": 97,
+    "technical_score": 100,
+    "runtime_seconds": 5.3,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\architectural_interior_scene_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\architectural_interior_scene_skill_plus_tools\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "warm_red_bias"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "architectural_interior_scene",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 31,
+    "technical_score": 60,
+    "runtime_seconds": 3.8,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\architectural_interior_scene_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Room",
+      "important object has no material: Sofa",
+      "score 31 < min 86",
+      "subject objects 2 < min 34",
+      "visible subject objects 0 < min 28",
+      "subject depth layers 2 < min 4",
+      "missing named subject parts: table, lamp, book, plant, cushion, curtain, fabric_fold, throw, vase, seam, tassel, lamp_bulb",
+      "distinct visible named-part objects 0 < min 28",
+      "named-part total coverage 0.0000 < min 0.1800",
+      "subject modifiers 0 < min 18",
+      "curved detail objects 0 < min 28",
+      "environment objects 0 < min 18",
+      "visible environment objects 0 < min 12",
+      "environment depth layers 0 < min 4",
+      "missing named environment parts: floor, wall, window, shelf, rug, art, ceiling, baseboard, sun_patch, mullion, floor_plank, mullion_shadow",
+      "environment materials 0 < min 5",
+      "subject materials 0 < min 6",
+      "subject material node count 0 < min 5",
+      "subject procedural materials 0 < min 3",
+      "missing subject material features: noise_bump, noise_color_ramp, wave_bump",
+      "emissive materials 0 < min 1"
+    ]
+  },
+  "adversarial_slop_1": {
+    "task_id": "architectural_interior_scene",
+    "mode": "adversarial_slop_1",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 4.4,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\architectural_interior_scene_adversarial_slop_1\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\architectural_interior_scene_adversarial_slop_1\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "neutral"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "render has no discernible silhouette/detail",
+      "render is too flat for visual acceptance",
+      "score 79 < min 86",
+      "subject objects 1 < min 34",
+      "visible subject objects 1 < min 28",
+      "subject depth layers 1 < min 4",
+      "distinct visible named-part objects 1 < min 28",
+      "subject modifiers 0 < min 18",
+      "curved detail objects 0 < min 28",
+      "environment objects 1 < min 18",
+      "visible environment objects 1 < min 12",
+      "environment depth layers 1 < min 4",
+      "environment materials 1 < min 5",
+      "subject materials 1 < min 6",
+      "subject material node count 2 < min 5",
+      "subject procedural materials 0 < min 3",
+      "missing subject material features: noise_bump, noise_color_ramp, wave_bump",
+      "emissive materials 0 < min 1"
+    ]
+  }
+}

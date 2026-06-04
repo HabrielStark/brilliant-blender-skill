@@ -1,0 +1,33 @@
+{
+  "id": "shader_texture_prompt",
+  "title": "Prompt artifact: shader and texture material study",
+  "prompt": "Create a premium Blender material study for a perfume bottle: transparent glass, blue liquid, brushed brass cap, nozzle, patterned label texture, microprint, displacement/relief, rim light, and contact reflection. Show real shader and texture craft, not plain Principled materials.",
+  "candidate": {
+    "source": "benchmark_task",
+    "task_id": "shader_texture_material_study",
+    "recipe_key": "recipe",
+    "provenance": "prompt_fixture"
+  },
+  "contract": {
+    "min_operations": 90,
+    "min_named_objects": 30,
+    "min_craft_operations": 1,
+    "min_materials": 8,
+    "min_procedural_materials": 4,
+    "min_material_target_objects": 30,
+    "min_material_craft_signals": 11,
+    "forbid_unresolved_late_material_references": true,
+    "forbid_default_names": true,
+    "forbid_nonstandard_collections": true,
+    "require_camera_composition": true,
+    "max_subject_screen_coverage": 0.72,
+    "min_camera_safe_margin": 0.16,
+    "min_operation_counts": {"set_smooth_shading": 5},
+    "required_ops": ["ensure_standard_collections", "create_camera", "create_lighting_rig", "create_material"],
+    "required_craft_op_groups": [["create_radial_markers", "create_linear_markers"]],
+    "require_name_terms": ["bottle", "liquid", "cap", "label", "nozzle", "reflection", "swatch"],
+    "require_name_term_groups": [["highlight", "catchlight", "glint", "softbox"]],
+    "require_image_texture_roles": ["base_color", "displacement"],
+    "require_procedural_keys": ["checker", "scanlines", "image_textures", "wave", "roughness_variation"]
+  }
+}

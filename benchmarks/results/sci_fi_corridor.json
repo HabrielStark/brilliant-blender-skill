@@ -1,0 +1,112 @@
+{
+  "skill_plus_tools": {
+    "task_id": "sci_fi_corridor",
+    "mode": "skill_plus_tools",
+    "pass": true,
+    "visual_score": 97,
+    "technical_score": 100,
+    "runtime_seconds": 5.6,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\sci_fi_corridor_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\sci_fi_corridor_skill_plus_tools\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "very_dark",
+      "blue_cyan_bias",
+      "dark_blue_cyan"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": 0.8722529778708443,
+    "animation_frame_proof": null,
+    "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "sci_fi_corridor",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 31,
+    "technical_score": 40,
+    "runtime_seconds": 3.8,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\sci_fi_corridor_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Cube'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Cube",
+      "important object has no material: Cube2",
+      "important object has no material: Cube3",
+      "score 31 < min 86",
+      "subject objects 3 < min 5",
+      "visible subject objects 0 < min 3",
+      "missing named subject parts: drone, core, ring, sensor, antenna",
+      "subject modifiers 0 < min 5",
+      "environment objects 0 < min 32",
+      "visible environment objects 0 < min 24",
+      "environment depth layers 0 < min 8",
+      "missing named environment parts: corridor, floor, ceiling, wall, rib, rail, door, light, panel",
+      "environment materials 0 < min 5",
+      "subject materials 0 < min 3",
+      "subject material node count 0 < min 5",
+      "subject procedural materials 0 < min 1",
+      "emissive materials 0 < min 3",
+      "geometry-node groups 0 < min 1",
+      "geometry-node count 0 < min 7",
+      "geometry-node links 0 < min 6",
+      "geometry-node detail objects 0 < min 48",
+      "missing geometry-node detail roles: panel_wall_plate"
+    ]
+  },
+  "adversarial_slop_corridor_keywords_no_gn_depth": {
+    "task_id": "sci_fi_corridor",
+    "mode": "adversarial_slop_corridor_keywords_no_gn_depth",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 4.5,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "very_dark"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": 0.8274210521285555,
+    "animation_frame_proof": null,
+    "failures": [
+      "render has no discernible silhouette/detail",
+      "dark render lacks readable subject detail",
+      "score 79 < min 86",
+      "subject objects 1 < min 5",
+      "visible subject objects 1 < min 3",
+      "subject modifiers 0 < min 5",
+      "environment objects 1 < min 32",
+      "visible environment objects 1 < min 24",
+      "environment depth layers 1 < min 8",
+      "environment materials 1 < min 5",
+      "subject materials 1 < min 3",
+      "subject material node count 2 < min 5",
+      "subject procedural materials 0 < min 1",
+      "emissive materials 1 < min 3",
+      "geometry-node groups 0 < min 1",
+      "geometry-node count 0 < min 7",
+      "geometry-node links 0 < min 6",
+      "geometry-node detail objects 0 < min 48",
+      "missing geometry-node detail roles: panel_wall_plate"
+    ]
+  }
+}

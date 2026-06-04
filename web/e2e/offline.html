@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><title>offline e2e</title>
+<style>html,body{margin:0;height:100%;background:#0a0b10}#c{width:100vw;height:100vh;display:block}</style></head>
+<body><canvas id="c"></canvas>
+<script type="importmap">{"imports":{"three":"/three/build/three.module.js","three/addons/":"/three/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+window.__ready = false; window.__error = null;
+const canvas = document.getElementById('c');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setPixelRatio(1);
+renderer.setClearColor(0x0a0b10, 1);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(50, innerWidth / innerHeight, 0.1, 100);
+scene.add(new THREE.HemisphereLight(0xffffff, 0x223044, 1.4));
+const key = new THREE.DirectionalLight(0xffffff, 2.5); key.position.set(3, -4, 5); scene.add(key);
+let mixer = null, target = null; const clock = new THREE.Clock();
+new GLTFLoader().load('/demo/scene_anim.glb', (g) => {
+  scene.add(g.scene);
+  window.__childCount = g.scene.children.length;
+  window.__clips = g.animations.length;
+  target = g.scene.getObjectByName('product_body') || g.scene.children[0];
+  const box = new THREE.Box3().setFromObject(g.scene);
+  const center = box.getCenter(new THREE.Vector3());
+  const size = box.getSize(new THREE.Vector3());
+  const radius = Math.max(size.x, size.y, size.z, 1) / 2;
+  camera.near = Math.max(0.01, radius / 100);
+  camera.far = Math.max(100, radius * 100);
+  camera.position.set(center.x + radius * 3.2, center.y - radius * 3.6, center.z + radius * 2.1);
+  camera.lookAt(center);
+  camera.updateProjectionMatrix();
+  window.__rot0 = target ? target.rotation.z : 0;
+  if (g.animations.length) {
+    mixer = new THREE.AnimationMixer(g.scene);
+    g.animations.forEach((c) => mixer.clipAction(c).play());
+    mixer.setTime(0);
+    window.__mixerTime = mixer.time;
+  }
+  window.__ready = true;
+}, undefined, (e) => { window.__error = String(e); window.__ready = true; });
+function resize() { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight, false); }
+addEventListener('resize', resize); resize();
+(function loop() { requestAnimationFrame(loop);
+  if (mixer) mixer.update(clock.getDelta());
+  if (mixer) window.__mixerTime = mixer.time;
+  if (target) window.__rotNow = target.rotation.z;
+  renderer.render(scene, camera); })();
+</script></body></html>

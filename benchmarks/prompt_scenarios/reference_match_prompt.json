@@ -1,0 +1,36 @@
+{
+  "id": "reference_match_prompt",
+  "title": "Prompt artifact: reference-matched premium product",
+  "prompt": "Match the supplied reference: a dark premium product on a reflective surface with layered body anatomy, smoked inset panels, blue rim light, crisp white edge highlights, lens detail, sensor, side grooves, bevels, and contact reflection.",
+  "candidate": {
+    "source": "benchmark_task",
+    "task_id": "reference_match",
+    "recipe_key": "recipe",
+    "provenance": "prompt_fixture"
+  },
+  "contract": {
+    "min_operations": 90,
+    "min_named_objects": 40,
+    "min_craft_operations": 3,
+    "min_materials": 6,
+    "min_procedural_materials": 2,
+    "min_material_target_objects": 20,
+    "min_emissive_materials": 2,
+    "forbid_unresolved_late_material_references": true,
+    "forbid_default_names": true,
+    "forbid_nonstandard_collections": true,
+    "require_camera_composition": true,
+    "max_subject_screen_coverage": 0.78,
+    "min_subject_screen_coverage": 0.60,
+    "min_camera_safe_margin": 0.12,
+    "max_camera_focal_length_mm": 60,
+    "require_procedural_keys": ["color_ramp"],
+    "min_operation_counts": {"set_smooth_shading": 5},
+    "max_operation_counts": {"parent_objects": 0},
+    "required_ops": ["ensure_standard_collections", "create_camera", "create_lighting_rig", "create_material"],
+    "required_craft_ops": ["create_linear_markers"],
+    "require_name_terms": ["body", "rim", "groove", "reflection", "lens", "sensor", "bevel"],
+    "forbid_name_terms": ["occlusion"],
+    "require_name_term_groups": [["inset", "panel", "recess"], ["highlight", "catchlight", "glint", "edge"]]
+  }
+}

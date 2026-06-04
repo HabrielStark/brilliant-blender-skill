@@ -1,0 +1,1632 @@
+[
+  {
+    "skill_plus_tools": {
+      "task_id": "architectural_interior_scene",
+      "mode": "skill_plus_tools",
+      "pass": true,
+      "visual_score": 97,
+      "technical_score": 100,
+      "runtime_seconds": 5.3,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\architectural_interior_scene_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\architectural_interior_scene_skill_plus_tools\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "warm_red_bias"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": []
+    },
+    "baseline_no_skill": {
+      "task_id": "architectural_interior_scene",
+      "mode": "baseline_no_skill",
+      "pass": false,
+      "visual_score": 31,
+      "technical_score": 60,
+      "runtime_seconds": 3.8,
+      "iterations": 1,
+      "artifacts": [
+        null,
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\architectural_interior_scene_baseline_no_skill\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "missing_preview"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "no active camera",
+        "no meaningful lighting",
+        "no active camera in scene",
+        "scene has no lights and no world illumination",
+        "important object has no material: Room",
+        "important object has no material: Sofa",
+        "score 31 < min 86",
+        "subject objects 2 < min 34",
+        "visible subject objects 0 < min 28",
+        "subject depth layers 2 < min 4",
+        "missing named subject parts: table, lamp, book, plant, cushion, curtain, fabric_fold, throw, vase, seam, tassel, lamp_bulb",
+        "distinct visible named-part objects 0 < min 28",
+        "named-part total coverage 0.0000 < min 0.1800",
+        "subject modifiers 0 < min 18",
+        "curved detail objects 0 < min 28",
+        "environment objects 0 < min 18",
+        "visible environment objects 0 < min 12",
+        "environment depth layers 0 < min 4",
+        "missing named environment parts: floor, wall, window, shelf, rug, art, ceiling, baseboard, sun_patch, mullion, floor_plank, mullion_shadow",
+        "environment materials 0 < min 5",
+        "subject materials 0 < min 6",
+        "subject material node count 0 < min 5",
+        "subject procedural materials 0 < min 3",
+        "missing subject material features: noise_bump, noise_color_ramp, wave_bump",
+        "emissive materials 0 < min 1"
+      ]
+    },
+    "adversarial_slop_1": {
+      "task_id": "architectural_interior_scene",
+      "mode": "adversarial_slop_1",
+      "pass": false,
+      "visual_score": 79,
+      "technical_score": 100,
+      "runtime_seconds": 4.4,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\architectural_interior_scene_adversarial_slop_1\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\architectural_interior_scene_adversarial_slop_1\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "neutral"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "render has no discernible silhouette/detail",
+        "render is too flat for visual acceptance",
+        "score 79 < min 86",
+        "subject objects 1 < min 34",
+        "visible subject objects 1 < min 28",
+        "subject depth layers 1 < min 4",
+        "distinct visible named-part objects 1 < min 28",
+        "subject modifiers 0 < min 18",
+        "curved detail objects 0 < min 28",
+        "environment objects 1 < min 18",
+        "visible environment objects 1 < min 12",
+        "environment depth layers 1 < min 4",
+        "environment materials 1 < min 5",
+        "subject materials 1 < min 6",
+        "subject material node count 2 < min 5",
+        "subject procedural materials 0 < min 3",
+        "missing subject material features: noise_bump, noise_color_ramp, wave_bump",
+        "emissive materials 0 < min 1"
+      ]
+    }
+  },
+  {
+    "skill_plus_tools": {
+      "task_id": "camera_expensive",
+      "mode": "skill_plus_tools",
+      "pass": true,
+      "visual_score": 100,
+      "technical_score": 100,
+      "runtime_seconds": 4.6,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "very_dark"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": []
+    },
+    "baseline_no_skill": {
+      "task_id": "camera_expensive",
+      "mode": "baseline_no_skill",
+      "pass": false,
+      "visual_score": 31,
+      "technical_score": 60,
+      "runtime_seconds": 3.7,
+      "iterations": 1,
+      "artifacts": [
+        null,
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_baseline_no_skill\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "missing_preview"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "no active camera",
+        "no meaningful lighting",
+        "object has default/auto name: 'Icosphere'",
+        "no active camera in scene",
+        "scene has no lights and no world illumination",
+        "important object has no material: Icosphere",
+        "score 31 < min 86",
+        "subject objects 1 < min 18",
+        "visible subject objects 0 < min 20",
+        "missing named subject parts: plinth, hero, faceted, facet, accent, ring, highlight",
+        "subject faces 80 < min 1800",
+        "subject modifiers 0 < min 6",
+        "smooth subject objects 0 < min 3",
+        "subject materials 0 < min 3",
+        "subject material node count 0 < min 5",
+        "subject procedural materials 0 < min 2",
+        "missing subject material features: noise_color_ramp"
+      ]
+    },
+    "adversarial_slop_named_lit_sphere": {
+      "task_id": "camera_expensive",
+      "mode": "adversarial_slop_named_lit_sphere",
+      "pass": false,
+      "visual_score": 79,
+      "technical_score": 90,
+      "runtime_seconds": 4.4,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_adversarial_slop_named_lit_sphere\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "very_dark"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "dark render lacks readable subject detail",
+        "important object has no material: low_black_plinth",
+        "score 79 < min 86",
+        "subject objects 2 < min 18",
+        "visible subject objects 2 < min 20",
+        "subject faces 114 < min 1800",
+        "subject modifiers 2 < min 6",
+        "smooth subject objects 2 < min 3",
+        "subject materials 1 < min 3",
+        "subject material node count 2 < min 5",
+        "subject procedural materials 0 < min 2",
+        "missing subject material features: noise_color_ramp"
+      ]
+    }
+  },
+  {
+    "skill_plus_tools": {
+      "task_id": "glb_web_budget",
+      "mode": "skill_plus_tools",
+      "pass": true,
+      "visual_score": 100,
+      "technical_score": 100,
+      "runtime_seconds": 5.3,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "dark"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": []
+    },
+    "baseline_no_skill": {
+      "task_id": "glb_web_budget",
+      "mode": "baseline_no_skill",
+      "pass": false,
+      "visual_score": 31,
+      "technical_score": 60,
+      "runtime_seconds": 3.8,
+      "iterations": 1,
+      "artifacts": [
+        null,
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\glb_web_budget_baseline_no_skill\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "missing_preview"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "no active camera",
+        "no meaningful lighting",
+        "object has default/auto name: 'Icosphere'",
+        "no active camera in scene",
+        "scene has no lights and no world illumination",
+        "important object has no material: Icosphere",
+        "score 31 < min 86",
+        "subject objects 1 < min 34",
+        "visible subject objects 0 < min 28",
+        "subject depth layers 1 < min 4",
+        "missing named subject parts: speaker, grille, button, port, accent, feet, handle, radiator, logo",
+        "distinct visible named-part objects 0 < min 20",
+        "named-part total coverage 0.0000 < min 0.1500",
+        "subject faces 80 < min 1300",
+        "subject modifiers 0 < min 18",
+        "smooth subject objects 0 < min 5",
+        "craft detail objects 0 < min 12",
+        "missing craft roles: grille_slat, text_label",
+        "subject materials 0 < min 7",
+        "subject material node count 0 < min 5",
+        "subject procedural materials 0 < min 2",
+        "missing subject material features: checker_texture, noise_color_ramp"
+      ]
+    },
+    "adversarial_slop_speaker_keywords_no_web_asset_detail": {
+      "task_id": "glb_web_budget",
+      "mode": "adversarial_slop_speaker_keywords_no_web_asset_detail",
+      "pass": false,
+      "visual_score": 79,
+      "technical_score": 100,
+      "runtime_seconds": 4.5,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "dark"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "render has no discernible silhouette/detail",
+        "score 79 < min 86",
+        "subject objects 1 < min 34",
+        "visible subject objects 1 < min 28",
+        "subject depth layers 1 < min 4",
+        "distinct visible named-part objects 1 < min 20",
+        "subject faces 34 < min 1300",
+        "subject modifiers 1 < min 18",
+        "smooth subject objects 1 < min 5",
+        "craft detail objects 0 < min 12",
+        "missing craft roles: grille_slat, text_label",
+        "subject materials 1 < min 7",
+        "subject material node count 2 < min 5",
+        "subject procedural materials 0 < min 2",
+        "missing subject material features: checker_texture, noise_color_ramp"
+      ]
+    }
+  },
+  {
+    "skill_plus_tools": {
+      "task_id": "low_spec_laptop_safe",
+      "mode": "skill_plus_tools",
+      "pass": true,
+      "visual_score": 100,
+      "technical_score": 100,
+      "runtime_seconds": 5.3,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "neutral"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": []
+    },
+    "baseline_no_skill": {
+      "task_id": "low_spec_laptop_safe",
+      "mode": "baseline_no_skill",
+      "pass": false,
+      "visual_score": 29,
+      "technical_score": 60,
+      "runtime_seconds": 3.7,
+      "iterations": 1,
+      "artifacts": [
+        null,
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_baseline_no_skill\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "missing_preview"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "no active camera",
+        "no meaningful lighting",
+        "object has default/auto name: 'Cube'",
+        "no active camera in scene",
+        "scene has no lights and no world illumination",
+        "important object has no material: Cube",
+        "forbidden eval defect present: premium render: Cube has no bevel/subsurf/smooth",
+        "score 29 < min 84",
+        "subject objects 1 < min 34",
+        "visible subject objects 0 < min 29",
+        "missing named subject parts: monolith, panel, antenna, accent, vent, foot, decal, cap, screen, cable, pedestal, glow, hinge, latch, keypad, screw",
+        "distinct visible named-part objects 0 < min 18",
+        "named-part total coverage 0.0000 < min 0.1200",
+        "subject faces 6 < min 700",
+        "subject modifiers 0 < min 19",
+        "craft detail objects 0 < min 20",
+        "missing craft roles: curve_tube, decal_plane, fastener, grille_slat, panel_cutline, text_label",
+        "environment objects 0 < min 8",
+        "visible environment objects 0 < min 6",
+        "environment materials 0 < min 3",
+        "subject materials 0 < min 8",
+        "subject material node count 0 < min 5",
+        "subject procedural materials 0 < min 2",
+        "missing subject material features: noise_bump, wave_bump"
+      ]
+    },
+    "adversarial_slop_1": {
+      "task_id": "low_spec_laptop_safe",
+      "mode": "adversarial_slop_1",
+      "pass": false,
+      "visual_score": 79,
+      "technical_score": 100,
+      "runtime_seconds": 4.4,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_adversarial_slop_1\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "very_dark"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "render has no discernible silhouette/detail",
+        "render is too flat for visual acceptance",
+        "forbidden visual style tags present: very_dark",
+        "forbidden eval defect present: premium render: monolith_panel_antenna_accent_vent_foot_decal_cap_screen_cable_pedestal_glow has no bevel/subsurf/smooth",
+        "score 79 < min 84",
+        "subject objects 1 < min 34",
+        "visible subject objects 1 < min 29",
+        "missing named subject parts: hinge, latch, keypad, screw",
+        "distinct visible named-part objects 1 < min 18",
+        "subject faces 6 < min 700",
+        "subject modifiers 0 < min 19",
+        "craft detail objects 0 < min 20",
+        "missing craft roles: curve_tube, decal_plane, fastener, grille_slat, panel_cutline, text_label",
+        "environment objects 0 < min 8",
+        "visible environment objects 0 < min 6",
+        "environment materials 0 < min 3",
+        "subject materials 1 < min 8",
+        "subject material node count 2 < min 5",
+        "subject procedural materials 0 < min 2",
+        "missing subject material features: noise_bump, wave_bump"
+      ]
+    }
+  },
+  {
+    "skill_plus_tools": {
+      "task_id": "mechanical_exploded_view",
+      "mode": "skill_plus_tools",
+      "pass": true,
+      "visual_score": 97,
+      "technical_score": 100,
+      "runtime_seconds": 5.2,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "neutral"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": []
+    },
+    "baseline_no_skill": {
+      "task_id": "mechanical_exploded_view",
+      "mode": "baseline_no_skill",
+      "pass": false,
+      "visual_score": 29,
+      "technical_score": 50,
+      "runtime_seconds": 3.8,
+      "iterations": 1,
+      "artifacts": [
+        null,
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\mechanical_exploded_view_baseline_no_skill\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "missing_preview"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "no active camera",
+        "no meaningful lighting",
+        "object has default/auto name: 'Cylinder'",
+        "no active camera in scene",
+        "scene has no lights and no world illumination",
+        "important object has no material: Cylinder",
+        "important object has no material: Cylinder2",
+        "score 29 < min 84",
+        "subject objects 2 < min 52",
+        "visible subject objects 0 < min 46",
+        "subject depth layers 2 < min 5",
+        "missing named subject parts: case, battery, board, screw, post, trace, contact, axis, chip, connector, gasket, spring, washer, ribbon, callout, cutaway, arrow, spacer",
+        "subject faces 68 < min 2600",
+        "subject modifiers 0 < min 36",
+        "craft detail objects 0 < min 22",
+        "missing craft roles: curve_tube, decal_plane, fastener, panel_cutline, text_label",
+        "subject materials 0 < min 8",
+        "subject material node count 0 < min 5",
+        "subject procedural materials 0 < min 2",
+        "missing subject material features: noise_bump, noise_color_ramp, wave_bump"
+      ]
+    },
+    "adversarial_slop_1": {
+      "task_id": "mechanical_exploded_view",
+      "mode": "adversarial_slop_1",
+      "pass": false,
+      "visual_score": 79,
+      "technical_score": 100,
+      "runtime_seconds": 4.4,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\mechanical_exploded_view_adversarial_slop_1\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\mechanical_exploded_view_adversarial_slop_1\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "very_dark"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "render has no discernible silhouette/detail",
+        "render is too flat for visual acceptance",
+        "forbidden visual style tags present: very_dark",
+        "score 79 < min 84",
+        "subject objects 2 < min 52",
+        "visible subject objects 2 < min 46",
+        "subject depth layers 2 < min 5",
+        "missing named subject parts: arrow, spacer",
+        "subject faces 68 < min 2600",
+        "subject modifiers 0 < min 36",
+        "craft detail objects 0 < min 22",
+        "missing craft roles: curve_tube, decal_plane, fastener, panel_cutline, text_label",
+        "subject materials 1 < min 8",
+        "subject material node count 2 < min 5",
+        "subject procedural materials 0 < min 2",
+        "missing subject material features: noise_bump, noise_color_ramp, wave_bump"
+      ]
+    }
+  },
+  {
+    "skill_plus_tools": {
+      "task_id": "organic_soft_surface_study",
+      "mode": "skill_plus_tools",
+      "pass": true,
+      "visual_score": 97,
+      "technical_score": 100,
+      "runtime_seconds": 5.3,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_skill_plus_tools\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "warm_red_bias"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": []
+    },
+    "baseline_no_skill": {
+      "task_id": "organic_soft_surface_study",
+      "mode": "baseline_no_skill",
+      "pass": false,
+      "visual_score": 33,
+      "technical_score": 60,
+      "runtime_seconds": 3.8,
+      "iterations": 1,
+      "artifacts": [
+        null,
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_baseline_no_skill\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "missing_preview"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "no active camera",
+        "no meaningful lighting",
+        "object has default/auto name: 'Sphere'",
+        "no active camera in scene",
+        "scene has no lights and no world illumination",
+        "important object has no material: Sphere",
+        "score 33 < min 86",
+        "subject objects 1 < min 24",
+        "visible subject objects 0 < min 22",
+        "subject depth layers 1 < min 4",
+        "missing named subject parts: organic, fluted, petal, leaf, fold, dew, stem",
+        "subject faces 512 < min 1600",
+        "subject modifiers 0 < min 42",
+        "smooth subject objects 0 < min 30",
+        "craft detail objects 0 < min 80",
+        "missing craft roles: organic_surface, surface_microdetail",
+        "curved detail objects 0 < min 30",
+        "subject materials 0 < min 6",
+        "subject material node count 0 < min 5",
+        "subject procedural materials 0 < min 4",
+        "missing subject material features: noise_bump, noise_color_ramp, wave_bump"
+      ]
+    },
+    "adversarial_slop_keyword_blob_without_surface_craft": {
+      "task_id": "organic_soft_surface_study",
+      "mode": "adversarial_slop_keyword_blob_without_surface_craft",
+      "pass": false,
+      "visual_score": 79,
+      "technical_score": 100,
+      "runtime_seconds": 4.5,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "warm_red_bias"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "render has no discernible silhouette/detail",
+        "render is too flat for visual acceptance",
+        "score 79 < min 86",
+        "subject objects 1 < min 24",
+        "visible subject objects 1 < min 22",
+        "subject depth layers 1 < min 4",
+        "subject faces 512 < min 1600",
+        "subject modifiers 0 < min 42",
+        "smooth subject objects 1 < min 30",
+        "craft detail objects 0 < min 80",
+        "missing craft roles: organic_surface, surface_microdetail",
+        "curved detail objects 1 < min 30",
+        "subject materials 1 < min 6",
+        "subject material node count 2 < min 5",
+        "subject procedural materials 0 < min 4",
+        "missing subject material features: noise_bump, noise_color_ramp, wave_bump"
+      ]
+    }
+  },
+  {
+    "skill_plus_tools": {
+      "task_id": "particle_vfx_energy_burst",
+      "mode": "skill_plus_tools",
+      "pass": true,
+      "visual_score": 97,
+      "technical_score": 100,
+      "runtime_seconds": 5.4,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\particle_vfx_energy_burst_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\particle_vfx_energy_burst_skill_plus_tools\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "dark",
+        "blue_cyan_bias",
+        "dark_blue_cyan"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": []
+    },
+    "baseline_no_skill": {
+      "task_id": "particle_vfx_energy_burst",
+      "mode": "baseline_no_skill",
+      "pass": false,
+      "visual_score": 33,
+      "technical_score": 60,
+      "runtime_seconds": 3.7,
+      "iterations": 1,
+      "artifacts": [
+        null,
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\particle_vfx_energy_burst_baseline_no_skill\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "missing_preview"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "no active camera",
+        "no meaningful lighting",
+        "object has default/auto name: 'Sphere'",
+        "no active camera in scene",
+        "scene has no lights and no world illumination",
+        "important object has no material: Sphere",
+        "score 33 < min 86",
+        "subject objects 1 < min 46",
+        "visible subject objects 0 < min 36",
+        "subject depth layers 1 < min 4",
+        "missing named subject parts: core, spark, trail, ring, particle",
+        "subject faces 512 < min 1200",
+        "subject modifiers 0 < min 38",
+        "smooth subject objects 0 < min 5",
+        "craft detail objects 0 < min 70",
+        "missing craft roles: energy_streak, surface_microdetail",
+        "curved detail objects 0 < min 18",
+        "subject materials 0 < min 4",
+        "subject material node count 0 < min 5",
+        "subject procedural materials 0 < min 2",
+        "missing subject material features: noise_bump, noise_color_ramp",
+        "emissive materials 0 < min 3",
+        "particle systems 0 < min 1",
+        "total particles 0 < min 150"
+      ]
+    },
+    "adversarial_slop_named_glow_no_particles": {
+      "task_id": "particle_vfx_energy_burst",
+      "mode": "adversarial_slop_named_glow_no_particles",
+      "pass": false,
+      "visual_score": 79,
+      "technical_score": 100,
+      "runtime_seconds": 4.6,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "dark",
+        "blue_cyan_bias",
+        "dark_blue_cyan"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "dark render lacks readable subject detail",
+        "score 79 < min 86",
+        "subject objects 2 < min 46",
+        "visible subject objects 2 < min 36",
+        "subject depth layers 1 < min 4",
+        "subject faces 1088 < min 1200",
+        "subject modifiers 0 < min 38",
+        "smooth subject objects 2 < min 5",
+        "craft detail objects 0 < min 70",
+        "missing craft roles: energy_streak, surface_microdetail",
+        "curved detail objects 2 < min 18",
+        "subject materials 1 < min 4",
+        "subject material node count 2 < min 5",
+        "subject procedural materials 0 < min 2",
+        "missing subject material features: noise_bump, noise_color_ramp",
+        "emissive materials 1 < min 3",
+        "particle systems 0 < min 1",
+        "total particles 0 < min 150"
+      ]
+    }
+  },
+  {
+    "skill_plus_tools": {
+      "task_id": "product_hero_watch",
+      "mode": "skill_plus_tools",
+      "pass": true,
+      "visual_score": 100,
+      "technical_score": 100,
+      "runtime_seconds": 4.8,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "very_dark",
+        "blue_cyan_bias",
+        "dark_blue_cyan"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": []
+    },
+    "baseline_no_skill": {
+      "task_id": "product_hero_watch",
+      "mode": "baseline_no_skill",
+      "pass": false,
+      "visual_score": 29,
+      "technical_score": 40,
+      "runtime_seconds": 3.8,
+      "iterations": 1,
+      "artifacts": [
+        null,
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\product_hero_watch_baseline_no_skill\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "missing_preview"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "no active camera",
+        "no meaningful lighting",
+        "object has default/auto name: 'Cube'",
+        "object has default/auto name: 'Sphere'",
+        "no active camera in scene",
+        "scene has no lights and no world illumination",
+        "important object has no material: Cube",
+        "important object has no material: Sphere",
+        "score 29 < min 88",
+        "subject objects 2 < min 24",
+        "visible subject objects 0 < min 22",
+        "missing named subject parts: watch, case, bezel, dial, glass, strap, ridge, marker, hand, crown",
+        "subject modifiers 0 < min 20",
+        "smooth subject objects 0 < min 5",
+        "craft detail objects 0 < min 1",
+        "missing craft roles: text_label",
+        "subject materials 0 < min 5",
+        "subject material node count 0 < min 5",
+        "subject procedural materials 0 < min 2",
+        "missing subject material features: noise_color_ramp, wave_bump"
+      ]
+    },
+    "adversarial_slop_keyword_disc": {
+      "task_id": "product_hero_watch",
+      "mode": "adversarial_slop_keyword_disc",
+      "pass": false,
+      "visual_score": 79,
+      "technical_score": 100,
+      "runtime_seconds": 4.6,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\product_hero_watch_adversarial_slop_keyword_disc\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\product_hero_watch_adversarial_slop_keyword_disc\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "very_dark",
+        "blue_cyan_bias",
+        "dark_blue_cyan"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "render has no discernible silhouette/detail",
+        "score 79 < min 88",
+        "subject objects 2 < min 24",
+        "visible subject objects 2 < min 22",
+        "subject modifiers 2 < min 20",
+        "smooth subject objects 1 < min 5",
+        "craft detail objects 0 < min 1",
+        "missing craft roles: text_label",
+        "subject materials 2 < min 5",
+        "subject material node count 2 < min 5",
+        "subject procedural materials 0 < min 2",
+        "missing subject material features: noise_color_ramp, wave_bump"
+      ]
+    }
+  },
+  {
+    "skill_plus_tools": {
+      "task_id": "reference_match",
+      "mode": "skill_plus_tools",
+      "pass": true,
+      "visual_score": 98,
+      "technical_score": 100,
+      "runtime_seconds": 4.9,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_skill_plus_tools\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "very_dark",
+        "blue_cyan_bias",
+        "dark_blue_cyan"
+      ],
+      "reference_metrics": {
+        "ssim": 0.7477930943072052,
+        "palette_similarity": 0.963032625450261,
+        "reference_image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\references\\reference_match.png",
+        "saliency_iou": 0.18295088210889998,
+        "edge_iou": 0.10880040578239919,
+        "saliency_center_delta": 0.24603406552609028,
+        "saliency_coverage_delta": 0.02045524691358025,
+        "mean_brightness_delta": 0.001621432602405548,
+        "contrast_delta": 7.845461368560791e-06,
+        "edge_density_delta": 0.019398148148148144
+      },
+      "palette_similarity": 0.963032625450261,
+      "animation_frame_proof": null,
+      "failures": []
+    },
+    "baseline_no_skill": {
+      "task_id": "reference_match",
+      "mode": "baseline_no_skill",
+      "pass": false,
+      "visual_score": 29,
+      "technical_score": 60,
+      "runtime_seconds": 3.7,
+      "iterations": 1,
+      "artifacts": [
+        null,
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_baseline_no_skill\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "missing_preview"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "no active camera",
+        "no meaningful lighting",
+        "object has default/auto name: 'Cube'",
+        "no active camera in scene",
+        "scene has no lights and no world illumination",
+        "important object has no material: Cube",
+        "reference match requested but no reference metrics were provided",
+        "score 29 < min 88",
+        "subject objects 1 < min 22",
+        "visible subject objects 0 < min 18",
+        "subject depth layers 1 < min 5",
+        "missing named subject parts: body, inset, rim, highlight, groove, reflection, lens, sensor, bevel",
+        "distinct visible named-part objects 0 < min 16",
+        "named-part total coverage 0.0000 < min 0.0800",
+        "subject faces 6 < min 520",
+        "subject modifiers 0 < min 18",
+        "subject materials 0 < min 6",
+        "subject material node count 0 < min 5",
+        "subject procedural materials 0 < min 2",
+        "missing subject material features: noise_bump, noise_color_ramp",
+        "emissive materials 0 < min 2",
+        "palette similarity 0.00 < min 0.72",
+        "reference SSIM 0.00 < min 0.28",
+        "reference saliency IoU 0.00 < min 0.14",
+        "reference edge IoU 0.00 < min 0.08",
+        "reference center delta 1.000 > max 0.300",
+        "reference coverage delta 1.000 > max 0.080",
+        "reference brightness delta 1.000 > max 0.025",
+        "reference contrast delta 1.000 > max 0.006"
+      ]
+    },
+    "adversarial_slop_named_lit_box": {
+      "task_id": "reference_match",
+      "mode": "adversarial_slop_named_lit_box",
+      "pass": false,
+      "visual_score": 79,
+      "technical_score": 100,
+      "runtime_seconds": 4.6,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_adversarial_slop_named_lit_box\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "very_dark"
+      ],
+      "reference_metrics": {
+        "ssim": 0.36781103513500796,
+        "palette_similarity": 0.9413798966961806,
+        "reference_image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\references\\reference_match.png",
+        "saliency_iou": 0.053573281856487534,
+        "edge_iou": 0.02704626334519573,
+        "saliency_center_delta": 0.16801235922686278,
+        "saliency_coverage_delta": 0.25893518518518516,
+        "mean_brightness_delta": 0.059537507593631744,
+        "contrast_delta": 0.013167858123779297,
+        "edge_density_delta": 0.02613425925925926
+      },
+      "palette_similarity": 0.9413798966961806,
+      "animation_frame_proof": null,
+      "failures": [
+        "dark render lacks readable subject detail",
+        "score 79 < min 88",
+        "subject objects 2 < min 22",
+        "visible subject objects 2 < min 18",
+        "subject depth layers 2 < min 5",
+        "missing named subject parts: reflection",
+        "distinct visible named-part objects 2 < min 16",
+        "subject faces 12 < min 520",
+        "subject modifiers 1 < min 18",
+        "subject materials 2 < min 6",
+        "subject material node count 2 < min 5",
+        "subject procedural materials 0 < min 2",
+        "missing subject material features: noise_bump, noise_color_ramp",
+        "emissive materials 1 < min 2",
+        "reference saliency IoU 0.05 < min 0.14",
+        "reference edge IoU 0.03 < min 0.08",
+        "reference coverage delta 0.259 > max 0.080",
+        "reference brightness delta 0.060 > max 0.025",
+        "reference contrast delta 0.013 > max 0.006"
+      ]
+    }
+  },
+  {
+    "skill_plus_tools": {
+      "task_id": "scene_repair",
+      "mode": "skill_plus_tools",
+      "pass": true,
+      "visual_score": 100,
+      "technical_score": 100,
+      "runtime_seconds": 4.8,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_skill_plus_tools\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "warm_red_bias"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": 0.8848720002629435,
+      "animation_frame_proof": null,
+      "failures": []
+    },
+    "baseline_no_skill": {
+      "task_id": "scene_repair",
+      "mode": "baseline_no_skill",
+      "pass": false,
+      "visual_score": 24,
+      "technical_score": 40,
+      "runtime_seconds": 3.8,
+      "iterations": 1,
+      "artifacts": [
+        null,
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_baseline_no_skill\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "missing_preview"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "no active camera",
+        "no meaningful lighting",
+        "object has default/auto name: 'Cube'",
+        "object has default/auto name: 'Cube.001'",
+        "no active camera in scene",
+        "scene has no lights and no world illumination",
+        "important object has no material: Cube",
+        "important object has no material: Cube.001",
+        "score 24 < min 84",
+        "subject objects 2 < min 28",
+        "visible subject objects 0 < min 24",
+        "missing named subject parts: repaired, base, panel, accent, handle, hinge, screw, label, tick",
+        "distinct visible named-part objects 0 < min 16",
+        "named-part total coverage 0.0000 < min 0.1600",
+        "subject modifiers 0 < min 13",
+        "subject materials 0 < min 6",
+        "subject material node count 0 < min 5",
+        "subject procedural materials 0 < min 1"
+      ]
+    },
+    "adversarial_slop_renamed_box_no_repair_craft": {
+      "task_id": "scene_repair",
+      "mode": "adversarial_slop_renamed_box_no_repair_craft",
+      "pass": false,
+      "visual_score": 79,
+      "technical_score": 100,
+      "runtime_seconds": 4.5,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "warm_red_bias"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": 0.8630497822980913,
+      "animation_frame_proof": null,
+      "failures": [
+        "render has no discernible silhouette/detail",
+        "render is too flat for visual acceptance",
+        "score 79 < min 84",
+        "subject objects 1 < min 28",
+        "visible subject objects 1 < min 24",
+        "distinct visible named-part objects 1 < min 16",
+        "subject modifiers 1 < min 13",
+        "subject materials 1 < min 6",
+        "subject material node count 2 < min 5",
+        "subject procedural materials 0 < min 1"
+      ]
+    }
+  },
+  {
+    "skill_plus_tools": {
+      "task_id": "sci_fi_corridor",
+      "mode": "skill_plus_tools",
+      "pass": true,
+      "visual_score": 97,
+      "technical_score": 100,
+      "runtime_seconds": 5.6,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\sci_fi_corridor_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\sci_fi_corridor_skill_plus_tools\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "very_dark",
+        "blue_cyan_bias",
+        "dark_blue_cyan"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": 0.8722529778708443,
+      "animation_frame_proof": null,
+      "failures": []
+    },
+    "baseline_no_skill": {
+      "task_id": "sci_fi_corridor",
+      "mode": "baseline_no_skill",
+      "pass": false,
+      "visual_score": 31,
+      "technical_score": 40,
+      "runtime_seconds": 3.8,
+      "iterations": 1,
+      "artifacts": [
+        null,
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\sci_fi_corridor_baseline_no_skill\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "missing_preview"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "no active camera",
+        "no meaningful lighting",
+        "object has default/auto name: 'Cube'",
+        "no active camera in scene",
+        "scene has no lights and no world illumination",
+        "important object has no material: Cube",
+        "important object has no material: Cube2",
+        "important object has no material: Cube3",
+        "score 31 < min 86",
+        "subject objects 3 < min 5",
+        "visible subject objects 0 < min 3",
+        "missing named subject parts: drone, core, ring, sensor, antenna",
+        "subject modifiers 0 < min 5",
+        "environment objects 0 < min 32",
+        "visible environment objects 0 < min 24",
+        "environment depth layers 0 < min 8",
+        "missing named environment parts: corridor, floor, ceiling, wall, rib, rail, door, light, panel",
+        "environment materials 0 < min 5",
+        "subject materials 0 < min 3",
+        "subject material node count 0 < min 5",
+        "subject procedural materials 0 < min 1",
+        "emissive materials 0 < min 3",
+        "geometry-node groups 0 < min 1",
+        "geometry-node count 0 < min 7",
+        "geometry-node links 0 < min 6",
+        "geometry-node detail objects 0 < min 48",
+        "missing geometry-node detail roles: panel_wall_plate"
+      ]
+    },
+    "adversarial_slop_corridor_keywords_no_gn_depth": {
+      "task_id": "sci_fi_corridor",
+      "mode": "adversarial_slop_corridor_keywords_no_gn_depth",
+      "pass": false,
+      "visual_score": 79,
+      "technical_score": 100,
+      "runtime_seconds": 4.5,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "very_dark"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": 0.8274210521285555,
+      "animation_frame_proof": null,
+      "failures": [
+        "render has no discernible silhouette/detail",
+        "dark render lacks readable subject detail",
+        "score 79 < min 86",
+        "subject objects 1 < min 5",
+        "visible subject objects 1 < min 3",
+        "subject modifiers 0 < min 5",
+        "environment objects 1 < min 32",
+        "visible environment objects 1 < min 24",
+        "environment depth layers 1 < min 8",
+        "environment materials 1 < min 5",
+        "subject materials 1 < min 3",
+        "subject material node count 2 < min 5",
+        "subject procedural materials 0 < min 1",
+        "emissive materials 1 < min 3",
+        "geometry-node groups 0 < min 1",
+        "geometry-node count 0 < min 7",
+        "geometry-node links 0 < min 6",
+        "geometry-node detail objects 0 < min 48",
+        "missing geometry-node detail roles: panel_wall_plate"
+      ]
+    }
+  },
+  {
+    "skill_plus_tools": {
+      "task_id": "shader_texture_material_study",
+      "mode": "skill_plus_tools",
+      "pass": true,
+      "visual_score": 100,
+      "technical_score": 100,
+      "runtime_seconds": 5.0,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "neutral"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": 0.8227938119983941,
+      "animation_frame_proof": null,
+      "failures": []
+    },
+    "baseline_no_skill": {
+      "task_id": "shader_texture_material_study",
+      "mode": "baseline_no_skill",
+      "pass": false,
+      "visual_score": 27,
+      "technical_score": 40,
+      "runtime_seconds": 3.8,
+      "iterations": 1,
+      "artifacts": [
+        null,
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_baseline_no_skill\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "missing_preview"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": null,
+      "failures": [
+        "no active camera",
+        "no meaningful lighting",
+        "object has default/auto name: 'Cylinder'",
+        "object has default/auto name: 'Cube'",
+        "no active camera in scene",
+        "scene has no lights and no world illumination",
+        "important object has no material: Cylinder",
+        "important object has no material: Cube",
+        "score 27 < min 86",
+        "subject objects 2 < min 20",
+        "visible subject objects 0 < min 18",
+        "subject depth layers 2 < min 4",
+        "missing named subject parts: bottle, liquid, cap, label, nozzle, reflection, highlight, swatch, ridge, backlight",
+        "distinct visible named-part objects 0 < min 16",
+        "named-part total coverage 0.0000 < min 0.1600",
+        "subject faces 40 < min 520",
+        "subject modifiers 0 < min 14",
+        "subject materials 0 < min 7",
+        "subject material node count 0 < min 5",
+        "subject material link count 0 < min 12",
+        "rich linked subject materials 0 < min 4",
+        "subject procedural materials 0 < min 4",
+        "missing subject material features: anisotropic_brush, checker_texture, edge_wear_subtle, noise_bump, noise_color_ramp, roughness_variation, scanlines, wave_bump",
+        "missing subject material node names: EdgeWearAO, Mapping, RoughnessRamp, ScanlineWave, TexCoord",
+        "missing subject image texture roles: base_color, displacement",
+        "palette similarity 0.00 < min 0.62"
+      ]
+    },
+    "adversarial_slop_named_bottle_no_shader_stack": {
+      "task_id": "shader_texture_material_study",
+      "mode": "adversarial_slop_named_bottle_no_shader_stack",
+      "pass": false,
+      "visual_score": 79,
+      "technical_score": 100,
+      "runtime_seconds": 4.6,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "neutral"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": 0.728686764113462,
+      "animation_frame_proof": null,
+      "failures": [
+        "render has no discernible silhouette/detail",
+        "render is too flat for visual acceptance",
+        "score 79 < min 86",
+        "subject objects 2 < min 20",
+        "visible subject objects 2 < min 18",
+        "subject depth layers 1 < min 4",
+        "distinct visible named-part objects 2 < min 16",
+        "subject faces 40 < min 520",
+        "subject modifiers 0 < min 14",
+        "subject materials 2 < min 7",
+        "subject material node count 2 < min 5",
+        "subject material link count 1 < min 12",
+        "rich linked subject materials 0 < min 4",
+        "subject procedural materials 0 < min 4",
+        "missing subject material features: anisotropic_brush, checker_texture, edge_wear_subtle, noise_bump, noise_color_ramp, roughness_variation, scanlines, wave_bump",
+        "missing subject material node names: EdgeWearAO, Mapping, RoughnessRamp, ScanlineWave, TexCoord",
+        "missing subject image texture roles: base_color, displacement"
+      ]
+    }
+  },
+  {
+    "skill_plus_tools": {
+      "task_id": "turntable_animation",
+      "mode": "skill_plus_tools",
+      "pass": true,
+      "visual_score": 100,
+      "technical_score": 100,
+      "runtime_seconds": 11.0,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "neutral"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": {
+        "frame_count": 3,
+        "frames": [
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png"
+        ],
+        "pairs": [
+          {
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "mean_rgb_delta": 0.1285526156425476,
+            "max_rgb_delta": 0.729411780834198,
+            "mean_luma_delta": 0.1265067309141159,
+            "changed_pixel_ratio": 0.5339506172839507
+          },
+          {
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png",
+            "mean_rgb_delta": 0.1285533457994461,
+            "max_rgb_delta": 0.729411780834198,
+            "mean_luma_delta": 0.1265074461698532,
+            "changed_pixel_ratio": 0.5339506172839507
+          }
+        ],
+        "max_mean_rgb_delta": 0.1285533457994461,
+        "max_changed_pixel_ratio": 0.5339506172839507,
+        "requested_frames": [
+          1,
+          60,
+          120
+        ]
+      },
+      "failures": []
+    },
+    "baseline_no_skill": {
+      "task_id": "turntable_animation",
+      "mode": "baseline_no_skill",
+      "pass": false,
+      "visual_score": 30,
+      "technical_score": 60,
+      "runtime_seconds": 7.1,
+      "iterations": 1,
+      "artifacts": [
+        null,
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_baseline_no_skill\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "missing_preview"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": {
+        "frame_count": 0,
+        "pairs": [],
+        "max_mean_rgb_delta": 0.0,
+        "max_changed_pixel_ratio": 0.0,
+        "requested_frames": [
+          1,
+          126,
+          250
+        ]
+      },
+      "failures": [
+        "no active camera",
+        "no meaningful lighting",
+        "object has default/auto name: 'Cylinder'",
+        "no active camera in scene",
+        "scene has no lights and no world illumination",
+        "important object has no material: Cylinder",
+        "score 30 < min 84",
+        "subject objects 1 < min 30",
+        "visible subject objects 0 < min 26",
+        "missing named subject parts: product, ring, dial, indicator, lens, focus, grip, fin",
+        "subject faces 34 < min 1400",
+        "subject modifiers 0 < min 18",
+        "subject materials 0 < min 7",
+        "subject material node count 0 < min 5",
+        "subject procedural materials 0 < min 2",
+        "animation required but no keyframes",
+        "GLB animation clip required but none exported",
+        "keyframed objects 0 < min 10",
+        "animation frame delta 0.0000 < min 0.0060",
+        "animation changed pixel ratio 0.0000 < min 0.0120",
+        "sampled moving objects 0 < min 10",
+        "sampled rotation delta 0.00 < min 3.00"
+      ]
+    },
+    "adversarial_slop_static_product_no_animation_clip": {
+      "task_id": "turntable_animation",
+      "mode": "adversarial_slop_static_product_no_animation_clip",
+      "pass": false,
+      "visual_score": 79,
+      "technical_score": 100,
+      "runtime_seconds": 9.9,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "dark"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": {
+        "frame_count": 3,
+        "frames": [
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png"
+        ],
+        "pairs": [
+          {
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
+            "mean_rgb_delta": 0.0,
+            "max_rgb_delta": 0.0,
+            "mean_luma_delta": 0.0,
+            "changed_pixel_ratio": 0.0
+          },
+          {
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png",
+            "mean_rgb_delta": 0.0,
+            "max_rgb_delta": 0.0,
+            "mean_luma_delta": 0.0,
+            "changed_pixel_ratio": 0.0
+          }
+        ],
+        "max_mean_rgb_delta": 0.0,
+        "max_changed_pixel_ratio": 0.0,
+        "requested_frames": [
+          1,
+          126,
+          250
+        ]
+      },
+      "failures": [
+        "render has no discernible silhouette/detail",
+        "score 79 < min 84",
+        "subject objects 1 < min 30",
+        "visible subject objects 1 < min 26",
+        "subject faces 34 < min 1400",
+        "subject modifiers 1 < min 18",
+        "subject materials 1 < min 7",
+        "subject material node count 2 < min 5",
+        "subject procedural materials 0 < min 2",
+        "animation required but no keyframes",
+        "GLB animation clip required but none exported",
+        "keyframed objects 0 < min 10",
+        "animation frame delta 0.0000 < min 0.0060",
+        "animation changed pixel ratio 0.0000 < min 0.0120",
+        "sampled moving objects 0 < min 10",
+        "sampled rotation delta 0.00 < min 3.00"
+      ]
+    }
+  },
+  {
+    "skill_plus_tools": {
+      "task_id": "web_scroll_hero",
+      "mode": "skill_plus_tools",
+      "pass": true,
+      "visual_score": 100,
+      "technical_score": 100,
+      "runtime_seconds": 10.8,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "dark",
+        "blue_cyan_bias",
+        "dark_blue_cyan"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": 0.7540049250954893,
+      "animation_frame_proof": {
+        "frame_count": 3,
+        "frames": [
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png"
+        ],
+        "pairs": [
+          {
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "mean_rgb_delta": 0.06761109828948975,
+            "max_rgb_delta": 0.8392156958580017,
+            "mean_luma_delta": 0.0679827630519867,
+            "changed_pixel_ratio": 0.33315586419753085
+          },
+          {
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png",
+            "mean_rgb_delta": 0.07208562642335892,
+            "max_rgb_delta": 0.8352941274642944,
+            "mean_luma_delta": 0.07096756249666214,
+            "changed_pixel_ratio": 0.30527777777777776
+          }
+        ],
+        "max_mean_rgb_delta": 0.07208562642335892,
+        "max_changed_pixel_ratio": 0.33315586419753085,
+        "requested_frames": [
+          1,
+          60,
+          120
+        ]
+      },
+      "failures": []
+    },
+    "baseline_no_skill": {
+      "task_id": "web_scroll_hero",
+      "mode": "baseline_no_skill",
+      "pass": false,
+      "visual_score": 31,
+      "technical_score": 50,
+      "runtime_seconds": 7.2,
+      "iterations": 1,
+      "artifacts": [
+        null,
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_baseline_no_skill\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "missing_preview"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": null,
+      "animation_frame_proof": {
+        "frame_count": 0,
+        "pairs": [],
+        "max_mean_rgb_delta": 0.0,
+        "max_changed_pixel_ratio": 0.0,
+        "requested_frames": [
+          1,
+          126,
+          250
+        ]
+      },
+      "failures": [
+        "no active camera",
+        "no meaningful lighting",
+        "requested animation has no keyframes",
+        "object has default/auto name: 'Sphere'",
+        "no active camera in scene",
+        "scene has no lights and no world illumination",
+        "important object has no material: Sphere",
+        "animation requested but no keyframes/actions exist",
+        "score 31 < min 84",
+        "subject objects 1 < min 34",
+        "visible subject objects 0 < min 30",
+        "missing named subject parts: energy, core, orbital, ring, spark, aurora",
+        "subject modifiers 0 < min 20",
+        "smooth subject objects 0 < min 16",
+        "subject materials 0 < min 4",
+        "subject material node count 0 < min 5",
+        "subject procedural materials 0 < min 2",
+        "palette similarity 0.00 < min 0.58",
+        "animation required but no keyframes",
+        "GLB animation clip required but none exported",
+        "keyframed objects 0 < min 3",
+        "animation frame delta 0.0000 < min 0.0060",
+        "animation changed pixel ratio 0.0000 < min 0.0120",
+        "sampled moving objects 0 < min 3",
+        "sampled rotation delta 0.00 < min 3.00",
+        "camera animation required but active camera is not keyframed",
+        "camera sampled location delta 0.00 < min 3.00"
+      ]
+    },
+    "adversarial_slop_static_hero_no_scroll_path": {
+      "task_id": "web_scroll_hero",
+      "mode": "adversarial_slop_static_hero_no_scroll_path",
+      "pass": false,
+      "visual_score": 79,
+      "technical_score": 90,
+      "runtime_seconds": 10.4,
+      "iterations": 1,
+      "artifacts": [
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\export_final.glb"
+      ],
+      "visual_style_tags": [
+        "very_dark"
+      ],
+      "reference_metrics": null,
+      "palette_similarity": 0.7658783241514214,
+      "animation_frame_proof": {
+        "frame_count": 3,
+        "frames": [
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png"
+        ],
+        "pairs": [
+          {
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+            "mean_rgb_delta": 0.0,
+            "max_rgb_delta": 0.0,
+            "mean_luma_delta": 0.0,
+            "changed_pixel_ratio": 0.0
+          },
+          {
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png",
+            "mean_rgb_delta": 0.0,
+            "max_rgb_delta": 0.0,
+            "mean_luma_delta": 0.0,
+            "changed_pixel_ratio": 0.0
+          }
+        ],
+        "max_mean_rgb_delta": 0.0,
+        "max_changed_pixel_ratio": 0.0,
+        "requested_frames": [
+          1,
+          126,
+          250
+        ]
+      },
+      "failures": [
+        "dark render lacks readable subject detail",
+        "requested animation has no keyframes",
+        "animation requested but no keyframes/actions exist",
+        "score 79 < min 84",
+        "subject objects 2 < min 34",
+        "visible subject objects 2 < min 30",
+        "subject modifiers 0 < min 20",
+        "smooth subject objects 2 < min 16",
+        "subject materials 2 < min 4",
+        "subject material node count 2 < min 5",
+        "subject procedural materials 0 < min 2",
+        "animation required but no keyframes",
+        "GLB animation clip required but none exported",
+        "keyframed objects 0 < min 3",
+        "animation frame delta 0.0000 < min 0.0060",
+        "animation changed pixel ratio 0.0000 < min 0.0120",
+        "sampled moving objects 0 < min 3",
+        "sampled rotation delta 0.00 < min 3.00",
+        "camera animation required but active camera is not keyframed",
+        "camera sampled location delta 0.00 < min 3.00"
+      ]
+    }
+  }
+]

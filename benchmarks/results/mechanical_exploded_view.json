@@ -1,0 +1,100 @@
+{
+  "skill_plus_tools": {
+    "task_id": "mechanical_exploded_view",
+    "mode": "skill_plus_tools",
+    "pass": true,
+    "visual_score": 97,
+    "technical_score": 100,
+    "runtime_seconds": 5.2,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "neutral"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "mechanical_exploded_view",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 29,
+    "technical_score": 50,
+    "runtime_seconds": 3.8,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\mechanical_exploded_view_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Cylinder'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Cylinder",
+      "important object has no material: Cylinder2",
+      "score 29 < min 84",
+      "subject objects 2 < min 52",
+      "visible subject objects 0 < min 46",
+      "subject depth layers 2 < min 5",
+      "missing named subject parts: case, battery, board, screw, post, trace, contact, axis, chip, connector, gasket, spring, washer, ribbon, callout, cutaway, arrow, spacer",
+      "subject faces 68 < min 2600",
+      "subject modifiers 0 < min 36",
+      "craft detail objects 0 < min 22",
+      "missing craft roles: curve_tube, decal_plane, fastener, panel_cutline, text_label",
+      "subject materials 0 < min 8",
+      "subject material node count 0 < min 5",
+      "subject procedural materials 0 < min 2",
+      "missing subject material features: noise_bump, noise_color_ramp, wave_bump"
+    ]
+  },
+  "adversarial_slop_1": {
+    "task_id": "mechanical_exploded_view",
+    "mode": "adversarial_slop_1",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 4.4,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\mechanical_exploded_view_adversarial_slop_1\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\mechanical_exploded_view_adversarial_slop_1\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "very_dark"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "render has no discernible silhouette/detail",
+      "render is too flat for visual acceptance",
+      "forbidden visual style tags present: very_dark",
+      "score 79 < min 84",
+      "subject objects 2 < min 52",
+      "visible subject objects 2 < min 46",
+      "subject depth layers 2 < min 5",
+      "missing named subject parts: arrow, spacer",
+      "subject faces 68 < min 2600",
+      "subject modifiers 0 < min 36",
+      "craft detail objects 0 < min 22",
+      "missing craft roles: curve_tube, decal_plane, fastener, panel_cutline, text_label",
+      "subject materials 1 < min 8",
+      "subject material node count 2 < min 5",
+      "subject procedural materials 0 < min 2",
+      "missing subject material features: noise_bump, noise_color_ramp, wave_bump"
+    ]
+  }
+}

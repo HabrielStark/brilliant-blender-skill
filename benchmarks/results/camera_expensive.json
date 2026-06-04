@@ -1,0 +1,93 @@
+{
+  "skill_plus_tools": {
+    "task_id": "camera_expensive",
+    "mode": "skill_plus_tools",
+    "pass": true,
+    "visual_score": 100,
+    "technical_score": 100,
+    "runtime_seconds": 4.6,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "very_dark"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "camera_expensive",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 31,
+    "technical_score": 60,
+    "runtime_seconds": 3.7,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Icosphere'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Icosphere",
+      "score 31 < min 86",
+      "subject objects 1 < min 18",
+      "visible subject objects 0 < min 20",
+      "missing named subject parts: plinth, hero, faceted, facet, accent, ring, highlight",
+      "subject faces 80 < min 1800",
+      "subject modifiers 0 < min 6",
+      "smooth subject objects 0 < min 3",
+      "subject materials 0 < min 3",
+      "subject material node count 0 < min 5",
+      "subject procedural materials 0 < min 2",
+      "missing subject material features: noise_color_ramp"
+    ]
+  },
+  "adversarial_slop_named_lit_sphere": {
+    "task_id": "camera_expensive",
+    "mode": "adversarial_slop_named_lit_sphere",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 90,
+    "runtime_seconds": 4.4,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_adversarial_slop_named_lit_sphere\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "very_dark"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "dark render lacks readable subject detail",
+      "important object has no material: low_black_plinth",
+      "score 79 < min 86",
+      "subject objects 2 < min 18",
+      "visible subject objects 2 < min 20",
+      "subject faces 114 < min 1800",
+      "subject modifiers 2 < min 6",
+      "smooth subject objects 2 < min 3",
+      "subject materials 1 < min 3",
+      "subject material node count 2 < min 5",
+      "subject procedural materials 0 < min 2",
+      "missing subject material features: noise_color_ramp"
+    ]
+  }
+}

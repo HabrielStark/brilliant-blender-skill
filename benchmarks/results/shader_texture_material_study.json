@@ -1,0 +1,107 @@
+{
+  "skill_plus_tools": {
+    "task_id": "shader_texture_material_study",
+    "mode": "skill_plus_tools",
+    "pass": true,
+    "visual_score": 100,
+    "technical_score": 100,
+    "runtime_seconds": 5.0,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "neutral"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": 0.8227938119983941,
+    "animation_frame_proof": null,
+    "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "shader_texture_material_study",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 27,
+    "technical_score": 40,
+    "runtime_seconds": 3.8,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Cylinder'",
+      "object has default/auto name: 'Cube'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Cylinder",
+      "important object has no material: Cube",
+      "score 27 < min 86",
+      "subject objects 2 < min 20",
+      "visible subject objects 0 < min 18",
+      "subject depth layers 2 < min 4",
+      "missing named subject parts: bottle, liquid, cap, label, nozzle, reflection, highlight, swatch, ridge, backlight",
+      "distinct visible named-part objects 0 < min 16",
+      "named-part total coverage 0.0000 < min 0.1600",
+      "subject faces 40 < min 520",
+      "subject modifiers 0 < min 14",
+      "subject materials 0 < min 7",
+      "subject material node count 0 < min 5",
+      "subject material link count 0 < min 12",
+      "rich linked subject materials 0 < min 4",
+      "subject procedural materials 0 < min 4",
+      "missing subject material features: anisotropic_brush, checker_texture, edge_wear_subtle, noise_bump, noise_color_ramp, roughness_variation, scanlines, wave_bump",
+      "missing subject material node names: EdgeWearAO, Mapping, RoughnessRamp, ScanlineWave, TexCoord",
+      "missing subject image texture roles: base_color, displacement",
+      "palette similarity 0.00 < min 0.62"
+    ]
+  },
+  "adversarial_slop_named_bottle_no_shader_stack": {
+    "task_id": "shader_texture_material_study",
+    "mode": "adversarial_slop_named_bottle_no_shader_stack",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 4.6,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "neutral"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": 0.728686764113462,
+    "animation_frame_proof": null,
+    "failures": [
+      "render has no discernible silhouette/detail",
+      "render is too flat for visual acceptance",
+      "score 79 < min 86",
+      "subject objects 2 < min 20",
+      "visible subject objects 2 < min 18",
+      "subject depth layers 1 < min 4",
+      "distinct visible named-part objects 2 < min 16",
+      "subject faces 40 < min 520",
+      "subject modifiers 0 < min 14",
+      "subject materials 2 < min 7",
+      "subject material node count 2 < min 5",
+      "subject material link count 1 < min 12",
+      "rich linked subject materials 0 < min 4",
+      "subject procedural materials 0 < min 4",
+      "missing subject material features: anisotropic_brush, checker_texture, edge_wear_subtle, noise_bump, noise_color_ramp, roughness_variation, scanlines, wave_bump",
+      "missing subject material node names: EdgeWearAO, Mapping, RoughnessRamp, ScanlineWave, TexCoord",
+      "missing subject image texture roles: base_color, displacement"
+    ]
+  }
+}

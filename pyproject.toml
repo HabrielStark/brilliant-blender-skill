@@ -1,0 +1,85 @@
+[build-system]
+requires = ["setuptools==78.1.1", "wheel==0.46.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blender-cinematic-agent-skill"
+version = "0.1.0"
+description = "Skill-driven Blender production pipeline: agent skill + MCP server + Blender add-on for disciplined cinematic 3D scenes, with hardware-aware rendering, visual QA, iteration loop and web/GLB export."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+authors = [{ name = "blender-cinematic-agent-skill contributors" }]
+keywords = ["blender", "mcp", "agent-skill", "3d", "glb", "gltf", "cinematic", "render"]
+classifiers = [
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Multimedia :: Graphics :: 3D Rendering",
+]
+dependencies = [
+  "pydantic==2.12.5",
+  "psutil==6.1.1",
+  "Pillow==12.2.0",
+  "numpy==1.26.4",
+  "mcp==1.27.2",
+]
+
+[project.optional-dependencies]
+mcp = ["mcp==1.27.2"]
+imaging = ["Pillow==12.2.0", "numpy==1.26.4"]
+ssim = ["scikit-image==0.26.0"]
+nvidia = ["nvidia-ml-py==13.610.43"]
+dev = [
+  "pytest==9.0.3",
+  "pytest-cov==7.1.0",
+  "Pillow==12.2.0",
+  "numpy==1.26.4",
+  "mcp==1.27.2",
+  "jsonschema==4.26.0",
+  "pip-audit==2.10.0",
+  "build==1.5.0",
+  "twine==6.2.0",
+  "cyclonedx-bom==7.3.0",
+  "ruff==0.15.15",
+  "bandit==1.9.4",
+]
+all = [
+  "Pillow==12.2.0",
+  "numpy==1.26.4",
+  "scikit-image==0.26.0",
+  "mcp==1.27.2",
+  "nvidia-ml-py==13.610.43",
+]
+
+[project.scripts]
+blender-cinematic-mcp = "mcp_server.blender_cinematic_mcp.server:main"
+blender-cinematic-preflight = "blender_cinematic.preflight:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["blender_cinematic*", "mcp_server*"]
+exclude = ["addon*", "tests*", "benchmarks*", "examples*", "web*", "docs*", "scripts*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = [
+  "blender: requires a real Blender executable (skipped if unavailable)",
+  "web: requires Node toolchain / browser (skipped if unavailable)",
+  "slow: long-running test",
+]
+
+[tool.coverage.run]
+source = ["blender_cinematic", "mcp_server"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["addon", "artifacts", "dist", "build", "node_modules"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.bandit]
+exclude_dirs = ["artifacts", "build", "dist", "node_modules", "blender_cinematic_agent_skill.egg-info"]
+skips = ["B101"]

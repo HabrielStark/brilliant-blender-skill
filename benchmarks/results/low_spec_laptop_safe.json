@@ -1,0 +1,108 @@
+{
+  "skill_plus_tools": {
+    "task_id": "low_spec_laptop_safe",
+    "mode": "skill_plus_tools",
+    "pass": true,
+    "visual_score": 100,
+    "technical_score": 100,
+    "runtime_seconds": 5.3,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "neutral"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "low_spec_laptop_safe",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 29,
+    "technical_score": 60,
+    "runtime_seconds": 3.7,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Cube'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Cube",
+      "forbidden eval defect present: premium render: Cube has no bevel/subsurf/smooth",
+      "score 29 < min 84",
+      "subject objects 1 < min 34",
+      "visible subject objects 0 < min 29",
+      "missing named subject parts: monolith, panel, antenna, accent, vent, foot, decal, cap, screen, cable, pedestal, glow, hinge, latch, keypad, screw",
+      "distinct visible named-part objects 0 < min 18",
+      "named-part total coverage 0.0000 < min 0.1200",
+      "subject faces 6 < min 700",
+      "subject modifiers 0 < min 19",
+      "craft detail objects 0 < min 20",
+      "missing craft roles: curve_tube, decal_plane, fastener, grille_slat, panel_cutline, text_label",
+      "environment objects 0 < min 8",
+      "visible environment objects 0 < min 6",
+      "environment materials 0 < min 3",
+      "subject materials 0 < min 8",
+      "subject material node count 0 < min 5",
+      "subject procedural materials 0 < min 2",
+      "missing subject material features: noise_bump, wave_bump"
+    ]
+  },
+  "adversarial_slop_1": {
+    "task_id": "low_spec_laptop_safe",
+    "mode": "adversarial_slop_1",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 4.4,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_adversarial_slop_1\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "very_dark"
+    ],
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "render has no discernible silhouette/detail",
+      "render is too flat for visual acceptance",
+      "forbidden visual style tags present: very_dark",
+      "forbidden eval defect present: premium render: monolith_panel_antenna_accent_vent_foot_decal_cap_screen_cable_pedestal_glow has no bevel/subsurf/smooth",
+      "score 79 < min 84",
+      "subject objects 1 < min 34",
+      "visible subject objects 1 < min 29",
+      "missing named subject parts: hinge, latch, keypad, screw",
+      "distinct visible named-part objects 1 < min 18",
+      "subject faces 6 < min 700",
+      "subject modifiers 0 < min 19",
+      "craft detail objects 0 < min 20",
+      "missing craft roles: curve_tube, decal_plane, fastener, grille_slat, panel_cutline, text_label",
+      "environment objects 0 < min 8",
+      "visible environment objects 0 < min 6",
+      "environment materials 0 < min 3",
+      "subject materials 1 < min 8",
+      "subject material node count 2 < min 5",
+      "subject procedural materials 0 < min 2",
+      "missing subject material features: noise_bump, wave_bump"
+    ]
+  }
+}

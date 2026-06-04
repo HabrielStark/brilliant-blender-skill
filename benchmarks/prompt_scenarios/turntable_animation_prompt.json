@@ -1,0 +1,35 @@
+{
+  "id": "turntable_animation_prompt",
+  "title": "Prompt artifact: premium product turntable animation",
+  "prompt": "Create a 120-frame premium Blender product turntable animation and export a GLB animation clip with visible modeled details: ring, dial, indicator, lens, focus grip, fins, bevels, material variation, studio lighting, and a camera that keeps every detail readable.",
+  "candidate": {
+    "source": "benchmark_task",
+    "task_id": "turntable_animation",
+    "recipe_key": "recipe",
+    "provenance": "prompt_fixture"
+  },
+  "contract": {
+    "min_operations": 90,
+    "min_named_objects": 35,
+    "min_craft_operations": 2,
+    "min_materials": 7,
+    "min_procedural_materials": 2,
+    "min_material_target_objects": 25,
+    "forbid_unresolved_late_material_references": true,
+    "forbid_default_names": true,
+    "forbid_nonstandard_collections": true,
+    "require_camera_composition": true,
+    "max_subject_screen_coverage": 0.72,
+    "min_camera_safe_margin": 0.14,
+    "require_animation": true,
+    "min_animation_frames": 120,
+    "min_animation_targets": 10,
+    "require_glb_animation": true,
+    "require_looping_animation": true,
+    "min_operation_counts": {"set_smooth_shading": 5, "add_bevel_modifier": 15},
+    "required_ops": ["ensure_standard_collections", "create_camera", "create_lighting_rig", "create_material", "create_animation"],
+    "required_craft_ops": ["create_radial_markers", "create_linear_markers"],
+    "require_name_terms": ["product", "ring", "dial", "indicator", "lens", "focus", "grip", "fin"],
+    "require_name_term_groups": [["turntable", "animation", "clip"]]
+  }
+}

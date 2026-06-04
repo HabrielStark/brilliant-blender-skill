@@ -1,0 +1,585 @@
+{
+  "operations": [
+    {
+      "op": "ensure_standard_collections"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "type": "plane",
+      "name": "reflective_floor",
+      "size": 18,
+      "collection": "ENVIRONMENT"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "type": "cylinder",
+      "name": "watch_case_beveled",
+      "size": 2.2,
+      "location": [
+        0,
+        0,
+        0.4
+      ],
+      "scale": [
+        1,
+        1,
+        0.28
+      ],
+      "collection": "SUBJECT"
+    },
+    {
+      "op": "apply_transform",
+      "target": "watch_case_beveled",
+      "scale": true
+    },
+    {
+      "op": "set_smooth_shading",
+      "target": "watch_case_beveled",
+      "smooth": true
+    },
+    {
+      "op": "add_bevel_modifier",
+      "target": "watch_case_beveled",
+      "width": 0.04,
+      "segments": 4
+    },
+    {
+      "op": "create_mesh_primitive",
+      "type": "torus",
+      "name": "watch_bezel_ring",
+      "size": 2.3,
+      "location": [
+        0,
+        0,
+        0.55
+      ],
+      "collection": "SUBJECT"
+    },
+    {
+      "op": "set_smooth_shading",
+      "target": "watch_bezel_ring",
+      "smooth": true
+    },
+    {
+      "op": "add_bevel_modifier",
+      "target": "watch_bezel_ring",
+      "width": 0.015,
+      "segments": 3
+    },
+    {
+      "op": "create_mesh_primitive",
+      "type": "cylinder",
+      "name": "watch_dial_glass",
+      "size": 1.82,
+      "location": [
+        0,
+        0,
+        0.68
+      ],
+      "scale": [
+        1,
+        1,
+        0.035
+      ],
+      "collection": "SUBJECT"
+    },
+    {
+      "op": "apply_transform",
+      "target": "watch_dial_glass",
+      "scale": true
+    },
+    {
+      "op": "set_smooth_shading",
+      "target": "watch_dial_glass",
+      "smooth": true
+    },
+    {
+      "op": "create_mesh_primitive",
+      "type": "cube",
+      "name": "strap_upper_rubber",
+      "size": 1,
+      "location": [
+        0,
+        1.95,
+        0.32
+      ],
+      "scale": [
+        0.42,
+        1.45,
+        0.08
+      ],
+      "collection": "SUBJECT"
+    },
+    {
+      "op": "apply_transform",
+      "target": "strap_upper_rubber",
+      "scale": true
+    },
+    {
+      "op": "add_bevel_modifier",
+      "target": "strap_upper_rubber",
+      "width": 0.055,
+      "segments": 4
+    },
+    {
+      "op": "create_mesh_primitive",
+      "type": "cube",
+      "name": "strap_lower_rubber",
+      "size": 1,
+      "location": [
+        0,
+        -1.95,
+        0.32
+      ],
+      "scale": [
+        0.42,
+        1.45,
+        0.08
+      ],
+      "collection": "SUBJECT"
+    },
+    {
+      "op": "apply_transform",
+      "target": "strap_lower_rubber",
+      "scale": true
+    },
+    {
+      "op": "add_bevel_modifier",
+      "target": "strap_lower_rubber",
+      "width": 0.055,
+      "segments": 4
+    },
+    {
+      "op": "create_material",
+      "schema": {
+        "name": "brushed_black_titanium",
+        "preset": "brushed_metal",
+        "target_objects": [
+          "watch_case_beveled",
+          "watch_bezel_ring"
+        ],
+        "pbr": {
+          "base_color": [
+            0.02,
+            0.022,
+            0.026,
+            1
+          ],
+          "metallic": 1.0,
+          "roughness": 0.34
+        },
+        "procedural": {
+          "noise": true,
+          "noise_scale": 80,
+          "bump_strength": 0.04,
+          "color_ramp": {
+            "noise_scale": 46,
+            "detail": 12,
+            "colors": [
+              [
+                0.006,
+                0.007,
+                0.01,
+                1
+              ],
+              [
+                0.09,
+                0.11,
+                0.15,
+                1
+              ]
+            ],
+            "low_position": 0.18,
+            "high_position": 1.0
+          }
+        }
+      }
+    },
+    {
+      "op": "create_material",
+      "schema": {
+        "name": "tinted_sapphire_glass",
+        "preset": "glass_clear",
+        "target_objects": [
+          "watch_dial_glass"
+        ],
+        "pbr": {
+          "base_color": [
+            0.04,
+            0.06,
+            0.11,
+            1
+          ],
+          "roughness": 0.04,
+          "transmission": 1.0
+        },
+        "export_policy": {
+          "web_safe": true,
+          "bake_if_needed": true,
+          "fallback_material": "metallic_roughness_pbr"
+        }
+      }
+    },
+    {
+      "op": "create_material",
+      "schema": {
+        "name": "strap_soft_black_rubber",
+        "preset": "rubber_dark",
+        "target_objects": [
+          "strap_upper_rubber",
+          "strap_lower_rubber"
+        ],
+        "pbr": {
+          "base_color": [
+            0.012,
+            0.012,
+            0.015,
+            1
+          ],
+          "roughness": 0.78
+        },
+        "procedural": {
+          "wave": {
+            "scale": 26,
+            "distortion": 3,
+            "bump_strength": 0.025
+          }
+        }
+      }
+    },
+    {
+      "op": "create_material",
+      "schema": {
+        "name": "strap_edge_rubber",
+        "preset": "rubber_dark",
+        "pbr": {
+          "base_color": [
+            0.028,
+            0.03,
+            0.036,
+            1
+          ],
+          "roughness": 0.82
+        }
+      }
+    },
+    {
+      "op": "create_material",
+      "schema": {
+        "name": "face_marking_cool_emission",
+        "preset": "emissive_neon",
+        "pbr": {
+          "base_color": [
+            0.35,
+            0.58,
+            1.0,
+            1
+          ],
+          "emission_color": [
+            0.35,
+            0.58,
+            1.0,
+            1
+          ],
+          "emission_strength": 1.4
+        }
+      }
+    },
+    {
+      "op": "create_linear_markers",
+      "name_prefix": "strap_lower_ridge",
+      "start": [
+        0,
+        -1.15,
+        0.43
+      ],
+      "step": [
+        0,
+        -0.28,
+        0
+      ],
+      "count": 6,
+      "size": [
+        0.52,
+        0.04,
+        0.035
+      ],
+      "collection": "SUBJECT",
+      "material": "strap_edge_rubber"
+    },
+    {
+      "op": "create_linear_markers",
+      "name_prefix": "strap_upper_ridge",
+      "start": [
+        0,
+        1.15,
+        0.43
+      ],
+      "step": [
+        0,
+        0.28,
+        0
+      ],
+      "count": 6,
+      "size": [
+        0.52,
+        0.04,
+        0.035
+      ],
+      "collection": "SUBJECT",
+      "material": "strap_edge_rubber"
+    },
+    {
+      "op": "create_radial_markers",
+      "name_prefix": "dial_hour_marker",
+      "center": [
+        0,
+        0,
+        0.74
+      ],
+      "radius": 0.72,
+      "count": 12,
+      "size": [
+        0.055,
+        0.17,
+        0.025
+      ],
+      "collection": "SUBJECT",
+      "material": "face_marking_cool_emission"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "type": "cube",
+      "name": "watch_minute_hand",
+      "size": 1,
+      "location": [
+        0.18,
+        0.22,
+        0.77
+      ],
+      "rotation": [
+        0,
+        0,
+        -42
+      ],
+      "scale": [
+        0.045,
+        0.58,
+        0.025
+      ],
+      "collection": "SUBJECT"
+    },
+    {
+      "op": "apply_transform",
+      "target": "watch_minute_hand",
+      "scale": true
+    },
+    {
+      "op": "add_bevel_modifier",
+      "target": "watch_minute_hand",
+      "width": 0.01,
+      "segments": 2
+    },
+    {
+      "op": "assign_material",
+      "target": "watch_minute_hand",
+      "material": "face_marking_cool_emission"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "type": "cube",
+      "name": "watch_hour_hand",
+      "size": 1,
+      "location": [
+        -0.14,
+        0.05,
+        0.78
+      ],
+      "rotation": [
+        0,
+        0,
+        62
+      ],
+      "scale": [
+        0.055,
+        0.38,
+        0.03
+      ],
+      "collection": "SUBJECT"
+    },
+    {
+      "op": "apply_transform",
+      "target": "watch_hour_hand",
+      "scale": true
+    },
+    {
+      "op": "add_bevel_modifier",
+      "target": "watch_hour_hand",
+      "width": 0.012,
+      "segments": 2
+    },
+    {
+      "op": "assign_material",
+      "target": "watch_hour_hand",
+      "material": "face_marking_cool_emission"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "type": "cylinder",
+      "name": "watch_center_pin",
+      "size": 0.16,
+      "location": [
+        0,
+        0,
+        0.805
+      ],
+      "scale": [
+        1,
+        1,
+        0.16
+      ],
+      "collection": "SUBJECT"
+    },
+    {
+      "op": "apply_transform",
+      "target": "watch_center_pin",
+      "scale": true
+    },
+    {
+      "op": "set_smooth_shading",
+      "target": "watch_center_pin",
+      "smooth": true
+    },
+    {
+      "op": "assign_material",
+      "target": "watch_center_pin",
+      "material": "brushed_black_titanium"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "type": "cylinder",
+      "name": "side_crown_knurled",
+      "size": 0.34,
+      "location": [
+        1.34,
+        0,
+        0.47
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        0.36
+      ],
+      "collection": "SUBJECT"
+    },
+    {
+      "op": "apply_transform",
+      "target": "side_crown_knurled",
+      "scale": true
+    },
+    {
+      "op": "set_smooth_shading",
+      "target": "side_crown_knurled",
+      "smooth": true
+    },
+    {
+      "op": "add_bevel_modifier",
+      "target": "side_crown_knurled",
+      "width": 0.015,
+      "segments": 2
+    },
+    {
+      "op": "assign_material",
+      "target": "side_crown_knurled",
+      "material": "brushed_black_titanium"
+    },
+    {
+      "op": "create_material",
+      "schema": {
+        "name": "dark_floor",
+        "preset": "glossy_plastic",
+        "target_objects": [
+          "reflective_floor"
+        ],
+        "pbr": {
+          "base_color": [
+            0.008,
+            0.008,
+            0.011,
+            1
+          ],
+          "roughness": 0.18
+        }
+      }
+    },
+    {
+      "op": "create_lighting_rig",
+      "schema": {
+        "lighting_rig": "studio_product_large_softbox",
+        "lights": [
+          {
+            "name": "key_softbox_left",
+            "type": "AREA",
+            "power": 700,
+            "size": 7,
+            "position_role": "front_left_high"
+          },
+          {
+            "name": "rim_blue_right",
+            "type": "AREA",
+            "power": 240,
+            "size": 2.4,
+            "color": [
+              0.35,
+              0.55,
+              1.0
+            ],
+            "position_role": "rim"
+          }
+        ],
+        "world": {
+          "color": [
+            0.012,
+            0.014,
+            0.02
+          ],
+          "strength": 0.35
+        }
+      }
+    },
+    {
+      "op": "create_camera",
+      "schema": {
+        "camera_name": "camera_hero_macro",
+        "preset": "macro_product",
+        "target": "watch_case_beveled",
+        "location": [
+          4.8,
+          -6.4,
+          3.6
+        ],
+        "lens": {
+          "focal_length_mm": 70,
+          "dof": true,
+          "focus_target": "watch_case_beveled",
+          "aperture_fstop": 3.4
+        },
+        "composition": {
+          "subject_screen_coverage": 0.68,
+          "safe_margin": 0.12
+        }
+      }
+    },
+    {
+      "op": "set_scene_metadata",
+      "data": {
+        "final_camera": "camera_hero_macro"
+      }
+    }
+  ]
+}

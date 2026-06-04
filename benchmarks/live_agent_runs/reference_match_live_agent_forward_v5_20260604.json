@@ -1,0 +1,1482 @@
+{
+  "id": "reference_match_live_agent_forward_v5_20260604",
+  "scenario_id": "reference_match_prompt",
+  "source_agent": "019e91a3-d875-74e3-a60d-4167625f6f15",
+  "model": "inherited-codex-subagent",
+  "created_at": "2026-06-04",
+  "raw_output": {
+    "metadata": {
+      "claim_level": "live_agent_raw_output",
+      "agent_label": "forward-test-subagent-reference-v5",
+      "skill_path": "C:\\Users\\User\\Desktop\\blenderskill\\SKILL.md",
+      "generated_at_note": "Generated on 2026-06-04 from the updated Blender Cinematic Skill as structured recipe output only; Blender was not run.",
+      "reference_image_note": "benchmarks/references/reference_match.png was provided to the live agent"
+    },
+    "scenario_id": "reference_match_prompt",
+    "run_id": "reference_match_live_agent_forward_v5_20260604",
+    "prompt": "Match the supplied reference: a dark premium product on a reflective surface with layered body anatomy, smoked inset panels, blue rim light, crisp white edge highlights, lens detail, sensor, side grooves, bevels, and contact reflection.",
+    "recipe": {
+      "operations": [
+        {
+          "op": "ensure_standard_collections"
+        },
+        {
+          "op": "set_scene_metadata",
+          "data": {
+            "task_type": "reference_match",
+            "reference_observation": "Compact nearly black frontal product on dark navy ground; one connected horizontal rounded body silhouette with top strip, sparse blue and white accents, right lens, left sensor, left stacked grooves, blue right rim, and short bottom reflection dashes directly under the same body.",
+            "regression_fixes": "Single connected body silhouette; no separated floating lower platform; camera coverage between 0.60 and 0.76; subject materials use noise, bump_strength, and color_ramp; low brightness high contrast preserved."
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v5_connected_near_black_body_noise_ramp",
+            "preset": "metallic_roughness_pbr",
+            "pbr": {
+              "base_color": [
+                0.002,
+                0.003,
+                0.006,
+                1.0
+              ],
+              "metallic": 0.14,
+              "roughness": 0.46,
+              "clearcoat": 0.18
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 54.0,
+              "bump_strength": 0.018,
+              "edge_wear": "subtle",
+              "color_ramp": {
+                "noise_scale": 48.0,
+                "detail": 10,
+                "low_position": 0.18,
+                "high_position": 0.92,
+                "colors": [
+                  [
+                    0.001,
+                    0.002,
+                    0.004,
+                    1.0
+                  ],
+                  [
+                    0.012,
+                    0.018,
+                    0.032,
+                    1.0
+                  ]
+                ]
+              },
+              "roughness_variation": {
+                "noise_scale": 72.0,
+                "detail": 9,
+                "min_roughness": 0.34,
+                "max_roughness": 0.62
+              }
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v5_smoked_panel_noise_ramp",
+            "preset": "frosted_glass",
+            "pbr": {
+              "base_color": [
+                0.002,
+                0.006,
+                0.013,
+                0.7
+              ],
+              "roughness": 0.24,
+              "clearcoat": 0.44,
+              "alpha": 0.72,
+              "transmission": 0.18
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 70.0,
+              "bump_strength": 0.01,
+              "scanlines": true,
+              "scanline_scale": 118.0,
+              "scanline_strength": 0.08,
+              "color_ramp": {
+                "noise_scale": 64.0,
+                "detail": 8,
+                "low_position": 0.2,
+                "high_position": 0.88,
+                "colors": [
+                  [
+                    0.001,
+                    0.003,
+                    0.007,
+                    0.62
+                  ],
+                  [
+                    0.018,
+                    0.036,
+                    0.07,
+                    0.82
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v5_sparse_blue_accent_noise_ramp",
+            "preset": "emissive_neon",
+            "pbr": {
+              "base_color": [
+                0.02,
+                0.16,
+                0.68,
+                1.0
+              ],
+              "roughness": 0.24,
+              "emission_color": [
+                0.0,
+                0.16,
+                0.86,
+                1.0
+              ],
+              "emission_strength": 1.25
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 42.0,
+              "bump_strength": 0.006,
+              "color_ramp": {
+                "noise_scale": 38.0,
+                "detail": 7,
+                "low_position": 0.24,
+                "high_position": 0.9,
+                "colors": [
+                  [
+                    0.0,
+                    0.05,
+                    0.18,
+                    1.0
+                  ],
+                  [
+                    0.02,
+                    0.24,
+                    1.0,
+                    1.0
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v5_crisp_white_edge_noise_ramp",
+            "preset": "emissive_neon",
+            "pbr": {
+              "base_color": [
+                0.68,
+                0.84,
+                1.0,
+                1.0
+              ],
+              "roughness": 0.2,
+              "emission_color": [
+                0.7,
+                0.9,
+                1.0,
+                1.0
+              ],
+              "emission_strength": 1.05
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 35.0,
+              "bump_strength": 0.004,
+              "color_ramp": {
+                "noise_scale": 32.0,
+                "detail": 6,
+                "low_position": 0.18,
+                "high_position": 0.86,
+                "colors": [
+                  [
+                    0.25,
+                    0.38,
+                    0.55,
+                    1.0
+                  ],
+                  [
+                    0.85,
+                    0.96,
+                    1.0,
+                    1.0
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v5_right_lens_glass_noise_ramp",
+            "preset": "glass_clear",
+            "pbr": {
+              "base_color": [
+                0.004,
+                0.025,
+                0.06,
+                0.84
+              ],
+              "roughness": 0.08,
+              "clearcoat": 0.82,
+              "alpha": 0.84,
+              "transmission": 0.38,
+              "ior": 1.54,
+              "emission_color": [
+                0.0,
+                0.07,
+                0.28,
+                1.0
+              ],
+              "emission_strength": 0.18
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 98.0,
+              "bump_strength": 0.008,
+              "color_ramp": {
+                "noise_scale": 80.0,
+                "detail": 9,
+                "low_position": 0.15,
+                "high_position": 0.9,
+                "colors": [
+                  [
+                    0.0,
+                    0.006,
+                    0.016,
+                    0.78
+                  ],
+                  [
+                    0.018,
+                    0.09,
+                    0.22,
+                    0.9
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v5_black_lens_core_noise_ramp",
+            "preset": "glass_clear",
+            "pbr": {
+              "base_color": [
+                0.0,
+                0.001,
+                0.003,
+                0.94
+              ],
+              "roughness": 0.05,
+              "clearcoat": 0.88,
+              "alpha": 0.94,
+              "transmission": 0.12,
+              "ior": 1.62
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 88.0,
+              "bump_strength": 0.006,
+              "color_ramp": {
+                "noise_scale": 76.0,
+                "detail": 8,
+                "low_position": 0.18,
+                "high_position": 0.92,
+                "colors": [
+                  [
+                    0.0,
+                    0.0,
+                    0.002,
+                    0.92
+                  ],
+                  [
+                    0.01,
+                    0.018,
+                    0.032,
+                    0.98
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v5_contact_reflection_noise_ramp",
+            "preset": "water_simple",
+            "pbr": {
+              "base_color": [
+                0.01,
+                0.026,
+                0.085,
+                0.46
+              ],
+              "roughness": 0.18,
+              "alpha": 0.45,
+              "clearcoat": 0.72,
+              "transmission": 0.1
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 44.0,
+              "bump_strength": 0.005,
+              "color_ramp": {
+                "noise_scale": 52.0,
+                "detail": 6,
+                "low_position": 0.2,
+                "high_position": 0.9,
+                "colors": [
+                  [
+                    0.001,
+                    0.006,
+                    0.018,
+                    0.22
+                  ],
+                  [
+                    0.03,
+                    0.08,
+                    0.22,
+                    0.5
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        {
+          "op": "create_material",
+          "schema": {
+            "name": "v5_dark_navy_environment",
+            "preset": "matte_plastic",
+            "pbr": {
+              "base_color": [
+                0.005,
+                0.01,
+                0.024,
+                1.0
+              ],
+              "roughness": 0.82
+            },
+            "procedural": {
+              "noise": true,
+              "noise_scale": 30.0,
+              "bump_strength": 0.002,
+              "color_ramp": {
+                "noise_scale": 28.0,
+                "detail": 5,
+                "low_position": 0.2,
+                "high_position": 0.95,
+                "colors": [
+                  [
+                    0.003,
+                    0.006,
+                    0.014,
+                    1.0
+                  ],
+                  [
+                    0.012,
+                    0.02,
+                    0.05,
+                    1.0
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "plane",
+          "name": "v5_dark_reflective_surface",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            3.2,
+            1.9,
+            1.0
+          ],
+          "collection": "ENVIRONMENT"
+        },
+        {
+          "op": "assign_material",
+          "target": "v5_dark_reflective_surface",
+          "material": "v5_dark_navy_environment"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cube",
+          "name": "v5_dark_background_panel",
+          "location": [
+            0.0,
+            0.68,
+            0.74
+          ],
+          "scale": [
+            3.3,
+            0.035,
+            1.42
+          ],
+          "collection": "ENVIRONMENT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v5_dark_background_panel",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v5_dark_background_panel",
+          "material": "v5_dark_navy_environment"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cube",
+          "name": "v5_single_connected_body_core_shell",
+          "location": [
+            0.0,
+            -0.28,
+            0.47
+          ],
+          "scale": [
+            1.08,
+            0.18,
+            0.36
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v5_single_connected_body_core_shell",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v5_single_connected_body_core_shell",
+          "material": "v5_connected_near_black_body_noise_ramp"
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "v5_single_connected_body_core_shell",
+          "width": 0.06,
+          "segments": 14
+        },
+        {
+          "op": "add_modifier",
+          "target": "v5_single_connected_body_core_shell",
+          "modifier": "WEIGHTED_NORMAL",
+          "params": {
+            "keep_sharp": true
+          }
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cube",
+          "name": "v5_connected_bottom_thickened_lip_integrated",
+          "location": [
+            0.0,
+            -0.31,
+            0.29
+          ],
+          "scale": [
+            1.22,
+            0.2,
+            0.13
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v5_connected_bottom_thickened_lip_integrated",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v5_connected_bottom_thickened_lip_integrated",
+          "material": "v5_connected_near_black_body_noise_ramp"
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "v5_connected_bottom_thickened_lip_integrated",
+          "width": 0.065,
+          "segments": 14
+        },
+        {
+          "op": "add_modifier",
+          "target": "v5_connected_bottom_thickened_lip_integrated",
+          "modifier": "WEIGHTED_NORMAL",
+          "params": {
+            "keep_sharp": true
+          }
+        },
+        {
+          "op": "parent_objects",
+          "child": "v5_connected_bottom_thickened_lip_integrated",
+          "parent": "v5_single_connected_body_core_shell"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cube",
+          "name": "v5_top_integrated_raised_strip_shell",
+          "location": [
+            0.0,
+            -0.32,
+            0.78
+          ],
+          "scale": [
+            0.9,
+            0.075,
+            0.045
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v5_top_integrated_raised_strip_shell",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v5_top_integrated_raised_strip_shell",
+          "material": "v5_connected_near_black_body_noise_ramp"
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "v5_top_integrated_raised_strip_shell",
+          "width": 0.026,
+          "segments": 8
+        },
+        {
+          "op": "add_modifier",
+          "target": "v5_top_integrated_raised_strip_shell",
+          "modifier": "WEIGHTED_NORMAL",
+          "params": {
+            "keep_sharp": true
+          }
+        },
+        {
+          "op": "parent_objects",
+          "child": "v5_top_integrated_raised_strip_shell",
+          "parent": "v5_single_connected_body_core_shell"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cube",
+          "name": "v5_front_smoked_inset_panel",
+          "location": [
+            0.03,
+            -0.412,
+            0.54
+          ],
+          "scale": [
+            0.88,
+            0.016,
+            0.22
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v5_front_smoked_inset_panel",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v5_front_smoked_inset_panel",
+          "material": "v5_smoked_panel_noise_ramp"
+        },
+        {
+          "op": "add_bevel_modifier",
+          "target": "v5_front_smoked_inset_panel",
+          "width": 0.018,
+          "segments": 5
+        },
+        {
+          "op": "parent_objects",
+          "child": "v5_front_smoked_inset_panel",
+          "parent": "v5_single_connected_body_core_shell"
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v5_crisp_white_top_bevel_strip",
+          "points": [
+            [
+              -0.73,
+              -0.432,
+              0.825
+            ],
+            [
+              -0.18,
+              -0.432,
+              0.825
+            ],
+            [
+              0.15,
+              -0.432,
+              0.832
+            ],
+            [
+              0.75,
+              -0.432,
+              0.832
+            ]
+          ],
+          "bevel_depth": 0.006,
+          "resolution": 2,
+          "collection": "SUBJECT",
+          "material": "v5_crisp_white_edge_noise_ramp",
+          "parent": "v5_top_integrated_raised_strip_shell",
+          "role": "bevel_highlight"
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v5_sparse_blue_top_inset_line",
+          "points": [
+            [
+              -0.58,
+              -0.435,
+              0.71
+            ],
+            [
+              0.5,
+              -0.435,
+              0.71
+            ]
+          ],
+          "bevel_depth": 0.0045,
+          "resolution": 1,
+          "collection": "SUBJECT",
+          "material": "v5_sparse_blue_accent_noise_ramp",
+          "parent": "v5_front_smoked_inset_panel",
+          "role": "top_strip"
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v5_crisp_white_bottom_bevel_edge_connected",
+          "points": [
+            [
+              -0.68,
+              -0.435,
+              0.345
+            ],
+            [
+              -0.25,
+              -0.435,
+              0.345
+            ],
+            [
+              0.2,
+              -0.435,
+              0.345
+            ],
+            [
+              0.66,
+              -0.435,
+              0.345
+            ]
+          ],
+          "bevel_depth": 0.0055,
+          "resolution": 2,
+          "collection": "SUBJECT",
+          "material": "v5_crisp_white_edge_noise_ramp",
+          "parent": "v5_single_connected_body_core_shell",
+          "role": "bevel_highlight"
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v5_right_edge_sparse_blue_rim_bevel",
+          "points": [
+            [
+              0.89,
+              -0.438,
+              0.35
+            ],
+            [
+              0.86,
+              -0.438,
+              0.53
+            ],
+            [
+              0.82,
+              -0.438,
+              0.72
+            ]
+          ],
+          "bevel_depth": 0.009,
+          "resolution": 4,
+          "collection": "SUBJECT",
+          "material": "v5_sparse_blue_accent_noise_ramp",
+          "parent": "v5_single_connected_body_core_shell",
+          "role": "blue_rim_light"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v5_right_smoked_slanted_side_inset",
+          "location": [
+            0.78,
+            -0.437,
+            0.52
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.08
+          ],
+          "size": [
+            0.08,
+            0.34
+          ],
+          "collection": "SUBJECT",
+          "material": "v5_smoked_panel_noise_ramp",
+          "parent": "v5_single_connected_body_core_shell",
+          "bevel_width": 0.006,
+          "role": "smoked_inset_panel"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "torus",
+          "name": "v5_right_lens_outer_blue_bevel_ring",
+          "location": [
+            0.48,
+            -0.452,
+            0.535
+          ],
+          "rotation": [
+            1.5708,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.205,
+            0.205,
+            0.031
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v5_right_lens_outer_blue_bevel_ring",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v5_right_lens_outer_blue_bevel_ring",
+          "material": "v5_sparse_blue_accent_noise_ramp"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v5_right_lens_outer_blue_bevel_ring",
+          "smooth": true
+        },
+        {
+          "op": "parent_objects",
+          "child": "v5_right_lens_outer_blue_bevel_ring",
+          "parent": "v5_single_connected_body_core_shell"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "torus",
+          "name": "v5_right_lens_inner_black_bevel_ring",
+          "location": [
+            0.48,
+            -0.458,
+            0.535
+          ],
+          "rotation": [
+            1.5708,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.153,
+            0.153,
+            0.021
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v5_right_lens_inner_black_bevel_ring",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v5_right_lens_inner_black_bevel_ring",
+          "material": "v5_connected_near_black_body_noise_ramp"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v5_right_lens_inner_black_bevel_ring",
+          "smooth": true
+        },
+        {
+          "op": "parent_objects",
+          "child": "v5_right_lens_inner_black_bevel_ring",
+          "parent": "v5_single_connected_body_core_shell"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cylinder",
+          "name": "v5_right_lens_blue_glass_disc",
+          "location": [
+            0.48,
+            -0.47,
+            0.535
+          ],
+          "rotation": [
+            1.5708,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.132,
+            0.132,
+            0.018
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v5_right_lens_blue_glass_disc",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v5_right_lens_blue_glass_disc",
+          "material": "v5_right_lens_glass_noise_ramp"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v5_right_lens_blue_glass_disc",
+          "smooth": true
+        },
+        {
+          "op": "parent_objects",
+          "child": "v5_right_lens_blue_glass_disc",
+          "parent": "v5_single_connected_body_core_shell"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cylinder",
+          "name": "v5_right_lens_black_core_disc",
+          "location": [
+            0.475,
+            -0.482,
+            0.555
+          ],
+          "rotation": [
+            1.5708,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.078,
+            0.078,
+            0.011
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v5_right_lens_black_core_disc",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v5_right_lens_black_core_disc",
+          "material": "v5_black_lens_core_noise_ramp"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v5_right_lens_black_core_disc",
+          "smooth": true
+        },
+        {
+          "op": "parent_objects",
+          "child": "v5_right_lens_black_core_disc",
+          "parent": "v5_right_lens_blue_glass_disc"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "uv_sphere",
+          "name": "v5_right_lens_crescent_white_glint",
+          "location": [
+            0.427,
+            -0.492,
+            0.604
+          ],
+          "scale": [
+            0.026,
+            0.006,
+            0.026
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v5_right_lens_crescent_white_glint",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v5_right_lens_crescent_white_glint",
+          "material": "v5_crisp_white_edge_noise_ramp"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v5_right_lens_crescent_white_glint",
+          "smooth": true
+        },
+        {
+          "op": "parent_objects",
+          "child": "v5_right_lens_crescent_white_glint",
+          "parent": "v5_right_lens_blue_glass_disc"
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v5_right_lens_lower_sparse_blue_arc",
+          "points": [
+            [
+              0.39,
+              -0.493,
+              0.47
+            ],
+            [
+              0.49,
+              -0.495,
+              0.445
+            ],
+            [
+              0.59,
+              -0.493,
+              0.48
+            ]
+          ],
+          "bevel_depth": 0.0048,
+          "resolution": 7,
+          "collection": "SUBJECT",
+          "material": "v5_sparse_blue_accent_noise_ramp",
+          "parent": "v5_right_lens_blue_glass_disc",
+          "role": "lens_detail"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "torus",
+          "name": "v5_left_sensor_blue_bevel_ring",
+          "location": [
+            -0.52,
+            -0.454,
+            0.585
+          ],
+          "rotation": [
+            1.5708,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.083,
+            0.083,
+            0.016
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v5_left_sensor_blue_bevel_ring",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v5_left_sensor_blue_bevel_ring",
+          "material": "v5_sparse_blue_accent_noise_ramp"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v5_left_sensor_blue_bevel_ring",
+          "smooth": true
+        },
+        {
+          "op": "parent_objects",
+          "child": "v5_left_sensor_blue_bevel_ring",
+          "parent": "v5_single_connected_body_core_shell"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "cylinder",
+          "name": "v5_left_sensor_glass_disc",
+          "location": [
+            -0.52,
+            -0.466,
+            0.585
+          ],
+          "rotation": [
+            1.5708,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.052,
+            0.052,
+            0.012
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v5_left_sensor_glass_disc",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v5_left_sensor_glass_disc",
+          "material": "v5_right_lens_glass_noise_ramp"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v5_left_sensor_glass_disc",
+          "smooth": true
+        },
+        {
+          "op": "parent_objects",
+          "child": "v5_left_sensor_glass_disc",
+          "parent": "v5_single_connected_body_core_shell"
+        },
+        {
+          "op": "create_mesh_primitive",
+          "type": "uv_sphere",
+          "name": "v5_left_sensor_tiny_white_glint",
+          "location": [
+            -0.553,
+            -0.488,
+            0.62
+          ],
+          "scale": [
+            0.017,
+            0.006,
+            0.017
+          ],
+          "collection": "SUBJECT"
+        },
+        {
+          "op": "apply_transform",
+          "target": "v5_left_sensor_tiny_white_glint",
+          "location": false,
+          "rotation": false,
+          "scale": true
+        },
+        {
+          "op": "assign_material",
+          "target": "v5_left_sensor_tiny_white_glint",
+          "material": "v5_crisp_white_edge_noise_ramp"
+        },
+        {
+          "op": "set_smooth_shading",
+          "target": "v5_left_sensor_tiny_white_glint",
+          "smooth": true
+        },
+        {
+          "op": "parent_objects",
+          "child": "v5_left_sensor_tiny_white_glint",
+          "parent": "v5_left_sensor_glass_disc"
+        },
+        {
+          "op": "create_linear_markers",
+          "name_prefix": "v5_left_groove_sparse_blue_tick",
+          "start": [
+            -0.82,
+            -0.442,
+            0.39
+          ],
+          "step": [
+            0.0,
+            0.0,
+            0.045
+          ],
+          "count": 7,
+          "size": [
+            0.105,
+            0.01,
+            0.006
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "collection": "SUBJECT",
+          "material": "v5_sparse_blue_accent_noise_ramp",
+          "parent": "v5_single_connected_body_core_shell",
+          "role": "side_groove"
+        },
+        {
+          "op": "create_linear_markers",
+          "name_prefix": "v5_left_inner_smoked_short_groove",
+          "start": [
+            -0.7,
+            -0.444,
+            0.435
+          ],
+          "step": [
+            0.0,
+            0.0,
+            0.05
+          ],
+          "count": 4,
+          "size": [
+            0.064,
+            0.009,
+            0.005
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "collection": "SUBJECT",
+          "material": "v5_smoked_panel_noise_ramp",
+          "parent": "v5_single_connected_body_core_shell",
+          "role": "side_groove"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v5_body_attached_contact_reflection_blur",
+          "location": [
+            0.0,
+            -0.36,
+            0.112
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "size": [
+            1.35,
+            0.14
+          ],
+          "collection": "SUBJECT",
+          "material": "v5_contact_reflection_noise_ramp",
+          "parent": "v5_single_connected_body_core_shell",
+          "bevel_width": 0.01,
+          "role": "contact_reflection"
+        },
+        {
+          "op": "create_linear_markers",
+          "name_prefix": "v5_bottom_white_reflection_dash",
+          "start": [
+            -0.48,
+            -0.43,
+            0.155
+          ],
+          "step": [
+            0.225,
+            0.0,
+            0.0
+          ],
+          "count": 5,
+          "size": [
+            0.095,
+            0.012,
+            0.006
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "collection": "SUBJECT",
+          "material": "v5_crisp_white_edge_noise_ramp",
+          "parent": "v5_single_connected_body_core_shell",
+          "role": "contact_reflection"
+        },
+        {
+          "op": "create_linear_markers",
+          "name_prefix": "v5_lower_blue_reflection_dash",
+          "start": [
+            -0.4,
+            -0.455,
+            0.103
+          ],
+          "step": [
+            0.255,
+            0.0,
+            0.0
+          ],
+          "count": 4,
+          "size": [
+            0.092,
+            0.011,
+            0.005
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "collection": "SUBJECT",
+          "material": "v5_sparse_blue_accent_noise_ramp",
+          "parent": "v5_single_connected_body_core_shell",
+          "role": "contact_reflection"
+        },
+        {
+          "op": "create_surface_microdetails",
+          "name_prefix": "v5_smoked_panel_faint_scanline",
+          "pattern": "straight",
+          "start": [
+            -0.38,
+            -0.452,
+            0.46
+          ],
+          "step": [
+            0.0,
+            0.0,
+            0.03
+          ],
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "count": 7,
+          "length": 0.58,
+          "bevel_depth": 0.0014,
+          "waviness": 0.0,
+          "collection": "SUBJECT",
+          "material": "v5_smoked_panel_noise_ramp",
+          "parent": "v5_front_smoked_inset_panel",
+          "role": "smoked_panel_texture",
+          "seed": 5505
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v5_right_lens_black_crescent_occlusion",
+          "location": [
+            0.52,
+            -0.494,
+            0.585
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            -0.55
+          ],
+          "size": [
+            0.068,
+            0.033
+          ],
+          "collection": "SUBJECT",
+          "material": "v5_connected_near_black_body_noise_ramp",
+          "parent": "v5_right_lens_black_core_disc",
+          "bevel_width": 0.002,
+          "role": "lens_detail"
+        },
+        {
+          "op": "create_decal_plane",
+          "name": "v5_left_lower_white_bevel_fragment",
+          "location": [
+            -0.66,
+            -0.438,
+            0.346
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "size": [
+            0.16,
+            0.011
+          ],
+          "collection": "SUBJECT",
+          "material": "v5_crisp_white_edge_noise_ramp",
+          "parent": "v5_single_connected_body_core_shell",
+          "bevel_width": 0.0015,
+          "role": "bevel_highlight"
+        },
+        {
+          "op": "create_curve_tube",
+          "name": "v5_left_upper_sparse_blue_bevel_fragment",
+          "points": [
+            [
+              -0.9,
+              -0.438,
+              0.61
+            ],
+            [
+              -0.86,
+              -0.438,
+              0.51
+            ]
+          ],
+          "bevel_depth": 0.0048,
+          "resolution": 3,
+          "collection": "SUBJECT",
+          "material": "v5_sparse_blue_accent_noise_ramp",
+          "parent": "v5_single_connected_body_core_shell",
+          "role": "bevel_highlight"
+        },
+        {
+          "op": "create_lighting_rig",
+          "schema": {
+            "lighting_rig": "dramatic_rim_reference_match",
+            "world": {
+              "color": [
+                0.003,
+                0.007,
+                0.018
+              ],
+              "strength": 0.07
+            },
+            "volumetric": false,
+            "lights": [
+              {
+                "name": "v5_low_blue_background_lift",
+                "type": "AREA",
+                "power": 14.0,
+                "size": 2.8,
+                "color": [
+                  0.02,
+                  0.06,
+                  0.18
+                ],
+                "position_role": "dark navy gradient behind compact silhouette",
+                "location": [
+                  0.0,
+                  1.25,
+                  0.55
+                ]
+              },
+              {
+                "name": "v5_right_blue_rim_reference_light",
+                "type": "AREA",
+                "power": 46.0,
+                "size": 0.34,
+                "color": [
+                  0.0,
+                  0.14,
+                  0.9
+                ],
+                "position_role": "sparse blue right edge rim",
+                "location": [
+                  1.18,
+                  -0.58,
+                  0.62
+                ]
+              },
+              {
+                "name": "v5_thin_white_top_edge_light",
+                "type": "AREA",
+                "power": 20.0,
+                "size": 0.32,
+                "color": [
+                  0.74,
+                  0.88,
+                  1.0
+                ],
+                "position_role": "crisp white top and bottom bevels",
+                "location": [
+                  0.0,
+                  -0.72,
+                  0.96
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "op": "create_camera",
+          "schema": {
+            "camera_name": "v5_frontal_compact_reference_camera",
+            "preset": "macro_product",
+            "target": "v5_single_connected_body_core_shell",
+            "location": [
+              0.0,
+              -2.85,
+              0.52
+            ],
+            "look_at": [
+              0.0,
+              -0.36,
+              0.47
+            ],
+            "composition": {
+              "rule": "frontal_compact_reference_centered",
+              "subject_screen_coverage": 0.68,
+              "safe_margin": 0.15,
+              "leading_lines": false
+            },
+            "lens": {
+              "focal_length_mm": 76.0,
+              "sensor_width_mm": 36.0,
+              "dof": true,
+              "focus_target": "v5_right_lens_blue_glass_disc",
+              "aperture_fstop": 6.3
+            }
+          }
+        },
+        {
+          "op": "apply_post",
+          "schema": {
+            "post_preset": "cinematic_contrast",
+            "view_transform": "Filmic",
+            "look": "Medium High Contrast",
+            "exposure": -0.62,
+            "gamma": 1.0,
+            "effects": {
+              "bloom": "subtle",
+              "vignette": "medium",
+              "mist": false,
+              "color_balance": "cool"
+            },
+            "save_raw_render": true
+          }
+        }
+      ]
+    }
+  }
+}

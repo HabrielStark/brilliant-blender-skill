@@ -1,0 +1,96 @@
+{
+  "name": "brilliant-blender-skill",
+  "version": "0.1.0",
+  "description": "NPM-installable anti-slop Blender Agent Skill with local-first Blender, MCP, GLB validation, visual QA, benchmarks, and web export tooling. No paid APIs.",
+  "license": "MIT",
+  "type": "module",
+  "main": "web/dist/web_validate_asset.js",
+  "types": "web/dist/web_validate_asset.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HabrielStark/brilliant-blender-skill.git"
+  },
+  "homepage": "https://github.com/HabrielStark/brilliant-blender-skill#readme",
+  "bugs": {
+    "url": "https://github.com/HabrielStark/brilliant-blender-skill/issues"
+  },
+  "keywords": [
+    "blender",
+    "agent-skill",
+    "codex",
+    "mcp",
+    "3d",
+    "glb",
+    "gltf",
+    "cinematic",
+    "render",
+    "anti-slop"
+  ],
+  "exports": {
+    ".": {
+      "types": "./web/dist/web_validate_asset.d.ts",
+      "import": "./web/dist/web_validate_asset.js"
+    }
+  },
+  "files": [
+    "SKILL.md",
+    "AGENTS.md",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    "RUNBOOK.md",
+    "CHANGELOG.md",
+    ".env.example",
+    "docs/",
+    "references/",
+    "scripts/*.py",
+    "benchmarks/live_agent_runs/*.json",
+    "benchmarks/prompt_scenarios/*.json",
+    "benchmarks/references/*.png",
+    "benchmarks/results/**/*.json",
+    "benchmarks/rubrics/*.md",
+    "benchmarks/runners/*.py",
+    "benchmarks/tasks/*.json",
+    "blender_cinematic/*.py",
+    "mcp_server/**/*.py",
+    "addon/blender_cinematic_agent/*.py",
+    "examples/prompts/*.json",
+    "examples/web-demo/*",
+    "npm/cli.mjs",
+    "pyproject.toml",
+    "tsconfig.json",
+    "playwright.config.mjs",
+    "web/dist/",
+    "web/web_validate_asset.ts"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "brilliant-blender-skill": "npm/cli.mjs",
+    "bcas-validate-glb": "web/dist/web_validate_asset.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "validate-glb": "node web/dist/web_validate_asset.js",
+    "test": "node --test \"web/test/**/*.test.mjs\" \"npm/test/**/*.test.mjs\"",
+    "e2e": "playwright test",
+    "doctor": "node npm/cli.mjs doctor",
+    "sbom": "python scripts/generate_sbom.py --out dist"
+  },
+  "dependencies": {
+    "@gltf-transform/core": "4.1.1",
+    "@gltf-transform/extensions": "4.1.1",
+    "@gltf-transform/functions": "4.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "three": "0.160.1",
+    "typescript": "5.7.2"
+  },
+  "optionalDependencies": {
+    "@playwright/test": "1.60.0"
+  }
+}

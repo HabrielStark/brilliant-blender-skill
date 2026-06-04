@@ -1,0 +1,323 @@
+{
+  "scenario_count": 1,
+  "passed": 1,
+  "render_requested": false,
+  "acceptance_level": "static_prompt_fixture_contract",
+  "live_agent_runs": 0,
+  "results": [
+    {
+      "scenario_id": "product_watch_prompt",
+      "static_pass": true,
+      "provenance": "prompt_fixture",
+      "live_agent_run": false,
+      "features": {
+        "operation_count": 74,
+        "operation_counts": {
+          "add_bevel_modifier": 13,
+          "apply_transform": 14,
+          "assign_material": 10,
+          "create_camera": 1,
+          "create_decal_plane": 1,
+          "create_lighting_rig": 1,
+          "create_linear_markers": 2,
+          "create_material": 6,
+          "create_mesh_primitive": 16,
+          "create_panel_cutlines": 1,
+          "create_radial_markers": 1,
+          "create_text_label": 1,
+          "ensure_standard_collections": 1,
+          "set_scene_metadata": 1,
+          "set_smooth_shading": 5
+        },
+        "category_counts": {
+          "camera": 1,
+          "detail": 3,
+          "geometry": 51,
+          "lighting": 1,
+          "material": 16,
+          "scene": 2
+        },
+        "craft_operation_count": 6,
+        "object_name_count": 51,
+        "material_count": 6,
+        "material_target_count": 47,
+        "procedural_material_count": 2,
+        "material_craft_signal_count": 7,
+        "emissive_material_count": 1,
+        "image_texture_roles": [],
+        "procedural_keys": [
+          "bump_strength",
+          "color_ramp",
+          "noise",
+          "noise_scale",
+          "wave"
+        ],
+        "default_names": [],
+        "unresolved_late_material_references": [],
+        "mesh_boxes": {
+          "strap_upper_rubber": {
+            "name": "strap_upper_rubber",
+            "center": [
+              0.0,
+              1.95,
+              0.32
+            ],
+            "half": [
+              0.21,
+              0.725,
+              0.04
+            ]
+          },
+          "strap_lower_rubber": {
+            "name": "strap_lower_rubber",
+            "center": [
+              0.0,
+              -1.95,
+              0.32
+            ],
+            "half": [
+              0.21,
+              0.725,
+              0.04
+            ]
+          },
+          "watch_minute_hand": {
+            "name": "watch_minute_hand",
+            "center": [
+              0.18,
+              0.22,
+              0.77
+            ],
+            "half": [
+              0.0225,
+              0.29,
+              0.0125
+            ]
+          },
+          "watch_hour_hand": {
+            "name": "watch_hour_hand",
+            "center": [
+              -0.14,
+              0.05,
+              0.78
+            ],
+            "half": [
+              0.0275,
+              0.19,
+              0.015
+            ]
+          },
+          "watch_case_faceted_highlight_left": {
+            "name": "watch_case_faceted_highlight_left",
+            "center": [
+              -0.78,
+              -0.72,
+              0.67
+            ],
+            "half": [
+              0.0175,
+              0.012,
+              0.16
+            ]
+          },
+          "watch_case_faceted_highlight_right": {
+            "name": "watch_case_faceted_highlight_right",
+            "center": [
+              0.82,
+              -0.68,
+              0.62
+            ],
+            "half": [
+              0.016,
+              0.012,
+              0.14
+            ]
+          },
+          "dial_glass_diagonal_highlight": {
+            "name": "dial_glass_diagonal_highlight",
+            "center": [
+              -0.16,
+              -0.42,
+              0.86
+            ],
+            "half": [
+              0.014,
+              0.01,
+              0.36
+            ]
+          },
+          "watch_reflection_contact_streak": {
+            "name": "watch_reflection_contact_streak",
+            "center": [
+              0.0,
+              -0.58,
+              0.06
+            ],
+            "half": [
+              0.46,
+              0.026,
+              0.007
+            ]
+          },
+          "blue_reflection_edge_streak": {
+            "name": "blue_reflection_edge_streak",
+            "center": [
+              -0.54,
+              -0.4,
+              0.08
+            ],
+            "half": [
+              0.22,
+              0.0175,
+              0.007
+            ]
+          },
+          "strap_buckle_brushed_bridge": {
+            "name": "strap_buckle_brushed_bridge",
+            "center": [
+              0.0,
+              -2.62,
+              0.42
+            ],
+            "half": [
+              0.36,
+              0.12,
+              0.0375
+            ]
+          }
+        },
+        "surface_detail_paths": [
+          {
+            "op": "create_linear_markers",
+            "name_prefix": "strap_lower_ridge",
+            "positions": [
+              [
+                0.0,
+                -1.15,
+                0.43
+              ],
+              [
+                0.0,
+                -1.43,
+                0.43
+              ],
+              [
+                0.0,
+                -1.71,
+                0.43
+              ],
+              [
+                0.0,
+                -1.99,
+                0.43
+              ],
+              [
+                0.0,
+                -2.27,
+                0.43
+              ],
+              [
+                0.0,
+                -2.55,
+                0.43
+              ]
+            ],
+            "parent": "",
+            "role": ""
+          },
+          {
+            "op": "create_linear_markers",
+            "name_prefix": "strap_upper_ridge",
+            "positions": [
+              [
+                0.0,
+                1.15,
+                0.43
+              ],
+              [
+                0.0,
+                1.43,
+                0.43
+              ],
+              [
+                0.0,
+                1.71,
+                0.43
+              ],
+              [
+                0.0,
+                1.99,
+                0.43
+              ],
+              [
+                0.0,
+                2.27,
+                0.43
+              ],
+              [
+                0.0,
+                2.55,
+                0.43
+              ]
+            ],
+            "parent": "",
+            "role": ""
+          }
+        ],
+        "text_label_roles": [
+          {
+            "name": "watch_dial_logo_text",
+            "role": "text_label"
+          }
+        ],
+        "camera_compositions": [
+          {
+            "camera_name": "camera_hero_macro",
+            "subject_screen_coverage": 0.5,
+            "safe_margin": 0.24,
+            "focal_length_mm": 70,
+            "look_at": [
+              0,
+              0,
+              0.46
+            ]
+          }
+        ],
+        "animation_ranges": [],
+        "animation_count": 0,
+        "animation_frame_span_max": 0,
+        "animation_target_count_max": 0,
+        "animation_glb_export_count": 0,
+        "looping_animation_count": 0,
+        "camera_path_animation_count": 0,
+        "collection_names": [
+          "ENVIRONMENT",
+          "SUBJECT"
+        ],
+        "nonstandard_collections": []
+      },
+      "complexity": {
+        "objects": 47,
+        "faces": 1679,
+        "modifiers": 19,
+        "within_budget": true,
+        "budget_faces": 2000000,
+        "notes": []
+      },
+      "validation": {
+        "name": "recipe",
+        "passed": true,
+        "error_count": 0,
+        "warning_count": 0,
+        "issues": []
+      },
+      "failures": [],
+      "title": "Prompt artifact: premium watch product hero",
+      "prompt": "Create a premium Blender product render of a luxury watch: faceted case, dial, hands, logo, crown, strap, bevelled edge highlights, warm studio reflections, and a macro camera. It must not look like default primitives.",
+      "task_id": "product_hero_watch",
+      "render_requested": false,
+      "render_result": null,
+      "pass": true
+    }
+  ]
+}

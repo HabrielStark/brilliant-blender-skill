@@ -1,0 +1,112 @@
+{
+  "id": "organic_soft_surface_study",
+  "title": "Organic soft-surface study (cohesive fluted body, petals, cloth folds)",
+  "prompt": "Create a cohesive fluted organic hero form with smooth soft-surface geometry, petal/leaf details, cloth-like folds, subtle shader variation, and macro camera.",
+  "category": "organic",
+  "profile": "balanced",
+  "manifest": {"task_id": "bench_organic_soft_surface", "brief": "organic smooth surface and soft material study",
+    "output_mode": "still", "style": {"mood": "soft premium natural"},
+    "target": {"final_format": ["blend", "png"]}, "constraints": {}},
+  "checks": {
+    "min_score": 86,
+    "forbid_visual_style_tags": ["very_dark", "dark_blue_cyan", "blue_cyan_bias"],
+    "max_subject_coverage": 0.92,
+    "min_subject_objects": 24,
+    "min_visible_subject_objects": 22,
+    "min_visible_subject_coverage": 0.0001,
+    "max_offscreen_subject_objects": 1,
+    "min_subject_depth_layers": 4,
+    "subject_depth_axis": "z",
+    "subject_depth_tolerance": 0.12,
+    "min_subject_total_faces": 1600,
+    "min_subject_modifiers": 42,
+    "min_smooth_subject_objects": 30,
+    "min_curved_detail_objects": 30,
+    "curved_detail_keywords": ["petal", "leaf", "fold"],
+    "curved_detail_min_faces": 24,
+    "min_subject_materials": 6,
+    "min_subject_material_node_count": 5,
+    "min_subject_procedural_materials": 4,
+    "min_craft_detail_objects": 80,
+    "require_craft_roles": ["organic_surface", "surface_microdetail"],
+    "require_subject_material_features": ["noise_color_ramp", "noise_bump", "wave_bump"],
+    "require_named_parts": ["organic", "fluted", "petal", "leaf", "fold", "dew", "stem"]
+  },
+  "recipe": {"operations": [
+    {"op": "ensure_standard_collections"},
+    {"op": "create_mesh_primitive", "type": "plane", "name": "soft_studio_floor", "size": 14, "collection": "ENVIRONMENT"},
+
+    {"op": "create_organic_fluted_body", "name": "organic_fluted_soft_body", "location": [0,0,0.36], "radius": 0.56, "height": 1.26, "segments": 72, "rings": 22, "lobes": 12, "waist": 0.26, "rim_wave": 0.16, "twist_degrees": 54, "subdivision_levels": 1, "collection": "SUBJECT"},
+
+    {"op": "create_material", "schema": {"name": "petal_gradient_soft", "preset": "matte_plastic", "target_objects": [], "pbr": {"base_color": [0.68,0.34,0.43,1], "roughness": 0.72}, "procedural": {"noise": true, "noise_scale": 30, "bump_strength": 0.028, "color_ramp": {"noise_scale": 20, "detail": 9, "colors": [[0.34,0.12,0.18,1], [0.92,0.62,0.7,1]]}}}},
+    {"op": "create_material", "schema": {"name": "leaf_soft_green", "preset": "matte_plastic", "target_objects": [], "pbr": {"base_color": [0.09,0.28,0.13,1], "roughness": 0.62}, "procedural": {"noise": true, "noise_scale": 22, "bump_strength": 0.02}}},
+    {"op": "create_material", "schema": {"name": "fold_highlight_warm", "preset": "matte_plastic", "target_objects": [], "pbr": {"base_color": [0.82,0.54,0.5,1], "roughness": 0.7}, "procedural": {"noise": true, "noise_scale": 32, "bump_strength": 0.012}}},
+    {"op": "create_material", "schema": {"name": "pollen_gold_detail", "preset": "emissive_neon", "target_objects": [], "pbr": {"base_color": [1.0,0.68,0.24,1], "emission_color": [1.0,0.48,0.12,1], "emission_strength": 0.35}}},
+
+    {"op": "create_organic_surface_details", "name_prefix": "petal_outer_soft_curved", "pattern": "radial", "center": [0,0,1.31], "radius": 0.38, "count": 18, "length": 0.74, "width": 0.2, "thickness": 0.012, "curl": 0.2, "bend": 0.055, "taper": 0.82, "tilt_degrees": 18, "phase_degrees": 6, "segments_u": 7, "segments_v": 10, "material": "petal_gradient_soft", "collection": "SUBJECT"},
+    {"op": "create_organic_surface_details", "name_prefix": "petal_inner_soft_curved_front", "pattern": "radial", "center": [0,-0.12,1.33], "radius": 0.2, "count": 10, "length": 0.43, "width": 0.14, "thickness": 0.01, "curl": 0.13, "bend": 0.038, "taper": 0.76, "tilt_degrees": 8, "phase_degrees": 18, "segments_u": 6, "segments_v": 7, "material": "petal_gradient_soft", "collection": "SUBJECT"},
+    {"op": "create_organic_surface_details", "name_prefix": "petal_front_cascade_soft_curved", "pattern": "linear", "start": [-0.34,-0.63,1.42], "step": [0.115,-0.012,0.005], "count": 7, "length": 0.38, "width": 0.115, "thickness": 0.009, "curl": 0.08, "bend": 0.04, "taper": 0.68, "rotation": [38,0,88], "segments_u": 6, "segments_v": 7, "material": "petal_gradient_soft", "collection": "SUBJECT"},
+    {"op": "create_organic_surface_details", "name_prefix": "leaf_base_soft_curved", "pattern": "radial", "center": [0,0,0.54], "radius": 0.58, "count": 8, "length": 0.7, "width": 0.2, "thickness": 0.016, "curl": 0.075, "bend": 0.03, "taper": 0.66, "tilt_degrees": -12, "phase_degrees": 20, "segments_u": 6, "segments_v": 8, "material": "leaf_soft_green", "collection": "SUBJECT"},
+    {"op": "create_organic_surface_details", "name_prefix": "cloth_fold_soft_curved_highlight", "pattern": "linear", "start": [-0.5,-0.68,1.22], "step": [0.15,0.014,0.018], "count": 7, "length": 0.16, "width": 0.038, "thickness": 0.006, "curl": 0.018, "bend": 0.01, "taper": 0.22, "rotation": [18,0,88], "segments_u": 4, "segments_v": 5, "material": "fold_highlight_warm", "collection": "SUBJECT"},
+    {"op": "create_organic_surface_details", "name_prefix": "petal_vein_front_embossed_fold", "pattern": "linear", "start": [-0.36,-0.74,1.46], "step": [0.12,-0.006,-0.012], "count": 7, "length": 0.26, "width": 0.026, "thickness": 0.004, "curl": 0.026, "bend": 0.018, "taper": 0.28, "rotation": [28,0,88], "segments_u": 4, "segments_v": 6, "material": "fold_highlight_warm", "collection": "SUBJECT"},
+    {"op": "create_organic_surface_details", "name_prefix": "petal_rim_translucent_lip", "pattern": "radial", "center": [0,-0.03,1.58], "radius": 0.46, "count": 14, "length": 0.24, "width": 0.052, "thickness": 0.005, "curl": 0.07, "bend": 0.028, "taper": 0.48, "tilt_degrees": 24, "phase_degrees": 4, "segments_u": 4, "segments_v": 5, "material": "fold_highlight_warm", "collection": "SUBJECT"},
+    {"op": "create_surface_microdetails", "name_prefix": "petal_surface_micro_vein", "pattern": "linear", "start": [-0.44,-0.86,1.52], "step": [0.052,0.004,-0.016], "direction": [0.34,0.04,0.11], "count": 18, "length": 0.12, "bevel_depth": 0.004, "waviness": 0.009, "rotation": [34,0,84], "seed": 41, "material": "fold_highlight_warm", "collection": "SUBJECT"},
+
+    {"op": "create_mesh_primitive", "type": "uv_sphere", "name": "organic_pollen_soft_center", "size": 0.2, "location": [0,-0.54,1.42], "collection": "SUBJECT"},
+    {"op": "create_mesh_primitive", "type": "cylinder", "name": "organic_pollen_cup_gold_visible", "size": 0.24, "location": [0,-0.43,1.51], "scale": [1,1,0.18], "collection": "SUBJECT"},
+    {"op": "create_mesh_primitive", "type": "uv_sphere", "name": "organic_front_pollen_gold_visible", "size": 0.19, "location": [0.22,-0.86,1.25], "scale": [1,0.22,0.9], "collection": "SUBJECT"},
+    {"op": "create_mesh_primitive", "type": "uv_sphere", "name": "organic_front_pollen_gold_dot_left", "size": 0.065, "location": [0.08,-0.89,1.32], "scale": [1,0.22,1], "collection": "SUBJECT"},
+    {"op": "create_mesh_primitive", "type": "uv_sphere", "name": "organic_front_pollen_gold_dot_right", "size": 0.065, "location": [0.36,-0.89,1.32], "scale": [1,0.22,1], "collection": "SUBJECT"},
+    {"op": "create_mesh_primitive", "type": "uv_sphere", "name": "organic_front_pollen_gold_dot_low", "size": 0.06, "location": [0.22,-0.9,1.15], "scale": [1,0.22,1], "collection": "SUBJECT"},
+    {"op": "create_radial_markers", "name_prefix": "organic_pollen_stamen_gold", "center": [0,-0.45,1.55], "radius": 0.14, "count": 10, "size": [0.018,0.05,0.018], "material": "pollen_gold_detail", "collection": "SUBJECT"},
+    {"op": "create_linear_markers", "name_prefix": "organic_stamen_filament_thread", "start": [-0.18,-0.86,1.31], "step": [0.045,0.018,0.025], "count": 9, "size": [0.012,0.11,0.012], "rotation": [8,0,14], "material": "pollen_gold_detail", "collection": "SUBJECT"},
+    {"op": "set_smooth_shading", "target": "organic_pollen_soft_center", "smooth": true},
+    {"op": "apply_transform", "target": "organic_pollen_cup_gold_visible", "scale": true},
+    {"op": "apply_transform", "target": "organic_front_pollen_gold_visible", "scale": true},
+    {"op": "apply_transform", "target": "organic_front_pollen_gold_dot_left", "scale": true},
+    {"op": "apply_transform", "target": "organic_front_pollen_gold_dot_right", "scale": true},
+    {"op": "apply_transform", "target": "organic_front_pollen_gold_dot_low", "scale": true},
+    {"op": "set_smooth_shading", "target": "organic_pollen_cup_gold_visible", "smooth": true},
+    {"op": "set_smooth_shading", "target": "organic_front_pollen_gold_visible", "smooth": true},
+    {"op": "set_smooth_shading", "target": "organic_front_pollen_gold_dot_left", "smooth": true},
+    {"op": "set_smooth_shading", "target": "organic_front_pollen_gold_dot_right", "smooth": true},
+    {"op": "set_smooth_shading", "target": "organic_front_pollen_gold_dot_low", "smooth": true},
+    {"op": "add_bevel_modifier", "target": "organic_pollen_cup_gold_visible", "width": 0.006, "segments": 1},
+
+    {"op": "create_mesh_primitive", "type": "cylinder", "name": "stem_curved_base", "size": 0.42, "location": [0.0,0.18,0.36], "scale": [0.35,0.35,0.85], "collection": "SUBJECT"},
+    {"op": "apply_transform", "target": "stem_curved_base", "scale": true},
+    {"op": "set_smooth_shading", "target": "stem_curved_base", "smooth": true},
+    {"op": "add_bevel_modifier", "target": "stem_curved_base", "width": 0.018, "segments": 2},
+
+    {"op": "create_mesh_primitive", "type": "uv_sphere", "name": "dew_drop_front_01", "size": 0.11, "location": [-0.24,-0.58,1.34], "collection": "SUBJECT"},
+    {"op": "create_mesh_primitive", "type": "uv_sphere", "name": "dew_drop_front_02", "size": 0.08, "location": [0.25,-0.54,1.18], "collection": "SUBJECT"},
+    {"op": "create_mesh_primitive", "type": "uv_sphere", "name": "dew_drop_top_03", "size": 0.07, "location": [0.06,-0.28,1.76], "collection": "SUBJECT"},
+    {"op": "set_smooth_shading", "target": "dew_drop_front_01", "smooth": true},
+    {"op": "set_smooth_shading", "target": "dew_drop_front_02", "smooth": true},
+    {"op": "set_smooth_shading", "target": "dew_drop_top_03", "smooth": true},
+
+    {"op": "create_material", "schema": {"name": "organic_body_skin", "preset": "matte_plastic", "target_objects": ["organic_fluted_soft_body"], "pbr": {"base_color": [0.67,0.32,0.42,1], "roughness": 0.68}, "procedural": {"noise": true, "noise_scale": 48, "bump_strength": 0.03, "color_ramp": {"noise_scale": 26, "detail": 10, "colors": [[0.36,0.13,0.2,1], [0.94,0.58,0.68,1]]}}}},
+    {"op": "create_material", "schema": {"name": "pollen_warm_soft", "preset": "emissive_neon", "target_objects": ["organic_pollen_soft_center","organic_pollen_cup_gold_visible","organic_front_pollen_gold_visible","organic_front_pollen_gold_dot_left","organic_front_pollen_gold_dot_right","organic_front_pollen_gold_dot_low"], "pbr": {"base_color": [1.0,0.72,0.44,1], "emission_color": [1.0,0.58,0.28,1], "emission_strength": 0.42}}},
+    {"op": "create_material", "schema": {"name": "stem_green_wave", "preset": "matte_plastic", "target_objects": ["stem_curved_base"], "pbr": {"base_color": [0.08,0.22,0.12,1], "roughness": 0.6}, "procedural": {"wave": {"scale": 26, "distortion": 3.2, "bump_strength": 0.026}}}},
+    {"op": "create_material", "schema": {"name": "dew_clear_gloss", "preset": "glossy_plastic", "target_objects": ["dew_drop_front_01","dew_drop_front_02","dew_drop_top_03"], "pbr": {"base_color": [0.86,0.95,1.0,0.72], "roughness": 0.04, "alpha": 0.72, "clearcoat": 0.9}}},
+    {"op": "create_material", "schema": {"name": "soft_floor_matte", "preset": "matte_plastic", "target_objects": ["soft_studio_floor"], "pbr": {"base_color": [0.68,0.62,0.54,1], "roughness": 0.74}}},
+
+    {"op": "create_lighting_rig", "schema": {"lighting_rig": "organic_macro_soft", "lights": [{"name": "large_soft_key", "type": "AREA", "power": 980, "size": 5.6, "position_role": "front_left_high"}, {"name": "soft_front_fill", "type": "AREA", "power": 240, "size": 4.4, "position_role": "front_right_high"}, {"name": "warm_edge_soft", "type": "AREA", "power": 210, "size": 2.0, "color": [1.0,0.78,0.58], "position_role": "rim"}], "world": {"color": [0.58,0.52,0.46], "strength": 0.48}}},
+    {"op": "create_camera", "schema": {"camera_name": "camera_organic_macro", "preset": "macro_product", "target": "organic_fluted_soft_body", "look_at": [0.02,-0.26,1.22], "location": [2.18,-4.8,1.84], "lens": {"focal_length_mm": 64, "dof": true, "focus_target": "organic_fluted_soft_body", "aperture_fstop": 4.2}}},
+    {"op": "set_scene_metadata", "data": {"final_camera": "camera_organic_macro"}}
+  ]},
+  "baseline_recipe": {"operations": [
+    {"op": "create_mesh_primitive", "type": "uv_sphere", "name": "Sphere", "size": 2}
+  ]},
+  "adversarial_baselines": [
+    {"id": "keyword_blob_without_surface_craft", "recipe": {"operations": [
+      {"op": "ensure_standard_collections"},
+      {"op": "create_mesh_primitive", "type": "uv_sphere", "name": "organic_fluted_petal_leaf_fold_dew_stem_single_blob", "size": 2.0, "location": [0,0,1.0], "collection": "SUBJECT"},
+      {"op": "set_smooth_shading", "target": "organic_fluted_petal_leaf_fold_dew_stem_single_blob", "smooth": true},
+      {"op": "create_material", "schema": {"name": "flat_pink_organic_material", "preset": "matte_plastic", "target_objects": ["organic_fluted_petal_leaf_fold_dew_stem_single_blob"], "pbr": {"base_color": [0.72,0.42,0.52,1], "roughness": 0.66}}},
+      {"op": "create_lighting_rig", "schema": {"lighting_rig": "flat_soft_baseline", "lights": [{"name": "flat_key", "type": "AREA", "power": 300, "size": 5, "position_role": "front_left_high"}], "world": {"color": [0.55,0.5,0.45], "strength": 0.45}}},
+      {"op": "create_camera", "schema": {"camera_name": "camera_organic_keyword_blob", "target": "organic_fluted_petal_leaf_fold_dew_stem_single_blob", "look_at": [0,0,1.0], "location": [3.9,-5.7,2.5], "lens": {"focal_length_mm": 58}}},
+      {"op": "set_scene_metadata", "data": {"final_camera": "camera_organic_keyword_blob"}}
+    ]}}
+  ]
+}

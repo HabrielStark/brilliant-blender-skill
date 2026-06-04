@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>3D Scene</title>
+<style>html,body{margin:0;height:100%;background:#08090c}#c{width:100vw;height:100vh;display:block}
+#poster{position:fixed;inset:0;object-fit:cover;width:100%;height:100%}</style>
+</head><body>
+<canvas id="c"></canvas>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js",
+"three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+// Performance budget: keep draw calls low; dispose on unmount.
+const canvas=document.getElementById('c');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+const scene=new THREE.Scene();
+let camera=new THREE.PerspectiveCamera(50,innerWidth/innerHeight,0.1,100);
+camera.position.set(0,1,4);
+scene.add(new THREE.HemisphereLight(0xffffff,0x222233,1.0));
+let mixer=null; const clock=new THREE.Clock();
+new GLTFLoader().load('scene.glb',(g)=>{
+  scene.add(g.scene);
+  if(g.cameras&&g.cameras.length) camera=g.cameras[0];
+  if(g.animations&&g.animations.length){mixer=new THREE.AnimationMixer(g.scene);
+    g.animations.forEach(c=>mixer.clipAction(c).play());}
+},undefined,(e)=>console.error('GLB load error',e));
+function resize(){camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth,innerHeight);}
+addEventListener('resize',resize);resize();
+(function loop(){requestAnimationFrame(loop);if(mixer)mixer.update(clock.getDelta());
+  renderer.render(scene,camera);})();
+</script></body></html>

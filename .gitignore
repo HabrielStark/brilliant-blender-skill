@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+!web/dist/
+!web/dist/**
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Node
+node_modules/
+*.tsbuildinfo
+test-results/
+playwright-report/
+
+# Blender
+*.blend1
+*.blend2
+*.blend@
+
+# Generated artifacts (runtime outputs)
+artifacts/
+!artifacts/.gitkeep
+*.log
+0.0001*
+%D%/
+
+# OS
+.DS_Store
+Thumbs.db
