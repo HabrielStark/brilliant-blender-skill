@@ -85,7 +85,7 @@
     "@gltf-transform/extensions": "4.1.1"
   },
   "devDependencies": {
-    "@types/node": "22.10.2",
+    "@types/node": "25.9.1",
     "three": "0.160.1",
     "typescript": "5.7.2"
   },
