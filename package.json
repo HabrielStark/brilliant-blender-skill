@@ -82,11 +82,11 @@
   },
   "dependencies": {
     "@gltf-transform/core": "4.1.1",
-    "@gltf-transform/extensions": "4.1.1",
-    "@gltf-transform/functions": "4.1.1"
+    "@gltf-transform/extensions": "4.1.1"
   },
   "devDependencies": {
     "@types/node": "22.10.2",
+    "sharp": "0.33.5",
     "three": "0.160.1",
     "typescript": "5.7.2"
   },
