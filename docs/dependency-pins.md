@@ -24,7 +24,6 @@ local test suite unless a package was already on the latest compatible release.
 | bandit | 1.9.4 | PyPI latest 1.9.4 | Latest Python static security scanner | Low | No |
 | @gltf-transform/core | 4.1.1 | npm latest 4.3.0 | Current tested GLB validation runtime | Low | No |
 | @gltf-transform/extensions | 4.1.1 | npm latest 4.3.0 | Kept in lockstep with core for GLB extension parsing | Low | No |
-| sharp | 0.33.5 | npm latest 0.34.5 | Dev-only Playwright screenshot sanity dependency; excluded from global skill install runtime | Medium | No |
 | three | 0.160.1 | npm latest 0.184.0 | Current tested generated viewer/runtime import target | Medium | Yes, many minor releases skipped |
 | typescript | 5.7.2 | npm latest 6.0.3 | Current tested compiler; avoid unverified major upgrade | Medium | Yes, 6.x not adopted |
 | @types/node | 22.10.2 | npm latest 25.9.1 | Matches conservative Node 20/22 development target | Low | No |

@@ -2,8 +2,8 @@ import { test, expect } from '@playwright/test';
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { extname, isAbsolute, join, relative, resolve } from 'node:path';
-import sharp from 'sharp';
 import { mkdirSync } from 'node:fs';
+import { inflateSync } from 'node:zlib';
 
 // Fully offline: vendored three.js (node_modules/three) + the real exported GLB,
 // served by a tiny in-test static server. No CDN, no external webServer => the
@@ -49,8 +49,81 @@ test.afterAll(() => server && server.close());
 
 async function canvasStdDev(page) {
   const buf = await page.locator('canvas').screenshot();
-  const stats = await sharp(buf).stats();
-  return Math.max(...stats.channels.map((c) => c.stdev));
+  return pngLumaStdDev(buf);
+}
+
+function pngLumaStdDev(buf) {
+  const signature = '89504e470d0a1a0a';
+  if (buf.subarray(0, 8).toString('hex') !== signature) throw new Error('not a PNG');
+  let offset = 8;
+  let width = 0;
+  let height = 0;
+  let bitDepth = 0;
+  let colorType = 0;
+  const idat = [];
+  while (offset < buf.length) {
+    const length = buf.readUInt32BE(offset);
+    const type = buf.subarray(offset + 4, offset + 8).toString('ascii');
+    const data = buf.subarray(offset + 8, offset + 8 + length);
+    if (type === 'IHDR') {
+      width = data.readUInt32BE(0);
+      height = data.readUInt32BE(4);
+      bitDepth = data[8];
+      colorType = data[9];
+    } else if (type === 'IDAT') idat.push(data);
+    else if (type === 'IEND') break;
+    offset += 12 + length;
+  }
+  if (bitDepth !== 8) throw new Error(`unsupported PNG bit depth ${bitDepth}`);
+  const channels = colorType === 6 ? 4 : colorType === 2 ? 3 : colorType === 0 ? 1 : 0;
+  if (!channels) throw new Error(`unsupported PNG color type ${colorType}`);
+  const raw = inflateSync(Buffer.concat(idat));
+  const stride = width * channels;
+  const pixels = Buffer.alloc(height * stride);
+  let input = 0;
+  for (let y = 0; y < height; y += 1) {
+    const filter = raw[input];
+    input += 1;
+    const rowStart = y * stride;
+    const prevStart = (y - 1) * stride;
+    for (let x = 0; x < stride; x += 1) {
+      const left = x >= channels ? pixels[rowStart + x - channels] : 0;
+      const up = y > 0 ? pixels[prevStart + x] : 0;
+      const upLeft = y > 0 && x >= channels ? pixels[prevStart + x - channels] : 0;
+      let predictor = 0;
+      if (filter === 1) predictor = left;
+      else if (filter === 2) predictor = up;
+      else if (filter === 3) predictor = Math.floor((left + up) / 2);
+      else if (filter === 4) predictor = paeth(left, up, upLeft);
+      else if (filter !== 0) throw new Error(`unsupported PNG filter ${filter}`);
+      pixels[rowStart + x] = (raw[input + x] + predictor) & 0xff;
+    }
+    input += stride;
+  }
+  let sum = 0;
+  let sumSquares = 0;
+  let count = 0;
+  for (let i = 0; i < pixels.length; i += channels) {
+    const r = pixels[i];
+    const g = channels >= 3 ? pixels[i + 1] : r;
+    const b = channels >= 3 ? pixels[i + 2] : r;
+    const luma = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    sum += luma;
+    sumSquares += luma * luma;
+    count += 1;
+  }
+  const mean = sum / count;
+  return Math.sqrt(Math.max(0, sumSquares / count - mean * mean));
+}
+
+function paeth(a, b, c) {
+  const p = a + b - c;
+  const pa = Math.abs(p - a);
+  const pb = Math.abs(p - b);
+  const pc = Math.abs(p - c);
+  if (pa <= pb && pa <= pc) return a;
+  if (pb <= pc) return b;
+  return c;
 }
 
 async function waitForNonFlatCanvas(page, threshold = 3) {
