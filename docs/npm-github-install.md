@@ -22,6 +22,12 @@ On macOS/Linux it uses:
 ~/.codex/skills/blender-cinematic-scene
 ```
 
+The npm package is intentionally a small launcher plus the GLB validator. When
+the complete skill payload is not bundled in the npm package, `install` clones
+`https://github.com/HabrielStark/brilliant-blender-skill.git` and copies the
+payload from that checkout. This keeps `npm install -g github:...` reliable on
+Windows while preserving a full source-backed install.
+
 Override the target when needed:
 
 ```bash
@@ -44,9 +50,10 @@ bcas-validate-glb examples/web-demo/scene.glb --max-mb 20
 
 ## Blender Add-On And MCP
 
-The npm install gives agents the Skill instructions, references, scripts,
-benchmarks, add-on source, and web validator. For MCP/server commands from the
-Python package, install the wheel or source package as well:
+`brilliant-blender-skill install` gives agents the Skill instructions,
+references, scripts, benchmarks, add-on source, and web validator. For
+MCP/server commands from the Python package, install the wheel or source package
+as well:
 
 ```bash
 pip install blender-cinematic-agent-skill

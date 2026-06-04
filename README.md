@@ -29,6 +29,10 @@ That installs the Skill into the default Codex skills folder:
 `~/.codex/skills/blender-cinematic-scene` on macOS/Linux or
 `%USERPROFILE%\.codex\skills\blender-cinematic-scene` on Windows.
 
+The npm package is a small launcher plus the GLB validator; `brilliant-blender-skill install`
+copies the bundled payload when present or fetches the full Skill from this
+GitHub repository.
+
 You can also run it without a global install:
 
 ```bash
@@ -36,7 +40,8 @@ npx github:HabrielStark/brilliant-blender-skill install
 ```
 
 See [docs/npm-github-install.md](docs/npm-github-install.md) for target
-overrides, package checks, and the Python/MCP add-on path.
+overrides, package checks, the launcher/full payload split, and the Python/MCP
+add-on path.
 
 ## What it gives the agent
 

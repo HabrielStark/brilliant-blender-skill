@@ -1,12 +1,23 @@
 #!/usr/bin/env node
-import { copyFileSync, cpSync, existsSync, mkdirSync, readFileSync, statSync } from 'node:fs';
-import { homedir } from 'node:os';
+import {
+  copyFileSync,
+  cpSync,
+  existsSync,
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  rmSync,
+  statSync,
+} from 'node:fs';
+import { homedir, tmpdir } from 'node:os';
 import path from 'node:path';
+import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const packageRoot = path.resolve(__dirname, '..');
 const skillName = 'blender-cinematic-scene';
+const sourceRepo = 'https://github.com/HabrielStark/brilliant-blender-skill.git';
 
 const installEntries = [
   'SKILL.md',
@@ -42,7 +53,7 @@ Commands:
       Install the Blender Cinematic Scene skill into Codex skills.
 
   doctor
-      Check that this npm package contains the required skill files.
+      Check launcher health and whether the full skill payload is bundled locally.
 
   where
       Print the default install target.
@@ -80,13 +91,17 @@ function defaultTarget(opts) {
 }
 
 function assertPackageReady() {
+  assertSkillPayloadReady(packageRoot);
+}
+
+function assertSkillPayloadReady(sourceRoot) {
   const missing = [];
   for (const entry of installEntries) {
-    if (!existsSync(path.join(packageRoot, entry))) {
+    if (!existsSync(path.join(sourceRoot, entry))) {
       missing.push(entry);
     }
   }
-  const skill = path.join(packageRoot, 'SKILL.md');
+  const skill = path.join(sourceRoot, 'SKILL.md');
   if (existsSync(skill)) {
     const text = readFileSync(skill, 'utf8');
     if (!text.includes('name: blender-cinematic-scene')) {
@@ -98,8 +113,48 @@ function assertPackageReady() {
   }
 }
 
-function copyEntry(entry, target) {
-  const src = path.join(packageRoot, entry);
+function hasBundledPayload() {
+  try {
+    assertSkillPayloadReady(packageRoot);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function assertGitAvailable() {
+  const result = spawnSync('git', ['--version'], { encoding: 'utf8' });
+  if (result.status !== 0) {
+    throw new Error(
+      'git is required to fetch the full Blender skill payload from GitHub; install git or use a bundled release tarball',
+    );
+  }
+}
+
+function withSourceRoot(callback) {
+  if (hasBundledPayload()) return callback(packageRoot);
+  assertGitAvailable();
+  const tempRoot = mkdtempSync(path.join(tmpdir(), 'brilliant-blender-skill-'));
+  const cloneDir = path.join(tempRoot, 'repo');
+  const result = spawnSync(
+    'git',
+    ['clone', '--depth', '1', '--branch', 'main', sourceRepo, cloneDir],
+    { stdio: 'inherit' },
+  );
+  if (result.status !== 0) {
+    rmSync(tempRoot, { recursive: true, force: true });
+    throw new Error(`failed to clone ${sourceRepo}`);
+  }
+  try {
+    assertSkillPayloadReady(cloneDir);
+    return callback(cloneDir);
+  } finally {
+    rmSync(tempRoot, { recursive: true, force: true });
+  }
+}
+
+function copyEntry(sourceRoot, entry, target) {
+  const src = path.join(sourceRoot, entry);
   const dest = path.join(target, entry);
   const stat = statSync(src);
   mkdirSync(path.dirname(dest), { recursive: true });
@@ -111,12 +166,13 @@ function copyEntry(entry, target) {
 }
 
 function install(opts) {
-  assertPackageReady();
   const target = defaultTarget(opts);
   mkdirSync(target, { recursive: true });
-  for (const entry of installEntries) {
-    copyEntry(entry, target);
-  }
+  withSourceRoot((sourceRoot) => {
+    for (const entry of installEntries) {
+      copyEntry(sourceRoot, entry, target);
+    }
+  });
   console.log(`Installed ${skillName} to ${target}`);
   console.log('Next: start a new Codex session and ask it to use blender-cinematic-scene.');
   console.log(`Optional validation: python "${path.join(target, 'scripts', 'validate_skill.py')}"`);
@@ -133,8 +189,12 @@ function main(argv) {
     return 0;
   }
   if (opts.command === 'doctor') {
-    assertPackageReady();
-    console.log('brilliant-blender-skill package is complete');
+    if (hasBundledPayload()) {
+      console.log('brilliant-blender-skill package is complete');
+    } else {
+      assertGitAvailable();
+      console.log('brilliant-blender-skill launcher is complete; install will fetch the skill payload from GitHub');
+    }
     return 0;
   }
   if (opts.command === 'where') {

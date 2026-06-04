@@ -42,7 +42,8 @@ brilliant-blender-skill install
 ```
 
 This copies the Skill to the default Codex skills directory. See
-`docs/npm-github-install.md` for `npx`, custom target paths, and package checks.
+`docs/npm-github-install.md` for `npx`, custom target paths, the launcher/full
+payload split, and package checks.
 
 ## Verify
 

@@ -85,11 +85,13 @@ def test_npm_package_bin_target_is_distributable():
         assert (package_skill.ROOT / bin_target).read_text(encoding="utf-8").startswith(
             "#!/usr/bin/env node"
         )
-    assert "THIRD_PARTY_NOTICES.md" in package["files"]
-    assert "docs/" in package["files"]
-    assert "benchmarks/live_agent_runs/*.json" in package["files"]
-    assert "benchmarks/prompt_scenarios/*.json" in package["files"]
+    assert "README.md" in package["files"]
+    assert "LICENSE" in package["files"]
+    assert "docs/npm-github-install.md" in package["files"]
     assert "npm/cli.mjs" in package["files"]
+    assert "web/dist/" in package["files"]
+    assert "SKILL.md" not in package["files"]
+    assert "benchmarks/live_agent_runs/*.json" not in package["files"]
     assert (package_skill.ROOT / "THIRD_PARTY_NOTICES.md").exists()
 
 

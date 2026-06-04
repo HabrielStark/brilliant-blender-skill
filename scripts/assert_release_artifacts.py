@@ -69,15 +69,11 @@ REQUIRED_ADDON = {
     "blender_cinematic_agent/troubleshooting.md",
 }
 REQUIRED_NPM_TARBALL = {
-    "SKILL.md",
+    "README.md",
+    "LICENSE",
+    "package.json",
     "npm/cli.mjs",
-    "docs/VISUAL_ACCEPTANCE_REPORT.md",
     "docs/npm-github-install.md",
-    "benchmarks/prompt_scenarios/product_watch_prompt.json",
-    "benchmarks/live_agent_runs/watch_live_agent_forward_v6_20260604.json",
-    "benchmarks/live_agent_runs/reference_match_live_agent_forward_v12_20260604.json",
-    "benchmarks/live_agent_runs/shader_texture_live_agent_forward_v6_20260604.json",
-    "benchmarks/live_agent_runs/turntable_animation_live_agent_forward_v2_20260604.json",
     "web/dist/web_validate_asset.js",
 }
 
