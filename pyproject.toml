@@ -20,20 +20,20 @@ dependencies = [
   "pydantic==2.12.5",
   "psutil==6.1.1",
   "Pillow==12.2.0",
-  "numpy==1.26.4",
+  "numpy==2.4.6",
   "mcp==1.27.2",
 ]
 
 [project.optional-dependencies]
 mcp = ["mcp==1.27.2"]
-imaging = ["Pillow==12.2.0", "numpy==1.26.4"]
+imaging = ["Pillow==12.2.0", "numpy==2.4.6"]
 ssim = ["scikit-image==0.26.0"]
 nvidia = ["nvidia-ml-py==13.610.43"]
 dev = [
   "pytest==9.0.3",
   "pytest-cov==7.1.0",
   "Pillow==12.2.0",
-  "numpy==1.26.4",
+  "numpy==2.4.6",
   "mcp==1.27.2",
   "jsonschema==4.26.0",
   "pip-audit==2.10.0",
@@ -45,7 +45,7 @@ dev = [
 ]
 all = [
   "Pillow==12.2.0",
-  "numpy==1.26.4",
+  "numpy==2.4.6",
   "scikit-image==0.26.0",
   "mcp==1.27.2",
   "nvidia-ml-py==13.610.43",
