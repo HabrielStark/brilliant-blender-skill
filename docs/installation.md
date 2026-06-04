@@ -37,7 +37,7 @@ npm test           # node --test (GLB validator)
 ## NPM GitHub Skill install
 
 ```bash
-npm install -g github:HabrielStark/brilliant-blender-skill
+npm install -g https://raw.githubusercontent.com/HabrielStark/brilliant-blender-skill/main/npm/releases/brilliant-blender-skill-0.1.0.tgz
 brilliant-blender-skill install
 ```
 

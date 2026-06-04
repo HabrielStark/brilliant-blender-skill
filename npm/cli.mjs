@@ -39,6 +39,7 @@ const installEntries = [
   'addon',
   'web',
   'examples',
+  'npm',
   'pyproject.toml',
   'package.json',
   'tsconfig.json',

@@ -33,6 +33,7 @@ SKILL_INCLUDE = [
     "mcp_server",
     "web",
     "examples",
+    "npm",
     "tests",
     "pyproject.toml",
     "package.json",

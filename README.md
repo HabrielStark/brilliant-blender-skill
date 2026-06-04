@@ -21,7 +21,7 @@ produce from raw prompts.
 ## NPM / GitHub quick install
 
 ```bash
-npm install -g github:HabrielStark/brilliant-blender-skill
+npm install -g https://raw.githubusercontent.com/HabrielStark/brilliant-blender-skill/main/npm/releases/brilliant-blender-skill-0.1.0.tgz
 brilliant-blender-skill install
 ```
 
@@ -36,7 +36,7 @@ GitHub repository.
 You can also run it without a global install:
 
 ```bash
-npx github:HabrielStark/brilliant-blender-skill install
+npx --yes --package https://raw.githubusercontent.com/HabrielStark/brilliant-blender-skill/main/npm/releases/brilliant-blender-skill-0.1.0.tgz brilliant-blender-skill install
 ```
 
 See [docs/npm-github-install.md](docs/npm-github-install.md) for target

@@ -21,4 +21,5 @@ recursive-include addon *.py
 recursive-include tests *.py
 recursive-include benchmarks *.py *.json *.md *.png
 recursive-include examples *.json *.html *.js *.jsx *.glb *.png
+recursive-include npm *.mjs *.tgz
 recursive-include web *.ts *.js *.mjs *.html

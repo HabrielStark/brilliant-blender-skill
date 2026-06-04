@@ -6,7 +6,7 @@ zips.
 ## Install From GitHub
 
 ```bash
-npm install -g github:HabrielStark/brilliant-blender-skill
+npm install -g https://raw.githubusercontent.com/HabrielStark/brilliant-blender-skill/main/npm/releases/brilliant-blender-skill-0.1.0.tgz
 brilliant-blender-skill install
 ```
 
@@ -25,8 +25,8 @@ On macOS/Linux it uses:
 The npm package is intentionally a small launcher plus the GLB validator. When
 the complete skill payload is not bundled in the npm package, `install` clones
 `https://github.com/HabrielStark/brilliant-blender-skill.git` and copies the
-payload from that checkout. This keeps `npm install -g github:...` reliable on
-Windows while preserving a full source-backed install.
+payload from that checkout. This keeps the GitHub-hosted npm tarball small and
+reliable on Windows while preserving a full source-backed install.
 
 Override the target when needed:
 
@@ -38,7 +38,7 @@ brilliant-blender-skill install --codex-home /absolute/path/to/.codex
 ## One-Shot NPX
 
 ```bash
-npx github:HabrielStark/brilliant-blender-skill install
+npx --yes --package https://raw.githubusercontent.com/HabrielStark/brilliant-blender-skill/main/npm/releases/brilliant-blender-skill-0.1.0.tgz brilliant-blender-skill install
 ```
 
 ## Check The Package

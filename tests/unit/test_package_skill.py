@@ -1,6 +1,7 @@
 """Release package tests."""
 import json
 import os
+import tarfile
 import zipfile
 
 import pytest
@@ -93,6 +94,17 @@ def test_npm_package_bin_target_is_distributable():
     assert "SKILL.md" not in package["files"]
     assert "benchmarks/live_agent_runs/*.json" not in package["files"]
     assert (package_skill.ROOT / "THIRD_PARTY_NOTICES.md").exists()
+
+
+def test_committed_npm_release_tarball_is_launcher_package():
+    tarball = package_skill.ROOT / "npm" / "releases" / "brilliant-blender-skill-0.1.0.tgz"
+    assert tarball.exists()
+    with tarfile.open(tarball, "r:gz") as tar:
+        names = {name.split("/", 1)[1] if "/" in name else name for name in tar.getnames()}
+    assert "package.json" in names
+    assert "npm/cli.mjs" in names
+    assert "web/dist/web_validate_asset.js" in names
+    assert "SKILL.md" not in names
 
 
 def test_package_rejects_symlink_member(tmp_path, monkeypatch):
