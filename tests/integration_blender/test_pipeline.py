@@ -72,6 +72,25 @@ def test_full_pipeline_builds_renders_exports(blender_exe, tmp_path):
     assert v["info"]["meshes"] >= 2
 
 
+def test_full_pipeline_without_camera_returns_ok_false(blender_exe, tmp_path):
+    _, base = task_workspace(tmp_path, "missing_camera")
+    blend = base / "final" / "scene.blend"
+    res = runner.run_job(
+        runner.build_job(
+            "full_pipeline",
+            base,
+            blend,
+            budget=PREVIEW_BUDGET,
+            recipe={"operations": [{"op": "ensure_standard_collections"}]},
+            output={"image": str(base / "iterations" / "iter_01_preview.png")},
+        ),
+        blender_exe,
+        timeout=300,
+    )
+    assert res["ok"] is False
+    assert res["render"]["error"] == "no active camera"
+
+
 def test_inspect_feeds_linters(blender_exe, tmp_path):
     _, base = task_workspace(tmp_path, "itest2")
     blend = base / "final" / "scene.blend"

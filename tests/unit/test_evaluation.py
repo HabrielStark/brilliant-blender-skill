@@ -108,8 +108,22 @@ def test_iteration_manager_stalls():
 def test_iteration_summary_prefers_pass_over_higher_hard_fail():
     mgr = IterationManager(output_mode="scene_repair", min_iterations=1)
     mgr.record(IterationEval(1, True, {"total": 92}, hard_fail_reasons=["subject not visible"]))
-    mgr.record(IterationEval(2, False, {"total": 82}))
+    mgr.record(IterationEval(2, False, {"total": 72}))
     summary = mgr.summary()
-    assert summary["passed"] is True
+    assert summary["passed"] is False
+    assert summary["latest_iteration"] == 2
+    assert summary["latest_passed"] is False
     assert summary["best_iteration"] == 2
-    assert summary["best_score"] == 82
+    assert summary["best_score"] == 72
+
+
+def test_iteration_manager_rejects_duplicate_or_decreasing_numbers():
+    mgr = IterationManager()
+    mgr.record(IterationEval(2, False, {"total": 50}))
+    for number in (2, 1):
+        try:
+            mgr.record(IterationEval(number, False, {"total": 51}))
+        except ValueError as exc:
+            assert "must increase" in str(exc)
+        else:
+            raise AssertionError("non-increasing iteration was accepted")

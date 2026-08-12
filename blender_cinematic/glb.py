@@ -30,8 +30,25 @@ def parse_glb(path: str | Path) -> dict:
     gltf_json: dict | None = None
     bin_len = 0
     while offset < len(data):
+        header_offset = offset
+        remaining = len(data) - offset
+        if remaining < 8:
+            raise ValueError(
+                f"truncated GLB chunk header at offset {header_offset}: "
+                f"expected 8 bytes, found {remaining}"
+            )
         clen, ctype = struct.unpack_from("<II", data, offset)
         offset += 8
+        if clen % 4:
+            raise ValueError(
+                f"GLB chunk at offset {header_offset} has unaligned length {clen}"
+            )
+        remaining = len(data) - offset
+        if clen > remaining:
+            raise ValueError(
+                f"truncated GLB chunk at offset {header_offset}: "
+                f"declared {clen} bytes, found {remaining}"
+            )
         chunk = data[offset:offset + clen]
         offset += clen
         if ctype == _JSON_CHUNK:

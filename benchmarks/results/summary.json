@@ -6,11 +6,11 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.3,
+      "runtime_seconds": 5.9,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\architectural_interior_scene_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\architectural_interior_scene_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\architectural_interior_scene_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\architectural_interior_scene_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "warm_red_bias"
@@ -26,11 +26,11 @@
       "pass": false,
       "visual_score": 31,
       "technical_score": 60,
-      "runtime_seconds": 3.8,
+      "runtime_seconds": 4.3,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\architectural_interior_scene_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\architectural_interior_scene_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -45,6 +45,7 @@
         "scene has no lights and no world illumination",
         "important object has no material: Room",
         "important object has no material: Sofa",
+        "pipeline failed: pipeline_incomplete",
         "score 31 < min 86",
         "subject objects 2 < min 34",
         "visible subject objects 0 < min 28",
@@ -72,11 +73,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.4,
+      "runtime_seconds": 4.9,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\architectural_interior_scene_adversarial_slop_1\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\architectural_interior_scene_adversarial_slop_1\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\architectural_interior_scene_adversarial_slop_1\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\architectural_interior_scene_adversarial_slop_1\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -113,11 +114,11 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 4.6,
+      "runtime_seconds": 9.0,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -133,11 +134,11 @@
       "pass": false,
       "visual_score": 31,
       "technical_score": 60,
-      "runtime_seconds": 3.7,
+      "runtime_seconds": 4.1,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\camera_expensive_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -152,6 +153,7 @@
         "no active camera in scene",
         "scene has no lights and no world illumination",
         "important object has no material: Icosphere",
+        "pipeline failed: pipeline_incomplete",
         "score 31 < min 86",
         "subject objects 1 < min 18",
         "visible subject objects 0 < min 20",
@@ -171,11 +173,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 90,
-      "runtime_seconds": 4.4,
+      "runtime_seconds": 4.7,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_adversarial_slop_named_lit_sphere\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\camera_expensive_adversarial_slop_named_lit_sphere\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -206,11 +208,11 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 5.3,
+      "runtime_seconds": 7.6,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark"
@@ -226,11 +228,11 @@
       "pass": false,
       "visual_score": 31,
       "technical_score": 60,
-      "runtime_seconds": 3.8,
+      "runtime_seconds": 3.9,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\glb_web_budget_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\glb_web_budget_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -245,6 +247,7 @@
         "no active camera in scene",
         "scene has no lights and no world illumination",
         "important object has no material: Icosphere",
+        "pipeline failed: pipeline_incomplete",
         "score 31 < min 86",
         "subject objects 1 < min 34",
         "visible subject objects 0 < min 28",
@@ -269,11 +272,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.5,
+      "runtime_seconds": 4.8,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark"
@@ -307,11 +310,11 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 5.3,
+      "runtime_seconds": 5.9,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -327,11 +330,11 @@
       "pass": false,
       "visual_score": 29,
       "technical_score": 60,
-      "runtime_seconds": 3.7,
+      "runtime_seconds": 4.5,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\low_spec_laptop_safe_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -347,6 +350,7 @@
         "scene has no lights and no world illumination",
         "important object has no material: Cube",
         "forbidden eval defect present: premium render: Cube has no bevel/subsurf/smooth",
+        "pipeline failed: pipeline_incomplete",
         "score 29 < min 84",
         "subject objects 1 < min 34",
         "visible subject objects 0 < min 29",
@@ -372,11 +376,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.4,
+      "runtime_seconds": 4.9,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_adversarial_slop_1\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\low_spec_laptop_safe_adversarial_slop_1\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -415,11 +419,11 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.2,
+      "runtime_seconds": 6.1,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -435,11 +439,11 @@
       "pass": false,
       "visual_score": 29,
       "technical_score": 50,
-      "runtime_seconds": 3.8,
+      "runtime_seconds": 4.3,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\mechanical_exploded_view_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\mechanical_exploded_view_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -455,6 +459,7 @@
         "scene has no lights and no world illumination",
         "important object has no material: Cylinder",
         "important object has no material: Cylinder2",
+        "pipeline failed: pipeline_incomplete",
         "score 29 < min 84",
         "subject objects 2 < min 52",
         "visible subject objects 0 < min 46",
@@ -476,11 +481,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.4,
+      "runtime_seconds": 5.3,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\mechanical_exploded_view_adversarial_slop_1\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\mechanical_exploded_view_adversarial_slop_1\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\mechanical_exploded_view_adversarial_slop_1\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\mechanical_exploded_view_adversarial_slop_1\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -515,11 +520,11 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.3,
+      "runtime_seconds": 6.1,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\organic_soft_surface_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\organic_soft_surface_study_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "warm_red_bias"
@@ -535,11 +540,11 @@
       "pass": false,
       "visual_score": 33,
       "technical_score": 60,
-      "runtime_seconds": 3.8,
+      "runtime_seconds": 4.7,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\organic_soft_surface_study_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -554,6 +559,7 @@
         "no active camera in scene",
         "scene has no lights and no world illumination",
         "important object has no material: Sphere",
+        "pipeline failed: pipeline_incomplete",
         "score 33 < min 86",
         "subject objects 1 < min 24",
         "visible subject objects 0 < min 22",
@@ -577,11 +583,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.5,
+      "runtime_seconds": 4.9,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "warm_red_bias"
@@ -616,11 +622,11 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.4,
+      "runtime_seconds": 9.7,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\particle_vfx_energy_burst_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\particle_vfx_energy_burst_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\particle_vfx_energy_burst_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\particle_vfx_energy_burst_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark",
@@ -638,11 +644,11 @@
       "pass": false,
       "visual_score": 33,
       "technical_score": 60,
-      "runtime_seconds": 3.7,
+      "runtime_seconds": 4.4,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\particle_vfx_energy_burst_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\particle_vfx_energy_burst_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -657,6 +663,7 @@
         "no active camera in scene",
         "scene has no lights and no world illumination",
         "important object has no material: Sphere",
+        "pipeline failed: pipeline_incomplete",
         "score 33 < min 86",
         "subject objects 1 < min 46",
         "visible subject objects 0 < min 36",
@@ -683,11 +690,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.6,
+      "runtime_seconds": 4.9,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark",
@@ -726,11 +733,11 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 4.8,
+      "runtime_seconds": 5.2,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark",
@@ -748,11 +755,11 @@
       "pass": false,
       "visual_score": 29,
       "technical_score": 40,
-      "runtime_seconds": 3.8,
+      "runtime_seconds": 4.6,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\product_hero_watch_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\product_hero_watch_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -769,6 +776,7 @@
         "scene has no lights and no world illumination",
         "important object has no material: Cube",
         "important object has no material: Sphere",
+        "pipeline failed: pipeline_incomplete",
         "score 29 < min 88",
         "subject objects 2 < min 24",
         "visible subject objects 0 < min 22",
@@ -789,11 +797,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.6,
+      "runtime_seconds": 5.3,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\product_hero_watch_adversarial_slop_keyword_disc\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\product_hero_watch_adversarial_slop_keyword_disc\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\product_hero_watch_adversarial_slop_keyword_disc\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\product_hero_watch_adversarial_slop_keyword_disc\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark",
@@ -826,11 +834,11 @@
       "pass": true,
       "visual_score": 98,
       "technical_score": 100,
-      "runtime_seconds": 4.9,
+      "runtime_seconds": 5.7,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\reference_match_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark",
@@ -859,11 +867,11 @@
       "pass": false,
       "visual_score": 29,
       "technical_score": 60,
-      "runtime_seconds": 3.7,
+      "runtime_seconds": 4.1,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\reference_match_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -879,6 +887,7 @@
         "scene has no lights and no world illumination",
         "important object has no material: Cube",
         "reference match requested but no reference metrics were provided",
+        "pipeline failed: pipeline_incomplete",
         "score 29 < min 88",
         "subject objects 1 < min 22",
         "visible subject objects 0 < min 18",
@@ -909,11 +918,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.6,
+      "runtime_seconds": 4.7,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_adversarial_slop_named_lit_box\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\reference_match_adversarial_slop_named_lit_box\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -962,11 +971,11 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 4.8,
+      "runtime_seconds": 5.2,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\scene_repair_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\scene_repair_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "warm_red_bias"
@@ -982,11 +991,11 @@
       "pass": false,
       "visual_score": 24,
       "technical_score": 40,
-      "runtime_seconds": 3.8,
+      "runtime_seconds": 4.0,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\scene_repair_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -1003,6 +1012,7 @@
         "scene has no lights and no world illumination",
         "important object has no material: Cube",
         "important object has no material: Cube.001",
+        "pipeline failed: pipeline_incomplete",
         "score 24 < min 84",
         "subject objects 2 < min 28",
         "visible subject objects 0 < min 24",
@@ -1021,11 +1031,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.5,
+      "runtime_seconds": 4.7,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "warm_red_bias"
@@ -1054,11 +1064,11 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.6,
+      "runtime_seconds": 8.1,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\sci_fi_corridor_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\sci_fi_corridor_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\sci_fi_corridor_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\sci_fi_corridor_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark",
@@ -1076,11 +1086,11 @@
       "pass": false,
       "visual_score": 31,
       "technical_score": 40,
-      "runtime_seconds": 3.8,
+      "runtime_seconds": 4.2,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\sci_fi_corridor_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\sci_fi_corridor_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -1097,6 +1107,7 @@
         "important object has no material: Cube",
         "important object has no material: Cube2",
         "important object has no material: Cube3",
+        "pipeline failed: pipeline_incomplete",
         "score 31 < min 86",
         "subject objects 3 < min 5",
         "visible subject objects 0 < min 3",
@@ -1124,11 +1135,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.5,
+      "runtime_seconds": 4.6,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -1166,11 +1177,11 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 5.0,
+      "runtime_seconds": 12.5,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -1186,11 +1197,11 @@
       "pass": false,
       "visual_score": 27,
       "technical_score": 40,
-      "runtime_seconds": 3.8,
+      "runtime_seconds": 4.5,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\shader_texture_material_study_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -1207,6 +1218,7 @@
         "scene has no lights and no world illumination",
         "important object has no material: Cylinder",
         "important object has no material: Cube",
+        "pipeline failed: pipeline_incomplete",
         "score 27 < min 86",
         "subject objects 2 < min 20",
         "visible subject objects 0 < min 18",
@@ -1233,11 +1245,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.6,
+      "runtime_seconds": 6.5,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -1273,11 +1285,11 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 11.0,
+      "runtime_seconds": 11.6,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -1287,22 +1299,22 @@
       "animation_frame_proof": {
         "frame_count": 3,
         "frames": [
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png"
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png"
         ],
         "pairs": [
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
             "mean_rgb_delta": 0.1285526156425476,
             "max_rgb_delta": 0.729411780834198,
             "mean_luma_delta": 0.1265067309141159,
             "changed_pixel_ratio": 0.5339506172839507
           },
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png",
             "mean_rgb_delta": 0.1285533457994461,
             "max_rgb_delta": 0.729411780834198,
             "mean_luma_delta": 0.1265074461698532,
@@ -1325,11 +1337,11 @@
       "pass": false,
       "visual_score": 30,
       "technical_score": 60,
-      "runtime_seconds": 7.1,
+      "runtime_seconds": 7.7,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -1354,6 +1366,7 @@
         "no active camera in scene",
         "scene has no lights and no world illumination",
         "important object has no material: Cylinder",
+        "pipeline failed: pipeline_incomplete",
         "score 30 < min 84",
         "subject objects 1 < min 30",
         "visible subject objects 0 < min 26",
@@ -1378,11 +1391,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 9.9,
+      "runtime_seconds": 10.3,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark"
@@ -1392,22 +1405,22 @@
       "animation_frame_proof": {
         "frame_count": 3,
         "frames": [
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png"
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png"
         ],
         "pairs": [
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
             "mean_rgb_delta": 0.0,
             "max_rgb_delta": 0.0,
             "mean_luma_delta": 0.0,
             "changed_pixel_ratio": 0.0
           },
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png",
             "mean_rgb_delta": 0.0,
             "max_rgb_delta": 0.0,
             "mean_luma_delta": 0.0,
@@ -1452,8 +1465,8 @@
       "runtime_seconds": 10.8,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark",
@@ -1465,22 +1478,22 @@
       "animation_frame_proof": {
         "frame_count": 3,
         "frames": [
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png"
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png"
         ],
         "pairs": [
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
             "mean_rgb_delta": 0.06761109828948975,
             "max_rgb_delta": 0.8392156958580017,
             "mean_luma_delta": 0.0679827630519867,
             "changed_pixel_ratio": 0.33315586419753085
           },
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png",
             "mean_rgb_delta": 0.07208562642335892,
             "max_rgb_delta": 0.8352941274642944,
             "mean_luma_delta": 0.07096756249666214,
@@ -1503,11 +1516,11 @@
       "pass": false,
       "visual_score": 31,
       "technical_score": 50,
-      "runtime_seconds": 7.2,
+      "runtime_seconds": 7.8,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -1534,6 +1547,7 @@
         "scene has no lights and no world illumination",
         "important object has no material: Sphere",
         "animation requested but no keyframes/actions exist",
+        "pipeline failed: pipeline_incomplete",
         "score 31 < min 84",
         "subject objects 1 < min 34",
         "visible subject objects 0 < min 30",
@@ -1564,8 +1578,8 @@
       "runtime_seconds": 10.4,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -1575,22 +1589,22 @@
       "animation_frame_proof": {
         "frame_count": 3,
         "frames": [
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png"
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png"
         ],
         "pairs": [
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
             "mean_rgb_delta": 0.0,
             "max_rgb_delta": 0.0,
             "mean_luma_delta": 0.0,
             "changed_pixel_ratio": 0.0
           },
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png",
             "mean_rgb_delta": 0.0,
             "max_rgb_delta": 0.0,
             "mean_luma_delta": 0.0,

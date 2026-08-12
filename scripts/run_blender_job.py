@@ -51,10 +51,21 @@ def main(argv=None) -> int:
         job = runner.build_job("initialize_blend", base, blend, manifest=manifest.model_dump(), budget=budget)
         summary["init"] = runner.run_job(job, args.blender)
         summary["note"] = "no --recipe provided: .blend initialised but scene not built"
-        write_final_report(resolver, base, manifest=manifest.model_dump(),
-                           notes=["scene not built (no recipe supplied)"])
+        runtime_failures = []
+        if not summary["init"].get("ok"):
+            runtime_failures.append(
+                f"initialization failed: {summary['init'].get('error', 'unknown error')}"
+            )
+        write_final_report(
+            resolver,
+            base,
+            manifest=manifest.model_dump(),
+            runtime_failures=runtime_failures,
+            notes=["scene not built (no recipe supplied)"],
+        )
+        summary["passed"] = False
         print(json.dumps(summary, indent=2))
-        return 0
+        return 2
 
     recipe = json.loads(Path(args.recipe).read_text(encoding="utf-8"))
     check = validate_recipe(recipe)
@@ -70,29 +81,82 @@ def main(argv=None) -> int:
     job = runner.build_job("full_pipeline", base, blend, manifest=manifest.model_dump(),
                            budget=budget, recipe=recipe, output=out)
     summary["pipeline"] = runner.run_job(job, args.blender, timeout=600)
+    runtime_failures = []
+    if not summary["pipeline"].get("ok"):
+        runtime_failures.append(f"pipeline failed: {summary['pipeline'].get('error', 'unknown error')}")
+        write_final_report(resolver, base, manifest=manifest.model_dump(), hardware_report=report,
+                           budget=budget, runtime_failures=runtime_failures)
+        summary["passed"] = False
+        summary["report"] = str(base / "final" / "final_report.md")
+        print(json.dumps(summary, indent=2, default=str))
+        return 2
 
     # inspect -> lint -> score
     insp_job = runner.build_job("inspect", base, blend,
                                 output={"inspect": str(base / "iterations" / "iter_01_inspect.json")})
     insp_res = runner.run_job(insp_job, args.blender, timeout=180)
+    if not insp_res.get("ok") or not isinstance(insp_res.get("inspection"), dict):
+        runtime_failures.append(f"inspection failed: {insp_res.get('error', 'invalid inspection result')}")
+        write_final_report(resolver, base, manifest=manifest.model_dump(), hardware_report=report,
+                           budget=budget, runtime_failures=runtime_failures)
+        summary["passed"] = False
+        summary["report"] = str(base / "final" / "final_report.md")
+        print(json.dumps(summary, indent=2, default=str))
+        return 2
     inspection = insp_res.get("inspection") or {}
     lint = lint_scene(inspection, manifest.model_dump(), budget)
     metrics = image_sanity(preview) if preview.exists() else None
     ev = score_iteration(1, inspection, lint, metrics, manifest.model_dump(), budget)
     resolver.write_text(base / "iterations" / "iter_01_eval.json", json.dumps(ev.to_dict(), indent=2))
 
+    final_render = None
+    if ev.passed:
+        final_render_path = base / "final" / "render_final.png"
+        final_job = runner.build_job(
+            "render_final",
+            base,
+            blend,
+            manifest=manifest.model_dump(),
+            budget=budget,
+            output={"image": str(final_render_path)},
+        )
+        final_render = runner.run_job(final_job, args.blender, timeout=600)
+        summary["final_render"] = final_render
+        if not final_render.get("ok"):
+            runtime_failures.append(
+                f"final render failed: {final_render.get('error', 'unknown error')}"
+            )
+            ev_dict = ev.to_dict()
+            ev_dict["passed"] = False
+            ev_dict["hard_fail"] = True
+            ev_dict.setdefault("hard_fail_reasons", []).append("final render failed")
+            resolver.write_text(
+                base / "iterations" / "iter_01_eval.json",
+                json.dumps(ev_dict, indent=2),
+            )
+
     web_validation = None
     if manifest.wants_web() and glb.exists():
         from blender_cinematic.glb import validate_glb
         web_validation = validate_glb(glb, manifest.constraints.max_glb_mb)
 
-    write_final_report(resolver, base, manifest=manifest.model_dump(), hardware_report=report,
-                       budget=budget, evals=[ev.to_dict()], scene_lint=lint, web_validation=web_validation)
+    final_paths = write_final_report(
+        resolver,
+        base,
+        manifest=manifest.model_dump(),
+        hardware_report=report,
+        budget=budget,
+        evals=[json.loads((base / "iterations" / "iter_01_eval.json").read_text(encoding="utf-8"))],
+        scene_lint=lint,
+        web_validation=web_validation,
+        runtime_failures=runtime_failures,
+    )
+    final_report = json.loads(final_paths[1].read_text(encoding="utf-8"))
     summary["score"] = ev.scores["total"]
-    summary["passed"] = ev.passed
+    summary["passed"] = final_report["passed"]
     summary["report"] = str(base / "final" / "final_report.md")
     print(json.dumps(summary, indent=2, default=str))
-    return 0 if ev.passed else 2
+    return 0 if final_report["passed"] else 2
 
 
 if __name__ == "__main__":

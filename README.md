@@ -60,6 +60,14 @@ add-on path.
    ScrollControls / GSAP code generation.
 8. **`tests/`, `benchmarks/`, `examples/`, `docs/`**.
 
+The skill also ships an explicit execution contract: write the goal and
+acceptance gates first, keep a checkpoint/evidence ledger, delegate only
+independent review branches, inspect actual pixels, and downgrade claims when
+runtime, browser, or human review is unavailable. See
+[`references/evidence-contract.md`](references/evidence-contract.md),
+[`references/agent-orchestration.md`](references/agent-orchestration.md), and
+[`references/visual-verification.md`](references/visual-verification.md).
+
 ## Architecture
 
 ```
@@ -125,6 +133,9 @@ python scripts/visual_review_pack.py --out ./artifacts/visual_review_pack --allo
 
 # 9. generate an anonymized blind visual eval packet without claiming signoff
 python scripts/blind_visual_eval.py --out ./artifacts/blind_visual_eval --allow-unreviewed
+
+# 10. audit the skill contract itself (read-only, deterministic)
+python scripts/skill_self_audit.py
 ```
 
 ## MCP server
@@ -168,6 +179,7 @@ bandit -c pyproject.toml -r blender_cinematic mcp_server scripts tests addon
 pytest tests/integration_blender -q     # auto-skips without --blender-executable
 pytest -q                               # everything (Blender/web tests auto-skip)
 npm ci && npm run build && npm test     # web validator + TypeScript
+python scripts/skill_self_audit.py      # goal/evidence/visual/sub-agent contract
 ```
 
 Open-source maintenance docs:

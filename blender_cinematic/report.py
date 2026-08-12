@@ -13,6 +13,8 @@ from pathlib import Path
 
 from .results import CheckResult
 
+_RENDER_EXTENSIONS = {".png", ".jpg", ".jpeg", ".exr", ".tif", ".tiff", ".mp4", ".mov", ".webm"}
+
 
 def _load_json(path: Path) -> dict | None:
     try:
@@ -43,6 +45,7 @@ def build_final_report(
     scene_lint: CheckResult | dict | None = None,
     web_validation: dict | None = None,
     notes: list[str] | None = None,
+    runtime_failures: list[str] | None = None,
 ) -> tuple[str, dict]:
     base = Path(task_base)
     manifest = manifest or _load_json(base / "scene_manifest.json") or {}
@@ -60,26 +63,51 @@ def build_final_report(
 
     artifacts = collect_artifacts(base)
     best = max(evals, key=lambda e: e.get("scores", {}).get("total", 0), default=None)
-    passed = bool(best and best.get("passed"))
+    latest = max(evals, key=lambda e: e.get("iteration", -1), default=None)
+    passed = bool(latest and latest.get("passed"))
 
     # Acceptance signals derived from artifacts (SRS: no claims without files).
-    has_preview = any("preview" in f for fs in artifacts.values() for f in fs)
-    has_render = any("render" in f or "final" in f for fs in artifacts.values() for f in fs)
+    has_preview = any(
+        group == "iterations"
+        and Path(f).suffix.lower() in _RENDER_EXTENSIONS
+        and "preview" in Path(f).stem.lower()
+        for group, fs in artifacts.items()
+        for f in fs
+    )
+    # A .blend or GLB under `final/` is not a rendered image. Require a real
+    # image/video artifact whose name identifies it as a render.
+    has_render = any(
+        Path(f).suffix.lower() in _RENDER_EXTENSIONS
+        and "render" in Path(f).stem.lower()
+        for fs in artifacts.values()
+        for f in fs
+    )
     has_glb = any(f.endswith((".glb", ".gltf")) for fs in artifacts.values() for f in fs)
     wants_web = manifest.get("output_mode") in ("web_asset", "interactive_web") or any(
         x in ("glb", "gltf") for x in ((manifest.get("target") or {}).get("final_format") or [])
     )
 
     failures: list[str] = []
-    if best and best.get("hard_fail"):
-        failures += [f"hard-fail: {r}" for r in best.get("hard_fail_reasons", [])]
+    if not latest:
+        failures.append("no iteration evaluation found")
+    elif not latest.get("passed"):
+        failures.append(f"latest iteration {latest.get('iteration')} did not pass")
+    if latest and latest.get("hard_fail"):
+        failures += [f"hard-fail: {r}" for r in latest.get("hard_fail_reasons", [])]
     for issue in lint_dict.get("issues", []):
         if issue.get("severity") == "error":
             failures.append(f"lint: {issue.get('message')}")
     if wants_web and not has_glb:
         failures.append("web export requested but no GLB artifact found")
-    if wants_web and web_validation and not web_validation.get("ok"):
-        failures.append(f"GLB validation failed: {web_validation.get('errors')}")
+    if wants_web and (web_validation is None or web_validation.get("ok") is not True):
+        failures.append(
+            f"GLB validation failed: {(web_validation or {}).get('errors', ['validation not run'])}"
+        )
+    if best and not has_preview:
+        failures.append("preview artifact missing")
+    if best and not has_render:
+        failures.append("final render artifact missing")
+    failures.extend(runtime_failures or [])
 
     report = {
         "schema": "final_report/0.1",
@@ -88,8 +116,10 @@ def build_final_report(
         "brief": manifest.get("brief"),
         "output_mode": manifest.get("output_mode"),
         "quality_profile": budget.get("quality_profile") or manifest.get("quality_profile"),
-        "passed": passed and not failures,
+        "passed": passed and has_render and not failures,
         "best_score": best.get("scores", {}).get("total") if best else None,
+        "latest_iteration": latest.get("iteration") if latest else None,
+        "latest_score": latest.get("scores", {}).get("total") if latest else None,
         "iterations_run": len(evals),
         "artifacts": artifacts,
         "acceptance": {

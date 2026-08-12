@@ -29,6 +29,71 @@ and lighting from the domain: bright technical diagrams stay readable, organic
 macro work can be warm/natural, interiors can be editorial daylight, and only
 briefs that ask for noir/cyber/dark product drama should stay dark.
 
+## Goal contract (write before scene work)
+
+Before touching Blender, write a durable goal contract in the task artifact
+directory (see `references/evidence-contract.md`): outcome, request class,
+inputs, deliverables, non-goals, acceptance gates, assumptions, and evidence
+root. Do not silently fill missing references, hardware, or target formats.
+Record uncertainty and downgrade claims when a required capability is absent.
+
+Use one checkpoint ledger entry for every meaningful change. Each entry must
+contain the objective, current hypothesis, files changed, commands/checks,
+artifact paths, result, next hypothesis, and stop status. A plan, object name,
+or score is not evidence by itself.
+
+## Sub-agents and independent review
+
+Use sub-agents when there is a genuinely independent branch: scene planning,
+Blender technical review, pixel-level visual review, web/export review, or
+security review. Give each agent only the raw task-local artifacts and one
+bounded question; do not leak your suspected defect or intended fix. Assign
+non-overlapping file ownership, keep reviewers read-only, require an evidence-
+first report, and reconcile every report against the current worktree before
+acting. The orchestrator owns integration and the final claim.
+
+If sub-agents are unavailable, perform the same review roles sequentially and
+record that limitation. Never spawn agents for repeated identical checks,
+one-file edits, or activity that cannot change the next action. Read
+`references/agent-orchestration.md` before delegating.
+
+## Evidence and claim levels
+
+Use the strongest claim supported by actual artifacts: `static` (schema/recipe
+only), `local_runtime` (Blender/add-on or Node ran), `visual_inspected` (pixels
+inspected), `human_reviewed` (review JSON covers the artifact), or `live_external`
+(a named external service was checked). Never call a static recipe *rendered*,
+an automated score *human-approved*, or a local export *web-ready*. Final
+reports must map each required gate to a command, artifact, or screenshot and
+list unresolved limitations. See `references/evidence-contract.md`.
+
+## Visual and browser verification
+
+Inspect actual pixels after every significant scene change. Capture a low-cost
+preview, run `scripts/visual_eval.py` and `scripts/scene_lint.py`, record five
+concrete visual defects plus up to three technical defects, then fix one defect
+group and capture a new preview. For animation, inspect start/mid/end frames and
+prove non-zero image motion. For references, compare real reference pixels;
+inferred metrics are invalid.
+
+For web output, validate the GLB, texture references, animation/camera-path
+samples, generated code, and a real browser canvas at desktop and mobile
+viewports. Check console and network failures, resize/scroll interaction, and
+save screenshots. If Blender, WebGL, Playwright, or human review is unavailable,
+report the exact limitation and lower the claim level; do not call the result
+web-ready. Read `references/visual-verification.md`.
+
+## Stop, recovery, and escalation
+
+Stop early when all required gates pass. Stop with a failure report when the
+request-specific iteration budget is exhausted or three consecutive iterations
+do not improve the measured result. Stop as `blocked` when a required external
+capability cannot be obtained, and stop as `churn` after two consecutive checks
+with no changed code/state, new failing evidence, new hypothesis, or measurable
+improvement. Do not rerun heavy renders, benchmarks, or browser suites without
+changed code, configuration, scene state, dependencies, viewport, or external
+state. Preserve the last valid artifacts and state the exact next decision.
+
 ## Mandatory workflow
 
 1. **Classify** the request: `still`, `animation`, `web_asset`, `interactive_web`,
@@ -175,7 +240,11 @@ briefs that ask for noir/cyber/dark product drama should stay dark.
    task-specific visual gates pass (`max_subject_coverage`, subject detail count,
    material variation, reference/image fidelity when provided). For `reference_match`
    or any manifest with references, real SSIM/palette reference metrics are
-   required; never substitute a neutral or inferred score.
+    required; never substitute a neutral or inferred score. The final report
+    must be based on the latest evaluation, a fresh preview, and a fresh final
+    render artifact; an old `.blend`, `final_report.md`, or filename containing
+    `final` is not render evidence. Web output also requires a successful GLB
+    validation result, not merely a `.glb` file.
    Reference-match product recipes need enough structure to compare against the
    image, not a sparse symbolic model: use layered body shells, separate smoked
    inset panels, lens rings/core/glints, sensor details, side grooves, named
@@ -315,4 +384,7 @@ normals · product/mechanical subject made from too few meaningful parts.
 | `references/web-export-threejs-r3f.md` | GLB rules, three.js/R3F/ScrollControls/GSAP |
 | `references/visual-critique-rubric.md` | the 100-point rubric + refinement logic |
 | `references/failure-modes.md` | the common ways agents ruin Blender scenes |
+| `references/evidence-contract.md` | goal contract, checkpoint ledger, claim levels, and final evidence matrix |
+| `references/agent-orchestration.md` | bounded sub-agent roles, dispatch, ownership, and merge rules |
+| `references/visual-verification.md` | actual-pixel, animation, browser, mobile, and review-integrity gates |
 | `docs/prompt-scenario-evals.md` | prompt artifact eval levels and provenance boundaries |

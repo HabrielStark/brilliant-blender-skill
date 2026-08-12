@@ -126,7 +126,7 @@ function paeth(a, b, c) {
   return c;
 }
 
-async function waitForNonFlatCanvas(page, threshold = 3) {
+async function waitForNonFlatCanvas(page, threshold = 8) {
   let stdev = 0;
   await expect
     .poll(async () => {
@@ -152,7 +152,7 @@ test('GLB renders on a live WebGL canvas (desktop) with no console errors', asyn
   const errors = await loadHarness(page);
   const stdev = await waitForNonFlatCanvas(page);
   await page.screenshot({ path: join(SHOTS, 'desktop.png') });
-  expect(stdev, 'canvas must not be blank/flat').toBeGreaterThan(3);
+  expect(stdev, 'canvas must contain a readable subject silhouette').toBeGreaterThan(8);
   expect(errors, errors.join(' | ')).toEqual([]);
 });
 
@@ -178,6 +178,6 @@ test('animated GLB has clips and the AnimationMixer advances', async ({ page }) 
 test('mobile viewport still renders', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await loadHarness(page);
-  expect(await waitForNonFlatCanvas(page)).toBeGreaterThan(3);
+  expect(await waitForNonFlatCanvas(page)).toBeGreaterThan(8);
   await page.screenshot({ path: join(SHOTS, 'mobile.png') });
 });

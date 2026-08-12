@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 4.8,
+    "runtime_seconds": 5.2,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark",
@@ -27,11 +27,11 @@
     "pass": false,
     "visual_score": 29,
     "technical_score": 40,
-    "runtime_seconds": 3.8,
+    "runtime_seconds": 4.6,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\product_hero_watch_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\product_hero_watch_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -48,6 +48,7 @@
       "scene has no lights and no world illumination",
       "important object has no material: Cube",
       "important object has no material: Sphere",
+      "pipeline failed: pipeline_incomplete",
       "score 29 < min 88",
       "subject objects 2 < min 24",
       "visible subject objects 0 < min 22",
@@ -68,11 +69,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 4.6,
+    "runtime_seconds": 5.3,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\product_hero_watch_adversarial_slop_keyword_disc\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\product_hero_watch_adversarial_slop_keyword_disc\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\product_hero_watch_adversarial_slop_keyword_disc\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\product_hero_watch_adversarial_slop_keyword_disc\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark",

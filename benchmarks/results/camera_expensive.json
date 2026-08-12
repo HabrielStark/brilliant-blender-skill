@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 4.6,
+    "runtime_seconds": 9.0,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
@@ -25,11 +25,11 @@
     "pass": false,
     "visual_score": 31,
     "technical_score": 60,
-    "runtime_seconds": 3.7,
+    "runtime_seconds": 4.1,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\camera_expensive_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -44,6 +44,7 @@
       "no active camera in scene",
       "scene has no lights and no world illumination",
       "important object has no material: Icosphere",
+      "pipeline failed: pipeline_incomplete",
       "score 31 < min 86",
       "subject objects 1 < min 18",
       "visible subject objects 0 < min 20",
@@ -63,11 +64,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 90,
-    "runtime_seconds": 4.4,
+    "runtime_seconds": 4.7,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\camera_expensive_adversarial_slop_named_lit_sphere\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\camera_expensive_adversarial_slop_named_lit_sphere\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"

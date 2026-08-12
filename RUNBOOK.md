@@ -20,6 +20,7 @@ Set `BLENDER_EXECUTABLE` only when Blender cannot be auto-detected.
 ```bash
 python scripts/blender_locator.py
 python scripts/preflight_hardware.py --project-dir artifacts/healthcheck
+python scripts/skill_self_audit.py
 pytest tests/unit tests/security -q
 ruff check blender_cinematic mcp_server scripts tests
 python scripts/audit_repo_invariants.py

@@ -8,8 +8,8 @@
     "runtime_seconds": 10.8,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark",
@@ -21,22 +21,22 @@
     "animation_frame_proof": {
       "frame_count": 3,
       "frames": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png"
       ],
       "pairs": [
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
           "mean_rgb_delta": 0.06761109828948975,
           "max_rgb_delta": 0.8392156958580017,
           "mean_luma_delta": 0.0679827630519867,
           "changed_pixel_ratio": 0.33315586419753085
         },
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png",
           "mean_rgb_delta": 0.07208562642335892,
           "max_rgb_delta": 0.8352941274642944,
           "mean_luma_delta": 0.07096756249666214,
@@ -59,11 +59,11 @@
     "pass": false,
     "visual_score": 31,
     "technical_score": 50,
-    "runtime_seconds": 7.2,
+    "runtime_seconds": 7.8,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -90,6 +90,7 @@
       "scene has no lights and no world illumination",
       "important object has no material: Sphere",
       "animation requested but no keyframes/actions exist",
+      "pipeline failed: pipeline_incomplete",
       "score 31 < min 84",
       "subject objects 1 < min 34",
       "visible subject objects 0 < min 30",
@@ -120,8 +121,8 @@
     "runtime_seconds": 10.4,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
@@ -131,22 +132,22 @@
     "animation_frame_proof": {
       "frame_count": 3,
       "frames": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png"
       ],
       "pairs": [
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
           "mean_rgb_delta": 0.0,
           "max_rgb_delta": 0.0,
           "mean_luma_delta": 0.0,
           "changed_pixel_ratio": 0.0
         },
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png",
           "mean_rgb_delta": 0.0,
           "max_rgb_delta": 0.0,
           "mean_luma_delta": 0.0,

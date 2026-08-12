@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 4.8,
+    "runtime_seconds": 5.2,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\scene_repair_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\scene_repair_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "warm_red_bias"
@@ -25,11 +25,11 @@
     "pass": false,
     "visual_score": 24,
     "technical_score": 40,
-    "runtime_seconds": 3.8,
+    "runtime_seconds": 4.0,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\scene_repair_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -46,6 +46,7 @@
       "scene has no lights and no world illumination",
       "important object has no material: Cube",
       "important object has no material: Cube.001",
+      "pipeline failed: pipeline_incomplete",
       "score 24 < min 84",
       "subject objects 2 < min 28",
       "visible subject objects 0 < min 24",
@@ -64,11 +65,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 4.5,
+    "runtime_seconds": 4.7,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "warm_red_bias"

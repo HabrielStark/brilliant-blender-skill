@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 5.3,
+    "runtime_seconds": 5.9,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
@@ -25,11 +25,11 @@
     "pass": false,
     "visual_score": 29,
     "technical_score": 60,
-    "runtime_seconds": 3.7,
+    "runtime_seconds": 4.5,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\low_spec_laptop_safe_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -45,6 +45,7 @@
       "scene has no lights and no world illumination",
       "important object has no material: Cube",
       "forbidden eval defect present: premium render: Cube has no bevel/subsurf/smooth",
+      "pipeline failed: pipeline_incomplete",
       "score 29 < min 84",
       "subject objects 1 < min 34",
       "visible subject objects 0 < min 29",
@@ -70,11 +71,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 4.4,
+    "runtime_seconds": 4.9,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\low_spec_laptop_safe_adversarial_slop_1\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\low_spec_laptop_safe_adversarial_slop_1\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"

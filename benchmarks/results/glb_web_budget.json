@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 5.3,
+    "runtime_seconds": 7.6,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark"
@@ -25,11 +25,11 @@
     "pass": false,
     "visual_score": 31,
     "technical_score": 60,
-    "runtime_seconds": 3.8,
+    "runtime_seconds": 3.9,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\glb_web_budget_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\glb_web_budget_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -44,6 +44,7 @@
       "no active camera in scene",
       "scene has no lights and no world illumination",
       "important object has no material: Icosphere",
+      "pipeline failed: pipeline_incomplete",
       "score 31 < min 86",
       "subject objects 1 < min 34",
       "visible subject objects 0 < min 28",
@@ -68,11 +69,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 4.5,
+    "runtime_seconds": 4.8,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark"

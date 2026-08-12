@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 5.3,
+    "runtime_seconds": 6.1,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\organic_soft_surface_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\organic_soft_surface_study_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "warm_red_bias"
@@ -25,11 +25,11 @@
     "pass": false,
     "visual_score": 33,
     "technical_score": 60,
-    "runtime_seconds": 3.8,
+    "runtime_seconds": 4.7,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\organic_soft_surface_study_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -44,6 +44,7 @@
       "no active camera in scene",
       "scene has no lights and no world illumination",
       "important object has no material: Sphere",
+      "pipeline failed: pipeline_incomplete",
       "score 33 < min 86",
       "subject objects 1 < min 24",
       "visible subject objects 0 < min 22",
@@ -67,11 +68,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 4.5,
+    "runtime_seconds": 4.9,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "warm_red_bias"

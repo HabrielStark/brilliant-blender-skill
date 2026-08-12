@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 5.0,
+    "runtime_seconds": 12.5,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
@@ -25,11 +25,11 @@
     "pass": false,
     "visual_score": 27,
     "technical_score": 40,
-    "runtime_seconds": 3.8,
+    "runtime_seconds": 4.5,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\shader_texture_material_study_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -46,6 +46,7 @@
       "scene has no lights and no world illumination",
       "important object has no material: Cylinder",
       "important object has no material: Cube",
+      "pipeline failed: pipeline_incomplete",
       "score 27 < min 86",
       "subject objects 2 < min 20",
       "visible subject objects 0 < min 18",
@@ -72,11 +73,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 4.6,
+    "runtime_seconds": 6.5,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"

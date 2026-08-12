@@ -85,6 +85,15 @@ def _write_json(job, path, data):
     )
 
 
+def _invalidate_output(job, key):
+    path = (job.get("output") or {}).get(key)
+    if not path:
+        return
+    target = _workspace_path(job, path)
+    if os.path.isfile(target):
+        os.remove(target)
+
+
 def main():
     job = json.loads(Path(_job_path()).read_text(encoding="utf-8"))
     action = job["action"]
@@ -92,7 +101,9 @@ def main():
     result = {"ok": True, "action": action, "blend_path": blend_path}
     try:
         opened = False
-        if action != "initialize_blend" and action != "full_pipeline" and os.path.exists(blend_path):
+        if action != "initialize_blend" and action != "full_pipeline":
+            if not os.path.exists(blend_path):
+                raise FileNotFoundError(f"blend file not found: {blend_path}")
             bpy.ops.wm.open_mainfile(filepath=blend_path)
             opened = True
 
@@ -111,6 +122,7 @@ def main():
                 _write_json(job, inspect_path, result["inspection"])
                 result["inspect_path"] = inspect_path
         if action in ("render_preview", "full_pipeline"):
+            _invalidate_output(job, "image")
             img = _workspace_path(
                 job,
                 (job.get("output") or {}).get("image") or os.path.join(job["workspace"], "iterations", "preview.png"),
@@ -120,6 +132,7 @@ def main():
                                                       film_transparent=False,
                                                       frame=render_opts.get("frame"))
         if action == "render_final":
+            _invalidate_output(job, "image")
             img = _workspace_path(
                 job,
                 (job.get("output") or {}).get("image") or os.path.join(job["workspace"], "final", "render_final.png"),
@@ -128,6 +141,7 @@ def main():
             result["render"] = renderer.render_still(img, job.get("budget") or {}, preview=False,
                                                       frame=render_opts.get("frame"))
         if action in ("export_glb", "full_pipeline"):
+            _invalidate_output(job, "glb")
             glb = _workspace_path(
                 job,
                 (job.get("output") or {}).get("glb") or os.path.join(job["workspace"], "final", "export_final.glb"),
@@ -140,7 +154,37 @@ def main():
                 _save(save_path)
                 result["saved"] = save_path
             except Exception as exc:  # saving is best-effort for read-only actions
+                result["ok"] = False
+                result["error"] = "save_failed"
                 result["save_warning"] = str(exc)
+
+        operation_errors = [
+            item for item in result.get("operations", [])
+            if isinstance(item, dict) and item.get("error")
+        ]
+        if operation_errors:
+            result["ok"] = False
+            result["error"] = "recipe_operation_failed"
+        if action in ("render_preview", "render_final"):
+            result["ok"] = result.get("render", {}).get("rendered") is True
+            if not result["ok"]:
+                result["error"] = result.get("render", {}).get("error", "render_failed")
+        elif action == "export_glb":
+            result["ok"] = result.get("export", {}).get("exported") is True
+            if not result["ok"]:
+                result["error"] = "export_failed"
+        elif action == "full_pipeline":
+            render_ok = result.get("render", {}).get("rendered") is True
+            export_requested = bool((job.get("output") or {}).get("glb"))
+            export_ok = result.get("export", {}).get("exported") is True
+            result["ok"] = bool(
+                render_ok
+                and (export_ok if export_requested else True)
+                and not operation_errors
+                and result.get("saved")
+            )
+            if not result["ok"] and "error" not in result:
+                result["error"] = "pipeline_incomplete"
     except Exception:
         result = {"ok": False, "action": action, "error": "job_exception",
                   "trace": traceback.format_exc()}

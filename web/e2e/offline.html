@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><title>offline e2e</title>
-<style>html,body{margin:0;height:100%;background:#0a0b10}#c{width:100vw;height:100vh;display:block}</style></head>
+<style>html,body{margin:0;height:100%;background:#161c28}#c{width:100vw;height:100vh;display:block}</style></head>
 <body><canvas id="c"></canvas>
 <script type="importmap">{"imports":{"three":"/three/build/three.module.js","three/addons/":"/three/examples/jsm/"}}</script>
 <script type="module">
@@ -10,11 +10,17 @@ window.__ready = false; window.__error = null;
 const canvas = document.getElementById('c');
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setPixelRatio(1);
-renderer.setClearColor(0x0a0b10, 1);
+renderer.setClearColor(0x161c28, 1);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.35;
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(50, innerWidth / innerHeight, 0.1, 100);
-scene.add(new THREE.HemisphereLight(0xffffff, 0x223044, 1.4));
-const key = new THREE.DirectionalLight(0xffffff, 2.5); key.position.set(3, -4, 5); scene.add(key);
+scene.background = new THREE.Color(0x161c28);
+scene.add(new THREE.HemisphereLight(0xf4f7ff, 0x26334a, 2.4));
+const key = new THREE.DirectionalLight(0xffffff, 5.5); key.position.set(3, -4, 5); scene.add(key);
+const fill = new THREE.DirectionalLight(0x78a8ff, 3.0); fill.position.set(-4, 2, 2); scene.add(fill);
+const rim = new THREE.DirectionalLight(0xb8d7ff, 4.5); rim.position.set(2, 4, 4); scene.add(rim);
 let mixer = null, target = null; const clock = new THREE.Clock();
 new GLTFLoader().load('/demo/scene_anim.glb', (g) => {
   scene.add(g.scene);
@@ -27,7 +33,16 @@ new GLTFLoader().load('/demo/scene_anim.glb', (g) => {
   const radius = Math.max(size.x, size.y, size.z, 1) / 2;
   camera.near = Math.max(0.01, radius / 100);
   camera.far = Math.max(100, radius * 100);
-  camera.position.set(center.x + radius * 3.2, center.y - radius * 3.6, center.z + radius * 2.1);
+  const wideViewport = innerWidth / innerHeight > 1.2;
+  const framing = wideViewport ? 2.25 : 3.2;
+  camera.position.set(
+    center.x + radius * framing,
+    center.y - radius * (framing + 0.4),
+    center.z + radius * (wideViewport ? 1.5 : 2.1),
+  );
+  const cameraFill = new THREE.PointLight(0xffffff, 12, radius * 12);
+  cameraFill.position.copy(camera.position);
+  scene.add(cameraFill);
   camera.lookAt(center);
   camera.updateProjectionMatrix();
   window.__rot0 = target ? target.rotation.z : 0;

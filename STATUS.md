@@ -4,6 +4,19 @@
 **Date:** 2026-06-04
 **Environment used for current local gates:** Windows, Python 3.11, Node 24.x.
 
+## 2026-08-10 Upgrade Verification
+
+The execution contract was strengthened with durable goal/checkpoint/evidence
+rules, bounded sub-agent review, actual-pixel/browser gates, and a deterministic
+skill self-audit. Bridge recipe bounds, GLB chunk parsing, latest-iteration
+truth, final-render evidence, and failed Blender-stage propagation were hardened.
+Blender 5.0.1 is available locally. The full Python suite, Blender integration
+and visual regression suites, Node build/tests, Chromium desktop/mobile e2e,
+Bandit, repository invariants, packaging, and the complete 14-task benchmark
+matrix pass locally. Automated contact-sheet evidence is at
+`artifacts/skill_upgrade_visual_review/contact_sheet.png`; it is not human taste
+signoff. Remaining production gaps are listed in `TASK_BREAKDOWN.md`.
+
 This repository is locally strong for open-source release engineering under the
 tested toolchain. Automated Blender benchmarks, prompt-scenario fixtures, and
 unreviewed blind packets are evidence only; current local visual acceptance is

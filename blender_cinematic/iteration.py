@@ -33,7 +33,15 @@ class IterationManager:
         self.max_iterations = min(self.max_iterations, max(budget, DEFAULT_MAX_ITERATIONS))
 
     def record(self, ev: IterationEval) -> None:
+        if self.history and ev.iteration <= self.history[-1].iteration:
+            raise ValueError(
+                f"iteration numbers must increase: {ev.iteration} <= {self.history[-1].iteration}"
+            )
         self.history.append(ev)
+
+    @property
+    def latest(self) -> IterationEval | None:
+        return self.history[-1] if self.history else None
 
     @property
     def best(self) -> IterationEval | None:
@@ -66,13 +74,17 @@ class IterationManager:
     def summary(self) -> dict:
         cont, reason = self.should_continue()
         best = self.best
+        latest = self.latest
         return {
             "output_mode": self.output_mode,
             "max_iterations": self.max_iterations,
             "iterations_run": len(self.history),
             "best_score": best.total if best else None,
             "best_iteration": best.iteration if best else None,
-            "passed": bool(best and best.passed),
+            "latest_iteration": latest.iteration if latest else None,
+            "latest_score": latest.total if latest else None,
+            "latest_passed": bool(latest and latest.passed),
+            "passed": bool(latest and latest.passed),
             "should_continue": cont,
             "stop_reason": None if cont else reason,
             "history": [e.to_dict() for e in self.history],

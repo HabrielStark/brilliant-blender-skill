@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 98,
     "technical_score": 100,
-    "runtime_seconds": 4.9,
+    "runtime_seconds": 5.7,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\reference_match_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark",
@@ -38,11 +38,11 @@
     "pass": false,
     "visual_score": 29,
     "technical_score": 60,
-    "runtime_seconds": 3.7,
+    "runtime_seconds": 4.1,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\reference_match_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -58,6 +58,7 @@
       "scene has no lights and no world illumination",
       "important object has no material: Cube",
       "reference match requested but no reference metrics were provided",
+      "pipeline failed: pipeline_incomplete",
       "score 29 < min 88",
       "subject objects 1 < min 22",
       "visible subject objects 0 < min 18",
@@ -88,11 +89,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 4.6,
+    "runtime_seconds": 4.7,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\reference_match_adversarial_slop_named_lit_box\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\reference_match_adversarial_slop_named_lit_box\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"

@@ -11,6 +11,10 @@ How to extend the skill without breaking its guarantees.
 - **Every write through `WorkspaceResolver`.** No writes outside the workspace.
 - **Subprocess = argument arrays** via `security.run_checked`; never `shell=True`.
 - **Pin dependencies.** No open version ranges.
+- **Keep the execution contract explicit.** A goal, checkpoint ledger, claim
+  level, visual evidence, and honest stop condition are part of the feature.
+- **Use sub-agents for independent evidence only.** Assign disjoint ownership,
+  keep reviewers read-only, and never repeat a check without a new hypothesis.
 
 ## Add a new structured operation
 
@@ -53,3 +57,7 @@ python scripts/run_blender_job.py --manifest <manifest> --recipe <recipe>
 3. `pytest tests/unit tests/security -q`, `ruff check blender_cinematic mcp_server scripts tests`, and `bandit -c pyproject.toml -r blender_cinematic mcp_server scripts tests addon` green **without** Blender.
 4. If it touches Blender, an `integration_blender` test exists.
 5. Docs/README updated if user-facing.
+6. `python scripts/skill_self_audit.py` reports `PASS` and every required
+   contract reference is linked from `SKILL.md`.
+7. Visual claims cite inspected pixels or explicitly state that Blender,
+   WebGL, Playwright, or human review was unavailable.

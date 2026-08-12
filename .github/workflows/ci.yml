@@ -30,8 +30,12 @@ jobs:
         run: bandit -c pyproject.toml -r blender_cinematic mcp_server scripts tests addon
       - name: Run unit and security tests
         run: pytest tests/unit tests/security -q
+      - name: Run integration contract tests
+        run: pytest tests/integration_mcp tests/web_e2e tests/visual_regression -q
       - name: Validate skill metadata
         run: python scripts/validate_skill.py
+      - name: Self-audit skill execution contract
+        run: python scripts/skill_self_audit.py --json
       - name: Build Python distributions
         run: python -m build --sdist --wheel
       - name: Check Python distributions

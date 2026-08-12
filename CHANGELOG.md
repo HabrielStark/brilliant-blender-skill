@@ -2,6 +2,12 @@
 
 ## 0.1.0 - Unreleased
 
+- Added an evidence-driven execution contract: durable goal/checkpoint ledgers,
+  claim levels, bounded sub-agent review, actual-pixel/browser verification, a
+  deterministic `scripts/skill_self_audit.py` gate, and negative tests for
+  contract drift.
+- Hardened GLB chunk-boundary parsing so truncated or unaligned chunks fail
+  closed instead of being reported as valid.
 - Added production CI for Python unit/security tests, skill validation, Node
   build, Node tests, Playwright e2e, and dependency audits.
 - Pinned Python and Node dependencies exactly for reproducible installs.

@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 11.0,
+    "runtime_seconds": 11.6,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
@@ -19,22 +19,22 @@
     "animation_frame_proof": {
       "frame_count": 3,
       "frames": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png"
       ],
       "pairs": [
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
           "mean_rgb_delta": 0.1285526156425476,
           "max_rgb_delta": 0.729411780834198,
           "mean_luma_delta": 0.1265067309141159,
           "changed_pixel_ratio": 0.5339506172839507
         },
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png",
           "mean_rgb_delta": 0.1285533457994461,
           "max_rgb_delta": 0.729411780834198,
           "mean_luma_delta": 0.1265074461698532,
@@ -57,11 +57,11 @@
     "pass": false,
     "visual_score": 30,
     "technical_score": 60,
-    "runtime_seconds": 7.1,
+    "runtime_seconds": 7.7,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -86,6 +86,7 @@
       "no active camera in scene",
       "scene has no lights and no world illumination",
       "important object has no material: Cylinder",
+      "pipeline failed: pipeline_incomplete",
       "score 30 < min 84",
       "subject objects 1 < min 30",
       "visible subject objects 0 < min 26",
@@ -110,11 +111,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 9.9,
+    "runtime_seconds": 10.3,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark"
@@ -124,22 +125,22 @@
     "animation_frame_proof": {
       "frame_count": 3,
       "frames": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png"
       ],
       "pairs": [
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
           "mean_rgb_delta": 0.0,
           "max_rgb_delta": 0.0,
           "mean_luma_delta": 0.0,
           "changed_pixel_ratio": 0.0
         },
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\visual_acceptance_final_after_docs\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png",
           "mean_rgb_delta": 0.0,
           "max_rgb_delta": 0.0,
           "mean_luma_delta": 0.0,

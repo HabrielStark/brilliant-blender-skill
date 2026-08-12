@@ -6,13 +6,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from scripts.skill_self_audit import REQUIRED_REFERENCES, audit_skill  # noqa: E402
+
 REQUIRED_FRONTMATTER = ("name", "description")
-REQUIRED_REFERENCES = (
-    "camera-language.md", "composition-rubric.md", "lighting-materials.md",
-    "procedural-modeling-recipes.md", "animation-camera-paths.md",
-    "web-export-threejs-r3f.md", "hardware-quality-profiles.md",
-    "visual-critique-rubric.md", "failure-modes.md",
-)
 
 
 def _parse_frontmatter(text: str) -> dict:
@@ -45,6 +41,9 @@ def main() -> int:
     for ref in REQUIRED_REFERENCES:
         if not (ROOT / "references" / ref).exists():
             errors.append(f"missing reference: {ref}")
+
+    contract = audit_skill(ROOT)
+    errors.extend(contract.get("errors", []))
 
     try:
         from blender_cinematic.schemas import SceneManifest
