@@ -234,6 +234,19 @@ def test_post_effects_rejects_unknown_levels():
         assert not res.passed, bad
 
 
+def test_generate_uv_spec():
+    r = {"operations": [
+        {"op": "generate_uv", "target": "label_plate", "method": "box"},
+        {"op": "generate_uv", "target": "vase_body", "method": "cylinder",
+         "name": "UVMap.decal"},
+    ]}
+    res = validate_recipe(r)
+    assert res.passed, [i.message for i in res.issues]
+    r2 = {"operations": [{"op": "generate_uv"}]}  # target is required
+    res2 = validate_recipe(r2)
+    assert not res2.passed
+
+
 def test_procedural_texture_rejects_unknown_type():
     r = {"operations": [
         {"op": "create_procedural_texture", "name": "t", "type": "NOT_A_TEXTURE"}

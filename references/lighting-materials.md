@@ -77,6 +77,13 @@ instead of ad hoc Python:
   product labels, display microprint, machined stripe relief, woven fabric
   direction, and other close-surface reads. Do not accept a texture node that is
   merely present but visually unscaled or misplaced.
+- Every generated mesh receives a UV layer automatically — parametric on
+  grid-built surfaces (organic surface, drape, energy streaks) and a
+  dominant-axis box projection elsewhere — so `projection: "uv"` is safe by
+  default. For a specific projection or a named channel, run
+  `{"op": "generate_uv", "target": "…", "method": "box|cylinder|sphere",
+  "name": "UVMap.decal"}` and point `uv_map` at that name. Inspection reports
+  `uv_layers` per object; an empty list on a `uv`-textured object is a defect.
 - The `displacement` image role wires through a Blender displacement node for
   material-study relief. Keep strength subtle unless the brief asks for visible
   embossing; the texture should reveal craft, not destroy the form.

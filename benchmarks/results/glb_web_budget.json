@@ -9,8 +9,8 @@
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite4\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite4\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite5\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite5\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark"
@@ -111,9 +111,9 @@
           "name": "side_usb_port_inset",
           "contrast": 0.0686,
           "edge_density": 0.0614,
-          "separation": 0.0597,
+          "separation": 0.0595,
           "mean_luma": 0.1211,
-          "surround_luma": 0.1808,
+          "surround_luma": 0.1807,
           "readable": true
         },
         {
@@ -226,7 +226,7 @@
         },
         {
           "name": "side_fabric_seam_right",
-          "contrast": 0.0536,
+          "contrast": 0.0535,
           "edge_density": 0.0804,
           "separation": 0.085,
           "mean_luma": 0.0796,

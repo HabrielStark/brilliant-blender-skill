@@ -17,7 +17,29 @@ from . import bpyutil
 
 
 # --------------------------- mesh primitive helpers ------------------------ #
+def _ensure_uv(bm):
+    """Every generated mesh needs a UV layer or 'uv'-projection textures
+    silently sample a missing channel. Builders may write parametric UVs;
+    anything else gets a per-face dominant-axis box projection."""
+    if bm.loops.layers.uv:
+        return
+    uv = bm.loops.layers.uv.new("UVMap")
+    verts = [v.co for v in bm.verts]
+    if not verts:
+        return
+    mins = [min(c[i] for c in verts) for i in range(3)]
+    rngs = [max(c[i] for c in verts) - mins[i] or 1.0 for i in range(3)]
+    for f in bm.faces:
+        ax = max(range(3), key=lambda i: abs(f.normal[i]))
+        a, b = ((1, 2), (0, 2), (0, 1))[ax]
+        for loop in f.loops:
+            co = loop.vert.co
+            loop[uv].uv = ((co[a] - mins[a]) / rngs[a],
+                           (co[b] - mins[b]) / rngs[b])
+
+
 def _finish_mesh(name, bm, collection):
+    _ensure_uv(bm)
     mesh = bpy.data.meshes.new(name)
     bm.to_mesh(mesh)
     bm.free()
@@ -824,6 +846,50 @@ def op_set_origin(p):
     return {"origin_set": obj.name}
 
 
+def op_generate_uv(p):
+    """Deterministic UV projection for a mesh: box/cylinder/sphere.
+
+    bpy.ops.uv.*_project needs an edit-mode context that background mode
+    cannot guarantee, so projections are computed directly on loops."""
+    obj = bpyutil.get_object(p["target"])
+    if not obj or obj.type != "MESH":
+        return {"error": f"uv target not found or not a mesh: {p['target']}"}
+    method = str(p.get("method", "box")).lower()
+    name = str(p.get("name", "UVMap"))
+    mesh = obj.data
+    bm = bmesh.new()
+    bm.from_mesh(mesh)
+    uv = bm.loops.layers.uv.get(name) or bm.loops.layers.uv.new(name)
+    verts = [v.co for v in bm.verts]
+    if not verts:
+        bm.free()
+        return {"error": f"uv target has no vertices: {p['target']}"}
+    mins = [min(c[i] for c in verts) for i in range(3)]
+    rngs = [max(c[i] for c in verts) - mins[i] or 1.0 for i in range(3)]
+
+    def _norm(co, i):
+        return (co[i] - mins[i]) / rngs[i]
+
+    for f in bm.faces:
+        for loop in f.loops:
+            co = loop.vert.co
+            if method == "cylinder":
+                loop[uv].uv = (math.atan2(co.y, co.x) / (2 * math.pi) + 0.5,
+                               _norm(co, 2))
+            elif method == "sphere":
+                loop[uv].uv = (math.atan2(co.y, co.x) / (2 * math.pi) + 0.5,
+                               math.atan2(co.z, math.hypot(co.x, co.y)) / math.pi + 0.5)
+            else:  # box: dominant-axis projection per face
+                ax = max(range(3), key=lambda i: abs(f.normal[i]))
+                a, b = ((1, 2), (0, 2), (0, 1))[ax]
+                loop[uv].uv = (_norm(co, a), _norm(co, b))
+    bm.to_mesh(mesh)
+    bm.free()
+    if mesh.uv_layers.active is None and mesh.uv_layers:
+        mesh.uv_layers.active = mesh.uv_layers[name]
+    return {"uv": name, "method": method, "on": obj.name}
+
+
 def op_move_to_collection(p):
     obj = bpyutil.get_object(p["target"])
     if not obj:
@@ -1262,14 +1328,26 @@ def _organic_surface_mesh(name, length, width, curl, bend, taper, segments_u, se
             row.append(bm.verts.new((x, y, z)))
         verts.append(row)
     bm.verts.ensure_lookup_table()
+    faces = []
     for v_idx in range(segments_v):
         for u_idx in range(segments_u):
-            bm.faces.new((
+            faces.append(bm.faces.new((
                 verts[v_idx][u_idx],
                 verts[v_idx][u_idx + 1],
                 verts[v_idx + 1][u_idx + 1],
                 verts[v_idx + 1][u_idx],
-            ))
+            )))
+    # Exact parametric UVs: the build grid IS the uv grid.
+    uvl = bm.loops.layers.uv.new("UVMap")
+    for f_idx, f in enumerate(faces):
+        v_idx, u_idx = divmod(f_idx, segments_u)
+        for loop, uu, vv in zip(
+                f.loops,
+                (u_idx / segments_u, (u_idx + 1) / segments_u,
+                 (u_idx + 1) / segments_u, u_idx / segments_u),
+                (v_idx / segments_v, v_idx / segments_v,
+                 (v_idx + 1) / segments_v, (v_idx + 1) / segments_v)):
+            loop[uvl].uv = (uu, vv)
     obj = _finish_mesh(name, bm, None)
     return obj
 
@@ -1345,9 +1423,19 @@ def _energy_streak_mesh(name, length, width, curl, segments):
             row.append(bm.verts.new((x_sway + col * row_width * 0.5, y, z + edge_lift)))
         verts.append(row)
     bm.verts.ensure_lookup_table()
+    faces = []
     for v_idx in range(segments):
-        bm.faces.new((verts[v_idx][0], verts[v_idx][1], verts[v_idx + 1][1], verts[v_idx + 1][0]))
-        bm.faces.new((verts[v_idx][1], verts[v_idx][2], verts[v_idx + 1][2], verts[v_idx + 1][1]))
+        faces.append(bm.faces.new((verts[v_idx][0], verts[v_idx][1], verts[v_idx + 1][1], verts[v_idx + 1][0])))
+        faces.append(bm.faces.new((verts[v_idx][1], verts[v_idx][2], verts[v_idx + 1][2], verts[v_idx + 1][1])))
+    uvl = bm.loops.layers.uv.new("UVMap")
+    col_u = (0.0, 0.5, 1.0)
+    for f_idx, f in enumerate(faces):
+        v_idx, c = divmod(f_idx, 2)
+        us = [col_u[c], col_u[c + 1], col_u[c + 1], col_u[c]]
+        vs = [v_idx / segments, v_idx / segments,
+              (v_idx + 1) / segments, (v_idx + 1) / segments]
+        for loop, uu, vv in zip(f.loops, us, vs):
+            loop[uvl].uv = (uu, vv)
     obj = _finish_mesh(name, bm, None)
     return obj
 
@@ -2428,6 +2516,7 @@ BUILDERS = {
     "apply_transform": op_apply_transform,
     "set_smooth_shading": op_set_smooth_shading,
     "set_origin": op_set_origin,
+    "generate_uv": op_generate_uv,
     "move_to_collection": op_move_to_collection,
     "parent_objects": op_parent_objects,
     "assign_material": op_assign_material,

@@ -17,6 +17,7 @@ ALLOWED_OPS = (
     "create_mesh_primitive", "add_modifier", "add_bevel_modifier", "add_subdivision",
     "add_array_modifier", "set_object_transform", "apply_transform", "set_smooth_shading",
     "set_origin", "move_to_collection", "parent_objects", "assign_material",
+    "generate_uv",
     "create_material", "create_camera", "create_lighting_rig", "add_light",
     "create_geometry_nodes", "create_radial_markers", "create_linear_markers",
     "create_text_label", "create_decal_plane", "create_curve_tube",

@@ -5,12 +5,12 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 5.0,
+    "runtime_seconds": 4.9,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite4\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite4\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite5\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite5\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark"
@@ -28,29 +28,29 @@
         },
         {
           "name": "glass_bottle_body",
-          "contrast": 0.2045,
-          "edge_density": 0.1188,
-          "separation": 0.2212,
-          "mean_luma": 0.4299,
+          "contrast": 0.2023,
+          "edge_density": 0.1191,
+          "separation": 0.218,
+          "mean_luma": 0.4267,
           "surround_luma": 0.2087,
           "readable": true
         },
         {
           "name": "blue_liquid_core",
-          "contrast": 0.1447,
-          "edge_density": 0.1255,
-          "separation": 0.0541,
-          "mean_luma": 0.4798,
-          "surround_luma": 0.4257,
+          "contrast": 0.1402,
+          "edge_density": 0.1263,
+          "separation": 0.0488,
+          "mean_luma": 0.4731,
+          "surround_luma": 0.4243,
           "readable": true
         },
         {
           "name": "liquid_bubble_highlight_01",
-          "contrast": 0.053,
-          "edge_density": 0.1417,
-          "separation": 0.0338,
-          "mean_luma": 0.6171,
-          "surround_luma": 0.6508,
+          "contrast": 0.0682,
+          "edge_density": 0.2667,
+          "separation": 0.0406,
+          "mean_luma": 0.5847,
+          "surround_luma": 0.6253,
           "readable": true
         },
         {
@@ -73,20 +73,20 @@
         },
         {
           "name": "front_label_checker_texture",
-          "contrast": 0.1282,
-          "edge_density": 0.1664,
-          "separation": 0.1794,
-          "mean_luma": 0.5631,
+          "contrast": 0.122,
+          "edge_density": 0.1686,
+          "separation": 0.149,
+          "mean_luma": 0.5327,
           "surround_luma": 0.3837,
           "readable": true
         },
         {
           "name": "label_highlight_line",
-          "contrast": 0.1389,
-          "edge_density": 0.4182,
-          "separation": 0.0086,
-          "mean_luma": 0.5843,
-          "surround_luma": 0.5758,
+          "contrast": 0.1385,
+          "edge_density": 0.4446,
+          "separation": 0.0163,
+          "mean_luma": 0.579,
+          "surround_luma": 0.5627,
           "readable": true
         },
         {
@@ -109,20 +109,20 @@
         },
         {
           "name": "label_micro_text_top",
-          "contrast": 0.1048,
-          "edge_density": 0.4818,
-          "separation": 0.0662,
-          "mean_luma": 0.5505,
-          "surround_luma": 0.6167,
+          "contrast": 0.1005,
+          "edge_density": 0.5091,
+          "separation": 0.0581,
+          "mean_luma": 0.5144,
+          "surround_luma": 0.5725,
           "readable": true
         },
         {
           "name": "label_micro_text_bottom",
-          "contrast": 0.101,
-          "edge_density": 0.53,
-          "separation": 0.0695,
-          "mean_luma": 0.5331,
-          "surround_luma": 0.6026,
+          "contrast": 0.0942,
+          "edge_density": 0.56,
+          "separation": 0.0531,
+          "mean_luma": 0.5015,
+          "surround_luma": 0.5546,
           "readable": true
         },
         {
@@ -147,9 +147,9 @@
           "name": "liquid_meniscus_highlight_ring",
           "contrast": 0.217,
           "edge_density": 0.1947,
-          "separation": 0.1074,
+          "separation": 0.1107,
           "mean_luma": 0.5499,
-          "surround_luma": 0.4425,
+          "surround_luma": 0.4393,
           "readable": true
         },
         {
@@ -181,11 +181,11 @@
         },
         {
           "name": "swatch_liquid_blue_column",
-          "contrast": 0.1254,
+          "contrast": 0.1228,
           "edge_density": 0.209,
-          "separation": 0.0205,
-          "mean_luma": 0.3009,
-          "surround_luma": 0.2803,
+          "separation": 0.0264,
+          "mean_luma": 0.2999,
+          "surround_luma": 0.2734,
           "readable": true
         },
         {
@@ -199,10 +199,10 @@
         },
         {
           "name": "swatch_label_checker_tile",
-          "contrast": 0.1491,
-          "edge_density": 0.3608,
-          "separation": 0.2445,
-          "mean_luma": 0.4118,
+          "contrast": 0.1496,
+          "edge_density": 0.359,
+          "separation": 0.2446,
+          "mean_luma": 0.412,
           "surround_luma": 0.1674,
           "readable": true
         },
@@ -226,11 +226,11 @@
         },
         {
           "name": "white_glass_vertical_highlight_left",
-          "contrast": 0.2212,
-          "edge_density": 0.7284,
-          "separation": 0.3013,
-          "mean_luma": 0.5506,
-          "surround_luma": 0.2493,
+          "contrast": 0.2197,
+          "edge_density": 0.7888,
+          "separation": 0.3064,
+          "mean_luma": 0.547,
+          "surround_luma": 0.2407,
           "readable": true
         },
         {
@@ -257,7 +257,7 @@
       "unreadable_parts": []
     },
     "reference_metrics": null,
-    "palette_similarity": 0.791117832087215,
+    "palette_similarity": 0.7916727808211717,
     "animation_frame_proof": null,
     "failures": []
   }

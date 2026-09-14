@@ -122,6 +122,7 @@ OPERATION_SPECS: dict[str, dict] = {
     "set_smooth_shading": _spec({"target": str, "smooth": bool}, {}),
     "set_origin": _spec({"target": str}, {"mode": str}),
     "move_to_collection": _spec({"target": str, "collection": str}, {}),
+    "generate_uv": _spec({"target": str}, {"method": str, "name": str}),
     "parent_objects": _spec({"child": str, "parent": str}, {}),
     "assign_material": _spec({"target": str, "material": str}, {}, "material"),
     "create_material": _spec({"schema": dict}, {}, "material"),

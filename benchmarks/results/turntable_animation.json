@@ -5,12 +5,12 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 9.0,
+    "runtime_seconds": 8.9,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite4\\turntable_animation_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite4\\turntable_animation_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite5\\turntable_animation_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite5\\turntable_animation_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
@@ -496,22 +496,22 @@
     "animation_frame_proof": {
       "frame_count": 3,
       "frames": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite4\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite4\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite4\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite5\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite5\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite5\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png"
       ],
       "pairs": [
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite4\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite4\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite5\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite5\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
           "mean_rgb_delta": 0.10494615137577057,
           "max_rgb_delta": 0.7137255072593689,
           "mean_luma_delta": 0.10300540179014206,
           "changed_pixel_ratio": 0.4399151234567901
         },
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite4\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite4\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite5\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite5\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png",
           "mean_rgb_delta": 0.10494478046894073,
           "max_rgb_delta": 0.7137255072593689,
           "mean_luma_delta": 0.10300354659557343,
