@@ -352,6 +352,32 @@ def test_repair_ops_reframe_on_offscreen_failure():
     assert ops2[0]["pull_back"] > 1.25
 
 
+def test_repair_ops_aim_at_visible_subjects_not_offscreen_scatter():
+    from benchmarks.runners.run_benchmarks import _repair_ops_for
+
+    # The composed cluster sits near origin; a far-offscreen accent must not
+    # drag the re-aim point into empty space.
+    insp = {"objects": [
+        {"name": "hero", "collection": "SUBJECT", "type": "MESH",
+         "world_location": [0, 0, 1], "in_camera_frame": True},
+        {"name": "hero2", "collection": "SUBJECT", "type": "MESH",
+         "world_location": [0.2, 0, 1.1], "in_camera_frame": True},
+        {"name": "floor_accent_gone", "collection": "SUBJECT", "type": "MESH",
+         "world_location": [0, 0, -8], "in_camera_frame": False},
+    ]}
+    ops = _repair_ops_for(["offscreen subject objects 1 > max 0"], insp, 1)
+    assert ops[0]["op"] == "reframe_camera"
+    assert all(abs(a - b) < 1e-3
+               for a, b in zip(ops[0]["look_at"], [0.1, 0.0, 1.05]))
+    # with nothing in frame, fall back to all subjects rather than giving up
+    insp2 = {"objects": [
+        {"name": "x", "collection": "SUBJECT", "type": "MESH",
+         "world_location": [4, 0, 0], "in_camera_frame": False}]}
+    ops2 = _repair_ops_for(["offscreen subject objects 1 > max 0"], insp2, 1)
+    assert all(abs(a - b) < 1e-3
+               for a, b in zip(ops2[0]["look_at"], [4.0, 0.0, 0.0]))
+
+
 def test_repair_ops_adjust_world_on_dark_tag():
     from benchmarks.runners.run_benchmarks import _repair_ops_for
 

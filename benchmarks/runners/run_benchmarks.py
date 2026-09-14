@@ -533,7 +533,13 @@ def _repair_ops_for(failures, insp, round_no):
     camera_animated = (insp.get("animation") or {}).get("camera_animated")
     if needs_reframe and not camera_animated:
         subjects = visual_collection_objects(insp, "SUBJECT")
-        pts = [o["world_location"] for o in subjects if o.get("world_location")]
+        # Aim at the objects that ARE in frame — the centroid of all subjects
+        # gets dragged toward offscreen scatter, which re-centers the camera on
+        # empty space and destroys the working composition. The pull_back
+        # (escalating per round) is what brings edge objects inside.
+        visible = [o for o in subjects if o.get("in_camera_frame")]
+        pts = [o["world_location"] for o in (visible or subjects)
+               if o.get("world_location")]
         if pts:
             centroid = [sum(p[i] for p in pts) / len(pts) for i in range(3)]
             ops.append({"op": "reframe_camera", "look_at": centroid,
