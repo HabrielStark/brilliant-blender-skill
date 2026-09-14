@@ -13,16 +13,30 @@ is never the builder's own claim:
 1. **Builder** iterates apply -> render -> critique until no fail-severity
    diagnoses remain, then claims done.
 2. **Visual verifier** — a *different* agent session — receives ONLY the brief,
-   the `required_parts` ledger, and the render path (plus the reference image
+   the `required_parts` ledger, and the render paths (plus the reference image
    when one exists). Not the builder's reasoning, not its claimed fixes — fresh
-   eyes only. It opens the image itself and answers:
+   eyes only. The builder must provide the hero preview AND the
+   `render_multiview` orbit set (three_quarter/profile/back/top) — a single
+   angle can hide backside, underside, and depth omissions the brief still
+   requires. The verifier opens the images itself and answers:
    - For every element in the ledger: is it present, identifiable, and does it
      read as *what it is* (a flower reads as a flower, not as a blob)?
    - Does the composition match the brief's intent (mood, framing, hierarchy)?
    - If a reference exists: which regions diverge most, and why?
    - Verdict: `PASS` or a numbered defect list ordered by visual impact.
-3. A defect list routes back to the builder as new work. `PASS` from the
-   verifier plus zero fail diagnoses is the only valid done-state.
+3. The verdict comes back in a fixed shape so defects route mechanically:
+
+   ```
+   VERDICT: PASS | FAIL
+   ledger:
+     <part>: present | missing | unidentifiable | placeholder
+   defects (ordered by visual impact):
+     1. <what> — <which view shows it> — <what it should look like>
+   ```
+
+   A `FAIL` verdict routes the defect list back to the builder as new work.
+   `PASS` from the verifier plus zero fail diagnoses is the only valid
+   done-state.
 
 The verifier must never be told the score or the builder's interpretation —
 anchoring it to the builder's story defeats the point. If sub-agents are

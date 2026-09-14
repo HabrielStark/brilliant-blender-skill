@@ -19,7 +19,12 @@ _COMMON = (
     "re-critique. Repeat until no "
     "fail-severity diagnoses remain or the iteration budget is spent. Do not "
     "guess at fixes the critique did not suggest; if its suggested op fails, "
-    "pick the next diagnosis rather than retrying the same op."
+    "pick the next diagnosis rather than retrying the same op.\n\n"
+    "Done means verified, not converged: when no fail diagnoses remain, call "
+    "render_multiview and look at every view (or hand them to a fresh-eyes "
+    "verifier with the brief and required_parts). Every declared element must "
+    "read as what it is from the angles that show it — a placeholder that "
+    "merely carries the name is not the element. Only then render final."
 )
 
 

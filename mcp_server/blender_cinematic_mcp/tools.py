@@ -198,6 +198,24 @@ def h_render_preview(ctx: ServerContext, task_id: str, budget: dict | None = Non
 
 
 @_safe
+def h_render_multiview(ctx: ServerContext, task_id: str, budget: dict | None = None) -> dict:
+    """render.multiview — orbit views for visual verification.
+
+    Renders three_quarter/profile/back/top thumbnails around the subject
+    bounds with a temporary camera; the authored camera and .blend are
+    untouched. The verifier needs these: a hero render can hide backside,
+    underside, and off-axis omissions that the brief still requires.
+    Returns {"multiview": {"views": {name: path}}}.
+    """
+    base = ctx.task_dir(task_id)
+    out = base / "iterations" / "multiview.png"
+    job = runner.build_job("render_multiview", base, base / "final" / "scene.blend",
+                           budget=budget or {}, output={"image": str(out)},
+                           safety_mode=ctx.safety_mode)
+    return runner.run_job(job, ctx.blender_exe, timeout=600)
+
+
+@_safe
 def h_render_final(ctx: ServerContext, task_id: str, budget: dict | None = None, force: bool = False) -> dict:
     """render.final — only after preview passes unless force=True."""
     base = ctx.task_dir(task_id)
@@ -331,6 +349,7 @@ HANDLERS = {
     "geometry_estimate_complexity": h_geometry_estimate_complexity,
     "render_budget": h_render_budget,
     "render_preview": h_render_preview,
+    "render_multiview": h_render_multiview,
     "render_final": h_render_final,
     "export_glb": h_export_glb,
     "web_validate_glb": h_web_validate_glb,

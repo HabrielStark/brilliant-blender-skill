@@ -52,7 +52,7 @@ skill folder (`SKILL.md`) so the agent loads the workflow rules too.
 `scene_inspect`, `scene_critique`, `scene_execute_python_safe` (disabled by default),
 `evaluate_scene_lint`, `evaluate_preview`, `camera_plan_and_create`,
 `lighting_create_setup`, `material_create_pbr`, `geometry_estimate_complexity`,
-`render_budget`, `render_preview`, `render_final`, `export_glb`,
+`render_budget`, `render_preview`, `render_multiview`, `render_final`, `export_glb`,
 `web_validate_glb`, `web_generate_integration`, `security_scan_python`,
 `security_policy`.
 

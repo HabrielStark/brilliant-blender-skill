@@ -158,6 +158,21 @@ def main():
                 result["render"] = renderer.render_still(img, job.get("budget") or {}, preview=True,
                                                           film_transparent=False,
                                                           frame=render_opts.get("frame"))
+        if action == "render_multiview":
+            base_img = _workspace_path(
+                job,
+                (job.get("output") or {}).get("image") or os.path.join(
+                    job["workspace"], "iterations", "multiview.png"))
+            stem, ext = os.path.splitext(base_img)
+            views = (job.get("render") or {}).get("views")
+            names = [v[0] for v in views] if views else [
+                n for n, _, _ in renderer.MULTIVIEW_DEFAULT]
+            paths = {n: f"{stem}_{n}.png" for n in names}
+            for p in paths.values():
+                if os.path.isfile(p):
+                    os.remove(p)
+            result["multiview"] = renderer.render_multiview(
+                paths, job.get("budget") or {}, views=views)
         if action == "render_final":
             _invalidate_output(job, "image")
             img = _workspace_path(

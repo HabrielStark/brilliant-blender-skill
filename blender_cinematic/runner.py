@@ -22,7 +22,7 @@ from .workspace import WorkspaceResolver
 
 ACTIONS = (
     "initialize_blend", "apply_recipe", "inspect", "render_preview",
-    "render_final", "export_glb", "full_pipeline",
+    "render_final", "export_glb", "full_pipeline", "render_multiview",
 )
 
 _RESULT_SENTINEL = "BCAS_RESULT="

@@ -341,10 +341,12 @@ state. Preserve the last valid artifacts and state the exact next decision.
    checked for semantic anatomy, authored craft, material/shader detail,
    camera/lighting, and provenance before they are treated as valid Skill
    outputs. Use `--render` when Blender is available.
-14. **Visual verifier pass.** Metrics passing is not done. Hand the render to a
-   *fresh-eyes* verifier (a sub-agent or your own fresh read of the PNG — see
-   `references/agent-orchestration.md`): give it the brief, the
-   `required_parts` ledger, and the image — never your claimed fixes or score.
+14. **Visual verifier pass.** Metrics passing is not done. Render the orbit
+   set (`render_multiview`) — hero + three_quarter/profile/back/top — and hand
+   the renders to a *fresh-eyes* verifier (a sub-agent or your own fresh read
+   of the PNGs — see `references/agent-orchestration.md`): give it the brief,
+   the `required_parts` ledger, and the images — never your claimed fixes or
+   score.
    It answers per element: present? identifiable? reads as what it is? Any
    defect list routes back as new work; only verifier `PASS` + zero
    fail-severity critiques means done. A scene that is metrically valid but

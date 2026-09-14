@@ -72,6 +72,34 @@ def test_full_pipeline_builds_renders_exports(blender_exe, tmp_path):
     assert v["info"]["meshes"] >= 2
 
 
+def test_render_multiview_orbits_without_touching_scene(blender_exe, tmp_path):
+    """Verification views render from a temp camera and leave the authored
+    camera + blend untouched — a verifier needs angles the hero hides."""
+    _, base = task_workspace(tmp_path, "mv")
+    blend = base / "final" / "scene.blend"
+    runner.run_job(runner.build_job(
+        "full_pipeline", base, blend, budget=PREVIEW_BUDGET,
+        recipe={"operations": BASE_RECIPE},
+        output={"image": str(base / "iterations" / "p.png")}),
+        blender_exe, 300)
+    res = runner.run_job(runner.build_job(
+        "render_multiview", base, blend, budget=PREVIEW_BUDGET,
+        output={"image": str(base / "iterations" / "mv.png")}),
+        blender_exe, 300)
+    assert res["ok"], res
+    views = res["multiview"]["views"]
+    assert set(views) == {"three_quarter", "profile", "back", "top"}
+    for name, path in views.items():
+        p = base / "iterations" / f"mv_{name}.png"
+        assert p.exists(), name
+        assert not render_sanity_issues(image_sanity(p)), name
+    insp = runner.run_job(runner.build_job(
+        "inspect", base, blend), blender_exe, 120)["inspection"]
+    assert insp["active_camera"]["name"] == "camera_hero"
+    assert not any(o["name"] == "bcas_multiview_cam"
+                   for o in insp["objects"])
+
+
 def test_full_pipeline_without_camera_returns_ok_false(blender_exe, tmp_path):
     _, base = task_workspace(tmp_path, "missing_camera")
     blend = base / "final" / "scene.blend"
