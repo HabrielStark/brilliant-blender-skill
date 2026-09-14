@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "action": "initialize_blend",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\_holdout\\cafe\\final\\scene.blend",
+  "collections": [
+    "CAMERAS",
+    "LIGHTS",
+    "SUBJECT",
+    "ENVIRONMENT",
+    "FX",
+    "HELPERS",
+    "EXPORT"
+  ],
+  "saved": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\_holdout\\cafe\\final\\scene.blend"
+}

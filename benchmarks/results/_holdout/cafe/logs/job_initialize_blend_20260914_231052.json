@@ -1,0 +1,15 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "initialize_blend",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\_holdout\\cafe",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\_holdout\\cafe\\final\\scene.blend",
+  "manifest": {},
+  "budget": {},
+  "recipe": {
+    "operations": []
+  },
+  "render": {},
+  "output": {},
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\_holdout\\cafe\\logs\\result_initialize_blend_20260914_231052.json"
+}

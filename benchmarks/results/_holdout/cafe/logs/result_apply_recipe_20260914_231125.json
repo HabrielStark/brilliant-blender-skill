@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "action": "apply_recipe",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\_holdout\\cafe\\final\\scene.blend",
+  "operations": [
+    {
+      "op": "set_object_transform",
+      "transformed": "cup"
+    }
+  ],
+  "saved": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\_holdout\\cafe\\final\\scene.blend"
+}

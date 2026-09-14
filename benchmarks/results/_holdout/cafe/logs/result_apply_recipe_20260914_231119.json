@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "action": "apply_recipe",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\_holdout\\cafe\\final\\scene.blend",
+  "operations": [
+    {
+      "op": "adjust_world",
+      "world": "World",
+      "strength": 0.19439999759197235,
+      "color": [
+        0.05087608844041824,
+        0.05087608844041824,
+        0.05087608844041824,
+        1.0
+      ]
+    },
+    {
+      "op": "add_light",
+      "light": "rescue_rim.001"
+    }
+  ],
+  "saved": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\_holdout\\cafe\\final\\scene.blend"
+}

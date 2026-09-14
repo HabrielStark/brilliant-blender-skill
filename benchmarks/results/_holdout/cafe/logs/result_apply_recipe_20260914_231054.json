@@ -1,0 +1,63 @@
+{
+  "ok": true,
+  "action": "apply_recipe",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\_holdout\\cafe\\final\\scene.blend",
+  "operations": [
+    {
+      "op": "ensure_standard_collections",
+      "collections": [
+        "CAMERAS",
+        "LIGHTS",
+        "SUBJECT",
+        "ENVIRONMENT",
+        "FX",
+        "HELPERS",
+        "EXPORT"
+      ]
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "table",
+      "faces": 34
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "cup",
+      "faces": 34
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "croissant",
+      "faces": 512
+    },
+    {
+      "op": "add_light",
+      "light": "sun"
+    },
+    {
+      "op": "create_camera",
+      "camera": "cam",
+      "active": true,
+      "preset": "macro_product",
+      "type": "PERSP"
+    },
+    {
+      "op": "set_scene_metadata",
+      "metadata_keys": [
+        "final_camera"
+      ]
+    },
+    {
+      "op": "adjust_world",
+      "world": "World",
+      "strength": 0.05999999865889549,
+      "color": [
+        0.05087608844041824,
+        0.05087608844041824,
+        0.05087608844041824,
+        1.0
+      ]
+    }
+  ],
+  "saved": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\_holdout\\cafe\\final\\scene.blend"
+}

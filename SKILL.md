@@ -234,8 +234,9 @@ state. Preserve the last valid artifacts and state the exact next decision.
    offscreen subjects, metal-void materials, unreadable parts, reference
    brightness/contrast/saliency direction — each with suggested repair ops
    (`adjust_world`, `adjust_light`, `adjust_material`, `reframe_camera`,
-   `add_light`, `apply_post`). Apply the top fail diagnosis via
-   `scene_apply_recipe`, re-render, re-critique; do not invent fixes the
+   `add_light`, `apply_post`, `set_object_transform`). Apply the ops of every
+   fail-severity diagnosis in one `scene_apply_recipe` call, re-render,
+   re-critique; do not invent fixes the
    critique did not suggest. Cross-check the inspection JSON too: every
    important `SUBJECT` part must have `in_camera_frame=true`; hero mesh normals
    must be clean; glass/metal edges must have bevel/weighted-normal support.

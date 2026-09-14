@@ -73,13 +73,12 @@ def _check_lint(lint, inspection: dict, out: list) -> None:
     subjects = _subject_objects(inspection)
     anchor = _centroid(_in_frame(subjects)) or _centroid(subjects)
     default_look = anchor or [0, 0, 0.5]
-    codes = {c for _, c, _, _ in issues}
     emitted = set()
     for sev, code, loc, msg in issues:
-        if code in emitted:
+        if (code, loc) in emitted:
             continue
         if code == "camera.none":
-            emitted.add(code)
+            emitted.add((code, loc))
             cam_schema = {
                 "camera_name": "hero_camera",
                 "location": [default_look[0], default_look[1] - 6,
@@ -93,7 +92,7 @@ def _check_lint(lint, inspection: dict, out: list) -> None:
                 msg,
                 [{"op": "create_camera", "schema": cam_schema}]))
         elif code == "lighting.none":
-            emitted.add(code)
+            emitted.add((code, loc))
             out.append(_diag(
                 "fail", "fix.no_lighting",
                 "no meaningful lighting — the scene renders flat or black",
@@ -112,18 +111,23 @@ def _check_lint(lint, inspection: dict, out: list) -> None:
                          "look_at": default_look},
                     ]}}]))
         elif code == "material.missing":
-            emitted.add(code)
+            emitted.add((code, loc))
+            # vary the rescue colour per object so a multi-object fix doesn't
+            # come out monotone and trip material.monotone next round
+            h = (hash(str(loc)) % 7) / 7.0
+            base = [0.30 + 0.25 * h, 0.30 + 0.18 * ((h * 3) % 1),
+                    0.36 + 0.20 * ((h * 5) % 1), 1.0]
             out.append(_diag(
                 "fail", "fix.no_material",
                 f"object '{loc}' has no material — renders as untextured grey",
                 msg,
                 [{"op": "create_material", "schema": {
                     "name": f"mat_{loc or 'obj'}", "preset": "glossy_plastic",
-                    "pbr": {"base_color": [0.35, 0.36, 0.4, 1.0],
+                    "pbr": {"base_color": [round(c, 3) for c in base],
                             "roughness": 0.4},
                     "target_objects": [loc] if loc else []}}]))
         elif code == "material.default":
-            emitted.add(code)
+            emitted.add((code, loc))
             out.append(_diag(
                 "fail", "fix.default_material",
                 f"default/grey material on '{loc}' — reads as unfinished",
@@ -133,7 +137,7 @@ def _check_lint(lint, inspection: dict, out: list) -> None:
                           "roughness": 0.35}}]))
         elif code in ("camera.subject_hidden", "camera.subject_cut",
                       "camera.subject_part_hidden"):
-            emitted.add(code)
+            emitted.add((code, loc))
             if anchor:
                 out.append(_diag(
                     "fail", "fix.subject_framing",
@@ -143,7 +147,7 @@ def _check_lint(lint, inspection: dict, out: list) -> None:
                     [{"op": "reframe_camera", "look_at": anchor,
                       "pull_back": 1.25}]))
         elif code == "material.metal_unreadable":
-            emitted.add(code)
+            emitted.add((code, loc))
             out.append(_diag(
                 "warn", "fix.metal_unreadable",
                 f"metallic material on '{loc}' has no bevel or light to "
@@ -155,7 +159,7 @@ def _check_lint(lint, inspection: dict, out: list) -> None:
                      "name": f"catch_{str(loc)[:24]}", "type": "AREA",
                      "power": 150, "size": 2.0, "position_role": "rim"}}]))
         elif code == "material.monotone":
-            emitted.add(code)
+            emitted.add((code, loc))
             out.append(_diag(
                 "warn", "fix.material_monotone",
                 "materials are near-identical — a finished scene needs "
@@ -222,6 +226,41 @@ def _check_scene_richness(inspection: dict, out: list) -> None:
             "exemplars layer body, accents, and set elements; a lone primitive "
             "reads as a blockout",
             f"subjects={len(subjects)} environment={len(env)}", []))
+
+
+def _check_buried_objects(inspection: dict, out: list) -> None:
+    """A small subject fully inside another object's bbox is invisible —
+    the classic weak-model layout bug (props placed at plausible heights
+    but swallowed by the table/pedestal). Computable purely from
+    world_location + dimensions."""
+    subjects = _subject_objects(inspection)
+    def _bounds(o):
+        loc, dim = o.get("world_location"), o.get("dimensions")
+        if not loc or not dim:
+            return None
+        return ([loc[i] - dim[i] / 2 for i in range(3)],
+                [loc[i] + dim[i] / 2 for i in range(3)])
+    boxes = {o["name"]: _bounds(o) for o in subjects
+             if o.get("name") and _bounds(o)}
+    for name, (lo, hi) in boxes.items():
+        for host, (hlo, hhi) in boxes.items():
+            if name == host:
+                continue
+            if all(lo[i] >= hlo[i] and hi[i] <= hhi[i] for i in range(3)):
+                # buried -> sit it on top of the host's bounding box
+                loc = next(o["world_location"] for o in subjects
+                           if o.get("name") == name)
+                dim = next(o.get("dimensions") for o in subjects
+                           if o.get("name") == name)
+                out.append(_diag(
+                    "fail", "geometry.buried_object",
+                    f"'{name}' is fully inside '{host}' — invisible in the "
+                    "render; lift it onto the host's top surface",
+                    f"{name} bbox {lo}..{hi} inside {host} {hlo}..{hhi}",
+                    [{"op": "set_object_transform", "target": name,
+                      "location": [loc[0], loc[1],
+                                   hhi[2] + dim[2] / 2 + 0.01]}]))
+                break
 
 
 def _check_subject_visible(inspection: dict, out: list) -> None:
@@ -502,6 +541,7 @@ def diagnose(inspection: dict, image_metrics: dict | None = None,
     _check_lint(lint, inspection, out)
     _check_exposure(image_metrics, out)
     _check_scene_richness(inspection, out)
+    _check_buried_objects(inspection, out)
     _check_subject_visible(inspection, out)
     _check_materials(inspection, out)
     _check_readability(inspection, readability_report, out)

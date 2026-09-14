@@ -15,11 +15,12 @@ def _inspection(objects=(), materials=(), world=None, camera=True):
     }
 
 
-def _subject(name, in_frame=True, coverage=0.3, loc=(0, 0, 0), bbox=None):
+def _subject(name, in_frame=True, coverage=0.3, loc=(0, 0, 0), bbox=None,
+             dims=(1, 1, 1)):
     return {
         "name": name, "collection": "SUBJECT", "in_camera_frame": in_frame,
         "screen_coverage": coverage, "world_location": list(loc),
-        "screen_bbox": bbox,
+        "screen_bbox": bbox, "dimensions": list(dims),
     }
 
 
@@ -211,6 +212,21 @@ def test_dead_side_detected(tmp_path):
                for d in diags)
 
 
+def test_buried_object_lifts_onto_host():
+    # cup centre inside the table's bbox — invisible in the render
+    objs = [
+        _subject("table", loc=(0, 0, 0.4), dims=(1.6, 1.6, 2.0)),
+        _subject("cup", loc=(0.3, 0, 1.0), dims=(0.25, 0.25, 0.3)),
+    ]
+    diags = diagnose(_inspection(objects=objs))
+    d = next(x for x in diags if x["code"] == "geometry.buried_object")
+    op = d["ops"][0]
+    assert op["op"] == "set_object_transform" and op["target"] == "cup"
+    # host top = 0.4 + 1.0 = 1.4; cup half-height 0.15 -> 1.55 + epsilon
+    assert abs(op["location"][2] - 1.56) < 1e-6
+    assert validate_recipe({"operations": [op]}).passed
+
+
 def test_lint_driven_diagnoses_for_broken_scene():
     """The worst-case input (baseline-style: no camera, no lights, no
     materials) must still produce concrete build-out ops — this is where a
@@ -222,11 +238,16 @@ def test_lint_driven_diagnoses_for_broken_scene():
     lint.add(error("lighting.none", "no meaningful lighting"))
     lint.add(error("material.missing", "important object has no material: Cube",
                    "Cube"))
+    lint.add(error("material.missing", "important object has no material: Sphere",
+                   "Sphere"))
     objs = [{"name": "Cube", "collection": "SUBJECT", "in_camera_frame": False,
              "world_location": [0, 0, 0.5], "screen_coverage": 0}]
     diags = diagnose(_inspection(objects=objs), lint=lint)
     codes = {d["code"] for d in diags}
     assert {"fix.no_camera", "fix.no_lighting", "fix.no_material"} <= codes
+    # every object with a missing material gets its own fix, not just the first
+    mat_fixes = [d for d in diags if d["code"] == "fix.no_material"]
+    assert len(mat_fixes) == 2
     for d in diags:
         res = validate_recipe({"operations": d["ops"]})
         assert res.passed, (d["code"], [i.message for i in res.issues])
