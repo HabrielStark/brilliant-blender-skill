@@ -693,12 +693,29 @@ def test_generalist_utility_ops_end_to_end(blender_exe, tmp_path):
          "params": {"target": "ground"}},
         {"op": "add_constraint", "target": "camera_hero", "constraint": "TRACK_TO",
          "params": {"target": "hero_core"}},
+        {"op": "create_rig", "schema": {"rig_name": "probe_rig", "controls": [
+            {"name": "CTRL_probe", "type": "empty", "drives": []}],
+         "drivers": [
+            {"target": "chip_detail.location.z", "driver": "CTRL_probe.location.y"},
+            {"target": "ghost.location.z", "driver": "CTRL_probe.location.y"}]}},
+        {"op": "set_object_transform", "target": "CTRL_probe",
+         "location": [0, 3.5, 0]},
     ]}
     res = runner.run_job(runner.build_job(
         "full_pipeline", base, blend, budget=PREVIEW_BUDGET, recipe=recipe),
         blender_exe, 300)
     assert res["ok"], res
     assert not [o for o in res["operations"] if o.get("error")], res["operations"]
+    rig = next(o for o in res["operations"] if o.get("rig") == "probe_rig")
+    assert rig["drivers"] == ["chip_detail.location.z"]
+    assert rig["driver_errors"][0]["driver"] == "ghost.location.z"
+    # driver must actually evaluate: chip follows the control's y onto its z
+    insp = runner.run_job(runner.build_job("inspect", base, blend),
+                          blender_exe, 120)["inspection"]
+    chip = next(o for o in insp["objects"] if o["name"] == "chip_detail")
+    parent = next(o for o in insp["objects"] if o["name"] == "hero_core")
+    assert chip["world_location"][2] - parent["world_location"][2] == \
+        pytest.approx(3.5, abs=0.2)
 
 
 def test_add_modifier_boolean_missing_cutter_errors(blender_exe, tmp_path):

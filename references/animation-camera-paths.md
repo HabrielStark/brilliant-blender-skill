@@ -56,6 +56,39 @@ Reject paths whose sampled first and last camera positions are effectively the
 same; a static camera with a JSON file is not a scroll-linked animation.
 Always include a **reduced-motion fallback**.
 
+## Rig controls & drivers (`create_rig`)
+
+`create_rig` creates named control objects (empties live in `RIGS`/`HELPERS`)
+and can wire **scripted drivers** so a driven property follows a control
+property — the classic exploded-view slider: move `CTRL_explode.location.z`
+and every driven part rises with it.
+
+```json
+{"op": "create_rig", "schema": {
+  "rig_name": "exploded_rig",
+  "controls": [
+    {"name": "CTRL_explode", "type": "empty",
+     "drives": ["case_top_shell", "board_pcb_round"]}],
+  "drivers": [
+    {"target": "connector_ribbon.location.z",
+     "driver": "CTRL_explode.location.y"}]}}
+```
+
+- `controls[].drives` **parents** the listed objects to the control empty —
+  moving the empty moves the children.
+- `drivers[]` adds a real scripted driver: `target` property is driven by the
+  `driver` property via `expression = "v"` on a `SINGLE_PROP` variable.
+  Path format is `object.property.axis` — `location`, `rotation_euler`,
+  `scale`, or any scalar RNA property (e.g. `hide_render`); the axis letter
+  (`x`/`y`/`z`/`w`) selects the array index. Omit `.axis` for scalar props.
+- A driver writes the object's **local** transform channel; if the object is
+  also parented, the parent's matrix still applies on top.
+- Unresolvable object names or unknown properties are reported in the op
+  result under `driver_errors` — the rest of the rig still builds.
+- Verify it evaluates: move the control, re-inspect, and check the driven
+  object's `world_location` actually followed (the integration suite does
+  exactly this).
+
 ## Animation linter
 
 Fails: animation requested but no keyframes; invalid frame range; camera animated

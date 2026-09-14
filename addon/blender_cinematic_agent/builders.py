@@ -2254,17 +2254,58 @@ def op_create_rig(p):
                 driven.parent = empty
         made.append(empty.name)
     drivers = []
+    driver_errors = []
     for d in schema.get("drivers", []):
-        obj = bpyutil.get_object(d["target"].split(".")[0])
-        if obj and "location.z" in d["target"]:
-            try:
-                obj.driver_add("location", 2).driver.expression = "0"
-                drivers.append(d["target"])
-            except Exception as exc:
-                empty = bpy.data.objects.new(f"{schema.get('rig_name', 'rig')}_driver_warning", None)
-                empty["bcas_driver_warning"] = type(exc).__name__
-                bpyutil.link_to_collection(empty, coll)
-    return {"rig": schema.get("rig_name"), "controls": made, "drivers": drivers}
+        ok, err = _rig_driver(d)
+        if ok:
+            drivers.append(d["target"])
+        else:
+            driver_errors.append({"driver": d.get("target"), "error": err})
+    result = {"rig": schema.get("rig_name"), "controls": made, "drivers": drivers}
+    if driver_errors:
+        result["driver_errors"] = driver_errors
+    return result
+
+
+_AXIS_INDEX = {"x": 0, "y": 1, "z": 2, "w": 3}
+
+
+def _split_prop_path(path):
+    """'obj.location.z' -> ('obj', 'location', 2); 'obj.hide_render' -> ('obj', 'hide_render', -1)."""
+    parts = path.split(".")
+    obj_name, prop = parts[0], parts[1] if len(parts) > 1 else "location"
+    axis = _AXIS_INDEX.get(parts[2].lower(), -1) if len(parts) > 2 else -1
+    return obj_name, prop, axis
+
+
+def _rna_path(prop, axis):
+    return f"{prop}[{axis}]" if axis >= 0 else prop
+
+
+def _rig_driver(d):
+    """Wire target prop to driver prop: 'a.location.z' follows 'ctrl.location.y'."""
+    t_name, t_prop, t_axis = _split_prop_path(d.get("target", ""))
+    s_name, s_prop, s_axis = _split_prop_path(d.get("driver", ""))
+    obj, src = bpyutil.get_object(t_name), bpyutil.get_object(s_name)
+    if not obj:
+        return False, f"target object not found: {t_name}"
+    if not src:
+        return False, f"driver object not found: {s_name}"
+    if not hasattr(obj, t_prop):
+        return False, f"{t_name} has no property '{t_prop}'"
+    try:
+        fcurve = obj.driver_add(t_prop, t_axis) if t_axis >= 0 else obj.driver_add(t_prop)
+    except TypeError as exc:
+        return False, str(exc)
+    drv = fcurve.driver
+    drv.type = "SCRIPTED"
+    var = drv.variables.new()
+    var.name = "v"
+    var.type = "SINGLE_PROP"
+    var.targets[0].id = src
+    var.targets[0].data_path = _rna_path(s_prop, s_axis)
+    drv.expression = "v"
+    return True, ""
 
 
 BUILDERS = {
