@@ -19,6 +19,11 @@ The behaviours this skill exists to prevent, and the guard that catches each.
 | Unbaked geometry nodes exported | `lint_geometry` unbaked-for-web error |
 | Particle/sim bombs | `estimate_complexity` + `lint_vfx` budget caps |
 | Over-processed compositor hiding bad lighting | `lint_compositor` overbloom / no-raw-render |
+| Declared brief element never built | `required_parts` ledger + `completeness.part_missing` fail + scaffold op |
+| Element exists only as a named primitive | `completeness.part_is_placeholder` warn + verifier three-tier identity test |
+| Nested assembly part "fixed" off its mount | buried-object guards: flush-top, embedded-bottom, bbox-periphery |
+| Scale stack: `set_object_transform` scale on baked-scale object multiplies | `create_mesh_primitive` bakes `scale` into the mesh — later transform scale is absolute, so re-issue the intended final dims, not a delta |
+| Single hero angle hides backside omissions | `render_multiview` orbit set + verifier pass before done |
 | Raw Python as the normal path | structured-operation allowlist; raw Python disabled by default |
 | Writing outside the project | `WorkspaceResolver` path sandbox |
 | Shell injection via filenames/params | argument arrays only; no `shell=True` |

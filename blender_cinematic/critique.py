@@ -61,26 +61,48 @@ def _diag(severity, code, problem, evidence, ops):
             "evidence": evidence, "ops": ops}
 
 
-def _scaffold_op(part: str, host: dict | None, slot: int, total: int) -> dict:
+def _scaffold_op(part: str, host: dict | None, slot: int, total: int,
+                 ground_z: float = 0.0) -> dict:
     """Placeholder geometry for a missing required part. A scaffold is NOT the
     finished element — it exists so the object becomes inspectable, lintable,
     material-assignable and frameable, after which the anatomy pass and the
-    visual verifier decide whether it reads as what it claims to be. Placed on
-    the largest subject's top surface when one exists, spread across slots."""
+    visual verifier decide whether it reads as what it claims to be.
+
+    Placement: on the host's top only when the host is a slab (table, desk,
+    shelf — flatter than it is wide). A tower (building, tree) is not a
+    surface — its missing parts belong at ground level beside it, not on
+    the roof."""
     if host:
         hl = host.get("world_location") or [0, 0, 0]
         dims = host.get("dimensions") or [1, 1, 1]
-        footprint = max(0.08, min(0.4, min(dims[0], dims[1]) * 0.15))
-        spacing = max(dims[0] * 0.28, footprint * 2.5)
-        x = hl[0] + (slot - (total - 1) / 2.0) * spacing
-        loc = [round(x, 3), round(hl[1], 3),
-               round(hl[2] + dims[2] / 2 + footprint / 2, 3)]
+        flat_host = dims[2] <= max(dims[0], dims[1])
+        if flat_host:
+            footprint = max(0.08, min(0.4, min(dims[0], dims[1]) * 0.15))
+            spacing = max(dims[0] * 0.28, footprint * 2.5)
+            x = hl[0] + (slot - (total - 1) / 2.0) * spacing
+            loc = [round(x, 3), round(hl[1], 3),
+                   round(hl[2] + dims[2] / 2 + footprint / 2, 3)]
+        else:
+            # ground-level placement spread across the front of the host
+            footprint = max(0.3, min(2.0, max(dims[0], dims[1]) * 0.15))
+            spacing = footprint * 2.5
+            x = hl[0] + (slot - (total - 1) / 2.0) * spacing
+            y = hl[1] - dims[1] / 2 - footprint
+            loc = [round(x, 3), round(y, 3),
+                   round(ground_z + footprint / 2, 3)]
     else:
         footprint = 0.15
-        loc = [round((slot - (total - 1) / 2.0) * 0.4, 3), 0, footprint / 2]
+        loc = [round((slot - (total - 1) / 2.0) * 0.4, 3), 0,
+               ground_z + footprint / 2]
     return {"op": "create_mesh_primitive", "type": "cube",
             "name": f"{part}_scaffold", "collection": "SUBJECT",
             "location": loc, "size": round(footprint, 3)}
+
+
+def _ground_level(objects: list[dict]) -> float:
+    bottoms = [o["world_location"][2] - (o.get("dimensions") or [0, 0, 0])[2] / 2
+               for o in objects if o.get("world_location")]
+    return min(bottoms, default=0.0)
 
 
 def _largest_host(objects: list[dict]) -> dict | None:
@@ -119,6 +141,7 @@ def _check_completeness(inspection: dict, manifest: dict | None,
         return
     objects = inspection.get("objects", [])
     host = _largest_host(objects)
+    ground_z = _ground_level(objects)
     missing = [p for p in required
                if not any(part_present(str(o.get("name", "")), p)
                           for o in objects)]
@@ -130,7 +153,7 @@ def _check_completeness(inspection: dict, manifest: dict | None,
             "named placeholder so the loop can proceed; develop it into real "
             "anatomy in the next pass (a named cube is not the element)",
             f"required_parts={required}",
-            [_scaffold_op(part, host, slot, len(missing))]))
+            [_scaffold_op(part, host, slot, len(missing), ground_z)]))
     for part in required:
         matches = [o for o in objects
                    if part_present(str(o.get("name", "")), part)]

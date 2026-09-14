@@ -286,6 +286,49 @@ def h_scene_critique(ctx: ServerContext, inspection: dict, image_path: str | Non
             "readability": readability, "metrics": img}
 
 
+@_safe
+def h_scene_verifier_brief(ctx: ServerContext, task_id: str,
+                           image_paths: list[str] | None = None) -> dict:
+    """scene.verifier_brief — the exact fresh-eyes verifier prompt, filled in.
+
+    Returns a ready-to-dispatch verifier mission containing the brief, the
+    required_parts ledger, and the render paths — so a sub-agent (or a fresh
+    self-review) judges identity with no leakage from the builder's claims.
+    Call after zero fail diagnoses remain; only verifier PASS + zero fails
+    means done.
+    """
+    manifest = _load_manifest(ctx, task_id) or {}
+    brief = manifest.get("brief", "")
+    required = ((manifest.get("success_criteria") or {})
+                .get("required_parts") or [])
+    base = ctx.task_dir(task_id)
+    default_imgs = [str(base / "iterations" / "preview.png")] + [
+        str(base / "iterations" / f"multiview_{v}.png")
+        for v in ("three_quarter", "profile", "back", "top")]
+    imgs = image_paths or default_imgs
+    prompt = (
+        "You are a visual verifier for a Blender scene produced by another "
+        "agent. You have NOT seen how it was built — judge only what the "
+        "renders show against the brief.\n\n"
+        f"BRIEF: {brief!r}\n\n"
+        f"REQUIRED ELEMENTS LEDGER: {', '.join(required) or '(none declared)'}\n\n"
+        "IMAGES TO INSPECT (open each with your read/image tool — they are "
+        "PNG renders):\n" + "\n".join(f"- {p}" for p in imgs) + "\n\n"
+        "For EACH ledger element: present? identifiable? does it read as what "
+        "it is? Three-tier anatomy test (see docs://anatomy-checklists): "
+        "(1) silhouette identifies it, (2) functional parts present and "
+        "attached, (3) surface carries material evidence.\n\n"
+        "Return EXACTLY this shape:\n\n"
+        "VERDICT: PASS | FAIL\n"
+        "ledger:\n"
+        "  <part>: present | missing | unidentifiable | placeholder\n"
+        "defects (ordered by visual impact):\n"
+        "  1. <what> — <which view shows it> — <what it should look like>\n\n"
+        "Be strict — a named cube is not the element.")
+    return {"ok": True, "verifier_prompt": prompt, "image_paths": imgs,
+            "required_parts": required}
+
+
 # -------------------------------- export / web ----------------------------- #
 @_safe
 def h_export_glb(ctx: ServerContext, task_id: str) -> dict:
@@ -343,6 +386,7 @@ HANDLERS = {
     "evaluate_scene_lint": h_evaluate_scene_lint,
     "evaluate_preview": h_evaluate_preview,
     "scene_critique": h_scene_critique,
+    "scene_verifier_brief": h_scene_verifier_brief,
     "camera_plan_and_create": h_camera_plan_and_create,
     "lighting_create_setup": h_lighting_create_setup,
     "material_create_pbr": h_material_create_pbr,

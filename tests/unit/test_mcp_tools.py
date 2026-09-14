@@ -75,6 +75,23 @@ def test_web_validate_glb_tool_handles_missing(ctx, tmp_path):
     assert res["errors"]             # reports parse failure
 
 
+def test_scene_verifier_brief_emits_fresh_eyes_prompt(ctx):
+    """The verifier-brief tool must package brief + ledger + image paths into
+    a dispatchable prompt — the semantic gate must be a tool, not folklore."""
+    T.h_project_create_scene_workspace(ctx, "demo", {
+        "task_id": "t", "brief": "a desk with a lamp",
+        "output_mode": "still",
+        "success_criteria": {"required_parts": ["desk", "lamp"]},
+    })
+    res = T.h_scene_verifier_brief(ctx, "demo")
+    assert res["ok"]
+    p = res["verifier_prompt"]
+    assert "a desk with a lamp" in p
+    assert "desk, lamp" in p
+    assert "VERDICT" in p and "unidentifiable" in p
+    assert res["image_paths"]  # default orbit set when none passed
+
+
 def test_scene_critique_tool_returns_op_ready_diagnoses(ctx, tmp_path):
     """The critique handler must translate a render + inspection into
     ordered diagnoses with suggested ops — not just raw numbers."""
