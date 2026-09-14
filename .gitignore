@@ -38,3 +38,6 @@ artifacts/
 # OS
 .DS_Store
 Thumbs.db
+
+# holdout/scratch benchmark outputs
+benchmarks/results/_*/
