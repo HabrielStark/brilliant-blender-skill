@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 5.5,
+    "runtime_seconds": 5.6,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\watch_readfix3\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\watch_readfix3\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark",
@@ -405,5 +405,108 @@
     "palette_similarity": null,
     "animation_frame_proof": null,
     "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "product_hero_watch",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 29,
+    "technical_score": 40,
+    "runtime_seconds": 3.7,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\product_hero_watch_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "readability": null,
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Cube'",
+      "object has default/auto name: 'Sphere'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Cube",
+      "important object has no material: Sphere",
+      "pipeline failed: pipeline_incomplete",
+      "score 29 < min 88",
+      "subject objects 2 < min 24",
+      "visible subject objects 0 < min 22",
+      "missing named subject parts: watch, case, bezel, dial, glass, strap, ridge, marker, hand, crown",
+      "subject modifiers 0 < min 20",
+      "smooth subject objects 0 < min 5",
+      "craft detail objects 0 < min 1",
+      "missing craft roles: text_label",
+      "subject materials 0 < min 5",
+      "subject material node count 0 < min 5",
+      "subject procedural materials 0 < min 2",
+      "missing subject material features: noise_color_ramp, wave_bump"
+    ]
+  },
+  "adversarial_slop_keyword_disc": {
+    "task_id": "product_hero_watch",
+    "mode": "adversarial_slop_keyword_disc",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 6.0,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\product_hero_watch_adversarial_slop_keyword_disc\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\product_hero_watch_adversarial_slop_keyword_disc\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "very_dark",
+      "blue_cyan_bias",
+      "dark_blue_cyan"
+    ],
+    "readability": {
+      "parts": [
+        {
+          "name": "watch_case_bezel_dial_glass_strap_ridge_marker_hand_crown_disc",
+          "contrast": 0.0689,
+          "edge_density": 0.0098,
+          "separation": 0.0237,
+          "mean_luma": 0.0618,
+          "surround_luma": 0.0856,
+          "readable": true
+        },
+        {
+          "name": "watch_strap_fake_single_bar",
+          "contrast": 0.0685,
+          "edge_density": 0.0084,
+          "separation": 0.0512,
+          "mean_luma": 0.0897,
+          "surround_luma": 0.0386,
+          "readable": true
+        }
+      ],
+      "measured_parts": 2,
+      "readable_parts": 2,
+      "unreadable_parts": []
+    },
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "render has no discernible silhouette/detail",
+      "score 79 < min 88",
+      "subject objects 2 < min 24",
+      "visible subject objects 2 < min 22",
+      "subject modifiers 2 < min 20",
+      "smooth subject objects 1 < min 5",
+      "craft detail objects 0 < min 1",
+      "missing craft roles: text_label",
+      "subject materials 2 < min 5",
+      "subject material node count 2 < min 5",
+      "subject procedural materials 0 < min 2",
+      "missing subject material features: noise_color_ramp, wave_bump"
+    ]
   }
 }

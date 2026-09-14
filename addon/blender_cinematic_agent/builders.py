@@ -1070,15 +1070,23 @@ def op_create_linear_markers(p):
     return {"markers": made, "count": count}
 
 
-def _organic_surface_mesh(name, length, width, curl, bend, taper, segments_u, segments_v):
+def _organic_surface_mesh(name, length, width, curl, bend, taper, segments_u, segments_v,
+                          shape="taper"):
     """Build a tapered, curved single-sided organic surface mesh."""
     bm = bmesh.new()
     verts = []
     for v_idx in range(segments_v + 1):
         v = v_idx / segments_v
         row = []
-        taper_width = width * (1.0 - taper * v)
-        taper_width = max(width * 0.12, taper_width)
+        if shape == "petal":
+            # Leaf/petal silhouette: narrow attachment, widest around 55% of
+            # the length, rounded tip whose sharpness still follows `taper`.
+            base = 0.3 + 0.7 * min(v / 0.55, 1.0)
+            tip = 1.0 - taper * max(0.0, (v - 0.55) / 0.45)
+            taper_width = width * base * max(0.06, tip)
+        else:
+            taper_width = width * (1.0 - taper * v)
+            taper_width = max(width * 0.12, taper_width)
         y = v * length
         for u_idx in range(segments_u + 1):
             u = (u_idx / segments_u) - 0.5
@@ -1114,6 +1122,7 @@ def op_create_organic_surface_details(p):
     curl = float(p.get("curl", 0.08))
     bend = float(p.get("bend", 0.02))
     taper = max(0.0, min(0.92, float(p.get("taper", 0.72))))
+    shape = str(p.get("shape", "taper")).lower()
     seg_u = max(3, min(16, int(p.get("segments_u", 6))))
     seg_v = max(3, min(18, int(p.get("segments_v", 8))))
     tilt = math.radians(float(p.get("tilt_degrees", 18.0)))
@@ -1126,7 +1135,8 @@ def op_create_organic_surface_details(p):
     made = []
     for i in range(count):
         name = f"{p['name_prefix']}_{i + 1:02d}"
-        obj = _organic_surface_mesh(name, length, width, curl, bend, taper, seg_u, seg_v)
+        obj = _organic_surface_mesh(name, length, width, curl, bend, taper, seg_u, seg_v,
+                                    shape=shape)
         if pattern == "linear":
             obj.location = start + step * i
             obj.rotation_euler = rotation

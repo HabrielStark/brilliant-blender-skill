@@ -139,9 +139,14 @@ def main():
                     img = _workspace_path(job, raw)
                     if os.path.isfile(img):
                         os.remove(img)
-                    frame_results.append(renderer.render_still(
+                    fr = renderer.render_still(
                         img, job.get("budget") or {}, preview=True,
-                        film_transparent=False, frame=int(frame)))
+                        film_transparent=False, frame=int(frame))
+                    if render_opts.get("inspect_per_frame"):
+                        # Camera-space object state differs per frame under
+                        # animation; callers can measure per-frame visibility.
+                        fr["inspection"] = scene_inspector.inspect_scene()
+                    frame_results.append(fr)
                 result["render"] = {"rendered": all(r.get("rendered") for r in frame_results),
                                     "frames": frame_results}
             else:

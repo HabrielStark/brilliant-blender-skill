@@ -284,3 +284,54 @@ def test_reference_match_image_is_large_enough_for_visual_fidelity():
     with Image.open(path) as image:
         assert image.size[0] >= 480
         assert image.size[1] >= 270
+
+
+def test_merge_frame_readability_marks_part_readable_in_any_frame():
+    from benchmarks.runners.run_benchmarks import _merge_frame_readability
+
+    r1 = {"parts": [
+        {"name": "fin_a", "contrast": 0.01, "edge_density": 0.0, "separation": 0.01, "readable": False},
+        {"name": "rib_a", "contrast": 0.2, "edge_density": 0.1, "separation": 0.1, "readable": True},
+    ]}
+    r2 = {"parts": [
+        {"name": "fin_a", "contrast": 0.2, "edge_density": 0.1, "separation": 0.3, "readable": True},
+        {"name": "rib_a", "contrast": 0.01, "edge_density": 0.0, "separation": 0.0, "readable": False},
+    ]}
+    merged = _merge_frame_readability([r1, r2])
+    by_name = {p["name"]: p for p in merged["parts"]}
+    assert by_name["fin_a"]["readable"] is True
+    assert by_name["rib_a"]["readable"] is True
+    assert merged["unreadable_parts"] == []
+    assert merged["frames_sampled"] == 2
+
+
+def test_readability_failures_family_quorum():
+    from benchmarks.runners.run_benchmarks import _readability_failures
+
+    report = {"parts": [
+        {"name": "grip_rib_01", "readable": True},
+        {"name": "grip_rib_02", "readable": True},
+        {"name": "grip_rib_03", "readable": False},
+        {"name": "grip_rib_04", "readable": False},
+        {"name": "fin_01", "readable": False},
+        {"name": "fin_02", "readable": False},
+        {"name": "fin_03", "readable": True},
+        {"name": "fin_04", "readable": False},
+    ], "measured_parts": 8, "readable_parts": 3,
+        "unreadable_parts": ["grip_rib_03", "grip_rib_04", "fin_01", "fin_02", "fin_04"]}
+    checks = {"require_readable_named_parts": True,
+              "require_named_parts": ["grip", "fin"]}
+    failures = _readability_failures(report, checks)
+    # grip family 2/4 readable passes at 50% quorum; fin family 1/4 fails
+    assert len(failures) == 1
+    assert "'fin'" in failures[0]
+
+
+def test_readability_failures_max_unreadable_and_min_readable():
+    from benchmarks.runners.run_benchmarks import _readability_failures
+
+    report = {"parts": [], "measured_parts": 3, "readable_parts": 1,
+              "unreadable_parts": ["a", "b"]}
+    assert _readability_failures(report, {"max_unreadable_subject_parts": 0})
+    assert _readability_failures(report, {"min_readable_subject_parts": 2})
+    assert not _readability_failures(report, {"max_unreadable_subject_parts": 5})

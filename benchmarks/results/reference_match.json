@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 98,
     "technical_score": 100,
-    "runtime_seconds": 5.7,
+    "runtime_seconds": 5.5,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\reference_match_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\reference_match_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark",
@@ -39,11 +39,11 @@
     "pass": false,
     "visual_score": 29,
     "technical_score": 60,
-    "runtime_seconds": 3.6,
+    "runtime_seconds": 3.7,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\reference_match_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\reference_match_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -91,11 +91,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 5.3,
+    "runtime_seconds": 5.2,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\reference_match_adversarial_slop_named_lit_box\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\reference_match_adversarial_slop_named_lit_box\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"

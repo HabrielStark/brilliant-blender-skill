@@ -191,6 +191,79 @@ def _matches_named_part(name, required_parts):
     return False
 
 
+def _readability_failures(report, checks):
+    """Gate failures for a subject readability report."""
+    out = []
+    if checks.get("max_unreadable_subject_parts") is not None:
+        n_unreadable = len(report["unreadable_parts"])
+        if n_unreadable > checks["max_unreadable_subject_parts"]:
+            out.append(
+                f"unreadable subject parts {n_unreadable} > max "
+                f"{checks['max_unreadable_subject_parts']}: "
+                f"{', '.join(report['unreadable_parts'][:6])}"
+            )
+    if checks.get("min_readable_subject_parts") is not None:
+        if report["readable_parts"] < checks["min_readable_subject_parts"]:
+            out.append(
+                f"readable subject parts {report['readable_parts']} < min "
+                f"{checks['min_readable_subject_parts']}"
+            )
+    if checks.get("require_readable_named_parts") and checks.get("require_named_parts"):
+        # Per-family quorum: a required named part reads when at least half of
+        # its measured instances read. Micro-detail families legitimately have
+        # sub-preview-scale members; a family where nothing reads is dead
+        # authored geometry and fails.
+        quorum = float(checks.get("readable_named_part_quorum", 0.5))
+        for part in checks["require_named_parts"]:
+            family = [
+                p for p in report.get("parts", [])
+                if _matches_named_part(str(p["name"]).lower(), (str(part).lower(),))
+            ]
+            if not family:
+                continue
+            readable_n = sum(1 for p in family if p["readable"])
+            if readable_n / len(family) < quorum:
+                dead = [p["name"] for p in family if not p["readable"]]
+                out.append(
+                    f"named part family '{part}' mostly unreadable "
+                    f"({readable_n}/{len(family)}): {', '.join(dead[:5])}"
+                )
+    return out
+
+
+def _merge_frame_readability(reports):
+    """Merge per-proof-frame readability reports.
+
+    A part counts readable when it reads in ANY proof frame: animated scenes
+    (turntable, scroll) legitimately hide far-side parts in a single frame, so
+    frame-1-only measurement would false-positive on rotating content.
+    """
+    best_by_name = {}
+    for rep in reports:
+        for part in rep.get("parts", []):
+            name = part["name"]
+            score = part["contrast"] + part["edge_density"] + part["separation"]
+            cur = best_by_name.get(name)
+            if cur is None or (part["readable"] and not cur["readable"]) or (
+                part["readable"] == cur["readable"]
+                and score > cur["_score"]
+            ):
+                best_by_name[name] = {**part, "_score": score}
+    parts = []
+    for part in best_by_name.values():
+        part = dict(part)
+        part.pop("_score", None)
+        parts.append(part)
+    unreadable = [p["name"] for p in parts if not p["readable"]]
+    return {
+        "parts": parts,
+        "measured_parts": len(parts),
+        "readable_parts": len(parts) - len(unreadable),
+        "unreadable_parts": unreadable,
+        "frames_sampled": len(reports),
+    }
+
+
 def named_part_visible_objects(objects, required_parts, min_coverage=0.0):
     """Return distinct visible objects that carry required semantic part names.
 
@@ -360,7 +433,13 @@ def render_animation_frame_proof(base, blend, budget, blender_exe, animation, ch
     fe = int(animation.get("frame_end", fs) or fs)
     mid = int(round((fs + fe) / 2))
     frames = sorted({fs, mid, fe})
+    want_inspect = bool(
+        checks.get("max_unreadable_subject_parts") is not None
+        or checks.get("min_readable_subject_parts") is not None
+        or checks.get("require_readable_named_parts")
+    )
     frame_paths = []
+    frame_inspections = []
     # Single Blender session renders all proof frames (job_runner expands the
     # `frames` list); each result dict carries its own output path.
     out_template = base / "iterations" / "animation_frame_{frame:04d}.png"
@@ -370,7 +449,7 @@ def render_animation_frame_proof(base, blend, budget, blender_exe, animation, ch
             base,
             blend,
             budget=budget,
-            render={"frames": frames},
+            render={"frames": frames, "inspect_per_frame": want_inspect},
             output={"image": str(out_template)},
         ),
         blender_exe,
@@ -380,6 +459,10 @@ def render_animation_frame_proof(base, blend, budget, blender_exe, animation, ch
         path = frame_result.get("path")
         if frame_result.get("rendered") and path and Path(path).exists():
             frame_paths.append(Path(path))
+            if isinstance(frame_result.get("inspection"), dict):
+                frame_inspections.append(
+                    {"path": str(path), "inspection": frame_result["inspection"]}
+                )
     if not frame_paths and not (result.get("render") or {}).get("frames"):
         # Older add-on without batched frames: one launch per frame.
         for frame in frames:
@@ -400,6 +483,8 @@ def render_animation_frame_proof(base, blend, budget, blender_exe, animation, ch
                 frame_paths.append(out_path)
     metrics = animation_frame_delta_metrics(frame_paths)
     metrics["requested_frames"] = frames
+    if frame_inspections:
+        metrics["frame_inspections"] = frame_inspections
     return metrics
 
 
@@ -530,11 +615,12 @@ def run_recipe(task, recipe, mode, blender_exe, out_root):
     subject_mesh_objects = mesh_collection_objects(insp, "SUBJECT")
     environment_objects = visual_collection_objects(insp, "ENVIRONMENT")
     readability = None
-    if preview.exists() and (
+    want_readability = (
         checks.get("max_unreadable_subject_parts") is not None
         or checks.get("min_readable_subject_parts") is not None
         or checks.get("require_readable_named_parts")
-    ):
+    )
+    if preview.exists() and want_readability:
         from blender_cinematic.imaging import subject_readability_report
         readability = subject_readability_report(
             preview,
@@ -543,29 +629,6 @@ def run_recipe(task, recipe, mode, blender_exe, out_root):
             if checks.get("readable_only_named_parts")
             else None,
         )
-        if checks.get("max_unreadable_subject_parts") is not None:
-            n_unreadable = len(readability["unreadable_parts"])
-            if n_unreadable > checks["max_unreadable_subject_parts"]:
-                failures.append(
-                    f"unreadable subject parts {n_unreadable} > max "
-                    f"{checks['max_unreadable_subject_parts']}: "
-                    f"{', '.join(readability['unreadable_parts'][:6])}"
-                )
-        if checks.get("min_readable_subject_parts") is not None:
-            if readability["readable_parts"] < checks["min_readable_subject_parts"]:
-                failures.append(
-                    f"readable subject parts {readability['readable_parts']} < min "
-                    f"{checks['min_readable_subject_parts']}"
-                )
-        if checks.get("require_readable_named_parts") and checks.get("require_named_parts"):
-            unreadable_named = [
-                name for name in readability["unreadable_parts"]
-                if _matches_named_part(name, checks["require_named_parts"])
-            ]
-            if unreadable_named:
-                failures.append(
-                    f"named subject parts unreadable in preview: {', '.join(unreadable_named[:6])}"
-                )
     max_coverage = max((o.get("screen_coverage", 0) for o in subject_objects), default=0)
     if checks.get("max_subject_coverage") is not None and max_coverage > checks["max_subject_coverage"]:
         failures.append(
@@ -841,6 +904,27 @@ def run_recipe(task, recipe, mode, blender_exe, out_root):
                 f"keyframed objects {keyed} < min {checks['min_keyframed_objects']}"
             )
     animation_frame_proof = render_animation_frame_proof(base, blend, budget, blender_exe, anim, checks)
+    # Per-frame readability overrides the preview report when proof frames
+    # carry their own inspections (rotating subjects reveal far-side parts).
+    frame_inspections = (animation_frame_proof or {}).get("frame_inspections")
+    if want_readability and frame_inspections:
+        from blender_cinematic.imaging import subject_readability_report
+        part_names = (
+            checks.get("require_named_parts")
+            if checks.get("readable_only_named_parts")
+            else None
+        )
+        reports = [
+            subject_readability_report(fi["path"], fi["inspection"].get("objects", []), part_names=part_names)
+            for fi in frame_inspections
+        ]
+        readability = _merge_frame_readability(reports)
+        # Per-frame inspections are large; they served the merge and must not
+        # persist into the serialized result.
+        if animation_frame_proof:
+            animation_frame_proof.pop("frame_inspections", None)
+    if readability is not None:
+        failures.extend(_readability_failures(readability, checks))
     if checks.get("require_animation_frame_proof") and not animation_frame_proof:
         failures.append("animation frame proof required but not generated")
     if animation_frame_proof and checks.get("min_animation_frame_delta") is not None:

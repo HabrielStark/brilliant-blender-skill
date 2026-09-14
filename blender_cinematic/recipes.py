@@ -254,6 +254,7 @@ OPERATION_SPECS: dict[str, dict] = {
             "segments_u": int,
             "segments_v": int,
             "taper": (int, float),
+            "shape": str,
             "collection": str,
             "material": str,
             "role": str,

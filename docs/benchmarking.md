@@ -170,6 +170,14 @@ and luminance separation from the pixels immediately around it. A part that
 renders but contributes nothing visible (an occluded label, a dark-on-dark
 strap body, a contact streak indistinguishable from the floor) fails, so
 score-100 renders can no longer carry invisible authored detail.
+`require_readable_named_parts` applies a per-family quorum (default 50%,
+tunable via `readable_named_part_quorum`): a named detail family passes when
+half or more of its measured instances read, so micro-detail accents below
+preview scale do not sink an otherwise legible part family while a family in
+which nothing reads still fails. On animation tasks the frame-proof renders
+carry per-frame scene inspections, and a part counts readable if it reads in
+any proof frame — far-side parts of a rotating product are not penalized for
+being hidden in a single frame.
 
 ## Reference Results
 
