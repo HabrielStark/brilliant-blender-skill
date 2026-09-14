@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 5.4,
+    "runtime_seconds": 6.7,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
@@ -657,11 +657,11 @@
     "pass": false,
     "visual_score": 29,
     "technical_score": 50,
-    "runtime_seconds": 3.3,
+    "runtime_seconds": 3.7,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\mechanical_exploded_view_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\mechanical_exploded_view_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -700,11 +700,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 5.5,
+    "runtime_seconds": 5.0,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\mechanical_exploded_view_adversarial_slop_1\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\mechanical_exploded_view_adversarial_slop_1\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\mechanical_exploded_view_adversarial_slop_1\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\mechanical_exploded_view_adversarial_slop_1\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"

@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 5.8,
+    "runtime_seconds": 7.4,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\particle_vfx_energy_burst_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\particle_vfx_energy_burst_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\particle_vfx_energy_burst_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\particle_vfx_energy_burst_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark",
@@ -21,7 +21,7 @@
         {
           "name": "energy_core_particle_emitter",
           "contrast": 0.2792,
-          "edge_density": 0.219,
+          "edge_density": 0.2189,
           "separation": 0.2623,
           "mean_luma": 0.5885,
           "surround_luma": 0.3262,
@@ -30,7 +30,7 @@
         {
           "name": "core_inner_hot_white",
           "contrast": 0.1982,
-          "edge_density": 0.2263,
+          "edge_density": 0.2262,
           "separation": 0.0702,
           "mean_luma": 0.6766,
           "surround_luma": 0.6064,
@@ -42,13 +42,13 @@
           "edge_density": 0.3525,
           "separation": 0.2038,
           "mean_luma": 0.6657,
-          "surround_luma": 0.462,
+          "surround_luma": 0.4619,
           "readable": true
         },
         {
           "name": "orbital_ring_primary_blue",
           "contrast": 0.3131,
-          "edge_density": 0.1886,
+          "edge_density": 0.1885,
           "separation": 0.2852,
           "mean_luma": 0.5172,
           "surround_luma": 0.232,
@@ -102,7 +102,7 @@
         {
           "name": "shockwave_ring_mid_air_amber",
           "contrast": 0.2627,
-          "edge_density": 0.1973,
+          "edge_density": 0.1971,
           "separation": 0.2503,
           "mean_luma": 0.6098,
           "surround_luma": 0.3595,
@@ -119,7 +119,7 @@
         },
         {
           "name": "spark_particle_visible_dot_03",
-          "contrast": 0.1122,
+          "contrast": 0.1121,
           "edge_density": 0.2083,
           "separation": 0.2712,
           "mean_luma": 0.8077,
@@ -211,7 +211,7 @@
           "name": "spark_particle_visible_dot_13",
           "contrast": 0.166,
           "edge_density": 0.2937,
-          "separation": 0.4307,
+          "separation": 0.4308,
           "mean_luma": 0.8085,
           "surround_luma": 0.3777,
           "readable": true
@@ -420,7 +420,7 @@
           "edge_density": 0.2955,
           "separation": 0.398,
           "mean_luma": 0.8236,
-          "surround_luma": 0.4255,
+          "surround_luma": 0.4256,
           "readable": true
         },
         {
@@ -587,7 +587,7 @@
         },
         {
           "name": "energy_trail_hot_core_07",
-          "contrast": 0.1902,
+          "contrast": 0.1903,
           "edge_density": 0.1556,
           "separation": 0.0436,
           "mean_luma": 0.7315,
@@ -705,7 +705,7 @@
         {
           "name": "energy_trail_ribbon_violet_02",
           "contrast": 0.2572,
-          "edge_density": 0.366,
+          "edge_density": 0.3658,
           "separation": 0.0318,
           "mean_luma": 0.6063,
           "surround_luma": 0.5745,
@@ -751,7 +751,7 @@
           "name": "energy_trail_ribbon_violet_07",
           "contrast": 0.303,
           "edge_density": 0.4287,
-          "separation": 0.1319,
+          "separation": 0.132,
           "mean_luma": 0.4165,
           "surround_luma": 0.2845,
           "readable": true
@@ -768,7 +768,7 @@
         {
           "name": "energy_trail_ribbon_violet_09",
           "contrast": 0.3322,
-          "edge_density": 0.4548,
+          "edge_density": 0.4545,
           "separation": 0.1648,
           "mean_luma": 0.5023,
           "surround_luma": 0.3375,
@@ -840,7 +840,7 @@
         {
           "name": "energy_trail_ribbon_violet_17",
           "contrast": 0.3121,
-          "edge_density": 0.3625,
+          "edge_density": 0.3623,
           "separation": 0.0402,
           "mean_luma": 0.5533,
           "surround_luma": 0.513,
@@ -852,13 +852,13 @@
           "edge_density": 0.1535,
           "separation": 0.0194,
           "mean_luma": 0.6982,
-          "surround_luma": 0.6789,
+          "surround_luma": 0.6788,
           "readable": true
         },
         {
           "name": "energy_trail_ribbon_violet_19",
           "contrast": 0.1401,
-          "edge_density": 0.1399,
+          "edge_density": 0.1394,
           "separation": 0.0446,
           "mean_luma": 0.69,
           "surround_luma": 0.6454,
@@ -985,7 +985,7 @@
           "name": "energy_trail_cyan_counter_13",
           "contrast": 0.2094,
           "edge_density": 0.1923,
-          "separation": 0.0478,
+          "separation": 0.0479,
           "mean_luma": 0.7206,
           "surround_luma": 0.7684,
           "readable": true
@@ -1068,7 +1068,7 @@
           "edge_density": 0.3786,
           "separation": 0.1998,
           "mean_luma": 0.8198,
-          "surround_luma": 0.62,
+          "surround_luma": 0.6199,
           "readable": true
         },
         {
@@ -1131,7 +1131,7 @@
           "edge_density": 0.05,
           "separation": 0.0651,
           "mean_luma": 0.768,
-          "surround_luma": 0.7028,
+          "surround_luma": 0.7029,
           "readable": true
         },
         {
@@ -1191,10 +1191,10 @@
         {
           "name": "energy_trail_amber_shockwave_arc_07",
           "contrast": 0.2166,
-          "edge_density": 0.3509,
+          "edge_density": 0.3502,
           "separation": 0.1328,
           "mean_luma": 0.6354,
-          "surround_luma": 0.5026,
+          "surround_luma": 0.5025,
           "readable": true
         },
         {
@@ -1237,7 +1237,7 @@
           "name": "energy_trail_amber_shockwave_arc_12",
           "contrast": 0.3443,
           "edge_density": 0.4727,
-          "separation": 0.1713,
+          "separation": 0.1714,
           "mean_luma": 0.4665,
           "surround_luma": 0.2952,
           "readable": true
@@ -1266,7 +1266,7 @@
           "edge_density": 0.0133,
           "separation": 0.0463,
           "mean_luma": 0.8177,
-          "surround_luma": 0.7714,
+          "surround_luma": 0.7715,
           "readable": true
         },
         {
@@ -1335,11 +1335,11 @@
     "pass": false,
     "visual_score": 33,
     "technical_score": 60,
-    "runtime_seconds": 3.1,
+    "runtime_seconds": 6.8,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\particle_vfx_energy_burst_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\particle_vfx_energy_burst_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -1382,11 +1382,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 4.5,
+    "runtime_seconds": 5.7,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark",

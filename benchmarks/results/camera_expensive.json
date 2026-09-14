@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 4.4,
+    "runtime_seconds": 5.4,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
@@ -86,11 +86,11 @@
     "pass": false,
     "visual_score": 31,
     "technical_score": 60,
-    "runtime_seconds": 3.1,
+    "runtime_seconds": 3.9,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\camera_expensive_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\camera_expensive_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -126,11 +126,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 90,
-    "runtime_seconds": 4.0,
+    "runtime_seconds": 5.3,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\camera_expensive_adversarial_slop_named_lit_sphere\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\camera_expensive_adversarial_slop_named_lit_sphere\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"

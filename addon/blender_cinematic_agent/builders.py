@@ -523,14 +523,18 @@ def op_create_material(p):
     policy = p["schema"].get("export_policy") or {}
     mat["bcas_web_safe"] = bool(policy.get("web_safe", True))
     mat["bcas_fallback"] = str(policy.get("fallback_material", "")) if policy.get("bake_if_needed", True) else ""
+    assigned, skipped = [], []
     for tname in (p["schema"].get("target_objects") or []):
         obj = bpyutil.get_object(tname)
-        if obj and obj.type == "MESH":
+        if obj and getattr(obj.data, "materials", None) is not None:
             if obj.data.materials:
                 obj.data.materials[0] = mat
             else:
                 obj.data.materials.append(mat)
-    return {"material": mat.name, "assigned_to": p["schema"].get("target_objects", [])}
+            assigned.append(tname)
+        else:
+            skipped.append(tname)
+    return {"material": mat.name, "assigned_to": assigned, "skipped_targets": skipped}
 
 
 def op_assign_material(p):
@@ -538,6 +542,8 @@ def op_assign_material(p):
     mat = bpy.data.materials.get(p["material"])
     if not obj or not mat:
         return {"error": "object or material missing"}
+    if getattr(obj.data, "materials", None) is None:
+        return {"error": f"object {obj.name} has no material slots"}
     if obj.data.materials:
         obj.data.materials[0] = mat
     else:
@@ -1905,7 +1911,7 @@ def op_create_vfx(p):
                                "pbr": {"base_color": [0.1, 0.4, 1.0, 1.0],
                                        "emission_color": [0.1, 0.4, 1.0, 1.0],
                                        "emission_strength": float(params.get("emission_strength", 4.0))}})
-        if target.type == "MESH":
+        if getattr(target.data, "materials", None) is not None:
             if target.data.materials:
                 target.data.materials[0] = mat
             else:

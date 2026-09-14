@@ -3,13 +3,13 @@
     "task_id": "scene_repair",
     "mode": "skill_plus_tools",
     "pass": true,
-    "visual_score": 100,
+    "visual_score": 99,
     "technical_score": 100,
-    "runtime_seconds": 4.8,
+    "runtime_seconds": 5.9,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\scene_repair_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\scene_repair_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\scene_repair_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\scene_repair_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "warm_red_bias"
@@ -18,20 +18,20 @@
       "parts": [
         {
           "name": "repaired_base_plinth",
-          "contrast": 0.1251,
-          "edge_density": 0.0355,
-          "separation": 0.0175,
-          "mean_luma": 0.5685,
-          "surround_luma": 0.586,
+          "contrast": 0.125,
+          "edge_density": 0.0286,
+          "separation": 0.0201,
+          "mean_luma": 0.5693,
+          "surround_luma": 0.5894,
           "readable": true
         },
         {
           "name": "repaired_subject_body",
-          "contrast": 0.1201,
-          "edge_density": 0.0418,
-          "separation": 0.0033,
+          "contrast": 0.1204,
+          "edge_density": 0.0407,
+          "separation": 0.0005,
           "mean_luma": 0.572,
-          "surround_luma": 0.5753,
+          "surround_luma": 0.5715,
           "readable": true
         },
         {
@@ -153,20 +153,20 @@
         },
         {
           "name": "repaired_left_rubber_foot",
-          "contrast": 0.1421,
-          "edge_density": 0.1524,
-          "separation": 0.0078,
-          "mean_luma": 0.3926,
-          "surround_luma": 0.4004,
+          "contrast": 0.1199,
+          "edge_density": 0.144,
+          "separation": 0.0784,
+          "mean_luma": 0.3826,
+          "surround_luma": 0.461,
           "readable": true
         },
         {
           "name": "repaired_right_rubber_foot",
-          "contrast": 0.0754,
-          "edge_density": 0.13,
-          "separation": 0.0477,
-          "mean_luma": 0.4912,
-          "surround_luma": 0.5389,
+          "contrast": 0.0756,
+          "edge_density": 0.145,
+          "separation": 0.0506,
+          "mean_luma": 0.5011,
+          "surround_luma": 0.5517,
           "readable": true
         },
         {
@@ -180,20 +180,20 @@
         },
         {
           "name": "repair_studio_cutting_mat_sage",
-          "contrast": 0.1164,
-          "edge_density": 0.0341,
-          "separation": 0.0148,
-          "mean_luma": 0.603,
-          "surround_luma": 0.5882,
+          "contrast": 0.1262,
+          "edge_density": 0.0299,
+          "separation": 0.0042,
+          "mean_luma": 0.5944,
+          "surround_luma": 0.5902,
           "readable": true
         },
         {
           "name": "repaired_power_cable_coil_front",
-          "contrast": 0.1818,
-          "edge_density": 0.1095,
-          "separation": 0.146,
-          "mean_luma": 0.5122,
-          "surround_luma": 0.6582,
+          "contrast": 0.182,
+          "edge_density": 0.0625,
+          "separation": 0.0835,
+          "mean_luma": 0.5486,
+          "surround_luma": 0.6321,
           "readable": true
         },
         {
@@ -252,57 +252,57 @@
         },
         {
           "name": "repaired_base_screw_01",
-          "contrast": 0.0092,
+          "contrast": 0.0611,
           "edge_density": 0.0,
-          "separation": 0.0001,
-          "mean_luma": 0.4856,
-          "surround_luma": 0.4857,
-          "readable": false
+          "separation": 0.0067,
+          "mean_luma": 0.5451,
+          "surround_luma": 0.5518,
+          "readable": true
         },
         {
           "name": "repaired_base_screw_02",
-          "contrast": 0.0059,
+          "contrast": 0.0079,
           "edge_density": 0.0,
-          "separation": 0.0066,
-          "mean_luma": 0.4947,
-          "surround_luma": 0.4881,
+          "separation": 0.0025,
+          "mean_luma": 0.4905,
+          "surround_luma": 0.493,
           "readable": false
         },
         {
           "name": "repaired_base_screw_03",
-          "contrast": 0.0151,
-          "edge_density": 0.0059,
-          "separation": 0.0166,
-          "mean_luma": 0.4819,
-          "surround_luma": 0.4985,
-          "readable": false
+          "contrast": 0.066,
+          "edge_density": 0.0,
+          "separation": 0.0074,
+          "mean_luma": 0.5741,
+          "surround_luma": 0.5667,
+          "readable": true
         },
         {
           "name": "repaired_base_screw_04",
-          "contrast": 0.1079,
-          "edge_density": 0.358,
-          "separation": 0.0409,
-          "mean_luma": 0.5454,
-          "surround_luma": 0.5862,
+          "contrast": 0.0871,
+          "edge_density": 0.2083,
+          "separation": 0.0249,
+          "mean_luma": 0.5928,
+          "surround_luma": 0.6176,
           "readable": true
         },
         {
           "name": "repaired_base_screw_05",
-          "contrast": 0.1492,
-          "edge_density": 0.1786,
-          "separation": 0.0658,
-          "mean_luma": 0.6173,
-          "surround_luma": 0.5515,
-          "readable": true
+          "contrast": 0.0038,
+          "edge_density": 0.0,
+          "separation": 0.001,
+          "mean_luma": 0.6874,
+          "surround_luma": 0.6884,
+          "readable": false
         },
         {
           "name": "repaired_base_screw_06",
-          "contrast": 0.0928,
-          "edge_density": 0.3,
-          "separation": 0.0487,
-          "mean_luma": 0.5898,
-          "surround_luma": 0.6385,
-          "readable": true
+          "contrast": 0.024,
+          "edge_density": 0.0,
+          "separation": 0.0025,
+          "mean_luma": 0.663,
+          "surround_luma": 0.6655,
+          "readable": false
         },
         {
           "name": "repaired_calibration_tick_01",
@@ -398,13 +398,13 @@
       "measured_parts": 42,
       "readable_parts": 39,
       "unreadable_parts": [
-        "repaired_base_screw_01",
         "repaired_base_screw_02",
-        "repaired_base_screw_03"
+        "repaired_base_screw_05",
+        "repaired_base_screw_06"
       ]
     },
     "reference_metrics": null,
-    "palette_similarity": 0.8848720002629435,
+    "palette_similarity": 0.8853192548093585,
     "animation_frame_proof": null,
     "failures": []
   },
@@ -414,11 +414,11 @@
     "pass": false,
     "visual_score": 24,
     "technical_score": 40,
-    "runtime_seconds": 3.4,
+    "runtime_seconds": 4.2,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\scene_repair_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\scene_repair_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -455,11 +455,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 4.3,
+    "runtime_seconds": 5.3,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "warm_red_bias"

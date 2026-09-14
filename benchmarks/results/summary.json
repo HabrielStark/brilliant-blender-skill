@@ -6,11 +6,11 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.5,
+      "runtime_seconds": 7.0,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\architectural_interior_scene_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\architectural_interior_scene_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\architectural_interior_scene_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\architectural_interior_scene_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "warm_red_bias"
@@ -807,11 +807,11 @@
       "pass": false,
       "visual_score": 31,
       "technical_score": 60,
-      "runtime_seconds": 2.9,
+      "runtime_seconds": 3.7,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\architectural_interior_scene_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\architectural_interior_scene_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -855,11 +855,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.0,
+      "runtime_seconds": 4.9,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\architectural_interior_scene_adversarial_slop_1\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\architectural_interior_scene_adversarial_slop_1\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\architectural_interior_scene_adversarial_slop_1\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\architectural_interior_scene_adversarial_slop_1\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -927,11 +927,11 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 4.4,
+      "runtime_seconds": 5.4,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -1008,11 +1008,11 @@
       "pass": false,
       "visual_score": 31,
       "technical_score": 60,
-      "runtime_seconds": 3.1,
+      "runtime_seconds": 3.9,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\camera_expensive_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\camera_expensive_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -1048,11 +1048,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 90,
-      "runtime_seconds": 4.0,
+      "runtime_seconds": 5.3,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\camera_expensive_adversarial_slop_named_lit_sphere\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\camera_expensive_adversarial_slop_named_lit_sphere\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -1108,11 +1108,11 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 5.2,
+      "runtime_seconds": 6.8,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark"
@@ -1795,11 +1795,11 @@
       "pass": false,
       "visual_score": 31,
       "technical_score": 60,
-      "runtime_seconds": 3.1,
+      "runtime_seconds": 4.0,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\glb_web_budget_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\glb_web_budget_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -1840,11 +1840,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.2,
+      "runtime_seconds": 5.2,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark"
@@ -1894,11 +1894,11 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 5.2,
+      "runtime_seconds": 6.8,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -2245,11 +2245,11 @@
       "pass": false,
       "visual_score": 29,
       "technical_score": 60,
-      "runtime_seconds": 3.0,
+      "runtime_seconds": 3.9,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\low_spec_laptop_safe_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\low_spec_laptop_safe_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -2292,11 +2292,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.3,
+      "runtime_seconds": 5.3,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\low_spec_laptop_safe_adversarial_slop_1\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\low_spec_laptop_safe_adversarial_slop_1\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -2351,11 +2351,11 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.4,
+      "runtime_seconds": 6.7,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -3003,11 +3003,11 @@
       "pass": false,
       "visual_score": 29,
       "technical_score": 50,
-      "runtime_seconds": 3.3,
+      "runtime_seconds": 3.7,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\mechanical_exploded_view_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\mechanical_exploded_view_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -3046,11 +3046,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 5.5,
+      "runtime_seconds": 5.0,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\mechanical_exploded_view_adversarial_slop_1\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\mechanical_exploded_view_adversarial_slop_1\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\mechanical_exploded_view_adversarial_slop_1\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\mechanical_exploded_view_adversarial_slop_1\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -3110,11 +3110,11 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.8,
+      "runtime_seconds": 6.7,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\organic_soft_surface_study_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\organic_soft_surface_study_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\organic_soft_surface_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\organic_soft_surface_study_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "warm_red_bias"
@@ -4049,11 +4049,11 @@
       "pass": false,
       "visual_score": 33,
       "technical_score": 60,
-      "runtime_seconds": 3.2,
+      "runtime_seconds": 3.7,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\organic_soft_surface_study_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\organic_soft_surface_study_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -4093,11 +4093,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.2,
+      "runtime_seconds": 5.3,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "warm_red_bias"
@@ -4148,11 +4148,11 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.8,
+      "runtime_seconds": 7.4,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\particle_vfx_energy_burst_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\particle_vfx_energy_burst_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\particle_vfx_energy_burst_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\particle_vfx_energy_burst_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark",
@@ -4164,7 +4164,7 @@
           {
             "name": "energy_core_particle_emitter",
             "contrast": 0.2792,
-            "edge_density": 0.219,
+            "edge_density": 0.2189,
             "separation": 0.2623,
             "mean_luma": 0.5885,
             "surround_luma": 0.3262,
@@ -4173,7 +4173,7 @@
           {
             "name": "core_inner_hot_white",
             "contrast": 0.1982,
-            "edge_density": 0.2263,
+            "edge_density": 0.2262,
             "separation": 0.0702,
             "mean_luma": 0.6766,
             "surround_luma": 0.6064,
@@ -4185,13 +4185,13 @@
             "edge_density": 0.3525,
             "separation": 0.2038,
             "mean_luma": 0.6657,
-            "surround_luma": 0.462,
+            "surround_luma": 0.4619,
             "readable": true
           },
           {
             "name": "orbital_ring_primary_blue",
             "contrast": 0.3131,
-            "edge_density": 0.1886,
+            "edge_density": 0.1885,
             "separation": 0.2852,
             "mean_luma": 0.5172,
             "surround_luma": 0.232,
@@ -4245,7 +4245,7 @@
           {
             "name": "shockwave_ring_mid_air_amber",
             "contrast": 0.2627,
-            "edge_density": 0.1973,
+            "edge_density": 0.1971,
             "separation": 0.2503,
             "mean_luma": 0.6098,
             "surround_luma": 0.3595,
@@ -4262,7 +4262,7 @@
           },
           {
             "name": "spark_particle_visible_dot_03",
-            "contrast": 0.1122,
+            "contrast": 0.1121,
             "edge_density": 0.2083,
             "separation": 0.2712,
             "mean_luma": 0.8077,
@@ -4354,7 +4354,7 @@
             "name": "spark_particle_visible_dot_13",
             "contrast": 0.166,
             "edge_density": 0.2937,
-            "separation": 0.4307,
+            "separation": 0.4308,
             "mean_luma": 0.8085,
             "surround_luma": 0.3777,
             "readable": true
@@ -4563,7 +4563,7 @@
             "edge_density": 0.2955,
             "separation": 0.398,
             "mean_luma": 0.8236,
-            "surround_luma": 0.4255,
+            "surround_luma": 0.4256,
             "readable": true
           },
           {
@@ -4730,7 +4730,7 @@
           },
           {
             "name": "energy_trail_hot_core_07",
-            "contrast": 0.1902,
+            "contrast": 0.1903,
             "edge_density": 0.1556,
             "separation": 0.0436,
             "mean_luma": 0.7315,
@@ -4848,7 +4848,7 @@
           {
             "name": "energy_trail_ribbon_violet_02",
             "contrast": 0.2572,
-            "edge_density": 0.366,
+            "edge_density": 0.3658,
             "separation": 0.0318,
             "mean_luma": 0.6063,
             "surround_luma": 0.5745,
@@ -4894,7 +4894,7 @@
             "name": "energy_trail_ribbon_violet_07",
             "contrast": 0.303,
             "edge_density": 0.4287,
-            "separation": 0.1319,
+            "separation": 0.132,
             "mean_luma": 0.4165,
             "surround_luma": 0.2845,
             "readable": true
@@ -4911,7 +4911,7 @@
           {
             "name": "energy_trail_ribbon_violet_09",
             "contrast": 0.3322,
-            "edge_density": 0.4548,
+            "edge_density": 0.4545,
             "separation": 0.1648,
             "mean_luma": 0.5023,
             "surround_luma": 0.3375,
@@ -4983,7 +4983,7 @@
           {
             "name": "energy_trail_ribbon_violet_17",
             "contrast": 0.3121,
-            "edge_density": 0.3625,
+            "edge_density": 0.3623,
             "separation": 0.0402,
             "mean_luma": 0.5533,
             "surround_luma": 0.513,
@@ -4995,13 +4995,13 @@
             "edge_density": 0.1535,
             "separation": 0.0194,
             "mean_luma": 0.6982,
-            "surround_luma": 0.6789,
+            "surround_luma": 0.6788,
             "readable": true
           },
           {
             "name": "energy_trail_ribbon_violet_19",
             "contrast": 0.1401,
-            "edge_density": 0.1399,
+            "edge_density": 0.1394,
             "separation": 0.0446,
             "mean_luma": 0.69,
             "surround_luma": 0.6454,
@@ -5128,7 +5128,7 @@
             "name": "energy_trail_cyan_counter_13",
             "contrast": 0.2094,
             "edge_density": 0.1923,
-            "separation": 0.0478,
+            "separation": 0.0479,
             "mean_luma": 0.7206,
             "surround_luma": 0.7684,
             "readable": true
@@ -5211,7 +5211,7 @@
             "edge_density": 0.3786,
             "separation": 0.1998,
             "mean_luma": 0.8198,
-            "surround_luma": 0.62,
+            "surround_luma": 0.6199,
             "readable": true
           },
           {
@@ -5274,7 +5274,7 @@
             "edge_density": 0.05,
             "separation": 0.0651,
             "mean_luma": 0.768,
-            "surround_luma": 0.7028,
+            "surround_luma": 0.7029,
             "readable": true
           },
           {
@@ -5334,10 +5334,10 @@
           {
             "name": "energy_trail_amber_shockwave_arc_07",
             "contrast": 0.2166,
-            "edge_density": 0.3509,
+            "edge_density": 0.3502,
             "separation": 0.1328,
             "mean_luma": 0.6354,
-            "surround_luma": 0.5026,
+            "surround_luma": 0.5025,
             "readable": true
           },
           {
@@ -5380,7 +5380,7 @@
             "name": "energy_trail_amber_shockwave_arc_12",
             "contrast": 0.3443,
             "edge_density": 0.4727,
-            "separation": 0.1713,
+            "separation": 0.1714,
             "mean_luma": 0.4665,
             "surround_luma": 0.2952,
             "readable": true
@@ -5409,7 +5409,7 @@
             "edge_density": 0.0133,
             "separation": 0.0463,
             "mean_luma": 0.8177,
-            "surround_luma": 0.7714,
+            "surround_luma": 0.7715,
             "readable": true
           },
           {
@@ -5478,11 +5478,11 @@
       "pass": false,
       "visual_score": 33,
       "technical_score": 60,
-      "runtime_seconds": 3.1,
+      "runtime_seconds": 6.8,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\particle_vfx_energy_burst_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\particle_vfx_energy_burst_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -5525,11 +5525,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.5,
+      "runtime_seconds": 5.7,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark",
@@ -5593,11 +5593,11 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 4.8,
+      "runtime_seconds": 5.7,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark",
@@ -6000,11 +6000,11 @@
       "pass": false,
       "visual_score": 29,
       "technical_score": 40,
-      "runtime_seconds": 3.2,
+      "runtime_seconds": 4.3,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\product_hero_watch_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\product_hero_watch_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -6043,11 +6043,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.3,
+      "runtime_seconds": 5.1,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\product_hero_watch_adversarial_slop_keyword_disc\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\product_hero_watch_adversarial_slop_keyword_disc\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\product_hero_watch_adversarial_slop_keyword_disc\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\product_hero_watch_adversarial_slop_keyword_disc\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark",
@@ -6105,11 +6105,11 @@
       "pass": true,
       "visual_score": 98,
       "technical_score": 100,
-      "runtime_seconds": 5.0,
+      "runtime_seconds": 5.8,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\reference_match_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\reference_match_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark",
@@ -6292,11 +6292,11 @@
       "pass": false,
       "visual_score": 29,
       "technical_score": 60,
-      "runtime_seconds": 3.2,
+      "runtime_seconds": 3.8,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\reference_match_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\reference_match_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -6344,11 +6344,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.3,
+      "runtime_seconds": 5.4,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\reference_match_adversarial_slop_named_lit_box\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\reference_match_adversarial_slop_named_lit_box\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -6420,13 +6420,13 @@
       "task_id": "scene_repair",
       "mode": "skill_plus_tools",
       "pass": true,
-      "visual_score": 100,
+      "visual_score": 99,
       "technical_score": 100,
-      "runtime_seconds": 4.8,
+      "runtime_seconds": 5.9,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\scene_repair_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\scene_repair_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\scene_repair_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\scene_repair_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "warm_red_bias"
@@ -6435,20 +6435,20 @@
         "parts": [
           {
             "name": "repaired_base_plinth",
-            "contrast": 0.1251,
-            "edge_density": 0.0355,
-            "separation": 0.0175,
-            "mean_luma": 0.5685,
-            "surround_luma": 0.586,
+            "contrast": 0.125,
+            "edge_density": 0.0286,
+            "separation": 0.0201,
+            "mean_luma": 0.5693,
+            "surround_luma": 0.5894,
             "readable": true
           },
           {
             "name": "repaired_subject_body",
-            "contrast": 0.1201,
-            "edge_density": 0.0418,
-            "separation": 0.0033,
+            "contrast": 0.1204,
+            "edge_density": 0.0407,
+            "separation": 0.0005,
             "mean_luma": 0.572,
-            "surround_luma": 0.5753,
+            "surround_luma": 0.5715,
             "readable": true
           },
           {
@@ -6570,20 +6570,20 @@
           },
           {
             "name": "repaired_left_rubber_foot",
-            "contrast": 0.1421,
-            "edge_density": 0.1524,
-            "separation": 0.0078,
-            "mean_luma": 0.3926,
-            "surround_luma": 0.4004,
+            "contrast": 0.1199,
+            "edge_density": 0.144,
+            "separation": 0.0784,
+            "mean_luma": 0.3826,
+            "surround_luma": 0.461,
             "readable": true
           },
           {
             "name": "repaired_right_rubber_foot",
-            "contrast": 0.0754,
-            "edge_density": 0.13,
-            "separation": 0.0477,
-            "mean_luma": 0.4912,
-            "surround_luma": 0.5389,
+            "contrast": 0.0756,
+            "edge_density": 0.145,
+            "separation": 0.0506,
+            "mean_luma": 0.5011,
+            "surround_luma": 0.5517,
             "readable": true
           },
           {
@@ -6597,20 +6597,20 @@
           },
           {
             "name": "repair_studio_cutting_mat_sage",
-            "contrast": 0.1164,
-            "edge_density": 0.0341,
-            "separation": 0.0148,
-            "mean_luma": 0.603,
-            "surround_luma": 0.5882,
+            "contrast": 0.1262,
+            "edge_density": 0.0299,
+            "separation": 0.0042,
+            "mean_luma": 0.5944,
+            "surround_luma": 0.5902,
             "readable": true
           },
           {
             "name": "repaired_power_cable_coil_front",
-            "contrast": 0.1818,
-            "edge_density": 0.1095,
-            "separation": 0.146,
-            "mean_luma": 0.5122,
-            "surround_luma": 0.6582,
+            "contrast": 0.182,
+            "edge_density": 0.0625,
+            "separation": 0.0835,
+            "mean_luma": 0.5486,
+            "surround_luma": 0.6321,
             "readable": true
           },
           {
@@ -6669,57 +6669,57 @@
           },
           {
             "name": "repaired_base_screw_01",
-            "contrast": 0.0092,
+            "contrast": 0.0611,
             "edge_density": 0.0,
-            "separation": 0.0001,
-            "mean_luma": 0.4856,
-            "surround_luma": 0.4857,
-            "readable": false
+            "separation": 0.0067,
+            "mean_luma": 0.5451,
+            "surround_luma": 0.5518,
+            "readable": true
           },
           {
             "name": "repaired_base_screw_02",
-            "contrast": 0.0059,
+            "contrast": 0.0079,
             "edge_density": 0.0,
-            "separation": 0.0066,
-            "mean_luma": 0.4947,
-            "surround_luma": 0.4881,
+            "separation": 0.0025,
+            "mean_luma": 0.4905,
+            "surround_luma": 0.493,
             "readable": false
           },
           {
             "name": "repaired_base_screw_03",
-            "contrast": 0.0151,
-            "edge_density": 0.0059,
-            "separation": 0.0166,
-            "mean_luma": 0.4819,
-            "surround_luma": 0.4985,
-            "readable": false
+            "contrast": 0.066,
+            "edge_density": 0.0,
+            "separation": 0.0074,
+            "mean_luma": 0.5741,
+            "surround_luma": 0.5667,
+            "readable": true
           },
           {
             "name": "repaired_base_screw_04",
-            "contrast": 0.1079,
-            "edge_density": 0.358,
-            "separation": 0.0409,
-            "mean_luma": 0.5454,
-            "surround_luma": 0.5862,
+            "contrast": 0.0871,
+            "edge_density": 0.2083,
+            "separation": 0.0249,
+            "mean_luma": 0.5928,
+            "surround_luma": 0.6176,
             "readable": true
           },
           {
             "name": "repaired_base_screw_05",
-            "contrast": 0.1492,
-            "edge_density": 0.1786,
-            "separation": 0.0658,
-            "mean_luma": 0.6173,
-            "surround_luma": 0.5515,
-            "readable": true
+            "contrast": 0.0038,
+            "edge_density": 0.0,
+            "separation": 0.001,
+            "mean_luma": 0.6874,
+            "surround_luma": 0.6884,
+            "readable": false
           },
           {
             "name": "repaired_base_screw_06",
-            "contrast": 0.0928,
-            "edge_density": 0.3,
-            "separation": 0.0487,
-            "mean_luma": 0.5898,
-            "surround_luma": 0.6385,
-            "readable": true
+            "contrast": 0.024,
+            "edge_density": 0.0,
+            "separation": 0.0025,
+            "mean_luma": 0.663,
+            "surround_luma": 0.6655,
+            "readable": false
           },
           {
             "name": "repaired_calibration_tick_01",
@@ -6815,13 +6815,13 @@
         "measured_parts": 42,
         "readable_parts": 39,
         "unreadable_parts": [
-          "repaired_base_screw_01",
           "repaired_base_screw_02",
-          "repaired_base_screw_03"
+          "repaired_base_screw_05",
+          "repaired_base_screw_06"
         ]
       },
       "reference_metrics": null,
-      "palette_similarity": 0.8848720002629435,
+      "palette_similarity": 0.8853192548093585,
       "animation_frame_proof": null,
       "failures": []
     },
@@ -6831,11 +6831,11 @@
       "pass": false,
       "visual_score": 24,
       "technical_score": 40,
-      "runtime_seconds": 3.4,
+      "runtime_seconds": 4.2,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\scene_repair_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\scene_repair_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -6872,11 +6872,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.3,
+      "runtime_seconds": 5.3,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "warm_red_bias"
@@ -6921,11 +6921,11 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.9,
+      "runtime_seconds": 6.2,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\sci_fi_corridor_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\sci_fi_corridor_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\sci_fi_corridor_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\sci_fi_corridor_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark",
@@ -6977,11 +6977,11 @@
       "pass": false,
       "visual_score": 31,
       "technical_score": 40,
-      "runtime_seconds": 3.1,
+      "runtime_seconds": 3.3,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\sci_fi_corridor_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\sci_fi_corridor_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -7027,11 +7027,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.2,
+      "runtime_seconds": 4.6,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -7085,11 +7085,11 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 5.0,
+      "runtime_seconds": 5.2,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -7128,7 +7128,7 @@
             "contrast": 0.0279,
             "edge_density": 0.0417,
             "separation": 0.0222,
-            "mean_luma": 0.7093,
+            "mean_luma": 0.7094,
             "surround_luma": 0.7315,
             "readable": true
           },
@@ -7349,11 +7349,11 @@
       "pass": false,
       "visual_score": 27,
       "technical_score": 40,
-      "runtime_seconds": 3.2,
+      "runtime_seconds": 3.7,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\shader_texture_material_study_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\shader_texture_material_study_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -7398,11 +7398,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 4.4,
+      "runtime_seconds": 4.5,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -7463,11 +7463,11 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 8.7,
+      "runtime_seconds": 9.0,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -7953,22 +7953,22 @@
       "animation_frame_proof": {
         "frame_count": 3,
         "frames": [
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png"
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png"
         ],
         "pairs": [
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
             "mean_rgb_delta": 0.10494615137577057,
             "max_rgb_delta": 0.7137255072593689,
             "mean_luma_delta": 0.10300540179014206,
             "changed_pixel_ratio": 0.4399151234567901
           },
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png",
             "mean_rgb_delta": 0.10494478046894073,
             "max_rgb_delta": 0.7137255072593689,
             "mean_luma_delta": 0.10300354659557343,
@@ -7991,11 +7991,11 @@
       "pass": false,
       "visual_score": 30,
       "technical_score": 60,
-      "runtime_seconds": 4.6,
+      "runtime_seconds": 4.8,
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -8046,11 +8046,11 @@
       "pass": false,
       "visual_score": 79,
       "technical_score": 100,
-      "runtime_seconds": 6.9,
+      "runtime_seconds": 7.3,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark"
@@ -8077,22 +8077,22 @@
       "animation_frame_proof": {
         "frame_count": 3,
         "frames": [
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png"
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png"
         ],
         "pairs": [
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0001.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
             "mean_rgb_delta": 0.0,
             "max_rgb_delta": 0.0,
             "mean_luma_delta": 0.0,
             "changed_pixel_ratio": 0.0
           },
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0126.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\turntable_animation_adversarial_slop_static_product_no_animation_clip\\iterations\\animation_frame_0250.png",
             "mean_rgb_delta": 0.0,
             "max_rgb_delta": 0.0,
             "mean_luma_delta": 0.0,
@@ -8134,11 +8134,11 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 7.7,
+      "runtime_seconds": 7.8,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark",
@@ -8320,22 +8320,22 @@
       "animation_frame_proof": {
         "frame_count": 3,
         "frames": [
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png"
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png"
         ],
         "pairs": [
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
             "mean_rgb_delta": 0.06761130690574646,
             "max_rgb_delta": 0.8392156958580017,
             "mean_luma_delta": 0.06798283755779266,
             "changed_pixel_ratio": 0.33315586419753085
           },
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png",
             "mean_rgb_delta": 0.07208635658025742,
             "max_rgb_delta": 0.8352941274642944,
             "mean_luma_delta": 0.07096830755472183,
@@ -8362,7 +8362,7 @@
       "iterations": 1,
       "artifacts": [
         null,
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_baseline_no_skill\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_baseline_no_skill\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "missing_preview"
@@ -8421,8 +8421,8 @@
       "runtime_seconds": 7.0,
       "iterations": 1,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -8458,22 +8458,22 @@
       "animation_frame_proof": {
         "frame_count": 3,
         "frames": [
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png"
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png"
         ],
         "pairs": [
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
             "mean_rgb_delta": 0.0,
             "max_rgb_delta": 0.0,
             "mean_luma_delta": 0.0,
             "changed_pixel_ratio": 0.0
           },
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png",
             "mean_rgb_delta": 0.0,
             "max_rgb_delta": 0.0,
             "mean_luma_delta": 0.0,
