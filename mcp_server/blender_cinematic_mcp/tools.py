@@ -229,7 +229,15 @@ def h_evaluate_preview(ctx: ServerContext, image_path: str, inspection: dict | N
     if task_id:
         ctx.resolver.write_text(ctx.task_dir(task_id) / "iterations" / f"iter_{n:02d}_eval.json",
                                 json.dumps(ev.to_dict(), indent=2))
-    return {"ok": True, "metrics": metrics, "evaluation": ev.to_dict()}
+    readability = subject_readability_report(img, inspection.get("objects", []))
+    ref_path = None
+    if reference_metrics and reference_metrics.get("reference_image"):
+        ref_path = ctx.resolver.resolve(Path(reference_metrics["reference_image"]))
+    diags = diagnose(inspection, image_metrics=metrics, render_path=img,
+                     reference_path=ref_path, readability_report=readability,
+                     lint=lint)
+    return {"ok": True, "metrics": metrics, "evaluation": ev.to_dict(),
+            "diagnoses": diags}
 
 
 @_safe

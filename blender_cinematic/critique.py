@@ -238,6 +238,22 @@ def _check_subject_visible(inspection: dict, out: list) -> None:
                 f"{len(offscreen)} subject objects are outside the camera frame",
                 ", ".join(o.get("name", "?") for o in offscreen[:6]),
                 [{"op": "reframe_camera", "look_at": anchor, "pull_back": 1.25}]))
+    # subject bleeding into the frame edge is the #1 amateur-comp tell —
+    # screen_bbox is [minx, miny, maxx, maxy] in normalised camera space
+    for o in subjects:
+        bb = o.get("screen_bbox")
+        if not bb or not o.get("in_camera_frame"):
+            continue
+        margins = [bb[0], bb[1], 1.0 - bb[2], 1.0 - bb[3]]
+        if min(margins) < 0.01:
+            out.append(_diag(
+                "warn", "framing.edge_crowding",
+                f"'{o.get('name')}' touches the frame edge — the eye reads "
+                "bleed as accidental crop",
+                f"screen_bbox={[round(v, 2) for v in bb]}",
+                [{"op": "reframe_camera", "look_at": _centroid(subjects),
+                  "pull_back": 1.12}]))
+            break
     cov = max((o.get("screen_coverage", 0) or 0 for o in subjects), default=0)
     if cov and cov < 0.02:
         out.append(_diag(
@@ -292,6 +308,38 @@ def _check_readability(inspection: dict, report: dict | None, out: list) -> None
             f"named part '{name}' merges into its surround — no internal "
             "contrast, edge detail, or luminance separation",
             "see part_readability", ops))
+
+
+def _check_frame_balance(render_path, inspection: dict, out: list) -> None:
+    """Thirds-grid analysis: a whole outer third of frame dead-dark while the
+    rest is lit means the composition has a dead side — content was placed
+    without considering the full frame."""
+    try:
+        luma = _luma(_load(render_path)[..., :3])
+    except Exception:
+        return
+    h, w = luma.shape
+    cols = [luma[:, :w // 3], luma[:, w // 3:2 * w // 3], luma[:, 2 * w // 3:]]
+    col_luma = [float(c.mean()) for c in cols]
+    lit = max(col_luma)
+    if lit < 0.05:
+        return  # uniformly dark — tonal.crushed_blacks already covers it
+    dead = [i for i, v in enumerate(col_luma)
+            if v < lit * 0.35 and v < 0.04]
+    subjects = _subject_objects(inspection)
+    anchor = _centroid(_in_frame(subjects)) or _centroid(subjects)
+    for i in dead:
+        if i == 1:
+            continue  # dead centre column is rarely a defect
+        side = "left" if i == 0 else "right"
+        out.append(_diag(
+            "warn", "composition.dead_side",
+            f"the {side} third of frame is near-empty darkness while the rest "
+            "is lit — the frame reads lopsided; add set elements or shift "
+            "the composition toward it",
+            f"column lumas L/C/R={[round(v, 3) for v in col_luma]}",
+            [{"op": "reframe_camera", "look_at": anchor, "pull_back": 1.1}]
+            if anchor else []))
 
 
 # --------------------------------------------------------------------------- #
@@ -457,6 +505,8 @@ def diagnose(inspection: dict, image_metrics: dict | None = None,
     _check_subject_visible(inspection, out)
     _check_materials(inspection, out)
     _check_readability(inspection, readability_report, out)
+    if render_path:
+        _check_frame_balance(render_path, inspection, out)
     if render_path and reference_path:
         _check_reference(render_path, reference_path, inspection, out)
     order = {"fail": 0, "warn": 1}

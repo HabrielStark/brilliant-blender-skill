@@ -190,6 +190,27 @@ def test_adjust_light_requires_name():
     assert not res.passed
 
 
+def test_edge_crowding_flagged():
+    objs = [_subject("hero", bbox=[0.6, 0.2, 1.0, 0.8])]  # maxx touches edge
+    diags = diagnose(_inspection(objects=objs))
+    d = next((x for x in diags if x["code"] == "framing.edge_crowding"), None)
+    assert d and d["severity"] == "warn"
+    assert any(o["op"] == "reframe_camera" for o in d["ops"])
+
+
+def test_dead_side_detected(tmp_path):
+    # right third black, rest lit
+    arr = np.full((64, 96, 4), 120, dtype=np.uint8)
+    arr[:, 64:, :3] = 4
+    arr[..., 3] = 255
+    p = tmp_path / "unbalanced.png"
+    Image.fromarray(arr, "RGBA").save(p)
+    diags = diagnose(_inspection(objects=[_subject("hero", loc=(0, 0, 0.5))]),
+                     render_path=p)
+    assert any(d["code"] == "composition.dead_side" and "right" in d["problem"]
+               for d in diags)
+
+
 def test_lint_driven_diagnoses_for_broken_scene():
     """The worst-case input (baseline-style: no camera, no lights, no
     materials) must still produce concrete build-out ops — this is where a
