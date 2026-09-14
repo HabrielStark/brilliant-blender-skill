@@ -6,12 +6,12 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 6.9,
+      "runtime_seconds": 6.2,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\architectural_interior_scene_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\architectural_interior_scene_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\architectural_interior_scene_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\architectural_interior_scene_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "warm_red_bias"
@@ -810,12 +810,12 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 5.4,
+      "runtime_seconds": 4.7,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -894,12 +894,12 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.6,
+      "runtime_seconds": 4.6,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\character_bust_portrait_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\character_bust_portrait_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\character_bust_portrait_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\character_bust_portrait_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -1086,12 +1086,12 @@
       "pass": true,
       "visual_score": 93,
       "technical_score": 100,
-      "runtime_seconds": 5.1,
+      "runtime_seconds": 4.6,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\fabric_drape_study_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\fabric_drape_study_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\fabric_drape_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\fabric_drape_study_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -1314,12 +1314,12 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 6.4,
+      "runtime_seconds": 5.7,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark"
@@ -2004,12 +2004,12 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.9,
+      "runtime_seconds": 5.1,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\landscape_meadow_golden_hour_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\landscape_meadow_golden_hour_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\landscape_meadow_golden_hour_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\landscape_meadow_golden_hour_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "warm_red_bias"
@@ -2018,659 +2018,659 @@
         "parts": [
           {
             "name": "mound_hero_grassy",
-            "contrast": 0.1764,
-            "edge_density": 0.0593,
-            "separation": 0.1198,
-            "mean_luma": 0.3531,
-            "surround_luma": 0.4729,
+            "contrast": 0.1777,
+            "edge_density": 0.0627,
+            "separation": 0.1973,
+            "mean_luma": 0.3615,
+            "surround_luma": 0.5588,
             "readable": true
           },
           {
             "name": "boulder_granite_main",
-            "contrast": 0.1088,
-            "edge_density": 0.1222,
-            "separation": 0.006,
-            "mean_luma": 0.2971,
-            "surround_luma": 0.3031,
+            "contrast": 0.1089,
+            "edge_density": 0.1237,
+            "separation": 0.0098,
+            "mean_luma": 0.3027,
+            "surround_luma": 0.3125,
             "readable": true
           },
           {
             "name": "boulder_secondary_worn",
-            "contrast": 0.1755,
-            "edge_density": 0.2374,
-            "separation": 0.0816,
-            "mean_luma": 0.4173,
-            "surround_luma": 0.499,
+            "contrast": 0.1765,
+            "edge_density": 0.2389,
+            "separation": 0.0819,
+            "mean_luma": 0.4225,
+            "surround_luma": 0.5044,
             "readable": true
           },
           {
             "name": "GN_Meadow_Rocks_rock_chip_01",
-            "contrast": 0.0634,
-            "edge_density": 0.0516,
-            "separation": 0.0431,
-            "mean_luma": 0.1935,
-            "surround_luma": 0.2366,
+            "contrast": 0.0643,
+            "edge_density": 0.0556,
+            "separation": 0.0437,
+            "mean_luma": 0.1971,
+            "surround_luma": 0.2408,
             "readable": true
           },
           {
             "name": "GN_Meadow_Rocks_rock_chip_02",
-            "contrast": 0.0334,
+            "contrast": 0.0339,
             "edge_density": 0.0256,
-            "separation": 0.0539,
-            "mean_luma": 0.2497,
-            "surround_luma": 0.3036,
+            "separation": 0.0548,
+            "mean_luma": 0.2538,
+            "surround_luma": 0.3086,
             "readable": true
           },
           {
             "name": "GN_Meadow_Rocks_rock_chip_03",
-            "contrast": 0.2065,
+            "contrast": 0.2071,
             "edge_density": 0.4345,
-            "separation": 0.1057,
-            "mean_luma": 0.4409,
-            "surround_luma": 0.5466,
+            "separation": 0.106,
+            "mean_luma": 0.4456,
+            "surround_luma": 0.5516,
             "readable": true
           },
           {
             "name": "GN_Meadow_Rocks_rock_chip_04",
-            "contrast": 0.0884,
+            "contrast": 0.0897,
             "edge_density": 0.0877,
-            "separation": 0.0474,
-            "mean_luma": 0.2417,
-            "surround_luma": 0.2892,
+            "separation": 0.048,
+            "mean_luma": 0.2459,
+            "surround_luma": 0.2939,
             "readable": true
           },
           {
             "name": "GN_Meadow_Rocks_rock_chip_05",
-            "contrast": 0.1416,
-            "edge_density": 0.3235,
-            "separation": 0.1134,
-            "mean_luma": 0.2773,
-            "surround_luma": 0.3907,
+            "contrast": 0.1432,
+            "edge_density": 0.3346,
+            "separation": 0.1148,
+            "mean_luma": 0.2818,
+            "surround_luma": 0.3967,
             "readable": true
           },
           {
             "name": "GN_Meadow_Rocks_rock_chip_06",
-            "contrast": 0.1159,
-            "edge_density": 0.1587,
-            "separation": 0.0339,
-            "mean_luma": 0.235,
-            "surround_luma": 0.2689,
+            "contrast": 0.1172,
+            "edge_density": 0.1627,
+            "separation": 0.0343,
+            "mean_luma": 0.2388,
+            "surround_luma": 0.2731,
             "readable": true
           },
           {
             "name": "GN_Meadow_Rocks_rock_chip_07",
-            "contrast": 0.1429,
-            "edge_density": 0.352,
-            "separation": 0.0159,
-            "mean_luma": 0.2696,
-            "surround_luma": 0.2855,
+            "contrast": 0.1444,
+            "edge_density": 0.3644,
+            "separation": 0.0161,
+            "mean_luma": 0.274,
+            "surround_luma": 0.29,
             "readable": true
           },
           {
             "name": "GN_Meadow_Rocks_rock_chip_08",
-            "contrast": 0.0861,
-            "edge_density": 0.1769,
-            "separation": 0.0612,
-            "mean_luma": 0.2861,
-            "surround_luma": 0.3474,
+            "contrast": 0.0875,
+            "edge_density": 0.1803,
+            "separation": 0.062,
+            "mean_luma": 0.2911,
+            "surround_luma": 0.3531,
             "readable": true
           },
           {
             "name": "GN_Meadow_Rocks_rock_chip_09",
-            "contrast": 0.1399,
+            "contrast": 0.1413,
             "edge_density": 0.3529,
             "separation": 0.0038,
-            "mean_luma": 0.2855,
-            "surround_luma": 0.2817,
+            "mean_luma": 0.29,
+            "surround_luma": 0.2862,
             "readable": true
           },
           {
             "name": "GN_Meadow_Rocks_rock_chip_10",
-            "contrast": 0.1749,
-            "edge_density": 0.4413,
-            "separation": 0.0631,
-            "mean_luma": 0.359,
-            "surround_luma": 0.4221,
+            "contrast": 0.1756,
+            "edge_density": 0.4453,
+            "separation": 0.0629,
+            "mean_luma": 0.3638,
+            "surround_luma": 0.4267,
             "readable": true
           },
           {
             "name": "GN_Meadow_Rocks_rock_chip_11",
-            "contrast": 0.0585,
+            "contrast": 0.0593,
             "edge_density": 0.0551,
-            "separation": 0.0536,
-            "mean_luma": 0.2014,
-            "surround_luma": 0.255,
+            "separation": 0.0543,
+            "mean_luma": 0.2049,
+            "surround_luma": 0.2592,
             "readable": true
           },
           {
             "name": "GN_Meadow_Rocks_rock_chip_12",
-            "contrast": 0.1234,
-            "edge_density": 0.1364,
-            "separation": 0.0019,
-            "mean_luma": 0.3396,
-            "surround_luma": 0.3378,
+            "contrast": 0.1241,
+            "edge_density": 0.134,
+            "separation": 0.0022,
+            "mean_luma": 0.3447,
+            "surround_luma": 0.3425,
             "readable": true
           },
           {
             "name": "GN_Meadow_Rocks_rock_chip_13",
-            "contrast": 0.1727,
+            "contrast": 0.1734,
             "edge_density": 0.2951,
-            "separation": 0.0188,
-            "mean_luma": 0.3941,
-            "surround_luma": 0.3752,
+            "separation": 0.019,
+            "mean_luma": 0.3991,
+            "surround_luma": 0.3801,
             "readable": true
           },
           {
             "name": "GN_Meadow_Rocks_rock_chip_14",
-            "contrast": 0.1052,
+            "contrast": 0.1061,
             "edge_density": 0.2647,
-            "separation": 0.0584,
-            "mean_luma": 0.2456,
-            "surround_luma": 0.304,
+            "separation": 0.0589,
+            "mean_luma": 0.2496,
+            "surround_luma": 0.3085,
             "readable": true
           },
           {
             "name": "GN_Mound_Grass_leaf_card_01",
-            "contrast": 0.162,
-            "edge_density": 0.2587,
-            "separation": 0.0842,
-            "mean_luma": 0.4946,
-            "surround_luma": 0.5787,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_02",
-            "contrast": 0.1619,
-            "edge_density": 0.2676,
-            "separation": 0.0682,
-            "mean_luma": 0.382,
-            "surround_luma": 0.4501,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_03",
-            "contrast": 0.0982,
-            "edge_density": 0.1528,
-            "separation": 0.0015,
-            "mean_luma": 0.3091,
-            "surround_luma": 0.3106,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_04",
-            "contrast": 0.157,
-            "edge_density": 0.2483,
-            "separation": 0.0183,
-            "mean_luma": 0.3733,
-            "surround_luma": 0.3916,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_05",
-            "contrast": 0.2128,
-            "edge_density": 0.3823,
-            "separation": 0.0802,
-            "mean_luma": 0.4478,
-            "surround_luma": 0.5279,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_06",
-            "contrast": 0.1877,
-            "edge_density": 0.3603,
-            "separation": 0.1111,
-            "mean_luma": 0.4237,
-            "surround_luma": 0.5349,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_07",
-            "contrast": 0.0595,
-            "edge_density": 0.0662,
-            "separation": 0.0578,
-            "mean_luma": 0.2398,
-            "surround_luma": 0.2976,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_08",
-            "contrast": 0.1824,
-            "edge_density": 0.2778,
-            "separation": 0.0215,
-            "mean_luma": 0.3907,
-            "surround_luma": 0.4122,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_09",
-            "contrast": 0.1087,
-            "edge_density": 0.1773,
-            "separation": 0.0457,
-            "mean_luma": 0.2523,
-            "surround_luma": 0.2979,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_10",
-            "contrast": 0.1327,
-            "edge_density": 0.2315,
-            "separation": 0.0279,
-            "mean_luma": 0.3526,
-            "surround_luma": 0.3805,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_11",
-            "contrast": 0.1223,
-            "edge_density": 0.2493,
-            "separation": 0.0096,
-            "mean_luma": 0.3272,
-            "surround_luma": 0.3368,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_12",
-            "contrast": 0.129,
-            "edge_density": 0.1648,
-            "separation": 0.0335,
-            "mean_luma": 0.3973,
-            "surround_luma": 0.4308,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_13",
-            "contrast": 0.2203,
-            "edge_density": 0.4465,
-            "separation": 0.0102,
-            "mean_luma": 0.5336,
-            "surround_luma": 0.5234,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_14",
-            "contrast": 0.1848,
-            "edge_density": 0.3162,
-            "separation": 0.0957,
-            "mean_luma": 0.348,
-            "surround_luma": 0.4437,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_15",
-            "contrast": 0.2186,
-            "edge_density": 0.2959,
-            "separation": 0.0332,
-            "mean_luma": 0.5396,
-            "surround_luma": 0.5728,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_16",
-            "contrast": 0.1719,
-            "edge_density": 0.3125,
-            "separation": 0.0763,
-            "mean_luma": 0.478,
-            "surround_luma": 0.5542,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_17",
-            "contrast": 0.0672,
-            "edge_density": 0.0705,
-            "separation": 0.0368,
-            "mean_luma": 0.2407,
-            "surround_luma": 0.2775,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_18",
-            "contrast": 0.1823,
-            "edge_density": 0.4263,
-            "separation": 0.076,
-            "mean_luma": 0.3806,
-            "surround_luma": 0.4566,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_19",
-            "contrast": 0.2097,
-            "edge_density": 0.2619,
-            "separation": 0.0607,
-            "mean_luma": 0.4035,
-            "surround_luma": 0.4642,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_20",
-            "contrast": 0.1318,
-            "edge_density": 0.295,
-            "separation": 0.0117,
-            "mean_luma": 0.3091,
-            "surround_luma": 0.3208,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_21",
-            "contrast": 0.1673,
-            "edge_density": 0.2957,
-            "separation": 0.0725,
-            "mean_luma": 0.2983,
-            "surround_luma": 0.3707,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_22",
-            "contrast": 0.1414,
-            "edge_density": 0.17,
-            "separation": 0.0135,
-            "mean_luma": 0.3461,
-            "surround_luma": 0.3326,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_23",
-            "contrast": 0.1776,
-            "edge_density": 0.2821,
-            "separation": 0.1165,
-            "mean_luma": 0.3491,
-            "surround_luma": 0.4657,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_24",
-            "contrast": 0.1989,
-            "edge_density": 0.35,
-            "separation": 0.0239,
-            "mean_luma": 0.3981,
-            "surround_luma": 0.4219,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_25",
-            "contrast": 0.1682,
-            "edge_density": 0.4091,
-            "separation": 0.0634,
-            "mean_luma": 0.3353,
-            "surround_luma": 0.3987,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_26",
-            "contrast": 0.1969,
-            "edge_density": 0.2794,
-            "separation": 0.0616,
-            "mean_luma": 0.3962,
-            "surround_luma": 0.4578,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_27",
-            "contrast": 0.1397,
-            "edge_density": 0.2188,
-            "separation": 0.0281,
-            "mean_luma": 0.4645,
-            "surround_luma": 0.4927,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_28",
-            "contrast": 0.1297,
-            "edge_density": 0.2392,
-            "separation": 0.0828,
-            "mean_luma": 0.3135,
-            "surround_luma": 0.3963,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_29",
-            "contrast": 0.1617,
-            "edge_density": 0.3368,
-            "separation": 0.0813,
-            "mean_luma": 0.3084,
-            "surround_luma": 0.3897,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_30",
-            "contrast": 0.1432,
-            "edge_density": 0.234,
-            "separation": 0.0073,
-            "mean_luma": 0.2945,
-            "surround_luma": 0.3018,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_31",
-            "contrast": 0.2163,
-            "edge_density": 0.4662,
-            "separation": 0.086,
-            "mean_luma": 0.4332,
-            "surround_luma": 0.5192,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_32",
-            "contrast": 0.0946,
-            "edge_density": 0.2036,
-            "separation": 0.037,
-            "mean_luma": 0.2979,
-            "surround_luma": 0.3349,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_33",
-            "contrast": 0.2138,
-            "edge_density": 0.2563,
-            "separation": 0.0743,
-            "mean_luma": 0.4343,
-            "surround_luma": 0.5085,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_34",
-            "contrast": 0.0624,
-            "edge_density": 0.13,
-            "separation": 0.0231,
-            "mean_luma": 0.2751,
-            "surround_luma": 0.252,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_35",
-            "contrast": 0.1121,
-            "edge_density": 0.207,
-            "separation": 0.0649,
-            "mean_luma": 0.2764,
-            "surround_luma": 0.3413,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_36",
-            "contrast": 0.2167,
-            "edge_density": 0.3235,
-            "separation": 0.0853,
-            "mean_luma": 0.4558,
-            "surround_luma": 0.5411,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_37",
-            "contrast": 0.1707,
-            "edge_density": 0.2816,
-            "separation": 0.1782,
-            "mean_luma": 0.379,
-            "surround_luma": 0.5572,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_38",
-            "contrast": 0.1371,
-            "edge_density": 0.1929,
-            "separation": 0.0167,
-            "mean_luma": 0.3258,
-            "surround_luma": 0.3092,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_39",
-            "contrast": 0.1751,
-            "edge_density": 0.2854,
-            "separation": 0.0399,
-            "mean_luma": 0.4308,
-            "surround_luma": 0.4707,
-            "readable": true
-          },
-          {
-            "name": "GN_Mound_Grass_leaf_card_40",
-            "contrast": 0.129,
-            "edge_density": 0.2694,
-            "separation": 0.0727,
-            "mean_luma": 0.2907,
-            "surround_luma": 0.3634,
-            "readable": true
-          },
-          {
-            "name": "path_stone_step_01",
-            "contrast": 0.0538,
-            "edge_density": 0.0083,
-            "separation": 0.03,
-            "mean_luma": 0.2671,
-            "surround_luma": 0.2371,
-            "readable": true
-          },
-          {
-            "name": "path_stone_step_02",
-            "contrast": 0.0659,
-            "edge_density": 0.0118,
-            "separation": 0.0449,
-            "mean_luma": 0.2516,
-            "surround_luma": 0.2068,
-            "readable": true
-          },
-          {
-            "name": "path_stone_step_03",
-            "contrast": 0.018,
-            "edge_density": 0.0,
-            "separation": 0.0117,
-            "mean_luma": 0.1552,
-            "surround_luma": 0.1669,
-            "readable": false
-          },
-          {
-            "name": "path_stone_step_04",
-            "contrast": 0.0456,
-            "edge_density": 0.0,
-            "separation": 0.0115,
-            "mean_luma": 0.3106,
-            "surround_luma": 0.2991,
-            "readable": true
-          },
-          {
-            "name": "grass_blade_hero_01",
-            "contrast": 0.1316,
-            "edge_density": 0.3487,
-            "separation": 0.046,
-            "mean_luma": 0.331,
-            "surround_luma": 0.285,
-            "readable": true
-          },
-          {
-            "name": "grass_blade_hero_02",
-            "contrast": 0.1146,
-            "edge_density": 0.1813,
-            "separation": 0.0181,
-            "mean_luma": 0.3095,
-            "surround_luma": 0.3276,
-            "readable": true
-          },
-          {
-            "name": "grass_blade_hero_03",
-            "contrast": 0.0856,
-            "edge_density": 0.1589,
-            "separation": 0.0246,
-            "mean_luma": 0.3201,
-            "surround_luma": 0.3447,
-            "readable": true
-          },
-          {
-            "name": "grass_blade_hero_04",
-            "contrast": 0.1159,
-            "edge_density": 0.2258,
-            "separation": 0.0505,
-            "mean_luma": 0.3143,
-            "surround_luma": 0.3647,
-            "readable": true
-          },
-          {
-            "name": "grass_blade_hero_05",
-            "contrast": 0.0834,
-            "edge_density": 0.1483,
-            "separation": 0.0012,
-            "mean_luma": 0.3898,
-            "surround_luma": 0.3886,
-            "readable": true
-          },
-          {
-            "name": "grass_blade_hero_06",
-            "contrast": 0.066,
-            "edge_density": 0.1605,
-            "separation": 0.0218,
-            "mean_luma": 0.2686,
-            "surround_luma": 0.2469,
-            "readable": true
-          },
-          {
-            "name": "grass_blade_mound_edge_01",
-            "contrast": 0.1871,
-            "edge_density": 0.3022,
-            "separation": 0.0029,
-            "mean_luma": 0.618,
-            "surround_luma": 0.6209,
-            "readable": true
-          },
-          {
-            "name": "grass_blade_mound_edge_02",
-            "contrast": 0.1971,
-            "edge_density": 0.2439,
-            "separation": 0.0048,
-            "mean_luma": 0.5795,
+            "contrast": 0.1627,
+            "edge_density": 0.2568,
+            "separation": 0.0844,
+            "mean_luma": 0.4999,
             "surround_luma": 0.5843,
             "readable": true
           },
           {
+            "name": "GN_Mound_Grass_leaf_card_02",
+            "contrast": 0.1629,
+            "edge_density": 0.2676,
+            "separation": 0.0686,
+            "mean_luma": 0.3869,
+            "surround_luma": 0.4555,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_03",
+            "contrast": 0.0995,
+            "edge_density": 0.1556,
+            "separation": 0.0014,
+            "mean_luma": 0.3142,
+            "surround_luma": 0.3156,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_04",
+            "contrast": 0.1581,
+            "edge_density": 0.2517,
+            "separation": 0.018,
+            "mean_luma": 0.3783,
+            "surround_luma": 0.3963,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_05",
+            "contrast": 0.2133,
+            "edge_density": 0.3823,
+            "separation": 0.0799,
+            "mean_luma": 0.4525,
+            "surround_luma": 0.5324,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_06",
+            "contrast": 0.1882,
+            "edge_density": 0.3627,
+            "separation": 0.1115,
+            "mean_luma": 0.4286,
+            "surround_luma": 0.5401,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_07",
+            "contrast": 0.0601,
+            "edge_density": 0.0679,
+            "separation": 0.0585,
+            "mean_luma": 0.244,
+            "surround_luma": 0.3025,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_08",
+            "contrast": 0.1832,
+            "edge_density": 0.2778,
+            "separation": 0.0214,
+            "mean_luma": 0.3955,
+            "surround_luma": 0.4169,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_09",
+            "contrast": 0.1098,
+            "edge_density": 0.1873,
+            "separation": 0.0461,
+            "mean_luma": 0.2564,
+            "surround_luma": 0.3024,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_10",
+            "contrast": 0.1341,
+            "edge_density": 0.2384,
+            "separation": 0.0281,
+            "mean_luma": 0.3578,
+            "surround_luma": 0.3858,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_11",
+            "contrast": 0.1233,
+            "edge_density": 0.2521,
+            "separation": 0.0099,
+            "mean_luma": 0.3323,
+            "surround_luma": 0.3422,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_12",
+            "contrast": 0.1301,
+            "edge_density": 0.1705,
+            "separation": 0.0335,
+            "mean_luma": 0.4029,
+            "surround_luma": 0.4364,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_13",
+            "contrast": 0.2204,
+            "edge_density": 0.4439,
+            "separation": 0.0099,
+            "mean_luma": 0.538,
+            "surround_luma": 0.5281,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_14",
+            "contrast": 0.186,
+            "edge_density": 0.315,
+            "separation": 0.097,
+            "mean_luma": 0.3525,
+            "surround_luma": 0.4495,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_15",
+            "contrast": 0.2182,
+            "edge_density": 0.2959,
+            "separation": 0.0331,
+            "mean_luma": 0.5442,
+            "surround_luma": 0.5773,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_16",
+            "contrast": 0.1726,
+            "edge_density": 0.3125,
+            "separation": 0.0764,
+            "mean_luma": 0.4832,
+            "surround_luma": 0.5596,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_17",
+            "contrast": 0.0677,
+            "edge_density": 0.0705,
+            "separation": 0.0383,
+            "mean_luma": 0.2452,
+            "surround_luma": 0.2835,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_18",
+            "contrast": 0.1834,
+            "edge_density": 0.4263,
+            "separation": 0.0765,
+            "mean_luma": 0.3854,
+            "surround_luma": 0.462,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_19",
+            "contrast": 0.21,
+            "edge_density": 0.269,
+            "separation": 0.0606,
+            "mean_luma": 0.408,
+            "surround_luma": 0.4686,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_20",
+            "contrast": 0.1333,
+            "edge_density": 0.2967,
+            "separation": 0.0116,
+            "mean_luma": 0.3139,
+            "surround_luma": 0.3255,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_21",
+            "contrast": 0.1681,
+            "edge_density": 0.3003,
+            "separation": 0.0729,
+            "mean_luma": 0.3025,
+            "surround_luma": 0.3754,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_22",
+            "contrast": 0.1421,
+            "edge_density": 0.168,
+            "separation": 0.0134,
+            "mean_luma": 0.3512,
+            "surround_luma": 0.3378,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_23",
+            "contrast": 0.178,
+            "edge_density": 0.2857,
+            "separation": 0.1164,
+            "mean_luma": 0.3536,
+            "surround_luma": 0.47,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_24",
+            "contrast": 0.1991,
+            "edge_density": 0.3607,
+            "separation": 0.0234,
+            "mean_luma": 0.4027,
+            "surround_luma": 0.426,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_25",
+            "contrast": 0.1689,
+            "edge_density": 0.4139,
+            "separation": 0.0633,
+            "mean_luma": 0.34,
+            "surround_luma": 0.4033,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_26",
+            "contrast": 0.1974,
+            "edge_density": 0.2794,
+            "separation": 0.0614,
+            "mean_luma": 0.401,
+            "surround_luma": 0.4624,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_27",
+            "contrast": 0.1403,
+            "edge_density": 0.2188,
+            "separation": 0.0283,
+            "mean_luma": 0.4702,
+            "surround_luma": 0.4985,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_28",
+            "contrast": 0.131,
+            "edge_density": 0.2416,
+            "separation": 0.0834,
+            "mean_luma": 0.3182,
+            "surround_luma": 0.4016,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_29",
+            "contrast": 0.1624,
+            "edge_density": 0.3453,
+            "separation": 0.0813,
+            "mean_luma": 0.3127,
+            "surround_luma": 0.394,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_30",
+            "contrast": 0.1445,
+            "edge_density": 0.2412,
+            "separation": 0.0075,
+            "mean_luma": 0.299,
+            "surround_luma": 0.3065,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_31",
+            "contrast": 0.2167,
+            "edge_density": 0.4696,
+            "separation": 0.0863,
+            "mean_luma": 0.4377,
+            "surround_luma": 0.524,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_32",
+            "contrast": 0.0958,
+            "edge_density": 0.2112,
+            "separation": 0.0375,
+            "mean_luma": 0.3028,
+            "surround_luma": 0.3403,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_33",
+            "contrast": 0.2142,
+            "edge_density": 0.2563,
+            "separation": 0.0745,
+            "mean_luma": 0.4389,
+            "surround_luma": 0.5134,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_34",
+            "contrast": 0.0632,
+            "edge_density": 0.13,
+            "separation": 0.0233,
+            "mean_luma": 0.2795,
+            "surround_luma": 0.2562,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_35",
+            "contrast": 0.1134,
+            "edge_density": 0.2143,
+            "separation": 0.0657,
+            "mean_luma": 0.281,
+            "surround_luma": 0.3467,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_36",
+            "contrast": 0.2169,
+            "edge_density": 0.3235,
+            "separation": 0.0854,
+            "mean_luma": 0.4603,
+            "surround_luma": 0.5457,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_37",
+            "contrast": 0.1718,
+            "edge_density": 0.2882,
+            "separation": 0.1785,
+            "mean_luma": 0.384,
+            "surround_luma": 0.5625,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_38",
+            "contrast": 0.138,
+            "edge_density": 0.1962,
+            "separation": 0.0166,
+            "mean_luma": 0.3307,
+            "surround_luma": 0.3142,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_39",
+            "contrast": 0.1757,
+            "edge_density": 0.2879,
+            "separation": 0.0397,
+            "mean_luma": 0.436,
+            "surround_luma": 0.4757,
+            "readable": true
+          },
+          {
+            "name": "GN_Mound_Grass_leaf_card_40",
+            "contrast": 0.1303,
+            "edge_density": 0.2694,
+            "separation": 0.0735,
+            "mean_luma": 0.2952,
+            "surround_luma": 0.3688,
+            "readable": true
+          },
+          {
+            "name": "path_stone_step_01",
+            "contrast": 0.0546,
+            "edge_density": 0.0093,
+            "separation": 0.0304,
+            "mean_luma": 0.2718,
+            "surround_luma": 0.2414,
+            "readable": true
+          },
+          {
+            "name": "path_stone_step_02",
+            "contrast": 0.0668,
+            "edge_density": 0.0132,
+            "separation": 0.0455,
+            "mean_luma": 0.2561,
+            "surround_luma": 0.2106,
+            "readable": true
+          },
+          {
+            "name": "path_stone_step_03",
+            "contrast": 0.0183,
+            "edge_density": 0.0,
+            "separation": 0.0118,
+            "mean_luma": 0.1584,
+            "surround_luma": 0.1702,
+            "readable": false
+          },
+          {
+            "name": "path_stone_step_04",
+            "contrast": 0.0462,
+            "edge_density": 0.0,
+            "separation": 0.0117,
+            "mean_luma": 0.3161,
+            "surround_luma": 0.3043,
+            "readable": true
+          },
+          {
+            "name": "grass_blade_hero_01",
+            "contrast": 0.1329,
+            "edge_density": 0.3602,
+            "separation": 0.0467,
+            "mean_luma": 0.3361,
+            "surround_luma": 0.2894,
+            "readable": true
+          },
+          {
+            "name": "grass_blade_hero_02",
+            "contrast": 0.1159,
+            "edge_density": 0.1866,
+            "separation": 0.0183,
+            "mean_luma": 0.3145,
+            "surround_luma": 0.3328,
+            "readable": true
+          },
+          {
+            "name": "grass_blade_hero_03",
+            "contrast": 0.0866,
+            "edge_density": 0.1609,
+            "separation": 0.025,
+            "mean_luma": 0.3255,
+            "surround_luma": 0.3505,
+            "readable": true
+          },
+          {
+            "name": "grass_blade_hero_04",
+            "contrast": 0.1171,
+            "edge_density": 0.2306,
+            "separation": 0.0509,
+            "mean_luma": 0.3192,
+            "surround_luma": 0.3701,
+            "readable": true
+          },
+          {
+            "name": "grass_blade_hero_05",
+            "contrast": 0.0842,
+            "edge_density": 0.1512,
+            "separation": 0.0013,
+            "mean_luma": 0.3958,
+            "surround_luma": 0.3945,
+            "readable": true
+          },
+          {
+            "name": "grass_blade_hero_06",
+            "contrast": 0.0669,
+            "edge_density": 0.1658,
+            "separation": 0.0222,
+            "mean_luma": 0.2732,
+            "surround_luma": 0.251,
+            "readable": true
+          },
+          {
+            "name": "grass_blade_mound_edge_01",
+            "contrast": 0.1868,
+            "edge_density": 0.3022,
+            "separation": 0.0028,
+            "mean_luma": 0.6224,
+            "surround_luma": 0.6251,
+            "readable": true
+          },
+          {
+            "name": "grass_blade_mound_edge_02",
+            "contrast": 0.1967,
+            "edge_density": 0.2449,
+            "separation": 0.0048,
+            "mean_luma": 0.5842,
+            "surround_luma": 0.589,
+            "readable": true
+          },
+          {
             "name": "grass_blade_mound_edge_03",
-            "contrast": 0.1205,
+            "contrast": 0.1215,
             "edge_density": 0.4298,
-            "separation": 0.1282,
-            "mean_luma": 0.2797,
-            "surround_luma": 0.4079,
+            "separation": 0.129,
+            "mean_luma": 0.2842,
+            "surround_luma": 0.4132,
             "readable": true
           },
           {
             "name": "grass_blade_mound_edge_04",
-            "contrast": 0.1166,
-            "edge_density": 0.1357,
-            "separation": 0.0324,
-            "mean_luma": 0.3339,
-            "surround_luma": 0.3016,
+            "contrast": 0.1172,
+            "edge_density": 0.1367,
+            "separation": 0.0322,
+            "mean_luma": 0.339,
+            "surround_luma": 0.3068,
             "readable": true
           },
           {
             "name": "grass_blade_mound_edge_05",
-            "contrast": 0.0896,
-            "edge_density": 0.1333,
-            "separation": 0.0103,
-            "mean_luma": 0.4338,
-            "surround_luma": 0.4234,
+            "contrast": 0.0901,
+            "edge_density": 0.14,
+            "separation": 0.0102,
+            "mean_luma": 0.44,
+            "surround_luma": 0.4297,
             "readable": true
           },
           {
             "name": "sun_disc_low_warm",
-            "contrast": 0.1136,
+            "contrast": 0.1125,
             "edge_density": 0.0695,
-            "separation": 0.1513,
-            "mean_luma": 0.8221,
-            "surround_luma": 0.6708,
+            "separation": 0.1498,
+            "mean_luma": 0.8253,
+            "surround_luma": 0.6755,
             "readable": true
           }
         ],
@@ -2693,12 +2693,12 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 6.9,
+      "runtime_seconds": 5.5,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -3047,12 +3047,12 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 6.4,
+      "runtime_seconds": 5.9,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -3702,12 +3702,12 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.0,
+      "runtime_seconds": 4.7,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\neon_typography_signage_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\neon_typography_signage_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\neon_typography_signage_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\neon_typography_signage_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark"
@@ -3896,12 +3896,12 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 6.5,
+      "runtime_seconds": 5.9,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\organic_soft_surface_study_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\organic_soft_surface_study_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\organic_soft_surface_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\organic_soft_surface_study_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "warm_red_bias"
@@ -4838,12 +4838,12 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 6.5,
+      "runtime_seconds": 6.3,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\particle_vfx_energy_burst_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\particle_vfx_energy_burst_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\particle_vfx_energy_burst_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\particle_vfx_energy_burst_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark",
@@ -4902,7 +4902,7 @@
             "contrast": 0.2142,
             "edge_density": 0.158,
             "separation": 0.1935,
-            "mean_luma": 0.6733,
+            "mean_luma": 0.6734,
             "surround_luma": 0.4799,
             "readable": true
           },
@@ -4956,7 +4956,7 @@
             "contrast": 0.0707,
             "edge_density": 0.1528,
             "separation": 0.1845,
-            "mean_luma": 0.8594,
+            "mean_luma": 0.8595,
             "surround_luma": 0.6749,
             "readable": true
           },
@@ -5261,7 +5261,7 @@
             "name": "spark_particle_outer_dot_11",
             "contrast": 0.0555,
             "edge_density": 0.0938,
-            "separation": 0.1491,
+            "separation": 0.1492,
             "mean_luma": 0.8816,
             "surround_luma": 0.7324,
             "readable": true
@@ -5421,7 +5421,7 @@
           },
           {
             "name": "energy_trail_hot_core_07",
-            "contrast": 0.1452,
+            "contrast": 0.1453,
             "edge_density": 0.1124,
             "separation": 0.039,
             "mean_luma": 0.7984,
@@ -5469,7 +5469,7 @@
             "contrast": 0.1523,
             "edge_density": 0.3075,
             "separation": 0.0732,
-            "mean_luma": 0.7337,
+            "mean_luma": 0.7338,
             "surround_luma": 0.6606,
             "readable": true
           },
@@ -5667,7 +5667,7 @@
             "contrast": 0.2824,
             "edge_density": 0.2551,
             "separation": 0.0287,
-            "mean_luma": 0.4455,
+            "mean_luma": 0.4454,
             "surround_luma": 0.4742,
             "readable": true
           },
@@ -5685,7 +5685,7 @@
             "contrast": 0.1326,
             "edge_density": 0.1177,
             "separation": 0.023,
-            "mean_luma": 0.7631,
+            "mean_luma": 0.7632,
             "surround_luma": 0.7401,
             "readable": true
           },
@@ -5900,7 +5900,7 @@
             "name": "core_hot_streak_diagonal_06",
             "contrast": 0.0866,
             "edge_density": 0.3357,
-            "separation": 0.1496,
+            "separation": 0.1497,
             "mean_luma": 0.8756,
             "surround_luma": 0.7259,
             "readable": true
@@ -5961,7 +5961,7 @@
           },
           {
             "name": "core_violet_streak_counter_06",
-            "contrast": 0.0242,
+            "contrast": 0.0241,
             "edge_density": 0.0125,
             "separation": 0.0534,
             "mean_luma": 0.8169,
@@ -6045,7 +6045,7 @@
             "contrast": 0.2094,
             "edge_density": 0.3922,
             "separation": 0.1855,
-            "mean_luma": 0.6804,
+            "mean_luma": 0.6803,
             "surround_luma": 0.4949,
             "readable": true
           },
@@ -6107,7 +6107,7 @@
             "name": "core_iris_micro_glint_04",
             "contrast": 0.0348,
             "edge_density": 0.0309,
-            "separation": 0.0521,
+            "separation": 0.0522,
             "mean_luma": 0.8889,
             "surround_luma": 0.8367,
             "readable": true
@@ -6177,396 +6177,394 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 8.5,
+      "runtime_seconds": 4.9,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
-        "very_dark",
-        "blue_cyan_bias",
-        "dark_blue_cyan"
+        "very_dark"
       ],
       "readability": {
         "parts": [
           {
             "name": "watch_case_beveled",
-            "contrast": 0.1659,
-            "edge_density": 0.1086,
-            "separation": 0.0025,
-            "mean_luma": 0.1139,
-            "surround_luma": 0.1164,
+            "contrast": 0.1604,
+            "edge_density": 0.1042,
+            "separation": 0.0095,
+            "mean_luma": 0.1055,
+            "surround_luma": 0.096,
             "readable": true
           },
           {
             "name": "watch_bezel_ring",
-            "contrast": 0.15,
-            "edge_density": 0.087,
-            "separation": 0.0019,
-            "mean_luma": 0.1107,
-            "surround_luma": 0.1088,
+            "contrast": 0.1442,
+            "edge_density": 0.0829,
+            "separation": 0.0179,
+            "mean_luma": 0.0977,
+            "surround_luma": 0.0797,
             "readable": true
           },
           {
             "name": "watch_dial_glass",
-            "contrast": 0.2081,
-            "edge_density": 0.2013,
-            "separation": 0.1023,
-            "mean_luma": 0.1578,
-            "surround_luma": 0.0556,
+            "contrast": 0.2048,
+            "edge_density": 0.1978,
+            "separation": 0.1044,
+            "mean_luma": 0.1522,
+            "surround_luma": 0.0478,
             "readable": true
           },
           {
             "name": "strap_upper_rubber",
-            "contrast": 0.1709,
-            "edge_density": 0.2416,
-            "separation": 0.0204,
-            "mean_luma": 0.1915,
-            "surround_luma": 0.1711,
+            "contrast": 0.1646,
+            "edge_density": 0.2284,
+            "separation": 0.0179,
+            "mean_luma": 0.1767,
+            "surround_luma": 0.1588,
             "readable": true
           },
           {
             "name": "strap_lower_rubber",
-            "contrast": 0.0896,
-            "edge_density": 0.0704,
-            "separation": 0.0493,
-            "mean_luma": 0.0966,
-            "surround_luma": 0.0473,
+            "contrast": 0.0777,
+            "edge_density": 0.0534,
+            "separation": 0.0466,
+            "mean_luma": 0.0742,
+            "surround_luma": 0.0276,
             "readable": true
           },
           {
             "name": "strap_lower_ridge_01",
-            "contrast": 0.0587,
-            "edge_density": 0.0632,
-            "separation": 0.0649,
-            "mean_luma": 0.0281,
-            "surround_luma": 0.093,
+            "contrast": 0.0554,
+            "edge_density": 0.0598,
+            "separation": 0.0622,
+            "mean_luma": 0.0264,
+            "surround_luma": 0.0886,
             "readable": true
           },
           {
             "name": "strap_lower_ridge_02",
-            "contrast": 0.1009,
-            "edge_density": 0.2359,
-            "separation": 0.0385,
-            "mean_luma": 0.1378,
-            "surround_luma": 0.0993,
+            "contrast": 0.094,
+            "edge_density": 0.1906,
+            "separation": 0.0365,
+            "mean_luma": 0.1273,
+            "surround_luma": 0.0908,
             "readable": true
           },
           {
             "name": "strap_lower_ridge_03",
-            "contrast": 0.0792,
-            "edge_density": 0.1794,
-            "separation": 0.0308,
-            "mean_luma": 0.1944,
-            "surround_luma": 0.1636,
+            "contrast": 0.0734,
+            "edge_density": 0.1441,
+            "separation": 0.0285,
+            "mean_luma": 0.1738,
+            "surround_luma": 0.1453,
             "readable": true
           },
           {
             "name": "strap_lower_ridge_04",
-            "contrast": 0.088,
-            "edge_density": 0.1889,
-            "separation": 0.0337,
-            "mean_luma": 0.2061,
-            "surround_luma": 0.1723,
+            "contrast": 0.0781,
+            "edge_density": 0.1444,
+            "separation": 0.0295,
+            "mean_luma": 0.1737,
+            "surround_luma": 0.1441,
             "readable": true
           },
           {
             "name": "strap_lower_ridge_05",
-            "contrast": 0.0912,
-            "edge_density": 0.1951,
-            "separation": 0.0509,
-            "mean_luma": 0.2092,
-            "surround_luma": 0.1583,
+            "contrast": 0.0775,
+            "edge_density": 0.1438,
+            "separation": 0.0405,
+            "mean_luma": 0.1621,
+            "surround_luma": 0.1216,
             "readable": true
           },
           {
             "name": "strap_lower_ridge_06",
-            "contrast": 0.0892,
-            "edge_density": 0.1404,
-            "separation": 0.0262,
-            "mean_luma": 0.1482,
-            "surround_luma": 0.122,
+            "contrast": 0.0698,
+            "edge_density": 0.1015,
+            "separation": 0.0177,
+            "mean_luma": 0.0985,
+            "surround_luma": 0.0808,
             "readable": true
           },
           {
             "name": "strap_upper_ridge_01",
-            "contrast": 0.3074,
-            "edge_density": 0.3727,
-            "separation": 0.001,
-            "mean_luma": 0.2363,
-            "surround_luma": 0.2354,
+            "contrast": 0.3047,
+            "edge_density": 0.3681,
+            "separation": 0.0022,
+            "mean_luma": 0.2325,
+            "surround_luma": 0.2302,
             "readable": true
           },
           {
             "name": "strap_upper_ridge_02",
-            "contrast": 0.2132,
-            "edge_density": 0.2685,
-            "separation": 0.0804,
-            "mean_luma": 0.2231,
-            "surround_luma": 0.1428,
+            "contrast": 0.2112,
+            "edge_density": 0.2593,
+            "separation": 0.0794,
+            "mean_luma": 0.215,
+            "surround_luma": 0.1357,
             "readable": true
           },
           {
             "name": "strap_upper_ridge_03",
-            "contrast": 0.1003,
-            "edge_density": 0.1766,
-            "separation": 0.0391,
-            "mean_luma": 0.1982,
-            "surround_luma": 0.2373,
+            "contrast": 0.0959,
+            "edge_density": 0.1636,
+            "separation": 0.0374,
+            "mean_luma": 0.1857,
+            "surround_luma": 0.2231,
             "readable": true
           },
           {
             "name": "strap_upper_ridge_04",
-            "contrast": 0.102,
-            "edge_density": 0.3091,
-            "separation": 0.0152,
-            "mean_luma": 0.2382,
-            "surround_luma": 0.223,
+            "contrast": 0.0934,
+            "edge_density": 0.2961,
+            "separation": 0.0156,
+            "mean_luma": 0.2187,
+            "surround_luma": 0.2031,
             "readable": true
           },
           {
             "name": "strap_upper_ridge_05",
-            "contrast": 0.115,
-            "edge_density": 0.4439,
-            "separation": 0.0301,
-            "mean_luma": 0.2567,
-            "surround_luma": 0.2266,
+            "contrast": 0.1047,
+            "edge_density": 0.4118,
+            "separation": 0.0285,
+            "mean_luma": 0.2303,
+            "surround_luma": 0.2017,
             "readable": true
           },
           {
             "name": "strap_upper_ridge_06",
-            "contrast": 0.1125,
-            "edge_density": 0.4171,
-            "separation": 0.015,
-            "mean_luma": 0.1845,
-            "surround_luma": 0.1695,
+            "contrast": 0.1027,
+            "edge_density": 0.3886,
+            "separation": 0.0138,
+            "mean_luma": 0.1596,
+            "surround_luma": 0.1458,
             "readable": true
           },
           {
             "name": "dial_hour_marker_01",
-            "contrast": 0.2932,
+            "contrast": 0.2921,
             "edge_density": 0.619,
-            "separation": 0.3334,
-            "mean_luma": 0.4645,
-            "surround_luma": 0.1311,
+            "separation": 0.3323,
+            "mean_luma": 0.4605,
+            "surround_luma": 0.1283,
             "readable": true
           },
           {
             "name": "dial_hour_marker_02",
-            "contrast": 0.2537,
-            "edge_density": 0.64,
-            "separation": 0.3695,
-            "mean_luma": 0.5623,
-            "surround_luma": 0.1928,
+            "contrast": 0.253,
+            "edge_density": 0.6533,
+            "separation": 0.3667,
+            "mean_luma": 0.5543,
+            "surround_luma": 0.1876,
             "readable": true
           },
           {
             "name": "dial_hour_marker_03",
-            "contrast": 0.2593,
-            "edge_density": 0.56,
-            "separation": 0.5261,
-            "mean_luma": 0.5906,
-            "surround_luma": 0.0646,
+            "contrast": 0.2576,
+            "edge_density": 0.5733,
+            "separation": 0.5205,
+            "mean_luma": 0.5823,
+            "surround_luma": 0.0619,
             "readable": true
           },
           {
             "name": "dial_hour_marker_04",
-            "contrast": 0.3001,
-            "edge_density": 0.6339,
-            "separation": 0.3827,
-            "mean_luma": 0.5226,
-            "surround_luma": 0.1399,
+            "contrast": 0.2983,
+            "edge_density": 0.6429,
+            "separation": 0.3792,
+            "mean_luma": 0.5169,
+            "surround_luma": 0.1377,
             "readable": true
           },
           {
             "name": "dial_hour_marker_05",
-            "contrast": 0.33,
-            "edge_density": 0.5568,
-            "separation": 0.4579,
-            "mean_luma": 0.4808,
-            "surround_luma": 0.0229,
+            "contrast": 0.3288,
+            "edge_density": 0.5455,
+            "separation": 0.4557,
+            "mean_luma": 0.4782,
+            "surround_luma": 0.0226,
             "readable": true
           },
           {
             "name": "dial_hour_marker_07",
-            "contrast": 0.2124,
+            "contrast": 0.2129,
             "edge_density": 0.6071,
-            "separation": 0.2958,
-            "mean_luma": 0.5598,
-            "surround_luma": 0.2639,
+            "separation": 0.2945,
+            "mean_luma": 0.5542,
+            "surround_luma": 0.2597,
             "readable": true
           },
           {
             "name": "dial_hour_marker_08",
-            "contrast": 0.2636,
+            "contrast": 0.2623,
             "edge_density": 0.6625,
-            "separation": 0.5357,
-            "mean_luma": 0.5837,
-            "surround_luma": 0.0481,
+            "separation": 0.5293,
+            "mean_luma": 0.576,
+            "surround_luma": 0.0466,
             "readable": true
           },
           {
             "name": "dial_hour_marker_09",
-            "contrast": 0.2368,
+            "contrast": 0.2367,
             "edge_density": 0.5167,
-            "separation": 0.4232,
-            "mean_luma": 0.6307,
-            "surround_luma": 0.2076,
+            "separation": 0.4211,
+            "mean_luma": 0.622,
+            "surround_luma": 0.201,
             "readable": true
           },
           {
             "name": "dial_hour_marker_10",
-            "contrast": 0.2346,
+            "contrast": 0.2347,
             "edge_density": 0.7381,
-            "separation": 0.3318,
-            "mean_luma": 0.5664,
-            "surround_luma": 0.2346,
+            "separation": 0.3311,
+            "mean_luma": 0.5597,
+            "surround_luma": 0.2286,
             "readable": true
           },
           {
             "name": "dial_hour_marker_11",
-            "contrast": 0.284,
+            "contrast": 0.2839,
             "edge_density": 0.6349,
-            "separation": 0.4359,
-            "mean_luma": 0.5312,
-            "surround_luma": 0.0953,
+            "separation": 0.4342,
+            "mean_luma": 0.5279,
+            "surround_luma": 0.0937,
             "readable": true
           },
           {
             "name": "watch_dial_logo_text",
-            "contrast": 0.2931,
-            "edge_density": 0.7065,
-            "separation": 0.2184,
-            "mean_luma": 0.3361,
-            "surround_luma": 0.1178,
+            "contrast": 0.292,
+            "edge_density": 0.7032,
+            "separation": 0.2175,
+            "mean_luma": 0.3343,
+            "surround_luma": 0.1168,
             "readable": true
           },
           {
             "name": "watch_minute_hand",
-            "contrast": 0.3047,
+            "contrast": 0.3035,
             "edge_density": 0.7143,
-            "separation": 0.2335,
-            "mean_luma": 0.3868,
-            "surround_luma": 0.1533,
+            "separation": 0.2324,
+            "mean_luma": 0.3841,
+            "surround_luma": 0.1517,
             "readable": true
           },
           {
             "name": "watch_hour_hand",
-            "contrast": 0.2988,
-            "edge_density": 0.6068,
-            "separation": 0.0422,
-            "mean_luma": 0.3111,
-            "surround_luma": 0.2688,
+            "contrast": 0.298,
+            "edge_density": 0.6111,
+            "separation": 0.0424,
+            "mean_luma": 0.3096,
+            "surround_luma": 0.2672,
             "readable": true
           },
           {
             "name": "watch_center_pin",
-            "contrast": 0.273,
+            "contrast": 0.2721,
             "edge_density": 0.5965,
-            "separation": 0.0363,
-            "mean_luma": 0.2662,
-            "surround_luma": 0.3025,
+            "separation": 0.0362,
+            "mean_luma": 0.2648,
+            "surround_luma": 0.3011,
             "readable": true
           },
           {
             "name": "side_crown_knurled",
-            "contrast": 0.0734,
-            "edge_density": 0.0621,
-            "separation": 0.0547,
-            "mean_luma": 0.0411,
-            "surround_luma": 0.0958,
+            "contrast": 0.0661,
+            "edge_density": 0.0553,
+            "separation": 0.0491,
+            "mean_luma": 0.0362,
+            "surround_luma": 0.0853,
             "readable": true
           },
           {
             "name": "watch_case_faceted_highlight_left",
-            "contrast": 0.2866,
+            "contrast": 0.2793,
             "edge_density": 0.3556,
-            "separation": 0.1713,
-            "mean_luma": 0.244,
-            "surround_luma": 0.0726,
+            "separation": 0.167,
+            "mean_luma": 0.2323,
+            "surround_luma": 0.0653,
             "readable": true
           },
           {
             "name": "watch_case_faceted_highlight_right",
-            "contrast": 0.207,
+            "contrast": 0.206,
             "edge_density": 0.2019,
-            "separation": 0.0785,
-            "mean_luma": 0.1063,
-            "surround_luma": 0.0279,
+            "separation": 0.0783,
+            "mean_luma": 0.1055,
+            "surround_luma": 0.0272,
             "readable": true
           },
           {
             "name": "blue_reflection_edge_streak",
-            "contrast": 0.0789,
+            "contrast": 0.077,
             "edge_density": 0.0182,
-            "separation": 0.0598,
-            "mean_luma": 0.0592,
-            "surround_luma": 0.119,
+            "separation": 0.0584,
+            "mean_luma": 0.0569,
+            "surround_luma": 0.1153,
             "readable": true
           },
           {
             "name": "strap_buckle_brushed_bridge",
-            "contrast": 0.0922,
-            "edge_density": 0.1084,
-            "separation": 0.0127,
-            "mean_luma": 0.1117,
-            "surround_luma": 0.099,
+            "contrast": 0.0725,
+            "edge_density": 0.0767,
+            "separation": 0.0107,
+            "mean_luma": 0.0692,
+            "surround_luma": 0.0586,
             "readable": true
           },
           {
             "name": "dial_sublogo_decal_highlight",
-            "contrast": 0.3343,
+            "contrast": 0.3335,
             "edge_density": 0.5046,
-            "separation": 0.2537,
-            "mean_luma": 0.3885,
-            "surround_luma": 0.1348,
+            "separation": 0.253,
+            "mean_luma": 0.3865,
+            "surround_luma": 0.1336,
             "readable": true
           },
           {
             "name": "strap_hole_cutline_reflection_01",
-            "contrast": 0.1035,
-            "edge_density": 0.5595,
-            "separation": 0.0433,
-            "mean_luma": 0.126,
-            "surround_luma": 0.0828,
+            "contrast": 0.0971,
+            "edge_density": 0.5238,
+            "separation": 0.0408,
+            "mean_luma": 0.1178,
+            "surround_luma": 0.077,
             "readable": true
           },
           {
             "name": "strap_hole_cutline_reflection_02",
-            "contrast": 0.0648,
-            "edge_density": 0.25,
-            "separation": 0.0272,
-            "mean_luma": 0.1981,
-            "surround_luma": 0.1709,
+            "contrast": 0.0605,
+            "edge_density": 0.2381,
+            "separation": 0.0253,
+            "mean_luma": 0.1808,
+            "surround_luma": 0.1554,
             "readable": true
           },
           {
             "name": "strap_hole_cutline_reflection_03",
-            "contrast": 0.0638,
-            "edge_density": 0.3974,
-            "separation": 0.0,
-            "mean_luma": 0.2093,
-            "surround_luma": 0.2093,
+            "contrast": 0.0577,
+            "edge_density": 0.3077,
+            "separation": 0.0004,
+            "mean_luma": 0.1839,
+            "surround_luma": 0.1843,
             "readable": true
           },
           {
             "name": "strap_hole_cutline_reflection_04",
-            "contrast": 0.0699,
-            "edge_density": 0.3077,
-            "separation": 0.0497,
-            "mean_luma": 0.2497,
-            "surround_luma": 0.2,
+            "contrast": 0.0613,
+            "edge_density": 0.2198,
+            "separation": 0.0436,
+            "mean_luma": 0.2096,
+            "surround_luma": 0.166,
             "readable": true
           },
           {
             "name": "strap_hole_cutline_reflection_05",
-            "contrast": 0.0682,
-            "edge_density": 0.3333,
-            "separation": 0.053,
-            "mean_luma": 0.249,
-            "surround_luma": 0.196,
+            "contrast": 0.0569,
+            "edge_density": 0.2619,
+            "separation": 0.0436,
+            "mean_luma": 0.1955,
+            "surround_luma": 0.1519,
             "readable": true
           }
         ],
@@ -6587,12 +6585,12 @@
       "pass": true,
       "visual_score": 98,
       "technical_score": 100,
-      "runtime_seconds": 5.7,
+      "runtime_seconds": 4.8,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\reference_match_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\reference_match_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark",
@@ -6777,12 +6775,12 @@
       "pass": true,
       "visual_score": 99,
       "technical_score": 100,
-      "runtime_seconds": 5.4,
+      "runtime_seconds": 4.8,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\scene_repair_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\scene_repair_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\scene_repair_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\scene_repair_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "warm_red_bias"
@@ -7189,12 +7187,12 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 6.1,
+      "runtime_seconds": 5.8,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\sci_fi_corridor_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\sci_fi_corridor_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\sci_fi_corridor_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\sci_fi_corridor_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark",
@@ -7248,12 +7246,12 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 5.3,
+      "runtime_seconds": 5.0,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark"
@@ -7512,12 +7510,12 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 9.1,
+      "runtime_seconds": 8.6,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\turntable_animation_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\turntable_animation_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\turntable_animation_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\turntable_animation_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "neutral"
@@ -8003,22 +8001,22 @@
       "animation_frame_proof": {
         "frame_count": 3,
         "frames": [
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png"
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png"
         ],
         "pairs": [
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
             "mean_rgb_delta": 0.10494615137577057,
             "max_rgb_delta": 0.7137255072593689,
             "mean_luma_delta": 0.10300540179014206,
             "changed_pixel_ratio": 0.4399151234567901
           },
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png",
             "mean_rgb_delta": 0.10494478046894073,
             "max_rgb_delta": 0.7137255072593689,
             "mean_luma_delta": 0.10300354659557343,
@@ -8043,12 +8041,12 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 11.3,
+      "runtime_seconds": 7.8,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\web_scroll_hero_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\web_scroll_hero_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\web_scroll_hero_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\web_scroll_hero_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "dark",
@@ -8230,22 +8228,22 @@
       "animation_frame_proof": {
         "frame_count": 3,
         "frames": [
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
-          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png"
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png"
         ],
         "pairs": [
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
             "mean_rgb_delta": 0.06761130690574646,
             "max_rgb_delta": 0.8392156958580017,
             "mean_luma_delta": 0.06798283755779266,
             "changed_pixel_ratio": 0.33315586419753085
           },
           {
-            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
-            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png",
+            "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+            "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png",
             "mean_rgb_delta": 0.07208635658025742,
             "max_rgb_delta": 0.8352941274642944,
             "mean_luma_delta": 0.07096830755472183,

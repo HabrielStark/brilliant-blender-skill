@@ -197,7 +197,7 @@
     {"op": "create_decal_plane", "name": "front_decal_service_plate_craft", "location": [0.16,-0.834,0.98], "rotation": [90,0,0], "size": [0.34,0.12,0.012], "collection": "SUBJECT", "material": "edge_decal_blue_safe", "parent": "monolith_core"},
     {"op": "create_text_label", "name": "front_decal_service_label_text", "text": "EDGE", "location": [0.16,-0.843,0.985], "rotation": [90,0,0], "size": 0.065, "align_x": "CENTER", "align_y": "CENTER", "extrude": 0.0012, "collection": "SUBJECT", "material": "screen_warm_status_safe", "parent": "monolith_core"},
     {"op": "create_lighting_rig", "schema": {"lighting_rig": "low_spec_readable_safe", "lights": [{"name": "key_readable_soft", "type": "AREA", "power": 820, "size": 5.8, "position_role": "front_left_high"}, {"name": "rim_warm_separation", "type": "AREA", "power": 320, "size": 2.2, "color": [1.0,0.82,0.56], "position_role": "rim"}], "world": {"color": [0.42,0.45,0.5], "strength": 0.66}}},
-    {"op": "apply_post", "schema": {"post_preset": "safe_laptop_readable_contrast", "view_transform": "Filmic", "look": "Medium High Contrast", "exposure": 0.08, "gamma": 1.0}},
+    {"op": "apply_post", "schema": {"post_preset": "safe_laptop_clean_daylight", "view_transform": "Filmic", "look": "Medium High Contrast", "exposure": 0.08, "gamma": 1.0}},
     {"op": "create_camera", "schema": {"camera_name": "camera_safe", "preset": "hero_low_angle", "target": "monolith_core", "look_at": [0,-0.2,1.92], "location": [3.3,-6.45,2.52], "lens": {"focal_length_mm": 36}}},
     {"op": "set_scene_metadata", "data": {"final_camera": "camera_safe"}}
   ]},

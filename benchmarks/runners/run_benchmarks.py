@@ -32,6 +32,7 @@ from blender_cinematic.imaging import (
 )
 from blender_cinematic.linters import lint_scene
 from blender_cinematic.preflight import collect_hardware_report
+from blender_cinematic.recipes import validate_recipe
 from blender_cinematic.visual_review import style_tags_for_preview
 from blender_cinematic.workspace import WorkspaceResolver, task_workspace
 
@@ -632,6 +633,11 @@ def run_recipe(task, recipe, mode, blender_exe, out_root):
             scroll_samples=samples,
         )
         insp["camera_path_json"] = written.get("camera_path")
+    # A recipe that fails schema validation must fail the task, not silently
+    # render with whatever the builder happened to tolerate.
+    recipe_schema_failures = [
+        f"recipe schema: {i.message}" for i in validate_recipe(recipe).issues
+        if i.severity == "error"]
     iteration = 0
     repair_history = []
     while True:
@@ -664,6 +670,7 @@ def run_recipe(task, recipe, mode, blender_exe, out_root):
         resolver.write_text(base / "iterations" / f"iter_{iteration:02d}_eval.json", json.dumps(ev.to_dict(), indent=2))
 
         failures = list(ev.hard_fail_reasons)
+        failures.extend(recipe_schema_failures)
         failures.extend(visual_style_tag_failures(visual_style_tags, checks))
         failures.extend(eval_defect_failures(ev.defects, checks))
         if not pipe.get("ok"):

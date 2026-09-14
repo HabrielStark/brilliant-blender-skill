@@ -105,6 +105,23 @@ explicit control pass `compositor.glare` `{type, threshold, size, strength,
 quality}` (`type` accepts `fog_glow`/`bloom`/`streaks`/`ghosts`…; Blender 5.0
 menu sockets take title-case values, handled internally).
 
+The other `effects` fields are live too — they extend the same compositor
+chain (`color_balance → mist → glare → vignette → output`):
+
+- `effects.vignette` (`off`/`subtle`/`strong`): ellipse-mask + blur multiply
+  that darkens frame corners. Use `subtle` for product heroes to keep the
+  eye on the subject.
+- `effects.mist` (`true`) enables the **mist pass** and fades depth toward a
+  fog color — atmospheric depth for landscapes/exteriors. Tune via
+  `compositor.mist` `{start, depth, falloff, color}` (world-space distances;
+  pick a fog color near the horizon/sky tone, e.g. warm peach for golden
+  hour).
+- `effects.color_balance` (`neutral`/`warm`/`cool`): multiplies the frame by
+  a warm or cool tint — cheap global grade.
+
+Every `effects`/`compositor` value is schema-constrained — a typo fails
+validation instead of silently rendering flat.
+
 ## Web/export policy
 
 For GLB targets, set `export_policy.web_safe`. Unsupported shader tricks

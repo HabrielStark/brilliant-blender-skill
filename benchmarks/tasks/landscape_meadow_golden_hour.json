@@ -90,6 +90,7 @@
 
     {"op": "create_lighting_rig", "schema": {"lighting_rig": "golden_hour_low_sun", "lights": [{"name": "sun_key_warm", "type": "AREA", "power": 700, "size": 5, "color": [1.0,0.62,0.32], "position_role": "rim"}, {"name": "sky_fill_cool", "type": "AREA", "power": 180, "size": 7, "color": [0.55,0.65,0.85], "position_role": "front_left_high"}], "world": {"color": [0.16,0.13,0.11], "strength": 0.6}}},
     {"op": "create_camera", "schema": {"camera_name": "camera_meadow", "preset": "hero_low_angle", "target": "mound_hero_grassy", "look_at": [0,0.3,0.75], "location": [3.4,-4.4,1.9], "composition": {"subject_screen_coverage": 0.62, "safe_margin": 0.14}, "lens": {"focal_length_mm": 45, "dof": true, "focus_target": "boulder_granite_main"}}},
+    {"op": "apply_post", "schema": {"post_preset": "atmospheric_depth", "view_transform": "AgX", "look": "Medium High Contrast", "exposure": 0.05, "gamma": 1.0, "effects": {"mist": true, "color_balance": "warm"}, "compositor": {"mist": {"start": 12.0, "depth": 45.0, "color": [0.72,0.62,0.5,1.0]}}}},
     {"op": "set_scene_metadata", "data": {"final_camera": "camera_meadow"}}
   ]},
   "baseline_recipe": {"operations": [

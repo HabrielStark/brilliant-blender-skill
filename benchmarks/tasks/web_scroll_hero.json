@@ -57,7 +57,7 @@
     {"op": "create_camera", "schema": {"camera_name": "camera_scroll_start", "preset": "scroll_hero_start", "target": "energy_core", "look_at": [0,0,1.6], "location": [0,-12,3.7], "lens": {"focal_length_mm": 30, "dof": true, "focus_target": "energy_core"}, "composition": {"subject_screen_coverage": 0.34, "safe_margin": 0.18}}},
     {"op": "create_animation", "schema": {"animation_name": "CoreIdle", "mode": "turntable", "frame_start": 1, "frame_end": 120, "fps": 24, "loop": true, "targets": ["orbital_ring_primary","orbital_ring_vertical","orbital_ring_diagonal","aurora_trail_ribbon_01","aurora_trail_ribbon_02","aurora_trail_ribbon_03"], "export": {"include_in_glb": true, "clip_name": "CoreIdle"}}},
     {"op": "create_animation", "schema": {"animation_name": "ScrollCameraMove", "mode": "scroll_linked", "frame_start": 1, "frame_end": 120, "fps": 24, "camera": {"name": "camera_scroll_start", "start_location": [0,-12,3.7], "end_location": [4,-9,3.35], "dof_target": "energy_core"}, "export": {"include_in_glb": true, "clip_name": "ScrollCameraMove"}}},
-    {"op": "apply_post", "schema": {"post_preset": "aurora_web_readable", "view_transform": "AgX", "exposure": 0.45, "gamma": 1.0}},
+    {"op": "apply_post", "schema": {"post_preset": "website_hero", "view_transform": "AgX", "exposure": 0.45, "gamma": 1.0}},
     {"op": "set_scene_metadata", "data": {"final_camera": "camera_scroll_start"}}
   ]},
   "baseline_recipe": {"operations": [

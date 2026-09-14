@@ -163,7 +163,7 @@
 
     {"op": "create_rig", "schema": {"rig_name": "exploded_rig", "controls": [{"name": "CTRL_explode", "type": "empty", "drives": ["case_top_shell","board_pcb_round","battery_cell_brass"]}, {"name": "CTRL_board_layer", "type": "empty", "drives": ["board_pcb_round","board_chip_controller_black","board_chip_sensor_black","board_connector_white_socket"]}, {"name": "CTRL_case_cutaway", "type": "empty", "drives": ["case_cutaway_translucent_panel","connector_ribbon_cable_amber"]}], "drivers": []}},
     {"op": "create_lighting_rig", "schema": {"lighting_rig": "technical_clean_contrast", "lights": [{"name": "key_clean", "type": "AREA", "power": 760, "size": 5.6, "position_role": "top"}, {"name": "fill_clean", "type": "AREA", "power": 360, "size": 5.0, "position_role": "front_left_high"}, {"name": "rim_blue_axis", "type": "AREA", "power": 150, "size": 2.6, "color": [0.72,0.84,1.0], "position_role": "rim"}], "world": {"color": [0.48,0.5,0.52], "strength": 0.62}}},
-    {"op": "apply_post", "schema": {"post_preset": "technical_cutaway_crisp_contrast", "view_transform": "Filmic", "look": "Medium High Contrast", "exposure": 0.05, "gamma": 1.0}},
+    {"op": "apply_post", "schema": {"post_preset": "technical_cutaway_crisp_bright", "view_transform": "Filmic", "look": "Medium High Contrast", "exposure": 0.05, "gamma": 1.0}},
     {"op": "create_camera", "schema": {"camera_name": "camera_technical", "preset": "orthographic_technical", "target": "board_pcb_round", "look_at": [0,0,1.55], "location": [5.8,-7.2,4.7], "lens": {"focal_length_mm": 45}, "composition": {"ortho_scale": 5.6, "subject_screen_coverage": 0.52, "safe_margin": 0.14}}},
     {"op": "set_scene_metadata", "data": {"final_camera": "camera_technical"}}
   ]},

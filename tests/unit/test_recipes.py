@@ -212,6 +212,28 @@ def test_post_effects_bloom_and_compositor_glare_schema():
     assert res.passed, [i.message for i in res.issues]
 
 
+def test_post_effects_full_compositor_chain_schema():
+    r = {"operations": [
+        {"op": "apply_post", "schema": {
+            "post_preset": "atmospheric_depth",
+            "effects": {"bloom": "high", "vignette": "subtle",
+                        "mist": True, "color_balance": "warm"},
+            "compositor": {"mist": {"start": 10.0, "depth": 50.0,
+                                    "color": [0.7, 0.6, 0.5, 1.0]}}}},
+    ]}
+    res = validate_recipe(r)
+    assert res.passed, [i.message for i in res.issues]
+
+
+def test_post_effects_rejects_unknown_levels():
+    for bad in ({"bloom": "blinding"}, {"vignette": "heavy"},
+                {"color_balance": "sepia"}):
+        r = {"operations": [{"op": "apply_post",
+                             "schema": {"effects": bad}}]}
+        res = validate_recipe(r)
+        assert not res.passed, bad
+
+
 def test_procedural_texture_rejects_unknown_type():
     r = {"operations": [
         {"op": "create_procedural_texture", "name": "t", "type": "NOT_A_TEXTURE"}

@@ -2142,7 +2142,7 @@ def op_create_vfx(p):
 
 
 def op_apply_post(p):
-    """Color-management 'look' + optional compositor glare/bloom."""
+    """Color-management 'look' + compositor effects (balance/mist/glare/vignette)."""
     schema = p["schema"]
     vs = bpy.context.scene.view_settings
     want = schema.get("view_transform", "Filmic")
@@ -2158,8 +2158,10 @@ def op_apply_post(p):
     vs.gamma = float(schema.get("gamma", 1.0))
     bpy.context.scene["post_preset"] = schema.get("post_preset", "clean_product")
     result = {"post": schema.get("post_preset"), "view_transform": vs.view_transform}
-    glare = (schema.get("compositor") or {}).get("glare")
-    bloom = str(((schema.get("effects") or {}).get("bloom") or "off")).lower()
+    effects = schema.get("effects") or {}
+    comp = schema.get("compositor") or {}
+    glare = comp.get("glare")
+    bloom = str(effects.get("bloom") or "off").lower()
     if glare is None and bloom != "off":
         glare = {"off": None,
                  "low": {"threshold": 1.0, "size": 6, "strength": 0.8},
@@ -2167,76 +2169,152 @@ def op_apply_post(p):
                  "high": {"threshold": 0.6, "size": 8, "strength": 1.3},
                  }.get(bloom) or {"threshold": 0.8, "size": 7, "strength": 1.0}
         glare = dict(glare, type=glare.get("type", "fog_glow"))
-    if glare:
-        result["glare"] = _apply_compositor_glare(glare)
+    fx = {
+        "glare": glare,
+        "vignette": comp.get("vignette") or effects.get("vignette") or "off",
+        "mist": comp.get("mist") if "mist" in comp else effects.get("mist"),
+        "color_balance": comp.get("color_balance") or effects.get("color_balance") or "neutral",
+    }
+    if fx["glare"] or fx["vignette"] != "off" or fx["mist"] or fx["color_balance"] != "neutral":
+        result["compositor"] = _apply_compositor(fx)
     return result
 
 
-def _apply_compositor_glare(spec):
-    """Wire RenderLayers -> Glare -> output. Blender 5.0 moved compositor to a
-    node group with interface sockets and title-case menu values."""
+def _mix_node(nt, blend):
+    """MixRGB is 'ShaderNodeMixRGB' in 5.x compositor, 'CompositorNodeMixRGB'
+    in <=4.x; socket names differ ('Factor' vs 'Fac') so index them."""
+    try:
+        m = nt.nodes.new("ShaderNodeMixRGB")
+    except RuntimeError:
+        m = nt.nodes.new("CompositorNodeMixRGB")
+    m.blend_type = blend
+    return m.inputs[0], m.inputs[1], m.inputs[2], m.outputs[0]
+
+
+def _set_menu(node, socket_name, value, fallbacks=()):
+    sock = node.inputs.get(socket_name)
+    if sock is None:
+        return False
+    for cand in (value, *fallbacks):
+        try:
+            sock.default_value = cand
+            return True
+        except (TypeError, ValueError):
+            continue
+    return False
+
+
+def _apply_compositor(fx):
+    """Wire RenderLayers -> [color balance] -> [mist] -> [glare] -> [vignette]
+    -> output. Blender 5.0 moved the compositor to a node group with interface
+    sockets and title-case menu values; 4.x uses scene.node_tree."""
     sc = bpy.context.scene
-    gtype = spec.get("type", "fog_glow")
-    threshold = float(spec.get("threshold", 0.8))
-    size = int(spec.get("size", 7))
-    strength = float(spec.get("strength", 1.0))
+    # The mist pass must be enabled before the Render Layers node exposes it.
+    mist_spec = fx.get("mist")
+    if mist_spec:
+        mist_cfg = mist_spec if isinstance(mist_spec, dict) else {}
+        vl = getattr(bpy.context, "view_layer", None)
+        if vl is not None and hasattr(vl, "use_pass_mist"):
+            vl.use_pass_mist = True
+        world = sc.world or bpy.data.worlds.new("World")
+        sc.world = world
+        ms = getattr(world, "mist_settings", None)
+        if ms is not None:
+            try:
+                ms.use_mist = True
+            except AttributeError:
+                pass
+            ms.start = float(mist_cfg.get("start", 8.0))
+            ms.depth = float(mist_cfg.get("depth", 40.0))
+            ms.falloff = str(mist_cfg.get("falloff", "QUADRATIC")).upper()
     if hasattr(sc, "compositing_node_group"):
-        ng = sc.compositing_node_group or bpy.data.node_groups.new(
+        nt = sc.compositing_node_group or bpy.data.node_groups.new(
             "BCAS_Compositor", "CompositorNodeTree")
-        sc.compositing_node_group = ng
+        sc.compositing_node_group = nt
         sc.use_nodes = True
-        if not any(s.in_out == "OUTPUT" for s in ng.interface.items_tree):
-            ng.interface.new_socket("Image", in_out="OUTPUT", socket_type="NodeSocketColor")
-        rl = ng.nodes.get("Render Layers") or ng.nodes.new("CompositorNodeRLayers")
-        gl = ng.nodes.new("CompositorNodeGlare")
-        out = ng.nodes.get("Group Output") or ng.nodes.new("NodeGroupOutput")
-        def _set(socket_name, value, fallbacks=()):
-            sock = gl.inputs.get(socket_name)
-            if sock is None:
-                return False
-            for cand in (value, *fallbacks):
-                try:
-                    sock.default_value = cand
-                    return True
-                except (TypeError, ValueError):
-                    continue
-            return False
-        _set("Type", gtype, ("Fog Glow", "FOG_GLOW", "Bloom"))
-        _set("Quality", spec.get("quality", "high"), ("High", "HIGH"))
-        for sock_name, val in (("Threshold", threshold), ("Size", size),
-                               ("Strength", strength)):
+        if not any(s.in_out == "OUTPUT" for s in nt.interface.items_tree):
+            nt.interface.new_socket("Image", in_out="OUTPUT", socket_type="NodeSocketColor")
+        out = nt.nodes.get("Group Output") or nt.nodes.new("NodeGroupOutput")
+        path = "node_group"
+    else:
+        sc.use_nodes = True
+        nt = sc.node_tree
+        if nt is None:
+            return {"compositor": False, "error": "no compositor node tree"}
+        out = nt.nodes.get("Composite") or nt.nodes.new("CompositorNodeComposite")
+        path = "legacy"
+    rl = nt.nodes.get("Render Layers") or nt.nodes.new("CompositorNodeRLayers")
+    src = rl.outputs["Image"]
+    made = []
+
+    tint = {"warm": (1.05, 0.99, 0.9, 1.0),
+            "cool": (0.92, 0.99, 1.08, 1.0)}.get(str(fx.get("color_balance", "neutral")).lower())
+    if tint:
+        fac, c1, c2, out_s = _mix_node(nt, "MULTIPLY")
+        fac.default_value = 1.0
+        c2.default_value = tint
+        nt.links.new(src, c1)
+        src = out_s
+        made.append("color_balance")
+
+    if mist_spec and rl.outputs.get("Mist") is not None:
+        mist_cfg = mist_spec if isinstance(mist_spec, dict) else {}
+        fac, c1, c2, out_s = _mix_node(nt, "MIX")
+        c2.default_value = tuple(mist_cfg.get("color", [0.55, 0.55, 0.6, 1.0]))
+        nt.links.new(rl.outputs["Mist"], fac)
+        nt.links.new(src, c1)
+        src = out_s
+        made.append("mist")
+
+    glare = fx.get("glare")
+    if glare:
+        gl = nt.nodes.new("CompositorNodeGlare")
+        gtype = glare.get("type", "fog_glow")
+        _set_menu(gl, "Type", gtype, ("Fog Glow", "FOG_GLOW", gtype.title(),
+                                    gtype.upper().replace(" ", "_"), "BLOOM", "Bloom"))
+        _set_menu(gl, "Quality", glare.get("quality", "high"), ("High", "HIGH"))
+        for sock_name, val in (("Threshold", float(glare.get("threshold", 0.8))),
+                               ("Size", int(glare.get("size", 7))),
+                               ("Strength", float(glare.get("strength", 1.0)))):
             sock = gl.inputs.get(sock_name)
             if sock is not None:
                 try:
                     sock.default_value = val
                 except (TypeError, ValueError):
                     pass
-        if not gl.inputs["Image"].is_linked:
-            ng.links.new(rl.outputs["Image"], gl.inputs["Image"])
-        if not out.inputs["Image"].is_linked:
-            ng.links.new(gl.outputs["Image"], out.inputs["Image"])
-        return {"glare": True, "path": "node_group", "type": gtype}
-    # Blender 4.x legacy compositor
-    sc.use_nodes = True
-    nt = sc.node_tree
-    if nt is None:
-        return {"glare": False, "error": "no compositor node tree"}
-    rl = nt.nodes.get("Render Layers") or nt.nodes.new("CompositorNodeRLayers")
-    gl = nt.nodes.new("CompositorNodeGlare")
-    for cand in (gtype.upper().replace(" ", "_"), "FOG_GLOW", "BLOOM"):
+        # legacy property path for Blender < 5
+        for cand in (gtype.upper().replace(" ", "_"), "FOG_GLOW", "BLOOM"):
+            try:
+                gl.glare_type = cand
+                break
+            except (TypeError, ValueError, AttributeError):
+                continue
+        nt.links.new(src, gl.inputs["Image"])
+        src = gl.outputs["Image"]
+        made.append("glare")
+
+    vig = {"subtle": (0.78, 0.92, 220), "strong": (0.6, 0.78, 120)}.get(
+        str(fx.get("vignette", "off")).lower())
+    if vig:
+        em = nt.nodes.new("CompositorNodeEllipseMask")
+        em.inputs["Size"].default_value = (vig[0], vig[1])
+        em.inputs["Value"].default_value = 1.0
+        blur = nt.nodes.new("CompositorNodeBlur")
         try:
-            gl.glare_type = cand
-            break
+            blur.inputs["Size"].default_value = (vig[2], vig[2])
         except (TypeError, ValueError):
-            continue
-    gl.threshold = threshold
-    gl.size = size
-    comp = nt.nodes.get("Composite") or nt.nodes.new("CompositorNodeComposite")
-    if not gl.inputs["Image"].is_linked:
-        nt.links.new(rl.outputs["Image"], gl.inputs["Image"])
-    if not comp.inputs["Image"].is_linked:
-        nt.links.new(gl.outputs["Image"], comp.inputs["Image"])
-    return {"glare": True, "path": "legacy", "type": gl.glare_type}
+            blur.size_x = blur.size_y = vig[2]
+        fac, c1, c2, out_s = _mix_node(nt, "MULTIPLY")
+        fac.default_value = 1.0
+        nt.links.new(em.outputs["Mask"], blur.inputs["Image"])
+        nt.links.new(blur.outputs["Image"], c2)
+        nt.links.new(src, c1)
+        src = out_s
+        made.append("vignette")
+
+    if not out.inputs["Image"].is_linked:
+        nt.links.new(src, out.inputs["Image"])
+    return {"compositor": True, "path": path, "effects": made}
 
 
 def op_create_rig(p):

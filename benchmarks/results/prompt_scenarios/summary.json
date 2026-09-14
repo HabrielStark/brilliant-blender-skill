@@ -11,9 +11,10 @@
       "provenance": "prompt_fixture",
       "live_agent_run": false,
       "features": {
-        "operation_count": 70,
+        "operation_count": 71,
         "operation_counts": {
           "add_bevel_modifier": 12,
+          "apply_post": 1,
           "apply_transform": 13,
           "assign_material": 9,
           "create_camera": 1,
@@ -31,6 +32,7 @@
         },
         "category_counts": {
           "camera": 1,
+          "compositor": 1,
           "detail": 3,
           "geometry": 48,
           "lighting": 1,

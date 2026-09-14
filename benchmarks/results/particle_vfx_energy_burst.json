@@ -5,12 +5,12 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 6.5,
+    "runtime_seconds": 6.3,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\particle_vfx_energy_burst_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\particle_vfx_energy_burst_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\particle_vfx_energy_burst_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite3\\particle_vfx_energy_burst_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark",
@@ -69,7 +69,7 @@
           "contrast": 0.2142,
           "edge_density": 0.158,
           "separation": 0.1935,
-          "mean_luma": 0.6733,
+          "mean_luma": 0.6734,
           "surround_luma": 0.4799,
           "readable": true
         },
@@ -123,7 +123,7 @@
           "contrast": 0.0707,
           "edge_density": 0.1528,
           "separation": 0.1845,
-          "mean_luma": 0.8594,
+          "mean_luma": 0.8595,
           "surround_luma": 0.6749,
           "readable": true
         },
@@ -428,7 +428,7 @@
           "name": "spark_particle_outer_dot_11",
           "contrast": 0.0555,
           "edge_density": 0.0938,
-          "separation": 0.1491,
+          "separation": 0.1492,
           "mean_luma": 0.8816,
           "surround_luma": 0.7324,
           "readable": true
@@ -588,7 +588,7 @@
         },
         {
           "name": "energy_trail_hot_core_07",
-          "contrast": 0.1452,
+          "contrast": 0.1453,
           "edge_density": 0.1124,
           "separation": 0.039,
           "mean_luma": 0.7984,
@@ -636,7 +636,7 @@
           "contrast": 0.1523,
           "edge_density": 0.3075,
           "separation": 0.0732,
-          "mean_luma": 0.7337,
+          "mean_luma": 0.7338,
           "surround_luma": 0.6606,
           "readable": true
         },
@@ -834,7 +834,7 @@
           "contrast": 0.2824,
           "edge_density": 0.2551,
           "separation": 0.0287,
-          "mean_luma": 0.4455,
+          "mean_luma": 0.4454,
           "surround_luma": 0.4742,
           "readable": true
         },
@@ -852,7 +852,7 @@
           "contrast": 0.1326,
           "edge_density": 0.1177,
           "separation": 0.023,
-          "mean_luma": 0.7631,
+          "mean_luma": 0.7632,
           "surround_luma": 0.7401,
           "readable": true
         },
@@ -1067,7 +1067,7 @@
           "name": "core_hot_streak_diagonal_06",
           "contrast": 0.0866,
           "edge_density": 0.3357,
-          "separation": 0.1496,
+          "separation": 0.1497,
           "mean_luma": 0.8756,
           "surround_luma": 0.7259,
           "readable": true
@@ -1128,7 +1128,7 @@
         },
         {
           "name": "core_violet_streak_counter_06",
-          "contrast": 0.0242,
+          "contrast": 0.0241,
           "edge_density": 0.0125,
           "separation": 0.0534,
           "mean_luma": 0.8169,
@@ -1212,7 +1212,7 @@
           "contrast": 0.2094,
           "edge_density": 0.3922,
           "separation": 0.1855,
-          "mean_luma": 0.6804,
+          "mean_luma": 0.6803,
           "surround_luma": 0.4949,
           "readable": true
         },
@@ -1274,7 +1274,7 @@
           "name": "core_iris_micro_glint_04",
           "contrast": 0.0348,
           "edge_density": 0.0309,
-          "separation": 0.0521,
+          "separation": 0.0522,
           "mean_luma": 0.8889,
           "surround_luma": 0.8367,
           "readable": true

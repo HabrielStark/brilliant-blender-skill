@@ -581,10 +581,10 @@ POST_PRESETS = (
 
 
 class PostEffects(_Strict):
-    bloom: str = "off"
-    vignette: str = "off"
+    bloom: Literal["off", "low", "medium", "high"] = "off"
+    vignette: Literal["off", "subtle", "strong"] = "off"
     mist: bool = False
-    color_balance: str = "neutral"
+    color_balance: Literal["neutral", "warm", "cool"] = "neutral"
 
 
 class CompositorGlare(_Strict):
@@ -595,8 +595,18 @@ class CompositorGlare(_Strict):
     quality: str = "high"
 
 
+class CompositorMist(_Strict):
+    start: float = Field(default=8.0, ge=0.0)
+    depth: float = Field(default=40.0, gt=0)
+    falloff: str = "QUADRATIC"
+    color: list[float] = Field(default_factory=lambda: [0.55, 0.55, 0.6, 1.0])
+
+
 class CompositorManifest(_Strict):
     glare: CompositorGlare | None = None
+    mist: CompositorMist | bool | None = None
+    vignette: str | None = None
+    color_balance: str | None = None
 
 
 class PostManifest(_Strict):
