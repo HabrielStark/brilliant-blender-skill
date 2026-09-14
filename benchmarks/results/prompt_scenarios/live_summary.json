@@ -12,17 +12,17 @@
       "provenance": "live_agent",
       "live_agent_run": true,
       "features": {
-        "operation_count": 74,
+        "operation_count": 70,
         "operation_counts": {
-          "add_bevel_modifier": 13,
-          "apply_transform": 14,
-          "assign_material": 10,
+          "add_bevel_modifier": 12,
+          "apply_transform": 13,
+          "assign_material": 9,
           "create_camera": 1,
           "create_decal_plane": 1,
           "create_lighting_rig": 1,
           "create_linear_markers": 2,
           "create_material": 6,
-          "create_mesh_primitive": 16,
+          "create_mesh_primitive": 15,
           "create_panel_cutlines": 1,
           "create_radial_markers": 1,
           "create_text_label": 1,
@@ -33,15 +33,15 @@
         "category_counts": {
           "camera": 1,
           "detail": 3,
-          "geometry": 51,
+          "geometry": 48,
           "lighting": 1,
-          "material": 16,
+          "material": 15,
           "scene": 2
         },
         "craft_operation_count": 6,
-        "object_name_count": 51,
+        "object_name_count": 50,
         "material_count": 6,
-        "material_target_count": 47,
+        "material_target_count": 46,
         "procedural_material_count": 2,
         "material_craft_signal_count": 7,
         "emissive_material_count": 1,
@@ -145,19 +145,6 @@
               0.014,
               0.01,
               0.36
-            ]
-          },
-          "watch_reflection_contact_streak": {
-            "name": "watch_reflection_contact_streak",
-            "center": [
-              0.0,
-              -0.58,
-              0.06
-            ],
-            "half": [
-              0.46,
-              0.026,
-              0.007
             ]
           },
           "blue_reflection_edge_streak": {
@@ -298,9 +285,9 @@
         "nonstandard_collections": []
       },
       "complexity": {
-        "objects": 47,
-        "faces": 1679,
-        "modifiers": 19,
+        "objects": 46,
+        "faces": 1670,
+        "modifiers": 18,
         "within_budget": true,
         "budget_faces": 2000000,
         "notes": []

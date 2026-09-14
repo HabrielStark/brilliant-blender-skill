@@ -5,15 +5,16 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 9.0,
+    "runtime_seconds": 5.0,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
     ],
+    "readability": null,
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
@@ -25,15 +26,16 @@
     "pass": false,
     "visual_score": 31,
     "technical_score": 60,
-    "runtime_seconds": 4.1,
+    "runtime_seconds": 3.7,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\camera_expensive_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\camera_expensive_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
     ],
+    "readability": null,
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
@@ -64,15 +66,16 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 90,
-    "runtime_seconds": 4.7,
+    "runtime_seconds": 4.9,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\camera_expensive_adversarial_slop_named_lit_sphere\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\camera_expensive_adversarial_slop_named_lit_sphere\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
     ],
+    "readability": null,
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,

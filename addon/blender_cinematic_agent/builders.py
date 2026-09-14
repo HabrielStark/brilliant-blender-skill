@@ -732,6 +732,10 @@ def _parent_if_requested(obj, parent_name):
         return None
     parent = bpyutil.get_object(parent_name)
     if parent:
+        # Objects created via the raw data API (fonts, curves) may carry a
+        # stale identity matrix_world until the depsgraph runs; evaluate first
+        # so the preserved world transform is the intended one.
+        bpy.context.view_layer.update()
         world = obj.matrix_world.copy()
         obj.parent = parent
         obj.matrix_world = world

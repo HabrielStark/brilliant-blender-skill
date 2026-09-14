@@ -361,22 +361,43 @@ def render_animation_frame_proof(base, blend, budget, blender_exe, animation, ch
     mid = int(round((fs + fe) / 2))
     frames = sorted({fs, mid, fe})
     frame_paths = []
-    for frame in frames:
-        out_path = base / "iterations" / f"animation_frame_{frame:04d}.png"
-        result = runner.run_job(
-            runner.build_job(
-                "render_preview",
-                base,
-                blend,
-                budget=budget,
-                render={"frame": frame},
-                output={"image": str(out_path)},
-            ),
-            blender_exe,
-            300,
-        )
-        if result.get("ok") and out_path.exists():
-            frame_paths.append(out_path)
+    # Single Blender session renders all proof frames (job_runner expands the
+    # `frames` list); each result dict carries its own output path.
+    out_template = base / "iterations" / "animation_frame_{frame:04d}.png"
+    result = runner.run_job(
+        runner.build_job(
+            "render_preview",
+            base,
+            blend,
+            budget=budget,
+            render={"frames": frames},
+            output={"image": str(out_template)},
+        ),
+        blender_exe,
+        300,
+    )
+    for frame_result in (result.get("render") or {}).get("frames") or []:
+        path = frame_result.get("path")
+        if frame_result.get("rendered") and path and Path(path).exists():
+            frame_paths.append(Path(path))
+    if not frame_paths and not (result.get("render") or {}).get("frames"):
+        # Older add-on without batched frames: one launch per frame.
+        for frame in frames:
+            out_path = base / "iterations" / f"animation_frame_{frame:04d}.png"
+            res = runner.run_job(
+                runner.build_job(
+                    "render_preview",
+                    base,
+                    blend,
+                    budget=budget,
+                    render={"frame": frame},
+                    output={"image": str(out_path)},
+                ),
+                blender_exe,
+                300,
+            )
+            if res.get("ok") and out_path.exists():
+                frame_paths.append(out_path)
     metrics = animation_frame_delta_metrics(frame_paths)
     metrics["requested_frames"] = frames
     return metrics
@@ -416,7 +437,8 @@ def run_recipe(task, recipe, mode, blender_exe, out_root):
     budget = _budget(profile, base, blender_exe)
     preview = base / "iterations" / "iter_01_preview.png"
     glb = base / "final" / "export_final.glb"
-    out = {"image": str(preview)}
+    inspect_out = base / "iterations" / "iter_01_inspect.json"
+    out = {"image": str(preview), "inspect": str(inspect_out)}
     wants_web = manifest.get("output_mode") in ("web_asset", "interactive_web")
     if wants_web:
         out["glb"] = str(glb)
@@ -431,11 +453,15 @@ def run_recipe(task, recipe, mode, blender_exe, out_root):
     )
     blend = base / "final" / "scene.blend"
     pipe = runner.run_job(job, blender_exe, timeout=600)
-    insp = runner.run_job(
-        runner.build_job("inspect", base, blend),
-        blender_exe,
-        180,
-    ).get("inspection", {})
+    # In-pipeline inspection (same Blender session) is the fast path; fall back
+    # to a dedicated inspect job when the add-on does not support it.
+    insp = pipe.get("inspection")
+    if not isinstance(insp, dict):
+        insp = runner.run_job(
+            runner.build_job("inspect", base, blend, output={"inspect": str(inspect_out)}),
+            blender_exe,
+            180,
+        ).get("inspection", {})
     # interactive_web: generate the scroll integration + camera path, then record it.
     if manifest.get("output_mode") == "interactive_web":
         from blender_cinematic.webgen import generate_integration
@@ -503,6 +529,43 @@ def run_recipe(task, recipe, mode, blender_exe, out_root):
     subject_objects = visual_collection_objects(insp, "SUBJECT")
     subject_mesh_objects = mesh_collection_objects(insp, "SUBJECT")
     environment_objects = visual_collection_objects(insp, "ENVIRONMENT")
+    readability = None
+    if preview.exists() and (
+        checks.get("max_unreadable_subject_parts") is not None
+        or checks.get("min_readable_subject_parts") is not None
+        or checks.get("require_readable_named_parts")
+    ):
+        from blender_cinematic.imaging import subject_readability_report
+        readability = subject_readability_report(
+            preview,
+            insp.get("objects", []),
+            part_names=checks.get("require_named_parts")
+            if checks.get("readable_only_named_parts")
+            else None,
+        )
+        if checks.get("max_unreadable_subject_parts") is not None:
+            n_unreadable = len(readability["unreadable_parts"])
+            if n_unreadable > checks["max_unreadable_subject_parts"]:
+                failures.append(
+                    f"unreadable subject parts {n_unreadable} > max "
+                    f"{checks['max_unreadable_subject_parts']}: "
+                    f"{', '.join(readability['unreadable_parts'][:6])}"
+                )
+        if checks.get("min_readable_subject_parts") is not None:
+            if readability["readable_parts"] < checks["min_readable_subject_parts"]:
+                failures.append(
+                    f"readable subject parts {readability['readable_parts']} < min "
+                    f"{checks['min_readable_subject_parts']}"
+                )
+        if checks.get("require_readable_named_parts") and checks.get("require_named_parts"):
+            unreadable_named = [
+                name for name in readability["unreadable_parts"]
+                if _matches_named_part(name, checks["require_named_parts"])
+            ]
+            if unreadable_named:
+                failures.append(
+                    f"named subject parts unreadable in preview: {', '.join(unreadable_named[:6])}"
+                )
     max_coverage = max((o.get("screen_coverage", 0) for o in subject_objects), default=0)
     if checks.get("max_subject_coverage") is not None and max_coverage > checks["max_subject_coverage"]:
         failures.append(
@@ -890,6 +953,7 @@ def run_recipe(task, recipe, mode, blender_exe, out_root):
         "iterations": 1,
         "artifacts": [str(preview) if preview.exists() else None, str(glb) if glb.exists() else None],
         "visual_style_tags": visual_style_tags,
+        "readability": readability,
         "reference_metrics": reference_metrics,
         "palette_similarity": palette_similarity_value,
         "animation_frame_proof": animation_frame_proof,

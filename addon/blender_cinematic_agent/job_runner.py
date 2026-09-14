@@ -114,7 +114,7 @@ def main():
         if action in ("apply_recipe", "full_pipeline"):
             result["operations"] = builders.apply_recipe(job.get("recipe") or {"operations": []})
             mutated = True
-        if action == "inspect":
+        if action == "inspect" or (action == "full_pipeline" and (job.get("output") or {}).get("inspect")):
             result["inspection"] = scene_inspector.inspect_scene()
             out = (job.get("output") or {}).get("inspect")
             if out:
@@ -122,15 +122,37 @@ def main():
                 _write_json(job, inspect_path, result["inspection"])
                 result["inspect_path"] = inspect_path
         if action in ("render_preview", "full_pipeline"):
-            _invalidate_output(job, "image")
-            img = _workspace_path(
-                job,
-                (job.get("output") or {}).get("image") or os.path.join(job["workspace"], "iterations", "preview.png"),
-            )
             render_opts = job.get("render") or {}
-            result["render"] = renderer.render_still(img, job.get("budget") or {}, preview=True,
-                                                      film_transparent=False,
-                                                      frame=render_opts.get("frame"))
+            frames = render_opts.get("frames")
+            if action == "render_preview" and isinstance(frames, list) and frames:
+                # Batched frame proofs: render several frames in one session
+                # instead of one Blender launch per frame.
+                frame_results = []
+                base_img = (job.get("output") or {}).get("image") or os.path.join(
+                    job["workspace"], "iterations", "preview.png")
+                for frame in frames:
+                    if "{frame" in str(base_img):
+                        raw = str(base_img).format(frame=int(frame))
+                    else:
+                        stem, ext = os.path.splitext(str(base_img))
+                        raw = f"{stem}_{int(frame):04d}{ext or '.png'}"
+                    img = _workspace_path(job, raw)
+                    if os.path.isfile(img):
+                        os.remove(img)
+                    frame_results.append(renderer.render_still(
+                        img, job.get("budget") or {}, preview=True,
+                        film_transparent=False, frame=int(frame)))
+                result["render"] = {"rendered": all(r.get("rendered") for r in frame_results),
+                                    "frames": frame_results}
+            else:
+                _invalidate_output(job, "image")
+                img = _workspace_path(
+                    job,
+                    (job.get("output") or {}).get("image") or os.path.join(job["workspace"], "iterations", "preview.png"),
+                )
+                result["render"] = renderer.render_still(img, job.get("budget") or {}, preview=True,
+                                                          film_transparent=False,
+                                                          frame=render_opts.get("frame"))
         if action == "render_final":
             _invalidate_output(job, "image")
             img = _workspace_path(

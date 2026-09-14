@@ -5,17 +5,18 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 8.1,
+    "runtime_seconds": 6.7,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\sci_fi_corridor_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\sci_fi_corridor_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\sci_fi_corridor_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\sci_fi_corridor_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark",
       "blue_cyan_bias",
       "dark_blue_cyan"
     ],
+    "readability": null,
     "reference_metrics": null,
     "palette_similarity": 0.8722529778708443,
     "animation_frame_proof": null,
@@ -27,15 +28,16 @@
     "pass": false,
     "visual_score": 31,
     "technical_score": 40,
-    "runtime_seconds": 4.2,
+    "runtime_seconds": 3.8,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\sci_fi_corridor_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\sci_fi_corridor_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
     ],
+    "readability": null,
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
@@ -76,15 +78,16 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 4.6,
+    "runtime_seconds": 4.7,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
     ],
+    "readability": null,
     "reference_metrics": null,
     "palette_similarity": 0.8274210521285555,
     "animation_frame_proof": null,

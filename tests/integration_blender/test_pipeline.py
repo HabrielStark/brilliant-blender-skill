@@ -605,3 +605,39 @@ def test_faceted_hero_body_builder_survives_blender_pipeline(blender_exe, tmp_pa
     assert len(hero["modifiers"]) >= 2
     assert "hero_dark_chrome_facets" in hero["materials"]
     assert hero["flipped_normals"] is False
+
+
+def test_in_pipeline_inspection_and_parented_data_api_object(blender_exe, tmp_path):
+    """Regression: in-pipeline inspection must see evaluated transforms (no stale
+    depsgraph), and data-API objects (FONT) parented to a moved object must keep
+    their authored world position instead of collapsing to the parent origin."""
+    _, base = task_workspace(tmp_path, "inspect_fresh")
+    blend = base / "final" / "scene.blend"
+    inspect_path = base / "iterations" / "iter_01_inspect.json"
+    recipe = {"operations": BASE_RECIPE + [
+        {"op": "create_mesh_primitive", "type": "cube", "name": "mount_post",
+         "size": 0.4, "location": [2.0, 0.0, 1.0], "collection": "SUBJECT"},
+        {"op": "apply_transform", "target": "mount_post", "location": True},
+        {"op": "create_text_label", "name": "badge_text", "text": "OK",
+         "location": [3.0, 0.0, 2.0], "size": 0.3, "extrude": 0.01,
+         "collection": "SUBJECT", "parent": "mount_post"},
+    ]}
+    res = runner.run_job(
+        runner.build_job("full_pipeline", base, blend,
+                         manifest={"task_id": "itest", "output_mode": "still"},
+                         budget=PREVIEW_BUDGET, recipe=recipe,
+                         output={"image": str(base / "iterations" / "p.png"),
+                                 "inspect": str(inspect_path)}),
+        blender_exe, timeout=300)
+    assert res["ok"], res
+    inspection = res["inspection"]
+    badge = next(o for o in inspection["objects"] if o["name"] == "badge_text")
+    assert badge["world_location"] == pytest.approx([3.0, 0.0, 2.0], abs=0.05)
+    # In-pipeline inspection must produce evaluated camera-space bounds, not
+    # the garbage/inverted boxes a stale depsgraph yields.
+    boxes = [o["screen_bbox"] for o in inspection["objects"]
+             if o["in_camera_frame"] and o.get("screen_bbox")]
+    assert boxes, "expected camera-visible objects"
+    for b in boxes:
+        assert b[0] <= b[2] and b[1] <= b[3]
+    assert inspect_path.exists()

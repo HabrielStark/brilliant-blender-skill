@@ -203,6 +203,85 @@ def reference_fidelity_metrics(actual: str | Path, reference: str | Path) -> dic
     }
 
 
+def part_readability(path: str | Path, bbox, min_side_px: int = 4) -> dict | None:
+    """Readability of one camera-space part bbox inside a rendered preview.
+
+    ``bbox`` is ``[minx, miny, maxx, maxy]`` normalised camera space (y up, as
+    produced by ``world_to_camera_view``). A part reads when it has internal
+    contrast, internal edge detail, or clear luminance separation from the
+    ring immediately around it. Dark-on-dark parts that merge into the
+    background fail all three signals.
+    """
+    if not bbox or len(bbox) != 4:
+        return None
+    arr = _load(path)[..., :3]
+    luma = _luma(arr)
+    h, w = luma.shape
+    x0 = int(np.clip(float(bbox[0]), 0.0, 1.0) * w)
+    x1 = int(np.clip(float(bbox[2]), 0.0, 1.0) * w)
+    y_top = int(np.clip(1.0 - float(bbox[3]), 0.0, 1.0) * h)
+    y_bot = int(np.clip(1.0 - float(bbox[1]), 0.0, 1.0) * h)
+    if x1 - x0 < min_side_px or y_bot - y_top < min_side_px:
+        return None
+    crop = luma[y_top:y_bot, x0:x1]
+    gy, gx = np.gradient(crop)
+    edge_density = float((np.sqrt(gx ** 2 + gy ** 2) > 0.08).mean())
+    contrast = float(crop.std())
+    pad = max(2, int(0.08 * max(x1 - x0, y_bot - y_top)))
+    rx0, rx1 = max(0, x0 - pad), min(w, x1 + pad)
+    ry0, ry1 = max(0, y_top - pad), min(h, y_bot + pad)
+    ring = luma[ry0:ry1, rx0:rx1]
+    mask = np.ones(ring.shape, dtype=bool)
+    mask[y_top - ry0:y_bot - ry0, x0 - rx0:x1 - rx0] = False
+    surround = float(ring[mask].mean()) if mask.any() else float(luma.mean())
+    separation = abs(float(crop.mean()) - surround)
+    return {
+        "contrast": round(contrast, 4),
+        "edge_density": round(edge_density, 4),
+        "separation": round(separation, 4),
+        "mean_luma": round(float(crop.mean()), 4),
+        "surround_luma": round(surround, 4),
+        "readable": bool(contrast >= 0.035 or edge_density >= 0.02 or separation >= 0.045),
+    }
+
+
+def subject_readability_report(
+    path: str | Path,
+    objects,
+    min_coverage: float = 0.0005,
+    part_names: list[str] | None = None,
+) -> dict:
+    """Per-part readability for camera-visible SUBJECT objects.
+
+    ``part_names`` optionally restricts measurement to named-part keywords
+    (same substring matching as the benchmark named-part gates). Parts whose
+    crop is too small to measure are skipped, not failed.
+    """
+    parts = []
+    for obj in objects or []:
+        if obj.get("collection") != "SUBJECT" or not obj.get("in_camera_frame"):
+            continue
+        bbox = obj.get("screen_bbox")
+        if not bbox:
+            continue
+        if float(obj.get("screen_coverage", 0.0) or 0.0) < min_coverage:
+            continue
+        name = str(obj.get("name", ""))
+        if part_names and not any(str(p).lower() in name.lower() for p in part_names):
+            continue
+        m = part_readability(path, bbox)
+        if m is None:
+            continue
+        parts.append({"name": name, **m})
+    unreadable = [p["name"] for p in parts if not p["readable"]]
+    return {
+        "parts": parts,
+        "measured_parts": len(parts),
+        "readable_parts": len(parts) - len(unreadable),
+        "unreadable_parts": unreadable,
+    }
+
+
 def _integral(img: np.ndarray) -> np.ndarray:
     return np.pad(img, ((1, 0), (1, 0)), mode="constant").cumsum(0).cumsum(1)
 

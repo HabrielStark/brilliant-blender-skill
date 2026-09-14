@@ -163,6 +163,13 @@ animations whose keyframes exist but whose rendered frames barely change.
 Turntable assemblies must visibly orbit around a shared center, and scroll
 heroes must keep a readable first-frame composition while still moving the
 camera across the scroll path.
+Per-part readability gates (`max_unreadable_subject_parts`,
+`min_readable_subject_parts`, `require_readable_named_parts`) measure each
+visible SUBJECT object's own screen region: internal contrast, edge density,
+and luminance separation from the pixels immediately around it. A part that
+renders but contributes nothing visible (an occluded label, a dark-on-dark
+strap body, a contact streak indistinguishable from the floor) fails, so
+score-100 renders can no longer carry invisible authored detail.
 
 ## Reference Results
 

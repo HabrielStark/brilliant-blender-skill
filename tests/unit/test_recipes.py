@@ -102,7 +102,34 @@ def test_unknown_op_rejected():
     r = {"operations": [{"op": "run_shell", "cmd": "rm -rf /"}]}
     res = validate_recipe(r)
     assert not res.passed
-    assert any("parse" in i.code or "allowlist" in i.message for i in res.issues)
+    assert any(i.code == "recipe.unknown_op" for i in res.issues)
+
+
+def test_unknown_op_suggests_close_match():
+    r = {"operations": [{"op": "create_mesh_primtive", "type": "cube", "name": "x"}]}
+    res = validate_recipe(r)
+    assert not res.passed
+    assert any(
+        i.code == "recipe.unknown_op" and "create_mesh_primitive" in i.message
+        for i in res.issues
+    )
+
+
+def test_unknown_ops_do_not_abort_remaining_validation():
+    r = {"operations": [
+        {"op": "create_mesh_primitive", "type": "cube", "name": "ok"},
+        {"op": "bogus_op_a"},
+        {"op": "add_modifier", "target": "ok", "modifier": "NOPE"},
+        {"op": "bogus_op_b"},
+    ]}
+    res = validate_recipe(r)
+    codes = [i.code for i in res.issues]
+    assert codes.count("recipe.unknown_op") == 2
+    assert "recipe.bad_modifier" in codes
+    # Original indices are preserved after filtering bad ops
+    locs = {i.location for i in res.issues if i.code == "recipe.unknown_op"}
+    assert "operations[1]" in locs and "operations[3]" in locs
+    assert any(i.location == "operations[2].add_modifier" for i in res.issues)
 
 
 def test_missing_required_param():

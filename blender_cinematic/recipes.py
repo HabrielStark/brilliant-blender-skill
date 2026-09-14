@@ -404,18 +404,46 @@ def _validate_nested_schema(result: CheckResult, op: str, params: dict[str, Any]
         result.add(error("recipe.schema_invalid", f"{op} schema invalid: {exc}", loc))
 
 
+def _suggest_op(name) -> str | None:
+    import difflib
+    matches = difflib.get_close_matches(str(name), ALLOWED_OPS, n=1, cutoff=0.55)
+    return matches[0] if matches else None
+
+
 def validate_recipe(raw: dict) -> CheckResult:
-    """Validate a recipe dict against the allowlist and per-op param specs."""
+    """Validate a recipe dict against the allowlist and per-op param specs.
+
+    Unknown operations are reported per-op with a did-you-mean hint instead of
+    aborting the whole recipe on the first pydantic error, so an agent sees
+    every fixable problem in one pass.
+    """
     result = CheckResult(name="recipe")
+    raw_ops = (raw or {}).get("operations", []) if isinstance(raw, dict) else []
+    cleaned: list[tuple[int, dict]] = []
+    for idx, item in enumerate(raw_ops):
+        loc = f"operations[{idx}]"
+        if not isinstance(item, dict) or "op" not in item:
+            result.add(error("recipe.parse", "each operation needs an 'op' field", loc))
+            continue
+        op = item.get("op")
+        if op not in OPERATION_SPECS:
+            hint = _suggest_op(op)
+            msg = f"unknown operation {op!r}"
+            msg += f"; did you mean {hint!r}?" if hint else f"; allowed ops: {ALLOWED_OPS}"
+            result.add(error("recipe.unknown_op", msg, loc))
+            continue
+        cleaned.append((idx, item))
     try:
-        recipe = _coerce(raw)
+        recipe = _coerce({**(raw if isinstance(raw, dict) else {}),
+                          "operations": [item for _, item in cleaned]})
     except Exception as exc:
         result.add(error("recipe.parse", str(exc)))
         return result
 
-    for idx, opn in enumerate(recipe.operations):
+    orig_indices = [idx for idx, _ in cleaned]
+    for pos, opn in enumerate(recipe.operations):
         spec = OPERATION_SPECS[opn.op]
-        loc = f"operations[{idx}].{opn.op}"
+        loc = f"operations[{orig_indices[pos]}].{opn.op}"
         for key, typ in spec["required"].items():
             if key not in opn.params:
                 result.add(error("recipe.missing_param", f"missing required param '{key}'", loc))

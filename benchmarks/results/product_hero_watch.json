@@ -5,97 +5,405 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 5.2,
+    "runtime_seconds": 5.5,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\watch_readfix3\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\watch_readfix3\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark",
       "blue_cyan_bias",
       "dark_blue_cyan"
     ],
+    "readability": {
+      "parts": [
+        {
+          "name": "watch_case_beveled",
+          "contrast": 0.1659,
+          "edge_density": 0.1086,
+          "separation": 0.0025,
+          "mean_luma": 0.1139,
+          "surround_luma": 0.1164,
+          "readable": true
+        },
+        {
+          "name": "watch_bezel_ring",
+          "contrast": 0.15,
+          "edge_density": 0.087,
+          "separation": 0.0019,
+          "mean_luma": 0.1107,
+          "surround_luma": 0.1088,
+          "readable": true
+        },
+        {
+          "name": "watch_dial_glass",
+          "contrast": 0.2081,
+          "edge_density": 0.2013,
+          "separation": 0.1023,
+          "mean_luma": 0.1578,
+          "surround_luma": 0.0556,
+          "readable": true
+        },
+        {
+          "name": "strap_upper_rubber",
+          "contrast": 0.1709,
+          "edge_density": 0.2416,
+          "separation": 0.0204,
+          "mean_luma": 0.1915,
+          "surround_luma": 0.1711,
+          "readable": true
+        },
+        {
+          "name": "strap_lower_rubber",
+          "contrast": 0.0896,
+          "edge_density": 0.0704,
+          "separation": 0.0493,
+          "mean_luma": 0.0966,
+          "surround_luma": 0.0473,
+          "readable": true
+        },
+        {
+          "name": "strap_lower_ridge_01",
+          "contrast": 0.0587,
+          "edge_density": 0.0632,
+          "separation": 0.0649,
+          "mean_luma": 0.0281,
+          "surround_luma": 0.093,
+          "readable": true
+        },
+        {
+          "name": "strap_lower_ridge_02",
+          "contrast": 0.1009,
+          "edge_density": 0.2359,
+          "separation": 0.0385,
+          "mean_luma": 0.1378,
+          "surround_luma": 0.0993,
+          "readable": true
+        },
+        {
+          "name": "strap_lower_ridge_03",
+          "contrast": 0.0792,
+          "edge_density": 0.1794,
+          "separation": 0.0308,
+          "mean_luma": 0.1944,
+          "surround_luma": 0.1636,
+          "readable": true
+        },
+        {
+          "name": "strap_lower_ridge_04",
+          "contrast": 0.088,
+          "edge_density": 0.1889,
+          "separation": 0.0337,
+          "mean_luma": 0.2061,
+          "surround_luma": 0.1723,
+          "readable": true
+        },
+        {
+          "name": "strap_lower_ridge_05",
+          "contrast": 0.0912,
+          "edge_density": 0.1951,
+          "separation": 0.0509,
+          "mean_luma": 0.2092,
+          "surround_luma": 0.1583,
+          "readable": true
+        },
+        {
+          "name": "strap_lower_ridge_06",
+          "contrast": 0.0892,
+          "edge_density": 0.1404,
+          "separation": 0.0262,
+          "mean_luma": 0.1482,
+          "surround_luma": 0.122,
+          "readable": true
+        },
+        {
+          "name": "strap_upper_ridge_01",
+          "contrast": 0.3074,
+          "edge_density": 0.3727,
+          "separation": 0.001,
+          "mean_luma": 0.2363,
+          "surround_luma": 0.2354,
+          "readable": true
+        },
+        {
+          "name": "strap_upper_ridge_02",
+          "contrast": 0.2132,
+          "edge_density": 0.2685,
+          "separation": 0.0804,
+          "mean_luma": 0.2231,
+          "surround_luma": 0.1428,
+          "readable": true
+        },
+        {
+          "name": "strap_upper_ridge_03",
+          "contrast": 0.1003,
+          "edge_density": 0.1766,
+          "separation": 0.0391,
+          "mean_luma": 0.1982,
+          "surround_luma": 0.2373,
+          "readable": true
+        },
+        {
+          "name": "strap_upper_ridge_04",
+          "contrast": 0.102,
+          "edge_density": 0.3091,
+          "separation": 0.0152,
+          "mean_luma": 0.2382,
+          "surround_luma": 0.223,
+          "readable": true
+        },
+        {
+          "name": "strap_upper_ridge_05",
+          "contrast": 0.115,
+          "edge_density": 0.4439,
+          "separation": 0.0301,
+          "mean_luma": 0.2567,
+          "surround_luma": 0.2266,
+          "readable": true
+        },
+        {
+          "name": "strap_upper_ridge_06",
+          "contrast": 0.1125,
+          "edge_density": 0.4171,
+          "separation": 0.015,
+          "mean_luma": 0.1845,
+          "surround_luma": 0.1695,
+          "readable": true
+        },
+        {
+          "name": "dial_hour_marker_01",
+          "contrast": 0.2932,
+          "edge_density": 0.619,
+          "separation": 0.3334,
+          "mean_luma": 0.4645,
+          "surround_luma": 0.1311,
+          "readable": true
+        },
+        {
+          "name": "dial_hour_marker_02",
+          "contrast": 0.2537,
+          "edge_density": 0.64,
+          "separation": 0.3695,
+          "mean_luma": 0.5623,
+          "surround_luma": 0.1928,
+          "readable": true
+        },
+        {
+          "name": "dial_hour_marker_03",
+          "contrast": 0.2593,
+          "edge_density": 0.56,
+          "separation": 0.5261,
+          "mean_luma": 0.5906,
+          "surround_luma": 0.0646,
+          "readable": true
+        },
+        {
+          "name": "dial_hour_marker_04",
+          "contrast": 0.3001,
+          "edge_density": 0.6339,
+          "separation": 0.3827,
+          "mean_luma": 0.5226,
+          "surround_luma": 0.1399,
+          "readable": true
+        },
+        {
+          "name": "dial_hour_marker_05",
+          "contrast": 0.33,
+          "edge_density": 0.5568,
+          "separation": 0.4579,
+          "mean_luma": 0.4808,
+          "surround_luma": 0.0229,
+          "readable": true
+        },
+        {
+          "name": "dial_hour_marker_07",
+          "contrast": 0.2124,
+          "edge_density": 0.6071,
+          "separation": 0.2958,
+          "mean_luma": 0.5598,
+          "surround_luma": 0.2639,
+          "readable": true
+        },
+        {
+          "name": "dial_hour_marker_08",
+          "contrast": 0.2636,
+          "edge_density": 0.6625,
+          "separation": 0.5357,
+          "mean_luma": 0.5837,
+          "surround_luma": 0.0481,
+          "readable": true
+        },
+        {
+          "name": "dial_hour_marker_09",
+          "contrast": 0.2368,
+          "edge_density": 0.5167,
+          "separation": 0.4232,
+          "mean_luma": 0.6307,
+          "surround_luma": 0.2076,
+          "readable": true
+        },
+        {
+          "name": "dial_hour_marker_10",
+          "contrast": 0.2346,
+          "edge_density": 0.7381,
+          "separation": 0.3318,
+          "mean_luma": 0.5664,
+          "surround_luma": 0.2346,
+          "readable": true
+        },
+        {
+          "name": "dial_hour_marker_11",
+          "contrast": 0.284,
+          "edge_density": 0.6349,
+          "separation": 0.4359,
+          "mean_luma": 0.5312,
+          "surround_luma": 0.0953,
+          "readable": true
+        },
+        {
+          "name": "watch_dial_logo_text",
+          "contrast": 0.2931,
+          "edge_density": 0.7065,
+          "separation": 0.2184,
+          "mean_luma": 0.3361,
+          "surround_luma": 0.1178,
+          "readable": true
+        },
+        {
+          "name": "watch_minute_hand",
+          "contrast": 0.3047,
+          "edge_density": 0.7143,
+          "separation": 0.2335,
+          "mean_luma": 0.3868,
+          "surround_luma": 0.1533,
+          "readable": true
+        },
+        {
+          "name": "watch_hour_hand",
+          "contrast": 0.2988,
+          "edge_density": 0.6068,
+          "separation": 0.0422,
+          "mean_luma": 0.3111,
+          "surround_luma": 0.2688,
+          "readable": true
+        },
+        {
+          "name": "watch_center_pin",
+          "contrast": 0.273,
+          "edge_density": 0.5965,
+          "separation": 0.0363,
+          "mean_luma": 0.2662,
+          "surround_luma": 0.3025,
+          "readable": true
+        },
+        {
+          "name": "side_crown_knurled",
+          "contrast": 0.0734,
+          "edge_density": 0.0621,
+          "separation": 0.0547,
+          "mean_luma": 0.0411,
+          "surround_luma": 0.0958,
+          "readable": true
+        },
+        {
+          "name": "watch_case_faceted_highlight_left",
+          "contrast": 0.2866,
+          "edge_density": 0.3556,
+          "separation": 0.1713,
+          "mean_luma": 0.244,
+          "surround_luma": 0.0726,
+          "readable": true
+        },
+        {
+          "name": "watch_case_faceted_highlight_right",
+          "contrast": 0.207,
+          "edge_density": 0.2019,
+          "separation": 0.0785,
+          "mean_luma": 0.1063,
+          "surround_luma": 0.0279,
+          "readable": true
+        },
+        {
+          "name": "blue_reflection_edge_streak",
+          "contrast": 0.0789,
+          "edge_density": 0.0182,
+          "separation": 0.0598,
+          "mean_luma": 0.0592,
+          "surround_luma": 0.119,
+          "readable": true
+        },
+        {
+          "name": "strap_buckle_brushed_bridge",
+          "contrast": 0.0922,
+          "edge_density": 0.1084,
+          "separation": 0.0127,
+          "mean_luma": 0.1117,
+          "surround_luma": 0.099,
+          "readable": true
+        },
+        {
+          "name": "dial_sublogo_decal_highlight",
+          "contrast": 0.3343,
+          "edge_density": 0.5046,
+          "separation": 0.2537,
+          "mean_luma": 0.3885,
+          "surround_luma": 0.1348,
+          "readable": true
+        },
+        {
+          "name": "strap_hole_cutline_reflection_01",
+          "contrast": 0.1035,
+          "edge_density": 0.5595,
+          "separation": 0.0433,
+          "mean_luma": 0.126,
+          "surround_luma": 0.0828,
+          "readable": true
+        },
+        {
+          "name": "strap_hole_cutline_reflection_02",
+          "contrast": 0.0648,
+          "edge_density": 0.25,
+          "separation": 0.0272,
+          "mean_luma": 0.1981,
+          "surround_luma": 0.1709,
+          "readable": true
+        },
+        {
+          "name": "strap_hole_cutline_reflection_03",
+          "contrast": 0.0638,
+          "edge_density": 0.3974,
+          "separation": 0.0,
+          "mean_luma": 0.2093,
+          "surround_luma": 0.2093,
+          "readable": true
+        },
+        {
+          "name": "strap_hole_cutline_reflection_04",
+          "contrast": 0.0699,
+          "edge_density": 0.3077,
+          "separation": 0.0497,
+          "mean_luma": 0.2497,
+          "surround_luma": 0.2,
+          "readable": true
+        },
+        {
+          "name": "strap_hole_cutline_reflection_05",
+          "contrast": 0.0682,
+          "edge_density": 0.3333,
+          "separation": 0.053,
+          "mean_luma": 0.249,
+          "surround_luma": 0.196,
+          "readable": true
+        }
+      ],
+      "measured_parts": 42,
+      "readable_parts": 42,
+      "unreadable_parts": []
+    },
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
     "failures": []
-  },
-  "baseline_no_skill": {
-    "task_id": "product_hero_watch",
-    "mode": "baseline_no_skill",
-    "pass": false,
-    "visual_score": 29,
-    "technical_score": 40,
-    "runtime_seconds": 4.6,
-    "iterations": 1,
-    "artifacts": [
-      null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\product_hero_watch_baseline_no_skill\\final\\export_final.glb"
-    ],
-    "visual_style_tags": [
-      "missing_preview"
-    ],
-    "reference_metrics": null,
-    "palette_similarity": null,
-    "animation_frame_proof": null,
-    "failures": [
-      "no active camera",
-      "no meaningful lighting",
-      "object has default/auto name: 'Cube'",
-      "object has default/auto name: 'Sphere'",
-      "no active camera in scene",
-      "scene has no lights and no world illumination",
-      "important object has no material: Cube",
-      "important object has no material: Sphere",
-      "pipeline failed: pipeline_incomplete",
-      "score 29 < min 88",
-      "subject objects 2 < min 24",
-      "visible subject objects 0 < min 22",
-      "missing named subject parts: watch, case, bezel, dial, glass, strap, ridge, marker, hand, crown",
-      "subject modifiers 0 < min 20",
-      "smooth subject objects 0 < min 5",
-      "craft detail objects 0 < min 1",
-      "missing craft roles: text_label",
-      "subject materials 0 < min 5",
-      "subject material node count 0 < min 5",
-      "subject procedural materials 0 < min 2",
-      "missing subject material features: noise_color_ramp, wave_bump"
-    ]
-  },
-  "adversarial_slop_keyword_disc": {
-    "task_id": "product_hero_watch",
-    "mode": "adversarial_slop_keyword_disc",
-    "pass": false,
-    "visual_score": 79,
-    "technical_score": 100,
-    "runtime_seconds": 5.3,
-    "iterations": 1,
-    "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\product_hero_watch_adversarial_slop_keyword_disc\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\product_hero_watch_adversarial_slop_keyword_disc\\final\\export_final.glb"
-    ],
-    "visual_style_tags": [
-      "very_dark",
-      "blue_cyan_bias",
-      "dark_blue_cyan"
-    ],
-    "reference_metrics": null,
-    "palette_similarity": null,
-    "animation_frame_proof": null,
-    "failures": [
-      "render has no discernible silhouette/detail",
-      "score 79 < min 88",
-      "subject objects 2 < min 24",
-      "visible subject objects 2 < min 22",
-      "subject modifiers 2 < min 20",
-      "smooth subject objects 1 < min 5",
-      "craft detail objects 0 < min 1",
-      "missing craft roles: text_label",
-      "subject materials 2 < min 5",
-      "subject material node count 2 < min 5",
-      "subject procedural materials 0 < min 2",
-      "missing subject material features: noise_color_ramp, wave_bump"
-    ]
   }
 }

@@ -33,9 +33,13 @@ def _inp(bsdf, names, default=None):
 
 
 def _camera_projection(scene, cam, obj):
-    """Return (in_frame, coverage) for obj's bbox under cam."""
+    """Return (in_frame, coverage, screen_bbox) for obj's bbox under cam.
+
+    ``screen_bbox`` is ``[minx, miny, maxx, maxy]`` in normalised camera space
+    (y up, matching ``world_to_camera_view``); ``None`` when not computable.
+    """
     if not cam or obj.type not in ("MESH", "CURVE", "FONT"):
-        return True, 0.0
+        return True, 0.0, None
     xs, ys, in_front = [], [], False
     for corner in obj.bound_box:
         world = obj.matrix_world @ _v(corner)
@@ -48,7 +52,8 @@ def _camera_projection(scene, cam, obj):
     miny, maxy = max(0.0, min(ys)), min(1.0, max(ys))
     coverage = max(0.0, (maxx - minx)) * max(0.0, (maxy - miny))
     in_frame = in_front and (maxx > minx) and (maxy > miny)
-    return in_frame, round(coverage, 4)
+    bbox = [round(minx, 4), round(miny, 4), round(maxx, 4), round(maxy, 4)]
+    return in_frame, round(coverage, 4), bbox
 
 
 def _v(seq):
@@ -177,11 +182,18 @@ def _collection_of(obj):
 
 def inspect_scene():
     scene = bpy.context.scene
+    # Force depsgraph evaluation so bound_box/matrix_world reflect the state
+    # built by the recipe; a reopened .blend is already evaluated, an
+    # in-pipeline inspection is not.
+    try:
+        bpy.context.view_layer.update()
+    except Exception:
+        pass
     cam = scene.camera
     objects = []
     for obj in scene.objects:
         faces = len(obj.data.polygons) if obj.type == "MESH" and obj.data else 0
-        in_frame, coverage = _camera_projection(scene, cam, obj)
+        in_frame, coverage, screen_bbox = _camera_projection(scene, cam, obj)
         non_manifold, flipped = _mesh_quality(obj) if obj.type == "MESH" else (False, False)
         smooth = bool(obj.type == "MESH" and obj.data.polygons and obj.data.polygons[0].use_smooth)
         objects.append({
@@ -193,12 +205,14 @@ def inspect_scene():
             "materials": [m.name for m in obj.data.materials] if getattr(obj.data, "materials", None) else [],
             "modifiers": [{"type": m.type, "show_render": m.show_render} for m in obj.modifiers],
             "location": list(obj.location),
+            "world_location": [float(v) for v in obj.matrix_world.translation],
             "scale": list(obj.scale),
             "dimensions": list(obj.dimensions),
             "visible": not obj.hide_render,
             "smooth": smooth,
             "in_camera_frame": in_frame,
             "screen_coverage": coverage,
+            "screen_bbox": screen_bbox,
             "non_manifold": non_manifold,
             "flipped_normals": flipped,
             "gn_recipe": _plain(obj.get("bcas_gn_recipe")),
@@ -209,9 +223,16 @@ def inspect_scene():
             "craft_source": _plain(obj.get("bcas_craft_source")),
         })
 
+    # Only materials actually assigned to scene objects matter for gates and
+    # renders; transient datablocks (e.g. a default 'Material' created as a
+    # side effect of an operator, dropped again on save) must not count.
+    used_material_names = {
+        m.name for o in scene.objects if getattr(o.data, "materials", None)
+        for m in o.data.materials if m is not None
+    }
     materials = []
     for mat in bpy.data.materials:
-        if mat.users == 0 and not mat.use_fake_user:
+        if mat.name not in used_material_names and not mat.use_fake_user:
             continue
         bsdf = _bsdf(mat)
         emission = bool(bsdf and (_inp(bsdf, ["Emission Strength"], 0) or 0) > 0)

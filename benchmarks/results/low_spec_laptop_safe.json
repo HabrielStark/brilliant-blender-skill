@@ -5,15 +5,16 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 5.9,
+    "runtime_seconds": 5.6,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
     ],
+    "readability": null,
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
@@ -25,15 +26,16 @@
     "pass": false,
     "visual_score": 29,
     "technical_score": 60,
-    "runtime_seconds": 4.5,
+    "runtime_seconds": 3.4,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\low_spec_laptop_safe_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\low_spec_laptop_safe_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
     ],
+    "readability": null,
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
@@ -74,12 +76,13 @@
     "runtime_seconds": 4.9,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\low_spec_laptop_safe_adversarial_slop_1\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\low_spec_laptop_safe_adversarial_slop_1\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
     ],
+    "readability": null,
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,

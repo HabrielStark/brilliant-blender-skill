@@ -8,14 +8,15 @@
     "runtime_seconds": 5.7,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\reference_match_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\reference_match_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark",
       "blue_cyan_bias",
       "dark_blue_cyan"
     ],
+    "readability": null,
     "reference_metrics": {
       "ssim": 0.7477930943072052,
       "palette_similarity": 0.963032625450261,
@@ -38,15 +39,16 @@
     "pass": false,
     "visual_score": 29,
     "technical_score": 60,
-    "runtime_seconds": 4.1,
+    "runtime_seconds": 3.6,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\reference_match_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\reference_match_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
     ],
+    "readability": null,
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
@@ -89,15 +91,16 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 4.7,
+    "runtime_seconds": 5.3,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\skill_upgrade_validation_full\\reference_match_adversarial_slop_named_lit_box\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v39\\reference_match_adversarial_slop_named_lit_box\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
     ],
+    "readability": null,
     "reference_metrics": {
       "ssim": 0.36781103513500796,
       "palette_similarity": 0.9413798966961806,

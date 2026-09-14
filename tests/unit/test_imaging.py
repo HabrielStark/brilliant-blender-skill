@@ -9,10 +9,12 @@ from blender_cinematic.imaging import (
     images_identical,
     palette_from_names,
     palette_similarity,
+    part_readability,
     reference_fidelity_metrics,
     render_sanity_issues,
     salient_palette,
     ssim,
+    subject_readability_report,
 )
 
 
@@ -154,3 +156,61 @@ def test_salient_palette_keeps_small_highlights(tmp_path):
     Image.fromarray(arr).save(p)
     expected = palette_from_names(["black", "cold blue", "white highlights"])
     assert palette_similarity(salient_palette(p), expected) > 0.8
+
+
+def test_part_readability_bright_part_on_dark_bg(tmp_path):
+    arr = np.zeros((96, 96, 3), dtype=np.uint8)
+    arr[:] = [4, 5, 8]
+    arr[30:70, 30:70] = [200, 205, 215]
+    p = tmp_path / "part.png"
+    Image.fromarray(arr).save(p)
+    # Camera space is y-up: image rows 30..70 -> cam y 0.27..0.69
+    m = part_readability(p, [0.3, 0.27, 0.72, 0.69])
+    assert m is not None and m["readable"]
+    assert m["separation"] > 0.4
+
+
+def test_part_readability_dark_on_dark_fails(tmp_path):
+    arr = np.zeros((96, 96, 3), dtype=np.uint8)
+    arr[:] = [5, 6, 9]
+    arr[30:70, 30:70] = [7, 8, 11]
+    p = tmp_path / "dark_part.png"
+    Image.fromarray(arr).save(p)
+    m = part_readability(p, [0.3, 0.27, 0.72, 0.69])
+    assert m is not None and not m["readable"]
+
+
+def test_part_readability_bad_bbox_skipped(tmp_path):
+    arr = np.zeros((96, 96, 3), dtype=np.uint8)
+    p = tmp_path / "img.png"
+    Image.fromarray(arr).save(p)
+    assert part_readability(p, None) is None
+    assert part_readability(p, [0.1, 0.1]) is None
+    # Degenerate / inverted box smaller than min_side_px
+    assert part_readability(p, [0.5, 0.5, 0.5001, 0.5001]) is None
+
+
+def test_subject_readability_report_filters_and_counts(tmp_path):
+    arr = np.zeros((96, 96, 3), dtype=np.uint8)
+    arr[:] = [4, 5, 8]
+    arr[30:70, 30:70] = [210, 215, 225]
+    p = tmp_path / "scene.png"
+    Image.fromarray(arr).save(p)
+    objects = [
+        {"name": "hero_body", "collection": "SUBJECT", "in_camera_frame": True,
+         "screen_bbox": [0.3, 0.27, 0.72, 0.69], "screen_coverage": 0.18},
+        {"name": "hidden_trim", "collection": "SUBJECT", "in_camera_frame": True,
+         "screen_bbox": [0.05, 0.05, 0.15, 0.15], "screen_coverage": 0.01},
+        {"name": "floor", "collection": "ENVIRONMENT", "in_camera_frame": True,
+         "screen_bbox": [0.0, 0.0, 1.0, 1.0], "screen_coverage": 0.9},
+        {"name": "offscreen_bit", "collection": "SUBJECT", "in_camera_frame": False,
+         "screen_bbox": [0.8, 0.8, 0.95, 0.95], "screen_coverage": 0.01},
+    ]
+    rep = subject_readability_report(p, objects)
+    names = [pt["name"] for pt in rep["parts"]]
+    assert "hero_body" in names and "hidden_trim" in names
+    assert "floor" not in names and "offscreen_bit" not in names
+    assert rep["unreadable_parts"] == ["hidden_trim"]
+    # part_names restricts measurement to matching substrings
+    rep2 = subject_readability_report(p, objects, part_names=["hero"])
+    assert [pt["name"] for pt in rep2["parts"]] == ["hero_body"]

@@ -75,7 +75,8 @@ def main(argv=None) -> int:
 
     preview = base / "iterations" / "iter_01_preview.png"
     glb = base / "final" / "export_final.glb"
-    out = {"image": str(preview)}
+    inspect_out = base / "iterations" / "iter_01_inspect.json"
+    out = {"image": str(preview), "inspect": str(inspect_out)}
     if manifest.wants_web():
         out["glb"] = str(glb)
     job = runner.build_job("full_pipeline", base, blend, manifest=manifest.model_dump(),
@@ -91,10 +92,15 @@ def main(argv=None) -> int:
         print(json.dumps(summary, indent=2, default=str))
         return 2
 
-    # inspect -> lint -> score
-    insp_job = runner.build_job("inspect", base, blend,
-                                output={"inspect": str(base / "iterations" / "iter_01_inspect.json")})
-    insp_res = runner.run_job(insp_job, args.blender, timeout=180)
+    # inspect -> lint -> score; prefer the in-pipeline inspection when the
+    # add-on emitted one, else run a dedicated inspect job.
+    inspection = summary["pipeline"].get("inspection")
+    if isinstance(inspection, dict):
+        insp_res = {"ok": True, "inspection": inspection}
+    else:
+        insp_job = runner.build_job("inspect", base, blend,
+                                    output={"inspect": str(inspect_out)})
+        insp_res = runner.run_job(insp_job, args.blender, timeout=180)
     if not insp_res.get("ok") or not isinstance(insp_res.get("inspection"), dict):
         runtime_failures.append(f"inspection failed: {insp_res.get('error', 'invalid inspection result')}")
         write_final_report(resolver, base, manifest=manifest.model_dump(), hardware_report=report,
