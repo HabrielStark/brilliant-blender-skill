@@ -29,7 +29,14 @@ def test_resources_and_prompts(ctx):
     prompts = asyncio.run(mcp.list_prompts())
     assert len(prompts) == 6
     res = asyncio.run(mcp.list_resources())
-    assert any("docs://" in str(r.uri) for r in res)
+    uris = {str(r.uri) for r in res}
+    assert any("docs://" in str(u) for u in uris)
+    # every playbook in references/ must be reachable - an unreachable doc is
+    # a capability agents cannot discover
+    assert "docs://procedural-modeling-recipes" in uris
+    assert "docs://animation-camera-paths" in uris
+    assert "docs://composition-rubric" in uris
+    assert "docs://index" in uris
 
 
 def test_validate_manifest_tool(ctx):

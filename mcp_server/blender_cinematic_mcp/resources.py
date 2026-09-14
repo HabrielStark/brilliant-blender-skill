@@ -13,21 +13,19 @@ from .security import ServerContext
 _REPO_ROOT = Path(__file__).resolve().parents[2]
 _REFS = _REPO_ROOT / "references"
 
-_DOC_RESOURCES = {
-    "camera-language": "camera-language.md",
-    "visual-critique-rubric": "visual-critique-rubric.md",
-    "lighting-materials": "lighting-materials.md",
-    "hardware-quality-profiles": "hardware-quality-profiles.md",
-    "web-export-threejs-r3f": "web-export-threejs-r3f.md",
-    "failure-modes": "failure-modes.md",
-}
+def _doc_resources() -> dict[str, str]:
+    """Expose every playbook in references/ - a doc that agents cannot reach
+    through MCP is a capability that does not exist for them."""
+    if not _REFS.is_dir():
+        return {}
+    return {p.stem: p.name for p in sorted(_REFS.glob("*.md"))}
 
 
 def register_resources(mcp, ctx: ServerContext) -> None:
     def _read(path: Path) -> str:
         return path.read_text(encoding="utf-8") if path.exists() else f"(missing: {path.name})"
 
-    for key, fname in _DOC_RESOURCES.items():
+    for key, fname in _doc_resources().items():
         def make(fn=fname):
             def res() -> str:
                 return _read(_REFS / fn)
@@ -35,6 +33,10 @@ def register_resources(mcp, ctx: ServerContext) -> None:
         fn_obj = make()
         fn_obj.__name__ = f"doc_{key.replace('-', '_')}"
         mcp.resource(f"docs://{key}", name=key, mime_type="text/markdown")(fn_obj)
+
+    @mcp.resource("docs://index", name="index", mime_type="text/plain")
+    def doc_index() -> str:
+        return "\n".join(sorted(_doc_resources()))
 
     @mcp.resource("project://{task_id}/scene_manifest.json", mime_type="application/json")
     def scene_manifest(task_id: str) -> str:
