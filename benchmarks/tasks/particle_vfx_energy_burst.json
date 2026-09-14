@@ -92,7 +92,7 @@
 
     {"op": "create_lighting_rig", "schema": {"lighting_rig": "vfx_energy_burst_lighting", "lights": [{"name": "large_blue_key", "type": "AREA", "power": 620, "size": 4.0, "color": [0.62,0.78,1.0], "position_role": "front_left_high"}, {"name": "violet_back_rim", "type": "AREA", "power": 380, "size": 2.0, "color": [0.72,0.42,1.0], "position_role": "rim"}, {"name": "low_amber_core_kick", "type": "POINT", "power": 150, "size": 0.65, "color": [1.0,0.44,0.14], "location": [-0.25,-0.75,0.75]}], "world": {"color": [0.006,0.008,0.014], "strength": 0.2}}},
     {"op": "create_camera", "schema": {"camera_name": "camera_particle_vfx_macro", "preset": "macro_product", "target": "energy_core_particle_emitter", "look_at": [0.0,-0.1,1.34], "location": [1.55,-3.18,1.66], "lens": {"focal_length_mm": 62, "dof": true, "focus_target": "energy_core_particle_emitter", "aperture_fstop": 4.0}}},
-    {"op": "apply_post", "schema": {"post_preset": "neon_bloom", "view_transform": "Filmic", "look": "Medium High Contrast", "exposure": 0.16, "gamma": 1.0}},
+    {"op": "apply_post", "schema": {"post_preset": "neon_bloom", "view_transform": "Filmic", "look": "Medium High Contrast", "exposure": 0.16, "gamma": 1.0, "effects": {"bloom": "medium"}}},
     {"op": "set_scene_metadata", "data": {"final_camera": "camera_particle_vfx_macro"}}
   ]},
   "baseline_recipe": {"operations": [

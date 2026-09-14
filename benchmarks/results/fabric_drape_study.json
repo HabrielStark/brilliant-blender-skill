@@ -5,12 +5,12 @@
     "pass": true,
     "visual_score": 93,
     "technical_score": 100,
-    "runtime_seconds": 4.7,
+    "runtime_seconds": 5.1,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\fabric_drape_study_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\fabric_drape_study_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\fabric_drape_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\fabric_drape_study_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
@@ -224,95 +224,5 @@
     "palette_similarity": null,
     "animation_frame_proof": null,
     "failures": []
-  },
-  "baseline_no_skill": {
-    "task_id": "fabric_drape_study",
-    "mode": "baseline_no_skill",
-    "pass": false,
-    "visual_score": 29,
-    "technical_score": 60,
-    "runtime_seconds": 3.4,
-    "iterations": 1,
-    "repair_history": null,
-    "artifacts": [
-      null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\fabric_drape_study_baseline_no_skill\\final\\export_final.glb"
-    ],
-    "visual_style_tags": [
-      "missing_preview"
-    ],
-    "readability": null,
-    "reference_metrics": null,
-    "palette_similarity": null,
-    "animation_frame_proof": null,
-    "failures": [
-      "no active camera",
-      "no meaningful lighting",
-      "object has default/auto name: 'Cube'",
-      "no active camera in scene",
-      "scene has no lights and no world illumination",
-      "important object has no material: Cube",
-      "pipeline failed: pipeline_incomplete",
-      "score 29 < min 84",
-      "subject objects 1 < min 16",
-      "visible subject objects 0 < min 14",
-      "missing named subject parts: cloth, drape, rod, post, pin, hem",
-      "subject faces 6 < min 2400",
-      "subject modifiers 0 < min 10",
-      "smooth subject objects 0 < min 8",
-      "craft detail objects 0 < min 8",
-      "missing named environment parts: ground, backdrop",
-      "subject materials 0 < min 4",
-      "subject procedural materials 0 < min 1"
-    ]
-  },
-  "adversarial_slop_flat_sheet_named_cloth_keywords": {
-    "task_id": "fabric_drape_study",
-    "mode": "adversarial_slop_flat_sheet_named_cloth_keywords",
-    "pass": false,
-    "visual_score": 79,
-    "technical_score": 100,
-    "runtime_seconds": 4.7,
-    "iterations": 1,
-    "repair_history": null,
-    "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\fabric_drape_study_adversarial_slop_flat_sheet_named_cloth_keywords\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\fabric_drape_study_adversarial_slop_flat_sheet_named_cloth_keywords\\final\\export_final.glb"
-    ],
-    "visual_style_tags": [
-      "neutral"
-    ],
-    "readability": {
-      "parts": [
-        {
-          "name": "cloth_drape_rod_post_pin_hem_flat",
-          "contrast": 0.0428,
-          "edge_density": 0.0045,
-          "separation": 0.1399,
-          "mean_luma": 0.5124,
-          "surround_luma": 0.3725,
-          "readable": true
-        }
-      ],
-      "measured_parts": 1,
-      "readable_parts": 1,
-      "unreadable_parts": []
-    },
-    "reference_metrics": null,
-    "palette_similarity": null,
-    "animation_frame_proof": null,
-    "failures": [
-      "render has no discernible silhouette/detail",
-      "score 79 < min 84",
-      "subject objects 1 < min 16",
-      "visible subject objects 1 < min 14",
-      "subject faces 1 < min 2400",
-      "subject modifiers 0 < min 10",
-      "smooth subject objects 0 < min 8",
-      "craft detail objects 0 < min 8",
-      "missing named environment parts: backdrop",
-      "subject materials 1 < min 4",
-      "subject procedural materials 0 < min 1"
-    ]
   }
 }

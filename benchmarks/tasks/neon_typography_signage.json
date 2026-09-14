@@ -75,6 +75,7 @@
 
     {"op": "create_lighting_rig", "schema": {"lighting_rig": "moody_neon_sign", "lights": [{"name": "soft_fill", "type": "AREA", "power": 230, "size": 4.5, "color": [0.5,0.55,0.7], "position_role": "front_left_high"}, {"name": "floor_spill", "type": "AREA", "power": 90, "size": 3, "color": [1.0,0.4,0.5], "position_role": "rim"}], "world": {"color": [0.08,0.08,0.095], "strength": 0.85}}},
     {"op": "create_camera", "schema": {"camera_name": "camera_neon", "preset": "hero_low_angle", "target": "sign_backplate_charcoal_steel", "look_at": [0,0.45,1.7], "location": [0.35,-4.1,1.75], "composition": {"subject_screen_coverage": 0.6, "safe_margin": 0.14}, "lens": {"focal_length_mm": 52, "dof": true, "focus_target": "sign_backplate_charcoal_steel"}}},
+    {"op": "apply_post", "schema": {"post_preset": "neon_bloom", "view_transform": "Filmic", "look": "Medium High Contrast", "exposure": 0.1, "gamma": 1.0, "effects": {"bloom": "medium"}}},
     {"op": "set_scene_metadata", "data": {"final_camera": "camera_neon"}}
   ]},
   "baseline_recipe": {"operations": [

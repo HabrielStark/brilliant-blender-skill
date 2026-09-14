@@ -2142,7 +2142,7 @@ def op_create_vfx(p):
 
 
 def op_apply_post(p):
-    """Color-management 'look' (reliable across versions; compositor varies on 5.0)."""
+    """Color-management 'look' + optional compositor glare/bloom."""
     schema = p["schema"]
     vs = bpy.context.scene.view_settings
     want = schema.get("view_transform", "Filmic")
@@ -2157,7 +2157,86 @@ def op_apply_post(p):
     vs.exposure = float(schema.get("exposure", 0.0))
     vs.gamma = float(schema.get("gamma", 1.0))
     bpy.context.scene["post_preset"] = schema.get("post_preset", "clean_product")
-    return {"post": schema.get("post_preset"), "view_transform": vs.view_transform}
+    result = {"post": schema.get("post_preset"), "view_transform": vs.view_transform}
+    glare = (schema.get("compositor") or {}).get("glare")
+    bloom = str(((schema.get("effects") or {}).get("bloom") or "off")).lower()
+    if glare is None and bloom != "off":
+        glare = {"off": None,
+                 "low": {"threshold": 1.0, "size": 6, "strength": 0.8},
+                 "medium": {"threshold": 0.8, "size": 7, "strength": 1.0},
+                 "high": {"threshold": 0.6, "size": 8, "strength": 1.3},
+                 }.get(bloom) or {"threshold": 0.8, "size": 7, "strength": 1.0}
+        glare = dict(glare, type=glare.get("type", "fog_glow"))
+    if glare:
+        result["glare"] = _apply_compositor_glare(glare)
+    return result
+
+
+def _apply_compositor_glare(spec):
+    """Wire RenderLayers -> Glare -> output. Blender 5.0 moved compositor to a
+    node group with interface sockets and title-case menu values."""
+    sc = bpy.context.scene
+    gtype = spec.get("type", "fog_glow")
+    threshold = float(spec.get("threshold", 0.8))
+    size = int(spec.get("size", 7))
+    strength = float(spec.get("strength", 1.0))
+    if hasattr(sc, "compositing_node_group"):
+        ng = sc.compositing_node_group or bpy.data.node_groups.new(
+            "BCAS_Compositor", "CompositorNodeTree")
+        sc.compositing_node_group = ng
+        sc.use_nodes = True
+        if not any(s.in_out == "OUTPUT" for s in ng.interface.items_tree):
+            ng.interface.new_socket("Image", in_out="OUTPUT", socket_type="NodeSocketColor")
+        rl = ng.nodes.get("Render Layers") or ng.nodes.new("CompositorNodeRLayers")
+        gl = ng.nodes.new("CompositorNodeGlare")
+        out = ng.nodes.get("Group Output") or ng.nodes.new("NodeGroupOutput")
+        def _set(socket_name, value, fallbacks=()):
+            sock = gl.inputs.get(socket_name)
+            if sock is None:
+                return False
+            for cand in (value, *fallbacks):
+                try:
+                    sock.default_value = cand
+                    return True
+                except (TypeError, ValueError):
+                    continue
+            return False
+        _set("Type", gtype, ("Fog Glow", "FOG_GLOW", "Bloom"))
+        _set("Quality", spec.get("quality", "high"), ("High", "HIGH"))
+        for sock_name, val in (("Threshold", threshold), ("Size", size),
+                               ("Strength", strength)):
+            sock = gl.inputs.get(sock_name)
+            if sock is not None:
+                try:
+                    sock.default_value = val
+                except (TypeError, ValueError):
+                    pass
+        if not gl.inputs["Image"].is_linked:
+            ng.links.new(rl.outputs["Image"], gl.inputs["Image"])
+        if not out.inputs["Image"].is_linked:
+            ng.links.new(gl.outputs["Image"], out.inputs["Image"])
+        return {"glare": True, "path": "node_group", "type": gtype}
+    # Blender 4.x legacy compositor
+    sc.use_nodes = True
+    nt = sc.node_tree
+    if nt is None:
+        return {"glare": False, "error": "no compositor node tree"}
+    rl = nt.nodes.get("Render Layers") or nt.nodes.new("CompositorNodeRLayers")
+    gl = nt.nodes.new("CompositorNodeGlare")
+    for cand in (gtype.upper().replace(" ", "_"), "FOG_GLOW", "BLOOM"):
+        try:
+            gl.glare_type = cand
+            break
+        except (TypeError, ValueError):
+            continue
+    gl.threshold = threshold
+    gl.size = size
+    comp = nt.nodes.get("Composite") or nt.nodes.new("CompositorNodeComposite")
+    if not gl.inputs["Image"].is_linked:
+        nt.links.new(rl.outputs["Image"], gl.inputs["Image"])
+    if not comp.inputs["Image"].is_linked:
+        nt.links.new(gl.outputs["Image"], comp.inputs["Image"])
+    return {"glare": True, "path": "legacy", "type": gl.glare_type}
 
 
 def op_create_rig(p):

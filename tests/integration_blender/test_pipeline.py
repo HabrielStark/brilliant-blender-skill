@@ -673,6 +673,34 @@ def test_add_modifier_resolves_object_name_params(blender_exe, tmp_path):
     assert not any("boolean_cutter" in (n or "") for n in node_names)
 
 
+def test_generalist_utility_ops_end_to_end(blender_exe, tmp_path):
+    """Exercise the ops no benchmark task uses: collection/parent/origin/
+    transform/array/constraint — they must work, not just validate."""
+    _, base = task_workspace(tmp_path, "util_ops")
+    blend = base / "final" / "scene.blend"
+    recipe = {"operations": BASE_RECIPE + [
+        {"op": "create_collection", "name": "DETAILS"},
+        {"op": "create_mesh_primitive", "type": "cube", "name": "chip_detail",
+         "size": 0.2, "location": [1.2, 0, 1.0], "collection": "SUBJECT"},
+        {"op": "move_to_collection", "target": "chip_detail", "collection": "DETAILS"},
+        {"op": "parent_objects", "child": "chip_detail", "parent": "hero_core"},
+        {"op": "set_origin", "target": "chip_detail", "mode": "ORIGIN_GEOMETRY"},
+        {"op": "set_object_transform", "target": "chip_detail",
+         "location": [1.0, 0, 1.0], "rotation": [0, 0, 15]},
+        {"op": "add_array_modifier", "target": "chip_detail", "count": 3,
+         "offset": [0.3, 0, 0]},
+        {"op": "add_constraint", "target": "hero_core", "constraint": "COPY_LOCATION",
+         "params": {"target": "ground"}},
+        {"op": "add_constraint", "target": "camera_hero", "constraint": "TRACK_TO",
+         "params": {"target": "hero_core"}},
+    ]}
+    res = runner.run_job(runner.build_job(
+        "full_pipeline", base, blend, budget=PREVIEW_BUDGET, recipe=recipe),
+        blender_exe, 300)
+    assert res["ok"], res
+    assert not [o for o in res["operations"] if o.get("error")], res["operations"]
+
+
 def test_add_modifier_boolean_missing_cutter_errors(blender_exe, tmp_path):
     """A BOOLEAN with a missing/invalid operand fails cleanly, no dead modifier."""
     _, base = task_workspace(tmp_path, "mod_bool_neg")

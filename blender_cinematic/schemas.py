@@ -587,6 +587,18 @@ class PostEffects(_Strict):
     color_balance: str = "neutral"
 
 
+class CompositorGlare(_Strict):
+    type: str = "fog_glow"
+    threshold: float = 0.8
+    size: int = Field(default=7, ge=1, le=9)
+    strength: float = 1.0
+    quality: str = "high"
+
+
+class CompositorManifest(_Strict):
+    glare: CompositorGlare | None = None
+
+
 class PostManifest(_Strict):
     post_preset: Literal[POST_PRESETS] = "clean_product"  # type: ignore[valid-type]
     view_transform: str = "Filmic"
@@ -594,6 +606,7 @@ class PostManifest(_Strict):
     exposure: float = 0.0
     gamma: float = Field(default=1.0, gt=0)
     effects: PostEffects = Field(default_factory=PostEffects)
+    compositor: CompositorManifest | None = None
     save_raw_render: bool = True
 
 

@@ -5,12 +5,12 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 6.1,
+    "runtime_seconds": 6.4,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite2\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark"
@@ -686,104 +686,5 @@
     "palette_similarity": null,
     "animation_frame_proof": null,
     "failures": []
-  },
-  "baseline_no_skill": {
-    "task_id": "glb_web_budget",
-    "mode": "baseline_no_skill",
-    "pass": false,
-    "visual_score": 31,
-    "technical_score": 60,
-    "runtime_seconds": 3.3,
-    "iterations": 1,
-    "repair_history": null,
-    "artifacts": [
-      null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\glb_web_budget_baseline_no_skill\\final\\export_final.glb"
-    ],
-    "visual_style_tags": [
-      "missing_preview"
-    ],
-    "readability": null,
-    "reference_metrics": null,
-    "palette_similarity": null,
-    "animation_frame_proof": null,
-    "failures": [
-      "no active camera",
-      "no meaningful lighting",
-      "object has default/auto name: 'Icosphere'",
-      "no active camera in scene",
-      "scene has no lights and no world illumination",
-      "important object has no material: Icosphere",
-      "pipeline failed: pipeline_incomplete",
-      "score 31 < min 86",
-      "subject objects 1 < min 34",
-      "visible subject objects 0 < min 28",
-      "subject depth layers 1 < min 4",
-      "missing named subject parts: speaker, grille, button, port, accent, feet, handle, radiator, logo",
-      "distinct visible named-part objects 0 < min 20",
-      "named-part total coverage 0.0000 < min 0.1500",
-      "subject faces 80 < min 1300",
-      "subject modifiers 0 < min 18",
-      "smooth subject objects 0 < min 5",
-      "craft detail objects 0 < min 12",
-      "missing craft roles: grille_slat, text_label",
-      "subject materials 0 < min 7",
-      "subject material node count 0 < min 5",
-      "subject procedural materials 0 < min 2",
-      "missing subject material features: checker_texture, noise_color_ramp"
-    ]
-  },
-  "adversarial_slop_speaker_keywords_no_web_asset_detail": {
-    "task_id": "glb_web_budget",
-    "mode": "adversarial_slop_speaker_keywords_no_web_asset_detail",
-    "pass": false,
-    "visual_score": 79,
-    "technical_score": 100,
-    "runtime_seconds": 4.5,
-    "iterations": 1,
-    "repair_history": null,
-    "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\export_final.glb"
-    ],
-    "visual_style_tags": [
-      "dark"
-    ],
-    "readability": {
-      "parts": [
-        {
-          "name": "speaker_grille_button_port_accent_feet_handle_radiator_logo_plain",
-          "contrast": 0.0861,
-          "edge_density": 0.0009,
-          "separation": 0.0395,
-          "mean_luma": 0.2637,
-          "surround_luma": 0.3032,
-          "readable": true
-        }
-      ],
-      "measured_parts": 1,
-      "readable_parts": 1,
-      "unreadable_parts": []
-    },
-    "reference_metrics": null,
-    "palette_similarity": null,
-    "animation_frame_proof": null,
-    "failures": [
-      "render has no discernible silhouette/detail",
-      "score 79 < min 86",
-      "subject objects 1 < min 34",
-      "visible subject objects 1 < min 28",
-      "subject depth layers 1 < min 4",
-      "distinct visible named-part objects 1 < min 20",
-      "subject faces 34 < min 1300",
-      "subject modifiers 1 < min 18",
-      "smooth subject objects 1 < min 5",
-      "craft detail objects 0 < min 12",
-      "missing craft roles: grille_slat, text_label",
-      "subject materials 1 < min 7",
-      "subject material node count 2 < min 5",
-      "subject procedural materials 0 < min 2",
-      "missing subject material features: checker_texture, noise_color_ramp"
-    ]
   }
 }

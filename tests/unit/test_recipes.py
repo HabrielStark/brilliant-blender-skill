@@ -199,6 +199,19 @@ def test_deform_and_cleanup_modifiers_allowlisted():
     assert not [i for i in res.issues if i.code == "recipe.bad_modifier"]
 
 
+def test_post_effects_bloom_and_compositor_glare_schema():
+    r = {"operations": [
+        {"op": "apply_post", "schema": {
+            "post_preset": "neon_bloom", "effects": {"bloom": "medium"}}},
+        {"op": "apply_post", "schema": {
+            "post_preset": "clean_product",
+            "compositor": {"glare": {"type": "streaks", "threshold": 1.2,
+                                     "size": 8, "strength": 0.9}}}},
+    ]}
+    res = validate_recipe(r)
+    assert res.passed, [i.message for i in res.issues]
+
+
 def test_procedural_texture_rejects_unknown_type():
     r = {"operations": [
         {"op": "create_procedural_texture", "name": "t", "type": "NOT_A_TEXTURE"}

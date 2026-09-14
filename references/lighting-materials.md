@@ -95,6 +95,16 @@ node signatures such as `EdgeWearAO`, `ScanlineWave`, `RoughnessRamp`,
 Good: `NG_BrushedMetal_Base`, `NG_EdgeWear_Subtle`, `NG_Hologram_Scanlines`.
 Forbidden: `NodeGroup.001`, `Material.004`, `Noise Texture.023`.
 
+## Post-processing (`apply_post`)
+
+`view_transform`/`look`/`exposure`/`gamma` set color management.
+`effects.bloom` (`off`/`low`/`medium`/`high`) wires a compositor **Glare →
+output** chain so emissive neon, VFX cores, and highlights actually bloom —
+use it on emissive scenes; without it "glowing" materials render flat. For
+explicit control pass `compositor.glare` `{type, threshold, size, strength,
+quality}` (`type` accepts `fog_glow`/`bloom`/`streaks`/`ghosts`…; Blender 5.0
+menu sockets take title-case values, handled internally).
+
 ## Web/export policy
 
 For GLB targets, set `export_policy.web_safe`. Unsupported shader tricks
