@@ -1,0 +1,19 @@
+{
+  "task_id": "bench_product_hero_watch",
+  "brief": "premium cinematic watch product hero",
+  "output_mode": "web_asset",
+  "style": {
+    "mood": "premium cinematic sharp"
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "png",
+      "glb"
+    ],
+    "web_runtime": "react-three-fiber"
+  },
+  "constraints": {
+    "max_glb_mb": 20
+  }
+}

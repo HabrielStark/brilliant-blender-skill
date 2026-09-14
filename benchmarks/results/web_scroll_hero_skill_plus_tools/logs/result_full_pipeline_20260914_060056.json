@@ -1,0 +1,3271 @@
+{
+  "ok": true,
+  "action": "full_pipeline",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_skill_plus_tools\\final\\scene.blend",
+  "collections": [
+    "CAMERAS",
+    "LIGHTS",
+    "SUBJECT",
+    "ENVIRONMENT",
+    "FX",
+    "HELPERS",
+    "EXPORT"
+  ],
+  "operations": [
+    {
+      "op": "ensure_standard_collections",
+      "collections": [
+        "CAMERAS",
+        "LIGHTS",
+        "SUBJECT",
+        "ENVIRONMENT",
+        "FX",
+        "HELPERS",
+        "EXPORT"
+      ]
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "stage_floor",
+      "faces": 1
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "energy_core",
+      "faces": 80
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "energy_core"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "energy_core"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "orbital_ring_primary",
+      "faces": 576
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "orbital_ring_vertical",
+      "faces": 576
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "orbital_ring_diagonal",
+      "faces": 576
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "orbital_ring_primary"
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "orbital_ring_vertical"
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "orbital_ring_diagonal"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "orbital_ring_primary"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "orbital_ring_vertical"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "orbital_ring_diagonal"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "inner_white_core",
+      "faces": 512
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "inner_white_core"
+    },
+    {
+      "op": "create_material",
+      "material": "core_emissive_teal",
+      "assigned_to": [
+        "energy_core"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "inner_warm_ivory_hot_core",
+      "assigned_to": [
+        "inner_white_core"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "ring_gold_metal",
+      "assigned_to": [
+        "orbital_ring_primary",
+        "orbital_ring_vertical",
+        "orbital_ring_diagonal"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "spark_magenta_aurora",
+      "assigned_to": [],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "stage_dark",
+      "assigned_to": [
+        "stage_floor"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_vfx",
+      "vfx": "core_glow",
+      "preset": "energy_core_shell",
+      "applied_to": "energy_core"
+    },
+    {
+      "op": "create_material",
+      "material": "core_emissive_teal",
+      "assigned_to": [
+        "energy_core"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_radial_markers",
+      "markers": [
+        "orbital_spark_01",
+        "orbital_spark_02",
+        "orbital_spark_03",
+        "orbital_spark_04",
+        "orbital_spark_05",
+        "orbital_spark_06",
+        "orbital_spark_07",
+        "orbital_spark_08",
+        "orbital_spark_09",
+        "orbital_spark_10",
+        "orbital_spark_11",
+        "orbital_spark_12",
+        "orbital_spark_13",
+        "orbital_spark_14",
+        "orbital_spark_15",
+        "orbital_spark_16",
+        "orbital_spark_17",
+        "orbital_spark_18"
+      ],
+      "count": 18
+    },
+    {
+      "op": "create_radial_markers",
+      "markers": [
+        "inner_aurora_spark_01",
+        "inner_aurora_spark_02",
+        "inner_aurora_spark_03",
+        "inner_aurora_spark_04",
+        "inner_aurora_spark_05",
+        "inner_aurora_spark_06",
+        "inner_aurora_spark_07",
+        "inner_aurora_spark_08"
+      ],
+      "count": 8
+    },
+    {
+      "op": "create_energy_burst_streaks",
+      "energy_streaks": [
+        "aurora_trail_ribbon_01",
+        "aurora_trail_ribbon_02",
+        "aurora_trail_ribbon_03",
+        "aurora_trail_ribbon_04",
+        "aurora_trail_ribbon_05",
+        "aurora_trail_ribbon_06",
+        "aurora_trail_ribbon_07",
+        "aurora_trail_ribbon_08",
+        "aurora_trail_ribbon_09",
+        "aurora_trail_ribbon_10",
+        "aurora_trail_ribbon_11",
+        "aurora_trail_ribbon_12"
+      ],
+      "count": 12
+    },
+    {
+      "op": "create_lighting_rig",
+      "rig": "aurora_web_stage",
+      "lights": [
+        "teal_key",
+        "magenta_fill"
+      ]
+    },
+    {
+      "op": "create_camera",
+      "camera": "camera_scroll_start",
+      "active": true,
+      "preset": "scroll_hero_start",
+      "type": "PERSP"
+    },
+    {
+      "op": "create_animation",
+      "animation": "CoreIdle",
+      "mode": "turntable",
+      "keyed": [
+        "orbital_ring_primary",
+        "orbital_ring_vertical",
+        "orbital_ring_diagonal",
+        "aurora_trail_ribbon_01",
+        "aurora_trail_ribbon_02",
+        "aurora_trail_ribbon_03"
+      ],
+      "frame_range": [
+        1,
+        120
+      ],
+      "camera_path": false
+    },
+    {
+      "op": "create_animation",
+      "animation": "ScrollCameraMove",
+      "mode": "scroll_linked",
+      "keyed": [
+        "camera_scroll_start"
+      ],
+      "frame_range": [
+        1,
+        120
+      ],
+      "camera_path": true
+    },
+    {
+      "op": "apply_post",
+      "post": "aurora_web_readable",
+      "view_transform": "AgX"
+    },
+    {
+      "op": "set_scene_metadata",
+      "metadata_keys": [
+        "final_camera"
+      ]
+    }
+  ],
+  "inspection": {
+    "schema": "scene_inspection/0.1",
+    "collections": [
+      "CAMERAS",
+      "Collection",
+      "ENVIRONMENT",
+      "EXPORT",
+      "FX",
+      "HELPERS",
+      "LIGHTS",
+      "SUBJECT"
+    ],
+    "objects": [
+      {
+        "name": "camera_scroll_start",
+        "type": "CAMERA",
+        "collection": "CAMERAS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          0.0,
+          -12.0,
+          3.700000047683716
+        ],
+        "world_location": [
+          0.0,
+          -12.0,
+          3.700000047683716
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "teal_key",
+        "type": "LIGHT",
+        "collection": "LIGHTS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "world_location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "magenta_fill",
+        "type": "LIGHT",
+        "collection": "LIGHTS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          7.0
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          7.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "energy_core",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 80,
+        "verts": 42,
+        "materials": [
+          "core_emissive_teal"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.0,
+          1.600000023841858
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          1.9021157026290894,
+          1.9999998807907104,
+          2.0
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0407,
+        "screen_bbox": [
+          0.4281,
+          0.3492,
+          0.5719,
+          0.6319
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "orbital_ring_primary",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 576,
+        "verts": 576,
+        "materials": [
+          "ring_gold_metal"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.0,
+          1.600000023841858
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          3.7760000228881836,
+          3.7760000228881836,
+          0.5723539590835571
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0463,
+        "screen_bbox": [
+          0.3469,
+          0.4132,
+          0.6531,
+          0.5643
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "orbital_ring_vertical",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 576,
+        "verts": 576,
+        "materials": [
+          "ring_gold_metal"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.0,
+          1.600000023841858
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          3.36299991607666,
+          3.362999677658081,
+          0.5099616646766663
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.1053,
+        "screen_bbox": [
+          0.3769,
+          0.2713,
+          0.6165,
+          0.7108
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "orbital_ring_diagonal",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 576,
+        "verts": 576,
+        "materials": [
+          "ring_gold_metal"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.0,
+          1.600000023841858
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          4.188999652862549,
+          4.189000129699707,
+          0.635961651802063
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.2803,
+        "screen_bbox": [
+          0.3022,
+          0.1284,
+          0.7062,
+          0.822
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "inner_white_core",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 512,
+        "verts": 482,
+        "materials": [
+          "inner_warm_ivory_hot_core"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          1.600000023841858
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.8199996948242188,
+          0.8199998736381531,
+          0.8199999928474426
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0067,
+        "screen_bbox": [
+          0.4708,
+          0.4407,
+          0.5292,
+          0.5562
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_01",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          1.9500000476837158,
+          1.600000023841858
+        ],
+        "world_location": [
+          0.0,
+          1.9500000476837158,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04500000178813934,
+          0.12999999523162842,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": [
+          0.4987,
+          0.5325,
+          0.5013,
+          0.5381
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_02",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.6669392585754395,
+          1.8324005603790283,
+          1.600000023841858
+        ],
+        "world_location": [
+          0.6669392585754395,
+          1.8324005603790283,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.044999998062849045,
+          0.12999998033046722,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": [
+          0.5373,
+          0.5305,
+          0.5422,
+          0.5364
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_03",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          1.2534358501434326,
+          1.4937866926193237,
+          1.600000023841858
+        ],
+        "world_location": [
+          1.2534358501434326,
+          1.4937866926193237,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.044999998062849045,
+          0.12999998033046722,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": [
+          0.5731,
+          0.525,
+          0.5799,
+          0.5309
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_04",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          1.6887495517730713,
+          0.9750000238418579,
+          1.600000023841858
+        ],
+        "world_location": [
+          1.6887495517730713,
+          0.9750000238418579,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04500000178813934,
+          0.12999999523162842,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": [
+          0.6029,
+          0.5161,
+          0.6113,
+          0.5218
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_05",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          1.920375108718872,
+          0.33861395716667175,
+          1.600000023841858
+        ],
+        "world_location": [
+          1.920375108718872,
+          0.33861395716667175,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.044999998062849045,
+          0.12999998033046722,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.6232,
+          0.5042,
+          0.6325,
+          0.5096
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_06",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          1.920375108718872,
+          -0.33861395716667175,
+          1.600000023841858
+        ],
+        "world_location": [
+          1.920375108718872,
+          -0.33861395716667175,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.044999998062849045,
+          0.12999998033046722,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.6304,
+          0.4898,
+          0.6397,
+          0.4956
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_07",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          1.6887495517730713,
+          -0.9750000238418579,
+          1.600000023841858
+        ],
+        "world_location": [
+          1.6887495517730713,
+          -0.9750000238418579,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04500000178813934,
+          0.12999999523162842,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.6202,
+          0.4742,
+          0.6306,
+          0.4814
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_08",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          1.2534358501434326,
+          -1.4937866926193237,
+          1.600000023841858
+        ],
+        "world_location": [
+          1.2534358501434326,
+          -1.4937866926193237,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04500000178813934,
+          0.12999999523162842,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.5926,
+          0.4602,
+          0.6025,
+          0.4685
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_09",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.6669392585754395,
+          -1.8324005603790283,
+          1.600000023841858
+        ],
+        "world_location": [
+          0.6669392585754395,
+          -1.8324005603790283,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04500000178813934,
+          0.12999999523162842,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.5498,
+          0.4504,
+          0.5573,
+          0.4593
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_10",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          2.3880611640177303e-16,
+          -1.9500000476837158,
+          1.600000023841858
+        ],
+        "world_location": [
+          2.3880611640177303e-16,
+          -1.9500000476837158,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04500000178813934,
+          0.12999999523162842,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": [
+          0.4982,
+          0.447,
+          0.5018,
+          0.4558
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_11",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.6669392585754395,
+          -1.8324005603790283,
+          1.600000023841858
+        ],
+        "world_location": [
+          -0.6669392585754395,
+          -1.8324005603790283,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04500000178813934,
+          0.12999999523162842,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.4427,
+          0.4504,
+          0.4502,
+          0.4593
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_12",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -1.2534358501434326,
+          -1.4937866926193237,
+          1.600000023841858
+        ],
+        "world_location": [
+          -1.2534358501434326,
+          -1.4937866926193237,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04500000178813934,
+          0.12999999523162842,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.3975,
+          0.4602,
+          0.4074,
+          0.4685
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_13",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -1.6887495517730713,
+          -0.9750000238418579,
+          1.600000023841858
+        ],
+        "world_location": [
+          -1.6887495517730713,
+          -0.9750000238418579,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04500000178813934,
+          0.12999999523162842,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.3694,
+          0.4742,
+          0.3798,
+          0.4814
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_14",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -1.920375108718872,
+          -0.33861395716667175,
+          1.600000023841858
+        ],
+        "world_location": [
+          -1.920375108718872,
+          -0.33861395716667175,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04500000178813934,
+          0.12999999523162842,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.3603,
+          0.4898,
+          0.3696,
+          0.4956
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_15",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -1.920375108718872,
+          0.33861395716667175,
+          1.600000023841858
+        ],
+        "world_location": [
+          -1.920375108718872,
+          0.33861395716667175,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.044999998062849045,
+          0.12999998033046722,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.3675,
+          0.5042,
+          0.3768,
+          0.5096
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_16",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -1.6887495517730713,
+          0.9750000238418579,
+          1.600000023841858
+        ],
+        "world_location": [
+          -1.6887495517730713,
+          0.9750000238418579,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04500000178813934,
+          0.12999999523162842,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": [
+          0.3887,
+          0.5161,
+          0.3971,
+          0.5218
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_17",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -1.2534358501434326,
+          1.4937866926193237,
+          1.600000023841858
+        ],
+        "world_location": [
+          -1.2534358501434326,
+          1.4937866926193237,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04500000178813934,
+          0.12999999523162842,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": [
+          0.4201,
+          0.525,
+          0.4269,
+          0.5309
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "orbital_spark_18",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.6669392585754395,
+          1.8324005603790283,
+          1.600000023841858
+        ],
+        "world_location": [
+          -0.6669392585754395,
+          1.8324005603790283,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04500000178813934,
+          0.12999999523162842,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": [
+          0.4578,
+          0.5305,
+          0.4627,
+          0.5364
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "orbital_spark",
+        "craft_source": null
+      },
+      {
+        "name": "inner_aurora_spark_01",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.9200000166893005,
+          1.600000023841858
+        ],
+        "world_location": [
+          0.0,
+          0.9200000166893005,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0949999988079071,
+          0.2199999988079071,
+          0.054999999701976776
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.4969,
+          0.5128,
+          0.5031,
+          0.523
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "inner_aurora_spark",
+        "craft_source": null
+      },
+      {
+        "name": "inner_aurora_spark_02",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.6505382657051086,
+          0.6505382657051086,
+          1.600000023841858
+        ],
+        "world_location": [
+          0.6505382657051086,
+          0.6505382657051086,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.09499999135732651,
+          0.2199999839067459,
+          0.054999999701976776
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.5351,
+          0.5077,
+          0.5494,
+          0.5182
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "inner_aurora_spark",
+        "craft_source": null
+      },
+      {
+        "name": "inner_aurora_spark_03",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.9200000166893005,
+          5.633375257193976e-17,
+          1.600000023841858
+        ],
+        "world_location": [
+          0.9200000166893005,
+          5.633375257193976e-17,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0949999988079071,
+          0.2199999988079071,
+          0.054999999701976776
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.5552,
+          0.4957,
+          0.5708,
+          0.5043
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "inner_aurora_spark",
+        "craft_source": null
+      },
+      {
+        "name": "inner_aurora_spark_04",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.6505382657051086,
+          -0.6505382657051086,
+          1.600000023841858
+        ],
+        "world_location": [
+          0.6505382657051086,
+          -0.6505382657051086,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.09499999135732651,
+          0.2199999839067459,
+          0.054999999701976776
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0002,
+        "screen_bbox": [
+          0.5388,
+          0.4795,
+          0.5552,
+          0.4916
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "inner_aurora_spark",
+        "craft_source": null
+      },
+      {
+        "name": "inner_aurora_spark_05",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          1.1266750514387952e-16,
+          -0.9200000166893005,
+          1.600000023841858
+        ],
+        "world_location": [
+          1.1266750514387952e-16,
+          -0.9200000166893005,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0949999988079071,
+          0.2199999988079071,
+          0.054999999701976776
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.4965,
+          0.4729,
+          0.5035,
+          0.4853
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "inner_aurora_spark",
+        "craft_source": null
+      },
+      {
+        "name": "inner_aurora_spark_06",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.6505382657051086,
+          -0.6505382657051086,
+          1.600000023841858
+        ],
+        "world_location": [
+          -0.6505382657051086,
+          -0.6505382657051086,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0949999988079071,
+          0.2199999988079071,
+          0.054999999701976776
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0002,
+        "screen_bbox": [
+          0.4448,
+          0.4795,
+          0.4612,
+          0.4916
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "inner_aurora_spark",
+        "craft_source": null
+      },
+      {
+        "name": "inner_aurora_spark_07",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.9200000166893005,
+          -1.6900125771581928e-16,
+          1.600000023841858
+        ],
+        "world_location": [
+          -0.9200000166893005,
+          -1.6900125771581928e-16,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0949999988079071,
+          0.2199999988079071,
+          0.054999999701976776
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.4292,
+          0.4957,
+          0.4448,
+          0.5043
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "inner_aurora_spark",
+        "craft_source": null
+      },
+      {
+        "name": "inner_aurora_spark_08",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.6505382657051086,
+          0.6505382657051086,
+          1.600000023841858
+        ],
+        "world_location": [
+          -0.6505382657051086,
+          0.6505382657051086,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0949999988079071,
+          0.2199999988079071,
+          0.054999999701976776
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.4506,
+          0.5077,
+          0.4649,
+          0.5182
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "inner_aurora_spark",
+        "craft_source": null
+      },
+      {
+        "name": "aurora_trail_ribbon_01",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 28,
+        "verts": 45,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.707558274269104,
+          -0.6931490898132324,
+          1.651608943939209
+        ],
+        "world_location": [
+          -0.707558274269104,
+          -0.6931490898132324,
+          1.651608943939209
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.1075567752122879,
+          0.6386615037918091,
+          0.18430250883102417
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0019,
+        "screen_bbox": [
+          0.4392,
+          0.4901,
+          0.4606,
+          0.577
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "energy_streak",
+        "craft_group": "aurora_trail_ribbon",
+        "craft_source": null
+      },
+      {
+        "name": "aurora_trail_ribbon_02",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 28,
+        "verts": 45,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -1.117285966873169,
+          -0.3889544606208801,
+          1.5432754755020142
+        ],
+        "world_location": [
+          -1.117285966873169,
+          -0.3889544606208801,
+          1.5432754755020142
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.10759368538856506,
+          0.9381946325302124,
+          0.18438152968883514
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0025,
+        "screen_bbox": [
+          0.4134,
+          0.4834,
+          0.4344,
+          0.6045
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "energy_streak",
+        "craft_group": "aurora_trail_ribbon",
+        "craft_source": null
+      },
+      {
+        "name": "aurora_trail_ribbon_03",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 28,
+        "verts": 45,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -1.4039320945739746,
+          0.25233542919158936,
+          1.6731481552124023
+        ],
+        "world_location": [
+          -1.4039320945739746,
+          0.25233542919158936,
+          1.6731481552124023
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.10749892145395279,
+          0.4674360454082489,
+          0.18418987095355988
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0011,
+        "screen_bbox": [
+          0.3994,
+          0.5126,
+          0.4186,
+          0.5723
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "energy_streak",
+        "craft_group": "aurora_trail_ribbon",
+        "craft_source": null
+      },
+      {
+        "name": "aurora_trail_ribbon_04",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 28,
+        "verts": 45,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.8340785503387451,
+          0.7786892056465149,
+          1.549259901046753
+        ],
+        "world_location": [
+          -0.8340785503387451,
+          0.7786892056465149,
+          1.549259901046753
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.1076032966375351,
+          1.1195470094680786,
+          0.1844031810760498
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0027,
+        "screen_bbox": [
+          0.4367,
+          0.5089,
+          0.4574,
+          0.6395
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "energy_streak",
+        "craft_group": "aurora_trail_ribbon",
+        "craft_source": null
+      },
+      {
+        "name": "aurora_trail_ribbon_05",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 28,
+        "verts": 45,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.6115802526473999,
+          1.2218208312988281,
+          1.5527962446212769
+        ],
+        "world_location": [
+          -0.6115802526473999,
+          1.2218208312988281,
+          1.5527962446212769
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.10758891701698303,
+          0.875681459903717,
+          0.1843710094690323
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0014,
+        "screen_bbox": [
+          0.4555,
+          0.5176,
+          0.4702,
+          0.6165
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "energy_streak",
+        "craft_group": "aurora_trail_ribbon",
+        "craft_source": null
+      },
+      {
+        "name": "aurora_trail_ribbon_06",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 28,
+        "verts": 45,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.03750712797045708,
+          0.8853153586387634,
+          1.5900225639343262
+        ],
+        "world_location": [
+          0.03750712797045708,
+          0.8853153586387634,
+          1.5900225639343262
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.10759064555168152,
+          0.8967987298965454,
+          0.18437477946281433
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0008,
+        "screen_bbox": [
+          0.4991,
+          0.5141,
+          0.5067,
+          0.6181
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "energy_streak",
+        "craft_group": "aurora_trail_ribbon",
+        "craft_source": null
+      },
+      {
+        "name": "aurora_trail_ribbon_07",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 28,
+        "verts": 45,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.7394408583641052,
+          1.2085015773773193,
+          1.6383517980575562
+        ],
+        "world_location": [
+          0.7394408583641052,
+          1.2085015773773193,
+          1.6383517980575562
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.10760745406150818,
+          1.2379177808761597,
+          0.1844126284122467
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0021,
+        "screen_bbox": [
+          0.5382,
+          0.5252,
+          0.5529,
+          0.6656
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "energy_streak",
+        "craft_group": "aurora_trail_ribbon",
+        "craft_source": null
+      },
+      {
+        "name": "aurora_trail_ribbon_08",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 28,
+        "verts": 45,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.7498161792755127,
+          0.2753840386867523,
+          1.5326930284500122
+        ],
+        "world_location": [
+          0.7498161792755127,
+          0.2753840386867523,
+          1.5326930284500122
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.1075834408402443,
+          0.8169246315956116,
+          0.18435898423194885
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0018,
+        "screen_bbox": [
+          0.5378,
+          0.4963,
+          0.5556,
+          0.5953
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "energy_streak",
+        "craft_group": "aurora_trail_ribbon",
+        "craft_source": null
+      },
+      {
+        "name": "aurora_trail_ribbon_09",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 28,
+        "verts": 45,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.8050703406333923,
+          -0.07302571088075638,
+          1.6442947387695312
+        ],
+        "world_location": [
+          0.8050703406333923,
+          -0.07302571088075638,
+          1.6442947387695312
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.10758202522993088,
+          0.8036124110221863,
+          0.18435591459274292
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0019,
+        "screen_bbox": [
+          0.5428,
+          0.5023,
+          0.5617,
+          0.6041
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "energy_streak",
+        "craft_group": "aurora_trail_ribbon",
+        "craft_source": null
+      },
+      {
+        "name": "aurora_trail_ribbon_10",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 28,
+        "verts": 45,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          1.3063079118728638,
+          -0.7323447465896606,
+          1.6548969745635986
+        ],
+        "world_location": [
+          1.3063079118728638,
+          -0.7323447465896606,
+          1.6548969745635986
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.10750998556613922,
+          0.4900667071342468,
+          0.18421046435832977
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0011,
+        "screen_bbox": [
+          0.581,
+          0.4891,
+          0.5981,
+          0.556
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "energy_streak",
+        "craft_group": "aurora_trail_ribbon",
+        "craft_source": null
+      },
+      {
+        "name": "aurora_trail_ribbon_11",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 28,
+        "verts": 45,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.6140432357788086,
+          -1.3741124868392944,
+          1.5550655126571655
+        ],
+        "world_location": [
+          0.6140432357788086,
+          -1.3741124868392944,
+          1.5550655126571655
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.10758872330188751,
+          0.8732577562332153,
+          0.18437056243419647
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0022,
+        "screen_bbox": [
+          0.5366,
+          0.4606,
+          0.5545,
+          0.5837
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "energy_streak",
+        "craft_group": "aurora_trail_ribbon",
+        "craft_source": null
+      },
+      {
+        "name": "aurora_trail_ribbon_12",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 28,
+        "verts": 45,
+        "materials": [
+          "spark_magenta_aurora"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.11498793214559555,
+          -1.352986454963684,
+          1.6715587377548218
+        ],
+        "world_location": [
+          -0.11498793214559555,
+          -1.352986454963684,
+          1.6715587377548218
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.10757621377706528,
+          0.7548030614852905,
+          0.1843433678150177
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0011,
+        "screen_bbox": [
+          0.4851,
+          0.4773,
+          0.4958,
+          0.5838
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "energy_streak",
+        "craft_group": "aurora_trail_ribbon",
+        "craft_source": null
+      },
+      {
+        "name": "stage_floor",
+        "type": "MESH",
+        "collection": "ENVIRONMENT",
+        "faces": 1,
+        "verts": 4,
+        "materials": [
+          "stage_dark"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          20.0,
+          20.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.5098,
+        "screen_bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.5098
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      }
+    ],
+    "materials": [
+      {
+        "name": "core_emissive_teal",
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "node_count": 6,
+        "link_count": 5,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF",
+          "NG_core_emissive_teal_Noise",
+          "NG_core_emissive_teal_Bump",
+          "NG_core_emissive_teal_RampNoise",
+          "NG_core_emissive_teal_ColorRamp"
+        ],
+        "users": 1,
+        "has_emission": true,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "noise_bump,noise_color_ramp",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "inner_warm_ivory_hot_core",
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 1,
+        "has_emission": true,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "ring_gold_metal",
+        "metallic": 1.0,
+        "roughness": 0.3499999940395355,
+        "node_count": 4,
+        "link_count": 3,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF",
+          "NG_ring_gold_metal_Wave",
+          "NG_ring_gold_metal_WaveBump"
+        ],
+        "users": 3,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "wave_bump",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "spark_magenta_aurora",
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 38,
+        "has_emission": true,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "stage_dark",
+        "metallic": 0.0,
+        "roughness": 0.23999999463558197,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 1,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      }
+    ],
+    "lights": [
+      {
+        "name": "teal_key",
+        "type": "AREA",
+        "energy": 620.0,
+        "color": [
+          0.20000000298023224,
+          0.949999988079071,
+          0.7799999713897705
+        ]
+      },
+      {
+        "name": "magenta_fill",
+        "type": "AREA",
+        "energy": 320.0,
+        "color": [
+          0.949999988079071,
+          0.2199999988079071,
+          0.800000011920929
+        ]
+      }
+    ],
+    "active_camera": {
+      "name": "camera_scroll_start",
+      "lens_mm": 30.0,
+      "dof": true,
+      "focus_target": "energy_core",
+      "inside_geometry": false,
+      "clip_end": 1000.0
+    },
+    "cameras": [
+      "camera_scroll_start"
+    ],
+    "node_groups": [],
+    "geometry_nodes": [],
+    "particles": [],
+    "animation": {
+      "has_action": true,
+      "frame_start": 1,
+      "frame_end": 120,
+      "fps": 24,
+      "keyframed_objects": [
+        "camera_scroll_start",
+        "orbital_ring_primary",
+        "orbital_ring_vertical",
+        "orbital_ring_diagonal",
+        "aurora_trail_ribbon_01",
+        "aurora_trail_ribbon_02",
+        "aurora_trail_ribbon_03"
+      ],
+      "markers": [
+        "start",
+        "end"
+      ],
+      "camera_animated": true,
+      "sampled_objects": [
+        {
+          "name": "camera_scroll_start",
+          "sample_count": 3,
+          "frames": [
+            1,
+            60,
+            120
+          ],
+          "max_location_delta": 5.0122,
+          "max_rotation_delta": 0.0
+        },
+        {
+          "name": "orbital_ring_primary",
+          "sample_count": 3,
+          "frames": [
+            1,
+            60,
+            120
+          ],
+          "max_location_delta": 1.1112,
+          "max_rotation_delta": 6.2832
+        },
+        {
+          "name": "orbital_ring_vertical",
+          "sample_count": 3,
+          "frames": [
+            1,
+            60,
+            120
+          ],
+          "max_location_delta": 1.1112,
+          "max_rotation_delta": 6.2832
+        },
+        {
+          "name": "orbital_ring_diagonal",
+          "sample_count": 3,
+          "frames": [
+            1,
+            60,
+            120
+          ],
+          "max_location_delta": 1.1112,
+          "max_rotation_delta": 6.2832
+        },
+        {
+          "name": "aurora_trail_ribbon_01",
+          "sample_count": 3,
+          "frames": [
+            1,
+            60,
+            120
+          ],
+          "max_location_delta": 1.1603,
+          "max_rotation_delta": 6.2832
+        },
+        {
+          "name": "aurora_trail_ribbon_02",
+          "sample_count": 3,
+          "frames": [
+            1,
+            60,
+            120
+          ],
+          "max_location_delta": 1.2621,
+          "max_rotation_delta": 6.2832
+        },
+        {
+          "name": "aurora_trail_ribbon_03",
+          "sample_count": 3,
+          "frames": [
+            1,
+            60,
+            120
+          ],
+          "max_location_delta": 1.8997,
+          "max_rotation_delta": 6.2832
+        }
+      ],
+      "moving_object_count": 7,
+      "max_sampled_location_delta": 5.0122,
+      "max_sampled_rotation_delta": 6.2832,
+      "camera_sampled_motion": {
+        "name": "camera_scroll_start",
+        "sample_count": 3,
+        "frames": [
+          1,
+          60,
+          120
+        ],
+        "max_location_delta": 5.0122,
+        "max_rotation_delta": 0.0
+      }
+    },
+    "compositor": {
+      "use_nodes": false,
+      "node_names": [],
+      "raw_render_saved": true
+    },
+    "render": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "samples": 64,
+      "volumetric": false,
+      "view_transform": "AgX"
+    },
+    "metadata": {
+      "blender_cinematic_skill_version": "0.1",
+      "task_id": "bench_web_scroll_hero",
+      "quality_profile": "balanced",
+      "final_camera": "camera_scroll_start",
+      "camera_preset": "scroll_hero_start",
+      "camera_subject_screen_coverage": 0.34,
+      "camera_safe_margin": 0.18,
+      "animation_mode": "scroll_linked",
+      "animation_clip_name": "ScrollCameraMove",
+      "camera_path_json": "{\"schema\": \"camera_path/0.1\", \"segments\": [{\"from_scroll\": 0.0, \"to_scroll\": 1.0, \"camera_from_frame\": 1, \"camera_to_frame\": 120}], \"samples\": [{\"frame\": 1, \"position\": [0.0, -12.0, 3.700000047683716], \"rotation\": [1.3975508213043213, -0.0, 0.0], \"target\": \"energy_core\"}, {\"frame\": 16, \"position\": [0.5, -11.625, 3.65625], \"rotation\": [1.3975508213043213, -0.0, 0.0], \"target\": \"energy_core\"}, {\"frame\": 31, \"position\": [1.0, -11.25, 3.6125001907348633], \"rotation\": [1.3975508213043213, -0.0, 0.0], \"target\": \"energy_core\"}, {\"frame\": 46, \"position\": [1.5, -10.875, 3.5687499046325684], \"rotation\": [1.3975508213043213, -0.0, 0.0], \"target\": \"energy_core\"}, {\"frame\": 60, \"position\": [2.0, -10.5, 3.5250000953674316], \"rotation\": [1.3975508213043213, -0.0, 0.0], \"target\": \"energy_core\"}, {\"frame\": 75, \"position\": [2.5, -10.125, 3.481250047683716], \"rotation\": [1.3975508213043213, -0.0, 0.0], \"target\": \"energy_core\"}, {\"frame\": 90, \"position\": [3.0, -9.75, 3.437499761581421], \"rotation\": [1.3975508213043213, -0.0, 0.0], \"target\": \"energy_core\"}, {\"frame\": 105, \"position\": [3.5, -9.375, 3.393749952316284], \"rotation\": [1.3975508213043213, -0.0, 0.0], \"target\": \"energy_core\"}, {\"frame\": 120, \"position\": [4.0, -9.0, 3.3499999046325684], \"rotation\": [1.3975508213043213, -0.0, 0.0], \"target\": \"energy_core\"}]}",
+      "post_preset": "aurora_web_readable"
+    },
+    "camera_path_json": {
+      "schema": "camera_path/0.1",
+      "segments": [
+        {
+          "from_scroll": 0.0,
+          "to_scroll": 1.0,
+          "camera_from_frame": 1,
+          "camera_to_frame": 120
+        }
+      ],
+      "samples": [
+        {
+          "frame": 1,
+          "position": [
+            0.0,
+            -12.0,
+            3.700000047683716
+          ],
+          "rotation": [
+            1.3975508213043213,
+            -0.0,
+            0.0
+          ],
+          "target": "energy_core"
+        },
+        {
+          "frame": 16,
+          "position": [
+            0.5,
+            -11.625,
+            3.65625
+          ],
+          "rotation": [
+            1.3975508213043213,
+            -0.0,
+            0.0
+          ],
+          "target": "energy_core"
+        },
+        {
+          "frame": 31,
+          "position": [
+            1.0,
+            -11.25,
+            3.6125001907348633
+          ],
+          "rotation": [
+            1.3975508213043213,
+            -0.0,
+            0.0
+          ],
+          "target": "energy_core"
+        },
+        {
+          "frame": 46,
+          "position": [
+            1.5,
+            -10.875,
+            3.5687499046325684
+          ],
+          "rotation": [
+            1.3975508213043213,
+            -0.0,
+            0.0
+          ],
+          "target": "energy_core"
+        },
+        {
+          "frame": 60,
+          "position": [
+            2.0,
+            -10.5,
+            3.5250000953674316
+          ],
+          "rotation": [
+            1.3975508213043213,
+            -0.0,
+            0.0
+          ],
+          "target": "energy_core"
+        },
+        {
+          "frame": 75,
+          "position": [
+            2.5,
+            -10.125,
+            3.481250047683716
+          ],
+          "rotation": [
+            1.3975508213043213,
+            -0.0,
+            0.0
+          ],
+          "target": "energy_core"
+        },
+        {
+          "frame": 90,
+          "position": [
+            3.0,
+            -9.75,
+            3.437499761581421
+          ],
+          "rotation": [
+            1.3975508213043213,
+            -0.0,
+            0.0
+          ],
+          "target": "energy_core"
+        },
+        {
+          "frame": 105,
+          "position": [
+            3.5,
+            -9.375,
+            3.393749952316284
+          ],
+          "rotation": [
+            1.3975508213043213,
+            -0.0,
+            0.0
+          ],
+          "target": "energy_core"
+        },
+        {
+          "frame": 120,
+          "position": [
+            4.0,
+            -9.0,
+            3.3499999046325684
+          ],
+          "rotation": [
+            1.3975508213043213,
+            -0.0,
+            0.0
+          ],
+          "target": "energy_core"
+        }
+      ]
+    },
+    "missing_files": []
+  },
+  "inspect_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_skill_plus_tools\\iterations\\iter_01_inspect.json",
+  "render": {
+    "rendered": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_skill_plus_tools\\iterations\\iter_01_preview.png",
+    "frame": 1,
+    "settings": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        480,
+        270
+      ],
+      "samples": 24,
+      "device": "CPU"
+    }
+  },
+  "export": {
+    "exported": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_skill_plus_tools\\final\\export_final.glb",
+    "size_bytes": 445192
+  },
+  "saved": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_skill_plus_tools\\final\\scene.blend"
+}

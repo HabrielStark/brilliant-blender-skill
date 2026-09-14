@@ -1,0 +1,21 @@
+{
+  "iteration": 1,
+  "hard_fail": false,
+  "passed": true,
+  "scores": {
+    "composition": 20,
+    "lighting": 15,
+    "materials": 15,
+    "geometry_detail": 15,
+    "camera": 10,
+    "technical": 10,
+    "performance": 5,
+    "reference_fidelity": 10,
+    "total": 100
+  },
+  "defects": [
+    "127 tiny objects; consider instancing/merging"
+  ],
+  "next_actions": [],
+  "hard_fail_reasons": []
+}

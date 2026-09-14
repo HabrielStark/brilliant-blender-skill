@@ -1,0 +1,15 @@
+{
+  "task_id": "bench_camera_expensive",
+  "brief": "expensive cinematic look for a single hero object",
+  "output_mode": "still",
+  "style": {
+    "mood": "premium cinematic sharp high-contrast"
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "png"
+    ]
+  },
+  "constraints": {}
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "bench_shader_texture_material",
+  "brief": "premium shader and texture material study",
+  "output_mode": "still",
+  "style": {
+    "mood": "premium bright editorial material lab",
+    "palette": [
+      "warm ivory",
+      "teal",
+      "brass",
+      "white highlights"
+    ]
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "png"
+    ]
+  },
+  "constraints": {}
+}

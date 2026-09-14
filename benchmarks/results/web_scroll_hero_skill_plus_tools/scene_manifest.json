@@ -1,0 +1,26 @@
+{
+  "task_id": "bench_web_scroll_hero",
+  "brief": "floating aurora kinetic AI core hero for a website with scroll camera",
+  "output_mode": "interactive_web",
+  "style": {
+    "mood": "aurora kinetic sculpture",
+    "palette": [
+      "black",
+      "teal",
+      "magenta",
+      "gold",
+      "warm ivory"
+    ]
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "png",
+      "glb"
+    ],
+    "web_runtime": "react-three-fiber"
+  },
+  "constraints": {
+    "max_glb_mb": 20
+  }
+}

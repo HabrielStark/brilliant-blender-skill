@@ -90,18 +90,24 @@ not acceptable evidence for production-grade reference fidelity.
   unless the scenario provenance is `live_agent` and the raw generation metadata
   is archived.
 
-## Tasks (15)
+## Tasks (16)
 
 `architectural_interior_scene`, `product_hero_watch`, `sci_fi_corridor`,
 `mechanical_exploded_view`, `web_scroll_hero`, `low_spec_laptop_safe`,
 `organic_soft_surface_study`, `particle_vfx_energy_burst`, `reference_match`,
 `shader_texture_material_study`, `turntable_animation`, `scene_repair`,
-`glb_web_budget`, `camera_expensive`, `neon_typography_signage`.
+`glb_web_budget`, `camera_expensive`, `neon_typography_signage`,
+`landscape_meadow_golden_hour`.
 Pass criteria are in `benchmarks/rubrics/pass_criteria.md`.
 The neon typography task exercises text/curve-tube subject construction,
 emissive materials on FONT and CURVE targets, moody dark-environment
 readability, and silhouette-dependent hardware (cables, wall-mount ears) —
 an adversarial keyword-named dark slab must fail.
+The landscape task exercises organic terrain composition, golden-hour
+lighting, and the `GN_RockScatter`/`GN_VegetationLow` geometry-node
+recipes, which must instance irregular rock meshes and tapered vegetation
+with real materials (generic cube proxies are rejected by render
+inspection); a low golden-hour sun disc must stay in frame and readable.
 The organic/soft-surface task now requires a cohesive fluted hero body plus
 smooth curved petal, leaf, and fold mesh details; separate sphere blobs and
 beveled cuboid markers are intentionally rejected by named-part, face/modifier,

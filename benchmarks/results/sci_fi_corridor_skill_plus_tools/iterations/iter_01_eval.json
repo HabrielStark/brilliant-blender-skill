@@ -1,0 +1,24 @@
+{
+  "iteration": 1,
+  "hard_fail": false,
+  "passed": true,
+  "scores": {
+    "composition": 17,
+    "lighting": 15,
+    "materials": 15,
+    "geometry_detail": 15,
+    "camera": 10,
+    "technical": 10,
+    "performance": 5,
+    "reference_fidelity": 10,
+    "total": 97
+  },
+  "defects": [
+    "subject coverage only 2%; too small",
+    "158 tiny objects; consider instancing/merging"
+  ],
+  "next_actions": [
+    "move the camera closer or raise focal length to fill the frame"
+  ],
+  "hard_fail_reasons": []
+}

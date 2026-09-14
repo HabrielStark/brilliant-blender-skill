@@ -1,0 +1,27 @@
+{
+  "iteration": 1,
+  "hard_fail": false,
+  "passed": true,
+  "scores": {
+    "composition": 20,
+    "lighting": 15,
+    "materials": 15,
+    "geometry_detail": 15,
+    "camera": 10,
+    "technical": 10,
+    "performance": 5,
+    "reference_fidelity": 10,
+    "total": 100
+  },
+  "defects": [
+    "premium render: liquid_bubble_highlight_01 has no bevel/subsurf/smooth",
+    "premium render: liquid_bubble_highlight_02 has no bevel/subsurf/smooth",
+    "premium render: liquid_bubble_highlight_03 has no bevel/subsurf/smooth",
+    "premium render: swatch_glass_clear_sphere has no bevel/subsurf/smooth",
+    "premium render: swatch_metal_brushed_ball has no bevel/subsurf/smooth"
+  ],
+  "next_actions": [
+    "add bevels/subsurf so edges catch light"
+  ],
+  "hard_fail_reasons": []
+}

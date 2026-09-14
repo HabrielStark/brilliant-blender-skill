@@ -1,0 +1,789 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\landscape_meadow_golden_hour_skill_plus_tools",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\landscape_meadow_golden_hour_skill_plus_tools\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_meadow",
+    "brief": "golden-hour meadow landscape hero",
+    "output_mode": "still",
+    "style": {
+      "mood": "warm golden hour pastoral",
+      "palette": [
+        "olive green",
+        "warm amber",
+        "cool shadow"
+      ]
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ],
+      "web_runtime": "three"
+    }
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": true,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "plane",
+        "name": "meadow_ground_plane",
+        "size": 26,
+        "collection": "ENVIRONMENT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "plane",
+        "name": "horizon_sky_glow_band",
+        "size": 18,
+        "location": [
+          0,
+          7.5,
+          3.4
+        ],
+        "rotation": [
+          90,
+          0,
+          0
+        ],
+        "collection": "ENVIRONMENT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "horizon_sky_glow_band",
+        "rotation": true,
+        "scale": true
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "ico_sphere",
+        "name": "horizon_distant_hill_left",
+        "size": 5.5,
+        "location": [
+          -4.5,
+          6.2,
+          0.2
+        ],
+        "scale": [
+          1.3,
+          0.55,
+          0.32
+        ],
+        "collection": "ENVIRONMENT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "ico_sphere",
+        "name": "horizon_distant_hill_right",
+        "size": 6.5,
+        "location": [
+          4.8,
+          6.8,
+          0.1
+        ],
+        "scale": [
+          1.2,
+          0.5,
+          0.26
+        ],
+        "collection": "ENVIRONMENT"
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "horizon_distant_hill_left",
+        "smooth": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "horizon_distant_hill_right",
+        "smooth": true
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "ico_sphere",
+        "name": "mound_hero_grassy",
+        "size": 3.1,
+        "location": [
+          0,
+          0.4,
+          0.42
+        ],
+        "scale": [
+          1.15,
+          0.95,
+          0.3
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "mound_hero_grassy",
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "mound_hero_grassy",
+        "smooth": true
+      },
+      {
+        "op": "add_subdivision",
+        "target": "mound_hero_grassy",
+        "levels": 1
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "ico_sphere",
+        "name": "boulder_granite_main",
+        "size": 0.62,
+        "location": [
+          -0.85,
+          -0.15,
+          0.95
+        ],
+        "rotation": [
+          12,
+          35,
+          8
+        ],
+        "scale": [
+          1.0,
+          0.82,
+          0.78
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "boulder_granite_main",
+        "rotation": true,
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "boulder_granite_main",
+        "smooth": true
+      },
+      {
+        "op": "add_bevel_modifier",
+        "target": "boulder_granite_main",
+        "width": 0.04,
+        "segments": 2
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "ico_sphere",
+        "name": "boulder_secondary_worn",
+        "size": 0.34,
+        "location": [
+          1.15,
+          0.85,
+          0.68
+        ],
+        "rotation": [
+          40,
+          10,
+          70
+        ],
+        "scale": [
+          1.1,
+          0.75,
+          0.6
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "boulder_secondary_worn",
+        "rotation": true,
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "boulder_secondary_worn",
+        "smooth": true
+      },
+      {
+        "op": "create_geometry_nodes",
+        "schema": {
+          "node_group_name": "GN_Meadow_Rocks",
+          "recipe": "GN_RockScatter",
+          "target_object": "mound_hero_grassy",
+          "inputs": {
+            "rock_count": 14,
+            "rock_size": 0.09,
+            "seed": 7
+          },
+          "export_policy": {
+            "apply_before_glb": true,
+            "max_generated_faces": 60000
+          }
+        }
+      },
+      {
+        "op": "create_geometry_nodes",
+        "schema": {
+          "node_group_name": "GN_Meadow_Grass",
+          "recipe": "GN_VegetationLow",
+          "target_object": "meadow_ground_plane",
+          "inputs": {
+            "leaf_count": 60,
+            "leaf_size": 0.16,
+            "seed": 11
+          },
+          "export_policy": {
+            "apply_before_glb": true,
+            "max_generated_faces": 60000
+          }
+        }
+      },
+      {
+        "op": "create_geometry_nodes",
+        "schema": {
+          "node_group_name": "GN_Mound_Grass",
+          "recipe": "GN_VegetationLow",
+          "target_object": "mound_hero_grassy",
+          "inputs": {
+            "leaf_count": 40,
+            "leaf_size": 0.14,
+            "seed": 23
+          },
+          "export_policy": {
+            "apply_before_glb": true,
+            "max_generated_faces": 60000
+          }
+        }
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "path_stone_step_01",
+        "size": 0.42,
+        "location": [
+          0.55,
+          -1.7,
+          0.12
+        ],
+        "scale": [
+          1.15,
+          0.9,
+          0.14
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "path_stone_step_02",
+        "size": 0.38,
+        "location": [
+          0.35,
+          -1.15,
+          0.16
+        ],
+        "rotation": [
+          0,
+          0,
+          18
+        ],
+        "scale": [
+          1.1,
+          0.85,
+          0.13
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "path_stone_step_03",
+        "size": 0.4,
+        "location": [
+          0.42,
+          -0.55,
+          0.28
+        ],
+        "rotation": [
+          0,
+          0,
+          -12
+        ],
+        "scale": [
+          1.05,
+          0.9,
+          0.12
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "path_stone_step_04",
+        "size": 0.36,
+        "location": [
+          0.2,
+          0.05,
+          0.42
+        ],
+        "rotation": [
+          0,
+          0,
+          25
+        ],
+        "scale": [
+          1.15,
+          0.8,
+          0.12
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "path_stone_step_01",
+        "rotation": true,
+        "scale": true
+      },
+      {
+        "op": "apply_transform",
+        "target": "path_stone_step_02",
+        "rotation": true,
+        "scale": true
+      },
+      {
+        "op": "apply_transform",
+        "target": "path_stone_step_03",
+        "rotation": true,
+        "scale": true
+      },
+      {
+        "op": "apply_transform",
+        "target": "path_stone_step_04",
+        "rotation": true,
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "path_stone_step_01",
+        "smooth": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "path_stone_step_02",
+        "smooth": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "path_stone_step_03",
+        "smooth": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "path_stone_step_04",
+        "smooth": true
+      },
+      {
+        "op": "add_bevel_modifier",
+        "target": "path_stone_step_01",
+        "width": 0.03,
+        "segments": 2
+      },
+      {
+        "op": "add_bevel_modifier",
+        "target": "path_stone_step_02",
+        "width": 0.028,
+        "segments": 2
+      },
+      {
+        "op": "add_bevel_modifier",
+        "target": "path_stone_step_03",
+        "width": 0.03,
+        "segments": 2
+      },
+      {
+        "op": "add_bevel_modifier",
+        "target": "path_stone_step_04",
+        "width": 0.026,
+        "segments": 2
+      },
+      {
+        "op": "create_organic_surface_details",
+        "name_prefix": "grass_blade_hero",
+        "count": 6,
+        "start": [
+          -0.35,
+          -1.1,
+          0.16
+        ],
+        "step": [
+          0.16,
+          0.1,
+          0.0
+        ],
+        "length": 0.5,
+        "width": 0.05,
+        "curl": 0.3,
+        "bend": 0.45,
+        "taper": 0.7,
+        "collection": "SUBJECT",
+        "role": "grass"
+      },
+      {
+        "op": "create_organic_surface_details",
+        "name_prefix": "grass_blade_mound_edge",
+        "count": 5,
+        "start": [
+          -1.5,
+          0.3,
+          0.62
+        ],
+        "step": [
+          0.22,
+          0.16,
+          0.02
+        ],
+        "length": 0.42,
+        "width": 0.045,
+        "curl": 0.35,
+        "bend": 0.5,
+        "taper": 0.72,
+        "collection": "SUBJECT",
+        "role": "grass"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "uv_sphere",
+        "name": "sun_disc_low_warm",
+        "size": 0.85,
+        "location": [
+          0.3,
+          7.1,
+          1.5
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "sun_disc_low_warm",
+        "smooth": true
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "mound_grass_olive",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "mound_hero_grassy"
+          ],
+          "pbr": {
+            "base_color": [
+              0.24,
+              0.3,
+              0.12,
+              1
+            ],
+            "roughness": 0.85
+          },
+          "procedural": {
+            "noise": true,
+            "noise_scale": 8,
+            "bump_strength": 0.03,
+            "color_ramp": {
+              "noise_scale": 6,
+              "detail": 4,
+              "colors": [
+                [
+                  0.18,
+                  0.24,
+                  0.09,
+                  1
+                ],
+                [
+                  0.34,
+                  0.4,
+                  0.15,
+                  1
+                ]
+              ]
+            }
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "meadow_grass_flat",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "meadow_ground_plane"
+          ],
+          "pbr": {
+            "base_color": [
+              0.17,
+              0.23,
+              0.1,
+              1
+            ],
+            "roughness": 0.9
+          },
+          "procedural": {
+            "noise": true,
+            "noise_scale": 5,
+            "bump_strength": 0.02
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "boulder_granite_warm",
+          "preset": "stone_concrete",
+          "target_objects": [
+            "boulder_granite_main",
+            "boulder_secondary_worn"
+          ],
+          "pbr": {
+            "base_color": [
+              0.42,
+              0.4,
+              0.36,
+              1
+            ],
+            "roughness": 0.82
+          },
+          "procedural": {
+            "noise": true,
+            "noise_scale": 12,
+            "bump_strength": 0.05,
+            "color_ramp": {
+              "noise_scale": 9,
+              "detail": 5,
+              "colors": [
+                [
+                  0.3,
+                  0.29,
+                  0.26,
+                  1
+                ],
+                [
+                  0.55,
+                  0.52,
+                  0.46,
+                  1
+                ]
+              ]
+            }
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "path_stone_dusty",
+          "preset": "stone_concrete",
+          "target_objects": [
+            "path_stone_step_01",
+            "path_stone_step_02",
+            "path_stone_step_03",
+            "path_stone_step_04"
+          ],
+          "pbr": {
+            "base_color": [
+              0.45,
+              0.38,
+              0.28,
+              1
+            ],
+            "roughness": 0.88
+          },
+          "procedural": {
+            "noise": true,
+            "noise_scale": 15,
+            "bump_strength": 0.03
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "grass_blade_sunlit",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "grass_blade_hero_01",
+            "grass_blade_hero_02",
+            "grass_blade_hero_03",
+            "grass_blade_hero_04",
+            "grass_blade_hero_05",
+            "grass_blade_hero_06",
+            "grass_blade_mound_edge_01",
+            "grass_blade_mound_edge_02",
+            "grass_blade_mound_edge_03",
+            "grass_blade_mound_edge_04",
+            "grass_blade_mound_edge_05"
+          ],
+          "pbr": {
+            "base_color": [
+              0.38,
+              0.45,
+              0.16,
+              1
+            ],
+            "roughness": 0.7
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "sun_disc_emissive",
+          "preset": "emissive_neon",
+          "target_objects": [
+            "sun_disc_low_warm"
+          ],
+          "pbr": {
+            "base_color": [
+              1.0,
+              0.62,
+              0.3,
+              1
+            ],
+            "emission_color": [
+              1.0,
+              0.55,
+              0.24,
+              1
+            ],
+            "emission_strength": 5.0
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "horizon_haze_warm",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "horizon_sky_glow_band",
+            "horizon_distant_hill_left",
+            "horizon_distant_hill_right"
+          ],
+          "pbr": {
+            "base_color": [
+              0.55,
+              0.42,
+              0.3,
+              1
+            ],
+            "roughness": 1.0
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "golden_hour_low_sun",
+          "lights": [
+            {
+              "name": "sun_key_warm",
+              "type": "AREA",
+              "power": 700,
+              "size": 5,
+              "color": [
+                1.0,
+                0.62,
+                0.32
+              ],
+              "position_role": "rim"
+            },
+            {
+              "name": "sky_fill_cool",
+              "type": "AREA",
+              "power": 180,
+              "size": 7,
+              "color": [
+                0.55,
+                0.65,
+                0.85
+              ],
+              "position_role": "front_left_high"
+            }
+          ],
+          "world": {
+            "color": [
+              0.16,
+              0.13,
+              0.11
+            ],
+            "strength": 0.6
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "camera_meadow",
+          "preset": "hero_low_angle",
+          "target": "mound_hero_grassy",
+          "look_at": [
+            0,
+            0.3,
+            0.75
+          ],
+          "location": [
+            3.4,
+            -4.4,
+            1.9
+          ],
+          "composition": {
+            "subject_screen_coverage": 0.62,
+            "safe_margin": 0.14
+          },
+          "lens": {
+            "focal_length_mm": 45,
+            "dof": true,
+            "focus_target": "boulder_granite_main"
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "camera_meadow"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\landscape_meadow_golden_hour_skill_plus_tools\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\landscape_meadow_golden_hour_skill_plus_tools\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\landscape_meadow_golden_hour_skill_plus_tools\\logs\\result_full_pipeline_20260914_055935.json"
+}

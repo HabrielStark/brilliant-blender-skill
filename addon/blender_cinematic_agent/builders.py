@@ -1491,12 +1491,12 @@ def _gn_material(recipe):
         },
         "GN_RockScatter": {
             "preset": "stone_concrete",
-            "pbr": {"base_color": [0.22, 0.23, 0.24, 1], "roughness": 0.88},
+            "pbr": {"base_color": [0.14, 0.135, 0.125, 1], "roughness": 0.9},
             "procedural": {"noise": True, "noise_scale": 18, "bump_strength": 0.035},
         },
         "GN_VegetationLow": {
             "preset": "matte_plastic",
-            "pbr": {"base_color": [0.12, 0.34, 0.18, 1], "roughness": 0.72},
+            "pbr": {"base_color": [0.16, 0.4, 0.16, 1], "roughness": 0.68},
         },
     }
     schema = {"name": name, **schema_by_recipe.get(recipe, {
@@ -1551,8 +1551,8 @@ def _create_curve_cable(name, points, bevel_depth, collection, material):
     return obj
 
 
-def _add_recipe_visual_details(target, group_name, recipe, seed, count, inst_size):
-    material = _gn_material(recipe)
+def _add_recipe_visual_details(target, group_name, recipe, seed, count, inst_size, material=None):
+    material = material or _gn_material(recipe)
     collection = target.users_collection[0].name if target.users_collection else "SUBJECT"
     # Deterministic visual layout seed, not security-sensitive randomness.
     rng = random.Random(seed)  # nosec B311
@@ -1628,20 +1628,39 @@ def _add_recipe_visual_details(target, group_name, recipe, seed, count, inst_siz
                 detail.location = co
                 detail.scale = Vector((0.65, 0.65, 0.2))
                 detail.rotation_euler = Euler((math.radians(90), 0, 0))
+            elif recipe == "GN_RockScatter":
+                detail = _primitive("ico_sphere", f"{group_name}_{role}_{idx + 1:02d}", inst_size * 1.6, collection)
+                detail.location = co - normal * inst_size * 0.25
+                detail.scale = Vector((
+                    rng.uniform(0.7, 1.5),
+                    rng.uniform(0.55, 1.05),
+                    rng.uniform(0.45, 0.8),
+                ))
+                detail.rotation_euler = Euler((
+                    rng.uniform(0.0, math.pi),
+                    rng.uniform(0.0, math.pi),
+                    rng.uniform(0.0, math.pi),
+                ))
+            elif recipe == "GN_VegetationLow":
+                detail = _primitive("cone", f"{group_name}_{role}_{idx + 1:02d}", inst_size * 2.6, collection)
+                detail.location = co
+                detail.scale = Vector((0.2, 0.2, 1.0))
+                lean = rng.uniform(0.0, math.radians(18))
+                lean_dir = rng.uniform(0.0, math.pi * 2.0)
+                detail.rotation_euler = Euler((
+                    math.cos(lean_dir) * lean,
+                    math.sin(lean_dir) * lean,
+                    rng.uniform(0.0, math.pi * 2.0),
+                ))
             else:
                 dims_box = [inst_size, inst_size, inst_size]
                 if recipe == "GN_LabelArrows":
                     dims_box[span_axes[0]] = inst_size * 3.2
                     dims_box[span_axes[1]] = inst_size * 0.8
-                elif recipe == "GN_VegetationLow":
-                    dims_box[span_axes[0]] = inst_size * 0.7
-                    dims_box[span_axes[1]] = inst_size * 2.8
-                elif recipe == "GN_RockScatter":
-                    dims_box = [inst_size * rng.uniform(0.7, 1.8) for _ in range(3)]
                 detail = _box_detail_mesh(f"{group_name}_{role}_{idx + 1:02d}", co, dims_box, collection, material)
-            if material and getattr(detail.data, "materials", None) and not detail.data.materials:
+            if material and getattr(detail.data, "materials", None) is not None and not detail.data.materials:
                 detail.data.materials.append(material)
-            if detail.type == "MESH":
+            if detail.type == "MESH" and recipe not in ("GN_RockScatter", "GN_VegetationLow"):
                 bevel = detail.modifiers.new(name="GN Detail Bevel", type="BEVEL")
                 bevel.width = max(0.002, inst_size * 0.1)
                 bevel.segments = 1
@@ -1694,18 +1713,46 @@ def op_create_geometry_nodes(p):
     ng = bpy.data.node_groups.new(name, "GeometryNodeTree")
     ng.interface.new_socket("Geometry", in_out="INPUT", socket_type="NodeSocketGeometry")
     ng.interface.new_socket("Geometry", in_out="OUTPUT", socket_type="NodeSocketGeometry")
+    mat_socket = ng.interface.new_socket(
+        "Material", in_out="INPUT", socket_type="NodeSocketMaterial"
+    )
     nodes, links = ng.nodes, ng.links
     n_in = nodes.new("NodeGroupInput")
     n_out = nodes.new("NodeGroupOutput")
     distribute = nodes.new("GeometryNodeDistributePointsOnFaces")
     distribute.name = f"{recipe}_Distribute"
-    distribute.inputs["Density"].default_value = max(1.0, count / 4.0)
+    # Density is per unit area; derive it from the target's span so `count`
+    # means ~count instances regardless of surface size.
+    span_area = 1.0
+    try:
+        dims3 = [max(0.001, float(v)) for v in obj.dimensions]
+        span_area = max(0.05, sorted(dims3, reverse=True)[0] * sorted(dims3, reverse=True)[1])
+    except Exception:
+        pass
+    distribute.inputs["Density"].default_value = max(0.05, count / span_area)
     if "Seed" in distribute.inputs:
         distribute.inputs["Seed"].default_value = seed
-    cube = nodes.new("GeometryNodeMeshCube")
-    cube.name = f"{recipe}_InstanceProxy"
-    if "Size" in cube.inputs:
-        cube.inputs["Size"].default_value = (inst_size, inst_size, inst_size)
+    if recipe == "GN_RockScatter":
+        proxy = nodes.new("GeometryNodeMeshIcoSphere")
+        proxy.name = f"{recipe}_InstanceProxy"
+        if "Radius" in proxy.inputs:
+            proxy.inputs["Radius"].default_value = inst_size * 0.9
+        if "Subdivisions" in proxy.inputs:
+            proxy.inputs["Subdivisions"].default_value = 1
+    elif recipe == "GN_VegetationLow":
+        proxy = nodes.new("GeometryNodeMeshCone")
+        proxy.name = f"{recipe}_InstanceProxy"
+        if "Radius Bottom" in proxy.inputs:
+            proxy.inputs["Radius Bottom"].default_value = inst_size * 0.28
+        if "Radius Top" in proxy.inputs:
+            proxy.inputs["Radius Top"].default_value = 0.0
+        if "Depth" in proxy.inputs:
+            proxy.inputs["Depth"].default_value = inst_size * 2.6
+    else:
+        proxy = nodes.new("GeometryNodeMeshCube")
+        proxy.name = f"{recipe}_InstanceProxy"
+        if "Size" in proxy.inputs:
+            proxy.inputs["Size"].default_value = (inst_size, inst_size, inst_size)
     inst = nodes.new("GeometryNodeInstanceOnPoints")
     inst.name = f"{recipe}_InstanceOnPoints"
     realize = nodes.new("GeometryNodeRealizeInstances")
@@ -1714,7 +1761,12 @@ def op_create_geometry_nodes(p):
     join.name = f"{recipe}_JoinWithBase"
     links.new(n_in.outputs[0], distribute.inputs["Mesh"])
     links.new(distribute.outputs["Points"], inst.inputs["Points"])
-    links.new(cube.outputs["Mesh"], inst.inputs["Instance"])
+    scatter_mat = _gn_material(recipe)
+    set_mat = nodes.new("GeometryNodeSetMaterial")
+    set_mat.name = f"{recipe}_SetMaterial"
+    links.new(proxy.outputs["Mesh"], set_mat.inputs["Geometry"])
+    links.new(n_in.outputs["Material"], set_mat.inputs["Material"])
+    links.new(set_mat.outputs["Geometry"], inst.inputs["Instance"])
     links.new(inst.outputs["Instances"], realize.inputs["Geometry"])
     links.new(n_in.outputs[0], join.inputs[0])
     links.new(realize.outputs["Geometry"], join.inputs[0])
@@ -1722,7 +1774,10 @@ def op_create_geometry_nodes(p):
 
     mod = obj.modifiers.new(name=name, type="NODES")
     mod.node_group = ng
-    detail_objects = _add_recipe_visual_details(obj, name, recipe, seed, count, inst_size)
+    # Feed the recipe material through the group interface so SetMaterial
+    # propagates onto the realized instances (verified on Blender 5.0).
+    mod[mat_socket.identifier] = scatter_mat
+    detail_objects = _add_recipe_visual_details(obj, name, recipe, seed, count, inst_size, material=scatter_mat)
     obj["gn_seed"] = seed
     obj["gn_recipe"] = recipe
     obj["gn_count"] = count

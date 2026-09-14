@@ -1,0 +1,47 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "render_preview",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\turntable_animation_skill_plus_tools",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\turntable_animation_skill_plus_tools\\final\\scene.blend",
+  "manifest": {},
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": true,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced"
+    ]
+  },
+  "recipe": {
+    "operations": []
+  },
+  "render": {
+    "frames": [
+      1,
+      60,
+      120
+    ],
+    "inspect_per_frame": true
+  },
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_{frame:04d}.png"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\turntable_animation_skill_plus_tools\\logs\\result_render_preview_20260914_060052.json"
+}

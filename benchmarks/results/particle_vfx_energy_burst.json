@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 6.1,
+    "runtime_seconds": 8.4,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\particle_vfx_energy_burst_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\particle_vfx_energy_burst_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark",
@@ -21,7 +21,7 @@
         {
           "name": "energy_core_particle_emitter",
           "contrast": 0.2792,
-          "edge_density": 0.2188,
+          "edge_density": 0.2189,
           "separation": 0.2623,
           "mean_luma": 0.5885,
           "surround_luma": 0.3262,
@@ -30,7 +30,7 @@
         {
           "name": "core_inner_hot_white",
           "contrast": 0.1982,
-          "edge_density": 0.2259,
+          "edge_density": 0.2262,
           "separation": 0.0702,
           "mean_luma": 0.6766,
           "surround_luma": 0.6064,
@@ -66,7 +66,7 @@
         {
           "name": "orbital_ring_diagonal_violet",
           "contrast": 0.2495,
-          "edge_density": 0.2019,
+          "edge_density": 0.202,
           "separation": 0.2189,
           "mean_luma": 0.6005,
           "surround_luma": 0.3817,
@@ -76,7 +76,7 @@
           "name": "particle_core_containment_brushed_metal_ring",
           "contrast": 0.2079,
           "edge_density": 0.2365,
-          "separation": 0.0998,
+          "separation": 0.0999,
           "mean_luma": 0.6808,
           "surround_luma": 0.5809,
           "readable": true
@@ -103,7 +103,7 @@
           "name": "shockwave_ring_mid_air_amber",
           "contrast": 0.2627,
           "edge_density": 0.1971,
-          "separation": 0.2503,
+          "separation": 0.2502,
           "mean_luma": 0.6098,
           "surround_luma": 0.3595,
           "readable": true
@@ -119,7 +119,7 @@
         },
         {
           "name": "spark_particle_visible_dot_03",
-          "contrast": 0.1121,
+          "contrast": 0.1122,
           "edge_density": 0.2083,
           "separation": 0.2712,
           "mean_luma": 0.8077,
@@ -193,9 +193,9 @@
           "name": "spark_particle_visible_dot_11",
           "contrast": 0.0662,
           "edge_density": 0.175,
-          "separation": 0.289,
+          "separation": 0.2889,
           "mean_luma": 0.849,
-          "surround_luma": 0.56,
+          "surround_luma": 0.5601,
           "readable": true
         },
         {
@@ -209,7 +209,7 @@
         },
         {
           "name": "spark_particle_visible_dot_13",
-          "contrast": 0.1659,
+          "contrast": 0.166,
           "edge_density": 0.2937,
           "separation": 0.4308,
           "mean_luma": 0.8085,
@@ -553,7 +553,7 @@
           "name": "energy_trail_hot_core_03",
           "contrast": 0.2618,
           "edge_density": 0.6469,
-          "separation": 0.0218,
+          "separation": 0.0219,
           "mean_luma": 0.6428,
           "surround_luma": 0.6209,
           "readable": true
@@ -686,7 +686,7 @@
         },
         {
           "name": "energy_trail_hot_core_18",
-          "contrast": 0.204,
+          "contrast": 0.2041,
           "edge_density": 0.2542,
           "separation": 0.0204,
           "mean_luma": 0.752,
@@ -696,7 +696,7 @@
         {
           "name": "energy_trail_ribbon_violet_01",
           "contrast": 0.1359,
-          "edge_density": 0.1935,
+          "edge_density": 0.1941,
           "separation": 0.0275,
           "mean_luma": 0.6813,
           "surround_luma": 0.6538,
@@ -708,7 +708,7 @@
           "edge_density": 0.3658,
           "separation": 0.0318,
           "mean_luma": 0.6063,
-          "surround_luma": 0.5744,
+          "surround_luma": 0.5745,
           "readable": true
         },
         {
@@ -723,7 +723,7 @@
         {
           "name": "energy_trail_ribbon_violet_04",
           "contrast": 0.2557,
-          "edge_density": 0.3438,
+          "edge_density": 0.3441,
           "separation": 0.0745,
           "mean_luma": 0.4971,
           "surround_luma": 0.4226,
@@ -732,7 +732,7 @@
         {
           "name": "energy_trail_ribbon_violet_05",
           "contrast": 0.2853,
-          "edge_density": 0.4263,
+          "edge_density": 0.4265,
           "separation": 0.0871,
           "mean_luma": 0.4545,
           "surround_luma": 0.3674,
@@ -741,7 +741,7 @@
         {
           "name": "energy_trail_ribbon_violet_06",
           "contrast": 0.3161,
-          "edge_density": 0.3663,
+          "edge_density": 0.3665,
           "separation": 0.0256,
           "mean_luma": 0.3023,
           "surround_luma": 0.2767,
@@ -750,7 +750,7 @@
         {
           "name": "energy_trail_ribbon_violet_07",
           "contrast": 0.303,
-          "edge_density": 0.4285,
+          "edge_density": 0.4287,
           "separation": 0.132,
           "mean_luma": 0.4165,
           "surround_luma": 0.2845,
@@ -777,7 +777,7 @@
         {
           "name": "energy_trail_ribbon_violet_10",
           "contrast": 0.3177,
-          "edge_density": 0.4099,
+          "edge_density": 0.41,
           "separation": 0.0101,
           "mean_luma": 0.4629,
           "surround_luma": 0.4529,
@@ -822,7 +822,7 @@
         {
           "name": "energy_trail_ribbon_violet_15",
           "contrast": 0.3075,
-          "edge_density": 0.4401,
+          "edge_density": 0.4403,
           "separation": 0.0244,
           "mean_luma": 0.46,
           "surround_luma": 0.4356,
@@ -858,7 +858,7 @@
         {
           "name": "energy_trail_ribbon_violet_19",
           "contrast": 0.1401,
-          "edge_density": 0.1389,
+          "edge_density": 0.1394,
           "separation": 0.0446,
           "mean_luma": 0.69,
           "surround_luma": 0.6454,
@@ -1059,14 +1059,14 @@
           "edge_density": 0.225,
           "separation": 0.1341,
           "mean_luma": 0.5076,
-          "surround_luma": 0.6416,
+          "surround_luma": 0.6417,
           "readable": true
         },
         {
           "name": "core_hot_streak_diagonal_06",
           "contrast": 0.1336,
           "edge_density": 0.3786,
-          "separation": 0.1998,
+          "separation": 0.1999,
           "mean_luma": 0.8198,
           "surround_luma": 0.6199,
           "readable": true
@@ -1118,7 +1118,7 @@
         },
         {
           "name": "core_violet_streak_counter_05",
-          "contrast": 0.1337,
+          "contrast": 0.1336,
           "edge_density": 0.2947,
           "separation": 0.0737,
           "mean_luma": 0.7363,
@@ -1149,14 +1149,14 @@
           "edge_density": 0.4937,
           "separation": 0.116,
           "mean_luma": 0.5871,
-          "surround_luma": 0.4712,
+          "surround_luma": 0.4711,
           "readable": true
         },
         {
           "name": "energy_trail_amber_shockwave_arc_03",
           "contrast": 0.2642,
           "edge_density": 0.3911,
-          "separation": 0.0013,
+          "separation": 0.0014,
           "mean_luma": 0.7174,
           "surround_luma": 0.716,
           "readable": true
@@ -1282,9 +1282,9 @@
           "name": "core_iris_micro_glint_05",
           "contrast": 0.221,
           "edge_density": 0.448,
-          "separation": 0.0786,
+          "separation": 0.0787,
           "mean_luma": 0.7454,
-          "surround_luma": 0.6668,
+          "surround_luma": 0.6667,
           "readable": true
         },
         {
@@ -1300,8 +1300,8 @@
           "name": "core_iris_micro_glint_07",
           "contrast": 0.2928,
           "edge_density": 0.8625,
-          "separation": 0.1381,
-          "mean_luma": 0.4699,
+          "separation": 0.1382,
+          "mean_luma": 0.4698,
           "surround_luma": 0.608,
           "readable": true
         },
@@ -1328,118 +1328,5 @@
     "palette_similarity": null,
     "animation_frame_proof": null,
     "failures": []
-  },
-  "baseline_no_skill": {
-    "task_id": "particle_vfx_energy_burst",
-    "mode": "baseline_no_skill",
-    "pass": false,
-    "visual_score": 33,
-    "technical_score": 60,
-    "runtime_seconds": 3.2,
-    "iterations": 1,
-    "artifacts": [
-      null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\particle_vfx_energy_burst_baseline_no_skill\\final\\export_final.glb"
-    ],
-    "visual_style_tags": [
-      "missing_preview"
-    ],
-    "readability": null,
-    "reference_metrics": null,
-    "palette_similarity": null,
-    "animation_frame_proof": null,
-    "failures": [
-      "no active camera",
-      "no meaningful lighting",
-      "object has default/auto name: 'Sphere'",
-      "no active camera in scene",
-      "scene has no lights and no world illumination",
-      "important object has no material: Sphere",
-      "pipeline failed: pipeline_incomplete",
-      "score 33 < min 86",
-      "subject objects 1 < min 46",
-      "visible subject objects 0 < min 36",
-      "subject depth layers 1 < min 4",
-      "missing named subject parts: core, spark, trail, ring, particle",
-      "subject faces 512 < min 1200",
-      "subject modifiers 0 < min 38",
-      "smooth subject objects 0 < min 5",
-      "craft detail objects 0 < min 70",
-      "missing craft roles: energy_streak, surface_microdetail",
-      "curved detail objects 0 < min 18",
-      "subject materials 0 < min 4",
-      "subject material node count 0 < min 5",
-      "subject procedural materials 0 < min 2",
-      "missing subject material features: noise_bump, noise_color_ramp",
-      "emissive materials 0 < min 3",
-      "particle systems 0 < min 1",
-      "total particles 0 < min 150"
-    ]
-  },
-  "adversarial_slop_named_glow_no_particles": {
-    "task_id": "particle_vfx_energy_burst",
-    "mode": "adversarial_slop_named_glow_no_particles",
-    "pass": false,
-    "visual_score": 79,
-    "technical_score": 100,
-    "runtime_seconds": 4.4,
-    "iterations": 1,
-    "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\final\\export_final.glb"
-    ],
-    "visual_style_tags": [
-      "dark",
-      "blue_cyan_bias",
-      "dark_blue_cyan"
-    ],
-    "readability": {
-      "parts": [
-        {
-          "name": "energy_core_particle_spark_trail_ring",
-          "contrast": 0.2976,
-          "edge_density": 0.0231,
-          "separation": 0.2738,
-          "mean_luma": 0.3587,
-          "surround_luma": 0.0849,
-          "readable": true
-        },
-        {
-          "name": "particle_ring_trail_fake_orbit",
-          "contrast": 0.2966,
-          "edge_density": 0.0199,
-          "separation": 0.2383,
-          "mean_luma": 0.3655,
-          "surround_luma": 0.1272,
-          "readable": true
-        }
-      ],
-      "measured_parts": 2,
-      "readable_parts": 2,
-      "unreadable_parts": []
-    },
-    "reference_metrics": null,
-    "palette_similarity": null,
-    "animation_frame_proof": null,
-    "failures": [
-      "dark render lacks readable subject detail",
-      "score 79 < min 86",
-      "subject objects 2 < min 46",
-      "visible subject objects 2 < min 36",
-      "subject depth layers 1 < min 4",
-      "subject faces 1088 < min 1200",
-      "subject modifiers 0 < min 38",
-      "smooth subject objects 2 < min 5",
-      "craft detail objects 0 < min 70",
-      "missing craft roles: energy_streak, surface_microdetail",
-      "curved detail objects 2 < min 18",
-      "subject materials 1 < min 4",
-      "subject material node count 2 < min 5",
-      "subject procedural materials 0 < min 2",
-      "missing subject material features: noise_bump, noise_color_ramp",
-      "emissive materials 1 < min 3",
-      "particle systems 0 < min 1",
-      "total particles 0 < min 150"
-    ]
   }
 }

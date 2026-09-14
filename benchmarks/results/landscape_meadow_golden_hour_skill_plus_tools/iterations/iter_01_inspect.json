@@ -1,0 +1,6724 @@
+{
+  "schema": "scene_inspection/0.1",
+  "collections": [
+    "CAMERAS",
+    "Collection",
+    "ENVIRONMENT",
+    "EXPORT",
+    "FX",
+    "HELPERS",
+    "LIGHTS",
+    "SUBJECT"
+  ],
+  "objects": [
+    {
+      "name": "camera_meadow",
+      "type": "CAMERA",
+      "collection": "CAMERAS",
+      "faces": 0,
+      "verts": 0,
+      "materials": [],
+      "modifiers": [],
+      "location": [
+        3.4000000953674316,
+        -4.400000095367432,
+        1.899999976158142
+      ],
+      "world_location": [
+        3.4000000953674316,
+        -4.400000095367432,
+        1.899999976158142
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0,
+      "screen_bbox": null,
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "sun_key_warm",
+      "type": "LIGHT",
+      "collection": "LIGHTS",
+      "faces": 0,
+      "verts": 0,
+      "materials": [],
+      "modifiers": [],
+      "location": [
+        0.0,
+        4.0,
+        3.0
+      ],
+      "world_location": [
+        0.0,
+        4.0,
+        3.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0,
+      "screen_bbox": null,
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "sky_fill_cool",
+      "type": "LIGHT",
+      "collection": "LIGHTS",
+      "faces": 0,
+      "verts": 0,
+      "materials": [],
+      "modifiers": [],
+      "location": [
+        -4.0,
+        -4.0,
+        5.0
+      ],
+      "world_location": [
+        -4.0,
+        -4.0,
+        5.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0,
+      "screen_bbox": null,
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "mound_hero_grassy",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "mound_grass_olive"
+      ],
+      "modifiers": [
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        },
+        {
+          "type": "NODES",
+          "show_render": true
+        },
+        {
+          "type": "NODES",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0,
+        0.4000000059604645,
+        0.41999998688697815
+      ],
+      "world_location": [
+        0.0,
+        0.4000000059604645,
+        0.41999998688697815
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        3.2909321784973145,
+        2.7360424995422363,
+        1.267098307609558
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.6722,
+      "screen_bbox": [
+        0.0507,
+        0.0,
+        0.954,
+        0.7442
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "boulder_granite_main",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "boulder_granite_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.8500000238418579,
+        -0.15000000596046448,
+        0.949999988079071
+      ],
+      "world_location": [
+        -0.8500000238418579,
+        -0.15000000596046448,
+        0.949999988079071
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.5762509703636169,
+        0.5008885264396667,
+        0.5076242685317993
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0376,
+      "screen_bbox": [
+        0.2188,
+        0.4613,
+        0.3825,
+        0.691
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "boulder_secondary_worn",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "boulder_granite_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        1.149999976158142,
+        0.8500000238418579,
+        0.6800000071525574
+      ],
+      "world_location": [
+        1.149999976158142,
+        0.8500000238418579,
+        0.6800000071525574
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.24326620995998383,
+        0.35807695984840393,
+        0.2285735309123993
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0104,
+      "screen_bbox": [
+        0.7323,
+        0.3923,
+        0.8167,
+        0.5155
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Rocks_rock_chip_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "gn_rock_cool_stone"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.47306063771247864,
+        -0.41437333822250366,
+        0.95250004529953
+      ],
+      "world_location": [
+        -0.47306063771247864,
+        -0.41437333822250366,
+        0.95250004529953
+      ],
+      "scale": [
+        1.2207475900650024,
+        0.5862181186676025,
+        0.6375586986541748
+      ],
+      "dimensions": [
+        0.16718421876430511,
+        0.08441540598869324,
+        0.09180844575166702
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.002,
+      "screen_bbox": [
+        0.298,
+        0.533,
+        0.3423,
+        0.5793
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_RockScatter",
+      "gn_role": "rock_chip",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Rocks_rock_chip_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "gn_rock_cool_stone"
+      ],
+      "modifiers": [],
+      "location": [
+        -1.2419596910476685,
+        0.24523255228996277,
+        0.95250004529953
+      ],
+      "world_location": [
+        -1.2419596910476685,
+        0.24523255228996277,
+        0.95250004529953
+      ],
+      "scale": [
+        0.7558843493461609,
+        0.5953565239906311,
+        0.5985817313194275
+      ],
+      "dimensions": [
+        0.10352013260126114,
+        0.08573133498430252,
+        0.08619576692581177
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0013,
+      "screen_bbox": [
+        0.2886,
+        0.5885,
+        0.3148,
+        0.6369
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_RockScatter",
+      "gn_role": "rock_chip",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Rocks_rock_chip_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "gn_rock_cool_stone"
+      ],
+      "modifiers": [],
+      "location": [
+        0.3421955406665802,
+        1.4442542791366577,
+        0.95250004529953
+      ],
+      "world_location": [
+        0.3421955406665802,
+        1.4442542791366577,
+        0.95250004529953
+      ],
+      "scale": [
+        1.161682367324829,
+        0.7483402490615845,
+        0.7916892766952515
+      ],
+      "dimensions": [
+        0.15909512341022491,
+        0.10776098817586899,
+        0.1140032485127449
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0025,
+      "screen_bbox": [
+        0.659,
+        0.5848,
+        0.701,
+        0.6442
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_RockScatter",
+      "gn_role": "rock_chip",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Rocks_rock_chip_04",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "gn_rock_cool_stone"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.9552793502807617,
+        -0.4914766550064087,
+        0.95250004529953
+      ],
+      "world_location": [
+        -0.9552793502807617,
+        -0.4914766550064087,
+        0.95250004529953
+      ],
+      "scale": [
+        0.9467854499816895,
+        0.9580631852149963,
+        0.5132542252540588
+      ],
+      "dimensions": [
+        0.12966448068618774,
+        0.13796110451221466,
+        0.07390860468149185
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0027,
+      "screen_bbox": [
+        0.2129,
+        0.5365,
+        0.2531,
+        0.6035
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_RockScatter",
+      "gn_role": "rock_chip",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Rocks_rock_chip_05",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "gn_rock_cool_stone"
+      ],
+      "modifiers": [],
+      "location": [
+        0.12820787727832794,
+        -0.6197684407234192,
+        0.95250004529953
+      ],
+      "world_location": [
+        0.12820787727832794,
+        -0.6197684407234192,
+        0.95250004529953
+      ],
+      "scale": [
+        0.7476809620857239,
+        0.6529793739318848,
+        0.6881399750709534
+      ],
+      "dimensions": [
+        0.10239666700363159,
+        0.0940290242433548,
+        0.09909215569496155
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0021,
+      "screen_bbox": [
+        0.376,
+        0.4849,
+        0.409,
+        0.5495
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_RockScatter",
+      "gn_role": "rock_chip",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Rocks_rock_chip_06",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "gn_rock_cool_stone"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.12571366131305695,
+        -0.06703145056962967,
+        0.95250004529953
+      ],
+      "world_location": [
+        -0.12571366131305695,
+        -0.06703145056962967,
+        0.95250004529953
+      ],
+      "scale": [
+        1.3355035781860352,
+        0.8994972109794617,
+        0.5354337692260742
+      ],
+      "dimensions": [
+        0.1829003393650055,
+        0.12952758371829987,
+        0.07710245996713638
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.002,
+      "screen_bbox": [
+        0.4171,
+        0.5216,
+        0.4429,
+        0.5995
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_RockScatter",
+      "gn_role": "rock_chip",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Rocks_rock_chip_07",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "gn_rock_cool_stone"
+      ],
+      "modifiers": [],
+      "location": [
+        0.6161278486251831,
+        -0.0946224257349968,
+        0.95250004529953
+      ],
+      "world_location": [
+        0.6161278486251831,
+        -0.0946224257349968,
+        0.95250004529953
+      ],
+      "scale": [
+        1.4841399192810059,
+        0.6090328693389893,
+        0.5963429808616638
+      ],
+      "dimensions": [
+        0.20325641334056854,
+        0.0877007320523262,
+        0.08587338775396347
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0038,
+      "screen_bbox": [
+        0.5398,
+        0.4902,
+        0.5885,
+        0.5674
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_RockScatter",
+      "gn_role": "rock_chip",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Rocks_rock_chip_08",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "gn_rock_cool_stone"
+      ],
+      "modifiers": [],
+      "location": [
+        -1.237363576889038,
+        0.7923533916473389,
+        0.95250004529953
+      ],
+      "world_location": [
+        -1.237363576889038,
+        0.7923533916473389,
+        0.95250004529953
+      ],
+      "scale": [
+        1.3116567134857178,
+        0.8365129828453064,
+        0.7564172148704529
+      ],
+      "dimensions": [
+        0.1796344518661499,
+        0.12045786529779434,
+        0.10892407596111298
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0023,
+      "screen_bbox": [
+        0.3569,
+        0.5956,
+        0.3873,
+        0.6705
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_RockScatter",
+      "gn_role": "rock_chip",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Rocks_rock_chip_09",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "gn_rock_cool_stone"
+      ],
+      "modifiers": [],
+      "location": [
+        0.21454203128814697,
+        0.2978515625,
+        0.95250004529953
+      ],
+      "world_location": [
+        0.21454203128814697,
+        0.2978515625,
+        0.95250004529953
+      ],
+      "scale": [
+        1.371974229812622,
+        1.0223405361175537,
+        0.615934431552887
+      ],
+      "dimensions": [
+        0.18789508938789368,
+        0.1472170352935791,
+        0.08869455754756927
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0023,
+      "screen_bbox": [
+        0.5208,
+        0.5336,
+        0.5548,
+        0.6019
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_RockScatter",
+      "gn_role": "rock_chip",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Rocks_rock_chip_10",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "gn_rock_cool_stone"
+      ],
+      "modifiers": [],
+      "location": [
+        0.39508408308029175,
+        1.5501166582107544,
+        0.95250004529953
+      ],
+      "world_location": [
+        0.39508408308029175,
+        1.5501166582107544,
+        0.95250004529953
+      ],
+      "scale": [
+        1.3575397729873657,
+        0.6922977566719055,
+        0.5850269794464111
+      ],
+      "dimensions": [
+        0.18591827154159546,
+        0.09969086945056915,
+        0.08424387872219086
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0018,
+      "screen_bbox": [
+        0.6783,
+        0.5942,
+        0.7179,
+        0.6399
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_RockScatter",
+      "gn_role": "rock_chip",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Rocks_rock_chip_11",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "gn_rock_cool_stone"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.891387403011322,
+        -0.4931010603904724,
+        0.95250004529953
+      ],
+      "world_location": [
+        -0.891387403011322,
+        -0.4931010603904724,
+        0.95250004529953
+      ],
+      "scale": [
+        0.7471635341644287,
+        0.9341164827346802,
+        0.4952690899372101
+      ],
+      "dimensions": [
+        0.10232580453157425,
+        0.1345127671957016,
+        0.07131874561309814
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0021,
+      "screen_bbox": [
+        0.2246,
+        0.5379,
+        0.2599,
+        0.5973
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_RockScatter",
+      "gn_role": "rock_chip",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Rocks_rock_chip_12",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "gn_rock_cool_stone"
+      ],
+      "modifiers": [],
+      "location": [
+        -1.1262620687484741,
+        0.28148266673088074,
+        0.95250004529953
+      ],
+      "world_location": [
+        -1.1262620687484741,
+        0.28148266673088074,
+        0.95250004529953
+      ],
+      "scale": [
+        1.1395518779754639,
+        0.9916918873786926,
+        0.7367479205131531
+      ],
+      "dimensions": [
+        0.15606430172920227,
+        0.1428036242723465,
+        0.1060916855931282
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0032,
+      "screen_bbox": [
+        0.2999,
+        0.5752,
+        0.3451,
+        0.6467
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_RockScatter",
+      "gn_role": "rock_chip",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Rocks_rock_chip_13",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "gn_rock_cool_stone"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.37924081087112427,
+        1.2961066961288452,
+        0.95250004529953
+      ],
+      "world_location": [
+        -0.37924081087112427,
+        1.2961066961288452,
+        0.95250004529953
+      ],
+      "scale": [
+        1.4661849737167358,
+        0.6254604458808899,
+        0.5116761922836304
+      ],
+      "dimensions": [
+        0.20079746842384338,
+        0.09006629884243011,
+        0.07368136942386627
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0022,
+      "screen_bbox": [
+        0.5339,
+        0.5948,
+        0.5664,
+        0.6631
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_RockScatter",
+      "gn_role": "rock_chip",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Rocks_rock_chip_14",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "gn_rock_cool_stone"
+      ],
+      "modifiers": [],
+      "location": [
+        0.2393227219581604,
+        -0.15337926149368286,
+        0.95250004529953
+      ],
+      "world_location": [
+        0.2393227219581604,
+        -0.15337926149368286,
+        0.95250004529953
+      ],
+      "scale": [
+        0.7032749056816101,
+        0.7594732642173767,
+        0.579238772392273
+      ],
+      "dimensions": [
+        0.09631514549255371,
+        0.10936414450407028,
+        0.08341038227081299
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0015,
+      "screen_bbox": [
+        0.4705,
+        0.5105,
+        0.4958,
+        0.5718
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_RockScatter",
+      "gn_role": "rock_chip",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        1.14088773727417,
+        1.4463460445404053,
+        1.024999976158142
+      ],
+      "world_location": [
+        1.14088773727417,
+        1.4463460445404053,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0038,
+      "screen_bbox": [
+        0.8124,
+        0.5484,
+        0.8404,
+        0.6851
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.20476055145263672,
+        0.470178484916687,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.20476055145263672,
+        0.470178484916687,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0029,
+      "screen_bbox": [
+        0.4757,
+        0.5482,
+        0.4972,
+        0.6839
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.7490915656089783,
+        0.2951170802116394,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.7490915656089783,
+        0.2951170802116394,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0029,
+      "screen_bbox": [
+        0.3677,
+        0.5588,
+        0.3897,
+        0.6914
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_04",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.21147122979164124,
+        0.4294678866863251,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.21147122979164124,
+        0.4294678866863251,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0045,
+      "screen_bbox": [
+        0.4637,
+        0.5467,
+        0.497,
+        0.6832
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_05",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        0.760212779045105,
+        0.6078751683235168,
+        1.024999976158142
+      ],
+      "world_location": [
+        0.760212779045105,
+        0.6078751683235168,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0034,
+      "screen_bbox": [
+        0.6638,
+        0.5191,
+        0.6874,
+        0.6638
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_06",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.3684422969818115,
+        1.005936622619629,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.3684422969818115,
+        1.005936622619629,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.003,
+      "screen_bbox": [
+        0.5098,
+        0.5795,
+        0.5339,
+        0.7043
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_07",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.4984142482280731,
+        -0.5662456154823303,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.4984142482280731,
+        -0.5662456154823303,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0044,
+      "screen_bbox": [
+        0.2768,
+        0.5005,
+        0.3057,
+        0.6544
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_08",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.1411079615354538,
+        0.7320892214775085,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.1411079615354538,
+        0.7320892214775085,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0025,
+      "screen_bbox": [
+        0.5181,
+        0.5591,
+        0.5371,
+        0.6909
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_09",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        0.8482128977775574,
+        -0.30997639894485474,
+        1.024999976158142
+      ],
+      "world_location": [
+        0.8482128977775574,
+        -0.30997639894485474,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0044,
+      "screen_bbox": [
+        0.5715,
+        0.4494,
+        0.5973,
+        0.6204
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_10",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.602675199508667,
+        0.5698527097702026,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.602675199508667,
+        0.5698527097702026,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399996280670166
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0033,
+      "screen_bbox": [
+        0.4229,
+        0.567,
+        0.4487,
+        0.6973
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_11",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.5679816007614136,
+        -0.0553215816617012,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.5679816007614136,
+        -0.0553215816617012,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0057,
+      "screen_bbox": [
+        0.3383,
+        0.5338,
+        0.3785,
+        0.6762
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_12",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -1.0549784898757935,
+        1.0619676113128662,
+        1.024999976158142
+      ],
+      "world_location": [
+        -1.0549784898757935,
+        1.0619676113128662,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0027,
+      "screen_bbox": [
+        0.4165,
+        0.6012,
+        0.439,
+        0.7198
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_13",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        0.12212450802326202,
+        1.3766933679580688,
+        1.024999976158142
+      ],
+      "world_location": [
+        0.12212450802326202,
+        1.3766933679580688,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399996280670166
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0029,
+      "screen_bbox": [
+        0.6261,
+        0.5796,
+        0.6488,
+        0.7054
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_14",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        1.275531530380249,
+        -0.6357903480529785,
+        1.024999976158142
+      ],
+      "world_location": [
+        1.275531530380249,
+        -0.6357903480529785,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0067,
+      "screen_bbox": [
+        0.6206,
+        0.3933,
+        0.6556,
+        0.5837
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_15",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        0.5027012228965759,
+        1.5049599409103394,
+        1.024999976158142
+      ],
+      "world_location": [
+        0.5027012228965759,
+        1.5049599409103394,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399996280670166
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0035,
+      "screen_bbox": [
+        0.6994,
+        0.573,
+        0.7269,
+        0.7013
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_16",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        1.3110072612762451,
+        0.9808110594749451,
+        1.024999976158142
+      ],
+      "world_location": [
+        1.3110072612762451,
+        0.9808110594749451,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399996280670166
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0051,
+      "screen_bbox": [
+        0.8064,
+        0.5157,
+        0.8409,
+        0.6636
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_17",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.823542058467865,
+        -0.5892412662506104,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.823542058467865,
+        -0.5892412662506104,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0036,
+      "screen_bbox": [
+        0.2237,
+        0.5141,
+        0.2481,
+        0.6628
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_18",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        1.2096002101898193,
+        -0.2625269889831543,
+        1.024999976158142
+      ],
+      "world_location": [
+        1.2096002101898193,
+        -0.2625269889831543,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0048,
+      "screen_bbox": [
+        0.6588,
+        0.4316,
+        0.6861,
+        0.6085
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_19",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        0.1172085776925087,
+        1.129686951637268,
+        1.024999976158142
+      ],
+      "world_location": [
+        0.1172085776925087,
+        1.129686951637268,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07279999554157257,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0033,
+      "screen_bbox": [
+        0.6,
+        0.5692,
+        0.6254,
+        0.6978
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_20",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.14851677417755127,
+        0.0332849845290184,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.14851677417755127,
+        0.0332849845290184,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07279999554157257,
+        0.36399996280670166
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0048,
+      "screen_bbox": [
+        0.4234,
+        0.522,
+        0.4561,
+        0.6681
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_21",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        0.504148542881012,
+        0.1961965560913086,
+        1.024999976158142
+      ],
+      "world_location": [
+        0.504148542881012,
+        0.1961965560913086,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0052,
+      "screen_bbox": [
+        0.5622,
+        0.5033,
+        0.5964,
+        0.6549
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_22",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.702407717704773,
+        -0.07755966484546661,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.702407717704773,
+        -0.07755966484546661,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07279999554157257,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0039,
+      "screen_bbox": [
+        0.3205,
+        0.5378,
+        0.3482,
+        0.6785
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_23",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        0.13409680128097534,
+        1.1616370677947998,
+        1.024999976158142
+      ],
+      "world_location": [
+        0.13409680128097534,
+        1.1616370677947998,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0019,
+      "screen_bbox": [
+        0.6112,
+        0.5702,
+        0.6259,
+        0.6981
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_24",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        0.15938614308834076,
+        1.1821825504302979,
+        1.024999976158142
+      ],
+      "world_location": [
+        0.15938614308834076,
+        1.1821825504302979,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0019,
+      "screen_bbox": [
+        0.6172,
+        0.5704,
+        0.6323,
+        0.6983
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_25",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        0.1665453165769577,
+        0.4975307881832123,
+        1.024999976158142
+      ],
+      "world_location": [
+        0.1665453165769577,
+        0.4975307881832123,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07279999554157257,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0033,
+      "screen_bbox": [
+        0.5412,
+        0.5348,
+        0.5645,
+        0.6767
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_26",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.13535232841968536,
+        0.9093586802482605,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.13535232841968536,
+        0.9093586802482605,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0024,
+      "screen_bbox": [
+        0.5388,
+        0.567,
+        0.5576,
+        0.6965
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_27",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.9617018699645996,
+        1.256916880607605,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.9617018699645996,
+        1.256916880607605,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0025,
+      "screen_bbox": [
+        0.4513,
+        0.6059,
+        0.4725,
+        0.7223
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_28",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.13607992231845856,
+        0.2193530946969986,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.13607992231845856,
+        0.2193530946969986,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0032,
+      "screen_bbox": [
+        0.4553,
+        0.5317,
+        0.4778,
+        0.6742
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_29",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        0.5075461864471436,
+        0.49127623438835144,
+        1.024999976158142
+      ],
+      "world_location": [
+        0.5075461864471436,
+        0.49127623438835144,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0046,
+      "screen_bbox": [
+        0.5985,
+        0.5208,
+        0.63,
+        0.6675
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_30",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        1.070770025253296,
+        -0.5647190809249878,
+        1.024999976158142
+      ],
+      "world_location": [
+        1.070770025253296,
+        -0.5647190809249878,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0099,
+      "screen_bbox": [
+        0.5717,
+        0.4157,
+        0.6264,
+        0.5965
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_31",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        0.7436871528625488,
+        0.8043673634529114,
+        1.024999976158142
+      ],
+      "world_location": [
+        0.7436871528625488,
+        0.8043673634529114,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0024,
+      "screen_bbox": [
+        0.6838,
+        0.5311,
+        0.7011,
+        0.6714
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_32",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.4044583737850189,
+        -0.061422497034072876,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.4044583737850189,
+        -0.061422497034072876,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399996280670166
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0049,
+      "screen_bbox": [
+        0.3668,
+        0.5272,
+        0.4011,
+        0.6716
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_33",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.21600642800331116,
+        1.1382030248641968,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.21600642800331116,
+        1.1382030248641968,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0035,
+      "screen_bbox": [
+        0.5453,
+        0.5799,
+        0.5734,
+        0.7054
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_34",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.5959473252296448,
+        -0.5584275722503662,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.5959473252296448,
+        -0.5584275722503662,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0033,
+      "screen_bbox": [
+        0.2654,
+        0.5069,
+        0.2878,
+        0.6564
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_35",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        0.006632405333220959,
+        -0.5087438821792603,
+        1.024999976158142
+      ],
+      "world_location": [
+        0.006632405333220959,
+        -0.5087438821792603,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0046,
+      "screen_bbox": [
+        0.373,
+        0.4809,
+        0.4021,
+        0.6393
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_36",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.1553870439529419,
+        1.2356767654418945,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.1553870439529419,
+        1.2356767654418945,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0025,
+      "screen_bbox": [
+        0.569,
+        0.5816,
+        0.589,
+        0.7072
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_37",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        1.2959600687026978,
+        0.7129657864570618,
+        1.024999976158142
+      ],
+      "world_location": [
+        1.2959600687026978,
+        0.7129657864570618,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0038,
+      "screen_bbox": [
+        0.7844,
+        0.4996,
+        0.8091,
+        0.6529
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_38",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.36991095542907715,
+        -0.42432263493537903,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.36991095542907715,
+        -0.42432263493537903,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399996280670166
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0069,
+      "screen_bbox": [
+        0.3124,
+        0.5042,
+        0.358,
+        0.6564
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_39",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.2800087034702301,
+        0.8185387253761292,
+        1.024999976158142
+      ],
+      "world_location": [
+        -0.2800087034702301,
+        0.8185387253761292,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0029,
+      "screen_bbox": [
+        0.5037,
+        0.5671,
+        0.5262,
+        0.6978
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Mound_Grass_leaf_card_40",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        0.4155537486076355,
+        -0.3704456388950348,
+        1.024999976158142
+      ],
+      "world_location": [
+        0.4155537486076355,
+        -0.3704456388950348,
+        1.024999976158142
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.07280000299215317,
+        0.07280000299215317,
+        0.36399999260902405
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0041,
+      "screen_bbox": [
+        0.4732,
+        0.471,
+        0.4988,
+        0.6323
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "mound_hero_grassy",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "path_stone_step_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 34,
+      "verts": 64,
+      "materials": [
+        "path_stone_dusty"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.550000011920929,
+        -1.7000000476837158,
+        0.11999999731779099
+      ],
+      "world_location": [
+        0.550000011920929,
+        -1.7000000476837158,
+        0.11999999731779099
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.4829999804496765,
+        0.3779999911785126,
+        0.058799996972084045
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0079,
+      "screen_bbox": [
+        0.1861,
+        0.0,
+        0.3734,
+        0.042
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "path_stone_step_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 34,
+      "verts": 64,
+      "materials": [
+        "path_stone_dusty"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.3499999940395355,
+        -1.149999976158142,
+        0.1599999964237213
+      ],
+      "world_location": [
+        0.3499999940395355,
+        -1.149999976158142,
+        0.1599999964237213
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.4093754291534424,
+        0.3332386016845703,
+        0.04939999803900719
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.016,
+      "screen_bbox": [
+        0.2772,
+        0.038,
+        0.4194,
+        0.1507
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "path_stone_step_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 34,
+      "verts": 64,
+      "materials": [
+        "path_stone_dusty"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.41999998688697815,
+        -0.550000011920929,
+        0.2800000011920929
+      ],
+      "world_location": [
+        0.41999998688697815,
+        -0.550000011920929,
+        0.2800000011920929
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.4175302982330322,
+        0.3624028265476227,
+        0.04800000041723251
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0129,
+      "screen_bbox": [
+        0.393,
+        0.1692,
+        0.5287,
+        0.2644
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "path_stone_step_04",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 34,
+      "verts": 64,
+      "materials": [
+        "path_stone_dusty"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.20000000298023224,
+        0.05000000074505806,
+        0.41999998688697815
+      ],
+      "world_location": [
+        0.20000000298023224,
+        0.05000000074505806,
+        0.41999998688697815
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.39322808384895325,
+        0.3142321705818176,
+        0.04320000112056732
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0074,
+      "screen_bbox": [
+        0.4478,
+        0.3141,
+        0.5588,
+        0.3804
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "grass_blade_hero_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "grass_blade_sunlit"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0,
+        0.699999988079071,
+        1.0
+      ],
+      "world_location": [
+        0.0,
+        0.699999988079071,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.06766025722026825,
+        0.5159631371498108,
+        0.7597954869270325
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0294,
+      "screen_bbox": [
+        0.5139,
+        0.6083,
+        0.6046,
+        0.9328
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "grass",
+      "craft_group": "grass_blade_hero",
+      "craft_source": null
+    },
+    {
+      "name": "grass_blade_hero_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "grass_blade_sunlit"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.6062178015708923,
+        0.3499999940395355,
+        1.0
+      ],
+      "world_location": [
+        0.6062178015708923,
+        0.3499999940395355,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.06766025722026825,
+        0.5159631371498108,
+        0.7597954869270325
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0597,
+      "screen_bbox": [
+        0.5639,
+        0.5701,
+        0.7292,
+        0.9316
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "grass",
+      "craft_group": "grass_blade_hero",
+      "craft_source": null
+    },
+    {
+      "name": "grass_blade_hero_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "grass_blade_sunlit"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.6062178015708923,
+        -0.3499999940395355,
+        1.0
+      ],
+      "world_location": [
+        0.6062178015708923,
+        -0.3499999940395355,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.06766025722026825,
+        0.5159631371498108,
+        0.7597954869270325
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0391,
+      "screen_bbox": [
+        0.4952,
+        0.5307,
+        0.593,
+        0.9301
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "grass",
+      "craft_group": "grass_blade_hero",
+      "craft_source": null
+    },
+    {
+      "name": "grass_blade_hero_04",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "grass_blade_sunlit"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        8.572527306351685e-17,
+        -0.699999988079071,
+        1.0
+      ],
+      "world_location": [
+        8.572527306351685e-17,
+        -0.699999988079071,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.06766025722026825,
+        0.5159631371498108,
+        0.7597954869270325
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0543,
+      "screen_bbox": [
+        0.2602,
+        0.5359,
+        0.3979,
+        0.9304
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "grass",
+      "craft_group": "grass_blade_hero",
+      "craft_source": null
+    },
+    {
+      "name": "grass_blade_hero_05",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "grass_blade_sunlit"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.6062178015708923,
+        -0.3499999940395355,
+        1.0
+      ],
+      "world_location": [
+        -0.6062178015708923,
+        -0.3499999940395355,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.06766025722026825,
+        0.5159631371498108,
+        0.7597954869270325
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0555,
+      "screen_bbox": [
+        0.2016,
+        0.5793,
+        0.3589,
+        0.9319
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "grass",
+      "craft_group": "grass_blade_hero",
+      "craft_source": null
+    },
+    {
+      "name": "grass_blade_hero_06",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "grass_blade_sunlit"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.6062178015708923,
+        0.3499999940395355,
+        1.0
+      ],
+      "world_location": [
+        -0.6062178015708923,
+        0.3499999940395355,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.06766025722026825,
+        0.5159631371498108,
+        0.7597954869270325
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0191,
+      "screen_bbox": [
+        0.3701,
+        0.6123,
+        0.4298,
+        0.9329
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "grass",
+      "craft_group": "grass_blade_hero",
+      "craft_source": null
+    },
+    {
+      "name": "grass_blade_mound_edge_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "grass_blade_sunlit"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0,
+        0.699999988079071,
+        1.0
+      ],
+      "world_location": [
+        0.0,
+        0.699999988079071,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0626300647854805,
+        0.4368551969528198,
+        0.8594943881034851
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0301,
+      "screen_bbox": [
+        0.5105,
+        0.6083,
+        0.5965,
+        0.9588
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "grass",
+      "craft_group": "grass_blade_mound_edge",
+      "craft_source": null
+    },
+    {
+      "name": "grass_blade_mound_edge_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "grass_blade_sunlit"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.6657395362854004,
+        0.21631190180778503,
+        1.0
+      ],
+      "world_location": [
+        0.6657395362854004,
+        0.21631190180778503,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0626300647854805,
+        0.4368551969528198,
+        0.8594943881034851
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0633,
+      "screen_bbox": [
+        0.5519,
+        0.5609,
+        0.7096,
+        0.9621
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "grass",
+      "craft_group": "grass_blade_mound_edge",
+      "craft_source": null
+    },
+    {
+      "name": "grass_blade_mound_edge_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "grass_blade_sunlit"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.411449670791626,
+        -0.5663118958473206,
+        1.0
+      ],
+      "world_location": [
+        0.411449670791626,
+        -0.5663118958473206,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0626300647854805,
+        0.4368551969528198,
+        0.8594943881034851
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0093,
+      "screen_bbox": [
+        0.4433,
+        0.527,
+        0.4644,
+        0.9647
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "grass",
+      "craft_group": "grass_blade_mound_edge",
+      "craft_source": null
+    },
+    {
+      "name": "grass_blade_mound_edge_04",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "grass_blade_sunlit"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.411449670791626,
+        -0.5663118958473206,
+        1.0
+      ],
+      "world_location": [
+        -0.411449670791626,
+        -0.5663118958473206,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0626300647854805,
+        0.4368551969528198,
+        0.8594943881034851
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0634,
+      "screen_bbox": [
+        0.2075,
+        0.5607,
+        0.3654,
+        0.9621
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "grass",
+      "craft_group": "grass_blade_mound_edge",
+      "craft_source": null
+    },
+    {
+      "name": "grass_blade_mound_edge_05",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "grass_blade_sunlit"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.6657395362854004,
+        0.21631190180778503,
+        1.0
+      ],
+      "world_location": [
+        -0.6657395362854004,
+        0.21631190180778503,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0626300647854805,
+        0.4368551969528198,
+        0.8594943881034851
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0277,
+      "screen_bbox": [
+        0.3347,
+        0.6082,
+        0.4137,
+        0.9588
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "grass",
+      "craft_group": "grass_blade_mound_edge",
+      "craft_source": null
+    },
+    {
+      "name": "sun_disc_low_warm",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "sun_disc_emissive"
+      ],
+      "modifiers": [],
+      "location": [
+        0.30000001192092896,
+        7.099999904632568,
+        1.5
+      ],
+      "world_location": [
+        0.30000001192092896,
+        7.099999904632568,
+        1.5
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.8499998450279236,
+        0.8499998450279236,
+        0.8500000238418579
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0159,
+      "screen_bbox": [
+        0.9135,
+        0.7626,
+        1.0,
+        0.946
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "meadow_ground_plane",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 1,
+      "verts": 4,
+      "materials": [
+        "meadow_grass_flat"
+      ],
+      "modifiers": [
+        {
+          "type": "NODES",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        26.0,
+        26.0,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 1.0,
+      "screen_bbox": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "horizon_sky_glow_band",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 1,
+      "verts": 4,
+      "materials": [
+        "horizon_haze_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        0.0,
+        7.5,
+        3.4000000953674316
+      ],
+      "world_location": [
+        0.0,
+        7.5,
+        3.4000000953674316
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        18.0,
+        7.868050033721374e-07,
+        18.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.764,
+      "screen_bbox": [
+        0.236,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "horizon_distant_hill_left",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "horizon_haze_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        -4.5,
+        6.199999809265137,
+        0.20000000298023224
+      ],
+      "world_location": [
+        -4.5,
+        6.199999809265137,
+        0.20000000298023224
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        6.8000640869140625,
+        3.0250000953674316,
+        1.7599999904632568
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.3141,
+      "screen_bbox": [
+        0.1551,
+        0.3737,
+        0.8489,
+        0.8265
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "horizon_distant_hill_right",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "horizon_haze_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        4.800000190734863,
+        6.800000190734863,
+        0.10000000149011612
+      ],
+      "world_location": [
+        4.800000190734863,
+        6.800000190734863,
+        0.10000000149011612
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        7.418252468109131,
+        3.249999761581421,
+        1.6899999380111694
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0039,
+      "screen_bbox": [
+        0.9948,
+        0.0,
+        1.0,
+        0.7557
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_01",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.9806002378463745,
+        1.2308329343795776,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -0.9806002378463745,
+        1.2308329343795776,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000767707825,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0043,
+      "screen_bbox": [
+        0.4401,
+        0.3408,
+        0.4746,
+        0.4657
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_02",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        1.7994283437728882,
+        -6.493474006652832,
+        0.16050000488758087
+      ],
+      "world_location": [
+        1.7994283437728882,
+        -6.493474006652832,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        6.8848,
+        8.127,
+        1.0,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_03",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -8.357810020446777,
+        -4.048361301422119,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -8.357810020446777,
+        -4.048361301422119,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        0.3413,
+        -1.0582,
+        0.4711
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_04",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -9.433600425720215,
+        9.929327011108398,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -9.433600425720215,
+        9.929327011108398,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41599997878074646
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0006,
+      "screen_bbox": [
+        0.3634,
+        0.7091,
+        0.375,
+        0.7595
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_05",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -7.052881717681885,
+        -9.987104415893555,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -7.052881717681885,
+        -9.987104415893555,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41599997878074646
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        0.0,
+        -6.7666,
+        -0.8813
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_06",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -5.313909530639648,
+        -9.676539421081543,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -5.313909530639648,
+        -9.676539421081543,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        0.0,
+        -9.6665,
+        -2.083
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_07",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        0.39380377531051636,
+        2.8888869285583496,
+        0.16050000488758087
+      ],
+      "world_location": [
+        0.39380377531051636,
+        2.8888869285583496,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41599997878074646
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0031,
+      "screen_bbox": [
+        0.7794,
+        0.3785,
+        0.805,
+        0.5
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_08",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -4.5680694580078125,
+        10.247736930847168,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -4.5680694580078125,
+        10.247736930847168,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0007,
+      "screen_bbox": [
+        0.655,
+        0.6737,
+        0.6665,
+        0.7316
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_09",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -3.803811550140381,
+        -5.5667195320129395,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -3.803811550140381,
+        -5.5667195320129395,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        0.0,
+        -1.7333,
+        -0.033
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_10",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -2.050967216491699,
+        7.136849880218506,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -2.050967216491699,
+        7.136849880218506,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.001,
+      "screen_bbox": [
+        0.7253,
+        0.591,
+        0.7385,
+        0.6666
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_11",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -10.284778594970703,
+        -5.977499008178711,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -10.284778594970703,
+        -5.977499008178711,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        0.305,
+        -1.6353,
+        0.4426
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_12",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -2.112236976623535,
+        -8.791994094848633,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -2.112236976623535,
+        -8.791994094848633,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41599997878074646
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 1.0,
+      "screen_bbox": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_13",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -8.501526832580566,
+        -3.447396755218506,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -8.501526832580566,
+        -3.447396755218506,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        0.3842,
+        -0.8994,
+        0.5041
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_14",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -5.222379207611084,
+        -8.215254783630371,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -5.222379207611084,
+        -8.215254783630371,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        0.0,
+        -4.371,
+        -0.5835
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_15",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        1.2210055589675903,
+        -1.0826269388198853,
+        0.16050000488758087
+      ],
+      "world_location": [
+        1.2210055589675903,
+        -1.0826269388198853,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0044,
+      "screen_bbox": [
+        0.5349,
+        0.0,
+        0.5709,
+        0.122
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_16",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        2.9593818187713623,
+        -7.896867752075195,
+        0.16050000488758087
+      ],
+      "world_location": [
+        2.9593818187713623,
+        -7.896867752075195,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        1.8096,
+        2.4709,
+        1.0,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_17",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        9.697371482849121,
+        6.247849464416504,
+        0.16050000488758087
+      ],
+      "world_location": [
+        9.697371482849121,
+        6.247849464416504,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        3.1786,
+        0.0874,
+        1.0,
+        0.2723
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_18",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -2.1770966053009033,
+        7.297328948974609,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -2.1770966053009033,
+        7.297328948974609,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.001,
+      "screen_bbox": [
+        0.7208,
+        0.5964,
+        0.7343,
+        0.6711
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_19",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -5.904892444610596,
+        -4.977548599243164,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -5.904892444610596,
+        -4.977548599243164,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        0.0953,
+        -1.3601,
+        0.277
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_20",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -8.784577369689941,
+        -8.4403076171875,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -8.784577369689941,
+        -8.4403076171875,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000767707825,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        0.0,
+        -3.1103,
+        0.1033
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_21",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -2.6418702602386475,
+        -0.9635387063026428,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -2.6418702602386475,
+        -0.9635387063026428,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41599997878074646
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        0.2712,
+        -0.0282,
+        0.4064
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_22",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        7.547496318817139,
+        -6.531211853027344,
+        0.16050000488758087
+      ],
+      "world_location": [
+        7.547496318817139,
+        -6.531211853027344,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        1.8468,
+        -0.1751,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_23",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -5.158325672149658,
+        -6.387624740600586,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -5.158325672149658,
+        -6.387624740600586,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000767707825,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        0.0,
+        -2.1527,
+        -0.0065
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_24",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        9.269197463989258,
+        7.870051383972168,
+        0.16050000488758087
+      ],
+      "world_location": [
+        9.269197463989258,
+        7.870051383972168,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41599997878074646
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        2.6977,
+        0.2825,
+        1.0,
+        0.4242
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_25",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -9.499162673950195,
+        9.52753734588623,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -9.499162673950195,
+        9.52753734588623,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0005,
+      "screen_bbox": [
+        0.3429,
+        0.7059,
+        0.3531,
+        0.7565
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_26",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        6.6659979820251465,
+        1.9864342212677002,
+        0.16050000488758087
+      ],
+      "world_location": [
+        6.6659979820251465,
+        1.9864342212677002,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        2.7015,
+        0.0,
+        1.0,
+        -0.0369
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_27",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -8.879761695861816,
+        -5.592862606048584,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -8.879761695861816,
+        -5.592862606048584,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41599997878074646
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        0.255,
+        -1.5417,
+        0.4038
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_28",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -4.525722503662109,
+        8.594281196594238,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -4.525722503662109,
+        8.594281196594238,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0007,
+      "screen_bbox": [
+        0.5923,
+        0.6502,
+        0.6039,
+        0.7131
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_29",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -1.1180319786071777,
+        -9.051098823547363,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -1.1180319786071777,
+        -9.051098823547363,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41599997878074646
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        9.8084,
+        5.0019,
+        1.0,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_30",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -7.5865349769592285,
+        -2.8387069702148438,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -7.5865349769592285,
+        -2.8387069702148438,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        0.3818,
+        -0.7517,
+        0.5012
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_31",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        3.9376349449157715,
+        1.738793969154358,
+        0.16050000488758087
+      ],
+      "world_location": [
+        3.9376349449157715,
+        1.738793969154358,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        1.5027,
+        0.0396,
+        1.0,
+        0.2354
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_32",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        8.447094917297363,
+        4.1383748054504395,
+        0.16050000488758087
+      ],
+      "world_location": [
+        8.447094917297363,
+        4.1383748054504395,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41599997878074646
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        3.14,
+        0.0,
+        1.0,
+        0.1212
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_33",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.36580199003219604,
+        4.746414661407471,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -0.36580199003219604,
+        4.746414661407471,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000767707825,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0014,
+      "screen_bbox": [
+        0.7883,
+        0.489,
+        0.8028,
+        0.5857
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_34",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        0.9491956233978271,
+        4.880417346954346,
+        0.16050000488758087
+      ],
+      "world_location": [
+        0.9491956233978271,
+        4.880417346954346,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000767707825,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0032,
+      "screen_bbox": [
+        0.958,
+        0.456,
+        0.9885,
+        0.5612
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_35",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        6.038947582244873,
+        8.545733451843262,
+        0.16050000488758087
+      ],
+      "world_location": [
+        6.038947582244873,
+        8.545733451843262,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41599997878074646
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        1.8207,
+        0.4562,
+        1.0,
+        0.5593
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_36",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        7.641716957092285,
+        -1.7059824466705322,
+        0.16050000488758087
+      ],
+      "world_location": [
+        7.641716957092285,
+        -1.7059824466705322,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41599997878074646
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 1.0,
+      "screen_bbox": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_37",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        2.5731875896453857,
+        -2.422987937927246,
+        0.16050000488758087
+      ],
+      "world_location": [
+        2.5731875896453857,
+        -2.422987937927246,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.7236,
+        0.0,
+        0.7899,
+        -0.5022
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_38",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        2.8706135749816895,
+        10.158490180969238,
+        0.16050000488758087
+      ],
+      "world_location": [
+        2.8706135749816895,
+        10.158490180969238,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        1.3156,
+        0.5798,
+        1.0,
+        0.6562
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_39",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        4.839905738830566,
+        1.6669816970825195,
+        0.16050000488758087
+      ],
+      "world_location": [
+        4.839905738830566,
+        1.6669816970825195,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        1.8294,
+        0.0,
+        1.0,
+        0.1395
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_40",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        5.152328014373779,
+        -9.682567596435547,
+        0.16050000488758087
+      ],
+      "world_location": [
+        5.152328014373779,
+        -9.682567596435547,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000767707825,
+        0.08320000022649765,
+        0.41599997878074646
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.91,
+        1.6411,
+        0.9509,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_41",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        4.084107875823975,
+        -0.056616105139255524,
+        0.16050000488758087
+      ],
+      "world_location": [
+        4.084107875823975,
+        -0.056616105139255524,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        1.5888,
+        0.0,
+        1.0,
+        -0.0825
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_42",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -10.063161849975586,
+        -4.0971360206604,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -10.063161849975586,
+        -4.0971360206604,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        0.4095,
+        -1.0986,
+        0.5244
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_43",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        8.354619026184082,
+        3.2945141792297363,
+        0.16050000488758087
+      ],
+      "world_location": [
+        8.354619026184082,
+        3.2945141792297363,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        3.3538,
+        0.0,
+        1.0,
+        -0.0225
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_44",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        3.4161934852600098,
+        -6.20836877822876,
+        0.16050000488758087
+      ],
+      "world_location": [
+        3.4161934852600098,
+        -6.20836877822876,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000767707825,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        1.5954,
+        3.8719,
+        1.0,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_45",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        7.830497741699219,
+        -2.3800504207611084,
+        0.16050000488758087
+      ],
+      "world_location": [
+        7.830497741699219,
+        -2.3800504207611084,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        6.0855,
+        -8.3863,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_46",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.07275068014860153,
+        6.941473007202148,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -0.07275068014860153,
+        6.941473007202148,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0016,
+      "screen_bbox": [
+        0.9129,
+        0.5516,
+        0.9317,
+        0.635
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_47",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -4.596216678619385,
+        -6.813297271728516,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -4.596216678619385,
+        -6.813297271728516,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41600000858306885
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": false,
+      "screen_coverage": 0.0,
+      "screen_bbox": [
+        0.0,
+        0.0,
+        -2.6951,
+        -0.2005
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "GN_Meadow_Grass_leaf_card_48",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "gn_leaf_low_green"
+      ],
+      "modifiers": [],
+      "location": [
+        -1.7712249755859375,
+        2.5891053676605225,
+        0.16050000488758087
+      ],
+      "world_location": [
+        -1.7712249755859375,
+        2.5891053676605225,
+        0.16050000488758087
+      ],
+      "scale": [
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "dimensions": [
+        0.08320000022649765,
+        0.08320000022649765,
+        0.41599997878074646
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0016,
+      "screen_bbox": [
+        0.4791,
+        0.443,
+        0.4946,
+        0.5495
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": "GN_VegetationLow",
+      "gn_role": "leaf_card",
+      "gn_source": "meadow_ground_plane",
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    }
+  ],
+  "materials": [
+    {
+      "name": "boulder_granite_warm",
+      "metallic": 0.0,
+      "roughness": 0.8199999928474426,
+      "node_count": 6,
+      "link_count": 5,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF",
+        "NG_boulder_granite_warm_Noise",
+        "NG_boulder_granite_warm_Bump",
+        "NG_boulder_granite_warm_RampNoise",
+        "NG_boulder_granite_warm_ColorRamp"
+      ],
+      "users": 2,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "noise_bump,noise_color_ramp",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "gn_leaf_low_green",
+      "metallic": 0.0,
+      "roughness": 0.6800000071525574,
+      "node_count": 2,
+      "link_count": 1,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF"
+      ],
+      "users": 90,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "gn_rock_cool_stone",
+      "metallic": 0.0,
+      "roughness": 0.8999999761581421,
+      "node_count": 4,
+      "link_count": 3,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF",
+        "NG_gn_rock_cool_stone_Noise",
+        "NG_gn_rock_cool_stone_Bump"
+      ],
+      "users": 15,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "noise_bump",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "grass_blade_sunlit",
+      "metallic": 0.0,
+      "roughness": 0.699999988079071,
+      "node_count": 2,
+      "link_count": 1,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF"
+      ],
+      "users": 11,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "horizon_haze_warm",
+      "metallic": 0.0,
+      "roughness": 1.0,
+      "node_count": 2,
+      "link_count": 1,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF"
+      ],
+      "users": 3,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "meadow_grass_flat",
+      "metallic": 0.0,
+      "roughness": 0.8999999761581421,
+      "node_count": 4,
+      "link_count": 3,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF",
+        "NG_meadow_grass_flat_Noise",
+        "NG_meadow_grass_flat_Bump"
+      ],
+      "users": 1,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "noise_bump",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "mound_grass_olive",
+      "metallic": 0.0,
+      "roughness": 0.8500000238418579,
+      "node_count": 6,
+      "link_count": 5,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF",
+        "NG_mound_grass_olive_Noise",
+        "NG_mound_grass_olive_Bump",
+        "NG_mound_grass_olive_RampNoise",
+        "NG_mound_grass_olive_ColorRamp"
+      ],
+      "users": 1,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "noise_bump,noise_color_ramp",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "path_stone_dusty",
+      "metallic": 0.0,
+      "roughness": 0.8799999952316284,
+      "node_count": 4,
+      "link_count": 3,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF",
+        "NG_path_stone_dusty_Noise",
+        "NG_path_stone_dusty_Bump"
+      ],
+      "users": 4,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "noise_bump",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "sun_disc_emissive",
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "node_count": 2,
+      "link_count": 1,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF"
+      ],
+      "users": 1,
+      "has_emission": true,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "",
+      "image_texture_roles": ""
+    }
+  ],
+  "lights": [
+    {
+      "name": "sun_key_warm",
+      "type": "AREA",
+      "energy": 700.0,
+      "color": [
+        1.0,
+        0.6200000047683716,
+        0.3199999928474426
+      ]
+    },
+    {
+      "name": "sky_fill_cool",
+      "type": "AREA",
+      "energy": 180.0,
+      "color": [
+        0.550000011920929,
+        0.6499999761581421,
+        0.8500000238418579
+      ]
+    }
+  ],
+  "active_camera": {
+    "name": "camera_meadow",
+    "lens_mm": 45.0,
+    "dof": true,
+    "focus_target": "boulder_granite_main",
+    "inside_geometry": false,
+    "clip_end": 1000.0
+  },
+  "cameras": [
+    "camera_meadow"
+  ],
+  "node_groups": [
+    "GN_Meadow_Grass",
+    "GN_Meadow_Rocks",
+    "GN_Mound_Grass"
+  ],
+  "geometry_nodes": [
+    {
+      "name": "GN_Meadow_Rocks",
+      "recipe": "GN_RockScatter",
+      "seed": 7,
+      "target": "mound_hero_grassy",
+      "applied": false,
+      "generated_faces": 14,
+      "visible_from_camera": true,
+      "node_count": 8,
+      "link_count": 9,
+      "instance_size": 0.09,
+      "detail_count": 14,
+      "detail_roles": "rock_chip"
+    },
+    {
+      "name": "GN_Mound_Grass",
+      "recipe": "GN_VegetationLow",
+      "seed": 23,
+      "target": "mound_hero_grassy",
+      "applied": false,
+      "generated_faces": 40,
+      "visible_from_camera": true,
+      "node_count": 8,
+      "link_count": 9,
+      "instance_size": 0.14,
+      "detail_count": 40,
+      "detail_roles": "leaf_card"
+    },
+    {
+      "name": "GN_Meadow_Grass",
+      "recipe": "GN_VegetationLow",
+      "seed": 11,
+      "target": "meadow_ground_plane",
+      "applied": false,
+      "generated_faces": 60,
+      "visible_from_camera": true,
+      "node_count": 8,
+      "link_count": 9,
+      "instance_size": 0.16,
+      "detail_count": 48,
+      "detail_roles": "leaf_card"
+    }
+  ],
+  "particles": [],
+  "animation": {
+    "has_action": false,
+    "frame_start": 1,
+    "frame_end": 250,
+    "fps": 24,
+    "keyframed_objects": [],
+    "markers": [],
+    "camera_animated": false,
+    "sampled_objects": [],
+    "moving_object_count": 0
+  },
+  "compositor": {
+    "use_nodes": false,
+    "node_names": [],
+    "raw_render_saved": true
+  },
+  "render": {
+    "engine": "BLENDER_EEVEE",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "samples": 64,
+    "volumetric": false,
+    "view_transform": "AgX"
+  },
+  "metadata": {
+    "blender_cinematic_skill_version": "0.1",
+    "task_id": "bench_meadow",
+    "quality_profile": "balanced",
+    "final_camera": "camera_meadow",
+    "camera_preset": "hero_low_angle",
+    "camera_subject_screen_coverage": 0.62,
+    "camera_safe_margin": 0.14
+  },
+  "camera_path_json": null,
+  "missing_files": []
+}

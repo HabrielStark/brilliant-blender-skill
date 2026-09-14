@@ -1,0 +1,25 @@
+{
+  "iteration": 1,
+  "hard_fail": false,
+  "passed": true,
+  "scores": {
+    "composition": 17,
+    "lighting": 15,
+    "materials": 15,
+    "geometry_detail": 15,
+    "camera": 10,
+    "technical": 10,
+    "performance": 5,
+    "reference_fidelity": 10,
+    "total": 97
+  },
+  "defects": [
+    "premium render: sign_tube_end_cap_left has no bevel/subsurf/smooth",
+    "premium render: sign_tube_end_cap_right has no bevel/subsurf/smooth",
+    "premium render: sign_glass_sheen_guard has no bevel/subsurf/smooth"
+  ],
+  "next_actions": [
+    "add bevels/subsurf so edges catch light"
+  ],
+  "hard_fail_reasons": []
+}

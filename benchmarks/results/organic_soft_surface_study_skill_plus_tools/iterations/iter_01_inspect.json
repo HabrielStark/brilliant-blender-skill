@@ -1,0 +1,7095 @@
+{
+  "schema": "scene_inspection/0.1",
+  "collections": [
+    "CAMERAS",
+    "Collection",
+    "ENVIRONMENT",
+    "EXPORT",
+    "FX",
+    "HELPERS",
+    "LIGHTS",
+    "SUBJECT"
+  ],
+  "objects": [
+    {
+      "name": "camera_organic_macro",
+      "type": "CAMERA",
+      "collection": "CAMERAS",
+      "faces": 0,
+      "verts": 0,
+      "materials": [],
+      "modifiers": [],
+      "location": [
+        2.180000066757202,
+        -4.800000190734863,
+        1.840000033378601
+      ],
+      "world_location": [
+        2.180000066757202,
+        -4.800000190734863,
+        1.840000033378601
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0,
+      "screen_bbox": null,
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "large_soft_key",
+      "type": "LIGHT",
+      "collection": "LIGHTS",
+      "faces": 0,
+      "verts": 0,
+      "materials": [],
+      "modifiers": [],
+      "location": [
+        -4.0,
+        -4.0,
+        5.0
+      ],
+      "world_location": [
+        -4.0,
+        -4.0,
+        5.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0,
+      "screen_bbox": null,
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "soft_front_fill",
+      "type": "LIGHT",
+      "collection": "LIGHTS",
+      "faces": 0,
+      "verts": 0,
+      "materials": [],
+      "modifiers": [],
+      "location": [
+        4.0,
+        -4.0,
+        5.0
+      ],
+      "world_location": [
+        4.0,
+        -4.0,
+        5.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0,
+      "screen_bbox": null,
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "warm_edge_soft",
+      "type": "LIGHT",
+      "collection": "LIGHTS",
+      "faces": 0,
+      "verts": 0,
+      "materials": [],
+      "modifiers": [],
+      "location": [
+        0.0,
+        4.0,
+        3.0
+      ],
+      "world_location": [
+        0.0,
+        4.0,
+        3.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0,
+      "screen_bbox": null,
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "organic_fluted_soft_body",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 1656,
+      "verts": 1657,
+      "materials": [
+        "organic_body_skin"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.36000001430511475
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.36000001430511475
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.6750118732452393,
+        1.8211863040924072,
+        1.293698787689209
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.6137,
+      "screen_bbox": [
+        0.1138,
+        0.0,
+        0.892,
+        0.7885
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0397208146750927,
+        0.3779183328151703,
+        1.309999942779541
+      ],
+      "world_location": [
+        0.0397208146750927,
+        0.3779183328151703,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035407900810242,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0443,
+      "screen_bbox": [
+        0.5537,
+        0.5838,
+        0.715,
+        0.8582
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.16658103466033936,
+        0.34154173731803894,
+        1.309999942779541
+      ],
+      "world_location": [
+        0.16658103466033936,
+        0.34154173731803894,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035407900810242,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0609,
+      "screen_bbox": [
+        0.5862,
+        0.5776,
+        0.8042,
+        0.8571
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.2733491361141205,
+        0.26397016644477844,
+        1.309999942779541
+      ],
+      "world_location": [
+        0.2733491361141205,
+        0.26397016644477844,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035407900810242,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0739,
+      "screen_bbox": [
+        0.613,
+        0.57,
+        0.8721,
+        0.8554
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_04",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.34714728593826294,
+        0.154559925198555,
+        1.309999942779541
+      ],
+      "world_location": [
+        0.34714728593826294,
+        0.154559925198555,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035407900810242,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0805,
+      "screen_bbox": [
+        0.6311,
+        0.5617,
+        0.9074,
+        0.8532
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_05",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.3790743350982666,
+        0.026507459580898285,
+        1.309999942779541
+      ],
+      "world_location": [
+        0.3790743350982666,
+        0.026507459580898285,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035407900810242,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0863,
+      "screen_bbox": [
+        0.6181,
+        0.5539,
+        0.909,
+        0.8507
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_06",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.3652794361114502,
+        -0.10474219173192978,
+        1.309999942779541
+      ],
+      "world_location": [
+        0.3652794361114502,
+        -0.10474219173192978,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035407900810242,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0851,
+      "screen_bbox": [
+        0.5905,
+        0.5476,
+        0.8739,
+        0.848
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_07",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.30742645263671875,
+        -0.2233583927154541,
+        1.309999942779541
+      ],
+      "world_location": [
+        0.30742645263671875,
+        -0.2233583927154541,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035406410694122,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0693,
+      "screen_bbox": [
+        0.5548,
+        0.5437,
+        0.7841,
+        0.8457
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_08",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.21249330043792725,
+        -0.31503427028656006,
+        1.309999942779541
+      ],
+      "world_location": [
+        0.21249330043792725,
+        -0.31503427028656006,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035407900810242,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0397,
+      "screen_bbox": [
+        0.5158,
+        0.543,
+        0.6475,
+        0.8442
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_09",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0919303223490715,
+        -0.3687123656272888,
+        1.309999942779541
+      ],
+      "world_location": [
+        0.0919303223490715,
+        -0.3687123656272888,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035406410694122,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0411,
+      "screen_bbox": [
+        0.4094,
+        0.5429,
+        0.5458,
+        0.8444
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_10",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.0397208146750927,
+        -0.3779183328151703,
+        1.309999942779541
+      ],
+      "world_location": [
+        -0.0397208146750927,
+        -0.3779183328151703,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035407900810242,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0699,
+      "screen_bbox": [
+        0.2754,
+        0.5441,
+        0.5068,
+        0.846
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_11",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.16658103466033936,
+        -0.34154173731803894,
+        1.309999942779541
+      ],
+      "world_location": [
+        -0.16658103466033936,
+        -0.34154173731803894,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035407900810242,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0847,
+      "screen_bbox": [
+        0.189,
+        0.5483,
+        0.4714,
+        0.8484
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_12",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.2733491361141205,
+        -0.26397016644477844,
+        1.309999942779541
+      ],
+      "world_location": [
+        -0.2733491361141205,
+        -0.26397016644477844,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035407900810242,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0852,
+      "screen_bbox": [
+        0.1566,
+        0.555,
+        0.4443,
+        0.851
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_13",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.34714728593826294,
+        -0.154559925198555,
+        1.309999942779541
+      ],
+      "world_location": [
+        -0.34714728593826294,
+        -0.154559925198555,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035407900810242,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0795,
+      "screen_bbox": [
+        0.1593,
+        0.5629,
+        0.4329,
+        0.8536
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_14",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.3790743350982666,
+        -0.026507459580898285,
+        1.309999942779541
+      ],
+      "world_location": [
+        -0.3790743350982666,
+        -0.026507459580898285,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035407900810242,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0727,
+      "screen_bbox": [
+        0.1957,
+        0.5711,
+        0.4513,
+        0.8557
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_15",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.3652794361114502,
+        0.10474219173192978,
+        1.309999942779541
+      ],
+      "world_location": [
+        -0.3652794361114502,
+        0.10474219173192978,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035407900810242,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0598,
+      "screen_bbox": [
+        0.2639,
+        0.5786,
+        0.4784,
+        0.8573
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_16",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.30742645263671875,
+        0.2233583927154541,
+        1.309999942779541
+      ],
+      "world_location": [
+        -0.30742645263671875,
+        0.2233583927154541,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035407900810242,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0432,
+      "screen_bbox": [
+        0.353,
+        0.5845,
+        0.511,
+        0.8583
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_17",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.21249330043792725,
+        0.31503427028656006,
+        1.309999942779541
+      ],
+      "world_location": [
+        -0.21249330043792725,
+        0.31503427028656006,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035406410694122,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0247,
+      "screen_bbox": [
+        0.4543,
+        0.5885,
+        0.5457,
+        0.8587
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_outer_soft_curved_18",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 70,
+      "verts": 88,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.0919303223490715,
+        0.3687123656272888,
+        1.309999942779541
+      ],
+      "world_location": [
+        -0.0919303223490715,
+        0.3687123656272888,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.19035407900810242,
+        0.7473373413085938,
+        0.2555716633796692
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0256,
+      "screen_bbox": [
+        0.519,
+        0.588,
+        0.6135,
+        0.8587
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_outer_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_inner_soft_curved_front_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.06180340051651001,
+        0.07021129876375198,
+        1.3300000429153442
+      ],
+      "world_location": [
+        0.06180340051651001,
+        0.07021129876375198,
+        1.3300000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.13783960044384003,
+        0.4370433986186981,
+        0.17278023064136505
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0196,
+      "screen_bbox": [
+        0.537,
+        0.5801,
+        0.6671,
+        0.7308
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_inner_soft_curved_front",
+      "craft_source": null
+    },
+    {
+      "name": "petal_inner_soft_curved_front_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.16180339455604553,
+        -0.0024429485201835632,
+        1.3300000429153442
+      ],
+      "world_location": [
+        0.16180339455604553,
+        -0.0024429485201835632,
+        1.3300000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.13783960044384003,
+        0.43704336881637573,
+        0.17278023064136505
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0241,
+      "screen_bbox": [
+        0.5674,
+        0.5725,
+        0.7292,
+        0.7216
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_inner_soft_curved_front",
+      "craft_source": null
+    },
+    {
+      "name": "petal_inner_soft_curved_front_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.20000000298023224,
+        -0.11999999731779099,
+        1.3300000429153442
+      ],
+      "world_location": [
+        0.20000000298023224,
+        -0.11999999731779099,
+        1.3300000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.13783960044384003,
+        0.43704336881637573,
+        0.17278023064136505
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0243,
+      "screen_bbox": [
+        0.5596,
+        0.5653,
+        0.7289,
+        0.709
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_inner_soft_curved_front",
+      "craft_source": null
+    },
+    {
+      "name": "petal_inner_soft_curved_front_04",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.16180339455604553,
+        -0.237557053565979,
+        1.3300000429153442
+      ],
+      "world_location": [
+        0.16180339455604553,
+        -0.237557053565979,
+        1.3300000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.13783958554267883,
+        0.43704336881637573,
+        0.17278023064136505
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0178,
+      "screen_bbox": [
+        0.5229,
+        0.5615,
+        0.6539,
+        0.6974
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_inner_soft_curved_front",
+      "craft_source": null
+    },
+    {
+      "name": "petal_inner_soft_curved_front_05",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.06180340051651001,
+        -0.31021130084991455,
+        1.3300000429153442
+      ],
+      "world_location": [
+        0.06180340051651001,
+        -0.31021130084991455,
+        1.3300000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.13783958554267883,
+        0.4370433986186981,
+        0.17278023064136505
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0097,
+      "screen_bbox": [
+        0.458,
+        0.5616,
+        0.5314,
+        0.6935
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_inner_soft_curved_front",
+      "craft_source": null
+    },
+    {
+      "name": "petal_inner_soft_curved_front_06",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.06180340051651001,
+        -0.31021130084991455,
+        1.3300000429153442
+      ],
+      "world_location": [
+        -0.06180340051651001,
+        -0.31021130084991455,
+        1.3300000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.13783960044384003,
+        0.4370433986186981,
+        0.17278023064136505
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0215,
+      "screen_bbox": [
+        0.3357,
+        0.5625,
+        0.4905,
+        0.7017
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_inner_soft_curved_front",
+      "craft_source": null
+    },
+    {
+      "name": "petal_inner_soft_curved_front_07",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.16180339455604553,
+        -0.237557053565979,
+        1.3300000429153442
+      ],
+      "world_location": [
+        -0.16180339455604553,
+        -0.237557053565979,
+        1.3300000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.13783960044384003,
+        0.4370433986186981,
+        0.17278023064136505
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.024,
+      "screen_bbox": [
+        0.2957,
+        0.568,
+        0.4596,
+        0.7144
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_inner_soft_curved_front",
+      "craft_source": null
+    },
+    {
+      "name": "petal_inner_soft_curved_front_08",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.20000000298023224,
+        -0.11999999731779099,
+        1.3300000429153442
+      ],
+      "world_location": [
+        -0.20000000298023224,
+        -0.11999999731779099,
+        1.3300000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.13783960044384003,
+        0.43704336881637573,
+        0.17278023064136505
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0233,
+      "screen_bbox": [
+        0.3164,
+        0.5758,
+        0.4717,
+        0.726
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_inner_soft_curved_front",
+      "craft_source": null
+    },
+    {
+      "name": "petal_inner_soft_curved_front_09",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.16180339455604553,
+        -0.0024429485201835632,
+        1.3300000429153442
+      ],
+      "world_location": [
+        -0.16180339455604553,
+        -0.0024429485201835632,
+        1.3300000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.13783960044384003,
+        0.4370433986186981,
+        0.17278023064136505
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.016,
+      "screen_bbox": [
+        0.4003,
+        0.5827,
+        0.5066,
+        0.7329
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_inner_soft_curved_front",
+      "craft_source": null
+    },
+    {
+      "name": "petal_inner_soft_curved_front_10",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.06180340051651001,
+        0.07021129876375198,
+        1.3300000429153442
+      ],
+      "world_location": [
+        -0.06180340051651001,
+        0.07021129876375198,
+        1.3300000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.13783960044384003,
+        0.43704336881637573,
+        0.17278023064136505
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.009,
+      "screen_bbox": [
+        0.4987,
+        0.5853,
+        0.559,
+        0.7341
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_inner_soft_curved_front",
+      "craft_source": null
+    },
+    {
+      "name": "petal_front_cascade_soft_curved_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.3400000035762787,
+        -0.6299999952316284,
+        1.4199999570846558
+      ],
+      "world_location": [
+        -0.3400000035762787,
+        -0.6299999952316284,
+        1.4199999570846558
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.11454068869352341,
+        0.3852340579032898,
+        0.1254258006811142
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0313,
+      "screen_bbox": [
+        0.2185,
+        0.6093,
+        0.3579,
+        0.8335
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_front_cascade_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_front_cascade_soft_curved_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.22499999403953552,
+        -0.6420000195503235,
+        1.4249999523162842
+      ],
+      "world_location": [
+        -0.22499999403953552,
+        -0.6420000195503235,
+        1.4249999523162842
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.11454068869352341,
+        0.3852340579032898,
+        0.1254258006811142
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0321,
+      "screen_bbox": [
+        0.251,
+        0.609,
+        0.3926,
+        0.836
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_front_cascade_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_front_cascade_soft_curved_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.10999999940395355,
+        -0.6539999842643738,
+        1.4299999475479126
+      ],
+      "world_location": [
+        -0.10999999940395355,
+        -0.6539999842643738,
+        1.4299999475479126
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.11454068869352341,
+        0.3852340579032898,
+        0.1254258006811142
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.033,
+      "screen_bbox": [
+        0.2844,
+        0.6088,
+        0.4282,
+        0.8386
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_front_cascade_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_front_cascade_soft_curved_04",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.004999995231628418,
+        -0.6660000085830688,
+        1.434999942779541
+      ],
+      "world_location": [
+        0.004999995231628418,
+        -0.6660000085830688,
+        1.434999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.11454068869352341,
+        0.3852340579032898,
+        0.1254258006811142
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.034,
+      "screen_bbox": [
+        0.3187,
+        0.6086,
+        0.4648,
+        0.8413
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_front_cascade_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_front_cascade_soft_curved_05",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.12000000476837158,
+        -0.6779999732971191,
+        1.4399999380111694
+      ],
+      "world_location": [
+        0.12000000476837158,
+        -0.6779999732971191,
+        1.4399999380111694
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.11454068869352341,
+        0.3852340579032898,
+        0.1254258006811142
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.035,
+      "screen_bbox": [
+        0.3538,
+        0.6084,
+        0.5022,
+        0.8441
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_front_cascade_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_front_cascade_soft_curved_06",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.23499998450279236,
+        -0.6899999976158142,
+        1.4449999332427979
+      ],
+      "world_location": [
+        0.23499998450279236,
+        -0.6899999976158142,
+        1.4449999332427979
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.11454068869352341,
+        0.3852340579032898,
+        0.1254258006811142
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.036,
+      "screen_bbox": [
+        0.3899,
+        0.6081,
+        0.5407,
+        0.8469
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_front_cascade_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "petal_front_cascade_soft_curved_07",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 42,
+      "verts": 56,
+      "materials": [
+        "petal_gradient_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.3499999940395355,
+        -0.7020000219345093,
+        1.4499999284744263
+      ],
+      "world_location": [
+        0.3499999940395355,
+        -0.7020000219345093,
+        1.4499999284744263
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.11454068869352341,
+        0.3852340579032898,
+        0.1254258006811142
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0371,
+      "screen_bbox": [
+        0.4269,
+        0.6079,
+        0.5802,
+        0.8498
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_front_cascade_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "leaf_base_soft_curved_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "leaf_soft_green"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.19837167859077454,
+        0.5450217127799988,
+        0.5400000214576721
+      ],
+      "world_location": [
+        0.19837167859077454,
+        0.5450217127799988,
+        0.5400000214576721
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.18994536995887756,
+        0.705471932888031,
+        0.12009366601705551
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0172,
+      "screen_bbox": [
+        0.6327,
+        0.1463,
+        0.8084,
+        0.2439
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "leaf_base_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "leaf_base_soft_curved_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "leaf_soft_green"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.5256584882736206,
+        0.24511858820915222,
+        0.5400000214576721
+      ],
+      "world_location": [
+        0.5256584882736206,
+        0.24511858820915222,
+        0.5400000214576721
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.18994538486003876,
+        0.705471932888031,
+        0.12009366601705551
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0445,
+      "screen_bbox": [
+        0.7174,
+        0.0176,
+        0.965,
+        0.1972
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "leaf_base_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "leaf_base_soft_curved_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "leaf_soft_green"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.5450217127799988,
+        -0.19837167859077454,
+        0.5400000214576721
+      ],
+      "world_location": [
+        0.5450217127799988,
+        -0.19837167859077454,
+        0.5400000214576721
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.18994536995887756,
+        0.705471932888031,
+        0.12009366601705551
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0354,
+      "screen_bbox": [
+        0.6554,
+        0.0,
+        0.9171,
+        0.1353
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "leaf_base_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "leaf_base_soft_curved_04",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "leaf_soft_green"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.24511858820915222,
+        -0.5256584882736206,
+        0.5400000214576721
+      ],
+      "world_location": [
+        0.24511858820915222,
+        -0.5256584882736206,
+        0.5400000214576721
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.18994538486003876,
+        0.7054718732833862,
+        0.12009366601705551
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.008,
+      "screen_bbox": [
+        0.4951,
+        0.0,
+        0.5772,
+        0.0979
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "leaf_base_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "leaf_base_soft_curved_05",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "leaf_soft_green"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.19837167859077454,
+        -0.5450217127799988,
+        0.5400000214576721
+      ],
+      "world_location": [
+        -0.19837167859077454,
+        -0.5450217127799988,
+        0.5400000214576721
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.18994538486003876,
+        0.705471932888031,
+        0.12009366601705551
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0351,
+      "screen_bbox": [
+        0.1522,
+        0.0,
+        0.4097,
+        0.1364
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "leaf_base_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "leaf_base_soft_curved_06",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "leaf_soft_green"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.5256584882736206,
+        -0.24511858820915222,
+        0.5400000214576721
+      ],
+      "world_location": [
+        -0.5256584882736206,
+        -0.24511858820915222,
+        0.5400000214576721
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.18994538486003876,
+        0.7054718732833862,
+        0.12009366601705551
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0435,
+      "screen_bbox": [
+        0.099,
+        0.0208,
+        0.3441,
+        0.1983
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "leaf_base_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "leaf_base_soft_curved_07",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "leaf_soft_green"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.5450217127799988,
+        0.19837167859077454,
+        0.5400000214576721
+      ],
+      "world_location": [
+        -0.5450217127799988,
+        0.19837167859077454,
+        0.5400000214576721
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.18994536995887756,
+        0.705471932888031,
+        0.12009366601705551
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0171,
+      "screen_bbox": [
+        0.2494,
+        0.148,
+        0.4264,
+        0.2445
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "leaf_base_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "leaf_base_soft_curved_08",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "leaf_soft_green"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.24511858820915222,
+        0.5256584882736206,
+        0.5400000214576721
+      ],
+      "world_location": [
+        -0.24511858820915222,
+        0.5256584882736206,
+        0.5400000214576721
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.18994538486003876,
+        0.7054718732833862,
+        0.12009366601705551
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0036,
+      "screen_bbox": [
+        0.5009,
+        0.192,
+        0.5576,
+        0.256
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "leaf_base_soft_curved",
+      "craft_source": null
+    },
+    {
+      "name": "cloth_fold_soft_curved_highlight_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.5,
+        -0.6800000071525574,
+        1.2200000286102295
+      ],
+      "world_location": [
+        -0.5,
+        -0.6800000071525574,
+        1.2200000286102295
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.04004276916384697,
+        0.16188599169254303,
+        0.03279009088873863
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0034,
+      "screen_bbox": [
+        0.2146,
+        0.4845,
+        0.2718,
+        0.5437
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "cloth_fold_soft_curved_highlight",
+      "craft_source": null
+    },
+    {
+      "name": "cloth_fold_soft_curved_highlight_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.3499999940395355,
+        -0.6660000085830688,
+        1.2380000352859497
+      ],
+      "world_location": [
+        -0.3499999940395355,
+        -0.6660000085830688,
+        1.2380000352859497
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.04004276916384697,
+        0.16188599169254303,
+        0.03279009088873863
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0035,
+      "screen_bbox": [
+        0.2628,
+        0.4918,
+        0.3209,
+        0.5516
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "cloth_fold_soft_curved_highlight",
+      "craft_source": null
+    },
+    {
+      "name": "cloth_fold_soft_curved_highlight_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.19999998807907104,
+        -0.6520000100135803,
+        1.25600004196167
+      ],
+      "world_location": [
+        -0.19999998807907104,
+        -0.6520000100135803,
+        1.25600004196167
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.04004276916384697,
+        0.16188599169254303,
+        0.03279009088873863
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0036,
+      "screen_bbox": [
+        0.312,
+        0.4993,
+        0.3712,
+        0.5596
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "cloth_fold_soft_curved_highlight",
+      "craft_source": null
+    },
+    {
+      "name": "cloth_fold_soft_curved_highlight_04",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.04999998211860657,
+        -0.6380000114440918,
+        1.2740000486373901
+      ],
+      "world_location": [
+        -0.04999998211860657,
+        -0.6380000114440918,
+        1.2740000486373901
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.04004276916384697,
+        0.16188599169254303,
+        0.03279009088873863
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0037,
+      "screen_bbox": [
+        0.3624,
+        0.507,
+        0.4226,
+        0.5679
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "cloth_fold_soft_curved_highlight",
+      "craft_source": null
+    },
+    {
+      "name": "cloth_fold_soft_curved_highlight_05",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.10000002384185791,
+        -0.6240000128746033,
+        1.2920000553131104
+      ],
+      "world_location": [
+        0.10000002384185791,
+        -0.6240000128746033,
+        1.2920000553131104
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.04004276916384697,
+        0.16188599169254303,
+        0.03279009088873863
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0038,
+      "screen_bbox": [
+        0.4138,
+        0.5149,
+        0.4751,
+        0.5762
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "cloth_fold_soft_curved_highlight",
+      "craft_source": null
+    },
+    {
+      "name": "cloth_fold_soft_curved_highlight_06",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.25,
+        -0.6100000143051147,
+        1.3100000619888306
+      ],
+      "world_location": [
+        0.25,
+        -0.6100000143051147,
+        1.3100000619888306
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.04004276916384697,
+        0.16188599169254303,
+        0.03279009088873863
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0039,
+      "screen_bbox": [
+        0.4665,
+        0.5229,
+        0.5289,
+        0.5848
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "cloth_fold_soft_curved_highlight",
+      "craft_source": null
+    },
+    {
+      "name": "cloth_fold_soft_curved_highlight_07",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.40000003576278687,
+        -0.5960000157356262,
+        1.3280000686645508
+      ],
+      "world_location": [
+        0.40000003576278687,
+        -0.5960000157356262,
+        1.3280000686645508
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.04004276916384697,
+        0.16188599169254303,
+        0.03279009088873863
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.004,
+      "screen_bbox": [
+        0.5203,
+        0.5312,
+        0.5839,
+        0.5936
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "cloth_fold_soft_curved_highlight",
+      "craft_source": null
+    },
+    {
+      "name": "petal_vein_front_embossed_fold_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 24,
+      "verts": 35,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.36000001430511475,
+        -0.7400000095367432,
+        1.4600000381469727
+      ],
+      "world_location": [
+        -0.36000001430511475,
+        -0.7400000095367432,
+        1.4600000381469727
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.02877451665699482,
+        0.26115283370018005,
+        0.04738381877541542
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0095,
+      "screen_bbox": [
+        0.2209,
+        0.6343,
+        0.3049,
+        0.7474
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_vein_front_embossed_fold",
+      "craft_source": null
+    },
+    {
+      "name": "petal_vein_front_embossed_fold_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 24,
+      "verts": 35,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.24000000953674316,
+        -0.7459999918937683,
+        1.4480000734329224
+      ],
+      "world_location": [
+        -0.24000000953674316,
+        -0.7459999918937683,
+        1.4480000734329224
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.02877451665699482,
+        0.26115283370018005,
+        0.04738381877541542
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0098,
+      "screen_bbox": [
+        0.257,
+        0.6232,
+        0.3425,
+        0.7378
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_vein_front_embossed_fold",
+      "craft_source": null
+    },
+    {
+      "name": "petal_vein_front_embossed_fold_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 24,
+      "verts": 35,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.12000001966953278,
+        -0.7520000338554382,
+        1.4359999895095825
+      ],
+      "world_location": [
+        -0.12000001966953278,
+        -0.7520000338554382,
+        1.4359999895095825
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.02877451665699482,
+        0.26115283370018005,
+        0.04738381877541542
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0101,
+      "screen_bbox": [
+        0.2938,
+        0.6118,
+        0.381,
+        0.728
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_vein_front_embossed_fold",
+      "craft_source": null
+    },
+    {
+      "name": "petal_vein_front_embossed_fold_04",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 24,
+      "verts": 35,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -2.9802322387695312e-08,
+        -0.7580000162124634,
+        1.4240000247955322
+      ],
+      "world_location": [
+        -2.9802322387695312e-08,
+        -0.7580000162124634,
+        1.4240000247955322
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.02877451665699482,
+        0.26115283370018005,
+        0.04738381877541542
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0105,
+      "screen_bbox": [
+        0.3316,
+        0.6001,
+        0.4205,
+        0.718
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_vein_front_embossed_fold",
+      "craft_source": null
+    },
+    {
+      "name": "petal_vein_front_embossed_fold_05",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 24,
+      "verts": 35,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.1199999749660492,
+        -0.7639999985694885,
+        1.412000060081482
+      ],
+      "world_location": [
+        0.1199999749660492,
+        -0.7639999985694885,
+        1.412000060081482
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.02877451665699482,
+        0.26115283370018005,
+        0.04738381877541542
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0108,
+      "screen_bbox": [
+        0.3702,
+        0.5882,
+        0.4609,
+        0.7077
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_vein_front_embossed_fold",
+      "craft_source": null
+    },
+    {
+      "name": "petal_vein_front_embossed_fold_06",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 24,
+      "verts": 35,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.2399999499320984,
+        -0.7699999809265137,
+        1.4000000953674316
+      ],
+      "world_location": [
+        0.2399999499320984,
+        -0.7699999809265137,
+        1.4000000953674316
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.02877451665699482,
+        0.26115283370018005,
+        0.04738381877541542
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0112,
+      "screen_bbox": [
+        0.4098,
+        0.576,
+        0.5023,
+        0.6972
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_vein_front_embossed_fold",
+      "craft_source": null
+    },
+    {
+      "name": "petal_vein_front_embossed_fold_07",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 24,
+      "verts": 35,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.35999995470046997,
+        -0.7760000228881836,
+        1.3880000114440918
+      ],
+      "world_location": [
+        0.35999995470046997,
+        -0.7760000228881836,
+        1.3880000114440918
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.02877451665699482,
+        0.26115283370018005,
+        0.04738381877541542
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0116,
+      "screen_bbox": [
+        0.4504,
+        0.5634,
+        0.5447,
+        0.6864
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_vein_front_embossed_fold",
+      "craft_source": null
+    },
+    {
+      "name": "petal_rim_translucent_lip_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.03208797797560692,
+        0.4288794696331024,
+        1.5800000429153442
+      ],
+      "world_location": [
+        0.03208797797560692,
+        0.4288794696331024,
+        1.5800000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.05462459847331047,
+        0.2432669997215271,
+        0.09866175800561905
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0055,
+      "screen_bbox": [
+        0.5835,
+        0.7412,
+        0.6347,
+        0.8495
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_rim_translucent_lip",
+      "craft_source": null
+    },
+    {
+      "name": "petal_rim_translucent_lip_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.2280106097459793,
+        0.3695136606693268,
+        1.5800000429153442
+      ],
+      "world_location": [
+        0.2280106097459793,
+        0.3695136606693268,
+        1.5800000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.05462459847331047,
+        0.2432669997215271,
+        0.09866175800561905
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0084,
+      "screen_bbox": [
+        0.6326,
+        0.7373,
+        0.7086,
+        0.8482
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_rim_translucent_lip",
+      "craft_source": null
+    },
+    {
+      "name": "petal_rim_translucent_lip_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.37877294421195984,
+        0.2310192584991455,
+        1.5800000429153442
+      ],
+      "world_location": [
+        0.37877294421195984,
+        0.2310192584991455,
+        1.5800000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.05462459847331047,
+        0.2432669997215271,
+        0.09866175800561905
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0103,
+      "screen_bbox": [
+        0.6639,
+        0.7317,
+        0.754,
+        0.8462
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_rim_translucent_lip",
+      "craft_source": null
+    },
+    {
+      "name": "petal_rim_translucent_lip_04",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.45451465249061584,
+        0.04082681983709335,
+        1.5800000429153442
+      ],
+      "world_location": [
+        0.45451465249061584,
+        0.04082681983709335,
+        1.5800000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.05462459847331047,
+        0.2432669997215271,
+        0.09866175800561905
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0112,
+      "screen_bbox": [
+        0.6661,
+        0.7254,
+        0.7607,
+        0.8437
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_rim_translucent_lip",
+      "craft_source": null
+    },
+    {
+      "name": "petal_rim_translucent_lip_05",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.44023415446281433,
+        -0.1633937507867813,
+        1.5800000429153442
+      ],
+      "world_location": [
+        0.44023415446281433,
+        -0.1633937507867813,
+        1.5800000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.05462459847331047,
+        0.2432669997215271,
+        0.09866175800561905
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0109,
+      "screen_bbox": [
+        0.6344,
+        0.7197,
+        0.7239,
+        0.8413
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_rim_translucent_lip",
+      "craft_source": null
+    },
+    {
+      "name": "petal_rim_translucent_lip_06",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.3387598693370819,
+        -0.3411940634250641,
+        1.5800000429153442
+      ],
+      "world_location": [
+        0.3387598693370819,
+        -0.3411940634250641,
+        1.5800000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.05462459847331047,
+        0.2432669997215271,
+        0.09866175800561905
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0076,
+      "screen_bbox": [
+        0.5781,
+        0.716,
+        0.6394,
+        0.8395
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_rim_translucent_lip",
+      "craft_source": null
+    },
+    {
+      "name": "petal_rim_translucent_lip_07",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.17019006609916687,
+        -0.45735856890678406,
+        1.5800000429153442
+      ],
+      "world_location": [
+        0.17019006609916687,
+        -0.45735856890678406,
+        1.5800000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.05462459847331047,
+        0.2432669997215271,
+        0.09866175800561905
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0033,
+      "screen_bbox": [
+        0.5036,
+        0.7151,
+        0.5299,
+        0.8389
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_rim_translucent_lip",
+      "craft_source": null
+    },
+    {
+      "name": "petal_rim_translucent_lip_08",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.03208797797560692,
+        -0.4888794720172882,
+        1.5800000429153442
+      ],
+      "world_location": [
+        -0.03208797797560692,
+        -0.4888794720172882,
+        1.5800000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.05462459847331047,
+        0.2432669997215271,
+        0.09866175800561905
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0085,
+      "screen_bbox": [
+        0.3937,
+        0.7168,
+        0.4628,
+        0.8399
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_rim_translucent_lip",
+      "craft_source": null
+    },
+    {
+      "name": "petal_rim_translucent_lip_09",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.2280106097459793,
+        -0.4295136630535126,
+        1.5800000429153442
+      ],
+      "world_location": [
+        -0.2280106097459793,
+        -0.4295136630535126,
+        1.5800000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.05462459847331047,
+        0.2432669997215271,
+        0.09866175800561905
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0111,
+      "screen_bbox": [
+        0.3193,
+        0.7212,
+        0.4114,
+        0.842
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_rim_translucent_lip",
+      "craft_source": null
+    },
+    {
+      "name": "petal_rim_translucent_lip_10",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.37877294421195984,
+        -0.2910192608833313,
+        1.5800000429153442
+      ],
+      "world_location": [
+        -0.37877294421195984,
+        -0.2910192608833313,
+        1.5800000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.05462459847331047,
+        0.2432669997215271,
+        0.09866175800561905
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0108,
+      "screen_bbox": [
+        0.2939,
+        0.7273,
+        0.3862,
+        0.8445
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_rim_translucent_lip",
+      "craft_source": null
+    },
+    {
+      "name": "petal_rim_translucent_lip_11",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.45451465249061584,
+        -0.10082682222127914,
+        1.5800000429153442
+      ],
+      "world_location": [
+        -0.45451465249061584,
+        -0.10082682222127914,
+        1.5800000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.05462459847331047,
+        0.2432669997215271,
+        0.09866175800561905
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0099,
+      "screen_bbox": [
+        0.3087,
+        0.7334,
+        0.3964,
+        0.8468
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_rim_translucent_lip",
+      "craft_source": null
+    },
+    {
+      "name": "petal_rim_translucent_lip_12",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.44023415446281433,
+        0.10339374840259552,
+        1.5800000429153442
+      ],
+      "world_location": [
+        -0.44023415446281433,
+        0.10339374840259552,
+        1.5800000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.05462459847331047,
+        0.2432669997215271,
+        0.09866175800561905
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0078,
+      "screen_bbox": [
+        0.3613,
+        0.7386,
+        0.4322,
+        0.8486
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_rim_translucent_lip",
+      "craft_source": null
+    },
+    {
+      "name": "petal_rim_translucent_lip_13",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.3387598693370819,
+        0.2811940610408783,
+        1.5800000429153442
+      ],
+      "world_location": [
+        -0.3387598693370819,
+        0.2811940610408783,
+        1.5800000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.05462459474802017,
+        0.2432669997215271,
+        0.09866175800561905
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0048,
+      "screen_bbox": [
+        0.4392,
+        0.742,
+        0.4839,
+        0.8497
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_rim_translucent_lip",
+      "craft_source": null
+    },
+    {
+      "name": "petal_rim_translucent_lip_14",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 20,
+      "verts": 30,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.17019006609916687,
+        0.39735856652259827,
+        1.5800000429153442
+      ],
+      "world_location": [
+        -0.17019006609916687,
+        0.39735856652259827,
+        1.5800000429153442
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.05462459847331047,
+        0.2432669997215271,
+        0.09866175800561905
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0022,
+      "screen_bbox": [
+        0.5254,
+        0.743,
+        0.5459,
+        0.85
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "organic_surface",
+      "craft_group": "petal_rim_translucent_lip",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_01",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.4399999976158142,
+        -0.8600000143051147,
+        1.5199999809265137
+      ],
+      "world_location": [
+        -0.4399999976158142,
+        -0.8600000143051147,
+        1.5199999809265137
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0012,
+      "screen_bbox": [
+        0.2275,
+        0.6544,
+        0.2614,
+        0.6901
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_02",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.3880000114440918,
+        -0.8560000061988831,
+        1.503999948501587
+      ],
+      "world_location": [
+        -0.3880000114440918,
+        -0.8560000061988831,
+        1.503999948501587
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0012,
+      "screen_bbox": [
+        0.2452,
+        0.6425,
+        0.2789,
+        0.6786
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_03",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.335999995470047,
+        -0.8519999980926514,
+        1.4880000352859497
+      ],
+      "world_location": [
+        -0.335999995470047,
+        -0.8519999980926514,
+        1.4880000352859497
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0012,
+      "screen_bbox": [
+        0.2631,
+        0.6305,
+        0.2965,
+        0.667
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_04",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.2839999794960022,
+        -0.8479999899864197,
+        1.472000002861023
+      ],
+      "world_location": [
+        -0.2839999794960022,
+        -0.8479999899864197,
+        1.472000002861023
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0012,
+      "screen_bbox": [
+        0.2811,
+        0.6185,
+        0.3142,
+        0.6554
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_05",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.23199999332427979,
+        -0.8440000414848328,
+        1.4559999704360962
+      ],
+      "world_location": [
+        -0.23199999332427979,
+        -0.8440000414848328,
+        1.4559999704360962
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0012,
+      "screen_bbox": [
+        0.2992,
+        0.6063,
+        0.3321,
+        0.6437
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_06",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.18000000715255737,
+        -0.8400000333786011,
+        1.4399999380111694
+      ],
+      "world_location": [
+        -0.18000000715255737,
+        -0.8400000333786011,
+        1.4399999380111694
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0012,
+      "screen_bbox": [
+        0.3175,
+        0.5941,
+        0.3501,
+        0.6318
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_07",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.12799999117851257,
+        -0.8360000252723694,
+        1.4240000247955322
+      ],
+      "world_location": [
+        -0.12799999117851257,
+        -0.8360000252723694,
+        1.4240000247955322
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0012,
+      "screen_bbox": [
+        0.3359,
+        0.5818,
+        0.3683,
+        0.6199
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_08",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.07599997520446777,
+        -0.8320000171661377,
+        1.4079999923706055
+      ],
+      "world_location": [
+        -0.07599997520446777,
+        -0.8320000171661377,
+        1.4079999923706055
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0012,
+      "screen_bbox": [
+        0.3544,
+        0.5693,
+        0.3865,
+        0.608
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_09",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.02399998903274536,
+        -0.828000009059906,
+        1.3919999599456787
+      ],
+      "world_location": [
+        -0.02399998903274536,
+        -0.828000009059906,
+        1.3919999599456787
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0012,
+      "screen_bbox": [
+        0.3731,
+        0.5568,
+        0.4049,
+        0.5959
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_10",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        0.02799999713897705,
+        -0.8240000009536743,
+        1.375999927520752
+      ],
+      "world_location": [
+        0.02799999713897705,
+        -0.8240000009536743,
+        1.375999927520752
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0012,
+      "screen_bbox": [
+        0.3919,
+        0.5442,
+        0.4234,
+        0.5837
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_11",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        0.07999998331069946,
+        -0.8199999928474426,
+        1.3600000143051147
+      ],
+      "world_location": [
+        0.07999998331069946,
+        -0.8199999928474426,
+        1.3600000143051147
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0013,
+      "screen_bbox": [
+        0.4108,
+        0.5315,
+        0.4421,
+        0.5715
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_12",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        0.13200002908706665,
+        -0.8159999847412109,
+        1.343999981880188
+      ],
+      "world_location": [
+        0.13200002908706665,
+        -0.8159999847412109,
+        1.343999981880188
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0013,
+      "screen_bbox": [
+        0.4299,
+        0.5187,
+        0.4609,
+        0.5591
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_13",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        0.18400001525878906,
+        -0.812000036239624,
+        1.3279999494552612
+      ],
+      "world_location": [
+        0.18400001525878906,
+        -0.812000036239624,
+        1.3279999494552612
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0013,
+      "screen_bbox": [
+        0.4491,
+        0.5059,
+        0.4798,
+        0.5467
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_14",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        0.23600000143051147,
+        -0.8080000281333923,
+        1.312000036239624
+      ],
+      "world_location": [
+        0.23600000143051147,
+        -0.8080000281333923,
+        1.312000036239624
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0013,
+      "screen_bbox": [
+        0.4685,
+        0.4929,
+        0.4989,
+        0.5342
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_15",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        0.28800004720687866,
+        -0.8040000200271606,
+        1.2960000038146973
+      ],
+      "world_location": [
+        0.28800004720687866,
+        -0.8040000200271606,
+        1.2960000038146973
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0013,
+      "screen_bbox": [
+        0.488,
+        0.4798,
+        0.5181,
+        0.5216
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_16",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        0.3400000333786011,
+        -0.800000011920929,
+        1.2799999713897705
+      ],
+      "world_location": [
+        0.3400000333786011,
+        -0.800000011920929,
+        1.2799999713897705
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0013,
+      "screen_bbox": [
+        0.5077,
+        0.4666,
+        0.5375,
+        0.5089
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_17",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        0.3920000195503235,
+        -0.7960000038146973,
+        1.2639999389648438
+      ],
+      "world_location": [
+        0.3920000195503235,
+        -0.7960000038146973,
+        1.2639999389648438
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0013,
+      "screen_bbox": [
+        0.5275,
+        0.4533,
+        0.5571,
+        0.4961
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "petal_surface_micro_vein_18",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "fold_highlight_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        0.4440000057220459,
+        -0.7919999957084656,
+        1.247999906539917
+      ],
+      "world_location": [
+        0.4440000057220459,
+        -0.7919999957084656,
+        1.247999906539917
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.029128501191735268,
+        0.11473426222801208,
+        0.045060157775878906
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0013,
+      "screen_bbox": [
+        0.5474,
+        0.4399,
+        0.5767,
+        0.4832
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "surface_microdetail",
+      "craft_group": "petal_surface_micro_vein",
+      "craft_source": null
+    },
+    {
+      "name": "organic_pollen_soft_center",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "pollen_warm_soft"
+      ],
+      "modifiers": [],
+      "location": [
+        0.0,
+        -0.5400000214576721,
+        1.4199999570846558
+      ],
+      "world_location": [
+        0.0,
+        -0.5400000214576721,
+        1.4199999570846558
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.1999998688697815,
+        0.19999992847442627,
+        0.20000000298023224
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0147,
+      "screen_bbox": [
+        0.3981,
+        0.5358,
+        0.4981,
+        0.6826
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "organic_pollen_cup_gold_visible",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 34,
+      "verts": 64,
+      "materials": [
+        "pollen_warm_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0,
+        -0.4300000071525574,
+        1.5099999904632568
+      ],
+      "world_location": [
+        0.0,
+        -0.4300000071525574,
+        1.5099999904632568
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.23999999463558197,
+        0.23999999463558197,
+        0.04320000112056732
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0049,
+      "screen_bbox": [
+        0.4076,
+        0.6531,
+        0.5248,
+        0.695
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "organic_front_pollen_gold_visible",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "pollen_warm_soft"
+      ],
+      "modifiers": [],
+      "location": [
+        0.2199999988079071,
+        -0.8600000143051147,
+        1.25
+      ],
+      "world_location": [
+        0.2199999988079071,
+        -0.8600000143051147,
+        1.25
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.18999993801116943,
+        0.04179999232292175,
+        0.17099998891353607
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.01,
+      "screen_bbox": [
+        0.4313,
+        0.3998,
+        0.5071,
+        0.5318
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "organic_front_pollen_gold_dot_left",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "pollen_warm_soft"
+      ],
+      "modifiers": [],
+      "location": [
+        0.07999999821186066,
+        -0.8899999856948853,
+        1.3200000524520874
+      ],
+      "world_location": [
+        0.07999999821186066,
+        -0.8899999856948853,
+        1.3200000524520874
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.06499998271465302,
+        0.014299994334578514,
+        0.06499999761581421
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0013,
+      "screen_bbox": [
+        0.4009,
+        0.4941,
+        0.4266,
+        0.5432
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "organic_front_pollen_gold_dot_right",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "pollen_warm_soft"
+      ],
+      "modifiers": [],
+      "location": [
+        0.36000001430511475,
+        -0.8899999856948853,
+        1.3200000524520874
+      ],
+      "world_location": [
+        0.36000001430511475,
+        -0.8899999856948853,
+        1.3200000524520874
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.06499998271465302,
+        0.014299994334578514,
+        0.06499999761581421
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0013,
+      "screen_bbox": [
+        0.5016,
+        0.4832,
+        0.5282,
+        0.5337
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "organic_front_pollen_gold_dot_low",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "pollen_warm_soft"
+      ],
+      "modifiers": [],
+      "location": [
+        0.2199999988079071,
+        -0.8999999761581421,
+        1.149999976158142
+      ],
+      "world_location": [
+        0.2199999988079071,
+        -0.8999999761581421,
+        1.149999976158142
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.059999965131282806,
+        0.013199996203184128,
+        0.05999999865889549
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0011,
+      "screen_bbox": [
+        0.45,
+        0.3687,
+        0.474,
+        0.4154
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "organic_pollen_stamen_gold_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0,
+        -0.3100000023841858,
+        1.5499999523162842
+      ],
+      "world_location": [
+        0.0,
+        -0.3100000023841858,
+        1.5499999523162842
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.017999999225139618,
+        0.05000000074505806,
+        0.017999999225139618
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0002,
+      "screen_bbox": [
+        0.4791,
+        0.6979,
+        0.4927,
+        0.7113
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "radial_marker",
+      "craft_group": "organic_pollen_stamen_gold",
+      "craft_source": null
+    },
+    {
+      "name": "organic_pollen_stamen_gold_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0822899341583252,
+        -0.33673760294914246,
+        1.5499999523162842
+      ],
+      "world_location": [
+        0.0822899341583252,
+        -0.33673760294914246,
+        1.5499999523162842
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.017999999225139618,
+        0.05000000074505806,
+        0.017999999225139618
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0002,
+      "screen_bbox": [
+        0.4989,
+        0.6959,
+        0.5179,
+        0.7089
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "radial_marker",
+      "craft_group": "organic_pollen_stamen_gold",
+      "craft_source": null
+    },
+    {
+      "name": "organic_pollen_stamen_gold_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.13314791023731232,
+        -0.40673762559890747,
+        1.5499999523162842
+      ],
+      "world_location": [
+        0.13314791023731232,
+        -0.40673762559890747,
+        1.5499999523162842
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.017999999225139618,
+        0.05000000074505806,
+        0.017999999225139618
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0002,
+      "screen_bbox": [
+        0.5048,
+        0.6928,
+        0.5239,
+        0.7055
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "radial_marker",
+      "craft_group": "organic_pollen_stamen_gold",
+      "craft_source": null
+    },
+    {
+      "name": "organic_pollen_stamen_gold_04",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.13314791023731232,
+        -0.4932623505592346,
+        1.5499999523162842
+      ],
+      "world_location": [
+        0.13314791023731232,
+        -0.4932623505592346,
+        1.5499999523162842
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.01799999736249447,
+        0.04999999701976776,
+        0.017999999225139618
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0003,
+      "screen_bbox": [
+        0.4917,
+        0.6891,
+        0.5098,
+        0.703
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "radial_marker",
+      "craft_group": "organic_pollen_stamen_gold",
+      "craft_source": null
+    },
+    {
+      "name": "organic_pollen_stamen_gold_05",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0822899341583252,
+        -0.5632623434066772,
+        1.5499999523162842
+      ],
+      "world_location": [
+        0.0822899341583252,
+        -0.5632623434066772,
+        1.5499999523162842
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.017999999225139618,
+        0.05000000074505806,
+        0.017999999225139618
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0001,
+      "screen_bbox": [
+        0.4673,
+        0.6873,
+        0.4771,
+        0.7014
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "radial_marker",
+      "craft_group": "organic_pollen_stamen_gold",
+      "craft_source": null
+    },
+    {
+      "name": "organic_pollen_stamen_gold_06",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        1.714505527444786e-17,
+        -0.5899999737739563,
+        1.5499999523162842
+      ],
+      "world_location": [
+        1.714505527444786e-17,
+        -0.5899999737739563,
+        1.5499999523162842
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.017999999225139618,
+        0.05000000074505806,
+        0.017999999225139618
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0002,
+      "screen_bbox": [
+        0.4327,
+        0.6877,
+        0.4473,
+        0.7019
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "radial_marker",
+      "craft_group": "organic_pollen_stamen_gold",
+      "craft_source": null
+    },
+    {
+      "name": "organic_pollen_stamen_gold_07",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.0822899341583252,
+        -0.5632623434066772,
+        1.5499999523162842
+      ],
+      "world_location": [
+        -0.0822899341583252,
+        -0.5632623434066772,
+        1.5499999523162842
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.017999999225139618,
+        0.05000000074505806,
+        0.017999999225139618
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0003,
+      "screen_bbox": [
+        0.4077,
+        0.6905,
+        0.4273,
+        0.7039
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "radial_marker",
+      "craft_group": "organic_pollen_stamen_gold",
+      "craft_source": null
+    },
+    {
+      "name": "organic_pollen_stamen_gold_08",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.13314791023731232,
+        -0.4932623505592346,
+        1.5499999523162842
+      ],
+      "world_location": [
+        -0.13314791023731232,
+        -0.4932623505592346,
+        1.5499999523162842
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.017999999225139618,
+        0.05000000074505806,
+        0.017999999225139618
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0002,
+      "screen_bbox": [
+        0.4036,
+        0.6943,
+        0.4227,
+        0.7069
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "radial_marker",
+      "craft_group": "organic_pollen_stamen_gold",
+      "craft_source": null
+    },
+    {
+      "name": "organic_pollen_stamen_gold_09",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.13314791023731232,
+        -0.40673762559890747,
+        1.5499999523162842
+      ],
+      "world_location": [
+        -0.13314791023731232,
+        -0.40673762559890747,
+        1.5499999523162842
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.017999999225139618,
+        0.05000000074505806,
+        0.017999999225139618
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0002,
+      "screen_bbox": [
+        0.4193,
+        0.6969,
+        0.4364,
+        0.7101
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "radial_marker",
+      "craft_group": "organic_pollen_stamen_gold",
+      "craft_source": null
+    },
+    {
+      "name": "organic_pollen_stamen_gold_10",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.0822899341583252,
+        -0.33673760294914246,
+        1.5499999523162842
+      ],
+      "world_location": [
+        -0.0822899341583252,
+        -0.33673760294914246,
+        1.5499999523162842
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.017999999225139618,
+        0.05000000074505806,
+        0.017999999225139618
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0001,
+      "screen_bbox": [
+        0.4509,
+        0.6984,
+        0.46,
+        0.7117
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "radial_marker",
+      "craft_group": "organic_pollen_stamen_gold",
+      "craft_source": null
+    },
+    {
+      "name": "organic_stamen_filament_thread_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.18000000715255737,
+        -0.8600000143051147,
+        1.309999942779541
+      ],
+      "world_location": [
+        -0.18000000715255737,
+        -0.8600000143051147,
+        1.309999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.012000000104308128,
+        0.10999999195337296,
+        0.011999999172985554
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0005,
+      "screen_bbox": [
+        0.3221,
+        0.5093,
+        0.339,
+        0.5364
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "linear_marker",
+      "craft_group": "organic_stamen_filament_thread",
+      "craft_source": null
+    },
+    {
+      "name": "organic_stamen_filament_thread_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.13500000536441803,
+        -0.8420000076293945,
+        1.334999918937683
+      ],
+      "world_location": [
+        -0.13500000536441803,
+        -0.8420000076293945,
+        1.334999918937683
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.012000000104308128,
+        0.10999999195337296,
+        0.011999999172985554
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0004,
+      "screen_bbox": [
+        0.3408,
+        0.5264,
+        0.3573,
+        0.5531
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "linear_marker",
+      "craft_group": "organic_stamen_filament_thread",
+      "craft_source": null
+    },
+    {
+      "name": "organic_stamen_filament_thread_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.09000000357627869,
+        -0.8240000009536743,
+        1.3599998950958252
+      ],
+      "world_location": [
+        -0.09000000357627869,
+        -0.8240000009536743,
+        1.3599998950958252
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.012000000104308128,
+        0.10999999195337296,
+        0.011999999172985554
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0004,
+      "screen_bbox": [
+        0.3595,
+        0.5434,
+        0.3756,
+        0.5698
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "linear_marker",
+      "craft_group": "organic_stamen_filament_thread",
+      "craft_source": null
+    },
+    {
+      "name": "organic_stamen_filament_thread_04",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.04500000178813934,
+        -0.8059999942779541,
+        1.3849999904632568
+      ],
+      "world_location": [
+        -0.04500000178813934,
+        -0.8059999942779541,
+        1.3849999904632568
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.012000000104308128,
+        0.10999999195337296,
+        0.011999999172985554
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0004,
+      "screen_bbox": [
+        0.3783,
+        0.5605,
+        0.394,
+        0.5865
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "linear_marker",
+      "craft_group": "organic_stamen_filament_thread",
+      "craft_source": null
+    },
+    {
+      "name": "organic_stamen_filament_thread_05",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0,
+        -0.7879999876022339,
+        1.409999966621399
+      ],
+      "world_location": [
+        0.0,
+        -0.7879999876022339,
+        1.409999966621399
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.012000000104308128,
+        0.10999999195337296,
+        0.011999999172985554
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0004,
+      "screen_bbox": [
+        0.3972,
+        0.5776,
+        0.4124,
+        0.6033
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "linear_marker",
+      "craft_group": "organic_stamen_filament_thread",
+      "craft_source": null
+    },
+    {
+      "name": "organic_stamen_filament_thread_06",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.04500000178813934,
+        -0.7700000405311584,
+        1.434999942779541
+      ],
+      "world_location": [
+        0.04500000178813934,
+        -0.7700000405311584,
+        1.434999942779541
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.012000000104308128,
+        0.10999999195337296,
+        0.011999999172985554
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0004,
+      "screen_bbox": [
+        0.4161,
+        0.5948,
+        0.4309,
+        0.6202
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "linear_marker",
+      "craft_group": "organic_stamen_filament_thread",
+      "craft_source": null
+    },
+    {
+      "name": "organic_stamen_filament_thread_07",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.09000000357627869,
+        -0.7520000338554382,
+        1.459999918937683
+      ],
+      "world_location": [
+        0.09000000357627869,
+        -0.7520000338554382,
+        1.459999918937683
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.012000000104308128,
+        0.10999999195337296,
+        0.011999999172985554
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0004,
+      "screen_bbox": [
+        0.435,
+        0.6121,
+        0.4494,
+        0.637
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "linear_marker",
+      "craft_group": "organic_stamen_filament_thread",
+      "craft_source": null
+    },
+    {
+      "name": "organic_stamen_filament_thread_08",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.13499999046325684,
+        -0.734000027179718,
+        1.4849998950958252
+      ],
+      "world_location": [
+        0.13499999046325684,
+        -0.734000027179718,
+        1.4849998950958252
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.012000000104308128,
+        0.10999999195337296,
+        0.011999999172985554
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0003,
+      "screen_bbox": [
+        0.454,
+        0.6294,
+        0.468,
+        0.654
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "linear_marker",
+      "craft_group": "organic_stamen_filament_thread",
+      "craft_source": null
+    },
+    {
+      "name": "organic_stamen_filament_thread_09",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "pollen_gold_detail"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.18000000715255737,
+        -0.7160000205039978,
+        1.5099999904632568
+      ],
+      "world_location": [
+        0.18000000715255737,
+        -0.7160000205039978,
+        1.5099999904632568
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.012000000104308128,
+        0.10999999195337296,
+        0.011999999172985554
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0003,
+      "screen_bbox": [
+        0.473,
+        0.6467,
+        0.4867,
+        0.6709
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "linear_marker",
+      "craft_group": "organic_stamen_filament_thread",
+      "craft_source": null
+    },
+    {
+      "name": "stem_curved_base",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 34,
+      "verts": 64,
+      "materials": [
+        "stem_green_wave"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0,
+        0.18000000715255737,
+        0.36000001430511475
+      ],
+      "world_location": [
+        0.0,
+        0.18000000715255737,
+        0.36000001430511475
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.1469999998807907,
+        0.1469999998807907,
+        0.3569999933242798
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0097,
+      "screen_bbox": [
+        0.5233,
+        0.0,
+        0.5856,
+        0.1561
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "dew_drop_front_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "dew_clear_gloss"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.23999999463558197,
+        -0.5799999833106995,
+        1.340000033378601
+      ],
+      "world_location": [
+        -0.23999999463558197,
+        -0.5799999833106995,
+        1.340000033378601
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.10999995470046997,
+        0.10999996960163116,
+        0.10999999940395355
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0045,
+      "screen_bbox": [
+        0.3364,
+        0.5222,
+        0.3917,
+        0.603
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "dew_drop_front_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "dew_clear_gloss"
+      ],
+      "modifiers": [],
+      "location": [
+        0.25,
+        -0.5400000214576721,
+        1.1799999475479126
+      ],
+      "world_location": [
+        0.25,
+        -0.5400000214576721,
+        1.1799999475479126
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.07999996840953827,
+        0.07999998331069946,
+        0.07999999821186066
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0025,
+      "screen_bbox": [
+        0.5129,
+        0.4128,
+        0.5528,
+        0.4758
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "dew_drop_top_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "dew_clear_gloss"
+      ],
+      "modifiers": [],
+      "location": [
+        0.05999999865889549,
+        -0.2800000011920929,
+        1.7599999904632568
+      ],
+      "world_location": [
+        0.05999999865889549,
+        -0.2800000011920929,
+        1.7599999904632568
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.06999999284744263,
+        0.06999999284744263,
+        0.07000000029802322
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0015,
+      "screen_bbox": [
+        0.4931,
+        0.8154,
+        0.5265,
+        0.8611
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "soft_studio_floor",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 1,
+      "verts": 4,
+      "materials": [
+        "soft_floor_matte"
+      ],
+      "modifiers": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        14.0,
+        14.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 1.0,
+      "screen_bbox": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    }
+  ],
+  "materials": [
+    {
+      "name": "dew_clear_gloss",
+      "metallic": 0.0,
+      "roughness": 0.03999999910593033,
+      "node_count": 2,
+      "link_count": 1,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF"
+      ],
+      "users": 3,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "fold_highlight_warm",
+      "metallic": 0.0,
+      "roughness": 0.699999988079071,
+      "node_count": 4,
+      "link_count": 3,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF",
+        "NG_fold_highlight_warm_Noise",
+        "NG_fold_highlight_warm_Bump"
+      ],
+      "users": 46,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "noise_bump",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "leaf_soft_green",
+      "metallic": 0.0,
+      "roughness": 0.6200000047683716,
+      "node_count": 4,
+      "link_count": 3,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF",
+        "NG_leaf_soft_green_Noise",
+        "NG_leaf_soft_green_Bump"
+      ],
+      "users": 8,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "noise_bump",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "organic_body_skin",
+      "metallic": 0.0,
+      "roughness": 0.6800000071525574,
+      "node_count": 6,
+      "link_count": 5,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF",
+        "NG_organic_body_skin_Noise",
+        "NG_organic_body_skin_Bump",
+        "NG_organic_body_skin_RampNoise",
+        "NG_organic_body_skin_ColorRamp"
+      ],
+      "users": 1,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "noise_bump,noise_color_ramp",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "petal_gradient_soft",
+      "metallic": 0.0,
+      "roughness": 0.7200000286102295,
+      "node_count": 6,
+      "link_count": 5,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF",
+        "NG_petal_gradient_soft_Noise",
+        "NG_petal_gradient_soft_Bump",
+        "NG_petal_gradient_soft_RampNoise",
+        "NG_petal_gradient_soft_ColorRamp"
+      ],
+      "users": 35,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "noise_bump,noise_color_ramp",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "pollen_gold_detail",
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "node_count": 2,
+      "link_count": 1,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF"
+      ],
+      "users": 19,
+      "has_emission": true,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "pollen_warm_soft",
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "node_count": 2,
+      "link_count": 1,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF"
+      ],
+      "users": 6,
+      "has_emission": true,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "soft_floor_matte",
+      "metallic": 0.0,
+      "roughness": 0.7400000095367432,
+      "node_count": 2,
+      "link_count": 1,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF"
+      ],
+      "users": 1,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "stem_green_wave",
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "node_count": 4,
+      "link_count": 3,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF",
+        "NG_stem_green_wave_Wave",
+        "NG_stem_green_wave_WaveBump"
+      ],
+      "users": 1,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "wave_bump",
+      "image_texture_roles": ""
+    }
+  ],
+  "lights": [
+    {
+      "name": "large_soft_key",
+      "type": "AREA",
+      "energy": 980.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "soft_front_fill",
+      "type": "AREA",
+      "energy": 240.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "warm_edge_soft",
+      "type": "AREA",
+      "energy": 210.0,
+      "color": [
+        1.0,
+        0.7799999713897705,
+        0.5799999833106995
+      ]
+    }
+  ],
+  "active_camera": {
+    "name": "camera_organic_macro",
+    "lens_mm": 64.0,
+    "dof": true,
+    "focus_target": "organic_fluted_soft_body",
+    "inside_geometry": false,
+    "clip_end": 1000.0
+  },
+  "cameras": [
+    "camera_organic_macro"
+  ],
+  "node_groups": [],
+  "geometry_nodes": [],
+  "particles": [],
+  "animation": {
+    "has_action": false,
+    "frame_start": 1,
+    "frame_end": 250,
+    "fps": 24,
+    "keyframed_objects": [],
+    "markers": [],
+    "camera_animated": false,
+    "sampled_objects": [],
+    "moving_object_count": 0
+  },
+  "compositor": {
+    "use_nodes": false,
+    "node_names": [],
+    "raw_render_saved": true
+  },
+  "render": {
+    "engine": "BLENDER_EEVEE",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "samples": 64,
+    "volumetric": false,
+    "view_transform": "AgX"
+  },
+  "metadata": {
+    "blender_cinematic_skill_version": "0.1",
+    "task_id": "bench_organic_soft_surface",
+    "quality_profile": "balanced",
+    "final_camera": "camera_organic_macro",
+    "camera_preset": "macro_product",
+    "camera_subject_screen_coverage": 0.6,
+    "camera_safe_margin": 0.08
+  },
+  "camera_path_json": null,
+  "missing_files": []
+}

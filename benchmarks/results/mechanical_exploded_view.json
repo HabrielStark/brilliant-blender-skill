@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 5.7,
+    "runtime_seconds": 6.2,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
@@ -650,110 +650,5 @@
     "palette_similarity": null,
     "animation_frame_proof": null,
     "failures": []
-  },
-  "baseline_no_skill": {
-    "task_id": "mechanical_exploded_view",
-    "mode": "baseline_no_skill",
-    "pass": false,
-    "visual_score": 29,
-    "technical_score": 50,
-    "runtime_seconds": 3.5,
-    "iterations": 1,
-    "artifacts": [
-      null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\mechanical_exploded_view_baseline_no_skill\\final\\export_final.glb"
-    ],
-    "visual_style_tags": [
-      "missing_preview"
-    ],
-    "readability": null,
-    "reference_metrics": null,
-    "palette_similarity": null,
-    "animation_frame_proof": null,
-    "failures": [
-      "no active camera",
-      "no meaningful lighting",
-      "object has default/auto name: 'Cylinder'",
-      "no active camera in scene",
-      "scene has no lights and no world illumination",
-      "important object has no material: Cylinder",
-      "important object has no material: Cylinder2",
-      "pipeline failed: pipeline_incomplete",
-      "score 29 < min 84",
-      "subject objects 2 < min 52",
-      "visible subject objects 0 < min 46",
-      "subject depth layers 2 < min 5",
-      "missing named subject parts: case, battery, board, screw, post, trace, contact, axis, chip, connector, gasket, spring, washer, ribbon, callout, cutaway, arrow, spacer",
-      "subject faces 68 < min 2600",
-      "subject modifiers 0 < min 36",
-      "craft detail objects 0 < min 22",
-      "missing craft roles: curve_tube, decal_plane, fastener, panel_cutline, text_label",
-      "subject materials 0 < min 8",
-      "subject material node count 0 < min 5",
-      "subject procedural materials 0 < min 2",
-      "missing subject material features: noise_bump, noise_color_ramp, wave_bump"
-    ]
-  },
-  "adversarial_slop_1": {
-    "task_id": "mechanical_exploded_view",
-    "mode": "adversarial_slop_1",
-    "pass": false,
-    "visual_score": 79,
-    "technical_score": 100,
-    "runtime_seconds": 4.9,
-    "iterations": 1,
-    "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\mechanical_exploded_view_adversarial_slop_1\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\mechanical_exploded_view_adversarial_slop_1\\final\\export_final.glb"
-    ],
-    "visual_style_tags": [
-      "very_dark"
-    ],
-    "readability": {
-      "parts": [
-        {
-          "name": "case_battery_board_screw_post_trace_contact_axis_chip_connector_gasket_spring_washer_ribbon_callout_cutaway",
-          "contrast": 0.0684,
-          "edge_density": 0.0006,
-          "separation": 0.044,
-          "mean_luma": 0.123,
-          "surround_luma": 0.1669,
-          "readable": true
-        },
-        {
-          "name": "case_battery_board_screw_post_trace_contact_axis_chip_connector_gasket_spring_washer_ribbon_callout_cutaway_top",
-          "contrast": 0.0692,
-          "edge_density": 0.0,
-          "separation": 0.0396,
-          "mean_luma": 0.1294,
-          "surround_luma": 0.1689,
-          "readable": true
-        }
-      ],
-      "measured_parts": 2,
-      "readable_parts": 2,
-      "unreadable_parts": []
-    },
-    "reference_metrics": null,
-    "palette_similarity": null,
-    "animation_frame_proof": null,
-    "failures": [
-      "render has no discernible silhouette/detail",
-      "render is too flat for visual acceptance",
-      "forbidden visual style tags present: very_dark",
-      "score 79 < min 84",
-      "subject objects 2 < min 52",
-      "visible subject objects 2 < min 46",
-      "subject depth layers 2 < min 5",
-      "missing named subject parts: arrow, spacer",
-      "subject faces 68 < min 2600",
-      "subject modifiers 0 < min 36",
-      "craft detail objects 0 < min 22",
-      "missing craft roles: curve_tube, decal_plane, fastener, panel_cutline, text_label",
-      "subject materials 1 < min 8",
-      "subject material node count 2 < min 5",
-      "subject procedural materials 0 < min 2",
-      "missing subject material features: noise_bump, noise_color_ramp, wave_bump"
-    ]
   }
 }
