@@ -84,8 +84,10 @@ not acceptable evidence for production-grade reference fidelity.
   (re-aim at the subject centroid, escalating `pull_back`) and/or
   `adjust_world` (strength scale) — then re-renders, re-inspects, re-exports,
   and re-scores. Max 2 repair rounds; `iterations` and `repair_history` are
-  recorded in the result. Baseline and adversarial modes never repair — they
-  must keep failing honestly.
+  recorded in the result. Every result also carries `diagnoses` — the
+  critique layer's ordered, op-ready analysis of the final render state —
+  so failures explain *what to fix*, not just *what failed*. Baseline and
+  adversarial modes never repair — they must keep failing honestly.
 - `baseline_no_skill` (`--baseline`) runs the task's naive recipe: bare
   primitives, no camera/lights/materials. It should fail for contrast.
 - `adversarial_slop_*` (`--baseline` when a task defines

@@ -15,7 +15,8 @@ from blender_cinematic import runner
 from blender_cinematic.budget import compute_budget
 from blender_cinematic.evaluation import score_iteration
 from blender_cinematic.glb import validate_glb
-from blender_cinematic.imaging import image_sanity
+from blender_cinematic.critique import diagnose
+from blender_cinematic.imaging import image_sanity, subject_readability_report
 from blender_cinematic.linters import lint_scene
 from blender_cinematic.preflight import collect_hardware_report
 from blender_cinematic.recipes import estimate_complexity, validate_recipe
@@ -231,6 +232,34 @@ def h_evaluate_preview(ctx: ServerContext, image_path: str, inspection: dict | N
     return {"ok": True, "metrics": metrics, "evaluation": ev.to_dict()}
 
 
+@_safe
+def h_scene_critique(ctx: ServerContext, inspection: dict, image_path: str | None = None,
+                     reference_path: str | None = None,
+                     task_id: str | None = None) -> dict:
+    """scene.critique — prioritized diagnoses with suggested repair ops.
+
+    Turns inspection + render metrics into "what is wrong and which op to try
+    next". Pass the latest scene.inspect result plus a rendered preview path;
+    pass reference_path for reference-match direction (brighter/darker, which
+    way to shift the composition).
+    """
+    img = None
+    readability = None
+    if image_path:
+        p = ctx.resolver.resolve(Path(image_path))
+        img = image_sanity(p)
+        readability = subject_readability_report(p, inspection.get("objects", []))
+    ref = ctx.resolver.resolve(Path(reference_path)) if reference_path else None
+    render = ctx.resolver.resolve(Path(image_path)) if image_path else None
+    manifest = _load_manifest(ctx, task_id) if task_id else None
+    lint = lint_scene(inspection, manifest)
+    diags = diagnose(inspection, image_metrics=img, render_path=render,
+                     reference_path=ref, readability_report=readability,
+                     lint=lint)
+    return {"ok": True, "diagnoses": diags,
+            "readability": readability, "metrics": img}
+
+
 # -------------------------------- export / web ----------------------------- #
 @_safe
 def h_export_glb(ctx: ServerContext, task_id: str) -> dict:
@@ -287,6 +316,7 @@ HANDLERS = {
     "scene_execute_python_safe": h_scene_execute_python_safe,
     "evaluate_scene_lint": h_evaluate_scene_lint,
     "evaluate_preview": h_evaluate_preview,
+    "scene_critique": h_scene_critique,
     "camera_plan_and_create": h_camera_plan_and_create,
     "lighting_create_setup": h_lighting_create_setup,
     "material_create_pbr": h_material_create_pbr,

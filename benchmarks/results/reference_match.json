@@ -5,12 +5,12 @@
     "pass": true,
     "visual_score": 98,
     "technical_score": 100,
-    "runtime_seconds": 9.9,
+    "runtime_seconds": 5.2,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\reference_match_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\reference_match_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark",
@@ -196,6 +196,133 @@
     },
     "palette_similarity": 0.9595358525332613,
     "animation_frame_proof": null,
-    "failures": []
+    "failures": [],
+    "diagnoses": [
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'body_side_thickness_right_visible_face' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_body_side_thickness_righ",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                2.573999905586243,
+                -1.8600000143051147,
+                1.9599999785423279
+              ],
+              "look_at": [
+                1.1699999570846558,
+                -0.36000001430511475,
+                0.9599999785423279
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'side_groove_shadow_cut_right' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_side_groove_shadow_cut_r",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                2.595999884605408,
+                -1.5599999986588955,
+                2.059999942779541
+              ],
+              "look_at": [
+                1.1799999475479126,
+                -0.05999999865889549,
+                1.059999942779541
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'bottom_contact_shadow_layer' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_bottom_contact_shadow_la",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                0.0,
+                -1.7000000029802322,
+                1.3400000035762787
+              ],
+              "look_at": [
+                0.0,
+                -0.20000000298023224,
+                0.3400000035762787
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'body_right_bevel_catch_plane' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_body_right_bevel_catch_p",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                2.3760000944137576,
+                -2.0799999833106995,
+                2.0
+              ],
+              "look_at": [
+                1.0800000429153442,
+                -0.5799999833106995,
+                1.0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "ref.saliency_center",
+        "problem": "salient mass sits off the reference centroid \u2014 lower the subject in frame (shift look_at up, right)",
+        "evidence": "ours=(0.50,0.61) ref=(0.52,0.70)",
+        "ops": [
+          {
+            "op": "reframe_camera",
+            "look_at": [
+              -0.257,
+              -0.455,
+              1.065
+            ],
+            "pull_back": 1.0
+          }
+        ]
+      }
+    ]
   }
 }

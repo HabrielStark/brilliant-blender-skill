@@ -5,12 +5,12 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 12.5,
+    "runtime_seconds": 9.1,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\turntable_animation_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\turntable_animation_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\turntable_animation_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\turntable_animation_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
@@ -394,22 +394,22 @@
     "animation_frame_proof": {
       "frame_count": 3,
       "frames": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png"
       ],
       "pairs": [
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0001.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
           "mean_rgb_delta": 0.08028322458267212,
           "max_rgb_delta": 0.7098039388656616,
           "mean_luma_delta": 0.07874190807342529,
           "changed_pixel_ratio": 0.3568827160493827
         },
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\turntable_animation_skill_plus_tools\\iterations\\animation_frame_0120.png",
           "mean_rgb_delta": 0.08028152585029602,
           "max_rgb_delta": 0.7098039388656616,
           "mean_luma_delta": 0.07873925566673279,
@@ -424,6 +424,143 @@
         120
       ]
     },
-    "failures": []
+    "failures": [],
+    "diagnoses": [
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'product_front_brand_glyph_center' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_product_front_brand_glyp",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                0.0,
+                -2.5850000381469727,
+                1.6850000023841858
+              ],
+              "look_at": [
+                0.0,
+                -1.0850000381469727,
+                0.6850000023841858
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'rear_cooling_fin_03' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_rear_cooling_fin_03",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                -0.528000020980835,
+                -0.6399999856948853,
+                1.6800000071525574
+              ],
+              "look_at": [
+                -0.24000000953674316,
+                0.8600000143051147,
+                0.6800000071525574
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'rear_cooling_fin_04' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_rear_cooling_fin_04",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                -0.1760000288486481,
+                -0.6399999856948853,
+                1.6800000071525574
+              ],
+              "look_at": [
+                -0.08000001311302185,
+                0.8600000143051147,
+                0.6800000071525574
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'rear_cooling_fin_05' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_rear_cooling_fin_05",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                0.17599996328353884,
+                -0.6399999856948853,
+                1.6800000071525574
+              ],
+              "look_at": [
+                0.07999998331069946,
+                0.8600000143051147,
+                0.6800000071525574
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'rear_cooling_fin_06' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_rear_cooling_fin_06",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                0.5279998898506165,
+                -0.6399999856948853,
+                1.6800000071525574
+              ],
+              "look_at": [
+                0.2399999499320984,
+                0.8600000143051147,
+                0.6800000071525574
+              ]
+            }
+          }
+        ]
+      }
+    ]
   }
 }

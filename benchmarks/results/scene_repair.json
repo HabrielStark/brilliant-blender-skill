@@ -5,12 +5,12 @@
     "pass": true,
     "visual_score": 99,
     "technical_score": 100,
-    "runtime_seconds": 7.3,
+    "runtime_seconds": 5.1,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\scene_repair_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\scene_repair_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\scene_repair_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\scene_repair_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "warm_red_bias"
@@ -407,6 +407,89 @@
     "reference_metrics": null,
     "palette_similarity": 0.8853192548093585,
     "animation_frame_proof": null,
-    "failures": []
+    "failures": [],
+    "diagnoses": [
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'repaired_base_screw_02' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_repaired_base_screw_02",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                1.4479944229125978,
+                -1.1200000047683716,
+                1.6600000262260437
+              ],
+              "look_at": [
+                0.6581792831420898,
+                0.3799999952316284,
+                0.6600000262260437
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'repaired_base_screw_05' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_repaired_base_screw_05",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                -1.4479944229125978,
+                -1.8799999952316284,
+                1.6600000262260437
+              ],
+              "look_at": [
+                -0.6581792831420898,
+                -0.3799999952316284,
+                0.6600000262260437
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'repaired_base_screw_06' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_repaired_base_screw_06",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                -1.4479944229125978,
+                -1.1200000047683716,
+                1.6600000262260437
+              ],
+              "look_at": [
+                -0.6581792831420898,
+                0.3799999952316284,
+                0.6600000262260437
+              ]
+            }
+          }
+        ]
+      }
+    ]
   }
 }

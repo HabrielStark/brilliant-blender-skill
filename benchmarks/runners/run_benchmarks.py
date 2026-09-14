@@ -19,6 +19,7 @@ sys.path.insert(0, str(ROOT))
 
 from blender_cinematic import runner
 from blender_cinematic.budget import compute_budget
+from blender_cinematic.critique import diagnose
 from blender_cinematic.evaluation import score_iteration
 from blender_cinematic.glb import validate_glb
 from blender_cinematic.imaging import (
@@ -1115,6 +1116,15 @@ def run_recipe(task, recipe, mode, blender_exe, out_root):
             break
         insp, preview = insp2, preview2
     technical = max(0, 100 - 10 * len(lint.errors))
+    diagnoses = diagnose(
+        insp,
+        image_metrics=metrics if preview.exists() else None,
+        render_path=preview if preview.exists() else None,
+        reference_path=reference_path
+        if (reference_path and reference_path.exists()) else None,
+        readability_report=readability,
+        lint=lint,
+    ) if insp else []
     return {
         "task_id": task["id"], "mode": mode,
         "pass": not failures and not ev.hard_fail,
@@ -1129,6 +1139,7 @@ def run_recipe(task, recipe, mode, blender_exe, out_root):
         "palette_similarity": palette_similarity_value,
         "animation_frame_proof": animation_frame_proof,
         "failures": failures,
+        "diagnoses": diagnoses,
     }
 
 

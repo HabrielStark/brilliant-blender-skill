@@ -900,3 +900,55 @@ def test_subject_screen_coverage_drives_camera_distance(blender_exe, tmp_path):
     bb = cube["screen_bbox"]
     extent = max(bb[2] - bb[0], bb[3] - bb[1])
     assert extent == pytest.approx(0.55, abs=0.06)
+
+
+def test_adjust_ops_patch_lights_materials_and_expose_world(blender_exe, tmp_path):
+    """adjust_light / adjust_material must mutate the live scene — these are
+    the levers the critique layer emits — and the inspector must report
+    world + base_color so diagnoses can fire."""
+    _, base = task_workspace(tmp_path, "adjust_ops")
+    blend = base / "final" / "scene.blend"
+    recipe = {"operations": [
+        {"op": "ensure_standard_collections"},
+        {"op": "adjust_world", "strength": 0.4},
+        {"op": "create_mesh_primitive", "type": "cube", "name": "adj_cube",
+         "size": 1.0, "location": [0, 0, 0.5], "collection": "SUBJECT"},
+        {"op": "create_material", "schema": {"name": "adj_body",
+            "preset": "glossy_plastic",
+            "pbr": {"base_color": [0.9, 0.2, 0.1, 1.0], "metallic": 0.0,
+                    "roughness": 0.3},
+            "target_objects": ["adj_cube"]}},
+        {"op": "add_light", "schema": {"name": "adj_key", "type": "AREA",
+            "power": 200, "size": 2.0, "location": [3, -3, 4]}},
+        # the actual adjustments under test:
+        {"op": "adjust_light", "name": "adj_key", "power_scale": 0.5,
+         "look_at": [0, 0, 0.5]},
+        {"op": "adjust_material", "material": "adj_body",
+         "pbr": {"metallic": 0.9, "base_color": [0.02, 0.02, 0.03, 1.0]}},
+        {"op": "create_camera", "schema": {"camera_name": "camera_adj",
+            "target": "adj_cube", "location": [0, -6, 1.5]}},
+        {"op": "set_scene_metadata", "data": {"final_camera": "camera_adj"}},
+    ]}
+    res = runner.run_job(runner.build_job(
+        "full_pipeline", base, blend, budget=PREVIEW_BUDGET, recipe=recipe),
+        blender_exe, 300)
+    assert res["ok"], res
+    insp = runner.run_job(runner.build_job("inspect", base, blend),
+                          blender_exe, 120)["inspection"]
+    light = next(l for l in insp["lights"] if l["name"] == "adj_key")
+    assert light["energy"] == pytest.approx(100.0, rel=0.01)
+    # aimed at the cube: rotate the light's -Z axis by the reported euler and
+    # check it points from (3,-3,4) to (0,0,0.5) -> direction (-3,3,-3.5)
+    x, y, z = light["rotation"]
+    vx = -math.sin(y) * math.cos(x) * math.cos(z) - math.sin(x) * math.sin(z)
+    vy = -math.sin(z) * math.sin(y) * math.cos(x) + math.cos(z) * math.sin(x)
+    vz = -math.cos(y) * math.cos(x)
+    n = math.sqrt(3 ** 2 + 3 ** 2 + 3.5 ** 2)
+    assert vx == pytest.approx(-3 / n, abs=0.02)
+    assert vy == pytest.approx(3 / n, abs=0.02)
+    assert vz == pytest.approx(-3.5 / n, abs=0.02)
+    mat = next(m for m in insp["materials"] if m["name"] == "adj_body")
+    assert mat["metallic"] == pytest.approx(0.9, abs=0.01)
+    assert mat["base_color"][0] == pytest.approx(0.02, abs=0.01)
+    assert insp["world"] is not None
+    assert insp["world"]["strength"] == pytest.approx(0.4, abs=0.01)

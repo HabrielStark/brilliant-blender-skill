@@ -708,6 +708,81 @@ def op_add_light(p):
     return {"light": obj.name}
 
 
+def op_adjust_light(p):
+    """Patch an existing light: energy/color/size/location/aim without a
+    rig rebuild. ``power_scale`` multiplies the current energy."""
+    obj = bpyutil.get_object(p["name"])
+    if not obj or obj.type != "LIGHT":
+        return {"error": f"light not found: {p['name']}"}
+    ld = obj.data
+    if p.get("power") is not None:
+        ld.energy = float(p["power"])
+    elif p.get("power_scale") is not None:
+        ld.energy = max(0.0, ld.energy * float(p["power_scale"]))
+    if p.get("color") is not None:
+        ld.color = tuple(p["color"])[:3]
+    if p.get("size") is not None and hasattr(ld, "size"):
+        ld.size = float(p["size"])
+    if p.get("location") is not None:
+        obj.location = Vector(p["location"])
+    look = p.get("look_at")
+    tname = p.get("target")
+    if not look and tname:
+        tobj = bpyutil.get_object(tname)
+        if tobj is not None:
+            look = list(tobj.location)
+    if look:
+        direction = Vector(look) - obj.location
+        if direction.length > 1e-6:
+            obj.rotation_euler = direction.to_track_quat("-Z", "Y").to_euler()
+    return {"light": obj.name, "energy": ld.energy,
+            "location": [round(v, 4) for v in obj.location]}
+
+
+_MATERIAL_PBR_INPUTS = [
+    ("base_color", ["Base Color"], "color"),
+    ("metallic", ["Metallic"], "float"),
+    ("roughness", ["Roughness"], "float"),
+    ("alpha", ["Alpha"], "float"),
+    ("ior", ["IOR"], "float"),
+    ("clearcoat", ["Coat Weight", "Clearcoat"], "float"),
+    ("sheen", ["Sheen Weight", "Sheen"], "float"),
+    ("subsurface", ["Subsurface Weight", "Subsurface"], "float"),
+    ("transmission", ["Transmission Weight", "Transmission"], "float"),
+    ("emission_strength", ["Emission Strength"], "float"),
+    ("emission_color", ["Emission Color", "Emission"], "color"),
+]
+
+
+def op_adjust_material(p):
+    """Patch Principled BSDF inputs on an existing material (by ``material``
+    name or the first material slot of ``target``). Only keys present in
+    ``pbr`` are touched."""
+    mat = bpy.data.materials.get(p["material"]) if p.get("material") else None
+    if mat is None and p.get("target"):
+        obj = bpyutil.get_object(p["target"])
+        if obj is not None and getattr(obj.data, "materials", None) and obj.data.materials:
+            mat = obj.data.materials[0]
+    if mat is None or not mat.use_nodes:
+        return {"error": "material not found"}
+    bsdf = next((n for n in mat.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None)
+    if bsdf is None:
+        return {"error": f"material {mat.name} has no Principled BSDF"}
+    pbr = p.get("pbr") or {}
+    changed = []
+    for key, names, kind in _MATERIAL_PBR_INPUTS:
+        if key not in pbr:
+            continue
+        v = pbr[key]
+        if kind == "color":
+            v = tuple(float(c) for c in v[:3]) + (1.0,)
+        else:
+            v = float(v)
+        _set_input(bsdf, names, v)
+        changed.append(key)
+    return {"material": mat.name, "changed": changed}
+
+
 def op_create_lighting_rig(p):
     schema = p["schema"]
     made = [_make_light(light).name for light in schema.get("lights", [])]
@@ -2626,6 +2701,8 @@ BUILDERS = {
     "add_constraint": op_add_constraint,
     "reframe_camera": op_reframe_camera,
     "adjust_world": op_adjust_world,
+    "adjust_light": op_adjust_light,
+    "adjust_material": op_adjust_material,
 }
 
 

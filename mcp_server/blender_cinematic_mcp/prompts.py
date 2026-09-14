@@ -11,7 +11,14 @@ from .security import ServerContext
 _COMMON = (
     "Follow SKILL.md strictly. Classify -> manifest -> preflight -> budget -> plan -> "
     "blockout -> preview -> critique -> refine -> final (only after hard checks pass) -> "
-    "validate -> report. Never claim done without artifact paths and an inspected preview."
+    "validate -> report. Never claim done without artifact paths and an inspected preview.\n\n"
+    "Critique loop: after every preview call scene_critique with the latest "
+    "scene.inspect result and the preview path (add reference_path when matching "
+    "a reference). Each diagnosis carries suggested ops — apply the top fail "
+    "diagnosis via scene_apply_recipe, re-render, re-critique. Repeat until no "
+    "fail-severity diagnoses remain or the iteration budget is spent. Do not "
+    "guess at fixes the critique did not suggest; if its suggested op fails, "
+    "pick the next diagnosis rather than retrying the same op."
 )
 
 

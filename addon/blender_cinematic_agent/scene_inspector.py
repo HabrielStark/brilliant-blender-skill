@@ -246,10 +246,13 @@ def inspect_scene():
         node_names = [n.name for n in (mat.node_tree.nodes if mat.use_nodes else [])]
         declared_fallback = bool(mat.get("bcas_fallback"))
         web_safe_flag = bool(mat.get("bcas_web_safe", not transmission))
+        base = _inp(bsdf, ["Base Color"], None) if bsdf else None
         materials.append({
             "name": mat.name,
             "metallic": float(_inp(bsdf, ["Metallic"], 0.0) or 0.0) if bsdf else 0.0,
             "roughness": float(_inp(bsdf, ["Roughness"], 0.5) or 0.5) if bsdf else 0.5,
+            "base_color": [round(float(c), 4) for c in base[:3]] if base else None,
+            "emission_strength": float(_inp(bsdf, ["Emission Strength"], 0.0) or 0.0) if bsdf else 0.0,
             "node_count": len(mat.node_tree.nodes) if mat.use_nodes else 0,
             "link_count": len(mat.node_tree.links) if mat.use_nodes else 0,
             "node_names": node_names,
@@ -275,6 +278,9 @@ def inspect_scene():
         active_camera = {
             "name": cam.name,
             "lens_mm": cam.data.lens,
+            "location": [round(v, 4) for v in cam.location],
+            "rotation": [round(v, 4) for v in cam.rotation_euler],
+            "sensor_width": float(cam.data.sensor_width),
             "dof": bool(cam.data.dof.use_dof),
             "focus_target": cam.data.dof.focus_object.name if cam.data.dof.focus_object else None,
             "inside_geometry": False,
@@ -320,6 +326,16 @@ def inspect_scene():
     comp_uses = bool(getattr(scene, "use_nodes", False)) and comp_tree is not None
     comp_names = [n.name for n in comp_tree.nodes] if comp_uses else []
 
+    world = None
+    w = scene.world
+    if w is not None and w.use_nodes:
+        bgn = w.node_tree.nodes.get("Background")
+        if bgn is not None:
+            world = {
+                "color": [round(float(c), 4) for c in bgn.inputs[0].default_value[:3]],
+                "strength": float(bgn.inputs[1].default_value),
+            }
+
     return {
         "schema": "scene_inspection/0.1",
         "collections": [c.name for c in bpy.data.collections],
@@ -328,6 +344,7 @@ def inspect_scene():
         "lights": lights,
         "active_camera": active_camera,
         "cameras": [o.name for o in scene.objects if o.type == "CAMERA"],
+        "world": world,
         "node_groups": [ng.name for ng in bpy.data.node_groups],
         "geometry_nodes": geometry_nodes,
         "particles": [

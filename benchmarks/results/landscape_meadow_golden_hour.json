@@ -5,12 +5,12 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 5.6,
+    "runtime_seconds": 5.4,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\landscape_meadow_golden_hour_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\landscape_meadow_golden_hour_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\landscape_meadow_golden_hour_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\landscape_meadow_golden_hour_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "warm_red_bias"
@@ -684,6 +684,35 @@
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
-    "failures": []
+    "failures": [],
+    "diagnoses": [
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'path_stone_step_03' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_path_stone_step_03",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                0.923999971151352,
+                -2.050000011920929,
+                1.280000001192093
+              ],
+              "look_at": [
+                0.41999998688697815,
+                -0.550000011920929,
+                0.2800000011920929
+              ]
+            }
+          }
+        ]
+      }
+    ]
   }
 }

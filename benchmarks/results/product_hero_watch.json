@@ -5,12 +5,12 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 7.2,
+    "runtime_seconds": 5.3,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
@@ -367,6 +367,28 @@
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
-    "failures": []
+    "failures": [],
+    "diagnoses": [
+      {
+        "severity": "warn",
+        "code": "material.metal_void",
+        "problem": "material 'brushed_black_titanium' is near-black fully-metallic in a dark world \u2014 a mirror with nothing to reflect renders as a void",
+        "evidence": "metallic=1.0 base=[0.02, 0.022, 0.026] world_strength=0.3499999940395355",
+        "ops": [
+          {
+            "op": "adjust_material",
+            "material": "brushed_black_titanium",
+            "pbr": {
+              "metallic": 0.7,
+              "roughness": 0.35
+            }
+          },
+          {
+            "op": "adjust_world",
+            "strength_scale": 1.5
+          }
+        ]
+      }
+    ]
   }
 }

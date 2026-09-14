@@ -101,6 +101,17 @@ OPERATION_SPECS: dict[str, dict] = {
         {},
         {"color": list, "strength": (int, float), "strength_scale": (int, float)},
     ),
+    "adjust_light": _spec(
+        {"name": str},
+        {"power": (int, float), "power_scale": (int, float), "color": list,
+         "location": list, "size": (int, float), "look_at": list, "target": str},
+        "lighting",
+    ),
+    "adjust_material": _spec(
+        {},
+        {"material": str, "target": str, "pbr": dict},
+        "material",
+    ),
     "create_procedural_texture": _spec(
         {"name": str},
         {

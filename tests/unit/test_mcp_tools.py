@@ -70,3 +70,28 @@ def test_web_validate_glb_tool_handles_missing(ctx, tmp_path):
     res = T.h_web_validate_glb(ctx, str(tmp_path / "nope.glb"))
     assert res["ok"] is False        # missing file -> invalid
     assert res["errors"]             # reports parse failure
+
+
+def test_scene_critique_tool_returns_op_ready_diagnoses(ctx, tmp_path):
+    """The critique handler must translate a render + inspection into
+    ordered diagnoses with suggested ops — not just raw numbers."""
+    import numpy as np
+    from PIL import Image
+    # near-black render: the classic "black slab" defect
+    arr = np.full((64, 64, 4), 8, dtype=np.uint8)
+    arr[..., 3] = 255
+    p = tmp_path / "preview.png"
+    Image.fromarray(arr, "RGBA").save(p)
+    inspection = {"objects": [
+        {"name": "hero", "collection": "SUBJECT", "in_camera_frame": True,
+         "screen_coverage": 0.4, "world_location": [0, 0, 0.5],
+         "screen_bbox": [0.3, 0.3, 0.7, 0.7]},
+    ], "materials": [], "world": {"strength": 0.05}}
+    res = T.h_scene_critique(ctx, inspection, image_path=str(p))
+    assert res["ok"] and res["diagnoses"]
+    top = res["diagnoses"][0]
+    assert top["severity"] == "fail"
+    assert top["ops"] and all("op" in o for o in top["ops"])
+    # suggested ops must be real allowlisted operations, not advice
+    from blender_cinematic.recipes import validate_recipe
+    assert validate_recipe({"operations": top["ops"]}).passed

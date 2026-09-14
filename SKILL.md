@@ -228,11 +228,18 @@ state. Preserve the last valid artifacts and state the exact next decision.
    have several smooth curved subject objects, not one smooth glass object in a
    field of faceted defaults.
 10. **Capture a preview** after every significant change (preview engine + low res).
-11. **Inspect the actual preview**, not your plan. List 5 concrete visual defects and
-   up to 3 technical defects (`scripts/visual_eval.py`, `scripts/scene_lint.py`).
-   Cross-check the inspection JSON: every important `SUBJECT` part must have
-   `in_camera_frame=true`; hero mesh normals must be clean; glass/metal edges must
-   have bevel/weighted-normal support. A high numeric score is not enough if any
+11. **Critique the actual preview**, not your plan. Call `scene_critique` with the
+   latest `scene_inspect` result and the preview path (plus `reference_path`
+   when matching a reference): it returns ordered diagnoses — crushed blacks,
+   offscreen subjects, metal-void materials, unreadable parts, reference
+   brightness/contrast/saliency direction — each with suggested repair ops
+   (`adjust_world`, `adjust_light`, `adjust_material`, `reframe_camera`,
+   `add_light`, `apply_post`). Apply the top fail diagnosis via
+   `scene_apply_recipe`, re-render, re-critique; do not invent fixes the
+   critique did not suggest. Cross-check the inspection JSON too: every
+   important `SUBJECT` part must have `in_camera_frame=true`; hero mesh normals
+   must be clean; glass/metal edges must have bevel/weighted-normal support.
+   A high numeric score is not enough if any
    lint error, obvious crop, disconnected/floating subject part, flat low-contrast
    preview, or low edge/detail density remains.
 12. **Improve one targeted group of issues per iteration.** Do not rebuild randomly.

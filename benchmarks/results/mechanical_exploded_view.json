@@ -5,12 +5,12 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 7.9,
+    "runtime_seconds": 6.1,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\suite_regress_v39\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
@@ -650,6 +650,89 @@
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
-    "failures": []
+    "failures": [],
+    "diagnoses": [
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'axis_callout_case_text_label' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_axis_callout_case_text_l",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                -3.7840000629425052,
+                -1.7349999994039536,
+                3.7850000858306885
+              ],
+              "look_at": [
+                -1.7200000286102295,
+                -0.23499999940395355,
+                2.7850000858306885
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'axis_callout_board_text_label' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_axis_callout_board_text_",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                -3.7840000629425052,
+                -1.7349999994039536,
+                2.865000009536743
+              ],
+              "look_at": [
+                -1.7200000286102295,
+                -0.23499999940395355,
+                1.8650000095367432
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "part.unreadable",
+        "problem": "named part 'component_shadow_projection_plate_03' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
+        "evidence": "see part_readability",
+        "ops": [
+          {
+            "op": "add_light",
+            "schema": {
+              "name": "catch_component_shadow_project",
+              "type": "AREA",
+              "power": 120,
+              "size": 1.2,
+              "location": [
+                0.5279998898506165,
+                -1.2600000500679016,
+                1.0799999982118607
+              ],
+              "look_at": [
+                0.2399999499320984,
+                0.2399999499320984,
+                0.07999999821186066
+              ]
+            }
+          }
+        ]
+      }
+    ]
   }
 }
