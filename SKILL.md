@@ -124,7 +124,9 @@ state. Preserve the last valid artifacts and state the exact next decision.
    Strong scenes are built in passes because each pass can be checked:
    (a) *blockout* — subject massing, camera, key light only;
    (b) *anatomy pass* — every `required_parts` element gets real geometry,
-   not a named cube standing in for it;
+   not a named cube standing in for it; decompose each element per
+   `references/anatomy-checklists.md` (primary silhouette → functional parts
+   → surface detail) — a mug is body + handle + open rim, not a cylinder;
    (c) *surface pass* — materials, bevels, wear, microdetail per element;
    (d) *environment pass* — ground, backdrop, atmosphere, set dressing;
    (e) *critique pass* — preview + `scene_critique` + verifier.
@@ -347,9 +349,11 @@ state. Preserve the last valid artifacts and state the exact next decision.
    of the PNGs — see `references/agent-orchestration.md`): give it the brief,
    the `required_parts` ledger, and the images — never your claimed fixes or
    score.
-   It answers per element: present? identifiable? reads as what it is? Any
-   defect list routes back as new work; only verifier `PASS` + zero
-   fail-severity critiques means done. A scene that is metrically valid but
+   It answers per element: present? identifiable? reads as what it is? —
+   judged against the three-tier anatomy test in
+   `references/anatomy-checklists.md` (silhouette → functional parts →
+   surface). Any defect list routes back as new work; only verifier `PASS` +
+   zero fail-severity critiques means done. A scene that is metrically valid but
    visually generic — blockout anatomy, monotone materials, no environment
    story — is not finished.
 15. For web assets: **export GLB and validate it locally** (`scripts/export_glb.py`

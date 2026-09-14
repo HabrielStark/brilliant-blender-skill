@@ -935,6 +935,26 @@ def op_adjust_world(p):
 
 
 # --------------------------- transforms / misc ----------------------------- #
+def op_delete_object(p):
+    """Remove an object (scaffolds get replaced, not accumulated). Orphaned
+    mesh data is dropped so inspection stays honest."""
+    obj = bpyutil.get_object(p["name"])
+    if not obj:
+        return {"error": f"object not found: {p['name']}"}
+    if p.get("also_children"):
+        for child in list(obj.children):
+            data = getattr(child, "data", None)
+            bpy.data.objects.remove(child, do_unlink=True)
+            if data is not None and getattr(data, "users", 1) == 0:
+                data.user_clear()
+    data = getattr(obj, "data", None)
+    name = obj.name
+    bpy.data.objects.remove(obj, do_unlink=True)
+    if data is not None and getattr(data, "users", 1) == 0:
+        data.user_clear()
+    return {"deleted": name}
+
+
 def op_set_object_transform(p):
     obj = bpyutil.get_object(p["target"])
     if not obj:
@@ -2664,6 +2684,7 @@ BUILDERS = {
     "set_scene_metadata": op_set_scene_metadata,
     "create_mesh_primitive": op_create_mesh_primitive,
     "add_modifier": op_add_modifier,
+    "delete_object": op_delete_object,
     "create_procedural_texture": op_create_procedural_texture,
     "add_bevel_modifier": op_add_bevel_modifier,
     "add_subdivision": op_add_subdivision,

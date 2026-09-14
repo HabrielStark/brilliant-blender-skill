@@ -9,12 +9,12 @@ import math
 
 ALLOWED_ACTIONS = (
     "ping", "initialize", "apply_recipe", "inspect",
-    "render_preview", "render_final", "export_glb",
+    "render_preview", "render_final", "render_multiview", "export_glb",
 )
 
 ALLOWED_OPS = (
     "ensure_standard_collections", "create_collection", "set_scene_metadata",
-    "create_mesh_primitive", "add_modifier", "add_bevel_modifier", "add_subdivision",
+    "create_mesh_primitive", "add_modifier", "delete_object", "add_bevel_modifier", "add_subdivision",
     "add_array_modifier", "set_object_transform", "apply_transform", "set_smooth_shading",
     "set_origin", "move_to_collection", "parent_objects", "assign_material",
     "generate_uv",
@@ -211,7 +211,7 @@ def validate_command(cmd, safety_mode="strict"):
         return "action must be a string"
     if action not in ALLOWED_ACTIONS:
         return f"action not allowed: {action[:80]!r}"
-    if action in ("render_preview", "render_final", "export_glb"):
+    if action in ("render_preview", "render_final", "render_multiview", "export_glb"):
         output = cmd.get("output")
         if not isinstance(output, str) or not output.strip():
             return f"{action}.output must be a non-empty string path"

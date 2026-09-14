@@ -64,6 +64,16 @@ def _dispatch(cmd, workspace):
         img = str(workspace.resolve_output(_blender_abspath(cmd["output"])))
         return {"ok": True, "render": renderer.render_still(
             img, cmd.get("budget") or {}, preview=(action == "render_preview"))}
+    if action == "render_multiview":
+        import os
+        base = str(workspace.resolve_output(_blender_abspath(cmd["output"])))
+        stem, _ = os.path.splitext(base)
+        views = (cmd.get("render") or {}).get("views")
+        names = [v[0] for v in views] if views else [
+            n for n, _, _ in renderer.MULTIVIEW_DEFAULT]
+        paths = {n: f"{stem}_{n}.png" for n in names}
+        return {"ok": True, "multiview": renderer.render_multiview(
+            paths, cmd.get("budget") or {}, views=views)}
     if action == "export_glb":
         glb = str(workspace.resolve_output(_blender_abspath(cmd["output"])))
         return {"ok": True, "export": exporter.export_glb(glb, cmd.get("manifest"))}

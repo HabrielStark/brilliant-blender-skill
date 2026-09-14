@@ -125,7 +125,9 @@ def render_multiview(out_paths, budget, views=None):
     scene.camera = cam
     results, errors = {}, []
     try:
-        dist = radius * 2.4 + 0.5
+        # tight enough that anatomy stays verifiable — a tiny subject in a big
+        # frame lets defects hide (a real verifier run caught exactly this)
+        dist = radius * 1.7 + 0.35
         for name, az_deg, el_deg in (views or MULTIVIEW_DEFAULT):
             az, el = math.radians(az_deg), math.radians(el_deg)
             pos = Vector((

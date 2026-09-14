@@ -93,6 +93,10 @@ OPERATION_SPECS: dict[str, dict] = {
          "collection": str, "hide_render": bool},
     ),
     "add_modifier": _spec({"target": str, "modifier": str}, {"params": dict}),
+    "delete_object": _spec(
+        {"name": str},
+        {"also_children": bool},
+    ),
     "reframe_camera": _spec(
         {},
         {"camera": str, "look_at": list, "pull_back": (int, float)},
