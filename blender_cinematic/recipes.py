@@ -28,7 +28,7 @@ PRIMITIVES = ("cube", "uv_sphere", "ico_sphere", "cylinder", "cone", "plane", "t
 MODIFIERS = (
     "BEVEL", "SUBSURF", "ARRAY", "MIRROR", "SOLIDIFY", "WEIGHTED_NORMAL",
     "DECIMATE", "TRIANGULATE", "SHRINKWRAP", "BOOLEAN", "CURVE", "WIREFRAME",
-    "DISPLACE",
+    "DISPLACE", "SIMPLE_DEFORM", "WELD", "CAST", "REMESH",
 )
 
 TEXTURE_TYPES = (

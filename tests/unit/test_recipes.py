@@ -184,6 +184,21 @@ def test_mesh_primitive_hide_render_param_is_known():
     assert not [i for i in res.issues if i.code == "recipe.unknown_param"]
 
 
+def test_deform_and_cleanup_modifiers_allowlisted():
+    r = {"operations": [
+        {"op": "add_modifier", "target": "blade", "modifier": "SIMPLE_DEFORM",
+         "params": {"deform_method": "BEND", "deform_axis": "X", "angle": 0.2}},
+        {"op": "add_modifier", "target": "mesh", "modifier": "WELD",
+         "params": {"merge_threshold": 0.001}},
+        {"op": "add_modifier", "target": "mesh", "modifier": "CAST",
+         "params": {"cast_type": "SPHERE"}},
+        {"op": "add_modifier", "target": "blob", "modifier": "REMESH",
+         "params": {"voxel_size": 0.02}},
+    ]}
+    res = validate_recipe(r)
+    assert not [i for i in res.issues if i.code == "recipe.bad_modifier"]
+
+
 def test_procedural_texture_rejects_unknown_type():
     r = {"operations": [
         {"op": "create_procedural_texture", "name": "t", "type": "NOT_A_TEXTURE"}

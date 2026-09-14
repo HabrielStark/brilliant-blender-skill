@@ -3,7 +3,15 @@
 ## Modifiers (allowlisted in `recipes.py`)
 
 `BEVEL`, `SUBSURF`, `ARRAY`, `MIRROR`, `SOLIDIFY`, `WEIGHTED_NORMAL`, `DECIMATE`,
-`TRIANGULATE`, `SHRINKWRAP`, `BOOLEAN`, `CURVE`, `WIREFRAME`, `DISPLACE`.
+`TRIANGULATE`, `SHRINKWRAP`, `BOOLEAN`, `CURVE`, `WIREFRAME`, `DISPLACE`,
+`SIMPLE_DEFORM`, `WELD`, `CAST`, `REMESH`.
+
+`SIMPLE_DEFORM` params use raw bpy values — `angle` is **radians**
+(0.1–0.2 rad ≈ 6–12° for a subtle wind lean on grass/leaf blades; >0.4 rad
+flops geometry). `deform_method`: `BEND`/`TWIST`/`TAPER`/`STRETCH`;
+`deform_axis`: the axis the deform wraps around (X bends a Z-tall object).
+`WELD` merges duplicate verts after booleans; `REMESH` voxel-remeshes blobby
+organics; `CAST` projects toward sphere/cylinder.
 
 `add_modifier` `params` accept **object and texture names** and resolve them at
 build time — `{"modifier": "BOOLEAN", "params": {"object": "cutter_name",

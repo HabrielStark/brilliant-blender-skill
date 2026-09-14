@@ -69,8 +69,8 @@
     {"op": "add_bevel_modifier", "target": "path_stone_step_03", "width": 0.03, "segments": 2},
     {"op": "add_bevel_modifier", "target": "path_stone_step_04", "width": 0.026, "segments": 2},
 
-    {"op": "create_organic_surface_details", "name_prefix": "grass_blade_hero", "count": 6, "start": [-0.35,-1.1,0.16], "step": [0.16,0.1,0.0], "length": 0.34, "width": 0.035, "curl": 0.14, "bend": 0.1, "taper": 0.78, "collection": "SUBJECT", "role": "grass"},
-    {"op": "create_organic_surface_details", "name_prefix": "grass_blade_mound_edge", "count": 5, "start": [-1.5,0.3,0.62], "step": [0.22,0.16,0.02], "length": 0.3, "width": 0.032, "curl": 0.16, "bend": 0.12, "taper": 0.8, "collection": "SUBJECT", "role": "grass"},
+    {"op": "create_organic_surface_details", "name_prefix": "grass_blade_hero", "pattern": "radial", "center": [0,-0.9,0.72], "radius": 0.55, "count": 6, "length": 0.34, "width": 0.035, "curl": 0.05, "bend": 0.03, "taper": 0.78, "tilt_degrees": 68, "collection": "SUBJECT", "role": "grass"},
+    {"op": "create_organic_surface_details", "name_prefix": "grass_blade_mound_edge", "pattern": "radial", "center": [0,0.4,0.95], "radius": 0.95, "count": 5, "length": 0.3, "width": 0.032, "curl": 0.06, "bend": 0.04, "taper": 0.8, "tilt_degrees": 62, "collection": "SUBJECT", "role": "grass"},
     {"op": "create_mesh_primitive", "type": "uv_sphere", "name": "sun_disc_low_warm", "size": 0.85, "location": [0.3,7.1,1.5], "collection": "SUBJECT"},
     {"op": "set_smooth_shading", "target": "sun_disc_low_warm", "smooth": true},
 
@@ -78,6 +78,12 @@
     {"op": "create_material", "schema": {"name": "meadow_grass_flat", "preset": "matte_plastic", "target_objects": ["meadow_ground_plane"], "pbr": {"base_color": [0.17,0.23,0.1,1], "roughness": 0.9}, "procedural": {"noise": true, "noise_scale": 5, "bump_strength": 0.02}}},
     {"op": "create_material", "schema": {"name": "boulder_granite_warm", "preset": "stone_concrete", "target_objects": ["boulder_granite_main","boulder_secondary_worn"], "pbr": {"base_color": [0.42,0.4,0.36,1], "roughness": 0.82}, "procedural": {"noise": true, "noise_scale": 12, "bump_strength": 0.05, "color_ramp": {"noise_scale": 9, "detail": 5, "colors": [[0.3,0.29,0.26,1], [0.55,0.52,0.46,1]]}}}},
     {"op": "create_material", "schema": {"name": "path_stone_dusty", "preset": "stone_concrete", "target_objects": ["path_stone_step_01","path_stone_step_02","path_stone_step_03","path_stone_step_04"], "pbr": {"base_color": [0.45,0.38,0.28,1], "roughness": 0.88}, "procedural": {"noise": true, "noise_scale": 15, "bump_strength": 0.03}}},
+    {"op": "add_modifier", "target": "grass_blade_hero_01", "modifier": "SIMPLE_DEFORM", "params": {"deform_method": "BEND", "deform_axis": "X", "angle": 0.11}},
+    {"op": "add_modifier", "target": "grass_blade_hero_02", "modifier": "SIMPLE_DEFORM", "params": {"deform_method": "BEND", "deform_axis": "X", "angle": 0.11}},
+    {"op": "add_modifier", "target": "grass_blade_hero_03", "modifier": "SIMPLE_DEFORM", "params": {"deform_method": "BEND", "deform_axis": "X", "angle": 0.11}},
+    {"op": "add_modifier", "target": "grass_blade_hero_04", "modifier": "SIMPLE_DEFORM", "params": {"deform_method": "BEND", "deform_axis": "X", "angle": 0.11}},
+    {"op": "add_modifier", "target": "grass_blade_hero_05", "modifier": "SIMPLE_DEFORM", "params": {"deform_method": "BEND", "deform_axis": "X", "angle": 0.11}},
+    {"op": "add_modifier", "target": "grass_blade_hero_06", "modifier": "SIMPLE_DEFORM", "params": {"deform_method": "BEND", "deform_axis": "X", "angle": 0.11}},
     {"op": "create_material", "schema": {"name": "grass_blade_sunlit", "preset": "matte_plastic", "target_objects": ["grass_blade_hero_01","grass_blade_hero_02","grass_blade_hero_03","grass_blade_hero_04","grass_blade_hero_05","grass_blade_hero_06","grass_blade_mound_edge_01","grass_blade_mound_edge_02","grass_blade_mound_edge_03","grass_blade_mound_edge_04","grass_blade_mound_edge_05"], "pbr": {"base_color": [0.38,0.45,0.16,1], "roughness": 0.7}}},
     {"op": "create_material", "schema": {"name": "sun_disc_emissive", "preset": "emissive_neon", "target_objects": ["sun_disc_low_warm"], "pbr": {"base_color": [1.0,0.62,0.3,1], "emission_color": [1.0,0.55,0.24,1], "emission_strength": 5.0}}},
     {"op": "create_material", "schema": {"name": "horizon_haze_warm", "preset": "matte_plastic", "target_objects": ["horizon_sky_glow_band","horizon_distant_hill_left","horizon_distant_hill_right"], "pbr": {"base_color": [0.55,0.42,0.3,1], "roughness": 1.0}}},
