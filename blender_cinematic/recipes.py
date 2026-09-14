@@ -93,9 +93,14 @@ OPERATION_SPECS: dict[str, dict] = {
          "collection": str, "hide_render": bool},
     ),
     "add_modifier": _spec({"target": str, "modifier": str}, {"params": dict}),
+    "remove_modifier": _spec({"target": str, "modifier": str}, {}),
     "delete_object": _spec(
         {"name": str},
         {"also_children": bool},
+    ),
+    "delete_objects_by_prefix": _spec(
+        {"name_prefix": str},
+        {"also_children": bool, "max_delete": int},
     ),
     "reframe_camera": _spec(
         {},

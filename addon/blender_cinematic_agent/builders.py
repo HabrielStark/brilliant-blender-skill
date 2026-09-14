@@ -955,6 +955,41 @@ def op_delete_object(p):
     return {"deleted": name}
 
 
+def op_delete_objects_by_prefix(p):
+    """Delete a generated family (e.g. ``city_windows_a_window_cell_*``) so a
+    refinement pass can regenerate details instead of accumulating them."""
+    prefix = p["name_prefix"]
+    victims = [o for o in bpy.data.objects if o.name.startswith(prefix)]
+    cap = int(p.get("max_delete", 256))
+    if len(victims) > cap:
+        return {"error": f"prefix '{prefix}' matches {len(victims)} objects > "
+                         f"max_delete {cap}"}
+    deleted = []
+    for obj in victims:
+        if p.get("also_children"):
+            for child in list(obj.children):
+                bpy.data.objects.remove(child, do_unlink=True)
+        data = getattr(obj, "data", None)
+        deleted.append(obj.name)
+        bpy.data.objects.remove(obj, do_unlink=True)
+        if data is not None and getattr(data, "users", 1) == 0:
+            data.user_clear()
+    return {"deleted": len(deleted), "prefix": prefix}
+
+
+def op_remove_modifier(p):
+    """Remove a named modifier from a target so a refinement pass can
+    regenerate it (e.g. re-run a corrected geometry-nodes recipe)."""
+    obj = bpyutil.get_object(p["target"])
+    if not obj:
+        return {"error": f"object not found: {p['target']}"}
+    mod = obj.modifiers.get(p["modifier"])
+    if mod is None:
+        return {"error": f"modifier not found: {p['modifier']}"}
+    obj.modifiers.remove(mod)
+    return {"removed": p["modifier"], "target": obj.name}
+
+
 def op_set_object_transform(p):
     obj = bpyutil.get_object(p["target"])
     if not obj:
@@ -2134,6 +2169,26 @@ def op_create_geometry_nodes(p):
     distribute.inputs["Density"].default_value = max(0.05, count / span_area)
     if "Seed" in distribute.inputs:
         distribute.inputs["Seed"].default_value = seed
+    if recipe == "GN_CityWindows" and "Selection" in distribute.inputs:
+        # Facade recipe: windows belong on near-vertical wall faces only —
+        # keep cells off roofs, slabs and ground-facing surfaces.
+        normal = nodes.new("GeometryNodeInputNormal")
+        normal.name = f"{recipe}_FaceNormal"
+        dot = nodes.new("ShaderNodeVectorMath")
+        dot.operation = "DOT_PRODUCT"
+        dot.name = f"{recipe}_NormalDot"
+        dot.inputs[1].default_value = (0.0, 0.0, 1.0)
+        absolute = nodes.new("ShaderNodeMath")
+        absolute.operation = "ABSOLUTE"
+        absolute.name = f"{recipe}_NormalAbs"
+        thresh = nodes.new("ShaderNodeMath")
+        thresh.operation = "LESS_THAN"
+        thresh.name = f"{recipe}_VerticalOnly"
+        thresh.inputs[1].default_value = 0.5
+        links.new(normal.outputs["Normal"], dot.inputs[0])
+        links.new(dot.outputs["Value"], absolute.inputs[0])
+        links.new(absolute.outputs[0], thresh.inputs[0])
+        links.new(thresh.outputs[0], distribute.inputs["Selection"])
     if recipe == "GN_RockScatter":
         proxy = nodes.new("GeometryNodeMeshIcoSphere")
         proxy.name = f"{recipe}_InstanceProxy"
@@ -2684,7 +2739,9 @@ BUILDERS = {
     "set_scene_metadata": op_set_scene_metadata,
     "create_mesh_primitive": op_create_mesh_primitive,
     "add_modifier": op_add_modifier,
+    "remove_modifier": op_remove_modifier,
     "delete_object": op_delete_object,
+    "delete_objects_by_prefix": op_delete_objects_by_prefix,
     "create_procedural_texture": op_create_procedural_texture,
     "add_bevel_modifier": op_add_bevel_modifier,
     "add_subdivision": op_add_subdivision,

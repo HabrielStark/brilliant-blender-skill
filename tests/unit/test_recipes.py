@@ -538,3 +538,24 @@ def test_craft_detail_numeric_guards():
     assert "recipe.grille_budget" in codes
     assert "recipe.surface_microdetail_budget" in codes
     assert not estimate_complexity(r)["within_budget"]
+
+
+def test_remove_modifier_and_prefix_delete_ops_validate():
+    r = {"operations": [
+        {"op": "remove_modifier", "target": "building_a", "modifier": "city_windows_a"},
+        {"op": "delete_objects_by_prefix", "name_prefix": "city_windows_a_window_cell",
+         "max_delete": 64},
+        {"op": "delete_object", "name": "stale_scaffold"},
+    ]}
+    assert validate_recipe(r).passed
+
+
+def test_remove_modifier_and_prefix_delete_require_params():
+    r = {"operations": [
+        {"op": "remove_modifier", "target": "x"},
+        {"op": "delete_objects_by_prefix"},
+    ]}
+    res = validate_recipe(r)
+    assert not res.passed
+    codes = [i.code for i in res.issues]
+    assert codes.count("recipe.missing_param") == 2

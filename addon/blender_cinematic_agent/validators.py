@@ -14,7 +14,8 @@ ALLOWED_ACTIONS = (
 
 ALLOWED_OPS = (
     "ensure_standard_collections", "create_collection", "set_scene_metadata",
-    "create_mesh_primitive", "add_modifier", "delete_object", "add_bevel_modifier", "add_subdivision",
+    "create_mesh_primitive", "add_modifier", "remove_modifier", "delete_object",
+    "delete_objects_by_prefix", "add_bevel_modifier", "add_subdivision",
     "add_array_modifier", "set_object_transform", "apply_transform", "set_smooth_shading",
     "set_origin", "move_to_collection", "parent_objects", "assign_material",
     "generate_uv",
