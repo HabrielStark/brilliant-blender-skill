@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 5.2,
+    "runtime_seconds": 5.1,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
@@ -48,13 +48,13 @@
           "contrast": 0.0279,
           "edge_density": 0.0417,
           "separation": 0.0222,
-          "mean_luma": 0.7094,
+          "mean_luma": 0.7093,
           "surround_luma": 0.7315,
           "readable": true
         },
         {
           "name": "liquid_bubble_highlight_02",
-          "contrast": 0.0153,
+          "contrast": 0.0154,
           "edge_density": 0.0,
           "separation": 0.0173,
           "mean_luma": 0.6369,
@@ -269,11 +269,11 @@
     "pass": false,
     "visual_score": 27,
     "technical_score": 40,
-    "runtime_seconds": 3.7,
+    "runtime_seconds": 3.3,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\shader_texture_material_study_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\shader_texture_material_study_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -318,11 +318,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 4.5,
+    "runtime_seconds": 4.4,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"

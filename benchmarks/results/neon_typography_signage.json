@@ -1,0 +1,291 @@
+{
+  "skill_plus_tools": {
+    "task_id": "neon_typography_signage",
+    "mode": "skill_plus_tools",
+    "pass": true,
+    "visual_score": 97,
+    "technical_score": 100,
+    "runtime_seconds": 4.8,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\neon_typography_signage_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\neon_typography_signage_skill_plus_tools\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "dark"
+    ],
+    "readability": {
+      "parts": [
+        {
+          "name": "sign_backplate_charcoal_steel",
+          "contrast": 0.2658,
+          "edge_density": 0.1719,
+          "separation": 0.1083,
+          "mean_luma": 0.2485,
+          "surround_luma": 0.1402,
+          "readable": true
+        },
+        {
+          "name": "sign_frame_rail_top",
+          "contrast": 0.0616,
+          "edge_density": 0.0181,
+          "separation": 0.0927,
+          "mean_luma": 0.0976,
+          "surround_luma": 0.1902,
+          "readable": true
+        },
+        {
+          "name": "sign_frame_rail_bottom",
+          "contrast": 0.0375,
+          "edge_density": 0.0071,
+          "separation": 0.1352,
+          "mean_luma": 0.0703,
+          "surround_luma": 0.2055,
+          "readable": true
+        },
+        {
+          "name": "sign_letter_neon_word_main",
+          "contrast": 0.3165,
+          "edge_density": 0.3258,
+          "separation": 0.3064,
+          "mean_luma": 0.4279,
+          "surround_luma": 0.1215,
+          "readable": true
+        },
+        {
+          "name": "sign_letter_sub_caption",
+          "contrast": 0.2833,
+          "edge_density": 0.7211,
+          "separation": 0.0769,
+          "mean_luma": 0.5326,
+          "surround_luma": 0.4557,
+          "readable": true
+        },
+        {
+          "name": "sign_tube_neon_underline",
+          "contrast": 0.3023,
+          "edge_density": 0.4208,
+          "separation": 0.4423,
+          "mean_luma": 0.6232,
+          "surround_luma": 0.1809,
+          "readable": true
+        },
+        {
+          "name": "sign_cable_power_droop",
+          "contrast": 0.0444,
+          "edge_density": 0.0021,
+          "separation": 0.0258,
+          "mean_luma": 0.1043,
+          "surround_luma": 0.1302,
+          "readable": true
+        },
+        {
+          "name": "sign_cable_junction_box",
+          "contrast": 0.0427,
+          "edge_density": 0.004,
+          "separation": 0.0651,
+          "mean_luma": 0.1866,
+          "surround_luma": 0.1215,
+          "readable": true
+        },
+        {
+          "name": "sign_cable_wall_clip",
+          "contrast": 0.0113,
+          "edge_density": 0.0,
+          "separation": 0.0337,
+          "mean_luma": 0.0515,
+          "surround_luma": 0.0853,
+          "readable": false
+        },
+        {
+          "name": "sign_tube_end_cap_left",
+          "contrast": 0.2239,
+          "edge_density": 0.4,
+          "separation": 0.0636,
+          "mean_luma": 0.3096,
+          "surround_luma": 0.2459,
+          "readable": true
+        },
+        {
+          "name": "sign_tube_end_cap_right",
+          "contrast": 0.2232,
+          "edge_density": 0.4219,
+          "separation": 0.0819,
+          "mean_luma": 0.3106,
+          "surround_luma": 0.2287,
+          "readable": true
+        },
+        {
+          "name": "sign_bolt_top_01",
+          "contrast": 0.054,
+          "edge_density": 0.1944,
+          "separation": 0.1218,
+          "mean_luma": 0.2594,
+          "surround_luma": 0.1377,
+          "readable": true
+        },
+        {
+          "name": "sign_bolt_top_02",
+          "contrast": 0.0394,
+          "edge_density": 0.1154,
+          "separation": 0.0924,
+          "mean_luma": 0.1936,
+          "surround_luma": 0.1013,
+          "readable": true
+        },
+        {
+          "name": "sign_bolt_bottom_01",
+          "contrast": 0.0488,
+          "edge_density": 0.1562,
+          "separation": 0.1523,
+          "mean_luma": 0.2274,
+          "surround_luma": 0.0751,
+          "readable": true
+        },
+        {
+          "name": "sign_bolt_bottom_02",
+          "contrast": 0.0361,
+          "edge_density": 0.1562,
+          "separation": 0.1278,
+          "mean_luma": 0.1906,
+          "surround_luma": 0.0628,
+          "readable": true
+        },
+        {
+          "name": "sign_bracket_left_wall_mount",
+          "contrast": 0.0924,
+          "edge_density": 0.0833,
+          "separation": 0.0436,
+          "mean_luma": 0.2102,
+          "surround_luma": 0.1666,
+          "readable": true
+        },
+        {
+          "name": "sign_bracket_right_wall_mount",
+          "contrast": 0.0705,
+          "edge_density": 0.0316,
+          "separation": 0.0295,
+          "mean_luma": 0.1662,
+          "surround_luma": 0.1368,
+          "readable": true
+        },
+        {
+          "name": "sign_glass_sheen_guard",
+          "contrast": 0.2833,
+          "edge_density": 0.2256,
+          "separation": 0.207,
+          "mean_luma": 0.3102,
+          "surround_luma": 0.1032,
+          "readable": true
+        }
+      ],
+      "measured_parts": 18,
+      "readable_parts": 17,
+      "unreadable_parts": [
+        "sign_cable_wall_clip"
+      ]
+    },
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "neon_typography_signage",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 29,
+    "technical_score": 60,
+    "runtime_seconds": 3.4,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\neon_typography_signage_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "readability": null,
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Cube'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Cube",
+      "pipeline failed: pipeline_incomplete",
+      "score 29 < min 84",
+      "subject objects 1 < min 16",
+      "visible subject objects 0 < min 14",
+      "missing named subject parts: sign, letter, tube, bolt, cable, plate, bracket",
+      "subject faces 6 < min 200",
+      "subject modifiers 0 < min 4",
+      "craft detail objects 0 < min 6",
+      "missing named environment parts: wall, floor",
+      "subject materials 0 < min 6",
+      "emissive materials 0 < min 2"
+    ]
+  },
+  "adversarial_slop_dark_box_named_neon_keywords": {
+    "task_id": "neon_typography_signage",
+    "mode": "adversarial_slop_dark_box_named_neon_keywords",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 4.5,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\neon_typography_signage_adversarial_slop_dark_box_named_neon_keywords\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\neon_typography_signage_adversarial_slop_dark_box_named_neon_keywords\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "very_dark"
+    ],
+    "readability": {
+      "parts": [
+        {
+          "name": "sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
+          "contrast": 0.022,
+          "edge_density": 0.0,
+          "separation": 0.0118,
+          "mean_luma": 0.0994,
+          "surround_luma": 0.0876,
+          "readable": false
+        }
+      ],
+      "measured_parts": 1,
+      "readable_parts": 0,
+      "unreadable_parts": [
+        "sign_letter_tube_bolt_cable_plate_bracket_all_in_one"
+      ]
+    },
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "render has almost no contrast (flat/empty)",
+      "render has no discernible silhouette/detail",
+      "render is too flat for visual acceptance",
+      "forbidden visual style tags present: very_dark",
+      "score 79 < min 84",
+      "subject objects 1 < min 16",
+      "visible subject objects 1 < min 14",
+      "subject faces 6 < min 200",
+      "subject modifiers 0 < min 4",
+      "craft detail objects 0 < min 6",
+      "missing named environment parts: wall, floor",
+      "subject materials 1 < min 6",
+      "emissive materials 0 < min 2",
+      "named part family 'sign' mostly unreadable (0/1): sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
+      "named part family 'letter' mostly unreadable (0/1): sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
+      "named part family 'tube' mostly unreadable (0/1): sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
+      "named part family 'bolt' mostly unreadable (0/1): sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
+      "named part family 'cable' mostly unreadable (0/1): sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
+      "named part family 'plate' mostly unreadable (0/1): sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
+      "named part family 'bracket' mostly unreadable (0/1): sign_letter_tube_bolt_cable_plate_bracket_all_in_one"
+    ]
+  }
+}

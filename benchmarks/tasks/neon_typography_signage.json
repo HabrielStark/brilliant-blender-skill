@@ -1,0 +1,94 @@
+{
+  "id": "neon_typography_signage",
+  "title": "Moody wall-mounted neon typography sign",
+  "prompt": "Create a moody cinematic still of a wall-mounted neon typography sign: a dark backplate with glowing letterforms, a neon underline tube, a drooping power cable, and mounting hardware on a concrete wall.",
+  "category": "typography",
+  "profile": "balanced",
+  "manifest": {"task_id": "bench_neon_sign", "brief": "moody neon typography signage hero shot",
+    "output_mode": "still", "style": {"mood": "moody cinematic neon", "palette": ["charcoal", "hot pink", "warm amber"]},
+    "target": {"final_format": ["blend", "png"], "web_runtime": "three"}},
+  "checks": {
+    "min_score": 84,
+    "forbid_visual_style_tags": ["very_dark"],
+    "min_subject_objects": 16,
+    "min_visible_subject_objects": 14,
+    "min_visible_subject_coverage": 0.0001,
+    "max_offscreen_subject_objects": 0,
+    "min_subject_total_faces": 200,
+    "min_subject_materials": 6,
+    "min_emissive_materials": 2,
+    "min_subject_modifiers": 4,
+    "min_craft_detail_objects": 6,
+    "require_named_parts": ["sign", "letter", "tube", "bolt", "cable", "plate", "bracket"],
+    "require_readable_named_parts": true,
+    "require_environment_named_parts": ["wall", "floor"]
+  },
+  "recipe": {"operations": [
+    {"op": "ensure_standard_collections"},
+    {"op": "create_mesh_primitive", "type": "plane", "name": "floor_concrete_dark", "size": 14, "collection": "ENVIRONMENT"},
+    {"op": "create_mesh_primitive", "type": "plane", "name": "wall_concrete_backdrop", "size": 9, "location": [0,0.62,2.4], "rotation": [90,0,0], "collection": "ENVIRONMENT"},
+    {"op": "apply_transform", "target": "wall_concrete_backdrop", "rotation": true, "scale": true},
+
+    {"op": "create_mesh_primitive", "type": "cube", "name": "sign_backplate_charcoal_steel", "size": 1, "location": [0,0.5,1.72], "scale": [1.62,0.07,0.56], "collection": "SUBJECT"},
+    {"op": "apply_transform", "target": "sign_backplate_charcoal_steel", "scale": true},
+    {"op": "add_bevel_modifier", "target": "sign_backplate_charcoal_steel", "width": 0.03, "segments": 2},
+    {"op": "create_mesh_primitive", "type": "cube", "name": "sign_frame_rail_top", "size": 1, "location": [0,0.47,2.0], "scale": [1.66,0.045,0.05], "collection": "SUBJECT"},
+    {"op": "create_mesh_primitive", "type": "cube", "name": "sign_frame_rail_bottom", "size": 1, "location": [0,0.47,1.44], "scale": [1.66,0.045,0.05], "collection": "SUBJECT"},
+    {"op": "apply_transform", "target": "sign_frame_rail_top", "scale": true},
+    {"op": "apply_transform", "target": "sign_frame_rail_bottom", "scale": true},
+    {"op": "add_bevel_modifier", "target": "sign_frame_rail_top", "width": 0.012, "segments": 2},
+    {"op": "add_bevel_modifier", "target": "sign_frame_rail_bottom", "width": 0.012, "segments": 2},
+
+    {"op": "create_text_label", "name": "sign_letter_neon_word_main", "text": "LUMEN", "location": [0,0.415,1.78], "rotation": [90,0,0], "size": 0.34, "align_x": "CENTER", "align_y": "CENTER", "extrude": 0.01, "collection": "SUBJECT", "role": "hero_text"},
+    {"op": "create_text_label", "name": "sign_letter_sub_caption", "text": "EST. 1987", "location": [0,0.42,1.52], "rotation": [90,0,0], "size": 0.085, "align_x": "CENTER", "align_y": "CENTER", "extrude": 0.004, "collection": "SUBJECT", "role": "caption_text"},
+
+    {"op": "create_curve_tube", "name": "sign_tube_neon_underline", "points": [[-0.62,0.4,1.58],[-0.2,0.4,1.565],[0.2,0.4,1.565],[0.62,0.4,1.58]], "bevel_depth": 0.016, "resolution": 3, "collection": "SUBJECT", "role": "neon_tube"},
+    {"op": "create_curve_tube", "name": "sign_cable_power_droop", "points": [[0.78,0.48,1.5],[0.82,0.52,1.25],[0.8,0.54,1.02],[0.86,0.53,0.86]], "bevel_depth": 0.03, "resolution": 2, "collection": "SUBJECT", "role": "cable"},
+    {"op": "create_mesh_primitive", "type": "cube", "name": "sign_cable_junction_box", "size": 1, "location": [0.86,0.5,0.78], "scale": [0.14,0.08,0.18], "collection": "SUBJECT"},
+    {"op": "apply_transform", "target": "sign_cable_junction_box", "scale": true},
+    {"op": "add_bevel_modifier", "target": "sign_cable_junction_box", "width": 0.015, "segments": 2},
+    {"op": "create_mesh_primitive", "type": "cube", "name": "sign_cable_wall_clip", "size": 1, "location": [0.83,0.55,1.15], "scale": [0.05,0.04,0.07], "collection": "SUBJECT", "role": "cable"},
+    {"op": "apply_transform", "target": "sign_cable_wall_clip", "scale": true},
+    {"op": "add_bevel_modifier", "target": "sign_cable_wall_clip", "width": 0.008, "segments": 1},
+    {"op": "create_mesh_primitive", "type": "uv_sphere", "name": "sign_tube_end_cap_left", "size": 0.05, "location": [-0.64,0.4,1.585], "collection": "SUBJECT", "role": "tube"},
+    {"op": "create_mesh_primitive", "type": "uv_sphere", "name": "sign_tube_end_cap_right", "size": 0.05, "location": [0.64,0.4,1.585], "collection": "SUBJECT", "role": "tube"},
+
+    {"op": "create_linear_markers", "name_prefix": "sign_bolt_top", "start": [-0.74,0.43,1.98], "step": [1.48,0,0], "count": 2, "size": [0.075,0.035,0.075], "collection": "SUBJECT", "role": "bolt"},
+    {"op": "create_linear_markers", "name_prefix": "sign_bolt_bottom", "start": [-0.74,0.43,1.46], "step": [1.48,0,0], "count": 2, "size": [0.05,0.03,0.05], "collection": "SUBJECT", "role": "bolt"},
+    {"op": "create_mesh_primitive", "type": "cube", "name": "sign_bracket_left_wall_mount", "size": 1, "location": [-0.7,0.55,2.04], "scale": [0.09,0.08,0.12], "collection": "SUBJECT"},
+    {"op": "create_mesh_primitive", "type": "cube", "name": "sign_bracket_right_wall_mount", "size": 1, "location": [0.7,0.55,2.04], "scale": [0.09,0.08,0.12], "collection": "SUBJECT"},
+    {"op": "apply_transform", "target": "sign_bracket_left_wall_mount", "scale": true},
+    {"op": "apply_transform", "target": "sign_bracket_right_wall_mount", "scale": true},
+    {"op": "add_bevel_modifier", "target": "sign_bracket_left_wall_mount", "width": 0.012, "segments": 1},
+    {"op": "add_bevel_modifier", "target": "sign_bracket_right_wall_mount", "width": 0.012, "segments": 1},
+    {"op": "create_mesh_primitive", "type": "cube", "name": "sign_glass_sheen_guard", "size": 1, "location": [0,0.435,1.72], "scale": [1.5,0.008,0.44], "collection": "SUBJECT"},
+    {"op": "apply_transform", "target": "sign_glass_sheen_guard", "scale": true},
+
+    {"op": "create_material", "schema": {"name": "neon_pink_letter_glow", "preset": "emissive_neon", "target_objects": ["sign_letter_neon_word_main"], "pbr": {"base_color": [1.0,0.16,0.55,1], "emission_color": [1.0,0.14,0.5,1], "emission_strength": 4.2}}},
+    {"op": "create_material", "schema": {"name": "neon_amber_caption_glow", "preset": "emissive_neon", "target_objects": ["sign_letter_sub_caption"], "pbr": {"base_color": [1.0,0.6,0.2,1], "emission_color": [1.0,0.55,0.16,1], "emission_strength": 2.4}}},
+    {"op": "create_material", "schema": {"name": "neon_cyan_tube_glow", "preset": "emissive_neon", "target_objects": ["sign_tube_neon_underline"], "pbr": {"base_color": [0.2,0.8,1.0,1], "emission_color": [0.16,0.75,1.0,1], "emission_strength": 3.2}}},
+    {"op": "create_material", "schema": {"name": "backplate_charcoal_powder", "preset": "brushed_metal", "target_objects": ["sign_backplate_charcoal_steel","sign_frame_rail_top","sign_frame_rail_bottom"], "pbr": {"base_color": [0.05,0.052,0.06,1], "metallic": 0.6, "roughness": 0.5}, "procedural": {"noise": true, "noise_scale": 30, "bump_strength": 0.01}}},
+    {"op": "create_material", "schema": {"name": "bolt_steel_dull", "preset": "brushed_metal", "target_objects": ["sign_bolt_top_01","sign_bolt_top_02","sign_bolt_bottom_01","sign_bolt_bottom_02","sign_bracket_left_wall_mount","sign_bracket_right_wall_mount","sign_tube_end_cap_left","sign_tube_end_cap_right","sign_cable_junction_box"], "pbr": {"base_color": [0.5,0.52,0.55,1], "metallic": 0.85, "roughness": 0.38}}},
+    {"op": "create_material", "schema": {"name": "cable_rubber_matte", "preset": "rubber_dark", "target_objects": ["sign_cable_power_droop","sign_cable_wall_clip"], "pbr": {"base_color": [0.045,0.045,0.05,1], "roughness": 0.72}}},
+    {"op": "create_material", "schema": {"name": "guard_glass_faint", "preset": "glossy_plastic", "target_objects": ["sign_glass_sheen_guard"], "pbr": {"base_color": [0.6,0.65,0.7,0.1], "roughness": 0.06, "alpha": 0.1, "clearcoat": 0.7}}},
+    {"op": "create_material", "schema": {"name": "wall_concrete_cool", "preset": "matte_plastic", "target_objects": ["wall_concrete_backdrop","floor_concrete_dark"], "pbr": {"base_color": [0.19,0.195,0.22,1], "roughness": 0.85}, "procedural": {"noise": true, "noise_scale": 14, "bump_strength": 0.05}}},
+
+    {"op": "create_lighting_rig", "schema": {"lighting_rig": "moody_neon_sign", "lights": [{"name": "soft_fill", "type": "AREA", "power": 230, "size": 4.5, "color": [0.5,0.55,0.7], "position_role": "front_left_high"}, {"name": "floor_spill", "type": "AREA", "power": 90, "size": 3, "color": [1.0,0.4,0.5], "position_role": "rim"}], "world": {"color": [0.08,0.08,0.095], "strength": 0.85}}},
+    {"op": "create_camera", "schema": {"camera_name": "camera_neon", "preset": "hero_low_angle", "target": "sign_backplate_charcoal_steel", "look_at": [0,0.45,1.7], "location": [0.35,-4.1,1.75], "composition": {"subject_screen_coverage": 0.6, "safe_margin": 0.14}, "lens": {"focal_length_mm": 52, "dof": true, "focus_target": "sign_backplate_charcoal_steel"}}},
+    {"op": "set_scene_metadata", "data": {"final_camera": "camera_neon"}}
+  ]},
+  "baseline_recipe": {"operations": [
+    {"op": "create_mesh_primitive", "type": "cube", "name": "Cube", "size": 2}
+  ]},
+  "adversarial_baselines": [
+    {"id": "dark_box_named_neon_keywords", "recipe": {"operations": [
+      {"op": "ensure_standard_collections"},
+      {"op": "create_mesh_primitive", "type": "cube", "name": "sign_letter_tube_bolt_cable_plate_bracket_all_in_one", "size": 2.0, "location": [0,0.5,1.7], "scale": [1.4,0.06,0.5], "collection": "SUBJECT"},
+      {"op": "apply_transform", "target": "sign_letter_tube_bolt_cable_plate_bracket_all_in_one", "scale": true},
+      {"op": "create_material", "schema": {"name": "flat_dark", "preset": "matte_plastic", "target_objects": ["sign_letter_tube_bolt_cable_plate_bracket_all_in_one"], "pbr": {"base_color": [0.05,0.05,0.06,1], "roughness": 0.8}}},
+      {"op": "create_lighting_rig", "schema": {"lighting_rig": "flat", "lights": [{"name": "key", "type": "AREA", "power": 300, "size": 4, "position_role": "front_left_high"}], "world": {"color": [0.03,0.03,0.04], "strength": 0.4}}},
+      {"op": "create_camera", "schema": {"camera_name": "cam", "target": "sign_letter_tube_bolt_cable_plate_bracket_all_in_one", "location": [0,-4,1.7], "lens": {"focal_length_mm": 52}}},
+      {"op": "set_scene_metadata", "data": {"final_camera": "cam"}}
+    ]}}
+  ]
+}

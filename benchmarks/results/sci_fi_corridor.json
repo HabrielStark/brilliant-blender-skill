@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 6.2,
+    "runtime_seconds": 5.7,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\sci_fi_corridor_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\sci_fi_corridor_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\sci_fi_corridor_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\sci_fi_corridor_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark",
@@ -65,7 +65,7 @@
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\sci_fi_corridor_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\sci_fi_corridor_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -114,8 +114,8 @@
     "runtime_seconds": 4.6,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"

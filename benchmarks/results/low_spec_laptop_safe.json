@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 6.8,
+    "runtime_seconds": 5.7,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
@@ -356,11 +356,11 @@
     "pass": false,
     "visual_score": 29,
     "technical_score": 60,
-    "runtime_seconds": 3.9,
+    "runtime_seconds": 3.3,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\low_spec_laptop_safe_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\low_spec_laptop_safe_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -403,11 +403,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 5.3,
+    "runtime_seconds": 4.3,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\low_spec_laptop_safe_adversarial_slop_1\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\low_spec_laptop_safe_adversarial_slop_1\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"

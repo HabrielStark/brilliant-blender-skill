@@ -90,14 +90,18 @@ not acceptable evidence for production-grade reference fidelity.
   unless the scenario provenance is `live_agent` and the raw generation metadata
   is archived.
 
-## Tasks (14)
+## Tasks (15)
 
 `architectural_interior_scene`, `product_hero_watch`, `sci_fi_corridor`,
 `mechanical_exploded_view`, `web_scroll_hero`, `low_spec_laptop_safe`,
 `organic_soft_surface_study`, `particle_vfx_energy_burst`, `reference_match`,
 `shader_texture_material_study`, `turntable_animation`, `scene_repair`,
-`glb_web_budget`, `camera_expensive`.
+`glb_web_budget`, `camera_expensive`, `neon_typography_signage`.
 Pass criteria are in `benchmarks/rubrics/pass_criteria.md`.
+The neon typography task exercises text/curve-tube subject construction,
+emissive materials on FONT and CURVE targets, moody dark-environment
+readability, and silhouette-dependent hardware (cables, wall-mount ears) —
+an adversarial keyword-named dark slab must fail.
 The organic/soft-surface task now requires a cohesive fluted hero body plus
 smooth curved petal, leaf, and fold mesh details; separate sphere blobs and
 beveled cuboid markers are intentionally rejected by named-part, face/modifier,

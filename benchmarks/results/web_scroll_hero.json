@@ -8,8 +8,8 @@
     "runtime_seconds": 7.8,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark",
@@ -191,22 +191,22 @@
     "animation_frame_proof": {
       "frame_count": 3,
       "frames": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png"
       ],
       "pairs": [
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
           "mean_rgb_delta": 0.06761130690574646,
           "max_rgb_delta": 0.8392156958580017,
           "mean_luma_delta": 0.06798283755779266,
           "changed_pixel_ratio": 0.33315586419753085
         },
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png",
           "mean_rgb_delta": 0.07208635658025742,
           "max_rgb_delta": 0.8352941274642944,
           "mean_luma_delta": 0.07096830755472183,
@@ -229,11 +229,11 @@
     "pass": false,
     "visual_score": 31,
     "technical_score": 50,
-    "runtime_seconds": 4.5,
+    "runtime_seconds": 4.7,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -289,11 +289,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 90,
-    "runtime_seconds": 7.0,
+    "runtime_seconds": 6.9,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
@@ -329,22 +329,22 @@
     "animation_frame_proof": {
       "frame_count": 3,
       "frames": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png"
       ],
       "pairs": [
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
           "mean_rgb_delta": 0.0,
           "max_rgb_delta": 0.0,
           "mean_luma_delta": 0.0,
           "changed_pixel_ratio": 0.0
         },
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\post_matfix\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\final_15\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png",
           "mean_rgb_delta": 0.0,
           "max_rgb_delta": 0.0,
           "mean_luma_delta": 0.0,
