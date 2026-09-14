@@ -463,7 +463,7 @@ class LightingSchema(_Strict):
 # --------------------------------------------------------------------------- #
 ANIMATION_MODES = (
     "turntable", "camera_flythrough", "scroll_linked", "exploded_view",
-    "reveal", "loop_idle", "light_pulse", "rig_basic",
+    "reveal", "loop_idle", "light_pulse",
 )
 INTERPOLATIONS = ("linear", "ease_in_out", "ease_in", "ease_out", "hold", "bezier", "constant")
 

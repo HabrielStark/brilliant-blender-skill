@@ -2197,6 +2197,29 @@ def op_create_animation(p):
             obj.location = origin + direction * distance
             obj.keyframe_insert("location", frame=fe)
             _key_interp_linear(obj)
+        elif mode == "loop_idle":
+            # Gentle breathing sway: a subtle scale pulse plus a small yaw
+            # oscillation that returns to rest at the loop point.
+            params = schema.get("params") or {}
+            sway = math.radians(float(params.get("sway_degrees", 2.5)))
+            breathe = float(params.get("breathe", 0.015))
+            base_loc = obj.location.copy()
+            base_rot = obj.rotation_euler.copy()
+            base_scale = obj.scale.copy()
+            # Quarter-phase keys: sway peaks at 1/4 and 3/4, breathe at 1/4+3/4,
+            # everything returns to rest at the loop frame for a seamless loop.
+            span = fe - fs
+            for frame, phase in ((fs, 0.0), (fs + span // 4, 0.25),
+                                 (fs + span // 2, 0.5),
+                                 (fs + 3 * span // 4, 0.75), (fe, 1.0)):
+                obj.location = base_loc
+                obj.rotation_euler = base_rot.copy()
+                obj.rotation_euler[2] = base_rot[2] + sway * math.sin(phase * 2 * math.pi)
+                obj.scale = base_scale * (1.0 + breathe * abs(math.sin(phase * math.pi)))
+                obj.keyframe_insert("location", frame=frame)
+                obj.keyframe_insert("rotation_euler", index=2, frame=frame)
+                obj.keyframe_insert("scale", frame=frame)
+            _key_interp_linear(obj)
         else:
             for path, curve in (schema.get("curves") or {}).items():
                 axis = {"rotation_x": 0, "rotation_y": 1, "rotation_z": 2}.get(path)

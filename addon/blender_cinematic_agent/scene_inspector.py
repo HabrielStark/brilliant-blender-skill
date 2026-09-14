@@ -112,8 +112,11 @@ def _sample_animation_motion(scene, anim_object_names, cam):
         return {"sampled_objects": [], "moving_object_count": 0}
     current_frame = scene.frame_current
     fs, fe = int(scene.frame_start), int(scene.frame_end)
-    mid = int(round((fs + fe) / 2))
-    frames = sorted({fs, mid, fe})
+    span = fe - fs
+    # Quarter-phase samples catch oscillating loops (e.g. loop_idle) whose
+    # motion peaks between start/mid/end and would otherwise read as static.
+    frames = sorted({fs, fs + span // 4, fs + span // 2,
+                     fs + 3 * span // 4, fe})
     targets = []
     seen = set()
     for name in anim_object_names:

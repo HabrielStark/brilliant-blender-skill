@@ -212,7 +212,7 @@ def test_turntable_animation_in_glb(blender_exe, tmp_path):
     assert anim["moving_object_count"] >= 1
     assert anim["max_sampled_rotation_delta"] >= 3.0
     hero_motion = next(o for o in anim["sampled_objects"] if o["name"] == "hero_core")
-    assert hero_motion["sample_count"] == 3
+    assert hero_motion["sample_count"] == 5  # quarter-phase sampling
     v = validate_glb(glb)
     assert v["info"]["animations"] >= 1, v
 
@@ -246,6 +246,29 @@ def test_turntable_animation_orbits_assembly_parts(blender_exe, tmp_path):
     assert sampled["hero_side_badge_left"]["max_location_delta"] >= 1.8
     assert sampled["hero_side_badge_right"]["max_location_delta"] >= 1.8
     assert sampled["hero_core"]["max_rotation_delta"] >= 3.0
+
+
+def test_loop_idle_produces_seamless_subtle_motion(blender_exe, tmp_path):
+    """loop_idle must actually keyframe a gentle sway that returns to rest."""
+    _, base = task_workspace(tmp_path, "anim_idle")
+    blend = base / "final" / "scene.blend"
+    recipe = {"operations": BASE_RECIPE + [
+        {"op": "create_animation", "schema": {"animation_name": "idle",
+            "mode": "loop_idle", "frame_start": 1, "frame_end": 48, "fps": 24,
+            "targets": ["hero_core"], "params": {"sway_degrees": 8.0}}},
+    ]}
+    res = runner.run_job(runner.build_job(
+        "full_pipeline", base, blend, budget=PREVIEW_BUDGET, recipe=recipe),
+        blender_exe, 300)
+    assert res["ok"], res
+    insp = runner.run_job(runner.build_job("inspect", base, blend),
+                          blender_exe, 120)["inspection"]
+    anim = insp["animation"]
+    assert anim["moving_object_count"] >= 1
+    hero = next(o for o in anim["sampled_objects"] if o["name"] == "hero_core")
+    # 8deg sway -> ~0.14rad delta at quarter frames; rests at fs/fe
+    assert 0.1 < hero["max_rotation_delta"] < 0.35
+    assert hero["sample_count"] == 5
 
 
 def test_geometry_node_recipe_dispatch_is_inspectable(blender_exe, tmp_path):

@@ -9,9 +9,8 @@
 | `scroll_linked` | GLB + `camera_path.json` + R3F code |
 | `exploded_view` | animated parts + labels |
 | `reveal` | keyframed visibility / material alpha |
-| `loop_idle` | seamless loop |
+| `loop_idle` | seamless breathing loop: subtle scale pulse + yaw sway returning to rest (params: `sway_degrees`, `breathe`) |
 | `light_pulse` | emission / intensity animation |
-| `rig_basic` | basic armature/pose, only when requested |
 
 ## Keyframe rules
 
