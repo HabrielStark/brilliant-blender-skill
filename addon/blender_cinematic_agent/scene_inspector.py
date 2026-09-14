@@ -202,7 +202,7 @@ def inspect_scene():
             "collection": _collection_of(obj),
             "faces": faces,
             "verts": len(obj.data.vertices) if obj.type == "MESH" and obj.data else 0,
-            "materials": [m.name for m in obj.data.materials] if getattr(obj.data, "materials", None) else [],
+            "materials": [m.name for m in obj.data.materials if m] if getattr(obj.data, "materials", None) else [],
             "modifiers": [{"type": m.type, "show_render": m.show_render} for m in obj.modifiers],
             "location": list(obj.location),
             "world_location": [float(v) for v in obj.matrix_world.translation],

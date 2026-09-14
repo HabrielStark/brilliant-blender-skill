@@ -416,7 +416,6 @@ class CameraSchema(_Strict):
     look_at: Optional[Vec3] = None
     composition: CameraComposition = Field(default_factory=CameraComposition)
     lens: Lens = Field(default_factory=Lens)
-    motion: Optional[dict] = None
 
 
 # --------------------------------------------------------------------------- #

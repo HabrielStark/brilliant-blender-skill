@@ -366,6 +366,16 @@ def _connect_image_mapping(nt, tex, tex_schema):
     _set_node_input(mapping, ["Rotation"], (0.0, 0.0, rotation))
     source_name = {"generated": "Generated", "object": "Object"}.get(projection, "UV")
     source = _node_output(texcoord, [source_name, "UV", "Generated"])
+    uv_map = tex_schema.get("uv_map")
+    if uv_map and projection == "uv":
+        # Named UV channel: swap the TexCoord output for a UVMap node so the
+        # texture reads the declared map instead of the active one.
+        uv_node = nt.nodes.new("ShaderNodeUVMap")
+        uv_node.name = f"{tex.name}_UVMap"
+        uv_node.uv_map = str(uv_map)
+        src = _node_output(uv_node, ["UV"])
+        if src is not None:
+            source = src
     if source and _node_input(mapping, ["Vector"]) and _node_input(tex, ["Vector"]):
         nt.links.new(source, _node_input(mapping, ["Vector"]))
         nt.links.new(_node_output(mapping, ["Vector"]), _node_input(tex, ["Vector"]))
@@ -1947,7 +1957,23 @@ def op_create_geometry_nodes(p):
     mod["bcas_instance_size"] = inst_size
     mod["bcas_detail_count"] = len(detail_objects)
     mod["bcas_detail_roles"] = obj["gn_generated_roles"]
+    geo_policy = (schema.get("export_policy") or {})
+    # apply_before_glb=False exports the RAW base geometry (the exporter
+    # disables this object's modifiers during GLB export) — useful for
+    # low-poly proxies/LODs. keep_modifier_in_blend=False bakes the group
+    # into the mesh so the .blend carries plain geometry.
+    obj["bcas_apply_before_glb"] = bool(geo_policy.get("apply_before_glb", True))
+    baked = False
+    if not geo_policy.get("keep_modifier_in_blend", True):
+        with bpy.context.temp_override(object=obj, active_object=obj,
+                                       selected_objects=[obj]):
+            try:
+                bpy.ops.object.modifier_apply(modifier=mod.name)
+                baked = True
+            except RuntimeError:
+                pass
     return {
+        "baked_in_blend": baked,
         "node_group": name,
         "recipe": recipe,
         "seed": seed,
@@ -2099,7 +2125,9 @@ def op_create_animation(p):
     scene.frame_set(fs)
     bpy.context.view_layer.update()
     scene["animation_mode"] = mode
-    scene["animation_clip_name"] = (schema.get("export") or {}).get("clip_name", schema.get("animation_name"))
+    export_spec = schema.get("export") or {}
+    scene["animation_clip_name"] = export_spec.get("clip_name", schema.get("animation_name"))
+    scene["animation_export_glb"] = bool(export_spec.get("include_in_glb", False))
     return {"animation": schema.get("animation_name"), "mode": mode, "keyed": keyed,
             "frame_range": [fs, fe], "camera_path": bool(scene.get("camera_path_json"))}
 

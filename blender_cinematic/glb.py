@@ -67,12 +67,24 @@ def inspect_glb(path: str | Path) -> dict:
     images = j.get("images", [])
     # external (uri) image references are missing-texture risks for the web
     external = [im.get("uri") for im in images if im.get("uri") and not im["uri"].startswith("data:")]
+    accessors = j.get("accessors", [])
+    faces = 0
+    for mesh in j.get("meshes", []):
+        for prim in mesh.get("primitives", []):
+            idx = prim.get("indices")
+            if isinstance(idx, int) and idx < len(accessors):
+                faces += int(accessors[idx].get("count", 0)) // 3
+            else:
+                pos = (prim.get("attributes") or {}).get("POSITION")
+                if isinstance(pos, int) and pos < len(accessors):
+                    faces += int(accessors[pos].get("count", 0)) // 3
     return {
         "size_bytes": p.stat().st_size,
         "size_mb": round(p.stat().st_size / (1024 * 1024), 3),
         "nodes": len(j.get("nodes", [])),
         "node_names": [n.get("name") for n in j.get("nodes", [])],
         "meshes": len(j.get("meshes", [])),
+        "mesh_total_faces": faces,
         "materials": len(j.get("materials", [])),
         "animations": len(j.get("animations", [])),
         "animation_names": [a.get("name") for a in j.get("animations", [])],

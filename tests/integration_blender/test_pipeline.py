@@ -718,6 +718,82 @@ def test_generalist_utility_ops_end_to_end(blender_exe, tmp_path):
         pytest.approx(3.5, abs=0.2)
 
 
+def test_export_policy_and_animation_export_flags(blender_exe, tmp_path):
+    """apply_before_glb=False exports raw base geometry; keep_modifier_in_
+    blend=False bakes GN into the mesh; include_in_glb controls clip export."""
+    from blender_cinematic.glb import inspect_glb
+    _, base = task_workspace(tmp_path, "export_policy")
+    blend = base / "final" / "scene.blend"
+    recipe = {"operations": BASE_RECIPE + [
+        {"op": "create_mesh_primitive", "type": "cube", "name": "raw_host",
+         "size": 1.0, "location": [2.0, 0, 1.0], "collection": "SUBJECT"},
+        {"op": "create_mesh_primitive", "type": "cube", "name": "bake_host",
+         "size": 1.0, "location": [-2.0, 0, 1.0], "collection": "SUBJECT"},
+        {"op": "create_geometry_nodes", "schema": {
+            "node_group_name": "GN_Raw", "recipe": "GN_RockScatter",
+            "target_object": "raw_host",
+            "inputs": {"rock_count": 30, "rock_size": 0.08, "seed": 5},
+            "export_policy": {"apply_before_glb": False,
+                              "keep_modifier_in_blend": True}}},
+        {"op": "create_geometry_nodes", "schema": {
+            "node_group_name": "GN_Bake", "recipe": "GN_RockScatter",
+            "target_object": "bake_host",
+            "inputs": {"rock_count": 30, "rock_size": 0.08, "seed": 6},
+            "export_policy": {"apply_before_glb": True,
+                              "keep_modifier_in_blend": False}}},
+    ]}
+    res = runner.run_job(runner.build_job(
+        "full_pipeline", base, blend, budget=PREVIEW_BUDGET, recipe=recipe,
+        output={"glb": str(base / "final" / "scene.glb")}),
+        blender_exe, 300)
+    assert res["ok"], res
+    gn = [o for o in res["operations"] if o.get("recipe") == "GN_RockScatter"]
+    assert any(o.get("baked_in_blend") for o in gn)
+    # bake_host: modifier applied -> plain mesh with the scattered faces baked in
+    insp = runner.run_job(runner.build_job("inspect", base, blend),
+                          blender_exe, 120)["inspection"]
+    bake = next(o for o in insp["objects"] if o["name"] == "bake_host")
+    raw = next(o for o in insp["objects"] if o["name"] == "raw_host")
+    assert bake.get("modifiers") == []
+    assert bake["faces"] > 100 > raw["faces"]  # baked scatter vs live cube
+    raw_faces = inspect_glb(base / "final" / "scene.glb")["mesh_total_faces"]
+
+    # control: same scene but raw_host exports WITH modifiers applied
+    _, base2 = task_workspace(tmp_path, "export_policy_ctrl")
+    blend2 = base2 / "final" / "scene.blend"
+    recipe["operations"][-2]["schema"]["export_policy"]["apply_before_glb"] = True
+    res2 = runner.run_job(runner.build_job(
+        "full_pipeline", base2, blend2, budget=PREVIEW_BUDGET, recipe=recipe,
+        output={"glb": str(base2 / "final" / "scene.glb")}),
+        blender_exe, 300)
+    assert res2["ok"], res2
+    baked_faces = inspect_glb(base2 / "final" / "scene.glb")["mesh_total_faces"]
+    # raw-only export must carry far fewer faces than the applied export
+    assert baked_faces > raw_faces + 500, (raw_faces, baked_faces)
+
+
+def test_animation_include_in_glb_flag_controls_clip_export(blender_exe, tmp_path):
+    """include_in_glb=False must actually exclude the animation from the GLB."""
+    from blender_cinematic.glb import inspect_glb
+    for include in (True, False):
+        _, base = task_workspace(tmp_path, f"anim_glb_{include}")
+        blend = base / "final" / "scene.blend"
+        recipe = {"operations": BASE_RECIPE + [
+            {"op": "create_animation", "schema": {
+                "animation_name": "Spin", "mode": "turntable",
+                "frame_start": 1, "frame_end": 48, "fps": 24,
+                "targets": ["hero_core"],
+                "export": {"include_in_glb": include, "clip_name": "Spin"}}},
+        ]}
+        res = runner.run_job(runner.build_job(
+            "full_pipeline", base, blend, budget=PREVIEW_BUDGET, recipe=recipe,
+            output={"glb": str(base / "final" / "scene.glb")}),
+            blender_exe, 300)
+        assert res["ok"], res
+        glb = inspect_glb(base / "final" / "scene.glb")
+        assert (glb["animations"] > 0) == include, (include, glb)
+
+
 def test_add_modifier_boolean_missing_cutter_errors(blender_exe, tmp_path):
     """A BOOLEAN with a missing/invalid operand fails cleanly, no dead modifier."""
     _, base = task_workspace(tmp_path, "mod_bool_neg")
