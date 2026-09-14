@@ -952,3 +952,65 @@ def test_adjust_ops_patch_lights_materials_and_expose_world(blender_exe, tmp_pat
     assert mat["base_color"][0] == pytest.approx(0.02, abs=0.01)
     assert insp["world"] is not None
     assert insp["world"]["strength"] == pytest.approx(0.4, abs=0.01)
+
+
+def test_critique_loop_converges_on_broken_scene(blender_exe, tmp_path):
+    """The weak-model loop, mechanised: start from a scene with no camera and
+    near-black lighting, then apply the top fail diagnosis each round —
+    inspect -> diagnose -> apply suggested ops -> re-render. Converging to
+    zero fail diagnoses with a visible subject proves the critique carries
+    enough judgment to iterate without an operator's eye."""
+    from blender_cinematic.critique import diagnose
+
+    _, base = task_workspace(tmp_path, "critique_loop")
+    blend = base / "final" / "scene.blend"
+    broken = {"operations": [
+        {"op": "ensure_standard_collections"},
+        {"op": "create_mesh_primitive", "type": "cube", "name": "hero",
+         "size": 2.0, "location": [0, 0, 1.0], "collection": "SUBJECT"},
+        {"op": "create_material", "schema": {"name": "hero_mat",
+            "preset": "glossy_plastic",
+            "pbr": {"base_color": [0.2, 0.25, 0.35, 1.0], "roughness": 0.4},
+            "target_objects": ["hero"]}},
+        {"op": "adjust_world", "strength": 0.03},
+    ]}
+    res = runner.run_job(runner.build_job(
+        "initialize_blend", base, blend), blender_exe, 300)
+    assert res["ok"], res
+    res = runner.run_job(runner.build_job(
+        "apply_recipe", base, blend, recipe=broken), blender_exe, 300)
+    assert res["ok"], res
+
+    preview = base / "iterations" / "critique_preview.png"
+    history = []
+    for _round in range(5):
+        insp = runner.run_job(runner.build_job(
+            "inspect", base, blend, output={}), blender_exe, 180)["inspection"]
+        metrics = None
+        if insp.get("active_camera"):
+            runner.run_job(runner.build_job(
+                "render_preview", base, blend, budget=PREVIEW_BUDGET,
+                output={"image": str(preview)}), blender_exe, 300)
+            metrics = image_sanity(preview) if preview.exists() else None
+        lint = lint_scene(insp, None)
+        diags = diagnose(insp, image_metrics=metrics,
+                         render_path=preview if preview.exists() else None,
+                         lint=lint)
+        fails = [d for d in diags if d["severity"] == "fail"]
+        history.append({"round": _round,
+                        "fails": [d["code"] for d in fails]})
+        if not fails:
+            break
+        ops = [o for o in fails[0]["ops"] if o.get("op")]
+        if not ops:
+            break
+        applied = runner.run_job(runner.build_job(
+            "apply_recipe", base, blend, recipe={"operations": ops}),
+            blender_exe, 300)
+        assert applied["ok"], applied
+
+    print("\ncritique loop:", history)
+    assert preview.exists(), history
+    final_metrics = image_sanity(preview)
+    assert final_metrics["pct_near_black"] < 0.6, history
+    assert not fails, history

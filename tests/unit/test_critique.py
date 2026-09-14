@@ -155,9 +155,23 @@ def test_saliency_centroid_emits_reframe_op(tmp_path):
 def test_diagnose_returns_empty_for_healthy_scene():
     img = {"pct_near_black": 0.1, "pct_near_white": 0.05,
            "edge_density": 0.05, "contrast": 0.1}
-    diags = diagnose(_inspection(objects=[_subject("hero")]),
-                     image_metrics=img)
+    objs = [
+        _subject("hero"), _subject("accent", loc=(1, 0, 0)),
+        {"name": "ground", "collection": "ENVIRONMENT",
+         "in_camera_frame": True, "world_location": [0, 0, -1]},
+    ]
+    diags = diagnose(_inspection(objects=objs), image_metrics=img)
     assert diags == []
+
+
+def test_sparse_scene_flagged_as_generic():
+    objs = [_subject("hero")]
+    diags = diagnose(_inspection(objects=objs))
+    codes = {d["code"] for d in diags}
+    assert "composition.no_environment" in codes
+    assert "composition.too_sparse" in codes
+    d = next(x for x in diags if x["code"] == "composition.no_environment")
+    assert any(o["op"] == "create_mesh_primitive" for o in d["ops"])
 
 
 def test_adjust_light_and_material_validate():

@@ -395,3 +395,9 @@ normals · product/mechanical subject made from too few meaningful parts.
 | `references/agent-orchestration.md` | bounded sub-agent roles, dispatch, ownership, and merge rules |
 | `references/visual-verification.md` | actual-pixel, animation, browser, mobile, and review-integrity gates |
 | `docs/prompt-scenario-evals.md` | prompt artifact eval levels and provenance boundaries |
+
+**Worked exemplars:** `examples://<task_id>` MCP resources expose each benchmark
+task's full manifest + recipe + checks (`examples://index` lists them). For a
+new brief, fetch the closest archetype — product, character, landscape,
+interior, typography, VFX, web — and adapt its structure rather than authoring
+a recipe from scratch.

@@ -37,6 +37,9 @@ def test_resources_and_prompts(ctx):
     assert "docs://animation-camera-paths" in uris
     assert "docs://composition-rubric" in uris
     assert "docs://index" in uris
+    # worked task recipes must be reachable — the exemplars a weak model adapts
+    assert "examples://index" in uris
+    assert "examples://product_hero_watch" in uris
 
 
 def test_validate_manifest_tool(ctx):

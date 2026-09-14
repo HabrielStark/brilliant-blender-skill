@@ -59,6 +59,9 @@ skill folder (`SKILL.md`) so the agent loads the workflow rules too.
 ## Resources & prompts
 
 - `docs://camera-language`, `docs://visual-critique-rubric`, … (the playbooks).
+- `examples://<task_id>` — the full worked benchmark task (manifest + recipe +
+  checks) for each archetype; fetch the closest one to your brief and adapt it
+  instead of authoring a recipe blind.
 - `project://{task_id}/scene_manifest.json`, `project://{task_id}/final_report.md`,
   `blender://{task_id}/hardware_report.json`, `blender://{task_id}/current_scene.json`.
 - Prompts: `cinematic_scene_workflow`, `reference_match_workflow`,

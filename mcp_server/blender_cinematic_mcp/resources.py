@@ -12,6 +12,7 @@ from .security import ServerContext
 
 _REPO_ROOT = Path(__file__).resolve().parents[2]
 _REFS = _REPO_ROOT / "references"
+_TASKS = _REPO_ROOT / "benchmarks" / "tasks"
 
 def _doc_resources() -> dict[str, str]:
     """Expose every playbook in references/ - a doc that agents cannot reach
@@ -19,6 +20,14 @@ def _doc_resources() -> dict[str, str]:
     if not _REFS.is_dir():
         return {}
     return {p.stem: p.name for p in sorted(_REFS.glob("*.md"))}
+
+
+def _example_tasks() -> dict[str, str]:
+    """Worked end-to-end task recipes — the exemplars a weak model adapts
+    instead of authoring blind."""
+    if not _TASKS.is_dir():
+        return {}
+    return {p.stem: p.name for p in sorted(_TASKS.glob("*.json"))}
 
 
 def register_resources(mcp, ctx: ServerContext) -> None:
@@ -37,6 +46,20 @@ def register_resources(mcp, ctx: ServerContext) -> None:
     @mcp.resource("docs://index", name="index", mime_type="text/plain")
     def doc_index() -> str:
         return "\n".join(sorted(_doc_resources()))
+
+    for key, fname in _example_tasks().items():
+        def make_task(fn=fname):
+            def res() -> str:
+                return _read(_TASKS / fn)
+            return res
+        fn_obj = make_task()
+        fn_obj.__name__ = f"example_{key.replace('-', '_')}"
+        mcp.resource(f"examples://{key}", name=key,
+                     mime_type="application/json")(fn_obj)
+
+    @mcp.resource("examples://index", name="examples_index", mime_type="text/plain")
+    def examples_index() -> str:
+        return "\n".join(sorted(_example_tasks()))
 
     @mcp.resource("project://{task_id}/scene_manifest.json", mime_type="application/json")
     def scene_manifest(task_id: str) -> str:

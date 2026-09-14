@@ -154,6 +154,13 @@ def _check_lint(lint, inspection: dict, out: list) -> None:
                  {"op": "add_light", "schema": {
                      "name": f"catch_{str(loc)[:24]}", "type": "AREA",
                      "power": 150, "size": 2.0, "position_role": "rim"}}]))
+        elif code == "material.monotone":
+            emitted.add(code)
+            out.append(_diag(
+                "warn", "fix.material_monotone",
+                "materials are near-identical — a finished scene needs "
+                "distinct surface reads (matte body / glass / emissive / metal)",
+                msg, []))
 
 
 # --------------------------------------------------------------------------- #
@@ -191,6 +198,30 @@ def _check_exposure(img: dict, out: list) -> None:
             [{"op": "add_light", "schema": {
                 "name": "rescue_key", "type": "AREA", "power": 400,
                 "size": 4.0, "position_role": "front_left_high"}}]))
+
+
+def _check_scene_richness(inspection: dict, out: list) -> None:
+    """A scene with one primitive on nothing is technically renderable but
+    reads as a default blockout — the generic-AI-slop signature."""
+    subjects = _subject_objects(inspection)
+    env = [o for o in inspection.get("objects", [])
+           if o.get("collection") == "ENVIRONMENT"]
+    if subjects and not env:
+        out.append(_diag(
+            "warn", "composition.no_environment",
+            "subject floats in empty space — no ground, backdrop, or set "
+            "dressing; every finished scene needs an ENVIRONMENT layer",
+            f"subjects={len(subjects)} environment_objects=0",
+            [{"op": "create_mesh_primitive", "type": "plane",
+              "name": "ground_plane", "size": 20,
+              "collection": "ENVIRONMENT"}]))
+    if len(subjects) == 1 and len(env) <= 1:
+        out.append(_diag(
+            "warn", "composition.too_sparse",
+            "single-subject scene with no supporting detail — the reference "
+            "exemplars layer body, accents, and set elements; a lone primitive "
+            "reads as a blockout",
+            f"subjects={len(subjects)} environment={len(env)}", []))
 
 
 def _check_subject_visible(inspection: dict, out: list) -> None:
@@ -422,6 +453,7 @@ def diagnose(inspection: dict, image_metrics: dict | None = None,
     out: list[dict] = []
     _check_lint(lint, inspection, out)
     _check_exposure(image_metrics, out)
+    _check_scene_richness(inspection, out)
     _check_subject_visible(inspection, out)
     _check_materials(inspection, out)
     _check_readability(inspection, readability_report, out)
