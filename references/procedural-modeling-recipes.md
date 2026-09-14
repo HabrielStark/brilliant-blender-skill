@@ -3,7 +3,20 @@
 ## Modifiers (allowlisted in `recipes.py`)
 
 `BEVEL`, `SUBSURF`, `ARRAY`, `MIRROR`, `SOLIDIFY`, `WEIGHTED_NORMAL`, `DECIMATE`,
-`TRIANGULATE`, `SHRINKWRAP`, `BOOLEAN`, `CURVE`, `WIREFRAME`.
+`TRIANGULATE`, `SHRINKWRAP`, `BOOLEAN`, `CURVE`, `WIREFRAME`, `DISPLACE`.
+
+`add_modifier` `params` accept **object and texture names** and resolve them at
+build time — `{"modifier": "BOOLEAN", "params": {"object": "cutter_name",
+"operation": "DIFFERENCE"}}`, `{"modifier": "DISPLACE", "params": {"texture":
+"noise_tex", "strength": 0.1}}`, `{"modifier": "MIRROR", "params":
+{"mirror_object": "rig_root"}}` all work. Unknown or mistyped params are
+reported in the op result as `skipped_params` instead of silently dropping.
+
+`DISPLACE` needs a texture datablock — create one first with
+`create_procedural_texture` (`type`: `CLOUDS`, `VORONOI`, `DISTORTED_NOISE`,
+`NOISE`, `MARBLE`, `WOOD`, `MAGIC`, `BLEND`, `STUCI`; plus `noise_scale`,
+`contrast`, `noise_depth`). Use it for terrain relief, worn surfaces, and
+organic asymmetry; keep `strength` small on hero forms.
 
 ### Hard-surface quality rules
 
@@ -17,7 +30,27 @@
 - Recalculate/validate **normals**; flipped normals are a hard error.
 - Apply **scale** before export (unapplied scale + export request is an error).
 - Use **array/mirror/instances** instead of hundreds of duplicate loose objects.
-- `BOOLEAN` only when the result is validated (non-manifold artifacts warn/fail).
+- `BOOLEAN` only when the result is validated — the op reports
+  `boolean: {eval_faces, non_manifold_edges}` and fails cleanly when the
+  operand is missing, not a mesh, or the target itself.
+
+### Boolean cutter workflow (recesses, ports, slots)
+
+For a real inset (USB port, vent slot, button well) instead of a surface
+decal:
+
+1. Create the cutter as a normal primitive in `HELPERS` with
+   `"hide_render": true` (also hides it from the viewport; it still
+   evaluates as a modifier operand). `add_modifier` auto-hides the operand
+   too, but the flag keeps intent explicit.
+2. `add_modifier` `BOOLEAN` on the target with `params.object` = cutter
+   name. Place `BOOLEAN` **before** `BEVEL` in the op order so cut edges
+   get the chamfer real ports have.
+3. Keep a thin dark plate just inside the cut as the port's inner wall —
+   a hole alone reads as a void, not a connector.
+4. Hidden cutters are excluded from renders and `use_visible` GLB exports;
+   verify the cut with the `boolean` health fields in the op result
+   (`non_manifold_edges` should stay 0) rather than trusting the name.
 
 ## Authored craft detail operations
 

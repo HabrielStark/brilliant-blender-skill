@@ -71,6 +71,7 @@ def inspect_glb(path: str | Path) -> dict:
         "size_bytes": p.stat().st_size,
         "size_mb": round(p.stat().st_size / (1024 * 1024), 3),
         "nodes": len(j.get("nodes", [])),
+        "node_names": [n.get("name") for n in j.get("nodes", [])],
         "meshes": len(j.get("meshes", [])),
         "materials": len(j.get("materials", [])),
         "animations": len(j.get("animations", [])),

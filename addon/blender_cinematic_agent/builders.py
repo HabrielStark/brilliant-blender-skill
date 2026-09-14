@@ -98,6 +98,11 @@ def op_create_mesh_primitive(p):
     if p.get("scale"):
         obj.scale = Vector(p["scale"])
         _apply_mesh_scale(obj)
+    if p.get("hide_render"):
+        # Helper object: hidden from render, viewport, and visible-only
+        # exports, but still evaluated for modifiers (boolean operands).
+        obj.hide_render = True
+        obj.hide_set(True)
     return {"created": obj.name, "faces": len(obj.data.polygons)}
 
 
@@ -105,7 +110,32 @@ def op_create_mesh_primitive(p):
 _MOD_MAP = {"BEVEL": "BEVEL", "SUBSURF": "SUBSURF", "ARRAY": "ARRAY", "MIRROR": "MIRROR",
             "SOLIDIFY": "SOLIDIFY", "WEIGHTED_NORMAL": "WEIGHTED_NORMAL", "DECIMATE": "DECIMATE",
             "TRIANGULATE": "TRIANGULATE", "SHRINKWRAP": "SHRINKWRAP", "BOOLEAN": "BOOLEAN",
-            "CURVE": "CURVE", "WIREFRAME": "WIREFRAME"}
+            "CURVE": "CURVE", "WIREFRAME": "WIREFRAME", "DISPLACE": "DISPLACE"}
+
+
+_TEX_TYPES = {"CLOUDS", "VORONOI", "DISTORTED_NOISE", "NOISE", "MARBLE",
+              "WOOD", "MAGIC", "BLEND", "STUCI"}
+
+
+def op_create_procedural_texture(p):
+    """Create a legacy texture datablock for DISPLACE/other texture slots."""
+    name = p["name"]
+    ttype = str(p.get("type", "CLOUDS")).upper()
+    if ttype not in _TEX_TYPES:
+        return {"error": f"texture type not supported: {ttype}"}
+    tex = bpy.data.textures.get(name) or bpy.data.textures.new(name, type=ttype)
+    if tex.type != ttype:
+        tex.type = ttype
+    applied = {}
+    for k in ("noise_scale", "noise_intensity", "contrast", "noise_depth",
+              "turbulence", "nabla", "noise_basis"):
+        if k in p and hasattr(tex, k):
+            try:
+                setattr(tex, k, p[k] if k == "noise_basis" else float(p[k]))
+                applied[k] = getattr(tex, k)
+            except (TypeError, ValueError):
+                pass
+    return {"texture": tex.name, "type": tex.type, "params": applied}
 
 
 def op_add_modifier(p):
@@ -113,11 +143,68 @@ def op_add_modifier(p):
     if not obj:
         return {"error": f"target not found: {p['target']}"}
     mtype = _MOD_MAP.get(p["modifier"], p["modifier"])
+    params = p.get("params") or {}
+    # A BOOLEAN without a resolvable mesh operand is dead weight: fail
+    # cleanly instead of leaving a no-op modifier on the target.
+    if mtype == "BOOLEAN":
+        if params.get("object") is not None:
+            cutter = bpyutil.get_object(str(params["object"]))
+            if cutter is None:
+                return {"error": f"BOOLEAN operand not found: {params['object']}"}
+            if cutter is obj:
+                return {"error": "BOOLEAN operand cannot be the target itself"}
+            if cutter.type != "MESH":
+                return {"error": f"BOOLEAN operand must be a mesh, got {cutter.type}: {cutter.name}"}
     mod = obj.modifiers.new(name=f"{mtype.title()}", type=mtype)
-    for k, v in (p.get("params") or {}).items():
-        if hasattr(mod, k):
+    applied, skipped = {}, []
+    for k, v in params.items():
+        if not hasattr(mod, k):
+            skipped.append(k)
+            continue
+        # JSON params can only carry names; object-typed properties
+        # (BOOLEAN.object, SHRINKWRAP.target, CURVE.object,
+        # MIRROR.mirror_object, ARRAY.start_cap/end_cap) and
+        # texture-typed ones (DISPLACE.texture) need the ref.
+        if isinstance(v, str):
+            ref = bpyutil.get_object(v)
+            if ref is None:
+                ref = bpy.data.textures.get(v)
+            if ref is not None:
+                v = ref
+        try:
             setattr(mod, k, v)
-    return {"modifier": mod.name, "on": obj.name}
+            applied[k] = getattr(v, "name", v)
+        except (TypeError, ValueError) as exc:
+            skipped.append(f"{k}: {exc}")
+    result = {"modifier": mod.name, "on": obj.name, "params": applied,
+              **({"skipped_params": skipped} if skipped else {})}
+    if mtype == "BOOLEAN" and applied.get("object"):
+        cutter = bpyutil.get_object(str(applied["object"]))
+        if cutter is not None:
+            # Operand is a tool, not visible geometry. hide_set (not
+            # hide_viewport) keeps it in the depsgraph so the boolean
+            # still evaluates while exports skip it.
+            cutter.hide_render = True
+            cutter.hide_set(True)
+        result["boolean"] = _boolean_health(obj)
+    return result
+
+
+def _boolean_health(obj):
+    """Evaluate the mesh with the new modifier and count non-manifold edges."""
+    import bmesh
+    try:
+        ev = obj.evaluated_get(bpy.context.evaluated_depsgraph_get())
+        mesh = ev.to_mesh()
+        bm = bmesh.new()
+        bm.from_mesh(mesh)
+        non_manifold = sum(1 for e in bm.edges if not e.is_manifold)
+        faces = len(bm.faces)
+        bm.free()
+        ev.to_mesh_clear()
+        return {"eval_faces": faces, "non_manifold_edges": non_manifold}
+    except Exception as exc:  # eval can fail on degenerate inputs
+        return {"eval_error": str(exc)}
 
 
 def op_add_bevel_modifier(p):
@@ -319,6 +406,8 @@ def _build_material(schema):
     _set_input(bsdf, ["Alpha"], float(pbr.get("alpha", 1.0)))
     _set_input(bsdf, ["IOR"], float(pbr.get("ior", 1.45)))
     _set_input(bsdf, ["Coat Weight", "Clearcoat"], float(pbr.get("clearcoat", 0.0)))
+    _set_input(bsdf, ["Sheen Weight", "Sheen"], float(pbr.get("sheen", 0.0)))
+    _set_input(bsdf, ["Subsurface Weight", "Subsurface"], float(pbr.get("subsurface", 0.0)))
     _set_input(bsdf, ["Transmission Weight", "Transmission"], float(pbr.get("transmission", 0.0)))
     if pbr.get("emission_strength"):
         _set_input(bsdf, ["Emission Color", "Emission"],
@@ -2058,6 +2147,7 @@ BUILDERS = {
     "set_scene_metadata": op_set_scene_metadata,
     "create_mesh_primitive": op_create_mesh_primitive,
     "add_modifier": op_add_modifier,
+    "create_procedural_texture": op_create_procedural_texture,
     "add_bevel_modifier": op_add_bevel_modifier,
     "add_subdivision": op_add_subdivision,
     "add_array_modifier": op_add_array_modifier,

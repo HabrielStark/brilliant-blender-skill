@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 4.8,
+    "runtime_seconds": 4.7,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\character_bust_portrait_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\character_bust_portrait_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\character_bust_portrait_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\character_bust_portrait_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
@@ -20,9 +20,9 @@
           "name": "pedestal_stone_round",
           "contrast": 0.1309,
           "edge_density": 0.0129,
-          "separation": 0.0978,
+          "separation": 0.0977,
           "mean_luma": 0.3381,
-          "surround_luma": 0.4359,
+          "surround_luma": 0.4358,
           "readable": true
         },
         {
@@ -38,7 +38,7 @@
           "name": "shoulder_mass_bust",
           "contrast": 0.1661,
           "edge_density": 0.0153,
-          "separation": 0.1211,
+          "separation": 0.121,
           "mean_luma": 0.408,
           "surround_luma": 0.287,
           "readable": true
@@ -48,8 +48,8 @@
           "contrast": 0.1186,
           "edge_density": 0.031,
           "separation": 0.0968,
-          "mean_luma": 0.5193,
-          "surround_luma": 0.4225,
+          "mean_luma": 0.5192,
+          "surround_luma": 0.4224,
           "readable": true
         },
         {
@@ -58,16 +58,16 @@
           "edge_density": 0.067,
           "separation": 0.0797,
           "mean_luma": 0.378,
-          "surround_luma": 0.2984,
+          "surround_luma": 0.2983,
           "readable": true
         },
         {
           "name": "eye_left_white",
-          "contrast": 0.1965,
+          "contrast": 0.1964,
           "edge_density": 0.4375,
-          "separation": 0.0171,
+          "separation": 0.017,
           "mean_luma": 0.4428,
-          "surround_luma": 0.4599,
+          "surround_luma": 0.4598,
           "readable": true
         },
         {
@@ -81,10 +81,10 @@
         },
         {
           "name": "brow_left_arch_01",
-          "contrast": 0.1586,
+          "contrast": 0.1585,
           "edge_density": 0.3291,
           "separation": 0.0409,
-          "mean_luma": 0.353,
+          "mean_luma": 0.3529,
           "surround_luma": 0.3938,
           "readable": true
         },
@@ -99,29 +99,29 @@
         },
         {
           "name": "nose_bridge_wedge",
-          "contrast": 0.0629,
+          "contrast": 0.0628,
           "edge_density": 0.0348,
           "separation": 0.0106,
-          "mean_luma": 0.5241,
-          "surround_luma": 0.5347,
+          "mean_luma": 0.524,
+          "surround_luma": 0.5346,
           "readable": true
         },
         {
           "name": "mouth_soft_crease",
           "contrast": 0.0767,
           "edge_density": 0.2065,
-          "separation": 0.0105,
-          "mean_luma": 0.4111,
-          "surround_luma": 0.4006,
+          "separation": 0.0106,
+          "mean_luma": 0.411,
+          "surround_luma": 0.4005,
           "readable": true
         },
         {
           "name": "ear_left",
           "contrast": 0.1519,
           "edge_density": 0.3523,
-          "separation": 0.0139,
+          "separation": 0.0138,
           "mean_luma": 0.3599,
-          "surround_luma": 0.3461,
+          "surround_luma": 0.346,
           "readable": true
         },
         {
@@ -138,7 +138,7 @@
           "contrast": 0.1329,
           "edge_density": 0.0652,
           "separation": 0.0726,
-          "mean_luma": 0.3642,
+          "mean_luma": 0.3641,
           "surround_luma": 0.2916,
           "readable": true
         },
@@ -148,7 +148,7 @@
           "edge_density": 0.1852,
           "separation": 0.0133,
           "mean_luma": 0.3836,
-          "surround_luma": 0.3969,
+          "surround_luma": 0.3968,
           "readable": true
         },
         {
@@ -156,8 +156,8 @@
           "contrast": 0.1573,
           "edge_density": 0.1946,
           "separation": 0.0863,
-          "mean_luma": 0.5038,
-          "surround_luma": 0.4175,
+          "mean_luma": 0.5037,
+          "surround_luma": 0.4174,
           "readable": true
         },
         {
@@ -165,7 +165,7 @@
           "contrast": 0.1556,
           "edge_density": 0.231,
           "separation": 0.0179,
-          "mean_luma": 0.487,
+          "mean_luma": 0.4869,
           "surround_luma": 0.469,
           "readable": true
         },
@@ -174,8 +174,8 @@
           "contrast": 0.1443,
           "edge_density": 0.2049,
           "separation": 0.002,
-          "mean_luma": 0.4568,
-          "surround_luma": 0.4548,
+          "mean_luma": 0.4567,
+          "surround_luma": 0.4547,
           "readable": true
         }
       ],
@@ -187,92 +187,5 @@
     "palette_similarity": null,
     "animation_frame_proof": null,
     "failures": []
-  },
-  "baseline_no_skill": {
-    "task_id": "character_bust_portrait",
-    "mode": "baseline_no_skill",
-    "pass": false,
-    "visual_score": 29,
-    "technical_score": 60,
-    "runtime_seconds": 3.3,
-    "iterations": 1,
-    "artifacts": [
-      null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\character_bust_portrait_baseline_no_skill\\final\\export_final.glb"
-    ],
-    "visual_style_tags": [
-      "missing_preview"
-    ],
-    "readability": null,
-    "reference_metrics": null,
-    "palette_similarity": null,
-    "animation_frame_proof": null,
-    "failures": [
-      "no active camera",
-      "no meaningful lighting",
-      "object has default/auto name: 'Cube'",
-      "no active camera in scene",
-      "scene has no lights and no world illumination",
-      "important object has no material: Cube",
-      "pipeline failed: pipeline_incomplete",
-      "score 29 < min 84",
-      "subject objects 1 < min 16",
-      "visible subject objects 0 < min 13",
-      "missing named subject parts: head, neck, shoulder, eye, brow, nose, mouth, ear, hair, pedestal",
-      "subject faces 6 < min 3000",
-      "subject modifiers 0 < min 3",
-      "smooth subject objects 0 < min 8",
-      "craft detail objects 0 < min 6",
-      "missing named environment parts: backdrop",
-      "subject materials 0 < min 5",
-      "subject procedural materials 0 < min 1"
-    ]
-  },
-  "adversarial_slop_sphere_named_character_keywords": {
-    "task_id": "character_bust_portrait",
-    "mode": "adversarial_slop_sphere_named_character_keywords",
-    "pass": false,
-    "visual_score": 79,
-    "technical_score": 100,
-    "runtime_seconds": 4.5,
-    "iterations": 1,
-    "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\character_bust_portrait_adversarial_slop_sphere_named_character_keywords\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\character_bust_portrait_adversarial_slop_sphere_named_character_keywords\\final\\export_final.glb"
-    ],
-    "visual_style_tags": [
-      "warm_red_bias"
-    ],
-    "readability": {
-      "parts": [
-        {
-          "name": "head_neck_shoulder_eye_brow_nose_mouth_ear_hair_pedestal_blob",
-          "contrast": 0.1288,
-          "edge_density": 0.0044,
-          "separation": 0.0018,
-          "mean_luma": 0.3305,
-          "surround_luma": 0.3287,
-          "readable": true
-        }
-      ],
-      "measured_parts": 1,
-      "readable_parts": 1,
-      "unreadable_parts": []
-    },
-    "reference_metrics": null,
-    "palette_similarity": null,
-    "animation_frame_proof": null,
-    "failures": [
-      "render has no discernible silhouette/detail",
-      "score 79 < min 84",
-      "subject objects 1 < min 16",
-      "visible subject objects 1 < min 13",
-      "subject faces 512 < min 3000",
-      "subject modifiers 0 < min 3",
-      "smooth subject objects 0 < min 8",
-      "craft detail objects 0 < min 6",
-      "subject materials 1 < min 5",
-      "subject procedural materials 0 < min 1"
-    ]
   }
 }

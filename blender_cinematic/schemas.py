@@ -196,6 +196,8 @@ class PBR(_Strict):
     metallic: float = Field(default=0.0, ge=0.0, le=1.0)
     roughness: float = Field(default=0.5, ge=0.0, le=1.0)
     clearcoat: float = Field(default=0.0, ge=0.0, le=1.0)
+    sheen: float = Field(default=0.0, ge=0.0, le=1.0)
+    subsurface: float = Field(default=0.0, ge=0.0, le=1.0)
     alpha: float = Field(default=1.0, ge=0.0, le=1.0)
     emission_color: Optional[Color] = None
     emission_strength: float = Field(default=0.0, ge=0.0)

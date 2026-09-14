@@ -28,6 +28,12 @@ PRIMITIVES = ("cube", "uv_sphere", "ico_sphere", "cylinder", "cone", "plane", "t
 MODIFIERS = (
     "BEVEL", "SUBSURF", "ARRAY", "MIRROR", "SOLIDIFY", "WEIGHTED_NORMAL",
     "DECIMATE", "TRIANGULATE", "SHRINKWRAP", "BOOLEAN", "CURVE", "WIREFRAME",
+    "DISPLACE",
+)
+
+TEXTURE_TYPES = (
+    "CLOUDS", "VORONOI", "DISTORTED_NOISE", "NOISE", "MARBLE",
+    "WOOD", "MAGIC", "BLEND", "STUCI",
 )
 
 # Rough face counts for primitives (default Blender resolution).
@@ -83,9 +89,23 @@ OPERATION_SPECS: dict[str, dict] = {
     "set_scene_metadata": _spec({"data": dict}, {}, "scene"),
     "create_mesh_primitive": _spec(
         {"type": str, "name": str},
-        {"location": list, "rotation": list, "scale": list, "size": (int, float), "collection": str},
+        {"location": list, "rotation": list, "scale": list, "size": (int, float),
+         "collection": str, "hide_render": bool},
     ),
     "add_modifier": _spec({"target": str, "modifier": str}, {"params": dict}),
+    "create_procedural_texture": _spec(
+        {"name": str},
+        {
+            "type": str,
+            "noise_scale": (int, float),
+            "noise_intensity": (int, float),
+            "contrast": (int, float),
+            "noise_depth": (int, float),
+            "turbulence": (int, float),
+            "nabla": (int, float),
+            "noise_basis": str,
+        },
+    ),
     "add_bevel_modifier": _spec({"target": str, "width": (int, float)}, {"segments": int}),
     "add_subdivision": _spec({"target": str}, {"levels": int, "render_levels": int}),
     "add_array_modifier": _spec({"target": str, "count": int}, {"offset": list}),
@@ -465,6 +485,10 @@ def validate_recipe(raw: dict) -> CheckResult:
             m = opn.params.get("modifier")
             if m is not None and m not in MODIFIERS:
                 result.add(error("recipe.bad_modifier", f"unknown modifier '{m}'", loc))
+        if opn.op == "create_procedural_texture":
+            t = opn.params.get("type")
+            if t is not None and str(t).upper() not in TEXTURE_TYPES:
+                result.add(error("recipe.bad_texture", f"unknown texture type '{t}'", loc))
         if opn.op == "add_subdivision":
             _numeric_guard(
                 result,

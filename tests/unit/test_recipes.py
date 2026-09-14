@@ -51,6 +51,19 @@ def test_nested_material_schema_validates_authored_shader_features():
     assert validate_recipe(r).passed
 
 
+def test_pbr_sheen_and_subsurface_fields_validate():
+    r = {"operations": [{
+        "op": "create_material",
+        "schema": {
+            "name": "fabric_soft",
+            "preset": "matte_plastic",
+            "pbr": {"base_color": [0.7, 0.6, 0.5, 1], "roughness": 0.9,
+                    "sheen": 0.5, "subsurface": 0.05},
+        },
+    }]}
+    assert validate_recipe(r).passed
+
+
 def test_nested_schema_errors_are_recipe_errors_not_silent_warnings():
     r = {"operations": [{
         "op": "create_material",
@@ -148,6 +161,36 @@ def test_bad_primitive_and_modifier():
     codes = {i.code for i in res.issues}
     assert "recipe.bad_primitive" in codes
     assert "recipe.bad_modifier" in codes
+
+
+def test_procedural_texture_is_allowlisted_and_typed():
+    r = {"operations": [
+        {"op": "create_procedural_texture", "name": "relief", "type": "CLOUDS",
+         "noise_scale": 0.9, "contrast": 1.4},
+        {"op": "add_modifier", "target": "x", "modifier": "DISPLACE",
+         "params": {"texture": "relief", "strength": 0.1}},
+    ]}
+    assert validate_recipe(r).passed
+
+
+def test_mesh_primitive_hide_render_param_is_known():
+    r = {"operations": [
+        {"op": "create_mesh_primitive", "type": "cube", "name": "cutter",
+         "hide_render": True, "collection": "HELPERS"},
+        {"op": "add_modifier", "target": "body", "modifier": "BOOLEAN",
+         "params": {"object": "cutter", "operation": "DIFFERENCE"}},
+    ]}
+    res = validate_recipe(r)
+    assert not [i for i in res.issues if i.code == "recipe.unknown_param"]
+
+
+def test_procedural_texture_rejects_unknown_type():
+    r = {"operations": [
+        {"op": "create_procedural_texture", "name": "t", "type": "NOT_A_TEXTURE"}
+    ]}
+    res = validate_recipe(r)
+    assert not res.passed
+    assert any(i.code == "recipe.bad_texture" for i in res.issues)
 
 
 def test_complexity_scales_with_subdivision():

@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 4.4,
+    "runtime_seconds": 4.8,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\neon_typography_signage_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\neon_typography_signage_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\neon_typography_signage_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\neon_typography_signage_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark"
@@ -189,103 +189,5 @@
     "palette_similarity": null,
     "animation_frame_proof": null,
     "failures": []
-  },
-  "baseline_no_skill": {
-    "task_id": "neon_typography_signage",
-    "mode": "baseline_no_skill",
-    "pass": false,
-    "visual_score": 29,
-    "technical_score": 60,
-    "runtime_seconds": 3.3,
-    "iterations": 1,
-    "artifacts": [
-      null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\neon_typography_signage_baseline_no_skill\\final\\export_final.glb"
-    ],
-    "visual_style_tags": [
-      "missing_preview"
-    ],
-    "readability": null,
-    "reference_metrics": null,
-    "palette_similarity": null,
-    "animation_frame_proof": null,
-    "failures": [
-      "no active camera",
-      "no meaningful lighting",
-      "object has default/auto name: 'Cube'",
-      "no active camera in scene",
-      "scene has no lights and no world illumination",
-      "important object has no material: Cube",
-      "pipeline failed: pipeline_incomplete",
-      "score 29 < min 84",
-      "subject objects 1 < min 16",
-      "visible subject objects 0 < min 14",
-      "missing named subject parts: sign, letter, tube, bolt, cable, plate, bracket",
-      "subject faces 6 < min 200",
-      "subject modifiers 0 < min 4",
-      "craft detail objects 0 < min 6",
-      "missing named environment parts: wall, floor",
-      "subject materials 0 < min 6",
-      "emissive materials 0 < min 2"
-    ]
-  },
-  "adversarial_slop_dark_box_named_neon_keywords": {
-    "task_id": "neon_typography_signage",
-    "mode": "adversarial_slop_dark_box_named_neon_keywords",
-    "pass": false,
-    "visual_score": 79,
-    "technical_score": 100,
-    "runtime_seconds": 4.1,
-    "iterations": 1,
-    "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\neon_typography_signage_adversarial_slop_dark_box_named_neon_keywords\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\neon_typography_signage_adversarial_slop_dark_box_named_neon_keywords\\final\\export_final.glb"
-    ],
-    "visual_style_tags": [
-      "very_dark"
-    ],
-    "readability": {
-      "parts": [
-        {
-          "name": "sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
-          "contrast": 0.022,
-          "edge_density": 0.0,
-          "separation": 0.0118,
-          "mean_luma": 0.0994,
-          "surround_luma": 0.0876,
-          "readable": false
-        }
-      ],
-      "measured_parts": 1,
-      "readable_parts": 0,
-      "unreadable_parts": [
-        "sign_letter_tube_bolt_cable_plate_bracket_all_in_one"
-      ]
-    },
-    "reference_metrics": null,
-    "palette_similarity": null,
-    "animation_frame_proof": null,
-    "failures": [
-      "render has almost no contrast (flat/empty)",
-      "render has no discernible silhouette/detail",
-      "render is too flat for visual acceptance",
-      "forbidden visual style tags present: very_dark",
-      "score 79 < min 84",
-      "subject objects 1 < min 16",
-      "visible subject objects 1 < min 14",
-      "subject faces 6 < min 200",
-      "subject modifiers 0 < min 4",
-      "craft detail objects 0 < min 6",
-      "missing named environment parts: wall, floor",
-      "subject materials 1 < min 6",
-      "emissive materials 0 < min 2",
-      "named part family 'sign' mostly unreadable (0/1): sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
-      "named part family 'letter' mostly unreadable (0/1): sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
-      "named part family 'tube' mostly unreadable (0/1): sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
-      "named part family 'bolt' mostly unreadable (0/1): sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
-      "named part family 'cable' mostly unreadable (0/1): sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
-      "named part family 'plate' mostly unreadable (0/1): sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
-      "named part family 'bracket' mostly unreadable (0/1): sign_letter_tube_bolt_cable_plate_bracket_all_in_one"
-    ]
   }
 }

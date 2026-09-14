@@ -5,11 +5,11 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 6.2,
+    "runtime_seconds": 5.8,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\glb_check\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\glb_check\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark"
@@ -18,29 +18,29 @@
       "parts": [
         {
           "name": "speaker_body_soft_rounded",
-          "contrast": 0.1322,
-          "edge_density": 0.0761,
-          "separation": 0.1442,
-          "mean_luma": 0.244,
+          "contrast": 0.1319,
+          "edge_density": 0.0767,
+          "separation": 0.1437,
+          "mean_luma": 0.2444,
           "surround_luma": 0.3882,
           "readable": true
         },
         {
           "name": "speaker_top_rubber_lip",
-          "contrast": 0.1088,
+          "contrast": 0.1099,
           "edge_density": 0.2045,
-          "separation": 0.0048,
-          "mean_luma": 0.3181,
-          "surround_luma": 0.3133,
+          "separation": 0.0035,
+          "mean_luma": 0.3165,
+          "surround_luma": 0.313,
           "readable": true
         },
         {
           "name": "speaker_bottom_rubber_lip",
           "contrast": 0.1725,
-          "edge_density": 0.0704,
-          "separation": 0.0037,
-          "mean_luma": 0.3203,
-          "surround_luma": 0.3166,
+          "edge_density": 0.0706,
+          "separation": 0.0014,
+          "mean_luma": 0.3204,
+          "surround_luma": 0.3189,
           "readable": true
         },
         {
@@ -63,7 +63,7 @@
         },
         {
           "name": "handle_anchor_right_rubber",
-          "contrast": 0.0822,
+          "contrast": 0.0821,
           "edge_density": 0.0664,
           "separation": 0.1492,
           "mean_luma": 0.19,
@@ -108,29 +108,29 @@
         },
         {
           "name": "side_usb_port_inset",
-          "contrast": 0.0577,
-          "edge_density": 0.0091,
-          "separation": 0.0871,
-          "mean_luma": 0.0835,
-          "surround_luma": 0.1706,
+          "contrast": 0.0686,
+          "edge_density": 0.0614,
+          "separation": 0.0597,
+          "mean_luma": 0.1211,
+          "surround_luma": 0.1808,
           "readable": true
         },
         {
           "name": "accent_light_bar_blue",
-          "contrast": 0.1707,
-          "edge_density": 0.8474,
-          "separation": 0.1216,
-          "mean_luma": 0.4272,
-          "surround_luma": 0.3056,
+          "contrast": 0.1709,
+          "edge_density": 0.8409,
+          "separation": 0.1291,
+          "mean_luma": 0.427,
+          "surround_luma": 0.2979,
           "readable": true
         },
         {
           "name": "speaker_logo_plate_front",
           "contrast": 0.1733,
           "edge_density": 0.4558,
-          "separation": 0.0937,
+          "separation": 0.0923,
           "mean_luma": 0.3074,
-          "surround_luma": 0.2136,
+          "surround_luma": 0.2151,
           "readable": true
         },
         {
@@ -162,20 +162,20 @@
         },
         {
           "name": "speaker_lower_shadow_band",
-          "contrast": 0.0866,
+          "contrast": 0.0867,
           "edge_density": 0.1263,
-          "separation": 0.0124,
-          "mean_luma": 0.1224,
-          "surround_luma": 0.1348,
+          "separation": 0.0125,
+          "mean_luma": 0.1225,
+          "surround_luma": 0.135,
           "readable": true
         },
         {
           "name": "button_power_round",
           "contrast": 0.1049,
           "edge_density": 0.1168,
-          "separation": 0.0872,
+          "separation": 0.0871,
           "mean_luma": 0.2685,
-          "surround_luma": 0.3557,
+          "surround_luma": 0.3556,
           "readable": true
         },
         {
@@ -191,9 +191,9 @@
           "name": "button_volume_minus_round",
           "contrast": 0.0593,
           "edge_density": 0.0272,
-          "separation": 0.0323,
+          "separation": 0.0324,
           "mean_luma": 0.2121,
-          "surround_luma": 0.2444,
+          "surround_luma": 0.2445,
           "readable": true
         },
         {
@@ -218,36 +218,36 @@
           "name": "side_fabric_seam_left",
           "contrast": 0.1595,
           "edge_density": 0.6303,
-          "separation": 0.0443,
+          "separation": 0.0442,
           "mean_luma": 0.2285,
           "surround_luma": 0.2727,
           "readable": true
         },
         {
           "name": "side_fabric_seam_right",
-          "contrast": 0.0403,
-          "edge_density": 0.0286,
-          "separation": 0.0716,
-          "mean_luma": 0.0757,
-          "surround_luma": 0.1473,
+          "contrast": 0.0536,
+          "edge_density": 0.0804,
+          "separation": 0.085,
+          "mean_luma": 0.0796,
+          "surround_luma": 0.1646,
           "readable": true
         },
         {
           "name": "feet_left_rubber",
           "contrast": 0.201,
           "edge_density": 0.5862,
-          "separation": 0.1131,
+          "separation": 0.1127,
           "mean_luma": 0.3719,
-          "surround_luma": 0.2588,
+          "surround_luma": 0.2591,
           "readable": true
         },
         {
           "name": "feet_right_rubber",
-          "contrast": 0.0309,
+          "contrast": 0.031,
           "edge_density": 0.03,
-          "separation": 0.0725,
-          "mean_luma": 0.1691,
-          "surround_luma": 0.2416,
+          "separation": 0.0735,
+          "mean_luma": 0.1685,
+          "surround_luma": 0.242,
           "readable": true
         },
         {
@@ -335,14 +335,14 @@
           "name": "grille_micro_slot_03",
           "contrast": 0.1017,
           "edge_density": 0.3214,
-          "separation": 0.0686,
+          "separation": 0.0687,
           "mean_luma": 0.159,
           "surround_luma": 0.2276,
           "readable": true
         },
         {
           "name": "grille_micro_slot_04",
-          "contrast": 0.0452,
+          "contrast": 0.0451,
           "edge_density": 0.0,
           "separation": 0.0008,
           "mean_luma": 0.1023,
@@ -423,27 +423,27 @@
         },
         {
           "name": "grille_lower_pin_slot_02",
-          "contrast": 0.1068,
-          "edge_density": 0.4762,
-          "separation": 0.0015,
-          "mean_luma": 0.1722,
-          "surround_luma": 0.1737,
+          "contrast": 0.1084,
+          "edge_density": 0.4921,
+          "separation": 0.0009,
+          "mean_luma": 0.1741,
+          "surround_luma": 0.175,
           "readable": true
         },
         {
           "name": "grille_lower_pin_slot_03",
           "contrast": 0.1017,
           "edge_density": 0.5079,
-          "separation": 0.0887,
+          "separation": 0.0886,
           "mean_luma": 0.1472,
-          "surround_luma": 0.2359,
+          "surround_luma": 0.2358,
           "readable": true
         },
         {
           "name": "grille_lower_pin_slot_04",
           "contrast": 0.1431,
           "edge_density": 0.5286,
-          "separation": 0.1437,
+          "separation": 0.1436,
           "mean_luma": 0.1564,
           "surround_luma": 0.3001,
           "readable": true
@@ -454,16 +454,16 @@
           "edge_density": 0.3667,
           "separation": 0.116,
           "mean_luma": 0.181,
-          "surround_luma": 0.297,
+          "surround_luma": 0.2971,
           "readable": true
         },
         {
           "name": "grille_lower_pin_slot_06",
           "contrast": 0.0751,
           "edge_density": 0.2571,
-          "separation": 0.1281,
+          "separation": 0.128,
           "mean_luma": 0.0926,
-          "surround_luma": 0.2207,
+          "surround_luma": 0.2206,
           "readable": true
         },
         {
@@ -479,9 +479,9 @@
           "name": "grille_lower_pin_slot_08",
           "contrast": 0.0451,
           "edge_density": 0.0909,
-          "separation": 0.1015,
+          "separation": 0.1047,
           "mean_luma": 0.0674,
-          "surround_luma": 0.1689,
+          "surround_luma": 0.1721,
           "readable": true
         },
         {
@@ -497,27 +497,27 @@
           "name": "grille_vertical_weave_shadow_02",
           "contrast": 0.1231,
           "edge_density": 0.5855,
-          "separation": 0.0664,
+          "separation": 0.0665,
           "mean_luma": 0.1676,
           "surround_luma": 0.234,
           "readable": true
         },
         {
           "name": "grille_vertical_weave_shadow_03",
-          "contrast": 0.0589,
-          "edge_density": 0.2735,
-          "separation": 0.0645,
-          "mean_luma": 0.0902,
-          "surround_luma": 0.1547,
+          "contrast": 0.0599,
+          "edge_density": 0.2778,
+          "separation": 0.0646,
+          "mean_luma": 0.0908,
+          "surround_luma": 0.1554,
           "readable": true
         },
         {
           "name": "grille_vertical_weave_shadow_04",
           "contrast": 0.0751,
           "edge_density": 0.119,
-          "separation": 0.0471,
+          "separation": 0.0475,
           "mean_luma": 0.1218,
-          "surround_luma": 0.1689,
+          "surround_luma": 0.1693,
           "readable": true
         },
         {
@@ -526,7 +526,7 @@
           "edge_density": 0.1875,
           "separation": 0.1287,
           "mean_luma": 0.0892,
-          "surround_luma": 0.2179,
+          "surround_luma": 0.218,
           "readable": true
         },
         {
@@ -540,29 +540,29 @@
         },
         {
           "name": "grille_vertical_weave_shadow_07",
-          "contrast": 0.0457,
-          "edge_density": 0.1049,
-          "separation": 0.0294,
-          "mean_luma": 0.1177,
-          "surround_luma": 0.1471,
+          "contrast": 0.0463,
+          "edge_density": 0.1098,
+          "separation": 0.0296,
+          "mean_luma": 0.1182,
+          "surround_luma": 0.1477,
           "readable": true
         },
         {
           "name": "grille_vertical_weave_shadow_08",
-          "contrast": 0.0313,
-          "edge_density": 0.0381,
-          "separation": 0.0904,
-          "mean_luma": 0.0499,
-          "surround_luma": 0.1403,
+          "contrast": 0.0322,
+          "edge_density": 0.0452,
+          "separation": 0.0907,
+          "mean_luma": 0.0502,
+          "surround_luma": 0.1409,
           "readable": true
         },
         {
           "name": "grille_vertical_weave_shadow_09",
           "contrast": 0.1318,
           "edge_density": 0.3265,
-          "separation": 0.029,
-          "mean_luma": 0.1496,
-          "surround_luma": 0.1787,
+          "separation": 0.0293,
+          "mean_luma": 0.1497,
+          "surround_luma": 0.1789,
           "readable": true
         },
         {
@@ -578,27 +578,27 @@
           "name": "grille_craft_slat_front_02",
           "contrast": 0.1236,
           "edge_density": 0.5833,
-          "separation": 0.0731,
+          "separation": 0.0732,
           "mean_luma": 0.1651,
-          "surround_luma": 0.2382,
+          "surround_luma": 0.2383,
           "readable": true
         },
         {
           "name": "grille_craft_slat_front_03",
-          "contrast": 0.062,
-          "edge_density": 0.2,
-          "separation": 0.0856,
-          "mean_luma": 0.1067,
-          "surround_luma": 0.1923,
+          "contrast": 0.0625,
+          "edge_density": 0.2044,
+          "separation": 0.0859,
+          "mean_luma": 0.107,
+          "surround_luma": 0.1929,
           "readable": true
         },
         {
           "name": "grille_craft_slat_front_04",
           "contrast": 0.0713,
           "edge_density": 0.1952,
-          "separation": 0.05,
+          "separation": 0.051,
           "mean_luma": 0.1125,
-          "surround_luma": 0.1625,
+          "surround_luma": 0.1635,
           "readable": true
         },
         {
@@ -607,7 +607,7 @@
           "edge_density": 0.0234,
           "separation": 0.1272,
           "mean_luma": 0.0736,
-          "surround_luma": 0.2007,
+          "surround_luma": 0.2008,
           "readable": true
         },
         {
@@ -632,43 +632,43 @@
           "name": "grille_craft_slat_front_08",
           "contrast": 0.0685,
           "edge_density": 0.1224,
-          "separation": 0.0546,
+          "separation": 0.0549,
           "mean_luma": 0.1089,
-          "surround_luma": 0.1635,
+          "surround_luma": 0.1637,
           "readable": true
         },
         {
           "name": "grille_craft_slat_front_09",
           "contrast": 0.0316,
           "edge_density": 0.0127,
-          "separation": 0.0844,
+          "separation": 0.0854,
           "mean_luma": 0.0747,
-          "surround_luma": 0.1591,
+          "surround_luma": 0.1601,
           "readable": true
         },
         {
           "name": "grille_craft_slat_front_10",
           "contrast": 0.0494,
           "edge_density": 0.0275,
-          "separation": 0.036,
+          "separation": 0.0365,
           "mean_luma": 0.0904,
-          "surround_luma": 0.1264,
+          "surround_luma": 0.127,
           "readable": true
         },
         {
           "name": "grille_craft_slat_front_11",
           "contrast": 0.0428,
-          "edge_density": 0.0395,
-          "separation": 0.0774,
+          "edge_density": 0.042,
+          "separation": 0.078,
           "mean_luma": 0.0855,
-          "surround_luma": 0.1629,
+          "surround_luma": 0.1635,
           "readable": true
         },
         {
           "name": "speaker_logo_text_front",
           "contrast": 0.2341,
           "edge_density": 0.5978,
-          "separation": 0.0939,
+          "separation": 0.0938,
           "mean_luma": 0.3456,
           "surround_luma": 0.2517,
           "readable": true
@@ -692,11 +692,11 @@
     "pass": false,
     "visual_score": 31,
     "technical_score": 60,
-    "runtime_seconds": 3.4,
+    "runtime_seconds": 3.2,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\glb_web_budget_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\glb_check\\glb_web_budget_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -737,11 +737,11 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 4.7,
+    "runtime_seconds": 4.3,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\glb_check\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\glb_check\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark"

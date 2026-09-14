@@ -641,3 +641,49 @@ def test_in_pipeline_inspection_and_parented_data_api_object(blender_exe, tmp_pa
     for b in boxes:
         assert b[0] <= b[2] and b[1] <= b[3]
     assert inspect_path.exists()
+
+
+def test_add_modifier_resolves_object_name_params(blender_exe, tmp_path):
+    """Object-typed modifier params (BOOLEAN.object etc.) accept object names."""
+    _, base = task_workspace(tmp_path, "mod_objref")
+    blend = base / "final" / "scene.blend"
+    glb = base / "final" / "export_final.glb"
+    recipe = {"operations": BASE_RECIPE + [
+        {"op": "create_mesh_primitive", "type": "cube", "name": "boolean_cutter",
+         "size": 0.8, "location": [0.6, 0, 1.0], "collection": "SUBJECT"},
+        {"op": "add_modifier", "target": "hero_core", "modifier": "BOOLEAN",
+         "params": {"object": "boolean_cutter", "operation": "DIFFERENCE"}},
+        {"op": "add_modifier", "target": "hero_core", "modifier": "MIRROR",
+         "params": {"use_axis[0]": True}},
+    ]}
+    res = runner.run_job(runner.build_job(
+        "full_pipeline", base, blend, budget=PREVIEW_BUDGET, recipe=recipe,
+        output={"glb": str(glb)}), blender_exe, 300)
+    assert res["ok"], res
+    ops = res["operations"]
+    assert not [o for o in ops if o.get("error")], ops
+    bool_op = next(o for o in ops if o.get("modifier") == "Boolean")
+    assert bool_op["params"].get("object") == "boolean_cutter"
+    # Boolean result is evaluated and reported healthy.
+    health = bool_op.get("boolean")
+    assert health and health.get("non_manifold_edges") == 0, health
+    # The auto-hidden cutter must not leak into the GLB export.
+    assert glb.exists()
+    node_names = validate_glb(glb, max_mb=20)["info"].get("node_names") or []
+    assert not any("boolean_cutter" in (n or "") for n in node_names)
+
+
+def test_add_modifier_boolean_missing_cutter_errors(blender_exe, tmp_path):
+    """A BOOLEAN with a missing/invalid operand fails cleanly, no dead modifier."""
+    _, base = task_workspace(tmp_path, "mod_bool_neg")
+    blend = base / "final" / "scene.blend"
+    recipe = {"operations": BASE_RECIPE + [
+        {"op": "add_modifier", "target": "hero_core", "modifier": "BOOLEAN",
+         "params": {"object": "no_such_cutter", "operation": "DIFFERENCE"}},
+    ]}
+    res = runner.run_job(runner.build_job(
+        "full_pipeline", base, blend, budget=PREVIEW_BUDGET, recipe=recipe),
+        blender_exe, 300)
+    ops = res["operations"]
+    err = [o for o in ops if "operand not found" in str(o.get("error", ""))]
+    assert err, ops
