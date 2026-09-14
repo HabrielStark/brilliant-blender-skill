@@ -1190,7 +1190,25 @@ def main(argv=None) -> int:
             failed = sum(1 for r in adversarial if not r["pass"])
             line += f" | adversarial={failed}/{len(adversarial)} FAIL"
         print(line)
-    results_resolver.write_text(RESULTS_DIR / "summary.json", json.dumps(summary, indent=2))
+    # A --tasks subset run must merge into the suite record, not truncate it.
+    merged = []
+    summary_path = RESULTS_DIR / "summary.json"
+    if args.tasks and summary_path.exists():
+        try:
+            merged = json.loads(summary_path.read_text(encoding="utf-8"))
+        except Exception:
+            merged = []
+    def _rid(entry):
+        spt = entry.get("skill_plus_tools") or {}
+        return spt.get("task_id") or entry.get("task_id") or entry.get("id")
+
+    by_id = {r: e for e in merged if (r := _rid(e))}
+    for res in summary:
+        by_id[_rid(res)] = res
+    order = [_rid(e) for e in merged]
+    order += [_rid(r) for r in summary if _rid(r) not in order]
+    results_resolver.write_text(
+        summary_path, json.dumps([by_id[i] for i in order if i in by_id], indent=2))
     return 0
 
 
