@@ -97,8 +97,11 @@ def _is_bare_primitive(o: dict) -> bool:
     """A lone low-face primitive with no modifiers is a massing stand-in, not
     a developed element. Books may legitimately be boxes — this is why the
     verdict is 'warn' for the verifier, not an auto-fail."""
+    # default primitives land under ~70 faces: cube 6, cone ~33, cylinder ~34,
+    # plane 1, ico_sphere 20-80. A lone uv_sphere (~480) or torus escapes —
+    # acceptable: round primitives more often pass as anatomy stand-ins.
     return (o.get("type") == "MESH"
-            and (o.get("faces") or 0) <= 32
+            and (o.get("faces") or 0) <= 68
             and not o.get("modifiers")
             and not o.get("gn_recipe"))
 
