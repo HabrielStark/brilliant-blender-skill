@@ -5,18 +5,171 @@
     "pass": true,
     "visual_score": 98,
     "technical_score": 100,
-    "runtime_seconds": 5.5,
+    "runtime_seconds": 5.0,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\reference_match_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\reference_match_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\reference_match_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark",
       "blue_cyan_bias",
       "dark_blue_cyan"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "product_body_layered_beveled_main",
+          "contrast": 0.1752,
+          "edge_density": 0.1297,
+          "separation": 0.0442,
+          "mean_luma": 0.0875,
+          "surround_luma": 0.1318,
+          "readable": true
+        },
+        {
+          "name": "front_inset_panel_smoked_glass",
+          "contrast": 0.1776,
+          "edge_density": 0.1675,
+          "separation": 0.0073,
+          "mean_luma": 0.1307,
+          "surround_luma": 0.1234,
+          "readable": true
+        },
+        {
+          "name": "front_inset_panel_inner_cut_shadow",
+          "contrast": 0.0876,
+          "edge_density": 0.113,
+          "separation": 0.0893,
+          "mean_luma": 0.0971,
+          "surround_luma": 0.1864,
+          "readable": true
+        },
+        {
+          "name": "body_side_thickness_right_visible_face",
+          "contrast": 0.0048,
+          "edge_density": 0.0,
+          "separation": 0.0288,
+          "mean_luma": 0.0092,
+          "surround_luma": 0.038,
+          "readable": false
+        },
+        {
+          "name": "body_side_thickness_left_visible_face",
+          "contrast": 0.0297,
+          "edge_density": 0.0278,
+          "separation": 0.0135,
+          "mean_luma": 0.0384,
+          "surround_luma": 0.0519,
+          "readable": true
+        },
+        {
+          "name": "side_groove_shadow_cut_left",
+          "contrast": 0.2299,
+          "edge_density": 0.2768,
+          "separation": 0.0367,
+          "mean_luma": 0.1347,
+          "surround_luma": 0.0981,
+          "readable": true
+        },
+        {
+          "name": "bottom_contact_shadow_layer",
+          "contrast": 0.0219,
+          "edge_density": 0.0022,
+          "separation": 0.1422,
+          "mean_luma": 0.022,
+          "surround_luma": 0.1642,
+          "readable": true
+        },
+        {
+          "name": "body_front_lower_bevel_plane",
+          "contrast": 0.0676,
+          "edge_density": 0.1287,
+          "separation": 0.0156,
+          "mean_luma": 0.0494,
+          "surround_luma": 0.065,
+          "readable": true
+        },
+        {
+          "name": "body_left_bevel_catch_plane",
+          "contrast": 0.0514,
+          "edge_density": 0.0786,
+          "separation": 0.0037,
+          "mean_luma": 0.0458,
+          "surround_luma": 0.042,
+          "readable": true
+        },
+        {
+          "name": "body_right_bevel_catch_plane",
+          "contrast": 0.0113,
+          "edge_density": 0.0139,
+          "separation": 0.0032,
+          "mean_luma": 0.0179,
+          "surround_luma": 0.0147,
+          "readable": false
+        },
+        {
+          "name": "front_white_highlight_lower",
+          "contrast": 0.2762,
+          "edge_density": 0.7744,
+          "separation": 0.5832,
+          "mean_luma": 0.6142,
+          "surround_luma": 0.031,
+          "readable": true
+        },
+        {
+          "name": "front_cold_blue_rim_lip",
+          "contrast": 0.2014,
+          "edge_density": 0.6181,
+          "separation": 0.5592,
+          "mean_luma": 0.6173,
+          "surround_luma": 0.0581,
+          "readable": true
+        },
+        {
+          "name": "front_lens_outer_glass_ring",
+          "contrast": 0.134,
+          "edge_density": 0.0948,
+          "separation": 0.0156,
+          "mean_luma": 0.0643,
+          "surround_luma": 0.0799,
+          "readable": true
+        },
+        {
+          "name": "front_lens_metal_bezel_step",
+          "contrast": 0.1406,
+          "edge_density": 0.0892,
+          "separation": 0.0316,
+          "mean_luma": 0.0635,
+          "surround_luma": 0.0318,
+          "readable": true
+        },
+        {
+          "name": "front_lens_inner_black_glass",
+          "contrast": 0.129,
+          "edge_density": 0.0579,
+          "separation": 0.0269,
+          "mean_luma": 0.044,
+          "surround_luma": 0.0709,
+          "readable": true
+        },
+        {
+          "name": "front_sensor_status_blue",
+          "contrast": 0.2976,
+          "edge_density": 0.3599,
+          "separation": 0.4548,
+          "mean_luma": 0.5444,
+          "surround_luma": 0.0896,
+          "readable": true
+        }
+      ],
+      "measured_parts": 16,
+      "readable_parts": 14,
+      "unreadable_parts": [
+        "body_side_thickness_right_visible_face",
+        "body_right_bevel_catch_plane"
+      ]
+    },
     "reference_metrics": {
       "ssim": 0.7477930943072052,
       "palette_similarity": 0.963032625450261,
@@ -39,11 +192,11 @@
     "pass": false,
     "visual_score": 29,
     "technical_score": 60,
-    "runtime_seconds": 3.7,
+    "runtime_seconds": 3.2,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\reference_match_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\reference_match_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -91,16 +244,40 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 5.2,
+    "runtime_seconds": 4.3,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\reference_match_adversarial_slop_named_lit_box\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\reference_match_adversarial_slop_named_lit_box\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "product_body_reference_named_box",
+          "contrast": 0.1591,
+          "edge_density": 0.0324,
+          "separation": 0.034,
+          "mean_luma": 0.0533,
+          "surround_luma": 0.0193,
+          "readable": true
+        },
+        {
+          "name": "inset_rim_highlight_groove_lens_sensor_bevel_fake",
+          "contrast": 0.2881,
+          "edge_density": 0.1545,
+          "separation": 0.4983,
+          "mean_luma": 0.5135,
+          "surround_luma": 0.0152,
+          "readable": true
+        }
+      ],
+      "measured_parts": 2,
+      "readable_parts": 2,
+      "unreadable_parts": []
+    },
     "reference_metrics": {
       "ssim": 0.36781103513500796,
       "palette_similarity": 0.9413798966961806,

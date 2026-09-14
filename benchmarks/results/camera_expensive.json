@@ -5,16 +5,76 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 6.1,
+    "runtime_seconds": 4.4,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\camera_expensive_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\camera_expensive_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "low_black_plinth",
+          "contrast": 0.1951,
+          "edge_density": 0.0487,
+          "separation": 0.0081,
+          "mean_luma": 0.1143,
+          "surround_luma": 0.1224,
+          "readable": true
+        },
+        {
+          "name": "hero_faceted_luxury_body",
+          "contrast": 0.2453,
+          "edge_density": 0.1366,
+          "separation": 0.0987,
+          "mean_luma": 0.1644,
+          "surround_luma": 0.0657,
+          "readable": true
+        },
+        {
+          "name": "hero_blue_accent_ring",
+          "contrast": 0.2955,
+          "edge_density": 0.1285,
+          "separation": 0.0972,
+          "mean_luma": 0.1967,
+          "surround_luma": 0.0995,
+          "readable": true
+        },
+        {
+          "name": "faceted_top_highlight_cap",
+          "contrast": 0.1213,
+          "edge_density": 0.2857,
+          "separation": 0.0492,
+          "mean_luma": 0.113,
+          "surround_luma": 0.0639,
+          "readable": true
+        },
+        {
+          "name": "vertical_sapphire_highlight_bar_left",
+          "contrast": 0.3137,
+          "edge_density": 0.4653,
+          "separation": 0.0673,
+          "mean_luma": 0.4103,
+          "surround_luma": 0.3429,
+          "readable": true
+        },
+        {
+          "name": "vertical_sapphire_highlight_bar_right",
+          "contrast": 0.3218,
+          "edge_density": 0.287,
+          "separation": 0.1017,
+          "mean_luma": 0.266,
+          "surround_luma": 0.1643,
+          "readable": true
+        }
+      ],
+      "measured_parts": 6,
+      "readable_parts": 6,
+      "unreadable_parts": []
+    },
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
@@ -26,11 +86,11 @@
     "pass": false,
     "visual_score": 31,
     "technical_score": 60,
-    "runtime_seconds": 4.1,
+    "runtime_seconds": 3.1,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\camera_expensive_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\camera_expensive_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -66,16 +126,40 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 90,
-    "runtime_seconds": 5.5,
+    "runtime_seconds": 4.0,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\camera_expensive_adversarial_slop_named_lit_sphere\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\camera_expensive_adversarial_slop_named_lit_sphere\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "low_black_plinth",
+          "contrast": 0.2202,
+          "edge_density": 0.0403,
+          "separation": 0.1234,
+          "mean_luma": 0.1509,
+          "surround_luma": 0.0275,
+          "readable": true
+        },
+        {
+          "name": "hero_faceted_accent_ring_highlight_keyword_sphere",
+          "contrast": 0.2075,
+          "edge_density": 0.0352,
+          "separation": 0.0917,
+          "mean_luma": 0.1204,
+          "surround_luma": 0.0286,
+          "readable": true
+        }
+      ],
+      "measured_parts": 2,
+      "readable_parts": 2,
+      "unreadable_parts": []
+    },
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,

@@ -147,7 +147,9 @@ def _manifest_allows_detached_parts(manifest: dict) -> bool:
 
 
 def _bbox(obj: dict):
-    loc = obj.get("location") or []
+    # Prefer world-space translation: ``location`` is parent-local, so gaps
+    # computed from it are wrong for parented detail parts.
+    loc = obj.get("world_location") or obj.get("location") or []
     dims = obj.get("dimensions") or []
     if len(loc) < 3 or len(dims) < 3:
         return None

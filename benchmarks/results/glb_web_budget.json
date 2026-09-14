@@ -5,16 +5,682 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 6.9,
+    "runtime_seconds": 5.2,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "speaker_body_soft_rounded",
+          "contrast": 0.1322,
+          "edge_density": 0.0761,
+          "separation": 0.1442,
+          "mean_luma": 0.244,
+          "surround_luma": 0.3882,
+          "readable": true
+        },
+        {
+          "name": "speaker_top_rubber_lip",
+          "contrast": 0.1088,
+          "edge_density": 0.2045,
+          "separation": 0.0048,
+          "mean_luma": 0.3181,
+          "surround_luma": 0.3133,
+          "readable": true
+        },
+        {
+          "name": "speaker_bottom_rubber_lip",
+          "contrast": 0.1725,
+          "edge_density": 0.0704,
+          "separation": 0.0037,
+          "mean_luma": 0.3203,
+          "surround_luma": 0.3166,
+          "readable": true
+        },
+        {
+          "name": "handle_rubber_top_loop",
+          "contrast": 0.1047,
+          "edge_density": 0.2895,
+          "separation": 0.064,
+          "mean_luma": 0.2631,
+          "surround_luma": 0.3271,
+          "readable": true
+        },
+        {
+          "name": "handle_anchor_left_rubber",
+          "contrast": 0.0959,
+          "edge_density": 0.1111,
+          "separation": 0.1873,
+          "mean_luma": 0.2087,
+          "surround_luma": 0.3961,
+          "readable": true
+        },
+        {
+          "name": "handle_anchor_right_rubber",
+          "contrast": 0.0822,
+          "edge_density": 0.0664,
+          "separation": 0.1492,
+          "mean_luma": 0.19,
+          "surround_luma": 0.3392,
+          "readable": true
+        },
+        {
+          "name": "front_grille_panel_checker",
+          "contrast": 0.0826,
+          "edge_density": 0.0472,
+          "separation": 0.0361,
+          "mean_luma": 0.1732,
+          "surround_luma": 0.2093,
+          "readable": true
+        },
+        {
+          "name": "front_grille_recess_shadow_panel",
+          "contrast": 0.0799,
+          "edge_density": 0.0489,
+          "separation": 0.0136,
+          "mean_luma": 0.1789,
+          "surround_luma": 0.1653,
+          "readable": true
+        },
+        {
+          "name": "left_passive_radiator_disc",
+          "contrast": 0.1604,
+          "edge_density": 0.271,
+          "separation": 0.0129,
+          "mean_luma": 0.2832,
+          "surround_luma": 0.2961,
+          "readable": true
+        },
+        {
+          "name": "right_passive_radiator_disc",
+          "contrast": 0.1375,
+          "edge_density": 0.1514,
+          "separation": 0.0587,
+          "mean_luma": 0.1962,
+          "surround_luma": 0.1375,
+          "readable": true
+        },
+        {
+          "name": "side_usb_port_inset",
+          "contrast": 0.0577,
+          "edge_density": 0.0091,
+          "separation": 0.0871,
+          "mean_luma": 0.0835,
+          "surround_luma": 0.1706,
+          "readable": true
+        },
+        {
+          "name": "accent_light_bar_blue",
+          "contrast": 0.1707,
+          "edge_density": 0.8474,
+          "separation": 0.1216,
+          "mean_luma": 0.4272,
+          "surround_luma": 0.3056,
+          "readable": true
+        },
+        {
+          "name": "speaker_logo_plate_front",
+          "contrast": 0.1733,
+          "edge_density": 0.4558,
+          "separation": 0.0937,
+          "mean_luma": 0.3074,
+          "surround_luma": 0.2136,
+          "readable": true
+        },
+        {
+          "name": "speaker_logo_engraved_center_mark",
+          "contrast": 0.1796,
+          "edge_density": 0.8143,
+          "separation": 0.0229,
+          "mean_luma": 0.4288,
+          "surround_luma": 0.4516,
+          "readable": true
+        },
+        {
+          "name": "left_radiator_inner_highlight_ring",
+          "contrast": 0.1664,
+          "edge_density": 0.3007,
+          "separation": 0.0066,
+          "mean_luma": 0.2828,
+          "surround_luma": 0.2894,
+          "readable": true
+        },
+        {
+          "name": "right_radiator_inner_highlight_ring",
+          "contrast": 0.1589,
+          "edge_density": 0.2281,
+          "separation": 0.1004,
+          "mean_luma": 0.2307,
+          "surround_luma": 0.1303,
+          "readable": true
+        },
+        {
+          "name": "speaker_lower_shadow_band",
+          "contrast": 0.0866,
+          "edge_density": 0.1263,
+          "separation": 0.0124,
+          "mean_luma": 0.1224,
+          "surround_luma": 0.1348,
+          "readable": true
+        },
+        {
+          "name": "button_power_round",
+          "contrast": 0.1049,
+          "edge_density": 0.1168,
+          "separation": 0.0872,
+          "mean_luma": 0.2685,
+          "surround_luma": 0.3557,
+          "readable": true
+        },
+        {
+          "name": "button_volume_plus_round",
+          "contrast": 0.0954,
+          "edge_density": 0.0871,
+          "separation": 0.053,
+          "mean_luma": 0.2539,
+          "surround_luma": 0.3069,
+          "readable": true
+        },
+        {
+          "name": "button_volume_minus_round",
+          "contrast": 0.0593,
+          "edge_density": 0.0272,
+          "separation": 0.0323,
+          "mean_luma": 0.2121,
+          "surround_luma": 0.2444,
+          "readable": true
+        },
+        {
+          "name": "button_top_play_pill",
+          "contrast": 0.0855,
+          "edge_density": 0.2366,
+          "separation": 0.0997,
+          "mean_luma": 0.2384,
+          "surround_luma": 0.3381,
+          "readable": true
+        },
+        {
+          "name": "button_top_bluetooth_pill",
+          "contrast": 0.0793,
+          "edge_density": 0.125,
+          "separation": 0.1236,
+          "mean_luma": 0.2244,
+          "surround_luma": 0.348,
+          "readable": true
+        },
+        {
+          "name": "side_fabric_seam_left",
+          "contrast": 0.1595,
+          "edge_density": 0.6303,
+          "separation": 0.0443,
+          "mean_luma": 0.2285,
+          "surround_luma": 0.2727,
+          "readable": true
+        },
+        {
+          "name": "side_fabric_seam_right",
+          "contrast": 0.0403,
+          "edge_density": 0.0286,
+          "separation": 0.0716,
+          "mean_luma": 0.0757,
+          "surround_luma": 0.1473,
+          "readable": true
+        },
+        {
+          "name": "feet_left_rubber",
+          "contrast": 0.201,
+          "edge_density": 0.5862,
+          "separation": 0.1131,
+          "mean_luma": 0.3719,
+          "surround_luma": 0.2588,
+          "readable": true
+        },
+        {
+          "name": "feet_right_rubber",
+          "contrast": 0.0309,
+          "edge_density": 0.03,
+          "separation": 0.0725,
+          "mean_luma": 0.1691,
+          "surround_luma": 0.2416,
+          "readable": true
+        },
+        {
+          "name": "grille_hole_ring_05",
+          "contrast": 0.0528,
+          "edge_density": 0.0909,
+          "separation": 0.016,
+          "mean_luma": 0.1513,
+          "surround_luma": 0.1353,
+          "readable": true
+        },
+        {
+          "name": "grille_hole_ring_06",
+          "contrast": 0.066,
+          "edge_density": 0.1528,
+          "separation": 0.0674,
+          "mean_luma": 0.1447,
+          "surround_luma": 0.2121,
+          "readable": true
+        },
+        {
+          "name": "grille_hole_ring_07",
+          "contrast": 0.0719,
+          "edge_density": 0.1,
+          "separation": 0.0633,
+          "mean_luma": 0.1348,
+          "surround_luma": 0.1981,
+          "readable": true
+        },
+        {
+          "name": "grille_hole_ring_10",
+          "contrast": 0.0623,
+          "edge_density": 0.1818,
+          "separation": 0.0347,
+          "mean_luma": 0.0931,
+          "surround_luma": 0.1278,
+          "readable": true
+        },
+        {
+          "name": "grille_hole_ring_11",
+          "contrast": 0.0866,
+          "edge_density": 0.4167,
+          "separation": 0.0723,
+          "mean_luma": 0.1099,
+          "surround_luma": 0.1822,
+          "readable": true
+        },
+        {
+          "name": "grille_hole_ring_12",
+          "contrast": 0.0654,
+          "edge_density": 0.22,
+          "separation": 0.0515,
+          "mean_luma": 0.104,
+          "surround_luma": 0.1555,
+          "readable": true
+        },
+        {
+          "name": "grille_hole_ring_14",
+          "contrast": 0.0997,
+          "edge_density": 0.4242,
+          "separation": 0.0663,
+          "mean_luma": 0.1671,
+          "surround_luma": 0.2334,
+          "readable": true
+        },
+        {
+          "name": "grille_micro_slot_01",
+          "contrast": 0.1563,
+          "edge_density": 0.4405,
+          "separation": 0.0993,
+          "mean_luma": 0.3287,
+          "surround_luma": 0.2294,
+          "readable": true
+        },
+        {
+          "name": "grille_micro_slot_02",
+          "contrast": 0.1045,
+          "edge_density": 0.2967,
+          "separation": 0.0147,
+          "mean_luma": 0.1339,
+          "surround_luma": 0.1487,
+          "readable": true
+        },
+        {
+          "name": "grille_micro_slot_03",
+          "contrast": 0.1017,
+          "edge_density": 0.3214,
+          "separation": 0.0686,
+          "mean_luma": 0.159,
+          "surround_luma": 0.2276,
+          "readable": true
+        },
+        {
+          "name": "grille_micro_slot_04",
+          "contrast": 0.0452,
+          "edge_density": 0.0,
+          "separation": 0.0008,
+          "mean_luma": 0.1023,
+          "surround_luma": 0.1032,
+          "readable": true
+        },
+        {
+          "name": "grille_micro_slot_05",
+          "contrast": 0.0341,
+          "edge_density": 0.044,
+          "separation": 0.0629,
+          "mean_luma": 0.0736,
+          "surround_luma": 0.1366,
+          "readable": true
+        },
+        {
+          "name": "grille_micro_slot_06",
+          "contrast": 0.0488,
+          "edge_density": 0.0879,
+          "separation": 0.0697,
+          "mean_luma": 0.0689,
+          "surround_luma": 0.1386,
+          "readable": true
+        },
+        {
+          "name": "grille_micro_slot_07",
+          "contrast": 0.0326,
+          "edge_density": 0.011,
+          "separation": 0.044,
+          "mean_luma": 0.0645,
+          "surround_luma": 0.1086,
+          "readable": false
+        },
+        {
+          "name": "grille_micro_slot_08",
+          "contrast": 0.0456,
+          "edge_density": 0.0865,
+          "separation": 0.0462,
+          "mean_luma": 0.0723,
+          "surround_luma": 0.1186,
+          "readable": true
+        },
+        {
+          "name": "grille_micro_slot_09",
+          "contrast": 0.0439,
+          "edge_density": 0.0192,
+          "separation": 0.0064,
+          "mean_luma": 0.0967,
+          "surround_luma": 0.103,
+          "readable": true
+        },
+        {
+          "name": "grille_micro_slot_10",
+          "contrast": 0.0324,
+          "edge_density": 0.011,
+          "separation": 0.0186,
+          "mean_luma": 0.1012,
+          "surround_luma": 0.0826,
+          "readable": false
+        },
+        {
+          "name": "grille_micro_slot_11",
+          "contrast": 0.173,
+          "edge_density": 0.2959,
+          "separation": 0.0416,
+          "mean_luma": 0.2571,
+          "surround_luma": 0.2155,
+          "readable": true
+        },
+        {
+          "name": "grille_lower_pin_slot_01",
+          "contrast": 0.0713,
+          "edge_density": 0.1833,
+          "separation": 0.1042,
+          "mean_luma": 0.0865,
+          "surround_luma": 0.1908,
+          "readable": true
+        },
+        {
+          "name": "grille_lower_pin_slot_02",
+          "contrast": 0.1068,
+          "edge_density": 0.4762,
+          "separation": 0.0015,
+          "mean_luma": 0.1722,
+          "surround_luma": 0.1737,
+          "readable": true
+        },
+        {
+          "name": "grille_lower_pin_slot_03",
+          "contrast": 0.1017,
+          "edge_density": 0.5079,
+          "separation": 0.0887,
+          "mean_luma": 0.1472,
+          "surround_luma": 0.2359,
+          "readable": true
+        },
+        {
+          "name": "grille_lower_pin_slot_04",
+          "contrast": 0.1431,
+          "edge_density": 0.5286,
+          "separation": 0.1437,
+          "mean_luma": 0.1564,
+          "surround_luma": 0.3001,
+          "readable": true
+        },
+        {
+          "name": "grille_lower_pin_slot_05",
+          "contrast": 0.1355,
+          "edge_density": 0.3667,
+          "separation": 0.116,
+          "mean_luma": 0.181,
+          "surround_luma": 0.297,
+          "readable": true
+        },
+        {
+          "name": "grille_lower_pin_slot_06",
+          "contrast": 0.0751,
+          "edge_density": 0.2571,
+          "separation": 0.1281,
+          "mean_luma": 0.0926,
+          "surround_luma": 0.2207,
+          "readable": true
+        },
+        {
+          "name": "grille_lower_pin_slot_07",
+          "contrast": 0.0534,
+          "edge_density": 0.1,
+          "separation": 0.0437,
+          "mean_luma": 0.1182,
+          "surround_luma": 0.1619,
+          "readable": true
+        },
+        {
+          "name": "grille_lower_pin_slot_08",
+          "contrast": 0.0451,
+          "edge_density": 0.0909,
+          "separation": 0.1015,
+          "mean_luma": 0.0674,
+          "surround_luma": 0.1689,
+          "readable": true
+        },
+        {
+          "name": "grille_vertical_weave_shadow_01",
+          "contrast": 0.1539,
+          "edge_density": 0.4715,
+          "separation": 0.0107,
+          "mean_luma": 0.2381,
+          "surround_luma": 0.2488,
+          "readable": true
+        },
+        {
+          "name": "grille_vertical_weave_shadow_02",
+          "contrast": 0.1231,
+          "edge_density": 0.5855,
+          "separation": 0.0664,
+          "mean_luma": 0.1676,
+          "surround_luma": 0.234,
+          "readable": true
+        },
+        {
+          "name": "grille_vertical_weave_shadow_03",
+          "contrast": 0.0589,
+          "edge_density": 0.2735,
+          "separation": 0.0645,
+          "mean_luma": 0.0902,
+          "surround_luma": 0.1547,
+          "readable": true
+        },
+        {
+          "name": "grille_vertical_weave_shadow_04",
+          "contrast": 0.0751,
+          "edge_density": 0.119,
+          "separation": 0.0471,
+          "mean_luma": 0.1218,
+          "surround_luma": 0.1689,
+          "readable": true
+        },
+        {
+          "name": "grille_vertical_weave_shadow_05",
+          "contrast": 0.1075,
+          "edge_density": 0.1875,
+          "separation": 0.1287,
+          "mean_luma": 0.0892,
+          "surround_luma": 0.2179,
+          "readable": true
+        },
+        {
+          "name": "grille_vertical_weave_shadow_06",
+          "contrast": 0.09,
+          "edge_density": 0.2074,
+          "separation": 0.0419,
+          "mean_luma": 0.1152,
+          "surround_luma": 0.1571,
+          "readable": true
+        },
+        {
+          "name": "grille_vertical_weave_shadow_07",
+          "contrast": 0.0457,
+          "edge_density": 0.1049,
+          "separation": 0.0294,
+          "mean_luma": 0.1177,
+          "surround_luma": 0.1471,
+          "readable": true
+        },
+        {
+          "name": "grille_vertical_weave_shadow_08",
+          "contrast": 0.0313,
+          "edge_density": 0.0381,
+          "separation": 0.0904,
+          "mean_luma": 0.0499,
+          "surround_luma": 0.1403,
+          "readable": true
+        },
+        {
+          "name": "grille_vertical_weave_shadow_09",
+          "contrast": 0.1318,
+          "edge_density": 0.3265,
+          "separation": 0.029,
+          "mean_luma": 0.1496,
+          "surround_luma": 0.1787,
+          "readable": true
+        },
+        {
+          "name": "grille_craft_slat_front_01",
+          "contrast": 0.1217,
+          "edge_density": 0.3423,
+          "separation": 0.1364,
+          "mean_luma": 0.1275,
+          "surround_luma": 0.2639,
+          "readable": true
+        },
+        {
+          "name": "grille_craft_slat_front_02",
+          "contrast": 0.1236,
+          "edge_density": 0.5833,
+          "separation": 0.0731,
+          "mean_luma": 0.1651,
+          "surround_luma": 0.2382,
+          "readable": true
+        },
+        {
+          "name": "grille_craft_slat_front_03",
+          "contrast": 0.062,
+          "edge_density": 0.2,
+          "separation": 0.0856,
+          "mean_luma": 0.1067,
+          "surround_luma": 0.1923,
+          "readable": true
+        },
+        {
+          "name": "grille_craft_slat_front_04",
+          "contrast": 0.0713,
+          "edge_density": 0.1952,
+          "separation": 0.05,
+          "mean_luma": 0.1125,
+          "surround_luma": 0.1625,
+          "readable": true
+        },
+        {
+          "name": "grille_craft_slat_front_05",
+          "contrast": 0.0433,
+          "edge_density": 0.0234,
+          "separation": 0.1272,
+          "mean_luma": 0.0736,
+          "surround_luma": 0.2007,
+          "readable": true
+        },
+        {
+          "name": "grille_craft_slat_front_06",
+          "contrast": 0.0954,
+          "edge_density": 0.0866,
+          "separation": 0.102,
+          "mean_luma": 0.1053,
+          "surround_luma": 0.2073,
+          "readable": true
+        },
+        {
+          "name": "grille_craft_slat_front_07",
+          "contrast": 0.0633,
+          "edge_density": 0.1752,
+          "separation": 0.0759,
+          "mean_luma": 0.1046,
+          "surround_luma": 0.1805,
+          "readable": true
+        },
+        {
+          "name": "grille_craft_slat_front_08",
+          "contrast": 0.0685,
+          "edge_density": 0.1224,
+          "separation": 0.0546,
+          "mean_luma": 0.1089,
+          "surround_luma": 0.1635,
+          "readable": true
+        },
+        {
+          "name": "grille_craft_slat_front_09",
+          "contrast": 0.0316,
+          "edge_density": 0.0127,
+          "separation": 0.0844,
+          "mean_luma": 0.0747,
+          "surround_luma": 0.1591,
+          "readable": true
+        },
+        {
+          "name": "grille_craft_slat_front_10",
+          "contrast": 0.0494,
+          "edge_density": 0.0275,
+          "separation": 0.036,
+          "mean_luma": 0.0904,
+          "surround_luma": 0.1264,
+          "readable": true
+        },
+        {
+          "name": "grille_craft_slat_front_11",
+          "contrast": 0.0428,
+          "edge_density": 0.0395,
+          "separation": 0.0774,
+          "mean_luma": 0.0855,
+          "surround_luma": 0.1629,
+          "readable": true
+        },
+        {
+          "name": "speaker_logo_text_front",
+          "contrast": 0.2341,
+          "edge_density": 0.5978,
+          "separation": 0.0939,
+          "mean_luma": 0.3456,
+          "surround_luma": 0.2517,
+          "readable": true
+        }
+      ],
+      "measured_parts": 73,
+      "readable_parts": 71,
+      "unreadable_parts": [
+        "grille_micro_slot_07",
+        "grille_micro_slot_10"
+      ]
+    },
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
@@ -26,11 +692,11 @@
     "pass": false,
     "visual_score": 31,
     "technical_score": 60,
-    "runtime_seconds": 4.1,
+    "runtime_seconds": 3.1,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\glb_web_budget_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\glb_web_budget_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -71,16 +737,31 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 5.4,
+    "runtime_seconds": 4.2,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "speaker_grille_button_port_accent_feet_handle_radiator_logo_plain",
+          "contrast": 0.0861,
+          "edge_density": 0.0009,
+          "separation": 0.0395,
+          "mean_luma": 0.2637,
+          "surround_luma": 0.3032,
+          "readable": true
+        }
+      ],
+      "measured_parts": 1,
+      "readable_parts": 1,
+      "unreadable_parts": []
+    },
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,

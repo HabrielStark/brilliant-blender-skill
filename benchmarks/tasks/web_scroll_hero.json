@@ -24,7 +24,8 @@
     "min_subject_materials": 4,
     "min_subject_material_node_count": 5, "min_subject_procedural_materials": 2,
     "min_palette_similarity": 0.58,
-    "require_named_parts": ["energy", "core", "orbital", "ring", "spark", "aurora"]},
+    "require_named_parts": ["energy", "core", "orbital", "ring", "spark", "aurora"],
+    "require_readable_named_parts": true},
   "recipe": {"operations": [
     {"op": "ensure_standard_collections"},
     {"op": "create_mesh_primitive", "type": "plane", "name": "stage_floor", "size": 20, "collection": "ENVIRONMENT"},

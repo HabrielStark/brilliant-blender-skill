@@ -5,19 +5,1034 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 6.1,
+    "runtime_seconds": 5.8,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\organic_petalfix\\organic_soft_surface_study_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\organic_petalfix\\organic_soft_surface_study_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\organic_soft_surface_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\organic_soft_surface_study_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "warm_red_bias"
+    ],
+    "readability": {
+      "parts": [
+        {
+          "name": "organic_fluted_soft_body",
+          "contrast": 0.1359,
+          "edge_density": 0.051,
+          "separation": 0.0173,
+          "mean_luma": 0.5768,
+          "surround_luma": 0.5941,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_01",
+          "contrast": 0.0952,
+          "edge_density": 0.0733,
+          "separation": 0.0179,
+          "mean_luma": 0.5613,
+          "surround_luma": 0.5434,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_02",
+          "contrast": 0.0898,
+          "edge_density": 0.0604,
+          "separation": 0.0059,
+          "mean_luma": 0.5556,
+          "surround_luma": 0.5498,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_03",
+          "contrast": 0.0808,
+          "edge_density": 0.0484,
+          "separation": 0.0186,
+          "mean_luma": 0.5538,
+          "surround_luma": 0.5352,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_04",
+          "contrast": 0.0741,
+          "edge_density": 0.0358,
+          "separation": 0.0189,
+          "mean_luma": 0.5521,
+          "surround_luma": 0.5333,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_05",
+          "contrast": 0.0748,
+          "edge_density": 0.0392,
+          "separation": 0.0161,
+          "mean_luma": 0.5508,
+          "surround_luma": 0.5347,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_06",
+          "contrast": 0.0801,
+          "edge_density": 0.0469,
+          "separation": 0.0069,
+          "mean_luma": 0.5523,
+          "surround_luma": 0.5454,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_07",
+          "contrast": 0.09,
+          "edge_density": 0.0584,
+          "separation": 0.0112,
+          "mean_luma": 0.5584,
+          "surround_luma": 0.5472,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_08",
+          "contrast": 0.0895,
+          "edge_density": 0.0778,
+          "separation": 0.0075,
+          "mean_luma": 0.5672,
+          "surround_luma": 0.5598,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_09",
+          "contrast": 0.089,
+          "edge_density": 0.0919,
+          "separation": 0.0124,
+          "mean_luma": 0.5956,
+          "surround_luma": 0.5832,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_10",
+          "contrast": 0.0883,
+          "edge_density": 0.1126,
+          "separation": 0.0275,
+          "mean_luma": 0.6049,
+          "surround_luma": 0.5773,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_11",
+          "contrast": 0.0839,
+          "edge_density": 0.1037,
+          "separation": 0.0432,
+          "mean_luma": 0.6003,
+          "surround_luma": 0.5571,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_12",
+          "contrast": 0.0815,
+          "edge_density": 0.0981,
+          "separation": 0.0321,
+          "mean_luma": 0.5932,
+          "surround_luma": 0.5611,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_13",
+          "contrast": 0.0822,
+          "edge_density": 0.1012,
+          "separation": 0.0303,
+          "mean_luma": 0.5922,
+          "surround_luma": 0.5619,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_14",
+          "contrast": 0.0832,
+          "edge_density": 0.1079,
+          "separation": 0.0354,
+          "mean_luma": 0.6003,
+          "surround_luma": 0.5648,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_15",
+          "contrast": 0.0849,
+          "edge_density": 0.117,
+          "separation": 0.0455,
+          "mean_luma": 0.6108,
+          "surround_luma": 0.5652,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_16",
+          "contrast": 0.0896,
+          "edge_density": 0.1083,
+          "separation": 0.0218,
+          "mean_luma": 0.6001,
+          "surround_luma": 0.5782,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_17",
+          "contrast": 0.0871,
+          "edge_density": 0.1064,
+          "separation": 0.0228,
+          "mean_luma": 0.5891,
+          "surround_luma": 0.5663,
+          "readable": true
+        },
+        {
+          "name": "petal_outer_soft_curved_18",
+          "contrast": 0.0838,
+          "edge_density": 0.0801,
+          "separation": 0.0117,
+          "mean_luma": 0.5753,
+          "surround_luma": 0.5636,
+          "readable": true
+        },
+        {
+          "name": "petal_inner_soft_curved_front_01",
+          "contrast": 0.092,
+          "edge_density": 0.0519,
+          "separation": 0.0566,
+          "mean_luma": 0.5285,
+          "surround_luma": 0.5851,
+          "readable": true
+        },
+        {
+          "name": "petal_inner_soft_curved_front_02",
+          "contrast": 0.0804,
+          "edge_density": 0.0429,
+          "separation": 0.0461,
+          "mean_luma": 0.5203,
+          "surround_luma": 0.5663,
+          "readable": true
+        },
+        {
+          "name": "petal_inner_soft_curved_front_03",
+          "contrast": 0.0711,
+          "edge_density": 0.031,
+          "separation": 0.0259,
+          "mean_luma": 0.5222,
+          "surround_luma": 0.5481,
+          "readable": true
+        },
+        {
+          "name": "petal_inner_soft_curved_front_04",
+          "contrast": 0.0728,
+          "edge_density": 0.0253,
+          "separation": 0.0044,
+          "mean_luma": 0.5494,
+          "surround_luma": 0.545,
+          "readable": true
+        },
+        {
+          "name": "petal_inner_soft_curved_front_05",
+          "contrast": 0.0953,
+          "edge_density": 0.1196,
+          "separation": 0.0049,
+          "mean_luma": 0.5701,
+          "surround_luma": 0.5652,
+          "readable": true
+        },
+        {
+          "name": "petal_inner_soft_curved_front_06",
+          "contrast": 0.0922,
+          "edge_density": 0.1543,
+          "separation": 0.0405,
+          "mean_luma": 0.6054,
+          "surround_luma": 0.5649,
+          "readable": true
+        },
+        {
+          "name": "petal_inner_soft_curved_front_07",
+          "contrast": 0.0814,
+          "edge_density": 0.1422,
+          "separation": 0.0278,
+          "mean_luma": 0.6113,
+          "surround_luma": 0.5835,
+          "readable": true
+        },
+        {
+          "name": "petal_inner_soft_curved_front_08",
+          "contrast": 0.0867,
+          "edge_density": 0.146,
+          "separation": 0.0099,
+          "mean_luma": 0.6042,
+          "surround_luma": 0.5943,
+          "readable": true
+        },
+        {
+          "name": "petal_inner_soft_curved_front_09",
+          "contrast": 0.0936,
+          "edge_density": 0.1196,
+          "separation": 0.0195,
+          "mean_luma": 0.5905,
+          "surround_luma": 0.571,
+          "readable": true
+        },
+        {
+          "name": "petal_inner_soft_curved_front_10",
+          "contrast": 0.0899,
+          "edge_density": 0.0983,
+          "separation": 0.0309,
+          "mean_luma": 0.5496,
+          "surround_luma": 0.5805,
+          "readable": true
+        },
+        {
+          "name": "petal_front_cascade_soft_curved_01",
+          "contrast": 0.0822,
+          "edge_density": 0.1348,
+          "separation": 0.0374,
+          "mean_luma": 0.6155,
+          "surround_luma": 0.5781,
+          "readable": true
+        },
+        {
+          "name": "petal_front_cascade_soft_curved_02",
+          "contrast": 0.0825,
+          "edge_density": 0.1461,
+          "separation": 0.0489,
+          "mean_luma": 0.6232,
+          "surround_luma": 0.5743,
+          "readable": true
+        },
+        {
+          "name": "petal_front_cascade_soft_curved_03",
+          "contrast": 0.0873,
+          "edge_density": 0.1374,
+          "separation": 0.0291,
+          "mean_luma": 0.6172,
+          "surround_luma": 0.5881,
+          "readable": true
+        },
+        {
+          "name": "petal_front_cascade_soft_curved_04",
+          "contrast": 0.0877,
+          "edge_density": 0.1303,
+          "separation": 0.03,
+          "mean_luma": 0.618,
+          "surround_luma": 0.588,
+          "readable": true
+        },
+        {
+          "name": "petal_front_cascade_soft_curved_05",
+          "contrast": 0.0889,
+          "edge_density": 0.1122,
+          "separation": 0.0261,
+          "mean_luma": 0.6083,
+          "surround_luma": 0.5822,
+          "readable": true
+        },
+        {
+          "name": "petal_front_cascade_soft_curved_06",
+          "contrast": 0.0887,
+          "edge_density": 0.1024,
+          "separation": 0.0315,
+          "mean_luma": 0.5985,
+          "surround_luma": 0.567,
+          "readable": true
+        },
+        {
+          "name": "petal_front_cascade_soft_curved_07",
+          "contrast": 0.0876,
+          "edge_density": 0.0956,
+          "separation": 0.0046,
+          "mean_luma": 0.5893,
+          "surround_luma": 0.5847,
+          "readable": true
+        },
+        {
+          "name": "leaf_base_soft_curved_01",
+          "contrast": 0.1564,
+          "edge_density": 0.0842,
+          "separation": 0.0278,
+          "mean_luma": 0.6142,
+          "surround_luma": 0.5865,
+          "readable": true
+        },
+        {
+          "name": "leaf_base_soft_curved_02",
+          "contrast": 0.1338,
+          "edge_density": 0.1188,
+          "separation": 0.0128,
+          "mean_luma": 0.7122,
+          "surround_luma": 0.725,
+          "readable": true
+        },
+        {
+          "name": "leaf_base_soft_curved_03",
+          "contrast": 0.1424,
+          "edge_density": 0.1133,
+          "separation": 0.0108,
+          "mean_luma": 0.6645,
+          "surround_luma": 0.6537,
+          "readable": true
+        },
+        {
+          "name": "leaf_base_soft_curved_04",
+          "contrast": 0.0837,
+          "edge_density": 0.0296,
+          "separation": 0.0143,
+          "mean_luma": 0.4079,
+          "surround_luma": 0.3936,
+          "readable": true
+        },
+        {
+          "name": "leaf_base_soft_curved_05",
+          "contrast": 0.1122,
+          "edge_density": 0.0771,
+          "separation": 0.0548,
+          "mean_luma": 0.6923,
+          "surround_luma": 0.6375,
+          "readable": true
+        },
+        {
+          "name": "leaf_base_soft_curved_06",
+          "contrast": 0.0829,
+          "edge_density": 0.0676,
+          "separation": 0.008,
+          "mean_luma": 0.7176,
+          "surround_luma": 0.7096,
+          "readable": true
+        },
+        {
+          "name": "leaf_base_soft_curved_07",
+          "contrast": 0.1447,
+          "edge_density": 0.0645,
+          "separation": 0.0223,
+          "mean_luma": 0.5973,
+          "surround_luma": 0.5749,
+          "readable": true
+        },
+        {
+          "name": "leaf_base_soft_curved_08",
+          "contrast": 0.0556,
+          "edge_density": 0.0,
+          "separation": 0.0035,
+          "mean_luma": 0.4522,
+          "surround_luma": 0.4557,
+          "readable": true
+        },
+        {
+          "name": "cloth_fold_soft_curved_highlight_01",
+          "contrast": 0.0777,
+          "edge_density": 0.1574,
+          "separation": 0.0338,
+          "mean_luma": 0.5863,
+          "surround_luma": 0.5524,
+          "readable": true
+        },
+        {
+          "name": "cloth_fold_soft_curved_highlight_02",
+          "contrast": 0.0852,
+          "edge_density": 0.125,
+          "separation": 0.0369,
+          "mean_luma": 0.6042,
+          "surround_luma": 0.5673,
+          "readable": true
+        },
+        {
+          "name": "cloth_fold_soft_curved_highlight_03",
+          "contrast": 0.0932,
+          "edge_density": 0.1724,
+          "separation": 0.0199,
+          "mean_luma": 0.5002,
+          "surround_luma": 0.5201,
+          "readable": true
+        },
+        {
+          "name": "cloth_fold_soft_curved_highlight_04",
+          "contrast": 0.1295,
+          "edge_density": 0.0892,
+          "separation": 0.0214,
+          "mean_luma": 0.6292,
+          "surround_luma": 0.6078,
+          "readable": true
+        },
+        {
+          "name": "cloth_fold_soft_curved_highlight_05",
+          "contrast": 0.1225,
+          "edge_density": 0.1479,
+          "separation": 0.051,
+          "mean_luma": 0.584,
+          "surround_luma": 0.635,
+          "readable": true
+        },
+        {
+          "name": "cloth_fold_soft_curved_highlight_06",
+          "contrast": 0.0869,
+          "edge_density": 0.0896,
+          "separation": 0.0829,
+          "mean_luma": 0.5393,
+          "surround_luma": 0.6221,
+          "readable": true
+        },
+        {
+          "name": "cloth_fold_soft_curved_highlight_07",
+          "contrast": 0.0429,
+          "edge_density": 0.0019,
+          "separation": 0.0348,
+          "mean_luma": 0.6525,
+          "surround_luma": 0.6177,
+          "readable": true
+        },
+        {
+          "name": "petal_vein_front_embossed_fold_01",
+          "contrast": 0.0779,
+          "edge_density": 0.2017,
+          "separation": 0.0085,
+          "mean_luma": 0.6113,
+          "surround_luma": 0.6197,
+          "readable": true
+        },
+        {
+          "name": "petal_vein_front_embossed_fold_02",
+          "contrast": 0.074,
+          "edge_density": 0.1896,
+          "separation": 0.0098,
+          "mean_luma": 0.6124,
+          "surround_luma": 0.6221,
+          "readable": true
+        },
+        {
+          "name": "petal_vein_front_embossed_fold_03",
+          "contrast": 0.0748,
+          "edge_density": 0.1676,
+          "separation": 0.0195,
+          "mean_luma": 0.6188,
+          "surround_luma": 0.5994,
+          "readable": true
+        },
+        {
+          "name": "petal_vein_front_embossed_fold_04",
+          "contrast": 0.0878,
+          "edge_density": 0.182,
+          "separation": 0.0292,
+          "mean_luma": 0.6086,
+          "surround_luma": 0.5793,
+          "readable": true
+        },
+        {
+          "name": "petal_vein_front_embossed_fold_05",
+          "contrast": 0.0846,
+          "edge_density": 0.1433,
+          "separation": 0.0217,
+          "mean_luma": 0.6075,
+          "surround_luma": 0.5858,
+          "readable": true
+        },
+        {
+          "name": "petal_vein_front_embossed_fold_06",
+          "contrast": 0.0889,
+          "edge_density": 0.1313,
+          "separation": 0.048,
+          "mean_luma": 0.6053,
+          "surround_luma": 0.5573,
+          "readable": true
+        },
+        {
+          "name": "petal_vein_front_embossed_fold_07",
+          "contrast": 0.0921,
+          "edge_density": 0.1212,
+          "separation": 0.0105,
+          "mean_luma": 0.5776,
+          "surround_luma": 0.567,
+          "readable": true
+        },
+        {
+          "name": "petal_rim_translucent_lip_01",
+          "contrast": 0.0832,
+          "edge_density": 0.1466,
+          "separation": 0.0116,
+          "mean_luma": 0.5764,
+          "surround_luma": 0.588,
+          "readable": true
+        },
+        {
+          "name": "petal_rim_translucent_lip_02",
+          "contrast": 0.0851,
+          "edge_density": 0.0784,
+          "separation": 0.0347,
+          "mean_luma": 0.6218,
+          "surround_luma": 0.5871,
+          "readable": true
+        },
+        {
+          "name": "petal_rim_translucent_lip_03",
+          "contrast": 0.0865,
+          "edge_density": 0.1065,
+          "separation": 0.0531,
+          "mean_luma": 0.63,
+          "surround_luma": 0.5769,
+          "readable": true
+        },
+        {
+          "name": "petal_rim_translucent_lip_04",
+          "contrast": 0.089,
+          "edge_density": 0.1148,
+          "separation": 0.0508,
+          "mean_luma": 0.6273,
+          "surround_luma": 0.5765,
+          "readable": true
+        },
+        {
+          "name": "petal_rim_translucent_lip_05",
+          "contrast": 0.1004,
+          "edge_density": 0.1001,
+          "separation": 0.0736,
+          "mean_luma": 0.6207,
+          "surround_luma": 0.5471,
+          "readable": true
+        },
+        {
+          "name": "petal_rim_translucent_lip_06",
+          "contrast": 0.0917,
+          "edge_density": 0.1285,
+          "separation": 0.0219,
+          "mean_luma": 0.5899,
+          "surround_luma": 0.568,
+          "readable": true
+        },
+        {
+          "name": "petal_rim_translucent_lip_07",
+          "contrast": 0.0732,
+          "edge_density": 0.1259,
+          "separation": 0.0125,
+          "mean_luma": 0.6009,
+          "surround_luma": 0.6134,
+          "readable": true
+        },
+        {
+          "name": "petal_rim_translucent_lip_08",
+          "contrast": 0.0963,
+          "edge_density": 0.0882,
+          "separation": 0.036,
+          "mean_luma": 0.6178,
+          "surround_luma": 0.5818,
+          "readable": true
+        },
+        {
+          "name": "petal_rim_translucent_lip_09",
+          "contrast": 0.088,
+          "edge_density": 0.1171,
+          "separation": 0.0624,
+          "mean_luma": 0.6285,
+          "surround_luma": 0.5661,
+          "readable": true
+        },
+        {
+          "name": "petal_rim_translucent_lip_10",
+          "contrast": 0.0842,
+          "edge_density": 0.1065,
+          "separation": 0.0518,
+          "mean_luma": 0.6316,
+          "surround_luma": 0.5797,
+          "readable": true
+        },
+        {
+          "name": "petal_rim_translucent_lip_11",
+          "contrast": 0.0834,
+          "edge_density": 0.1111,
+          "separation": 0.0548,
+          "mean_luma": 0.6361,
+          "surround_luma": 0.5813,
+          "readable": true
+        },
+        {
+          "name": "petal_rim_translucent_lip_12",
+          "contrast": 0.0796,
+          "edge_density": 0.0892,
+          "separation": 0.0477,
+          "mean_luma": 0.6245,
+          "surround_luma": 0.5768,
+          "readable": true
+        },
+        {
+          "name": "petal_rim_translucent_lip_13",
+          "contrast": 0.0823,
+          "edge_density": 0.0643,
+          "separation": 0.0297,
+          "mean_luma": 0.6189,
+          "surround_luma": 0.5892,
+          "readable": true
+        },
+        {
+          "name": "petal_rim_translucent_lip_14",
+          "contrast": 0.102,
+          "edge_density": 0.2138,
+          "separation": 0.0215,
+          "mean_luma": 0.5843,
+          "surround_luma": 0.5627,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_01",
+          "contrast": 0.0543,
+          "edge_density": 0.2062,
+          "separation": 0.0045,
+          "mean_luma": 0.5685,
+          "surround_luma": 0.5639,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_02",
+          "contrast": 0.0611,
+          "edge_density": 0.2437,
+          "separation": 0.028,
+          "mean_luma": 0.5752,
+          "surround_luma": 0.6031,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_03",
+          "contrast": 0.0745,
+          "edge_density": 0.2875,
+          "separation": 0.0162,
+          "mean_luma": 0.6052,
+          "surround_luma": 0.589,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_04",
+          "contrast": 0.056,
+          "edge_density": 0.1313,
+          "separation": 0.0314,
+          "mean_luma": 0.6377,
+          "surround_luma": 0.6063,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_05",
+          "contrast": 0.0765,
+          "edge_density": 0.1938,
+          "separation": 0.0226,
+          "mean_luma": 0.6107,
+          "surround_luma": 0.6333,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_06",
+          "contrast": 0.0758,
+          "edge_density": 0.1625,
+          "separation": 0.0069,
+          "mean_luma": 0.6175,
+          "surround_luma": 0.6245,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_07",
+          "contrast": 0.075,
+          "edge_density": 0.1133,
+          "separation": 0.0122,
+          "mean_luma": 0.5944,
+          "surround_luma": 0.6065,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_08",
+          "contrast": 0.0766,
+          "edge_density": 0.303,
+          "separation": 0.0331,
+          "mean_luma": 0.5167,
+          "surround_luma": 0.5497,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_09",
+          "contrast": 0.0978,
+          "edge_density": 0.1667,
+          "separation": 0.0038,
+          "mean_luma": 0.5996,
+          "surround_luma": 0.5958,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_10",
+          "contrast": 0.0312,
+          "edge_density": 0.0061,
+          "separation": 0.0158,
+          "mean_luma": 0.6999,
+          "surround_luma": 0.6842,
+          "readable": false
+        },
+        {
+          "name": "petal_surface_micro_vein_11",
+          "contrast": 0.0658,
+          "edge_density": 0.0364,
+          "separation": 0.0094,
+          "mean_luma": 0.6688,
+          "surround_luma": 0.6593,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_12",
+          "contrast": 0.0951,
+          "edge_density": 0.28,
+          "separation": 0.0684,
+          "mean_luma": 0.5229,
+          "surround_luma": 0.5914,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_13",
+          "contrast": 0.1712,
+          "edge_density": 0.2788,
+          "separation": 0.0093,
+          "mean_luma": 0.624,
+          "surround_luma": 0.6147,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_14",
+          "contrast": 0.1278,
+          "edge_density": 0.2364,
+          "separation": 0.0262,
+          "mean_luma": 0.6833,
+          "surround_luma": 0.6571,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_15",
+          "contrast": 0.0763,
+          "edge_density": 0.1299,
+          "separation": 0.0031,
+          "mean_luma": 0.7101,
+          "surround_luma": 0.7132,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_16",
+          "contrast": 0.0423,
+          "edge_density": 0.0056,
+          "separation": 0.0086,
+          "mean_luma": 0.6985,
+          "surround_luma": 0.6899,
+          "readable": true
+        },
+        {
+          "name": "petal_surface_micro_vein_17",
+          "contrast": 0.0265,
+          "edge_density": 0.0065,
+          "separation": 0.0179,
+          "mean_luma": 0.6738,
+          "surround_luma": 0.6559,
+          "readable": false
+        },
+        {
+          "name": "petal_surface_micro_vein_18",
+          "contrast": 0.1003,
+          "edge_density": 0.1726,
+          "separation": 0.0274,
+          "mean_luma": 0.5563,
+          "surround_luma": 0.5289,
+          "readable": true
+        },
+        {
+          "name": "organic_pollen_soft_center",
+          "contrast": 0.0978,
+          "edge_density": 0.1297,
+          "separation": 0.0208,
+          "mean_luma": 0.6032,
+          "surround_luma": 0.5824,
+          "readable": true
+        },
+        {
+          "name": "organic_pollen_cup_gold_visible",
+          "contrast": 0.0801,
+          "edge_density": 0.1347,
+          "separation": 0.0028,
+          "mean_luma": 0.5725,
+          "surround_luma": 0.5753,
+          "readable": true
+        },
+        {
+          "name": "organic_front_pollen_gold_visible",
+          "contrast": 0.14,
+          "edge_density": 0.1373,
+          "separation": 0.1431,
+          "mean_luma": 0.6771,
+          "surround_luma": 0.534,
+          "readable": true
+        },
+        {
+          "name": "organic_front_pollen_gold_dot_left",
+          "contrast": 0.0578,
+          "edge_density": 0.0897,
+          "separation": 0.0975,
+          "mean_luma": 0.7376,
+          "surround_luma": 0.6401,
+          "readable": true
+        },
+        {
+          "name": "organic_front_pollen_gold_dot_right",
+          "contrast": 0.0699,
+          "edge_density": 0.1593,
+          "separation": 0.0681,
+          "mean_luma": 0.7149,
+          "surround_luma": 0.6468,
+          "readable": true
+        },
+        {
+          "name": "organic_front_pollen_gold_dot_low",
+          "contrast": 0.1279,
+          "edge_density": 0.3077,
+          "separation": 0.2041,
+          "mean_luma": 0.6897,
+          "surround_luma": 0.4855,
+          "readable": true
+        },
+        {
+          "name": "organic_stamen_filament_thread_01",
+          "contrast": 0.105,
+          "edge_density": 0.5,
+          "separation": 0.0729,
+          "mean_luma": 0.5385,
+          "surround_luma": 0.4656,
+          "readable": true
+        },
+        {
+          "name": "stem_curved_base",
+          "contrast": 0.0817,
+          "edge_density": 0.0101,
+          "separation": 0.0021,
+          "mean_luma": 0.4462,
+          "surround_luma": 0.4441,
+          "readable": true
+        },
+        {
+          "name": "dew_drop_front_01",
+          "contrast": 0.0915,
+          "edge_density": 0.2239,
+          "separation": 0.0422,
+          "mean_luma": 0.5268,
+          "surround_luma": 0.569,
+          "readable": true
+        },
+        {
+          "name": "dew_drop_front_02",
+          "contrast": 0.0645,
+          "edge_density": 0.0124,
+          "separation": 0.0203,
+          "mean_luma": 0.6135,
+          "surround_luma": 0.5933,
+          "readable": true
+        },
+        {
+          "name": "dew_drop_top_03",
+          "contrast": 0.0742,
+          "edge_density": 0.0625,
+          "separation": 0.0941,
+          "mean_luma": 0.634,
+          "surround_luma": 0.5399,
+          "readable": true
+        }
+      ],
+      "measured_parts": 101,
+      "readable_parts": 99,
+      "unreadable_parts": [
+        "petal_surface_micro_vein_10",
+        "petal_surface_micro_vein_17"
+      ]
+    },
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "organic_soft_surface_study",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 33,
+    "technical_score": 60,
+    "runtime_seconds": 3.2,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\organic_soft_surface_study_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
     ],
     "readability": null,
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
-    "failures": []
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Sphere'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Sphere",
+      "pipeline failed: pipeline_incomplete",
+      "score 33 < min 86",
+      "subject objects 1 < min 24",
+      "visible subject objects 0 < min 22",
+      "subject depth layers 1 < min 4",
+      "missing named subject parts: organic, fluted, petal, leaf, fold, dew, stem",
+      "subject faces 512 < min 1600",
+      "subject modifiers 0 < min 42",
+      "smooth subject objects 0 < min 30",
+      "craft detail objects 0 < min 80",
+      "missing craft roles: organic_surface, surface_microdetail",
+      "curved detail objects 0 < min 30",
+      "subject materials 0 < min 6",
+      "subject material node count 0 < min 5",
+      "subject procedural materials 0 < min 4",
+      "missing subject material features: noise_bump, noise_color_ramp, wave_bump"
+    ]
+  },
+  "adversarial_slop_keyword_blob_without_surface_craft": {
+    "task_id": "organic_soft_surface_study",
+    "mode": "adversarial_slop_keyword_blob_without_surface_craft",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 4.2,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\organic_soft_surface_study_adversarial_slop_keyword_blob_without_surface_craft\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "warm_red_bias"
+    ],
+    "readability": {
+      "parts": [
+        {
+          "name": "organic_fluted_petal_leaf_fold_dew_stem_single_blob",
+          "contrast": 0.0653,
+          "edge_density": 0.0007,
+          "separation": 0.0358,
+          "mean_luma": 0.4753,
+          "surround_luma": 0.5111,
+          "readable": true
+        }
+      ],
+      "measured_parts": 1,
+      "readable_parts": 1,
+      "unreadable_parts": []
+    },
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "render has no discernible silhouette/detail",
+      "render is too flat for visual acceptance",
+      "score 79 < min 86",
+      "subject objects 1 < min 24",
+      "visible subject objects 1 < min 22",
+      "subject depth layers 1 < min 4",
+      "subject faces 512 < min 1600",
+      "subject modifiers 0 < min 42",
+      "smooth subject objects 1 < min 30",
+      "craft detail objects 0 < min 80",
+      "missing craft roles: organic_surface, surface_microdetail",
+      "curved detail objects 1 < min 30",
+      "subject materials 1 < min 6",
+      "subject material node count 2 < min 5",
+      "subject procedural materials 0 < min 4",
+      "missing subject material features: noise_bump, noise_color_ramp, wave_bump"
+    ]
   }
 }

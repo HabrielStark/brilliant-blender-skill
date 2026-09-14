@@ -26,7 +26,8 @@
     "require_subject_material_features": ["noise_color_ramp", "wave_bump", "noise_bump"],
     "min_craft_detail_objects": 22,
     "require_craft_roles": ["fastener", "curve_tube", "panel_cutline", "decal_plane", "text_label"],
-    "require_named_parts": ["case", "battery", "board", "screw", "post", "trace", "contact", "axis", "chip", "connector", "gasket", "spring", "washer", "ribbon", "callout", "cutaway", "arrow", "spacer"]
+    "require_named_parts": ["case", "battery", "board", "screw", "post", "trace", "contact", "axis", "chip", "connector", "gasket", "spring", "washer", "ribbon", "callout", "cutaway", "arrow", "spacer"],
+    "require_readable_named_parts": true
   },
   "recipe": {"operations": [
     {"op": "ensure_standard_collections"},

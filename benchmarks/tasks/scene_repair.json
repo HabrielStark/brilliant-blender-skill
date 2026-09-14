@@ -22,7 +22,8 @@
     "min_named_part_object_coverage": 0.0003,
     "min_distinct_named_part_objects": 16,
     "min_named_part_total_coverage": 0.16,
-    "require_named_parts": ["repaired", "base", "panel", "accent", "handle", "hinge", "screw", "label", "tick"]
+    "require_named_parts": ["repaired", "base", "panel", "accent", "handle", "hinge", "screw", "label", "tick"],
+    "require_readable_named_parts": true
   },
   "recipe": {"operations": [
     {"op": "ensure_standard_collections"},

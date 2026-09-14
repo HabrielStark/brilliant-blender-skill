@@ -5,16 +5,647 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 6.7,
+    "runtime_seconds": 5.4,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\mechanical_exploded_view_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\mechanical_exploded_view_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "case_bottom_shell",
+          "contrast": 0.0969,
+          "edge_density": 0.0493,
+          "separation": 0.0381,
+          "mean_luma": 0.5086,
+          "surround_luma": 0.5467,
+          "readable": true
+        },
+        {
+          "name": "battery_cell_brass",
+          "contrast": 0.1113,
+          "edge_density": 0.0775,
+          "separation": 0.0456,
+          "mean_luma": 0.4929,
+          "surround_luma": 0.5384,
+          "readable": true
+        },
+        {
+          "name": "board_pcb_round",
+          "contrast": 0.1248,
+          "edge_density": 0.0818,
+          "separation": 0.0395,
+          "mean_luma": 0.5568,
+          "surround_luma": 0.5173,
+          "readable": true
+        },
+        {
+          "name": "case_top_shell",
+          "contrast": 0.1203,
+          "edge_density": 0.0659,
+          "separation": 0.0333,
+          "mean_luma": 0.5548,
+          "surround_luma": 0.5881,
+          "readable": true
+        },
+        {
+          "name": "exploded_axis_guide",
+          "contrast": 0.0338,
+          "edge_density": 0.1324,
+          "separation": 0.1464,
+          "mean_luma": 0.7129,
+          "surround_luma": 0.5665,
+          "readable": true
+        },
+        {
+          "name": "support_post_front_left",
+          "contrast": 0.0514,
+          "edge_density": 0.013,
+          "separation": 0.1027,
+          "mean_luma": 0.5127,
+          "surround_luma": 0.6155,
+          "readable": true
+        },
+        {
+          "name": "support_post_front_right",
+          "contrast": 0.0699,
+          "edge_density": 0.1207,
+          "separation": 0.0079,
+          "mean_luma": 0.4701,
+          "surround_luma": 0.478,
+          "readable": true
+        },
+        {
+          "name": "support_post_back_left",
+          "contrast": 0.1326,
+          "edge_density": 0.1261,
+          "separation": 0.027,
+          "mean_luma": 0.5308,
+          "surround_luma": 0.5038,
+          "readable": true
+        },
+        {
+          "name": "support_post_back_right",
+          "contrast": 0.0568,
+          "edge_density": 0.1185,
+          "separation": 0.0653,
+          "mean_luma": 0.5134,
+          "surround_luma": 0.5787,
+          "readable": true
+        },
+        {
+          "name": "spacer_post_front_left_axis_aligned",
+          "contrast": 0.0804,
+          "edge_density": 0.0773,
+          "separation": 0.0476,
+          "mean_luma": 0.4533,
+          "surround_luma": 0.5009,
+          "readable": true
+        },
+        {
+          "name": "spacer_post_front_right_axis_aligned",
+          "contrast": 0.0992,
+          "edge_density": 0.3523,
+          "separation": 0.0447,
+          "mean_luma": 0.4874,
+          "surround_luma": 0.532,
+          "readable": true
+        },
+        {
+          "name": "spacer_post_back_left_axis_aligned",
+          "contrast": 0.1086,
+          "edge_density": 0.0758,
+          "separation": 0.0223,
+          "mean_luma": 0.6075,
+          "surround_luma": 0.5852,
+          "readable": true
+        },
+        {
+          "name": "spacer_post_back_right_axis_aligned",
+          "contrast": 0.0893,
+          "edge_density": 0.1182,
+          "separation": 0.0487,
+          "mean_luma": 0.4147,
+          "surround_luma": 0.4634,
+          "readable": true
+        },
+        {
+          "name": "case_gasket_outer_rubber",
+          "contrast": 0.1244,
+          "edge_density": 0.0728,
+          "separation": 0.049,
+          "mean_luma": 0.549,
+          "surround_luma": 0.598,
+          "readable": true
+        },
+        {
+          "name": "board_chip_controller_black",
+          "contrast": 0.1958,
+          "edge_density": 0.3646,
+          "separation": 0.2007,
+          "mean_luma": 0.4585,
+          "surround_luma": 0.6592,
+          "readable": true
+        },
+        {
+          "name": "board_chip_sensor_black",
+          "contrast": 0.1777,
+          "edge_density": 0.3343,
+          "separation": 0.1816,
+          "mean_luma": 0.4512,
+          "surround_luma": 0.6328,
+          "readable": true
+        },
+        {
+          "name": "board_connector_white_socket",
+          "contrast": 0.0536,
+          "edge_density": 0.106,
+          "separation": 0.0668,
+          "mean_luma": 0.6721,
+          "surround_luma": 0.6053,
+          "readable": true
+        },
+        {
+          "name": "capacitor_contact_left",
+          "contrast": 0.0493,
+          "edge_density": 0.0,
+          "separation": 0.0992,
+          "mean_luma": 0.3027,
+          "surround_luma": 0.4019,
+          "readable": true
+        },
+        {
+          "name": "capacitor_contact_right",
+          "contrast": 0.0351,
+          "edge_density": 0.0,
+          "separation": 0.0175,
+          "mean_luma": 0.5641,
+          "surround_luma": 0.5815,
+          "readable": true
+        },
+        {
+          "name": "battery_spring_contact_ring_01",
+          "contrast": 0.1119,
+          "edge_density": 0.099,
+          "separation": 0.0041,
+          "mean_luma": 0.4355,
+          "surround_luma": 0.4313,
+          "readable": true
+        },
+        {
+          "name": "battery_spring_contact_ring_02",
+          "contrast": 0.1204,
+          "edge_density": 0.1326,
+          "separation": 0.0691,
+          "mean_luma": 0.3805,
+          "surround_luma": 0.4496,
+          "readable": true
+        },
+        {
+          "name": "battery_spring_contact_ring_03",
+          "contrast": 0.1076,
+          "edge_density": 0.1604,
+          "separation": 0.0845,
+          "mean_luma": 0.3476,
+          "surround_luma": 0.4321,
+          "readable": true
+        },
+        {
+          "name": "case_cutaway_translucent_panel",
+          "contrast": 0.0669,
+          "edge_density": 0.0471,
+          "separation": 0.0299,
+          "mean_luma": 0.5749,
+          "surround_luma": 0.545,
+          "readable": true
+        },
+        {
+          "name": "connector_ribbon_cable_amber",
+          "contrast": 0.0901,
+          "edge_density": 0.1667,
+          "separation": 0.0654,
+          "mean_luma": 0.5451,
+          "surround_luma": 0.4797,
+          "readable": true
+        },
+        {
+          "name": "gasket_alignment_red_tab",
+          "contrast": 0.0357,
+          "edge_density": 0.0078,
+          "separation": 0.0036,
+          "mean_luma": 0.6587,
+          "surround_luma": 0.6551,
+          "readable": true
+        },
+        {
+          "name": "connector_ribbon_cable_curve_tube",
+          "contrast": 0.0883,
+          "edge_density": 0.118,
+          "separation": 0.0336,
+          "mean_luma": 0.5115,
+          "surround_luma": 0.5451,
+          "readable": true
+        },
+        {
+          "name": "axis_callout_case_decal_plate",
+          "contrast": 0.109,
+          "edge_density": 0.1864,
+          "separation": 0.124,
+          "mean_luma": 0.7349,
+          "surround_luma": 0.6109,
+          "readable": true
+        },
+        {
+          "name": "axis_callout_board_decal_plate",
+          "contrast": 0.1015,
+          "edge_density": 0.1701,
+          "separation": 0.1248,
+          "mean_luma": 0.7133,
+          "surround_luma": 0.5885,
+          "readable": true
+        },
+        {
+          "name": "cutaway_callout_window_decal_plate",
+          "contrast": 0.0974,
+          "edge_density": 0.1673,
+          "separation": 0.1335,
+          "mean_luma": 0.6849,
+          "surround_luma": 0.5514,
+          "readable": true
+        },
+        {
+          "name": "axis_callout_case_text_label",
+          "contrast": 0.0241,
+          "edge_density": 0.0,
+          "separation": 0.0125,
+          "mean_luma": 0.8073,
+          "surround_luma": 0.8198,
+          "readable": false
+        },
+        {
+          "name": "axis_callout_board_text_label",
+          "contrast": 0.0249,
+          "edge_density": 0.0,
+          "separation": 0.0191,
+          "mean_luma": 0.7838,
+          "surround_luma": 0.8029,
+          "readable": false
+        },
+        {
+          "name": "cutaway_callout_window_text_label",
+          "contrast": 0.0423,
+          "edge_density": 0.0649,
+          "separation": 0.0169,
+          "mean_luma": 0.7347,
+          "surround_luma": 0.7515,
+          "readable": true
+        },
+        {
+          "name": "spacer_washer_ring_01",
+          "contrast": 0.0452,
+          "edge_density": 0.1026,
+          "separation": 0.0239,
+          "mean_luma": 0.7283,
+          "surround_luma": 0.7522,
+          "readable": true
+        },
+        {
+          "name": "spacer_washer_ring_02",
+          "contrast": 0.0383,
+          "edge_density": 0.0385,
+          "separation": 0.0021,
+          "mean_luma": 0.569,
+          "surround_luma": 0.5669,
+          "readable": true
+        },
+        {
+          "name": "spacer_washer_ring_03",
+          "contrast": 0.0676,
+          "edge_density": 0.2308,
+          "separation": 0.0317,
+          "mean_luma": 0.5467,
+          "surround_luma": 0.515,
+          "readable": true
+        },
+        {
+          "name": "spacer_washer_ring_04",
+          "contrast": 0.0693,
+          "edge_density": 0.1667,
+          "separation": 0.0427,
+          "mean_luma": 0.6394,
+          "surround_luma": 0.5967,
+          "readable": true
+        },
+        {
+          "name": "battery_contact_01",
+          "contrast": 0.0813,
+          "edge_density": 0.3939,
+          "separation": 0.0689,
+          "mean_luma": 0.6315,
+          "surround_luma": 0.5626,
+          "readable": true
+        },
+        {
+          "name": "battery_contact_04",
+          "contrast": 0.0773,
+          "edge_density": 0.2879,
+          "separation": 0.071,
+          "mean_luma": 0.5153,
+          "surround_luma": 0.4443,
+          "readable": true
+        },
+        {
+          "name": "ribbon_cable_trace_line_01",
+          "contrast": 0.0664,
+          "edge_density": 0.1389,
+          "separation": 0.0274,
+          "mean_luma": 0.5606,
+          "surround_luma": 0.5332,
+          "readable": true
+        },
+        {
+          "name": "ribbon_cable_trace_line_02",
+          "contrast": 0.0597,
+          "edge_density": 0.0833,
+          "separation": 0.0317,
+          "mean_luma": 0.5706,
+          "surround_luma": 0.5389,
+          "readable": true
+        },
+        {
+          "name": "ribbon_cable_trace_line_03",
+          "contrast": 0.0569,
+          "edge_density": 0.0625,
+          "separation": 0.0372,
+          "mean_luma": 0.5779,
+          "surround_luma": 0.5407,
+          "readable": true
+        },
+        {
+          "name": "ribbon_cable_trace_line_04",
+          "contrast": 0.0558,
+          "edge_density": 0.1062,
+          "separation": 0.0575,
+          "mean_luma": 0.5919,
+          "surround_luma": 0.5344,
+          "readable": true
+        },
+        {
+          "name": "ribbon_cable_trace_line_05",
+          "contrast": 0.0604,
+          "edge_density": 0.15,
+          "separation": 0.0735,
+          "mean_luma": 0.594,
+          "surround_luma": 0.5206,
+          "readable": true
+        },
+        {
+          "name": "ribbon_cable_trace_line_06",
+          "contrast": 0.0615,
+          "edge_density": 0.1333,
+          "separation": 0.0557,
+          "mean_luma": 0.5923,
+          "surround_luma": 0.5365,
+          "readable": true
+        },
+        {
+          "name": "ribbon_cable_trace_line_07",
+          "contrast": 0.0596,
+          "edge_density": 0.1313,
+          "separation": 0.0337,
+          "mean_luma": 0.5868,
+          "surround_luma": 0.5531,
+          "readable": true
+        },
+        {
+          "name": "axis_callout_tick_01",
+          "contrast": 0.0745,
+          "edge_density": 0.4271,
+          "separation": 0.0636,
+          "mean_luma": 0.6482,
+          "surround_luma": 0.5845,
+          "readable": true
+        },
+        {
+          "name": "axis_callout_tick_02",
+          "contrast": 0.0783,
+          "edge_density": 0.4271,
+          "separation": 0.0674,
+          "mean_luma": 0.652,
+          "surround_luma": 0.5846,
+          "readable": true
+        },
+        {
+          "name": "axis_callout_tick_03",
+          "contrast": 0.0837,
+          "edge_density": 0.475,
+          "separation": 0.0781,
+          "mean_luma": 0.6656,
+          "surround_luma": 0.5875,
+          "readable": true
+        },
+        {
+          "name": "axis_callout_tick_04",
+          "contrast": 0.0666,
+          "edge_density": 0.1,
+          "separation": 0.0596,
+          "mean_luma": 0.7651,
+          "surround_luma": 0.7055,
+          "readable": true
+        },
+        {
+          "name": "axis_callout_tick_05",
+          "contrast": 0.0901,
+          "edge_density": 0.4688,
+          "separation": 0.0725,
+          "mean_luma": 0.6597,
+          "surround_luma": 0.5872,
+          "readable": true
+        },
+        {
+          "name": "axis_callout_tick_06",
+          "contrast": 0.0952,
+          "edge_density": 0.3958,
+          "separation": 0.0448,
+          "mean_luma": 0.6899,
+          "surround_luma": 0.6451,
+          "readable": true
+        },
+        {
+          "name": "case_cutaway_callout_line_01",
+          "contrast": 0.165,
+          "edge_density": 0.4012,
+          "separation": 0.0334,
+          "mean_luma": 0.3761,
+          "surround_luma": 0.3427,
+          "readable": true
+        },
+        {
+          "name": "case_cutaway_callout_line_02",
+          "contrast": 0.0988,
+          "edge_density": 0.2934,
+          "separation": 0.0395,
+          "mean_luma": 0.5054,
+          "surround_luma": 0.4659,
+          "readable": true
+        },
+        {
+          "name": "case_cutaway_callout_line_03",
+          "contrast": 0.0594,
+          "edge_density": 0.1667,
+          "separation": 0.0942,
+          "mean_luma": 0.6104,
+          "surround_luma": 0.5162,
+          "readable": true
+        },
+        {
+          "name": "case_cutaway_callout_line_04",
+          "contrast": 0.0804,
+          "edge_density": 0.1358,
+          "separation": 0.0803,
+          "mean_luma": 0.6881,
+          "surround_luma": 0.6078,
+          "readable": true
+        },
+        {
+          "name": "case_cutaway_callout_line_05",
+          "contrast": 0.1974,
+          "edge_density": 0.2562,
+          "separation": 0.0666,
+          "mean_luma": 0.5347,
+          "surround_luma": 0.4682,
+          "readable": true
+        },
+        {
+          "name": "case_cutaway_callout_line_06",
+          "contrast": 0.137,
+          "edge_density": 0.3889,
+          "separation": 0.0298,
+          "mean_luma": 0.4753,
+          "surround_luma": 0.5052,
+          "readable": true
+        },
+        {
+          "name": "assembly_arrow_lift_direction_01",
+          "contrast": 0.0534,
+          "edge_density": 0.2364,
+          "separation": 0.1089,
+          "mean_luma": 0.695,
+          "surround_luma": 0.5861,
+          "readable": true
+        },
+        {
+          "name": "assembly_arrow_lift_direction_02",
+          "contrast": 0.0539,
+          "edge_density": 0.2182,
+          "separation": 0.1181,
+          "mean_luma": 0.7,
+          "surround_luma": 0.5818,
+          "readable": true
+        },
+        {
+          "name": "assembly_arrow_lift_direction_03",
+          "contrast": 0.0448,
+          "edge_density": 0.1652,
+          "separation": 0.0546,
+          "mean_luma": 0.6925,
+          "surround_luma": 0.6379,
+          "readable": true
+        },
+        {
+          "name": "assembly_arrow_lift_direction_04",
+          "contrast": 0.0447,
+          "edge_density": 0.0,
+          "separation": 0.0129,
+          "mean_luma": 0.4034,
+          "surround_luma": 0.3904,
+          "readable": true
+        },
+        {
+          "name": "assembly_arrow_lift_direction_05",
+          "contrast": 0.0548,
+          "edge_density": 0.1091,
+          "separation": 0.0029,
+          "mean_luma": 0.6233,
+          "surround_luma": 0.6204,
+          "readable": true
+        },
+        {
+          "name": "component_shadow_projection_plate_01",
+          "contrast": 0.1126,
+          "edge_density": 0.1458,
+          "separation": 0.0091,
+          "mean_luma": 0.4829,
+          "surround_luma": 0.4738,
+          "readable": true
+        },
+        {
+          "name": "component_shadow_projection_plate_02",
+          "contrast": 0.0838,
+          "edge_density": 0.24,
+          "separation": 0.0119,
+          "mean_luma": 0.5418,
+          "surround_luma": 0.5298,
+          "readable": true
+        },
+        {
+          "name": "component_shadow_projection_plate_03",
+          "contrast": 0.0245,
+          "edge_density": 0.015,
+          "separation": 0.0333,
+          "mean_luma": 0.5187,
+          "surround_luma": 0.552,
+          "readable": false
+        },
+        {
+          "name": "component_shadow_projection_plate_04",
+          "contrast": 0.116,
+          "edge_density": 0.151,
+          "separation": 0.0345,
+          "mean_luma": 0.4669,
+          "surround_luma": 0.5014,
+          "readable": true
+        },
+        {
+          "name": "axis_callout_label_case_plate",
+          "contrast": 0.066,
+          "edge_density": 0.109,
+          "separation": 0.0829,
+          "mean_luma": 0.7958,
+          "surround_luma": 0.7129,
+          "readable": true
+        },
+        {
+          "name": "axis_callout_label_board_plate",
+          "contrast": 0.0714,
+          "edge_density": 0.1154,
+          "separation": 0.0794,
+          "mean_luma": 0.7678,
+          "surround_luma": 0.6884,
+          "readable": true
+        },
+        {
+          "name": "cutaway_callout_label_window_plate",
+          "contrast": 0.0525,
+          "edge_density": 0.0565,
+          "separation": 0.0662,
+          "mean_luma": 0.7304,
+          "surround_luma": 0.6642,
+          "readable": true
+        }
+      ],
+      "measured_parts": 69,
+      "readable_parts": 66,
+      "unreadable_parts": [
+        "axis_callout_case_text_label",
+        "axis_callout_board_text_label",
+        "component_shadow_projection_plate_03"
+      ]
+    },
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
@@ -26,11 +657,11 @@
     "pass": false,
     "visual_score": 29,
     "technical_score": 50,
-    "runtime_seconds": 3.9,
+    "runtime_seconds": 3.3,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\mechanical_exploded_view_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\mechanical_exploded_view_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -69,16 +700,40 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 5.1,
+    "runtime_seconds": 5.5,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\mechanical_exploded_view_adversarial_slop_1\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\mechanical_exploded_view_adversarial_slop_1\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\mechanical_exploded_view_adversarial_slop_1\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\mechanical_exploded_view_adversarial_slop_1\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "case_battery_board_screw_post_trace_contact_axis_chip_connector_gasket_spring_washer_ribbon_callout_cutaway",
+          "contrast": 0.0684,
+          "edge_density": 0.0006,
+          "separation": 0.044,
+          "mean_luma": 0.123,
+          "surround_luma": 0.1669,
+          "readable": true
+        },
+        {
+          "name": "case_battery_board_screw_post_trace_contact_axis_chip_connector_gasket_spring_washer_ribbon_callout_cutaway_top",
+          "contrast": 0.0692,
+          "edge_density": 0.0,
+          "separation": 0.0396,
+          "mean_luma": 0.1294,
+          "surround_luma": 0.1689,
+          "readable": true
+        }
+      ],
+      "measured_parts": 2,
+      "readable_parts": 2,
+      "unreadable_parts": []
+    },
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,

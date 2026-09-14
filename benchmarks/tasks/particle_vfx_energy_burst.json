@@ -32,7 +32,8 @@
     "min_emissive_materials": 3,
     "min_particle_systems": 1,
     "min_total_particles": 150,
-    "require_named_parts": ["core", "spark", "trail", "ring", "particle"]
+    "require_named_parts": ["core", "spark", "trail", "ring", "particle"],
+    "require_readable_named_parts": true
   },
   "recipe": {"operations": [
     {"op": "ensure_standard_collections"},

@@ -177,7 +177,8 @@ preview scale do not sink an otherwise legible part family while a family in
 which nothing reads still fails. On animation tasks the frame-proof renders
 carry per-frame scene inspections, and a part counts readable if it reads in
 any proof frame — far-side parts of a rotating product are not penalized for
-being hidden in a single frame.
+being hidden in a single frame. `readable_only_named_parts` restricts
+measurement to the declared named parts, skipping unrelated subject objects.
 
 ## Reference Results
 

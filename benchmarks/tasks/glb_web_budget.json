@@ -32,7 +32,8 @@
     "min_named_part_object_coverage": 0.0003,
     "min_distinct_named_part_objects": 20,
     "min_named_part_total_coverage": 0.15,
-    "require_named_parts": ["speaker", "grille", "button", "port", "accent", "feet", "handle", "radiator", "logo"]
+    "require_named_parts": ["speaker", "grille", "button", "port", "accent", "feet", "handle", "radiator", "logo"],
+    "require_readable_named_parts": true
   },
   "recipe": {"operations": [
     {"op": "ensure_standard_collections"},
@@ -48,7 +49,7 @@
     {"op": "create_mesh_primitive", "type": "cube", "name": "front_grille_recess_shadow_panel", "size": 1, "location": [0,-0.803,1.08], "scale": [0.66,0.018,0.54], "collection": "SUBJECT"},
     {"op": "create_mesh_primitive", "type": "cylinder", "name": "left_passive_radiator_disc", "size": 0.32, "location": [-0.54,-0.82,0.88], "rotation": [90,0,0], "scale": [1,1,0.06], "collection": "SUBJECT"},
     {"op": "create_mesh_primitive", "type": "cylinder", "name": "right_passive_radiator_disc", "size": 0.32, "location": [0.54,-0.82,0.88], "rotation": [90,0,0], "scale": [1,1,0.06], "collection": "SUBJECT"},
-    {"op": "create_mesh_primitive", "type": "cube", "name": "back_usb_port_inset", "size": 1, "location": [0,0.77,0.96], "scale": [0.26,0.035,0.09], "collection": "SUBJECT"},
+    {"op": "create_mesh_primitive", "type": "cube", "name": "side_usb_port_inset", "size": 1, "location": [0.76,-0.05,0.96], "rotation": [0,0,-90], "scale": [0.26,0.035,0.09], "collection": "SUBJECT"},
     {"op": "create_mesh_primitive", "type": "cube", "name": "accent_light_bar_blue", "size": 1, "location": [0,-0.79,1.68], "scale": [0.52,0.025,0.035], "collection": "SUBJECT"},
     {"op": "create_mesh_primitive", "type": "cube", "name": "speaker_logo_plate_front", "size": 1, "location": [0,-0.805,0.58], "scale": [0.32,0.022,0.07], "collection": "SUBJECT"},
     {"op": "create_mesh_primitive", "type": "cube", "name": "speaker_logo_engraved_center_mark", "size": 1, "location": [0,-0.828,0.585], "scale": [0.09,0.012,0.014], "collection": "SUBJECT"},
@@ -80,7 +81,7 @@
     {"op": "apply_transform", "target": "front_grille_recess_shadow_panel", "scale": true},
     {"op": "apply_transform", "target": "left_passive_radiator_disc", "rotation": true, "scale": true},
     {"op": "apply_transform", "target": "right_passive_radiator_disc", "rotation": true, "scale": true},
-    {"op": "apply_transform", "target": "back_usb_port_inset", "scale": true},
+    {"op": "apply_transform", "target": "side_usb_port_inset", "scale": true},
     {"op": "apply_transform", "target": "accent_light_bar_blue", "scale": true},
     {"op": "apply_transform", "target": "speaker_logo_plate_front", "scale": true},
     {"op": "apply_transform", "target": "speaker_logo_engraved_center_mark", "scale": true},
@@ -119,7 +120,7 @@
     {"op": "add_bevel_modifier", "target": "front_grille_recess_shadow_panel", "width": 0.008, "segments": 1},
     {"op": "add_bevel_modifier", "target": "left_passive_radiator_disc", "width": 0.008, "segments": 1},
     {"op": "add_bevel_modifier", "target": "right_passive_radiator_disc", "width": 0.008, "segments": 1},
-    {"op": "add_bevel_modifier", "target": "back_usb_port_inset", "width": 0.006, "segments": 1},
+    {"op": "add_bevel_modifier", "target": "side_usb_port_inset", "width": 0.006, "segments": 1},
     {"op": "add_bevel_modifier", "target": "accent_light_bar_blue", "width": 0.004, "segments": 1},
     {"op": "add_bevel_modifier", "target": "speaker_logo_plate_front", "width": 0.004, "segments": 1},
     {"op": "add_bevel_modifier", "target": "speaker_logo_engraved_center_mark", "width": 0.002, "segments": 1},
@@ -157,7 +158,7 @@
     {"op": "create_material", "schema": {"name": "logo_plate_silver_websafe", "preset": "brushed_metal", "target_objects": ["speaker_logo_plate_front","left_radiator_inner_highlight_ring","right_radiator_inner_highlight_ring"], "pbr": {"base_color": [0.62,0.64,0.62,1], "metallic": 0.6, "roughness": 0.34}}},
     {"op": "create_material", "schema": {"name": "engraved_graphite_websafe", "preset": "matte_plastic", "target_objects": ["speaker_logo_engraved_center_mark","speaker_logo_engraved_left_mark","speaker_logo_engraved_right_mark","speaker_lower_shadow_band","button_top_minus_glyph","button_top_plus_glyph_h","button_top_plus_glyph_v","side_fabric_seam_left","side_fabric_seam_right"], "pbr": {"base_color": [0.012,0.013,0.014,1], "roughness": 0.72}}},
     {"op": "assign_material", "target": "accent_light_bar_blue", "material": "accent_blue_websafe"},
-    {"op": "create_material", "schema": {"name": "port_shadow_black", "preset": "matte_plastic", "target_objects": ["back_usb_port_inset"], "pbr": {"base_color": [0.0,0.0,0.0,1], "roughness": 0.65}}},
+    {"op": "create_material", "schema": {"name": "port_shadow_black", "preset": "matte_plastic", "target_objects": ["side_usb_port_inset"], "pbr": {"base_color": [0.0,0.0,0.0,1], "roughness": 0.65}}},
     {"op": "create_material", "schema": {"name": "web_pedestal_matte", "preset": "matte_plastic", "target_objects": ["web_product_shadow_pedestal"], "pbr": {"base_color": [0.2,0.2,0.19,1], "roughness": 0.68}}},
 
     {"op": "create_lighting_rig", "schema": {"lighting_rig": "web_asset_product_soft", "lights": [{"name": "key_web_soft", "type": "AREA", "power": 760, "size": 5.6, "position_role": "front_left_high"}, {"name": "blue_web_rim", "type": "AREA", "power": 150, "size": 2.4, "color": [0.55,0.7,1.0], "position_role": "rim"}], "world": {"color": [0.15,0.15,0.14], "strength": 0.72}}},

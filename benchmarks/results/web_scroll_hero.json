@@ -5,39 +5,208 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 8.7,
+    "runtime_seconds": 7.7,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark",
       "blue_cyan_bias",
       "dark_blue_cyan"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "energy_core",
+          "contrast": 0.3395,
+          "edge_density": 0.2405,
+          "separation": 0.2177,
+          "mean_luma": 0.5309,
+          "surround_luma": 0.3133,
+          "readable": true
+        },
+        {
+          "name": "orbital_ring_primary",
+          "contrast": 0.3128,
+          "edge_density": 0.2504,
+          "separation": 0.0754,
+          "mean_luma": 0.4299,
+          "surround_luma": 0.3546,
+          "readable": true
+        },
+        {
+          "name": "orbital_ring_vertical",
+          "contrast": 0.2994,
+          "edge_density": 0.2477,
+          "separation": 0.2088,
+          "mean_luma": 0.4291,
+          "surround_luma": 0.2203,
+          "readable": true
+        },
+        {
+          "name": "orbital_ring_diagonal",
+          "contrast": 0.2476,
+          "edge_density": 0.0853,
+          "separation": 0.1149,
+          "mean_luma": 0.2945,
+          "surround_luma": 0.1797,
+          "readable": true
+        },
+        {
+          "name": "inner_white_core",
+          "contrast": 0.3126,
+          "edge_density": 0.2335,
+          "separation": 0.0507,
+          "mean_luma": 0.3776,
+          "surround_luma": 0.3269,
+          "readable": true
+        },
+        {
+          "name": "aurora_trail_ribbon_01",
+          "contrast": 0.3216,
+          "edge_density": 0.4391,
+          "separation": 0.0551,
+          "mean_luma": 0.5043,
+          "surround_luma": 0.4492,
+          "readable": true
+        },
+        {
+          "name": "aurora_trail_ribbon_02",
+          "contrast": 0.2513,
+          "edge_density": 0.397,
+          "separation": 0.1619,
+          "mean_luma": 0.3635,
+          "surround_luma": 0.5254,
+          "readable": true
+        },
+        {
+          "name": "aurora_trail_ribbon_03",
+          "contrast": 0.2152,
+          "edge_density": 0.4028,
+          "separation": 0.1325,
+          "mean_luma": 0.4996,
+          "surround_luma": 0.367,
+          "readable": true
+        },
+        {
+          "name": "aurora_trail_ribbon_04",
+          "contrast": 0.3434,
+          "edge_density": 0.2657,
+          "separation": 0.0183,
+          "mean_luma": 0.5282,
+          "surround_luma": 0.5099,
+          "readable": true
+        },
+        {
+          "name": "aurora_trail_ribbon_05",
+          "contrast": 0.2701,
+          "edge_density": 0.1958,
+          "separation": 0.0698,
+          "mean_luma": 0.7653,
+          "surround_luma": 0.6955,
+          "readable": true
+        },
+        {
+          "name": "aurora_trail_ribbon_06",
+          "contrast": 0.1781,
+          "edge_density": 0.0841,
+          "separation": 0.0798,
+          "mean_luma": 0.8541,
+          "surround_luma": 0.7742,
+          "readable": true
+        },
+        {
+          "name": "aurora_trail_ribbon_07",
+          "contrast": 0.2919,
+          "edge_density": 0.4448,
+          "separation": 0.151,
+          "mean_luma": 0.4715,
+          "surround_luma": 0.3206,
+          "readable": true
+        },
+        {
+          "name": "aurora_trail_ribbon_08",
+          "contrast": 0.347,
+          "edge_density": 0.3441,
+          "separation": 0.0583,
+          "mean_luma": 0.5113,
+          "surround_luma": 0.453,
+          "readable": true
+        },
+        {
+          "name": "aurora_trail_ribbon_09",
+          "contrast": 0.3358,
+          "edge_density": 0.371,
+          "separation": 0.1293,
+          "mean_luma": 0.5455,
+          "surround_luma": 0.4162,
+          "readable": true
+        },
+        {
+          "name": "aurora_trail_ribbon_10",
+          "contrast": 0.2831,
+          "edge_density": 0.3855,
+          "separation": 0.0931,
+          "mean_luma": 0.5135,
+          "surround_luma": 0.4203,
+          "readable": true
+        },
+        {
+          "name": "aurora_trail_ribbon_11",
+          "contrast": 0.2309,
+          "edge_density": 0.5088,
+          "separation": 0.0845,
+          "mean_luma": 0.2927,
+          "surround_luma": 0.2082,
+          "readable": true
+        },
+        {
+          "name": "aurora_trail_ribbon_12",
+          "contrast": 0.2538,
+          "edge_density": 0.2515,
+          "separation": 0.1609,
+          "mean_luma": 0.7449,
+          "surround_luma": 0.5839,
+          "readable": true
+        },
+        {
+          "name": "inner_aurora_spark_06",
+          "contrast": 0.1497,
+          "edge_density": 0.5,
+          "separation": 0.0791,
+          "mean_luma": 0.7668,
+          "surround_luma": 0.6877,
+          "readable": true
+        }
+      ],
+      "measured_parts": 18,
+      "readable_parts": 18,
+      "unreadable_parts": [],
+      "frames_sampled": 3
+    },
     "reference_metrics": null,
     "palette_similarity": 0.7540049250954893,
     "animation_frame_proof": {
       "frame_count": 3,
       "frames": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png"
       ],
       "pairs": [
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0001.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
           "mean_rgb_delta": 0.06761130690574646,
           "max_rgb_delta": 0.8392156958580017,
           "mean_luma_delta": 0.06798283755779266,
           "changed_pixel_ratio": 0.33315586419753085
         },
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0060.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_skill_plus_tools\\iterations\\animation_frame_0120.png",
           "mean_rgb_delta": 0.07208635658025742,
           "max_rgb_delta": 0.8352941274642944,
           "mean_luma_delta": 0.07096830755472183,
@@ -60,11 +229,11 @@
     "pass": false,
     "visual_score": 31,
     "technical_score": 50,
-    "runtime_seconds": 5.2,
+    "runtime_seconds": 4.5,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -120,37 +289,62 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 90,
-    "runtime_seconds": 7.5,
+    "runtime_seconds": 7.0,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "energy_core_orbital_ring_spark_aurora_static",
+          "contrast": 0.3687,
+          "edge_density": 0.0541,
+          "separation": 0.2819,
+          "mean_luma": 0.3072,
+          "surround_luma": 0.0252,
+          "readable": true
+        },
+        {
+          "name": "orbital_ring_static_gold",
+          "contrast": 0.2497,
+          "edge_density": 0.0339,
+          "separation": 0.0686,
+          "mean_luma": 0.1255,
+          "surround_luma": 0.1941,
+          "readable": true
+        }
+      ],
+      "measured_parts": 2,
+      "readable_parts": 2,
+      "unreadable_parts": [],
+      "frames_sampled": 3
+    },
     "reference_metrics": null,
     "palette_similarity": 0.7658783241514214,
     "animation_frame_proof": {
       "frame_count": 3,
       "frames": [
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
-        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png"
       ],
       "pairs": [
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0001.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
           "mean_rgb_delta": 0.0,
           "max_rgb_delta": 0.0,
           "mean_luma_delta": 0.0,
           "changed_pixel_ratio": 0.0
         },
         {
-          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
-          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png",
+          "from": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0126.png",
+          "to": "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_0250.png",
           "mean_rgb_delta": 0.0,
           "max_rgb_delta": 0.0,
           "mean_luma_delta": 0.0,

@@ -30,7 +30,8 @@
     "min_craft_detail_objects": 80,
     "require_craft_roles": ["organic_surface", "surface_microdetail"],
     "require_subject_material_features": ["noise_color_ramp", "noise_bump", "wave_bump"],
-    "require_named_parts": ["organic", "fluted", "petal", "leaf", "fold", "dew", "stem"]
+    "require_named_parts": ["organic", "fluted", "petal", "leaf", "fold", "dew", "stem"],
+    "require_readable_named_parts": true
   },
   "recipe": {"operations": [
     {"op": "ensure_standard_collections"},

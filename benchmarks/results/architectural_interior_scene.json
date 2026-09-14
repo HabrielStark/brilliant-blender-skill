@@ -5,16 +5,796 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 6.9,
+    "runtime_seconds": 5.5,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\architectural_interior_scene_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\architectural_interior_scene_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\architectural_interior_scene_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\architectural_interior_scene_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "warm_red_bias"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "rug_tassel_front_edge_01",
+          "contrast": 0.0756,
+          "edge_density": 0.3889,
+          "separation": 0.006,
+          "mean_luma": 0.7243,
+          "surround_luma": 0.7183,
+          "readable": true
+        },
+        {
+          "name": "rug_tassel_front_edge_02",
+          "contrast": 0.0758,
+          "edge_density": 0.3595,
+          "separation": 0.0251,
+          "mean_luma": 0.726,
+          "surround_luma": 0.7008,
+          "readable": true
+        },
+        {
+          "name": "rug_tassel_front_edge_03",
+          "contrast": 0.0752,
+          "edge_density": 0.3143,
+          "separation": 0.0263,
+          "mean_luma": 0.7244,
+          "surround_luma": 0.698,
+          "readable": true
+        },
+        {
+          "name": "rug_tassel_front_edge_04",
+          "contrast": 0.0757,
+          "edge_density": 0.3333,
+          "separation": 0.0092,
+          "mean_luma": 0.7224,
+          "surround_luma": 0.7132,
+          "readable": true
+        },
+        {
+          "name": "sofa_base_fabric",
+          "contrast": 0.1291,
+          "edge_density": 0.0891,
+          "separation": 0.0346,
+          "mean_luma": 0.523,
+          "surround_luma": 0.4884,
+          "readable": true
+        },
+        {
+          "name": "sofa_back_fabric",
+          "contrast": 0.1333,
+          "edge_density": 0.1094,
+          "separation": 0.0419,
+          "mean_luma": 0.5362,
+          "surround_luma": 0.5781,
+          "readable": true
+        },
+        {
+          "name": "sofa_arm_left_fabric",
+          "contrast": 0.1187,
+          "edge_density": 0.1164,
+          "separation": 0.0012,
+          "mean_luma": 0.5364,
+          "surround_luma": 0.5377,
+          "readable": true
+        },
+        {
+          "name": "sofa_arm_right_fabric",
+          "contrast": 0.1457,
+          "edge_density": 0.0785,
+          "separation": 0.0972,
+          "mean_luma": 0.4141,
+          "surround_luma": 0.5112,
+          "readable": true
+        },
+        {
+          "name": "cushion_left_soft",
+          "contrast": 0.1277,
+          "edge_density": 0.2341,
+          "separation": 0.0191,
+          "mean_luma": 0.5162,
+          "surround_luma": 0.5353,
+          "readable": true
+        },
+        {
+          "name": "cushion_right_soft",
+          "contrast": 0.1222,
+          "edge_density": 0.2446,
+          "separation": 0.0259,
+          "mean_luma": 0.5085,
+          "surround_luma": 0.5344,
+          "readable": true
+        },
+        {
+          "name": "cushion_center_lumbar_soft",
+          "contrast": 0.1232,
+          "edge_density": 0.1805,
+          "separation": 0.0586,
+          "mean_luma": 0.5917,
+          "surround_luma": 0.5331,
+          "readable": true
+        },
+        {
+          "name": "throw_blanket_terracotta_soft",
+          "contrast": 0.1144,
+          "edge_density": 0.0973,
+          "separation": 0.0383,
+          "mean_luma": 0.5594,
+          "surround_luma": 0.5211,
+          "readable": true
+        },
+        {
+          "name": "cushion_small_ochre_accent_front",
+          "contrast": 0.1227,
+          "edge_density": 0.2117,
+          "separation": 0.0321,
+          "mean_luma": 0.5807,
+          "surround_luma": 0.6128,
+          "readable": true
+        },
+        {
+          "name": "cushion_round_left_linen_soft",
+          "contrast": 0.1105,
+          "edge_density": 0.2693,
+          "separation": 0.0291,
+          "mean_luma": 0.574,
+          "surround_luma": 0.5449,
+          "readable": true
+        },
+        {
+          "name": "cushion_round_right_linen_soft",
+          "contrast": 0.1223,
+          "edge_density": 0.337,
+          "separation": 0.0522,
+          "mean_luma": 0.5414,
+          "surround_luma": 0.5936,
+          "readable": true
+        },
+        {
+          "name": "throw_blanket_front_drape_weighted_edge",
+          "contrast": 0.0827,
+          "edge_density": 0.0402,
+          "separation": 0.0898,
+          "mean_luma": 0.5829,
+          "surround_luma": 0.4931,
+          "readable": true
+        },
+        {
+          "name": "sofa_seat_shadow_recess_deep",
+          "contrast": 0.0947,
+          "edge_density": 0.2341,
+          "separation": 0.0054,
+          "mean_luma": 0.5098,
+          "surround_luma": 0.5044,
+          "readable": true
+        },
+        {
+          "name": "sofa_front_shadow_gap",
+          "contrast": 0.0932,
+          "edge_density": 0.0622,
+          "separation": 0.0485,
+          "mean_luma": 0.4902,
+          "surround_luma": 0.5387,
+          "readable": true
+        },
+        {
+          "name": "sofa_throw_fold_bright_edge",
+          "contrast": 0.0883,
+          "edge_density": 0.3429,
+          "separation": 0.0141,
+          "mean_luma": 0.5647,
+          "surround_luma": 0.5505,
+          "readable": true
+        },
+        {
+          "name": "sofa_contact_shadow_floor",
+          "contrast": 0.0949,
+          "edge_density": 0.0681,
+          "separation": 0.0391,
+          "mean_luma": 0.5306,
+          "surround_luma": 0.5697,
+          "readable": true
+        },
+        {
+          "name": "sofa_leg_dark_front_left",
+          "contrast": 0.1308,
+          "edge_density": 0.6481,
+          "separation": 0.0773,
+          "mean_luma": 0.4415,
+          "surround_luma": 0.5187,
+          "readable": true
+        },
+        {
+          "name": "sofa_leg_dark_front_right",
+          "contrast": 0.0782,
+          "edge_density": 0.0079,
+          "separation": 0.0361,
+          "mean_luma": 0.4926,
+          "surround_luma": 0.5287,
+          "readable": true
+        },
+        {
+          "name": "sofa_leg_dark_rear_right",
+          "contrast": 0.0831,
+          "edge_density": 0.125,
+          "separation": 0.0075,
+          "mean_luma": 0.4656,
+          "surround_luma": 0.4731,
+          "readable": true
+        },
+        {
+          "name": "coffee_table_round_wood",
+          "contrast": 0.1488,
+          "edge_density": 0.0786,
+          "separation": 0.019,
+          "mean_luma": 0.4685,
+          "surround_luma": 0.4875,
+          "readable": true
+        },
+        {
+          "name": "coffee_table_lower_shelf_shadow",
+          "contrast": 0.1549,
+          "edge_density": 0.0832,
+          "separation": 0.0781,
+          "mean_luma": 0.4116,
+          "surround_luma": 0.4897,
+          "readable": true
+        },
+        {
+          "name": "table_leg_wood_01",
+          "contrast": 0.1337,
+          "edge_density": 0.3628,
+          "separation": 0.1795,
+          "mean_luma": 0.4384,
+          "surround_luma": 0.6179,
+          "readable": true
+        },
+        {
+          "name": "table_leg_wood_02",
+          "contrast": 0.1036,
+          "edge_density": 0.1058,
+          "separation": 0.0774,
+          "mean_luma": 0.3728,
+          "surround_luma": 0.4502,
+          "readable": true
+        },
+        {
+          "name": "table_leg_wood_03",
+          "contrast": 0.0941,
+          "edge_density": 0.0159,
+          "separation": 0.0525,
+          "mean_luma": 0.2888,
+          "surround_luma": 0.3413,
+          "readable": true
+        },
+        {
+          "name": "table_leg_wood_04",
+          "contrast": 0.0554,
+          "edge_density": 0.1017,
+          "separation": 0.1027,
+          "mean_luma": 0.2462,
+          "surround_luma": 0.3489,
+          "readable": true
+        },
+        {
+          "name": "table_book_open_editorial",
+          "contrast": 0.1507,
+          "edge_density": 0.2941,
+          "separation": 0.1228,
+          "mean_luma": 0.6269,
+          "surround_luma": 0.5042,
+          "readable": true
+        },
+        {
+          "name": "table_book_page_line_ink_01",
+          "contrast": 0.1514,
+          "edge_density": 0.5043,
+          "separation": 0.0514,
+          "mean_luma": 0.6482,
+          "surround_luma": 0.5968,
+          "readable": true
+        },
+        {
+          "name": "table_book_page_line_ink_02",
+          "contrast": 0.1544,
+          "edge_density": 0.5469,
+          "separation": 0.0029,
+          "mean_luma": 0.5995,
+          "surround_luma": 0.6023,
+          "readable": true
+        },
+        {
+          "name": "table_ceramic_coffee_cup_scale_cue",
+          "contrast": 0.1398,
+          "edge_density": 0.2232,
+          "separation": 0.0843,
+          "mean_luma": 0.5709,
+          "surround_luma": 0.4867,
+          "readable": true
+        },
+        {
+          "name": "table_cup_handle_loop",
+          "contrast": 0.0829,
+          "edge_density": 0.4659,
+          "separation": 0.0821,
+          "mean_luma": 0.5725,
+          "surround_luma": 0.4904,
+          "readable": true
+        },
+        {
+          "name": "vase_ceramic_table_small",
+          "contrast": 0.1342,
+          "edge_density": 0.0844,
+          "separation": 0.1276,
+          "mean_luma": 0.5379,
+          "surround_luma": 0.4103,
+          "readable": true
+        },
+        {
+          "name": "lamp_stem_brass",
+          "contrast": 0.0863,
+          "edge_density": 0.1044,
+          "separation": 0.0405,
+          "mean_luma": 0.4586,
+          "surround_luma": 0.4991,
+          "readable": true
+        },
+        {
+          "name": "lamp_shade_warm",
+          "contrast": 0.0752,
+          "edge_density": 0.0185,
+          "separation": 0.0358,
+          "mean_luma": 0.6921,
+          "surround_luma": 0.6564,
+          "readable": true
+        },
+        {
+          "name": "lamp_bulb_warm_glow",
+          "contrast": 0.0497,
+          "edge_density": 0.0026,
+          "separation": 0.0467,
+          "mean_luma": 0.736,
+          "surround_luma": 0.6893,
+          "readable": true
+        },
+        {
+          "name": "book_stack_01",
+          "contrast": 0.1097,
+          "edge_density": 0.4222,
+          "separation": 0.1467,
+          "mean_luma": 0.5235,
+          "surround_luma": 0.6701,
+          "readable": true
+        },
+        {
+          "name": "book_stack_02",
+          "contrast": 0.1154,
+          "edge_density": 0.3389,
+          "separation": 0.0029,
+          "mean_luma": 0.5328,
+          "surround_luma": 0.5357,
+          "readable": true
+        },
+        {
+          "name": "book_stack_03",
+          "contrast": 0.1126,
+          "edge_density": 0.2667,
+          "separation": 0.0019,
+          "mean_luma": 0.5442,
+          "surround_luma": 0.5461,
+          "readable": true
+        },
+        {
+          "name": "book_stack_04",
+          "contrast": 0.1101,
+          "edge_density": 0.2823,
+          "separation": 0.008,
+          "mean_luma": 0.5443,
+          "surround_luma": 0.5522,
+          "readable": true
+        },
+        {
+          "name": "book_stack_05",
+          "contrast": 0.1144,
+          "edge_density": 0.2278,
+          "separation": 0.0095,
+          "mean_luma": 0.5441,
+          "surround_luma": 0.5536,
+          "readable": true
+        },
+        {
+          "name": "plant_pot_ceramic",
+          "contrast": 0.1059,
+          "edge_density": 0.0736,
+          "separation": 0.1601,
+          "mean_luma": 0.601,
+          "surround_luma": 0.4409,
+          "readable": true
+        },
+        {
+          "name": "plant_leaf_curved_editorial_01",
+          "contrast": 0.1305,
+          "edge_density": 0.2107,
+          "separation": 0.03,
+          "mean_luma": 0.4329,
+          "surround_luma": 0.4629,
+          "readable": true
+        },
+        {
+          "name": "plant_leaf_curved_editorial_02",
+          "contrast": 0.11,
+          "edge_density": 0.1491,
+          "separation": 0.0393,
+          "mean_luma": 0.4631,
+          "surround_luma": 0.5024,
+          "readable": true
+        },
+        {
+          "name": "plant_leaf_curved_editorial_03",
+          "contrast": 0.1044,
+          "edge_density": 0.1651,
+          "separation": 0.0301,
+          "mean_luma": 0.464,
+          "surround_luma": 0.4941,
+          "readable": true
+        },
+        {
+          "name": "plant_leaf_curved_editorial_04",
+          "contrast": 0.1049,
+          "edge_density": 0.171,
+          "separation": 0.0355,
+          "mean_luma": 0.4609,
+          "surround_luma": 0.4964,
+          "readable": true
+        },
+        {
+          "name": "plant_leaf_curved_editorial_05",
+          "contrast": 0.1078,
+          "edge_density": 0.1682,
+          "separation": 0.0344,
+          "mean_luma": 0.4562,
+          "surround_luma": 0.4905,
+          "readable": true
+        },
+        {
+          "name": "plant_leaf_curved_editorial_06",
+          "contrast": 0.1201,
+          "edge_density": 0.2656,
+          "separation": 0.0771,
+          "mean_luma": 0.4144,
+          "surround_luma": 0.4915,
+          "readable": true
+        },
+        {
+          "name": "plant_leaf_curved_editorial_07",
+          "contrast": 0.1233,
+          "edge_density": 0.2393,
+          "separation": 0.1094,
+          "mean_luma": 0.3754,
+          "surround_luma": 0.4848,
+          "readable": true
+        },
+        {
+          "name": "plant_leaf_curved_editorial_08",
+          "contrast": 0.1173,
+          "edge_density": 0.1827,
+          "separation": 0.0894,
+          "mean_luma": 0.4122,
+          "surround_luma": 0.5017,
+          "readable": true
+        },
+        {
+          "name": "plant_leaf_curved_editorial_09",
+          "contrast": 0.1101,
+          "edge_density": 0.1198,
+          "separation": 0.0692,
+          "mean_luma": 0.4642,
+          "surround_luma": 0.5333,
+          "readable": true
+        },
+        {
+          "name": "plant_leaf_curved_editorial_10",
+          "contrast": 0.1091,
+          "edge_density": 0.1043,
+          "separation": 0.0547,
+          "mean_luma": 0.4803,
+          "surround_luma": 0.5351,
+          "readable": true
+        },
+        {
+          "name": "plant_leaf_curved_editorial_11",
+          "contrast": 0.1158,
+          "edge_density": 0.1051,
+          "separation": 0.0531,
+          "mean_luma": 0.4831,
+          "surround_luma": 0.5362,
+          "readable": true
+        },
+        {
+          "name": "plant_leaf_curved_editorial_12",
+          "contrast": 0.128,
+          "edge_density": 0.1271,
+          "separation": 0.0514,
+          "mean_luma": 0.4705,
+          "surround_luma": 0.5219,
+          "readable": true
+        },
+        {
+          "name": "plant_leaf_curved_editorial_13",
+          "contrast": 0.1502,
+          "edge_density": 0.1566,
+          "separation": 0.0022,
+          "mean_luma": 0.4452,
+          "surround_luma": 0.4474,
+          "readable": true
+        },
+        {
+          "name": "plant_leaf_curved_editorial_14",
+          "contrast": 0.1468,
+          "edge_density": 0.2006,
+          "separation": 0.0324,
+          "mean_luma": 0.4185,
+          "surround_luma": 0.4509,
+          "readable": true
+        },
+        {
+          "name": "curtain_fold_linen_soft_01",
+          "contrast": 0.0437,
+          "edge_density": 0.0909,
+          "separation": 0.0356,
+          "mean_luma": 0.5844,
+          "surround_luma": 0.62,
+          "readable": true
+        },
+        {
+          "name": "curtain_fold_linen_soft_02",
+          "contrast": 0.0421,
+          "edge_density": 0.0779,
+          "separation": 0.0318,
+          "mean_luma": 0.576,
+          "surround_luma": 0.6078,
+          "readable": true
+        },
+        {
+          "name": "fabric_fold_sofa_surface_01",
+          "contrast": 0.0445,
+          "edge_density": 0.0214,
+          "separation": 0.0057,
+          "mean_luma": 0.4728,
+          "surround_luma": 0.4785,
+          "readable": true
+        },
+        {
+          "name": "fabric_fold_sofa_surface_02",
+          "contrast": 0.0628,
+          "edge_density": 0.0889,
+          "separation": 0.0295,
+          "mean_luma": 0.5263,
+          "surround_luma": 0.5558,
+          "readable": true
+        },
+        {
+          "name": "fabric_fold_sofa_surface_03",
+          "contrast": 0.0864,
+          "edge_density": 0.1556,
+          "separation": 0.005,
+          "mean_luma": 0.5643,
+          "surround_luma": 0.5693,
+          "readable": true
+        },
+        {
+          "name": "fabric_fold_sofa_surface_04",
+          "contrast": 0.0969,
+          "edge_density": 0.1196,
+          "separation": 0.0022,
+          "mean_luma": 0.6011,
+          "surround_luma": 0.5988,
+          "readable": true
+        },
+        {
+          "name": "fabric_fold_sofa_surface_05",
+          "contrast": 0.0468,
+          "edge_density": 0.0,
+          "separation": 0.0135,
+          "mean_luma": 0.6581,
+          "surround_luma": 0.6446,
+          "readable": true
+        },
+        {
+          "name": "fabric_fold_sofa_surface_06",
+          "contrast": 0.1013,
+          "edge_density": 0.1091,
+          "separation": 0.0442,
+          "mean_luma": 0.6074,
+          "surround_luma": 0.5631,
+          "readable": true
+        },
+        {
+          "name": "fabric_fold_sofa_surface_07",
+          "contrast": 0.1333,
+          "edge_density": 0.3545,
+          "separation": 0.0413,
+          "mean_luma": 0.5283,
+          "surround_luma": 0.5697,
+          "readable": true
+        },
+        {
+          "name": "fabric_fold_sofa_surface_08",
+          "contrast": 0.1073,
+          "edge_density": 0.2421,
+          "separation": 0.0395,
+          "mean_luma": 0.5525,
+          "surround_luma": 0.592,
+          "readable": true
+        },
+        {
+          "name": "fabric_fold_throw_edge_01",
+          "contrast": 0.0496,
+          "edge_density": 0.1,
+          "separation": 0.0018,
+          "mean_luma": 0.4455,
+          "surround_luma": 0.4437,
+          "readable": true
+        },
+        {
+          "name": "fabric_fold_throw_edge_02",
+          "contrast": 0.0554,
+          "edge_density": 0.1286,
+          "separation": 0.0033,
+          "mean_luma": 0.4699,
+          "surround_luma": 0.4666,
+          "readable": true
+        },
+        {
+          "name": "fabric_fold_throw_edge_03",
+          "contrast": 0.065,
+          "edge_density": 0.14,
+          "separation": 0.0019,
+          "mean_luma": 0.5016,
+          "surround_luma": 0.5035,
+          "readable": true
+        },
+        {
+          "name": "fabric_fold_throw_edge_04",
+          "contrast": 0.081,
+          "edge_density": 0.2597,
+          "separation": 0.0231,
+          "mean_luma": 0.5457,
+          "surround_luma": 0.5226,
+          "readable": true
+        },
+        {
+          "name": "fabric_fold_throw_edge_05",
+          "contrast": 0.1064,
+          "edge_density": 0.2922,
+          "separation": 0.0493,
+          "mean_luma": 0.5367,
+          "surround_luma": 0.5859,
+          "readable": true
+        },
+        {
+          "name": "fabric_fold_throw_edge_06",
+          "contrast": 0.0975,
+          "edge_density": 0.3636,
+          "separation": 0.0089,
+          "mean_luma": 0.5402,
+          "surround_luma": 0.5313,
+          "readable": true
+        },
+        {
+          "name": "seam_curved_cushion_piping_01",
+          "contrast": 0.102,
+          "edge_density": 0.3182,
+          "separation": 0.0166,
+          "mean_luma": 0.5258,
+          "surround_luma": 0.5425,
+          "readable": true
+        },
+        {
+          "name": "seam_curved_cushion_piping_02",
+          "contrast": 0.0927,
+          "edge_density": 0.4028,
+          "separation": 0.0142,
+          "mean_luma": 0.5539,
+          "surround_luma": 0.5397,
+          "readable": true
+        },
+        {
+          "name": "seam_curved_cushion_piping_03",
+          "contrast": 0.1119,
+          "edge_density": 0.5694,
+          "separation": 0.0176,
+          "mean_luma": 0.5147,
+          "surround_luma": 0.5323,
+          "readable": true
+        },
+        {
+          "name": "seam_curved_cushion_piping_04",
+          "contrast": 0.1023,
+          "edge_density": 0.4505,
+          "separation": 0.071,
+          "mean_luma": 0.4439,
+          "surround_luma": 0.5149,
+          "readable": true
+        },
+        {
+          "name": "seam_curved_cushion_piping_05",
+          "contrast": 0.0774,
+          "edge_density": 0.3452,
+          "separation": 0.0558,
+          "mean_luma": 0.4481,
+          "surround_luma": 0.5038,
+          "readable": true
+        },
+        {
+          "name": "seam_curved_cushion_piping_06",
+          "contrast": 0.0918,
+          "edge_density": 0.3736,
+          "separation": 0.0227,
+          "mean_luma": 0.5477,
+          "surround_luma": 0.5251,
+          "readable": true
+        },
+        {
+          "name": "seam_curved_cushion_piping_07",
+          "contrast": 0.1052,
+          "edge_density": 0.449,
+          "separation": 0.0184,
+          "mean_luma": 0.5262,
+          "surround_luma": 0.5446,
+          "readable": true
+        },
+        {
+          "name": "tassel_rug_fiber_curve_01",
+          "contrast": 0.0604,
+          "edge_density": 0.1607,
+          "separation": 0.0158,
+          "mean_luma": 0.7122,
+          "surround_luma": 0.728,
+          "readable": true
+        },
+        {
+          "name": "tassel_rug_fiber_curve_02",
+          "contrast": 0.0677,
+          "edge_density": 0.1923,
+          "separation": 0.0145,
+          "mean_luma": 0.7075,
+          "surround_luma": 0.722,
+          "readable": true
+        },
+        {
+          "name": "tassel_rug_fiber_curve_03",
+          "contrast": 0.0689,
+          "edge_density": 0.2113,
+          "separation": 0.0004,
+          "mean_luma": 0.7093,
+          "surround_luma": 0.7097,
+          "readable": true
+        },
+        {
+          "name": "tassel_rug_fiber_curve_04",
+          "contrast": 0.0701,
+          "edge_density": 0.2083,
+          "separation": 0.0022,
+          "mean_luma": 0.7053,
+          "surround_luma": 0.7031,
+          "readable": true
+        },
+        {
+          "name": "tassel_rug_fiber_curve_05",
+          "contrast": 0.0664,
+          "edge_density": 0.1562,
+          "separation": 0.0026,
+          "mean_luma": 0.6951,
+          "surround_luma": 0.6977,
+          "readable": true
+        }
+      ],
+      "measured_parts": 86,
+      "readable_parts": 86,
+      "unreadable_parts": []
+    },
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
@@ -26,11 +806,11 @@
     "pass": false,
     "visual_score": 31,
     "technical_score": 60,
-    "runtime_seconds": 3.9,
+    "runtime_seconds": 2.9,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\architectural_interior_scene_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\architectural_interior_scene_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -74,16 +854,33 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 5.5,
+    "runtime_seconds": 4.0,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\architectural_interior_scene_adversarial_slop_1\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\architectural_interior_scene_adversarial_slop_1\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\architectural_interior_scene_adversarial_slop_1\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\architectural_interior_scene_adversarial_slop_1\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+          "contrast": 0.0113,
+          "edge_density": 0.0,
+          "separation": 0.0148,
+          "mean_luma": 0.4628,
+          "surround_luma": 0.448,
+          "readable": false
+        }
+      ],
+      "measured_parts": 1,
+      "readable_parts": 0,
+      "unreadable_parts": [
+        "sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb"
+      ]
+    },
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
@@ -105,7 +902,20 @@
       "subject material node count 2 < min 5",
       "subject procedural materials 0 < min 3",
       "missing subject material features: noise_bump, noise_color_ramp, wave_bump",
-      "emissive materials 0 < min 1"
+      "emissive materials 0 < min 1",
+      "named part family 'sofa' mostly unreadable (0/1): sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+      "named part family 'table' mostly unreadable (0/1): sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+      "named part family 'lamp' mostly unreadable (0/1): sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+      "named part family 'book' mostly unreadable (0/1): sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+      "named part family 'plant' mostly unreadable (0/1): sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+      "named part family 'cushion' mostly unreadable (0/1): sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+      "named part family 'curtain' mostly unreadable (0/1): sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+      "named part family 'fabric_fold' mostly unreadable (0/1): sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+      "named part family 'throw' mostly unreadable (0/1): sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+      "named part family 'vase' mostly unreadable (0/1): sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+      "named part family 'seam' mostly unreadable (0/1): sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+      "named part family 'tassel' mostly unreadable (0/1): sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+      "named part family 'lamp_bulb' mostly unreadable (0/1): sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb"
     ]
   }
 }

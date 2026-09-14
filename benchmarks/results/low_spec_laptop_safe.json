@@ -5,16 +5,346 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 7.0,
+    "runtime_seconds": 5.2,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\low_spec_laptop_safe_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\low_spec_laptop_safe_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "monolith_core",
+          "contrast": 0.1256,
+          "edge_density": 0.1198,
+          "separation": 0.1229,
+          "mean_luma": 0.463,
+          "surround_luma": 0.5859,
+          "readable": true
+        },
+        {
+          "name": "monolith_top_cap_slab",
+          "contrast": 0.1305,
+          "edge_density": 0.2747,
+          "separation": 0.0078,
+          "mean_luma": 0.587,
+          "surround_luma": 0.5792,
+          "readable": true
+        },
+        {
+          "name": "monolith_base_foot_plate",
+          "contrast": 0.0781,
+          "edge_density": 0.0879,
+          "separation": 0.037,
+          "mean_luma": 0.4335,
+          "surround_luma": 0.3965,
+          "readable": true
+        },
+        {
+          "name": "pedestal_glow_ring_safe",
+          "contrast": 0.1151,
+          "edge_density": 0.1016,
+          "separation": 0.0887,
+          "mean_luma": 0.4458,
+          "surround_luma": 0.5345,
+          "readable": true
+        },
+        {
+          "name": "front_panel_glass",
+          "contrast": 0.1349,
+          "edge_density": 0.2477,
+          "separation": 0.0697,
+          "mean_luma": 0.4072,
+          "surround_luma": 0.4769,
+          "readable": true
+        },
+        {
+          "name": "front_panel_latch_handle_bar",
+          "contrast": 0.0476,
+          "edge_density": 0.0938,
+          "separation": 0.0111,
+          "mean_luma": 0.4893,
+          "surround_luma": 0.4782,
+          "readable": true
+        },
+        {
+          "name": "front_panel_latch_round_pivot",
+          "contrast": 0.0878,
+          "edge_density": 0.2308,
+          "separation": 0.0809,
+          "mean_luma": 0.4629,
+          "surround_luma": 0.3821,
+          "readable": true
+        },
+        {
+          "name": "front_keypad_plate_recessed",
+          "contrast": 0.1341,
+          "edge_density": 0.36,
+          "separation": 0.1477,
+          "mean_luma": 0.3432,
+          "surround_luma": 0.4908,
+          "readable": true
+        },
+        {
+          "name": "front_screen_teal_core",
+          "contrast": 0.1477,
+          "edge_density": 0.3871,
+          "separation": 0.0026,
+          "mean_luma": 0.3626,
+          "surround_luma": 0.3652,
+          "readable": true
+        },
+        {
+          "name": "front_screen_deep_glass_bezel",
+          "contrast": 0.1413,
+          "edge_density": 0.3564,
+          "separation": 0.1157,
+          "mean_luma": 0.3706,
+          "surround_luma": 0.4862,
+          "readable": true
+        },
+        {
+          "name": "side_panel_left",
+          "contrast": 0.1272,
+          "edge_density": 0.2937,
+          "separation": 0.0026,
+          "mean_luma": 0.4289,
+          "surround_luma": 0.4315,
+          "readable": true
+        },
+        {
+          "name": "side_panel_right",
+          "contrast": 0.0356,
+          "edge_density": 0.0551,
+          "separation": 0.0018,
+          "mean_luma": 0.3714,
+          "surround_luma": 0.3732,
+          "readable": true
+        },
+        {
+          "name": "side_panel_left_stepped_wing",
+          "contrast": 0.1466,
+          "edge_density": 0.3716,
+          "separation": 0.0346,
+          "mean_luma": 0.4909,
+          "surround_luma": 0.5255,
+          "readable": true
+        },
+        {
+          "name": "side_panel_right_stepped_wing",
+          "contrast": 0.0691,
+          "edge_density": 0.0424,
+          "separation": 0.0422,
+          "mean_luma": 0.4109,
+          "surround_luma": 0.4531,
+          "readable": true
+        },
+        {
+          "name": "side_cable_service_loop",
+          "contrast": 0.1295,
+          "edge_density": 0.3705,
+          "separation": 0.021,
+          "mean_luma": 0.4806,
+          "surround_luma": 0.4596,
+          "readable": true
+        },
+        {
+          "name": "left_door_hinge_upper_barrel",
+          "contrast": 0.0689,
+          "edge_density": 0.1528,
+          "separation": 0.0635,
+          "mean_luma": 0.5157,
+          "surround_luma": 0.5792,
+          "readable": true
+        },
+        {
+          "name": "left_door_hinge_lower_barrel",
+          "contrast": 0.1224,
+          "edge_density": 0.5069,
+          "separation": 0.156,
+          "mean_luma": 0.5581,
+          "surround_luma": 0.7141,
+          "readable": true
+        },
+        {
+          "name": "antenna_right",
+          "contrast": 0.1213,
+          "edge_density": 0.1429,
+          "separation": 0.0249,
+          "mean_luma": 0.4861,
+          "surround_luma": 0.511,
+          "readable": true
+        },
+        {
+          "name": "antenna_radar_cap_disc",
+          "contrast": 0.1122,
+          "edge_density": 0.0435,
+          "separation": 0.0113,
+          "mean_luma": 0.571,
+          "surround_luma": 0.5597,
+          "readable": true
+        },
+        {
+          "name": "antenna_tip_accent_left",
+          "contrast": 0.0711,
+          "edge_density": 0.1,
+          "separation": 0.0708,
+          "mean_luma": 0.6487,
+          "surround_luma": 0.5779,
+          "readable": true
+        },
+        {
+          "name": "antenna_tip_accent_right",
+          "contrast": 0.0669,
+          "edge_density": 0.0898,
+          "separation": 0.0696,
+          "mean_luma": 0.6467,
+          "surround_luma": 0.5771,
+          "readable": true
+        },
+        {
+          "name": "front_accent_bar_01",
+          "contrast": 0.138,
+          "edge_density": 0.7115,
+          "separation": 0.1361,
+          "mean_luma": 0.5951,
+          "surround_luma": 0.459,
+          "readable": true
+        },
+        {
+          "name": "front_accent_bar_02",
+          "contrast": 0.1732,
+          "edge_density": 0.6635,
+          "separation": 0.1524,
+          "mean_luma": 0.5414,
+          "surround_luma": 0.389,
+          "readable": true
+        },
+        {
+          "name": "front_accent_bar_03",
+          "contrast": 0.1879,
+          "edge_density": 0.6538,
+          "separation": 0.0806,
+          "mean_luma": 0.5391,
+          "surround_luma": 0.4585,
+          "readable": true
+        },
+        {
+          "name": "front_panel_dark_inset_left_shadow",
+          "contrast": 0.15,
+          "edge_density": 0.4188,
+          "separation": 0.1223,
+          "mean_luma": 0.3866,
+          "surround_luma": 0.509,
+          "readable": true
+        },
+        {
+          "name": "front_panel_dark_inset_right_shadow",
+          "contrast": 0.0846,
+          "edge_density": 0.3284,
+          "separation": 0.0586,
+          "mean_luma": 0.3225,
+          "surround_luma": 0.3811,
+          "readable": true
+        },
+        {
+          "name": "screen_inner_shadow_frame",
+          "contrast": 0.1483,
+          "edge_density": 0.377,
+          "separation": 0.0275,
+          "mean_luma": 0.3658,
+          "surround_luma": 0.3933,
+          "readable": true
+        },
+        {
+          "name": "front_upper_visor_recess_panel",
+          "contrast": 0.0821,
+          "edge_density": 0.2077,
+          "separation": 0.1872,
+          "mean_luma": 0.3451,
+          "surround_luma": 0.5323,
+          "readable": true
+        },
+        {
+          "name": "front_lower_access_recess_panel",
+          "contrast": 0.1755,
+          "edge_density": 0.3481,
+          "separation": 0.1001,
+          "mean_luma": 0.4046,
+          "surround_luma": 0.5047,
+          "readable": true
+        },
+        {
+          "name": "base_contact_shadow_plate",
+          "contrast": 0.0908,
+          "edge_density": 0.0876,
+          "separation": 0.0096,
+          "mean_luma": 0.424,
+          "surround_luma": 0.4336,
+          "readable": true
+        },
+        {
+          "name": "pedestal_front_step_slab",
+          "contrast": 0.0995,
+          "edge_density": 0.0965,
+          "separation": 0.0144,
+          "mean_luma": 0.4415,
+          "surround_luma": 0.456,
+          "readable": true
+        },
+        {
+          "name": "pedestal_left_foot_runner",
+          "contrast": 0.0766,
+          "edge_density": 0.1338,
+          "separation": 0.0397,
+          "mean_luma": 0.48,
+          "surround_luma": 0.4403,
+          "readable": true
+        },
+        {
+          "name": "pedestal_right_foot_runner",
+          "contrast": 0.1083,
+          "edge_density": 0.1502,
+          "separation": 0.02,
+          "mean_luma": 0.4152,
+          "surround_luma": 0.4352,
+          "readable": true
+        },
+        {
+          "name": "top_warm_warning_chip",
+          "contrast": 0.0497,
+          "edge_density": 0.2308,
+          "separation": 0.1364,
+          "mean_luma": 0.7396,
+          "surround_luma": 0.6032,
+          "readable": true
+        },
+        {
+          "name": "side_cable_service_loop_curve_tube",
+          "contrast": 0.1345,
+          "edge_density": 0.1583,
+          "separation": 0.0143,
+          "mean_luma": 0.4411,
+          "surround_luma": 0.4554,
+          "readable": true
+        },
+        {
+          "name": "front_decal_service_plate_craft",
+          "contrast": 0.1572,
+          "edge_density": 0.3598,
+          "separation": 0.2644,
+          "mean_luma": 0.6577,
+          "surround_luma": 0.3933,
+          "readable": true
+        }
+      ],
+      "measured_parts": 36,
+      "readable_parts": 36,
+      "unreadable_parts": []
+    },
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,
@@ -26,11 +356,11 @@
     "pass": false,
     "visual_score": 29,
     "technical_score": 60,
-    "runtime_seconds": 4.0,
+    "runtime_seconds": 3.0,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\low_spec_laptop_safe_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\low_spec_laptop_safe_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -73,16 +403,31 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 5.5,
+    "runtime_seconds": 4.3,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\low_spec_laptop_safe_adversarial_slop_1\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\low_spec_laptop_safe_adversarial_slop_1\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "very_dark"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "monolith_panel_antenna_accent_vent_foot_decal_cap_screen_cable_pedestal_glow",
+          "contrast": 0.0394,
+          "edge_density": 0.0004,
+          "separation": 0.0696,
+          "mean_luma": 0.0553,
+          "surround_luma": 0.1249,
+          "readable": true
+        }
+      ],
+      "measured_parts": 1,
+      "readable_parts": 1,
+      "unreadable_parts": []
+    },
     "reference_metrics": null,
     "palette_similarity": null,
     "animation_frame_proof": null,

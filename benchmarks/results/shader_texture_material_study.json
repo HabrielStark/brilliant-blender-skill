@@ -5,16 +5,259 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 5.6,
+    "runtime_seconds": 5.0,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "backlight_frosted_blue_panel",
+          "contrast": 0.0597,
+          "edge_density": 0.0105,
+          "separation": 0.0645,
+          "mean_luma": 0.7275,
+          "surround_luma": 0.663,
+          "readable": true
+        },
+        {
+          "name": "glass_bottle_body",
+          "contrast": 0.0612,
+          "edge_density": 0.0172,
+          "separation": 0.0002,
+          "mean_luma": 0.6886,
+          "surround_luma": 0.6884,
+          "readable": true
+        },
+        {
+          "name": "blue_liquid_core",
+          "contrast": 0.0563,
+          "edge_density": 0.0268,
+          "separation": 0.0337,
+          "mean_luma": 0.6776,
+          "surround_luma": 0.7113,
+          "readable": true
+        },
+        {
+          "name": "liquid_bubble_highlight_01",
+          "contrast": 0.0279,
+          "edge_density": 0.0417,
+          "separation": 0.0222,
+          "mean_luma": 0.7093,
+          "surround_luma": 0.7315,
+          "readable": true
+        },
+        {
+          "name": "liquid_bubble_highlight_02",
+          "contrast": 0.0153,
+          "edge_density": 0.0,
+          "separation": 0.0173,
+          "mean_luma": 0.6369,
+          "surround_luma": 0.6543,
+          "readable": false
+        },
+        {
+          "name": "liquid_bubble_highlight_03",
+          "contrast": 0.0113,
+          "edge_density": 0.0,
+          "separation": 0.0085,
+          "mean_luma": 0.6315,
+          "surround_luma": 0.6231,
+          "readable": false
+        },
+        {
+          "name": "front_label_checker_texture",
+          "contrast": 0.0474,
+          "edge_density": 0.0531,
+          "separation": 0.0434,
+          "mean_luma": 0.6997,
+          "surround_luma": 0.6563,
+          "readable": true
+        },
+        {
+          "name": "label_highlight_line",
+          "contrast": 0.0645,
+          "edge_density": 0.1686,
+          "separation": 0.0052,
+          "mean_luma": 0.7093,
+          "surround_luma": 0.7145,
+          "readable": true
+        },
+        {
+          "name": "label_brass_frame_top",
+          "contrast": 0.067,
+          "edge_density": 0.064,
+          "separation": 0.0079,
+          "mean_luma": 0.7101,
+          "surround_luma": 0.7022,
+          "readable": true
+        },
+        {
+          "name": "label_brass_frame_bottom",
+          "contrast": 0.0568,
+          "edge_density": 0.0167,
+          "separation": 0.0129,
+          "mean_luma": 0.6905,
+          "surround_luma": 0.6776,
+          "readable": true
+        },
+        {
+          "name": "label_micro_text_top",
+          "contrast": 0.0906,
+          "edge_density": 0.4455,
+          "separation": 0.0569,
+          "mean_luma": 0.6503,
+          "surround_luma": 0.7072,
+          "readable": true
+        },
+        {
+          "name": "label_micro_text_bottom",
+          "contrast": 0.0903,
+          "edge_density": 0.44,
+          "separation": 0.0628,
+          "mean_luma": 0.6391,
+          "surround_luma": 0.702,
+          "readable": true
+        },
+        {
+          "name": "brushed_cap_metal",
+          "contrast": 0.0444,
+          "edge_density": 0.038,
+          "separation": 0.0193,
+          "mean_luma": 0.6369,
+          "surround_luma": 0.6562,
+          "readable": true
+        },
+        {
+          "name": "bottle_neck_glass_ring",
+          "contrast": 0.0387,
+          "edge_density": 0.0092,
+          "separation": 0.0113,
+          "mean_luma": 0.6839,
+          "surround_luma": 0.6726,
+          "readable": true
+        },
+        {
+          "name": "liquid_meniscus_highlight_ring",
+          "contrast": 0.0654,
+          "edge_density": 0.034,
+          "separation": 0.0232,
+          "mean_luma": 0.7162,
+          "surround_luma": 0.693,
+          "readable": true
+        },
+        {
+          "name": "nozzle_stem_metal",
+          "contrast": 0.0401,
+          "edge_density": 0.0667,
+          "separation": 0.002,
+          "mean_luma": 0.6336,
+          "surround_luma": 0.6316,
+          "readable": true
+        },
+        {
+          "name": "nozzle_press_bar",
+          "contrast": 0.0785,
+          "edge_density": 0.1792,
+          "separation": 0.0776,
+          "mean_luma": 0.71,
+          "surround_luma": 0.6325,
+          "readable": true
+        },
+        {
+          "name": "swatch_glass_clear_sphere",
+          "contrast": 0.0298,
+          "edge_density": 0.0338,
+          "separation": 0.0205,
+          "mean_luma": 0.7363,
+          "surround_luma": 0.7158,
+          "readable": true
+        },
+        {
+          "name": "swatch_liquid_blue_column",
+          "contrast": 0.0903,
+          "edge_density": 0.0622,
+          "separation": 0.1,
+          "mean_luma": 0.6495,
+          "surround_luma": 0.7495,
+          "readable": true
+        },
+        {
+          "name": "swatch_metal_brushed_ball",
+          "contrast": 0.0595,
+          "edge_density": 0.0604,
+          "separation": 0.0029,
+          "mean_luma": 0.6558,
+          "surround_luma": 0.6528,
+          "readable": true
+        },
+        {
+          "name": "swatch_label_checker_tile",
+          "contrast": 0.054,
+          "edge_density": 0.0128,
+          "separation": 0.0754,
+          "mean_luma": 0.665,
+          "surround_luma": 0.7404,
+          "readable": true
+        },
+        {
+          "name": "cold_blue_bottle_rim_edge",
+          "contrast": 0.0437,
+          "edge_density": 0.0,
+          "separation": 0.0117,
+          "mean_luma": 0.7462,
+          "surround_luma": 0.7346,
+          "readable": true
+        },
+        {
+          "name": "white_glass_top_highlight",
+          "contrast": 0.0702,
+          "edge_density": 0.1329,
+          "separation": 0.0718,
+          "mean_luma": 0.7356,
+          "surround_luma": 0.6638,
+          "readable": true
+        },
+        {
+          "name": "white_glass_vertical_highlight_left",
+          "contrast": 0.0468,
+          "edge_density": 0.1983,
+          "separation": 0.0715,
+          "mean_luma": 0.7426,
+          "surround_luma": 0.6711,
+          "readable": true
+        },
+        {
+          "name": "reflection_contact_streak",
+          "contrast": 0.0506,
+          "edge_density": 0.0242,
+          "separation": 0.0185,
+          "mean_luma": 0.6851,
+          "surround_luma": 0.6666,
+          "readable": true
+        },
+        {
+          "name": "reflection_blue_secondary",
+          "contrast": 0.0354,
+          "edge_density": 0.0185,
+          "separation": 0.019,
+          "mean_luma": 0.7584,
+          "surround_luma": 0.7394,
+          "readable": true
+        }
+      ],
+      "measured_parts": 26,
+      "readable_parts": 24,
+      "unreadable_parts": [
+        "liquid_bubble_highlight_02",
+        "liquid_bubble_highlight_03"
+      ]
+    },
     "reference_metrics": null,
     "palette_similarity": 0.8227938119983941,
     "animation_frame_proof": null,
@@ -26,11 +269,11 @@
     "pass": false,
     "visual_score": 27,
     "technical_score": 40,
-    "runtime_seconds": 3.7,
+    "runtime_seconds": 3.2,
     "iterations": 1,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\shader_texture_material_study_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\shader_texture_material_study_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -75,16 +318,40 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 4.8,
+    "runtime_seconds": 4.4,
     "iterations": 1,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\perf_run_v40\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\regression\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "neutral"
     ],
-    "readability": null,
+    "readability": {
+      "parts": [
+        {
+          "name": "bottle_liquid_cap_label_nozzle_reflection_highlight_swatch_ridge_backlight_cylinder",
+          "contrast": 0.0597,
+          "edge_density": 0.0009,
+          "separation": 0.0588,
+          "mean_luma": 0.5124,
+          "surround_luma": 0.5712,
+          "readable": true
+        },
+        {
+          "name": "front_label_plain_texture_card",
+          "contrast": 0.0576,
+          "edge_density": 0.0174,
+          "separation": 0.0721,
+          "mean_luma": 0.5208,
+          "surround_luma": 0.4487,
+          "readable": true
+        }
+      ],
+      "measured_parts": 2,
+      "readable_parts": 2,
+      "unreadable_parts": []
+    },
     "reference_metrics": null,
     "palette_similarity": 0.728686764113462,
     "animation_frame_proof": null,

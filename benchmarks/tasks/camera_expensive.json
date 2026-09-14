@@ -15,7 +15,8 @@
     "min_subject_materials": 3,
     "min_subject_material_node_count": 5, "min_subject_procedural_materials": 2,
     "require_subject_material_features": ["noise_color_ramp"],
-    "require_named_parts": ["plinth", "hero", "faceted", "facet", "accent", "ring", "highlight"]},
+    "require_named_parts": ["plinth", "hero", "faceted", "facet", "accent", "ring", "highlight"],
+    "require_readable_named_parts": true},
   "recipe": {"operations": [
     {"op": "ensure_standard_collections"},
     {"op": "create_mesh_primitive", "type": "plane", "name": "stage", "size": 18, "collection": "ENVIRONMENT"},

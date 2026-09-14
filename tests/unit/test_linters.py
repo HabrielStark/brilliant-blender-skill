@@ -213,6 +213,33 @@ def test_reflection_contact_streak_is_not_attachment_part():
     assert not [i for i in res.errors if i.code == "spatial.floating_part"]
 
 
+def test_parented_part_uses_world_location_not_local():
+    s = _good_scene()
+    s["objects"] = [
+        {
+            "name": "product_body_beveled",
+            "type": "MESH",
+            "collection": "SUBJECT",
+            "location": [5.0, 0, 1.0],
+            "dimensions": [2.0, 1.0, 1.0],
+        },
+        {
+            # Parented detail: ``location`` is the parent-local offset, which
+            # reads as "near origin" - far from the body at x=5. Attachment
+            # must be measured in world space or every parented part is a
+            # false floating_part.
+            "name": "dial_marker_plate",
+            "type": "MESH",
+            "collection": "SUBJECT",
+            "location": [0.05, 0, 0.05],
+            "world_location": [5.05, 0, 1.05],
+            "dimensions": [0.1, 0.02, 0.1],
+        },
+    ]
+    res = lint_spatial_relationships(s, manifest={"brief": "premium product hero"})
+    assert not [i for i in res.errors if i.code == "spatial.floating_part"]
+
+
 def test_naming_warns_default_object():
     s = _good_scene()
     s["objects"].append({"name": "Cylinder.003", "type": "MESH", "collection": "ENVIRONMENT"})
