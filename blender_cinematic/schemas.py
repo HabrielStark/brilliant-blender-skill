@@ -99,6 +99,10 @@ class SuccessCriteria(_Strict):
     lighting_valid: bool = True
     web_export_loads: bool = False
     visual_score_min: int = Field(default=80, ge=0, le=100)
+    # Completeness ledger: every element the brief implies, enumerated up
+    # front. The critique layer fails while any part has no matching visible
+    # object — "nothing dropped" is a checked contract, not a hope.
+    required_parts: list[str] = Field(default_factory=list)
 
 
 class SceneManifest(_Strict):

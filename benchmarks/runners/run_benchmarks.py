@@ -19,7 +19,7 @@ sys.path.insert(0, str(ROOT))
 
 from blender_cinematic import runner
 from blender_cinematic.budget import compute_budget
-from blender_cinematic.critique import diagnose
+from blender_cinematic.critique import PART_NAME_ALIASES, diagnose
 from blender_cinematic.evaluation import score_iteration
 from blender_cinematic.glb import validate_glb
 from blender_cinematic.imaging import (
@@ -41,14 +41,6 @@ TASKS_DIR = ROOT / "benchmarks" / "tasks"
 RESULTS_DIR = ROOT / "benchmarks" / "results"
 AXIS_INDEX = {"x": 0, "y": 1, "z": 2}
 VISUAL_OBJECT_TYPES = {"MESH", "CURVE", "FONT"}
-PART_NAME_ALIASES = {
-    "glass": ("glass", "sapphire", "crystal"),
-    "marker": ("marker", "index", "indices", "indice", "hash"),
-    "highlight": ("highlight", "catchlight", "glint"),
-    "reflection": ("reflection", "reflect", "catchlight", "glint"),
-}
-
-
 def load_tasks():
     return {p.stem: json.loads(p.read_text(encoding="utf-8")) for p in sorted(TASKS_DIR.glob("*.json"))}
 
@@ -1116,6 +1108,16 @@ def run_recipe(task, recipe, mode, blender_exe, out_root):
             break
         insp, preview = insp2, preview2
     technical = max(0, 100 - 10 * len(lint.errors))
+    # The completeness ledger: checks.require_named_parts and the manifest's
+    # own required_parts feed the same critique contract — one source of truth.
+    crit_manifest = dict(manifest)
+    merged_parts = sorted(
+        set((manifest.get("success_criteria") or {}).get("required_parts") or [])
+        | set(task.get("checks", {}).get("require_named_parts") or []))
+    if merged_parts:
+        crit_manifest["success_criteria"] = {
+            **(manifest.get("success_criteria") or {}),
+            "required_parts": merged_parts}
     diagnoses = diagnose(
         insp,
         image_metrics=metrics if preview.exists() else None,
@@ -1123,7 +1125,7 @@ def run_recipe(task, recipe, mode, blender_exe, out_root):
         reference_path=reference_path
         if (reference_path and reference_path.exists()) else None,
         readability_report=readability,
-        lint=lint,
+        lint=lint, manifest=crit_manifest,
     ) if insp else []
     return {
         "task_id": task["id"], "mode": mode,

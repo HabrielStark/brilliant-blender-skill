@@ -235,7 +235,7 @@ def h_evaluate_preview(ctx: ServerContext, image_path: str, inspection: dict | N
         ref_path = ctx.resolver.resolve(Path(reference_metrics["reference_image"]))
     diags = diagnose(inspection, image_metrics=metrics, render_path=img,
                      reference_path=ref_path, readability_report=readability,
-                     lint=lint)
+                     lint=lint, manifest=manifest)
     return {"ok": True, "metrics": metrics, "evaluation": ev.to_dict(),
             "diagnoses": diags}
 
@@ -263,7 +263,7 @@ def h_scene_critique(ctx: ServerContext, inspection: dict, image_path: str | Non
     lint = lint_scene(inspection, manifest)
     diags = diagnose(inspection, image_metrics=img, render_path=render,
                      reference_path=ref, readability_report=readability,
-                     lint=lint)
+                     lint=lint, manifest=manifest)
     return {"ok": True, "diagnoses": diags,
             "readability": readability, "metrics": img}
 

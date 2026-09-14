@@ -227,6 +227,100 @@ def test_buried_object_lifts_onto_host():
     assert validate_recipe({"operations": [op]}).passed
 
 
+def test_completeness_missing_and_offscreen_parts():
+    manifest = {"success_criteria": {"required_parts": ["hero", "lantern"]}}
+    objs = [
+        _subject("hero_body", in_frame=True),
+        _subject("lantern_prop", in_frame=False, loc=(9, 0, 0)),
+    ]
+    diags = diagnose(_inspection(objects=objs), manifest=manifest)
+    codes = [d["code"] for d in diags]
+    assert "completeness.part_offscreen" in codes
+    d = next(x for x in diags if x["code"] == "completeness.part_offscreen")
+    assert "lantern" in d["problem"]
+    assert any(o["op"] == "reframe_camera" for o in d["ops"])
+    # now a part that doesn't exist at all
+    diags = diagnose(_inspection(objects=[_subject("hero_body")]),
+                     manifest=manifest)
+    d = next(x for x in diags if x["code"] == "completeness.part_missing")
+    assert "lantern" in d["problem"]
+
+
+def test_buried_object_ignores_nested_assembly_parts():
+    """Watch anatomy is nested by design: hour markers sit inside the bezel
+    ring's bbox (a ring's bbox contains its hole), dial glass is seated in the
+    case. Bbox containment alone must not flag these — a repair that lifts
+    markers off the dial would destroy the watch."""
+    bezel = _subject("watch_bezel_ring", loc=(0, 0, 0.55),
+                     dims=(2.72, 2.72, 0.41))
+    case = _subject("watch_case_beveled", loc=(0, 0, 0.4),
+                    dims=(2.2, 2.2, 0.62))
+    # marker flush with the bezel's top face, mounted on the dial
+    marker = _subject("dial_hour_marker_04", loc=(0.72, 0, 0.7405),
+                      dims=(0.06, 0.12, 0.025))
+    # glass inside the ring hole, bottom seated inside the case body
+    glass = _subject("watch_dial_glass", loc=(0, 0, 0.68),
+                     dims=(1.82, 1.82, 0.064))
+    diags = diagnose(_inspection(objects=[bezel, case, marker, glass]))
+    assert not any(d["code"] == "geometry.buried_object" for d in diags)
+
+
+def test_completeness_missing_part_emits_scaffold_op():
+    """A missing required part must produce an actionable scaffold, not just
+    advice — otherwise the mechanical loop stalls on 'build it'."""
+    manifest = {"success_criteria": {"required_parts": ["mug"]}}
+    host = _subject("desk_top", loc=(0, 0, 0.75), dims=(2.8, 1.4, 0.1))
+    diags = diagnose(_inspection(objects=[host]), manifest=manifest)
+    d = next(x for x in diags if x["code"] == "completeness.part_missing")
+    assert d["severity"] == "fail"
+    op = next((o for o in d["ops"] if o["op"] == "create_mesh_primitive"), None)
+    assert op is not None and op["name"] == "mug_scaffold"
+    assert op["collection"] == "SUBJECT"
+    # lands on the host's top surface, not floating or buried
+    assert op["location"][2] > 0.75
+    issues = validate_recipe({"operations": [op]}).issues
+    assert not [i for i in issues if i.severity == "error"]
+
+
+def test_completeness_scaffolds_spread_across_host():
+    manifest = {"success_criteria": {"required_parts": ["mug", "books"]}}
+    host = _subject("desk_top", loc=(0, 0, 0.75), dims=(2.8, 1.4, 0.1))
+    diags = diagnose(_inspection(objects=[host]), manifest=manifest)
+    ops = [d["ops"][0] for d in diags
+           if d["code"] == "completeness.part_missing"]
+    assert len(ops) == 2
+    xs = sorted(o["location"][0] for o in ops)
+    assert xs[1] - xs[0] > 0.1  # not stacked on each other
+
+
+def test_completeness_bare_primitive_placeholder_warn():
+    manifest = {"success_criteria": {"required_parts": ["mug"]}}
+    bare = {**_subject("mug_body"), "type": "MESH", "faces": 6,
+            "modifiers": []}
+    diags = diagnose(_inspection(objects=[bare]), manifest=manifest)
+    d = next((x for x in diags
+              if x["code"] == "completeness.part_is_placeholder"), None)
+    assert d is not None and d["severity"] == "warn"
+    # a developed part (bevel modifier, more faces) does not warn
+    developed = {**_subject("mug_body"), "type": "MESH", "faces": 420,
+                 "modifiers": [{"type": "BEVEL"}]}
+    diags = diagnose(_inspection(objects=[developed]), manifest=manifest)
+    assert not any(x["code"] == "completeness.part_is_placeholder"
+                   for x in diags)
+
+
+def test_completeness_alias_match():
+    manifest = {"success_criteria": {"required_parts": ["marker"]}}
+    objs = [_subject("dial_hash_marks")]  # 'hash' is a marker alias
+    diags = diagnose(_inspection(objects=objs), manifest=manifest)
+    assert not any(d["code"].startswith("completeness.") for d in diags)
+
+
+def test_no_manifest_no_completeness_noise():
+    diags = diagnose(_inspection(objects=[_subject("hero")]))
+    assert not any(d["code"].startswith("completeness.part") for d in diags)
+
+
 def test_lint_driven_diagnoses_for_broken_scene():
     """The worst-case input (baseline-style: no camera, no lights, no
     materials) must still produce concrete build-out ops — this is where a

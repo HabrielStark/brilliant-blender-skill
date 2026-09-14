@@ -41,9 +41,117 @@ def _centroid(objs: list[dict]) -> list[float] | None:
     return [sum(p[i] for p in pts) / len(pts) for i in range(3)]
 
 
+PART_NAME_ALIASES = {
+    "glass": ("glass", "sapphire", "crystal"),
+    "marker": ("marker", "index", "indices", "indice", "hash"),
+    "highlight": ("highlight", "catchlight", "glint"),
+    "reflection": ("reflection", "reflect", "catchlight", "glint"),
+}
+
+
+def part_present(name: str, part: str) -> bool:
+    """Name-substring match with aliases — same semantics as the benchmark
+    named-part gates."""
+    needles = PART_NAME_ALIASES.get(part.lower(), (part.lower(),))
+    return any(n in name.lower() for n in needles)
+
+
 def _diag(severity, code, problem, evidence, ops):
     return {"severity": severity, "code": code, "problem": problem,
             "evidence": evidence, "ops": ops}
+
+
+def _scaffold_op(part: str, host: dict | None, slot: int, total: int) -> dict:
+    """Placeholder geometry for a missing required part. A scaffold is NOT the
+    finished element — it exists so the object becomes inspectable, lintable,
+    material-assignable and frameable, after which the anatomy pass and the
+    visual verifier decide whether it reads as what it claims to be. Placed on
+    the largest subject's top surface when one exists, spread across slots."""
+    if host:
+        hl = host.get("world_location") or [0, 0, 0]
+        dims = host.get("dimensions") or [1, 1, 1]
+        footprint = max(0.08, min(0.4, min(dims[0], dims[1]) * 0.15))
+        spacing = max(dims[0] * 0.28, footprint * 2.5)
+        x = hl[0] + (slot - (total - 1) / 2.0) * spacing
+        loc = [round(x, 3), round(hl[1], 3),
+               round(hl[2] + dims[2] / 2 + footprint / 2, 3)]
+    else:
+        footprint = 0.15
+        loc = [round((slot - (total - 1) / 2.0) * 0.4, 3), 0, footprint / 2]
+    return {"op": "create_mesh_primitive", "type": "cube",
+            "name": f"{part}_scaffold", "collection": "SUBJECT",
+            "location": loc, "size": round(footprint, 3)}
+
+
+def _largest_host(objects: list[dict]) -> dict | None:
+    def vol(o):
+        d = o.get("dimensions") or [0, 0, 0]
+        return abs(d[0] * d[1] * d[2])
+    candidates = [o for o in objects
+                  if o.get("collection") == "SUBJECT"
+                  and o.get("world_location") and vol(o) > 0]
+    return max(candidates, key=vol, default=None)
+
+
+def _is_bare_primitive(o: dict) -> bool:
+    """A lone low-face primitive with no modifiers is a massing stand-in, not
+    a developed element. Books may legitimately be boxes — this is why the
+    verdict is 'warn' for the verifier, not an auto-fail."""
+    return (o.get("type") == "MESH"
+            and (o.get("faces") or 0) <= 32
+            and not o.get("modifiers")
+            and not o.get("gn_recipe"))
+
+
+def _check_completeness(inspection: dict, manifest: dict | None,
+                        out: list) -> None:
+    """The 'nothing dropped' contract: every element the brief implied must
+    exist as a real object AND be visible in frame. A part that exists but is
+    offscreen or buried is still a failure — presence is not visibility. And a
+    bare primitive that merely carries the name is a scaffold, not the
+    element — the verifier decides identity."""
+    required = (((manifest or {}).get("success_criteria") or {})
+                .get("required_parts") or [])
+    if not required:
+        return
+    objects = inspection.get("objects", [])
+    host = _largest_host(objects)
+    missing = [p for p in required
+               if not any(part_present(str(o.get("name", "")), p)
+                          for o in objects)]
+    for slot, part in enumerate(missing):
+        out.append(_diag(
+            "fail", "completeness.part_missing",
+            f"brief element '{part}' has no object — the scene is missing "
+            "a declared element entirely. The scaffold op below creates a "
+            "named placeholder so the loop can proceed; develop it into real "
+            "anatomy in the next pass (a named cube is not the element)",
+            f"required_parts={required}",
+            [_scaffold_op(part, host, slot, len(missing))]))
+    for part in required:
+        matches = [o for o in objects
+                   if part_present(str(o.get("name", "")), part)]
+        if not matches:
+            continue
+        visible = [o for o in matches if o.get("in_camera_frame")]
+        if not visible:
+            loc = next((o.get("world_location") for o in matches
+                        if o.get("world_location")), None)
+            out.append(_diag(
+                "fail", "completeness.part_offscreen",
+                f"'{part}' exists but is outside the camera frame — a part "
+                "the viewer can't see is a part that doesn't exist",
+                f"objects: {[o.get('name') for o in matches]}",
+                [{"op": "reframe_camera", "look_at": loc, "pull_back": 1.2}]
+                if loc else []))
+        elif len(matches) == 1 and _is_bare_primitive(matches[0]):
+            out.append(_diag(
+                "warn", "completeness.part_is_placeholder",
+                f"'{part}' is a single bare primitive ({matches[0].get('faces')} "
+                "faces, no modifiers) — a scaffold, not developed anatomy. "
+                "Give it real structure (primary form + secondary details + "
+                "surface) or the visual verifier should reject it",
+                f"object={matches[0].get('name')}", []))
 
 
 def _lint_issues(lint) -> list:
@@ -229,10 +337,14 @@ def _check_scene_richness(inspection: dict, out: list) -> None:
 
 
 def _check_buried_objects(inspection: dict, out: list) -> None:
-    """A small subject fully inside another object's bbox is invisible —
+    """A small subject fully inside another SOLID object's bbox is invisible —
     the classic weak-model layout bug (props placed at plausible heights
     but swallowed by the table/pedestal). Computable purely from
-    world_location + dimensions."""
+    world_location + dimensions. Bboxes can't see holes, so three guards
+    keep intentional nesting from being flagged: flush-with-top surface
+    detail (hour markers in a bezel ring), parts embedded in a neighbouring
+    assembly member (dial glass seated in the case), and objects at the
+    host's bbox periphery (rim/hole zones)."""
     subjects = _subject_objects(inspection)
     def _bounds(o):
         loc, dim = o.get("world_location"), o.get("dimensions")
@@ -246,21 +358,43 @@ def _check_buried_objects(inspection: dict, out: list) -> None:
         for host, (hlo, hhi) in boxes.items():
             if name == host:
                 continue
-            if all(lo[i] >= hlo[i] and hi[i] <= hhi[i] for i in range(3)):
-                # buried -> sit it on top of the host's bounding box
-                loc = next(o["world_location"] for o in subjects
-                           if o.get("name") == name)
-                dim = next(o.get("dimensions") for o in subjects
-                           if o.get("name") == name)
-                out.append(_diag(
-                    "fail", "geometry.buried_object",
-                    f"'{name}' is fully inside '{host}' — invisible in the "
-                    "render; lift it onto the host's top surface",
-                    f"{name} bbox {lo}..{hi} inside {host} {hlo}..{hhi}",
-                    [{"op": "set_object_transform", "target": name,
-                      "location": [loc[0], loc[1],
-                                   hhi[2] + dim[2] / 2 + 0.01]}]))
-                break
+            if not all(lo[i] >= hlo[i] and hi[i] <= hhi[i] for i in range(3)):
+                continue
+            host_h = hhi[2] - hlo[2]
+            # flush with the host's top face = mounted surface detail, not sunk
+            if host_h > 0 and hi[2] > hhi[2] - max(0.04 * host_h, 0.01):
+                continue
+            # bottom-center seated inside a different body = joined assembly
+            bctr = [(lo[0] + hi[0]) / 2, (lo[1] + hi[1]) / 2, lo[2]]
+            if any(
+                other not in (name, host)
+                and all(ob[0][i] <= bctr[i] <= ob[1][i] for i in range(3))
+                for other, ob in boxes.items()
+            ):
+                continue
+            # near the host's bbox periphery it is likely inside a rim/hole
+            # zone rather than solid material (bbox tests can't see holes)
+            hcx = (hlo[0] + hhi[0]) / 2
+            hcy = (hlo[1] + hhi[1]) / 2
+            ocx = (lo[0] + hi[0]) / 2
+            ocy = (lo[1] + hi[1]) / 2
+            half_x = (hhi[0] - hlo[0]) / 2 or 1e-6
+            half_y = (hhi[1] - hlo[1]) / 2 or 1e-6
+            if max(abs(ocx - hcx) / half_x, abs(ocy - hcy) / half_y) > 0.75:
+                continue
+            loc = next(o["world_location"] for o in subjects
+                       if o.get("name") == name)
+            dim = next(o.get("dimensions") for o in subjects
+                       if o.get("name") == name)
+            out.append(_diag(
+                "fail", "geometry.buried_object",
+                f"'{name}' is fully inside '{host}' — invisible in the "
+                "render; lift it onto the host's top surface",
+                f"{name} bbox {lo}..{hi} inside {host} {hlo}..{hhi}",
+                [{"op": "set_object_transform", "target": name,
+                  "location": [loc[0], loc[1],
+                               hhi[2] + dim[2] / 2 + 0.01]}]))
+            break
 
 
 def _check_subject_visible(inspection: dict, out: list) -> None:
@@ -535,9 +669,10 @@ def diagnose(inspection: dict, image_metrics: dict | None = None,
              render_path: str | Path | None = None,
              reference_path: str | Path | None = None,
              readability_report: dict | None = None,
-             lint=None) -> list[dict]:
+             lint=None, manifest: dict | None = None) -> list[dict]:
     """Ordered diagnoses: fails first, then warnings, most-direct fixes first."""
     out: list[dict] = []
+    _check_completeness(inspection, manifest, out)
     _check_lint(lint, inspection, out)
     _check_exposure(image_metrics, out)
     _check_scene_richness(inspection, out)

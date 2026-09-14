@@ -4,6 +4,31 @@ Use sub-agents to create independent evidence, not to multiply uncoordinated
 edits. The orchestrator remains responsible for the goal, file ownership,
 integration, final claims, and stop decision.
 
+## The builder -> verifier loop (the core protocol)
+
+Metrics prove a render is *not broken*. They cannot prove it looks like the
+brief — that takes an agent that can actually look at pixels. So the done-signal
+is never the builder's own claim:
+
+1. **Builder** iterates apply -> render -> critique until no fail-severity
+   diagnoses remain, then claims done.
+2. **Visual verifier** — a *different* agent session — receives ONLY the brief,
+   the `required_parts` ledger, and the render path (plus the reference image
+   when one exists). Not the builder's reasoning, not its claimed fixes — fresh
+   eyes only. It opens the image itself and answers:
+   - For every element in the ledger: is it present, identifiable, and does it
+     read as *what it is* (a flower reads as a flower, not as a blob)?
+   - Does the composition match the brief's intent (mood, framing, hierarchy)?
+   - If a reference exists: which regions diverge most, and why?
+   - Verdict: `PASS` or a numbered defect list ordered by visual impact.
+3. A defect list routes back to the builder as new work. `PASS` from the
+   verifier plus zero fail diagnoses is the only valid done-state.
+
+The verifier must never be told the score or the builder's interpretation —
+anchoring it to the builder's story defeats the point. If sub-agents are
+unavailable, the orchestrator plays verifier on a fresh read of the render and
+records that limitation in the report.
+
 ## When to delegate
 
 Delegate only a bounded branch with a different hypothesis or evidence surface:

@@ -56,6 +56,12 @@ skill folder (`SKILL.md`) so the agent loads the workflow rules too.
 `web_validate_glb`, `web_generate_integration`, `security_scan_python`,
 `security_policy`.
 
+`scene_critique` reads the task's `scene_manifest.json` when `task_id` is
+passed. Declaring `success_criteria.required_parts` in the manifest enables
+the completeness contract: every brief element gets a presence + in-frame +
+placeholder check, and missing parts return a `create_mesh_primitive`
+scaffold op so the repair loop can proceed mechanically.
+
 ## Resources & prompts
 
 - `docs://camera-language`, `docs://visual-critique-rubric`, … (the playbooks).

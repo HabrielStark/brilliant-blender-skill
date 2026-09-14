@@ -100,6 +100,11 @@ state. Preserve the last valid artifacts and state the exact next decision.
    `reference_match`, `scene_repair`, or `benchmark`.
 2. **Manifest.** Create/validate `scene_manifest.json`
    (`scripts/scene_manifest.py validate <file>`). If the user gave no quality, use `auto`.
+   **Enumerate the completeness ledger into `success_criteria.required_parts`**:
+   every element the brief implies — every prop, structure, person, light
+   source, texture family — gets a name. "Giant city" means buildings, street
+   lights, roads, vehicles, people, sky — write them all. An element absent
+   from the ledger is an element the verifier will find missing.
 3. **Preflight hardware** before any heavy render
    (`scripts/preflight_hardware.py --project-dir <dir>`) and select a safe profile.
 4. **Budget.** Compute the render budget (`scripts/render_budget.py`). Never start
@@ -115,7 +120,17 @@ state. Preserve the last valid artifacts and state the exact next decision.
    non-semantic effects, and `HELPERS` for invisible helpers only. Do not invent
    `Subject`, `DETAIL`, `Materials`, `TextureDetail`, or other ad hoc
    collection names; they can disappear from subject/object-count metrics.
-7. **Blockout first**, then detail. Use *structured recipe operations*, not raw Python.
+7. **Blockout first, then detail — in named passes, not one giant recipe.**
+   Strong scenes are built in passes because each pass can be checked:
+   (a) *blockout* — subject massing, camera, key light only;
+   (b) *anatomy pass* — every `required_parts` element gets real geometry,
+   not a named cube standing in for it;
+   (c) *surface pass* — materials, bevels, wear, microdetail per element;
+   (d) *environment pass* — ground, backdrop, atmosphere, set dressing;
+   (e) *critique pass* — preview + `scene_critique` + verifier.
+   Skipping straight to "the finished scene" in one recipe is how elements
+   get dropped: each pass re-checks the ledger against what actually exists.
+   Use *structured recipe operations*, not raw Python.
    Emit operation shapes exactly as the allowlist expects. Use
    `{"op":"create_material","schema":{...}}`, not flat material fields. Use
    `{"op":"create_camera","schema":{...}}`, not flat camera fields. Use
@@ -326,7 +341,16 @@ state. Preserve the last valid artifacts and state the exact next decision.
    checked for semantic anatomy, authored craft, material/shader detail,
    camera/lighting, and provenance before they are treated as valid Skill
    outputs. Use `--render` when Blender is available.
-14. For web assets: **export GLB and validate it locally** (`scripts/export_glb.py`
+14. **Visual verifier pass.** Metrics passing is not done. Hand the render to a
+   *fresh-eyes* verifier (a sub-agent or your own fresh read of the PNG — see
+   `references/agent-orchestration.md`): give it the brief, the
+   `required_parts` ledger, and the image — never your claimed fixes or score.
+   It answers per element: present? identifiable? reads as what it is? Any
+   defect list routes back as new work; only verifier `PASS` + zero
+   fail-severity critiques means done. A scene that is metrically valid but
+   visually generic — blockout anatomy, monotone materials, no environment
+   story — is not finished.
+15. For web assets: **export GLB and validate it locally** (`scripts/export_glb.py`
    then `web/` validator). Generate the three.js/R3F integration and a camera path.
     For scroll/camera animation, verify `camera_path_json` exists in inspection
     and includes timeline segments plus sampled camera positions whose first and
