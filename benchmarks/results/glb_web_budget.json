@@ -5,11 +5,12 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 5.8,
+    "runtime_seconds": 6.1,
     "iterations": 1,
+    "repair_history": null,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\glb_check\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\glb_check\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\glb_web_budget_skill_plus_tools\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\glb_web_budget_skill_plus_tools\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark"
@@ -692,11 +693,12 @@
     "pass": false,
     "visual_score": 31,
     "technical_score": 60,
-    "runtime_seconds": 3.2,
+    "runtime_seconds": 3.3,
     "iterations": 1,
+    "repair_history": null,
     "artifacts": [
       null,
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\glb_check\\glb_web_budget_baseline_no_skill\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\glb_web_budget_baseline_no_skill\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "missing_preview"
@@ -737,11 +739,12 @@
     "pass": false,
     "visual_score": 79,
     "technical_score": 100,
-    "runtime_seconds": 4.3,
+    "runtime_seconds": 4.5,
     "iterations": 1,
+    "repair_history": null,
     "artifacts": [
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\glb_check\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_preview.png",
-      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\glb_check\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\export_final.glb"
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\export_final.glb"
     ],
     "visual_style_tags": [
       "dark"

@@ -5,8 +5,9 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 4.7,
+    "runtime_seconds": 4.9,
     "iterations": 1,
+    "repair_history": null,
     "artifacts": [
       "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\character_bust_portrait_skill_plus_tools\\iterations\\iter_01_preview.png",
       "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\character_bust_portrait_skill_plus_tools\\final\\export_final.glb"
@@ -187,5 +188,94 @@
     "palette_similarity": null,
     "animation_frame_proof": null,
     "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "character_bust_portrait",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 29,
+    "technical_score": 60,
+    "runtime_seconds": 3.6,
+    "iterations": 1,
+    "repair_history": null,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\character_bust_portrait_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "readability": null,
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Cube'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Cube",
+      "pipeline failed: pipeline_incomplete",
+      "score 29 < min 84",
+      "subject objects 1 < min 16",
+      "visible subject objects 0 < min 13",
+      "missing named subject parts: head, neck, shoulder, eye, brow, nose, mouth, ear, hair, pedestal",
+      "subject faces 6 < min 3000",
+      "subject modifiers 0 < min 3",
+      "smooth subject objects 0 < min 8",
+      "craft detail objects 0 < min 6",
+      "missing named environment parts: backdrop",
+      "subject materials 0 < min 5",
+      "subject procedural materials 0 < min 1"
+    ]
+  },
+  "adversarial_slop_sphere_named_character_keywords": {
+    "task_id": "character_bust_portrait",
+    "mode": "adversarial_slop_sphere_named_character_keywords",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 4.5,
+    "iterations": 1,
+    "repair_history": null,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\character_bust_portrait_adversarial_slop_sphere_named_character_keywords\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\full_suite\\character_bust_portrait_adversarial_slop_sphere_named_character_keywords\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "warm_red_bias"
+    ],
+    "readability": {
+      "parts": [
+        {
+          "name": "head_neck_shoulder_eye_brow_nose_mouth_ear_hair_pedestal_blob",
+          "contrast": 0.1288,
+          "edge_density": 0.0044,
+          "separation": 0.0018,
+          "mean_luma": 0.3305,
+          "surround_luma": 0.3287,
+          "readable": true
+        }
+      ],
+      "measured_parts": 1,
+      "readable_parts": 1,
+      "unreadable_parts": []
+    },
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "render has no discernible silhouette/detail",
+      "score 79 < min 84",
+      "subject objects 1 < min 16",
+      "visible subject objects 1 < min 13",
+      "subject faces 512 < min 3000",
+      "subject modifiers 0 < min 3",
+      "smooth subject objects 0 < min 8",
+      "craft detail objects 0 < min 6",
+      "subject materials 1 < min 5",
+      "subject procedural materials 0 < min 1"
+    ]
   }
 }

@@ -93,6 +93,14 @@ OPERATION_SPECS: dict[str, dict] = {
          "collection": str, "hide_render": bool},
     ),
     "add_modifier": _spec({"target": str, "modifier": str}, {"params": dict}),
+    "reframe_camera": _spec(
+        {},
+        {"camera": str, "look_at": list, "pull_back": (int, float)},
+    ),
+    "adjust_world": _spec(
+        {},
+        {"color": list, "strength": (int, float), "strength_scale": (int, float)},
+    ),
     "create_procedural_texture": _spec(
         {"name": str},
         {

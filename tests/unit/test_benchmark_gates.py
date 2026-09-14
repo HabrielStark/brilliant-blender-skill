@@ -335,3 +335,51 @@ def test_readability_failures_max_unreadable_and_min_readable():
     assert _readability_failures(report, {"max_unreadable_subject_parts": 0})
     assert _readability_failures(report, {"min_readable_subject_parts": 2})
     assert not _readability_failures(report, {"max_unreadable_subject_parts": 5})
+
+
+def test_repair_ops_reframe_on_offscreen_failure():
+    from benchmarks.runners.run_benchmarks import _repair_ops_for
+
+    insp = {"objects": [
+        {"name": "a", "collection": "SUBJECT", "type": "MESH", "world_location": [0, 0, 1]},
+        {"name": "b", "collection": "SUBJECT", "type": "MESH", "world_location": [2, 0, 3]},
+        {"name": "env", "collection": "ENVIRONMENT", "type": "MESH", "world_location": [9, 9, 9]},
+    ]}
+    ops = _repair_ops_for(["offscreen subject objects 2 > max 0"], insp, 1)
+    assert ops == [{"op": "reframe_camera", "look_at": [1.0, 0.0, 2.0],
+                    "pull_back": 1.25}]
+    ops2 = _repair_ops_for(["offscreen subject objects 2 > max 0"], insp, 2)
+    assert ops2[0]["pull_back"] > 1.25
+
+
+def test_repair_ops_adjust_world_on_dark_tag():
+    from benchmarks.runners.run_benchmarks import _repair_ops_for
+
+    ops = _repair_ops_for(
+        ["forbidden visual style tags present: very_dark"], {"objects": []}, 1)
+    assert ops == [{"op": "adjust_world", "strength_scale": 1.8}]
+    ops = _repair_ops_for(
+        ["forbidden visual style tags present: very_bright"], {"objects": []}, 1)
+    assert ops == [{"op": "adjust_world", "strength_scale": 0.55}]
+
+
+def test_repair_ops_empty_for_nonrepairable_failures():
+    from benchmarks.runners.run_benchmarks import _repair_ops_for
+
+    insp = {"objects": [{"name": "a", "collection": "SUBJECT", "type": "MESH",
+                         "world_location": [0, 0, 0]}]}
+    assert _repair_ops_for(["subject faces 10 < min 2400"], insp, 1) == []
+    assert _repair_ops_for(
+        ["named part family 'x' mostly unreadable"], insp, 1) == []
+
+
+def test_is_repairable_classification():
+    from benchmarks.runners.run_benchmarks import _is_repairable
+
+    assert _is_repairable("offscreen subject objects 2 > max 0")
+    assert _is_repairable("subject coverage 0.9 > max 0.7")
+    assert _is_repairable("forbidden visual style tags present: very_dark")
+    assert not _is_repairable("subject faces 10 < min 2400")
+    assert not _is_repairable("named part family 'x' mostly unreadable")
+    # eval defects mentioning darkness are not style-tag repairs
+    assert not _is_repairable("forbidden eval defect present: very_dark shadows")

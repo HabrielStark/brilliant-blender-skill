@@ -722,6 +722,53 @@ def op_create_camera(p):
     return {"camera": name, "active": True, "preset": preset, "type": cam.type}
 
 
+def op_reframe_camera(p):
+    """Re-aim / pull back the active camera. Mechanical repair op used when
+    inspection reports offscreen subject objects."""
+    name = p.get("camera")
+    cam = bpyutil.get_object(name) if name else bpy.context.scene.camera
+    if cam is None or cam.type != "CAMERA":
+        return {"error": "no active camera"}
+    look = p.get("look_at")
+    if not look:
+        return {"error": "look_at required"}
+    look = Vector(look)
+    pull = float(p.get("pull_back", 1.0))
+    away = cam.location - look
+    if away.length < 1e-6:
+        return {"error": "camera already at look_at"}
+    new_loc = look + away * pull
+    cam.location = new_loc
+    d = look - new_loc
+    if d.length > 1e-6:
+        cam.rotation_euler = d.to_track_quat("-Z", "Y").to_euler()
+    return {"camera": cam.name, "location": [round(c, 4) for c in new_loc],
+            "look_at": list(look), "pull_back": pull}
+
+
+def op_adjust_world(p):
+    """Adjust world background color/strength (repair for very_dark /
+    very_bright previews without rebuilding the lighting rig)."""
+    w = bpy.context.scene.world
+    if w is None:
+        w = bpy.data.worlds.new("World")
+        bpy.context.scene.world = w
+    w.use_nodes = True
+    bg = w.node_tree.nodes.get("Background")
+    if bg is None:
+        return {"error": "world has no Background node"}
+    if p.get("color") is not None:
+        c = p["color"]
+        bg.inputs[0].default_value = tuple(c[:3]) + (1.0,)
+    if p.get("strength") is not None:
+        bg.inputs[1].default_value = float(p["strength"])
+    elif p.get("strength_scale") is not None:
+        bg.inputs[1].default_value = max(
+            0.0, bg.inputs[1].default_value * float(p["strength_scale"]))
+    return {"world": w.name, "strength": bg.inputs[1].default_value,
+            "color": list(bg.inputs[0].default_value)}
+
+
 # --------------------------- transforms / misc ----------------------------- #
 def op_set_object_transform(p):
     obj = bpyutil.get_object(p["target"])
@@ -2181,6 +2228,8 @@ BUILDERS = {
     "apply_post": op_apply_post,
     "create_rig": op_create_rig,
     "add_constraint": op_add_constraint,
+    "reframe_camera": op_reframe_camera,
+    "adjust_world": op_adjust_world,
 }
 
 

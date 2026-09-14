@@ -77,7 +77,15 @@ not acceptable evidence for production-grade reference fidelity.
 ## Modes
 
 - `skill_plus_tools` runs the task's structured skill recipe through Blender,
-  inspects, lints, scores, and validates web export when requested.
+  inspects, lints, scores, and validates web export when requested. If the
+  result fails a *mechanically repairable* check (subject/environment objects
+  offscreen, subject overcoverage, `very_dark`/`very_bright` style tags), the
+  runner applies bounded repair ops to the saved blend — `reframe_camera`
+  (re-aim at the subject centroid, escalating `pull_back`) and/or
+  `adjust_world` (strength scale) — then re-renders, re-inspects, re-exports,
+  and re-scores. Max 2 repair rounds; `iterations` and `repair_history` are
+  recorded in the result. Baseline and adversarial modes never repair — they
+  must keep failing honestly.
 - `baseline_no_skill` (`--baseline`) runs the task's naive recipe: bare
   primitives, no camera/lights/materials. It should fail for contrast.
 - `adversarial_slop_*` (`--baseline` when a task defines

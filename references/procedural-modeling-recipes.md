@@ -34,6 +34,19 @@ organic asymmetry; keep `strength` small on hero forms.
   `boolean: {eval_faces, non_manifold_edges}` and fails cleanly when the
   operand is missing, not a mesh, or the target itself.
 
+### Repair ops (mechanical fixes, no judgment needed)
+
+- `reframe_camera` `{camera?, look_at, pull_back}` — re-aim the active
+  camera at a point and scale its distance. Use when inspection reports
+  offscreen subject objects or overcoverage; escalate `pull_back`
+  (1.25 → 1.7) rather than nudging repeatedly. No-op on keyframed cameras.
+- `adjust_world` `{color?, strength?, strength_scale?}` — retune world
+  ambient when a preview tags `very_dark`/`very_bright` without rebuilding
+  the light rig.
+- The benchmark runner applies these automatically (max 2 rounds) when a
+  skill-mode result fails a repairable check, then re-validates the whole
+  scene — repairs that break other checks still fail.
+
 ### Boolean cutter workflow (recesses, ports, slots)
 
 For a real inset (USB port, vent slot, button well) instead of a surface

@@ -26,6 +26,7 @@ ALLOWED_OPS = (
     "create_faceted_hero_body", "create_energy_burst_streaks",
     "create_animation", "create_vfx", "apply_post",
     "create_rig", "add_constraint", "create_procedural_texture",
+    "reframe_camera", "adjust_world",
 )
 
 # These limits are deliberately independent of Blender and are checked before a
