@@ -265,7 +265,10 @@ def inspect_scene():
         })
 
     lights = [{"name": o.name, "type": o.data.type, "energy": o.data.energy,
-               "color": list(o.data.color)} for o in scene.objects if o.type == "LIGHT"]
+               "color": list(o.data.color),
+               "location": [round(v, 4) for v in o.location],
+               "rotation": [round(v, 4) for v in o.rotation_euler]}
+              for o in scene.objects if o.type == "LIGHT"]
 
     active_camera = None
     if cam:

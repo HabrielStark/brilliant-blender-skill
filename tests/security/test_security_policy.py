@@ -1,5 +1,7 @@
 """Security tests: raw-python gating, network, subprocess arrays, code scan (SRS 18)."""
 import json
+import subprocess
+import sys
 
 import pytest
 
@@ -45,6 +47,25 @@ def test_shell_string_rejected():
 def test_run_checked_forbids_shell():
     with pytest.raises(SecurityError):
         run_checked(["echo", "x"], timeout=5, shell=True)  # nosec B604
+
+
+def test_run_checked_hides_child_console_window(monkeypatch):
+    captured = {}
+
+    def fake_run(args, **kwargs):
+        captured.update(kwargs)
+        return subprocess.CompletedProcess(args, 0)
+
+    monkeypatch.setattr(subprocess, "run", fake_run)
+    run_checked(["anything"], timeout=5)
+    if sys.platform == "win32":
+        assert captured["creationflags"] & subprocess.CREATE_NO_WINDOW
+        startupinfo = captured["startupinfo"]
+        assert startupinfo.dwFlags & subprocess.STARTF_USESHOWWINDOW
+        assert startupinfo.wShowWindow == subprocess.SW_HIDE
+    else:
+        assert "startupinfo" not in captured
+        assert "creationflags" not in captured
 
 
 def test_scan_flags_dangerous_code():

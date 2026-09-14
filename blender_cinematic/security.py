@@ -11,6 +11,7 @@ from __future__ import annotations
 import ast
 import shlex
 import subprocess  # nosec B404
+import sys
 from dataclasses import dataclass
 
 from .results import Issue, error
@@ -71,11 +72,26 @@ def as_arg_list(args) -> list[str]:
     return out
 
 
+def _suppress_child_console_window(kwargs: dict) -> None:
+    """On Windows, keep spawned console apps (blender.exe, ffmpeg, ...) from
+    allocating a visible console window when the parent has none or a hidden
+    one — otherwise every run flashes a terminal on the user's desktop."""
+    if sys.platform != "win32":
+        return
+    if kwargs.get("startupinfo") is None:
+        startupinfo = subprocess.STARTUPINFO()
+        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        startupinfo.wShowWindow = subprocess.SW_HIDE
+        kwargs["startupinfo"] = startupinfo
+    kwargs["creationflags"] = kwargs.get("creationflags", 0) | subprocess.CREATE_NO_WINDOW
+
+
 def run_checked(args, timeout: float, **kwargs) -> subprocess.CompletedProcess:
     """subprocess.run wrapper that forbids shell=True and requires a timeout."""
     if kwargs.pop("shell", False):
         raise SecurityError("shell=True is forbidden")
     arglist = as_arg_list(args)
+    _suppress_child_console_window(kwargs)
     return subprocess.run(  # nosec B603
         arglist,
         timeout=timeout,

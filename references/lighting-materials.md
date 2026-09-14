@@ -32,6 +32,19 @@ black.
 - **Rim** `AREA`/`SPOT`, behind/above, coloured for separation (cold blue reads premium).
 - **World** low strength (0.2–0.5) so shadows are not pure black.
 
+### Aiming lights
+
+`position_role` only *places* a light — an AREA light at `rim` position still
+points straight down unless you aim it. Every light accepts:
+
+- `look_at: [x, y, z]` — rotate so the light's -Z axis points at that coordinate.
+- `target: "<object name>"` — aim at the object's location (resolved at build
+  time; a missing target leaves the light unrotated).
+
+Use `look_at`/`target` for any light that must strike a surface: grazing side
+lights, backdrop pools, fill cards. Role-only lights are fine for broad soft
+coverage where direction barely matters.
+
 ## Material presets (`MaterialSchema.preset`)
 
 `matte_plastic`, `glossy_plastic`, `brushed_metal`, `painted_metal`, `glass_clear`,

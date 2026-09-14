@@ -689,6 +689,16 @@ def _make_light(spec):
     obj = bpy.data.objects.new(name, ld)
     pos = spec.get("location") or _ROLE_POS.get(spec.get("position_role", ""), (3, -3, 4))
     obj.location = Vector(pos)
+    look = spec.get("look_at")
+    tname = spec.get("target")
+    if not look and tname:
+        tobj = bpyutil.get_object(tname)
+        if tobj is not None:
+            look = list(tobj.location)
+    if look:
+        direction = Vector(look) - obj.location
+        if direction.length > 1e-6:
+            obj.rotation_euler = direction.to_track_quat("-Z", "Y").to_euler()
     bpyutil.link_to_collection(obj, "LIGHTS")
     return obj
 
@@ -736,6 +746,54 @@ def op_create_camera(p):
         direction = (target_co - obj.location)
         if direction.length > 1e-6:
             obj.rotation_euler = direction.to_track_quat("-Z", "Y").to_euler()
+    want_cov = (schema.get("composition") or {}).get("subject_screen_coverage")
+    if want_cov and tobj is not None and cam.type != "ORTHO":
+        from bpy_extras.object_utils import world_to_camera_view  # type: ignore
+        bpy.context.scene.camera = obj
+        bpy.context.view_layer.update()
+        # "subject" coverage is ambiguous between the focus target and the
+        # visible subject arrangement. Measure both and apply whichever needs
+        # the smaller distance change — the declaration corrects framing
+        # drift rather than overriding the authored composition. Scatter
+        # objects already outside the authored frame count as context, not
+        # subject, or a single distant pebble would stretch the union wildly.
+        subjects = [o for o in bpy.context.scene.objects
+                    if any(c.name == "SUBJECT" for c in o.users_collection)
+                    and hasattr(o, "bound_box") and o.type in
+                    {"MESH", "CURVE", "SURFACE", "FONT", "VOLUME"}]
+
+        def _extent(objs):
+            xs, ys = [], []
+            for so in objs:
+                for corner in so.bound_box:
+                    co = world_to_camera_view(
+                        bpy.context.scene, obj, so.matrix_world @ Vector(corner))
+                    xs.append(co.x); ys.append(co.y)
+            if not xs:
+                return 0.0
+            return max(max(xs) - min(xs), max(ys) - min(ys))
+
+        def _in_frame(so):
+            xs, ys = [], []
+            for corner in so.bound_box:
+                co = world_to_camera_view(
+                    bpy.context.scene, obj, so.matrix_world @ Vector(corner))
+                xs.append(co.x); ys.append(co.y)
+            return (max(xs) > -0.1 and min(xs) < 1.1
+                    and max(ys) > -0.1 and min(ys) < 1.1)
+
+        ext_target = _extent([tobj])
+        visible = [o for o in subjects if _in_frame(o)]
+        ext_union = _extent(visible) if visible else ext_target
+        anchor = Vector(look) if look else tobj.location
+        cands = [e / float(want_cov) for e in (ext_target, ext_union) if e > 1e-6]
+        if cands:
+            scale = min(cands, key=lambda s: abs(s - 1.0))
+            # Coverage is a corrective contract, not an override: a declaration
+            # that would need to move the camera more than ±25% disagrees with
+            # the explicitly authored location, and the location wins.
+            if 0.75 <= scale <= 1.25:
+                obj.location = anchor + (obj.location - anchor) * scale
     if lens.get("dof") and tobj:
         cam.dof.use_dof = True
         cam.dof.focus_object = tobj

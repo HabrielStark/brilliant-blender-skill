@@ -831,3 +831,72 @@ def test_add_modifier_boolean_missing_cutter_errors(blender_exe, tmp_path):
     ops = res["operations"]
     err = [o for o in ops if "operand not found" in str(o.get("error", ""))]
     assert err, ops
+
+
+def test_light_look_at_and_target_aim_the_light(blender_exe, tmp_path):
+    """Lights declared with look_at / target must actually rotate toward the
+    point/object — position_role alone left every AREA light pointing down -Z."""
+    _, base = task_workspace(tmp_path, "light_aim")
+    blend = base / "final" / "scene.blend"
+    recipe = {"operations": [
+        {"op": "ensure_standard_collections"},
+        {"op": "create_mesh_primitive", "type": "cube", "name": "aim_cube",
+         "size": 1.0, "location": [0, 0, 1.0], "collection": "SUBJECT"},
+        {"op": "create_lighting_rig", "schema": {"lighting_rig": "aim_test",
+            "lights": [
+                # on -Y axis aiming at origin: -Z must track to +Y -> rot (pi/2,0,0)
+                {"name": "aimed_look_at", "type": "AREA", "power": 100,
+                 "location": [0, -5, 0], "look_at": [0, 0, 0]},
+                {"name": "aimed_target", "type": "AREA", "power": 100,
+                 "location": [0, -5, 0], "target": "aim_cube"},
+                {"name": "unaimed", "type": "AREA", "power": 100,
+                 "location": [0, -5, 0]},
+            ]}},
+        {"op": "create_camera", "schema": {"camera_name": "camera_aim",
+            "target": "aim_cube", "location": [0, -6, 1.5]}},
+        {"op": "set_scene_metadata", "data": {"final_camera": "camera_aim"}},
+    ]}
+    res = runner.run_job(runner.build_job(
+        "full_pipeline", base, blend, budget=PREVIEW_BUDGET, recipe=recipe),
+        blender_exe, 300)
+    assert res["ok"], res
+    insp = runner.run_job(runner.build_job("inspect", base, blend),
+                          blender_exe, 120)["inspection"]
+    lights = {l["name"]: l for l in insp["lights"]}
+    aimed = lights["aimed_look_at"]["rotation"]
+    assert aimed[0] == pytest.approx(math.pi / 2, abs=0.02)
+    assert abs(aimed[1]) < 0.02 and abs(aimed[2]) < 0.02
+    # target= resolves the object's location — cube sits 1m above origin so
+    # the -Z axis pitches past horizontal: rot_x = atan2(dy, -dz).
+    tgt = lights["aimed_target"]["rotation"]
+    assert tgt[0] == pytest.approx(math.atan2(5.0, -1.0), abs=0.02)
+    # unaimed light keeps identity rotation (points straight down -Z)
+    un = lights["unaimed"]["rotation"]
+    assert all(abs(v) < 1e-4 for v in un), un
+
+
+def test_subject_screen_coverage_drives_camera_distance(blender_exe, tmp_path):
+    """composition.subject_screen_coverage is a *linear* extent contract: the
+    target's max screen-bbox side must land at the declared fraction."""
+    _, base = task_workspace(tmp_path, "cam_cov")
+    blend = base / "final" / "scene.blend"
+    recipe = {"operations": [
+        {"op": "ensure_standard_collections"},
+        {"op": "create_mesh_primitive", "type": "cube", "name": "cov_cube",
+         "size": 2.0, "location": [0, 0, 1.0], "collection": "SUBJECT"},
+        {"op": "create_camera", "schema": {"camera_name": "camera_cov",
+            "target": "cov_cube", "location": [0, -12, 1.0],
+            "look_at": [0, 0, 1.0],
+            "composition": {"subject_screen_coverage": 0.55}}},
+        {"op": "set_scene_metadata", "data": {"final_camera": "camera_cov"}},
+    ]}
+    res = runner.run_job(runner.build_job(
+        "full_pipeline", base, blend, budget=PREVIEW_BUDGET, recipe=recipe),
+        blender_exe, 300)
+    assert res["ok"], res
+    insp = runner.run_job(runner.build_job("inspect", base, blend),
+                          blender_exe, 120)["inspection"]
+    cube = next(o for o in insp["objects"] if o["name"] == "cov_cube")
+    bb = cube["screen_bbox"]
+    extent = max(bb[2] - bb[0], bb[3] - bb[1])
+    assert extent == pytest.approx(0.55, abs=0.06)

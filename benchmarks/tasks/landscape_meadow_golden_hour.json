@@ -27,7 +27,7 @@
   "recipe": {"operations": [
     {"op": "ensure_standard_collections"},
     {"op": "create_mesh_primitive", "type": "plane", "name": "meadow_ground_plane", "size": 26, "collection": "ENVIRONMENT"},
-    {"op": "create_mesh_primitive", "type": "plane", "name": "horizon_sky_glow_band", "size": 18, "location": [0,7.5,3.4], "rotation": [90,0,0], "collection": "ENVIRONMENT"},
+    {"op": "create_mesh_primitive", "type": "plane", "name": "horizon_sky_glow_band", "size": 34, "location": [0,7.5,3.4], "rotation": [90,0,0], "collection": "ENVIRONMENT"},
     {"op": "apply_transform", "target": "horizon_sky_glow_band", "rotation": true, "scale": true},
     {"op": "create_mesh_primitive", "type": "ico_sphere", "name": "horizon_distant_hill_left", "size": 5.5, "location": [-4.5,6.2,0.2], "scale": [1.3,0.55,0.32], "collection": "ENVIRONMENT"},
     {"op": "create_mesh_primitive", "type": "ico_sphere", "name": "horizon_distant_hill_right", "size": 6.5, "location": [4.8,6.8,0.1], "scale": [1.2,0.5,0.26], "collection": "ENVIRONMENT"},

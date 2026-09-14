@@ -28,6 +28,15 @@ The camera is the biggest "looks expensive vs looks cheap" lever. Never just put
 
 - `subject_screen_coverage` 0.4–0.7 for product heroes; the linter warns below
   0.05 (too tiny) and above 0.85 for web (mobile crop risk).
+- Coverage is **live**: `create_camera` fits the camera distance so the union of
+  all SUBJECT-collection objects spans the declared fraction of frame as a
+  *linear* extent (longest screen-bbox side), measured after aiming. A single
+  hero object and a multi-part arrangement are both "the subject" — declare the
+  value for the arrangement you want in frame, and remember scattered detail
+  objects widen the union.
+- Inspector `screen_coverage` on an object is its projected bbox *area*
+  fraction — a different measure (a linear 0.6 reads as ~0.17 area for a flat
+  slab). Don't compare the two numbers directly.
 - `safe_margin` ≥ 0.08; keep the subject off the very edge.
 - Named hero anatomy is part of the frame contract. Product caps, labels, logos,
   plinth/base pieces, lenses, dials, straps, screens, handles, nozzles/necks and

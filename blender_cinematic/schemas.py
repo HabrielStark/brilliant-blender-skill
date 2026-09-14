@@ -440,6 +440,8 @@ class Light(_Strict):
     color: Color = [1.0, 1.0, 1.0]
     position_role: str = ""
     location: Optional[Vec3] = None
+    look_at: Optional[Vec3] = None
+    target: Optional[str] = None
 
     _v_color = field_validator("color")(_check_color)
 
