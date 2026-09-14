@@ -1,0 +1,20 @@
+{
+  "task_id": "bench_neon_sign",
+  "brief": "moody neon typography signage hero shot",
+  "output_mode": "still",
+  "style": {
+    "mood": "moody cinematic neon",
+    "palette": [
+      "charcoal",
+      "hot pink",
+      "warm amber"
+    ]
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "png"
+    ],
+    "web_runtime": "three"
+  }
+}

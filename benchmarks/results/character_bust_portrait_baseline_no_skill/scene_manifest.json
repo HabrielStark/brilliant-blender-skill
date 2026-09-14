@@ -1,0 +1,20 @@
+{
+  "task_id": "bench_bust",
+  "brief": "stylized character bust portrait hero",
+  "output_mode": "still",
+  "style": {
+    "mood": "soft portrait studio",
+    "palette": [
+      "warm skin",
+      "dark hair",
+      "charcoal backdrop"
+    ]
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "png"
+    ],
+    "web_runtime": "three"
+  }
+}

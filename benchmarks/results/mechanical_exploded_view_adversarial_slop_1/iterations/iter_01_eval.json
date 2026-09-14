@@ -1,0 +1,25 @@
+{
+  "iteration": 1,
+  "hard_fail": true,
+  "passed": false,
+  "scores": {
+    "composition": 20,
+    "lighting": 12,
+    "materials": 8,
+    "geometry_detail": 12,
+    "camera": 10,
+    "technical": 10,
+    "performance": 5,
+    "reference_fidelity": 9,
+    "total": 79
+  },
+  "defects": [
+    "render has no discernible silhouette/detail",
+    "render is too flat for visual acceptance"
+  ],
+  "next_actions": [],
+  "hard_fail_reasons": [
+    "render has no discernible silhouette/detail",
+    "render is too flat for visual acceptance"
+  ]
+}

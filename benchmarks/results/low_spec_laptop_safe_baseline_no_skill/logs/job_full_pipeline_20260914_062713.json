@@ -1,0 +1,70 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\low_spec_laptop_safe_baseline_no_skill",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\low_spec_laptop_safe_baseline_no_skill\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_low_spec_safe",
+    "brief": "cinematic sci-fi scene that must stay within weak hardware budget",
+    "output_mode": "still",
+    "quality_profile": "safe_laptop",
+    "style": {
+      "mood": "cinematic"
+    },
+    "target": {
+      "render_resolution": [
+        3840,
+        2160
+      ],
+      "final_format": [
+        "blend",
+        "png"
+      ]
+    },
+    "constraints": {
+      "safe_hardware_budget": true
+    }
+  },
+  "budget": {
+    "quality_profile": "safe_laptop",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "CPU",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 1024,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile safe_laptop",
+      "available RAM 15.0/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "Cube",
+        "size": 2
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\low_spec_laptop_safe_baseline_no_skill\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\low_spec_laptop_safe_baseline_no_skill\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\low_spec_laptop_safe_baseline_no_skill\\logs\\result_full_pipeline_20260914_062713.json"
+}

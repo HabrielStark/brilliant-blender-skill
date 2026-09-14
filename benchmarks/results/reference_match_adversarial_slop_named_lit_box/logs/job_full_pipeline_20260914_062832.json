@@ -1,0 +1,253 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\reference_match_adversarial_slop_named_lit_box",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\reference_match_adversarial_slop_named_lit_box\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_reference_match",
+    "brief": "match dark premium product with blue rim reference",
+    "output_mode": "reference_match",
+    "style": {
+      "mood": "premium dark",
+      "palette": [
+        "black",
+        "cold blue",
+        "white highlights"
+      ]
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ]
+    },
+    "constraints": {}
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 15.1/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "plane",
+        "name": "reflective_surface_reference_black",
+        "size": 12,
+        "collection": "ENVIRONMENT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "product_body_reference_named_box",
+        "size": 2.0,
+        "location": [
+          0,
+          0,
+          0.9
+        ],
+        "scale": [
+          1.0,
+          0.55,
+          0.5
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "product_body_reference_named_box",
+        "scale": true
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "inset_rim_highlight_groove_lens_sensor_bevel_fake",
+        "size": 1,
+        "location": [
+          0,
+          -0.62,
+          1.0
+        ],
+        "scale": [
+          0.85,
+          0.03,
+          0.2
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "inset_rim_highlight_groove_lens_sensor_bevel_fake",
+        "scale": true
+      },
+      {
+        "op": "add_bevel_modifier",
+        "target": "product_body_reference_named_box",
+        "width": 0.02,
+        "segments": 1
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "product_black_metal",
+          "preset": "brushed_metal",
+          "target_objects": [
+            "product_body_reference_named_box"
+          ],
+          "pbr": {
+            "base_color": [
+              0.02,
+              0.025,
+              0.035,
+              1
+            ],
+            "metallic": 1.0,
+            "roughness": 0.4
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "cold_blue_reference_edge",
+          "preset": "emissive_neon",
+          "target_objects": [
+            "inset_rim_highlight_groove_lens_sensor_bevel_fake"
+          ],
+          "pbr": {
+            "base_color": [
+              0.2,
+              0.45,
+              1.0,
+              1
+            ],
+            "emission_color": [
+              0.2,
+              0.45,
+              1.0,
+              1
+            ],
+            "emission_strength": 1.0
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "surface_reflective",
+          "preset": "glossy_plastic",
+          "target_objects": [
+            "reflective_surface_reference_black"
+          ],
+          "pbr": {
+            "base_color": [
+              0.004,
+              0.005,
+              0.009,
+              1
+            ],
+            "roughness": 0.14
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "adversarial_lit_slop",
+          "lights": [
+            {
+              "name": "key_soft",
+              "type": "AREA",
+              "power": 500,
+              "size": 5,
+              "position_role": "front_left_high"
+            },
+            {
+              "name": "rim_blue",
+              "type": "AREA",
+              "power": 260,
+              "size": 2,
+              "color": [
+                0.28,
+                0.5,
+                1.0
+              ],
+              "position_role": "rim"
+            }
+          ],
+          "world": {
+            "color": [
+              0.006,
+              0.008,
+              0.014
+            ],
+            "strength": 0.28
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "camera_adversarial_reference",
+          "target": "product_body_reference_named_box",
+          "look_at": [
+            0,
+            -0.1,
+            0.9
+          ],
+          "location": [
+            4,
+            -5.5,
+            2.0
+          ],
+          "composition": {
+            "subject_screen_coverage": 0.84,
+            "safe_margin": 0.06
+          },
+          "lens": {
+            "focal_length_mm": 58,
+            "dof": true,
+            "focus_target": "product_body_reference_named_box"
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "camera_adversarial_reference"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\reference_match_adversarial_slop_named_lit_box\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\reference_match_adversarial_slop_named_lit_box\\logs\\result_full_pipeline_20260914_062832.json"
+}

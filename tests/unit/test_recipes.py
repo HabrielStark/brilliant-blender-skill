@@ -242,6 +242,18 @@ def test_organic_surface_details_are_allowlisted_and_budgeted():
     assert est["modifiers"] == 20
 
 
+def test_organic_surface_drape_shape_accepts_fold_params():
+    r = {"operations": [
+        {"op": "create_organic_surface_details", "name_prefix": "cloth_drape",
+         "pattern": "linear", "count": 5, "start": [0, 0, 2.0], "step": [0.5, 0, 0],
+         "length": 1.3, "width": 0.5, "shape": "drape", "folds": 3,
+         "fold_depth": 0.09, "rotation": [-90, 0, 0], "collection": "SUBJECT"}
+    ]}
+    assert validate_recipe(r).passed
+    est = estimate_complexity(r)
+    assert est["objects"] == 5
+
+
 def test_organic_surface_count_guard():
     r = {"operations": [
         {"op": "create_organic_surface_details", "name_prefix": "petal_soft", "count": 10_000}

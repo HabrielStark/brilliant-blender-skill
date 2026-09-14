@@ -1,0 +1,153 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\fabric_drape_study_adversarial_slop_flat_sheet_named_cloth_keywords",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\fabric_drape_study_adversarial_slop_flat_sheet_named_cloth_keywords\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_drape",
+    "brief": "soft studio fabric drape hero",
+    "output_mode": "still",
+    "style": {
+      "mood": "soft studio textile study",
+      "palette": [
+        "warm linen",
+        "charcoal steel",
+        "pale grey studio"
+      ]
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ],
+      "web_runtime": "three"
+    }
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 14.8/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "plane",
+        "name": "ground_studio_sweep",
+        "size": 20,
+        "collection": "ENVIRONMENT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "plane",
+        "name": "cloth_drape_rod_post_pin_hem_flat",
+        "size": 2.4,
+        "location": [
+          0,
+          0,
+          1.4
+        ],
+        "rotation": [
+          90,
+          0,
+          0
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "flat_linen",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "cloth_drape_rod_post_pin_hem_flat",
+            "ground_studio_sweep"
+          ],
+          "pbr": {
+            "base_color": [
+              0.7,
+              0.62,
+              0.5,
+              1
+            ],
+            "roughness": 0.9
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "flat",
+          "lights": [
+            {
+              "name": "key",
+              "type": "AREA",
+              "power": 400,
+              "size": 5,
+              "position_role": "front_left_high"
+            }
+          ],
+          "world": {
+            "color": [
+              0.2,
+              0.2,
+              0.2
+            ],
+            "strength": 0.5
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "cam",
+          "target": "cloth_drape_rod_post_pin_hem_flat",
+          "location": [
+            3,
+            -4.5,
+            2.0
+          ],
+          "lens": {
+            "focal_length_mm": 55
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "cam"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\fabric_drape_study_adversarial_slop_flat_sheet_named_cloth_keywords\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\fabric_drape_study_adversarial_slop_flat_sheet_named_cloth_keywords\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\fabric_drape_study_adversarial_slop_flat_sheet_named_cloth_keywords\\logs\\result_full_pipeline_20260914_062634.json"
+}

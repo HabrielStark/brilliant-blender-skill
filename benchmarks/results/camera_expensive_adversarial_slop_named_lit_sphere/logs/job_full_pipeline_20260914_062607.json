@@ -1,0 +1,222 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\camera_expensive_adversarial_slop_named_lit_sphere",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\camera_expensive_adversarial_slop_named_lit_sphere\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_camera_expensive",
+    "brief": "expensive cinematic look for a single hero object",
+    "output_mode": "still",
+    "style": {
+      "mood": "premium cinematic sharp high-contrast"
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ]
+    },
+    "constraints": {}
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 14.7/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "plane",
+        "name": "stage",
+        "size": 18,
+        "collection": "ENVIRONMENT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "low_black_plinth",
+        "size": 2.6,
+        "location": [
+          0,
+          0,
+          0.62
+        ],
+        "scale": [
+          1,
+          1,
+          0.22
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "low_black_plinth",
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "low_black_plinth",
+        "smooth": true
+      },
+      {
+        "op": "add_bevel_modifier",
+        "target": "low_black_plinth",
+        "width": 0.035,
+        "segments": 3
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "ico_sphere",
+        "name": "hero_faceted_accent_ring_highlight_keyword_sphere",
+        "size": 2,
+        "location": [
+          0,
+          0,
+          1.3
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "hero_faceted_accent_ring_highlight_keyword_sphere",
+        "smooth": true
+      },
+      {
+        "op": "add_bevel_modifier",
+        "target": "hero_faceted_accent_ring_highlight_keyword_sphere",
+        "width": 0.02,
+        "segments": 3
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "hero_titanium_faceted",
+          "preset": "brushed_metal",
+          "target_objects": [
+            "hero_faceted_accent_ring_highlight_keyword_sphere"
+          ],
+          "pbr": {
+            "base_color": [
+              0.034,
+              0.038,
+              0.048,
+              1
+            ],
+            "metallic": 1.0,
+            "roughness": 0.24
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "stage_dark",
+          "preset": "glossy_plastic",
+          "target_objects": [
+            "stage"
+          ],
+          "pbr": {
+            "base_color": [
+              0.006,
+              0.006,
+              0.009,
+              1
+            ],
+            "roughness": 0.16
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "adversarial_lit_sphere",
+          "lights": [
+            {
+              "name": "key_soft",
+              "type": "AREA",
+              "power": 600,
+              "size": 6,
+              "position_role": "front_left_high"
+            },
+            {
+              "name": "rim_cool",
+              "type": "AREA",
+              "power": 300,
+              "size": 2,
+              "color": [
+                0.4,
+                0.55,
+                1.0
+              ],
+              "position_role": "rim"
+            }
+          ],
+          "world": {
+            "color": [
+              0.008,
+              0.01,
+              0.015
+            ],
+            "strength": 0.3
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "camera_adversarial_sphere",
+          "preset": "hero_low_angle",
+          "target": "hero_faceted_accent_ring_highlight_keyword_sphere",
+          "location": [
+            5.2,
+            -7.0,
+            2.5
+          ],
+          "lens": {
+            "focal_length_mm": 62,
+            "dof": true,
+            "focus_target": "hero_faceted_accent_ring_highlight_keyword_sphere",
+            "aperture_fstop": 2.2
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "camera_adversarial_sphere"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\camera_expensive_adversarial_slop_named_lit_sphere\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\camera_expensive_adversarial_slop_named_lit_sphere\\logs\\result_full_pipeline_20260914_062607.json"
+}

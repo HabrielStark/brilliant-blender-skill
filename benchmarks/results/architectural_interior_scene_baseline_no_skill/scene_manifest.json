@@ -1,0 +1,15 @@
+{
+  "task_id": "bench_architectural_interior",
+  "brief": "tasteful interior environment with furniture and decor",
+  "output_mode": "still",
+  "style": {
+    "mood": "quiet architectural editorial"
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "png"
+    ]
+  },
+  "constraints": {}
+}

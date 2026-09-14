@@ -1,0 +1,27 @@
+{
+  "iteration": 1,
+  "hard_fail": true,
+  "passed": false,
+  "scores": {
+    "composition": 20,
+    "lighting": 10,
+    "materials": 15,
+    "geometry_detail": 13,
+    "camera": 10,
+    "technical": 8,
+    "performance": 5,
+    "reference_fidelity": 9,
+    "total": 79
+  },
+  "defects": [
+    "dark render lacks readable subject detail",
+    "important object has no material: low_black_plinth"
+  ],
+  "next_actions": [
+    "assign a material to the key object"
+  ],
+  "hard_fail_reasons": [
+    "dark render lacks readable subject detail",
+    "important object has no material: low_black_plinth"
+  ]
+}

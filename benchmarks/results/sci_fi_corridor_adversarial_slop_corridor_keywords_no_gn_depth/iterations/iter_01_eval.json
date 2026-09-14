@@ -1,0 +1,28 @@
+{
+  "iteration": 1,
+  "hard_fail": true,
+  "passed": false,
+  "scores": {
+    "composition": 17,
+    "lighting": 10,
+    "materials": 12,
+    "geometry_detail": 14,
+    "camera": 10,
+    "technical": 10,
+    "performance": 5,
+    "reference_fidelity": 9,
+    "total": 79
+  },
+  "defects": [
+    "render has no discernible silhouette/detail",
+    "dark render lacks readable subject detail",
+    "subject coverage only 4%; too small"
+  ],
+  "next_actions": [
+    "move the camera closer or raise focal length to fill the frame"
+  ],
+  "hard_fail_reasons": [
+    "render has no discernible silhouette/detail",
+    "dark render lacks readable subject detail"
+  ]
+}

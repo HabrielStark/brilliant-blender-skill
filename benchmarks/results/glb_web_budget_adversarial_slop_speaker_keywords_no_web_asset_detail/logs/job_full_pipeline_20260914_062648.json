@@ -1,0 +1,160 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_glb_budget",
+    "brief": "compact web-ready detailed product GLB under size budget",
+    "output_mode": "web_asset",
+    "style": {
+      "mood": "clean premium product"
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "glb"
+      ],
+      "web_runtime": "react-three-fiber"
+    },
+    "constraints": {
+      "max_glb_mb": 5
+    }
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 14.8/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "speaker_grille_button_port_accent_feet_handle_radiator_logo_plain",
+        "size": 1.7,
+        "location": [
+          0,
+          0,
+          1.1
+        ],
+        "scale": [
+          0.9,
+          0.9,
+          0.68
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "speaker_grille_button_port_accent_feet_handle_radiator_logo_plain",
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "speaker_grille_button_port_accent_feet_handle_radiator_logo_plain",
+        "smooth": true
+      },
+      {
+        "op": "add_bevel_modifier",
+        "target": "speaker_grille_button_port_accent_feet_handle_radiator_logo_plain",
+        "width": 0.04,
+        "segments": 2
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "plain_speaker_body",
+          "preset": "glossy_plastic",
+          "target_objects": [
+            "speaker_grille_button_port_accent_feet_handle_radiator_logo_plain"
+          ],
+          "pbr": {
+            "base_color": [
+              0.28,
+              0.26,
+              0.22,
+              1
+            ],
+            "roughness": 0.28
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "flat_web_asset_light",
+          "lights": [
+            {
+              "name": "key_web_soft",
+              "type": "AREA",
+              "power": 500,
+              "size": 5,
+              "position_role": "front_left_high"
+            }
+          ],
+          "world": {
+            "color": [
+              0.15,
+              0.15,
+              0.14
+            ],
+            "strength": 0.55
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "camera_speaker_keyword",
+          "target": "speaker_grille_button_port_accent_feet_handle_radiator_logo_plain",
+          "location": [
+            3.0,
+            -4.3,
+            2.0
+          ],
+          "lens": {
+            "focal_length_mm": 56
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "camera_speaker_keyword"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\iterations\\iter_01_inspect.json",
+    "glb": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\final\\export_final.glb"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\glb_web_budget_adversarial_slop_speaker_keywords_no_web_asset_detail\\logs\\result_full_pipeline_20260914_062648.json"
+}

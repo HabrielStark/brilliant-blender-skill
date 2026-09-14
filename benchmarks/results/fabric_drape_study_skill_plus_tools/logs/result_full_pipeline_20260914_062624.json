@@ -1,0 +1,2019 @@
+{
+  "ok": true,
+  "action": "full_pipeline",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\fabric_drape_study_skill_plus_tools\\final\\scene.blend",
+  "collections": [
+    "CAMERAS",
+    "LIGHTS",
+    "SUBJECT",
+    "ENVIRONMENT",
+    "FX",
+    "HELPERS",
+    "EXPORT"
+  ],
+  "operations": [
+    {
+      "op": "ensure_standard_collections",
+      "collections": [
+        "CAMERAS",
+        "LIGHTS",
+        "SUBJECT",
+        "ENVIRONMENT",
+        "FX",
+        "HELPERS",
+        "EXPORT"
+      ]
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "ground_studio_sweep",
+      "faces": 1
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "backdrop_wall_soft",
+      "faces": 1
+    },
+    {
+      "op": "apply_transform",
+      "applied": "backdrop_wall_soft",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "rail_post_left",
+      "faces": 34
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "rail_post_right",
+      "faces": 34
+    },
+    {
+      "op": "apply_transform",
+      "applied": "rail_post_left",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "rail_post_right",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "rod_crossbar_steel",
+      "faces": 34
+    },
+    {
+      "op": "apply_transform",
+      "applied": "rod_crossbar_steel",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "rail_foot_left",
+      "faces": 80
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "rail_foot_right",
+      "faces": 80
+    },
+    {
+      "op": "apply_transform",
+      "applied": "rail_foot_left",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "rail_foot_right",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "rail_post_left"
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "rail_post_right"
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "rod_crossbar_steel"
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "rail_foot_left"
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "rail_foot_right"
+    },
+    {
+      "op": "create_organic_surface_details",
+      "organic_surfaces": [
+        "cloth_drape_front_01",
+        "cloth_drape_front_02",
+        "cloth_drape_front_03",
+        "cloth_drape_front_04",
+        "cloth_drape_front_05"
+      ],
+      "count": 5
+    },
+    {
+      "op": "create_organic_surface_details",
+      "organic_surfaces": [
+        "cloth_drape_back_01",
+        "cloth_drape_back_02",
+        "cloth_drape_back_03",
+        "cloth_drape_back_04"
+      ],
+      "count": 4
+    },
+    {
+      "op": "create_organic_surface_details",
+      "organic_surfaces": [
+        "cloth_overfold_top_01",
+        "cloth_overfold_top_02",
+        "cloth_overfold_top_03"
+      ],
+      "count": 3
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "pin_wood_clip_01",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "pin_wood_clip_02",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "pin_wood_clip_03",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "pin_wood_clip_04",
+      "faces": 6
+    },
+    {
+      "op": "apply_transform",
+      "applied": "pin_wood_clip_01",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "pin_wood_clip_02",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "pin_wood_clip_03",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "pin_wood_clip_04",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "create_curve_tube",
+      "created": "hem_cord_front_edge",
+      "type": "CURVE",
+      "points": 9
+    },
+    {
+      "op": "create_material",
+      "material": "linen_front_warm",
+      "assigned_to": [
+        "cloth_drape_front_01",
+        "cloth_drape_front_02",
+        "cloth_drape_front_03",
+        "cloth_drape_front_04",
+        "cloth_drape_front_05",
+        "cloth_overfold_top_01",
+        "cloth_overfold_top_02",
+        "cloth_overfold_top_03"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "linen_back_shadow",
+      "assigned_to": [
+        "cloth_drape_back_01",
+        "cloth_drape_back_02",
+        "cloth_drape_back_03",
+        "cloth_drape_back_04"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "steel_charcoal_rail",
+      "assigned_to": [
+        "rail_post_left",
+        "rail_post_right",
+        "rod_crossbar_steel",
+        "rail_foot_left",
+        "rail_foot_right"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "pin_wood_natural",
+      "assigned_to": [
+        "pin_wood_clip_01",
+        "pin_wood_clip_02",
+        "pin_wood_clip_03",
+        "pin_wood_clip_04"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "hem_cord_linen_dark",
+      "assigned_to": [
+        "hem_cord_front_edge"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "studio_backdrop_pale",
+      "assigned_to": [
+        "ground_studio_sweep",
+        "backdrop_wall_soft"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_lighting_rig",
+      "rig": "soft_studio",
+      "lights": [
+        "key_softbox",
+        "fill_soft",
+        "rim_top"
+      ]
+    },
+    {
+      "op": "create_camera",
+      "camera": "camera_drape",
+      "active": true,
+      "preset": "hero_low_angle",
+      "type": "PERSP"
+    },
+    {
+      "op": "set_scene_metadata",
+      "metadata_keys": [
+        "final_camera"
+      ]
+    }
+  ],
+  "inspection": {
+    "schema": "scene_inspection/0.1",
+    "collections": [
+      "CAMERAS",
+      "Collection",
+      "ENVIRONMENT",
+      "EXPORT",
+      "FX",
+      "HELPERS",
+      "LIGHTS",
+      "SUBJECT"
+    ],
+    "objects": [
+      {
+        "name": "camera_drape",
+        "type": "CAMERA",
+        "collection": "CAMERAS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          3.700000047683716,
+          -5.199999809265137,
+          2.3499999046325684
+        ],
+        "world_location": [
+          3.700000047683716,
+          -5.199999809265137,
+          2.3499999046325684
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "key_softbox",
+        "type": "LIGHT",
+        "collection": "LIGHTS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "world_location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "fill_soft",
+        "type": "LIGHT",
+        "collection": "LIGHTS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          3.0,
+          -3.0,
+          4.0
+        ],
+        "world_location": [
+          3.0,
+          -3.0,
+          4.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "rim_top",
+        "type": "LIGHT",
+        "collection": "LIGHTS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          0.0,
+          4.0,
+          3.0
+        ],
+        "world_location": [
+          0.0,
+          4.0,
+          3.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "rail_post_left",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 34,
+        "verts": 64,
+        "materials": [
+          "steel_charcoal_rail"
+        ],
+        "modifiers": [],
+        "location": [
+          -1.4500000476837158,
+          0.0,
+          1.0499999523162842
+        ],
+        "world_location": [
+          -1.4500000476837158,
+          0.0,
+          1.0499999523162842
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.07999999821186066,
+          0.07999999821186066,
+          2.0799999237060547
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0285,
+        "screen_bbox": [
+          0.2348,
+          0.1665,
+          0.2721,
+          0.9319
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "rail_post_right",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 34,
+        "verts": 64,
+        "materials": [
+          "steel_charcoal_rail"
+        ],
+        "modifiers": [],
+        "location": [
+          1.4500000476837158,
+          0.0,
+          1.0499999523162842
+        ],
+        "world_location": [
+          1.4500000476837158,
+          0.0,
+          1.0499999523162842
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.07999999821186066,
+          0.07999999821186066,
+          2.0799999237060547
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0463,
+        "screen_bbox": [
+          0.7925,
+          0.0,
+          0.8438,
+          0.9021
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "rod_crossbar_steel",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 34,
+        "verts": 64,
+        "materials": [
+          "steel_charcoal_rail"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          2.140000104904175
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          2.140000104904175
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          3.119999885559082,
+          0.05999999865889549,
+          0.060000136494636536
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0344,
+        "screen_bbox": [
+          0.2251,
+          0.9089,
+          0.8623,
+          0.9629
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "rail_foot_left",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 80,
+        "verts": 42,
+        "materials": [
+          "steel_charcoal_rail"
+        ],
+        "modifiers": [],
+        "location": [
+          -1.4500000476837158,
+          0.0,
+          0.07999999821186066
+        ],
+        "world_location": [
+          -1.4500000476837158,
+          0.0,
+          0.07999999821186066
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.2929258346557617,
+          0.30799999833106995,
+          0.10999999940395355
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0074,
+        "screen_bbox": [
+          0.2159,
+          0.1539,
+          0.3038,
+          0.2379
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "rail_foot_right",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 80,
+        "verts": 42,
+        "materials": [
+          "steel_charcoal_rail"
+        ],
+        "modifiers": [],
+        "location": [
+          1.4500000476837158,
+          0.0,
+          0.07999999821186066
+        ],
+        "world_location": [
+          1.4500000476837158,
+          0.0,
+          0.07999999821186066
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.2929258346557617,
+          0.30799999833106995,
+          0.10999999940395355
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0023,
+        "screen_bbox": [
+          0.7543,
+          0.0,
+          0.8597,
+          0.0221
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "cloth_drape_front_01",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 288,
+        "verts": 323,
+        "materials": [
+          "linen_front_warm"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -1.0199999809265137,
+          -0.054999999701976776,
+          2.119999885559082
+        ],
+        "world_location": [
+          -1.0199999809265137,
+          -0.054999999701976776,
+          2.119999885559082
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5200672149658203,
+          1.3818634748458862,
+          0.19188141822814941
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0672,
+        "screen_bbox": [
+          0.2507,
+          0.3845,
+          0.3711,
+          0.9422
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "drape",
+        "craft_group": "cloth_drape_front",
+        "craft_source": null
+      },
+      {
+        "name": "cloth_drape_front_02",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 288,
+        "verts": 323,
+        "materials": [
+          "linen_front_warm"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.5199999809265137,
+          -0.054999999701976776,
+          2.119999885559082
+        ],
+        "world_location": [
+          -0.5199999809265137,
+          -0.054999999701976776,
+          2.119999885559082
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5200672149658203,
+          1.3818634748458862,
+          0.19188141822814941
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0722,
+        "screen_bbox": [
+          0.3338,
+          0.3566,
+          0.4578,
+          0.9384
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "drape",
+        "craft_group": "cloth_drape_front",
+        "craft_source": null
+      },
+      {
+        "name": "cloth_drape_front_03",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 288,
+        "verts": 323,
+        "materials": [
+          "linen_front_warm"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.019999980926513672,
+          -0.054999999701976776,
+          2.119999885559082
+        ],
+        "world_location": [
+          -0.019999980926513672,
+          -0.054999999701976776,
+          2.119999885559082
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5200672149658203,
+          1.3818634748458862,
+          0.19188141822814941
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0791,
+        "screen_bbox": [
+          0.4244,
+          0.3261,
+          0.5544,
+          0.9344
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "drape",
+        "craft_group": "cloth_drape_front",
+        "craft_source": null
+      },
+      {
+        "name": "cloth_drape_front_04",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 288,
+        "verts": 323,
+        "materials": [
+          "linen_front_warm"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.48000001907348633,
+          -0.054999999701976776,
+          2.119999885559082
+        ],
+        "world_location": [
+          0.48000001907348633,
+          -0.054999999701976776,
+          2.119999885559082
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5200672149658203,
+          1.3818634748458862,
+          0.19188141822814941
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0889,
+        "screen_bbox": [
+          0.5225,
+          0.2929,
+          0.6621,
+          0.9299
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "drape",
+        "craft_group": "cloth_drape_front",
+        "craft_source": null
+      },
+      {
+        "name": "cloth_drape_front_05",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 288,
+        "verts": 323,
+        "materials": [
+          "linen_front_warm"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.9800000190734863,
+          -0.054999999701976776,
+          2.119999885559082
+        ],
+        "world_location": [
+          0.9800000190734863,
+          -0.054999999701976776,
+          2.119999885559082
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5200672149658203,
+          1.3818634748458862,
+          0.19188141822814941
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.1031,
+        "screen_bbox": [
+          0.6266,
+          0.2563,
+          0.7807,
+          0.925
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "drape",
+        "craft_group": "cloth_drape_front",
+        "craft_source": null
+      },
+      {
+        "name": "cloth_drape_back_01",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 288,
+        "verts": 323,
+        "materials": [
+          "linen_back_shadow"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.7799999713897705,
+          0.054999999701976776,
+          2.119999885559082
+        ],
+        "world_location": [
+          -0.7799999713897705,
+          0.054999999701976776,
+          2.119999885559082
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5200672745704651,
+          1.3014559745788574,
+          0.15818338096141815
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.061,
+        "screen_bbox": [
+          0.3092,
+          0.4122,
+          0.4245,
+          0.9414
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "drape",
+        "craft_group": "cloth_drape_back",
+        "craft_source": null
+      },
+      {
+        "name": "cloth_drape_back_02",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 288,
+        "verts": 323,
+        "materials": [
+          "linen_back_shadow"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.2799999713897705,
+          0.054999999701976776,
+          2.119999885559082
+        ],
+        "world_location": [
+          -0.2799999713897705,
+          0.054999999701976776,
+          2.119999885559082
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5200672745704651,
+          1.3014559745788574,
+          0.15818338096141815
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0661,
+        "screen_bbox": [
+          0.3953,
+          0.3853,
+          0.5151,
+          0.9375
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "drape",
+        "craft_group": "cloth_drape_back",
+        "craft_source": null
+      },
+      {
+        "name": "cloth_drape_back_03",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 288,
+        "verts": 323,
+        "materials": [
+          "linen_back_shadow"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.2200000286102295,
+          0.054999999701976776,
+          2.119999885559082
+        ],
+        "world_location": [
+          0.2200000286102295,
+          0.054999999701976776,
+          2.119999885559082
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5200672745704651,
+          1.3014559745788574,
+          0.15818338096141815
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0738,
+        "screen_bbox": [
+          0.4892,
+          0.356,
+          0.6171,
+          0.9334
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "drape",
+        "craft_group": "cloth_drape_back",
+        "craft_source": null
+      },
+      {
+        "name": "cloth_drape_back_04",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 288,
+        "verts": 323,
+        "materials": [
+          "linen_back_shadow"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.7200000286102295,
+          0.054999999701976776,
+          2.119999885559082
+        ],
+        "world_location": [
+          0.7200000286102295,
+          0.054999999701976776,
+          2.119999885559082
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5200672745704651,
+          1.3014559745788574,
+          0.15818338096141815
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0851,
+        "screen_bbox": [
+          0.5883,
+          0.3238,
+          0.729,
+          0.9288
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "drape",
+        "craft_group": "cloth_drape_back",
+        "craft_source": null
+      },
+      {
+        "name": "cloth_overfold_top_01",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 120,
+        "verts": 143,
+        "materials": [
+          "linen_front_warm"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.550000011920929,
+          -0.07500000298023224,
+          2.200000047683716
+        ],
+        "world_location": [
+          -0.550000011920929,
+          -0.07500000298023224,
+          2.200000047683716
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5600733160972595,
+          0.3520725667476654,
+          0.24074162542819977
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0213,
+        "screen_bbox": [
+          0.3278,
+          0.8177,
+          0.4642,
+          0.9737
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "cloth",
+        "craft_group": "cloth_overfold_top",
+        "craft_source": null
+      },
+      {
+        "name": "cloth_overfold_top_02",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 120,
+        "verts": 143,
+        "materials": [
+          "linen_front_warm"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -0.07500000298023224,
+          2.200000047683716
+        ],
+        "world_location": [
+          0.0,
+          -0.07500000298023224,
+          2.200000047683716
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5600733160972595,
+          0.3520725667476654,
+          0.24074162542819977
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0238,
+        "screen_bbox": [
+          0.4272,
+          0.8067,
+          0.5721,
+          0.9709
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "cloth",
+        "craft_group": "cloth_overfold_top",
+        "craft_source": null
+      },
+      {
+        "name": "cloth_overfold_top_03",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 120,
+        "verts": 143,
+        "materials": [
+          "linen_front_warm"
+        ],
+        "modifiers": [
+          {
+            "type": "SOLIDIFY",
+            "show_render": true
+          },
+          {
+            "type": "SUBSURF",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.550000011920929,
+          -0.07500000298023224,
+          2.200000047683716
+        ],
+        "world_location": [
+          0.550000011920929,
+          -0.07500000298023224,
+          2.200000047683716
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5600733160972595,
+          0.3520725667476654,
+          0.24074162542819977
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0269,
+        "screen_bbox": [
+          0.5365,
+          0.7945,
+          0.6917,
+          0.9679
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "cloth",
+        "craft_group": "cloth_overfold_top",
+        "craft_source": null
+      },
+      {
+        "name": "pin_wood_clip_01",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "pin_wood_natural"
+        ],
+        "modifiers": [],
+        "location": [
+          -0.75,
+          -0.03999999910593033,
+          2.200000047683716
+        ],
+        "world_location": [
+          -0.75,
+          -0.03999999910593033,
+          2.200000047683716
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04000000283122063,
+          0.08000000566244125,
+          0.11000000685453415
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0009,
+        "screen_bbox": [
+          0.3453,
+          0.9467,
+          0.3647,
+          0.9928
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "pin_wood_clip_02",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "pin_wood_natural"
+        ],
+        "modifiers": [],
+        "location": [
+          -0.25,
+          -0.03999999910593033,
+          2.200000047683716
+        ],
+        "world_location": [
+          -0.25,
+          -0.03999999910593033,
+          2.200000047683716
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04000000283122063,
+          0.08000000566244125,
+          0.11000000685453415
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0009,
+        "screen_bbox": [
+          0.4361,
+          0.9429,
+          0.4555,
+          0.9911
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "pin_wood_clip_03",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "pin_wood_natural"
+        ],
+        "modifiers": [],
+        "location": [
+          0.25,
+          -0.03999999910593033,
+          2.200000047683716
+        ],
+        "world_location": [
+          0.25,
+          -0.03999999910593033,
+          2.200000047683716
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04000000283122063,
+          0.08000000566244125,
+          0.11000000685453415
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.001,
+        "screen_bbox": [
+          0.5353,
+          0.9387,
+          0.5549,
+          0.9892
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "pin_wood_clip_04",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "pin_wood_natural"
+        ],
+        "modifiers": [],
+        "location": [
+          0.75,
+          -0.03999999910593033,
+          2.200000047683716
+        ],
+        "world_location": [
+          0.75,
+          -0.03999999910593033,
+          2.200000047683716
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04000000283122063,
+          0.08000000566244125,
+          0.11000000685453415
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0011,
+        "screen_bbox": [
+          0.6439,
+          0.9342,
+          0.664,
+          0.9872
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "hem_cord_front_edge",
+        "type": "CURVE",
+        "collection": "SUBJECT",
+        "faces": 0,
+        "verts": 0,
+        "materials": [
+          "hem_cord_linen_dark"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          2.0527637004852295,
+          0.0339999720454216,
+          0.0628311038017273
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0592,
+        "screen_bbox": [
+          0.303,
+          0.2837,
+          0.7005,
+          0.4328
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "hem",
+        "craft_group": "hem_cord_front_edge",
+        "craft_source": null
+      },
+      {
+        "name": "ground_studio_sweep",
+        "type": "MESH",
+        "collection": "ENVIRONMENT",
+        "faces": 1,
+        "verts": 4,
+        "materials": [
+          "studio_backdrop_pale"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          22.0,
+          22.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 1.0,
+        "screen_bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "backdrop_wall_soft",
+        "type": "MESH",
+        "collection": "ENVIRONMENT",
+        "faces": 1,
+        "verts": 4,
+        "materials": [
+          "studio_backdrop_pale"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          2.4000000953674316,
+          3.0
+        ],
+        "world_location": [
+          0.0,
+          2.4000000953674316,
+          3.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          14.0,
+          6.119594218034763e-07,
+          14.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 1.0,
+        "screen_bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      }
+    ],
+    "materials": [
+      {
+        "name": "hem_cord_linen_dark",
+        "metallic": 0.0,
+        "roughness": 0.8999999761581421,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 1,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "linen_back_shadow",
+        "metallic": 0.0,
+        "roughness": 0.9399999976158142,
+        "node_count": 4,
+        "link_count": 3,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF",
+          "NG_linen_back_shadow_Noise",
+          "NG_linen_back_shadow_Bump"
+        ],
+        "users": 4,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "noise_bump",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "linen_front_warm",
+        "metallic": 0.0,
+        "roughness": 0.9200000166893005,
+        "node_count": 4,
+        "link_count": 3,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF",
+          "NG_linen_front_warm_Noise",
+          "NG_linen_front_warm_Bump"
+        ],
+        "users": 8,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "noise_bump",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "pin_wood_natural",
+        "metallic": 0.0,
+        "roughness": 0.699999988079071,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 4,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "steel_charcoal_rail",
+        "metallic": 0.8500000238418579,
+        "roughness": 0.3799999952316284,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 5,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "studio_backdrop_pale",
+        "metallic": 0.0,
+        "roughness": 0.949999988079071,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 2,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      }
+    ],
+    "lights": [
+      {
+        "name": "key_softbox",
+        "type": "AREA",
+        "energy": 650.0,
+        "color": [
+          1.0,
+          0.9599999785423279,
+          0.8999999761581421
+        ]
+      },
+      {
+        "name": "fill_soft",
+        "type": "AREA",
+        "energy": 300.0,
+        "color": [
+          0.8999999761581421,
+          0.9399999976158142,
+          1.0
+        ]
+      },
+      {
+        "name": "rim_top",
+        "type": "AREA",
+        "energy": 380.0,
+        "color": [
+          1.0,
+          0.8999999761581421,
+          0.7799999713897705
+        ]
+      }
+    ],
+    "active_camera": {
+      "name": "camera_drape",
+      "lens_mm": 55.0,
+      "dof": true,
+      "focus_target": "rod_crossbar_steel",
+      "inside_geometry": false,
+      "clip_end": 1000.0
+    },
+    "cameras": [
+      "camera_drape"
+    ],
+    "node_groups": [],
+    "geometry_nodes": [],
+    "particles": [],
+    "animation": {
+      "has_action": false,
+      "frame_start": 1,
+      "frame_end": 250,
+      "fps": 24,
+      "keyframed_objects": [],
+      "markers": [],
+      "camera_animated": false,
+      "sampled_objects": [],
+      "moving_object_count": 0
+    },
+    "compositor": {
+      "use_nodes": false,
+      "node_names": [],
+      "raw_render_saved": true
+    },
+    "render": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "samples": 64,
+      "volumetric": false,
+      "view_transform": "AgX"
+    },
+    "metadata": {
+      "blender_cinematic_skill_version": "0.1",
+      "task_id": "bench_drape",
+      "quality_profile": "balanced",
+      "final_camera": "camera_drape",
+      "camera_preset": "hero_low_angle",
+      "camera_subject_screen_coverage": 0.55,
+      "camera_safe_margin": 0.14
+    },
+    "camera_path_json": null,
+    "missing_files": []
+  },
+  "inspect_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\fabric_drape_study_skill_plus_tools\\iterations\\iter_01_inspect.json",
+  "render": {
+    "rendered": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\fabric_drape_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+    "frame": 1,
+    "settings": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        480,
+        270
+      ],
+      "samples": 24,
+      "device": "CPU"
+    }
+  },
+  "export": {
+    "exported": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\fabric_drape_study_skill_plus_tools\\final\\export_final.glb",
+    "size_bytes": 715512
+  },
+  "saved": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\fabric_drape_study_skill_plus_tools\\final\\scene.blend"
+}

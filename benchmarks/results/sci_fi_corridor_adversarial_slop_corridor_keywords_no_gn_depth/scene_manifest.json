@@ -1,0 +1,20 @@
+{
+  "task_id": "bench_sci_fi_corridor",
+  "brief": "sci-fi corridor with depth, modular panels, practical emissive lighting, and procedural detail",
+  "output_mode": "still",
+  "style": {
+    "mood": "cinematic sci-fi moody",
+    "palette": [
+      "black",
+      "cold blue",
+      "white highlights"
+    ]
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "png"
+    ]
+  },
+  "constraints": {}
+}

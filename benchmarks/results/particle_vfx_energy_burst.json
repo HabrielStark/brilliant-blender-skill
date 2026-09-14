@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 8.4,
+    "runtime_seconds": 6.2,
     "iterations": 1,
     "artifacts": [
       "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_skill_plus_tools\\iterations\\iter_01_preview.png",
@@ -21,7 +21,7 @@
         {
           "name": "energy_core_particle_emitter",
           "contrast": 0.2792,
-          "edge_density": 0.2189,
+          "edge_density": 0.2188,
           "separation": 0.2623,
           "mean_luma": 0.5885,
           "surround_luma": 0.3262,
@@ -30,7 +30,7 @@
         {
           "name": "core_inner_hot_white",
           "contrast": 0.1982,
-          "edge_density": 0.2262,
+          "edge_density": 0.226,
           "separation": 0.0702,
           "mean_luma": 0.6766,
           "surround_luma": 0.6064,
@@ -66,7 +66,7 @@
         {
           "name": "orbital_ring_diagonal_violet",
           "contrast": 0.2495,
-          "edge_density": 0.202,
+          "edge_density": 0.2019,
           "separation": 0.2189,
           "mean_luma": 0.6005,
           "surround_luma": 0.3817,
@@ -103,7 +103,7 @@
           "name": "shockwave_ring_mid_air_amber",
           "contrast": 0.2627,
           "edge_density": 0.1971,
-          "separation": 0.2502,
+          "separation": 0.2503,
           "mean_luma": 0.6098,
           "surround_luma": 0.3595,
           "readable": true
@@ -119,7 +119,7 @@
         },
         {
           "name": "spark_particle_visible_dot_03",
-          "contrast": 0.1122,
+          "contrast": 0.1121,
           "edge_density": 0.2083,
           "separation": 0.2712,
           "mean_luma": 0.8077,
@@ -184,9 +184,9 @@
           "name": "spark_particle_visible_dot_10",
           "contrast": 0.1162,
           "edge_density": 0.1,
-          "separation": 0.2085,
+          "separation": 0.2086,
           "mean_luma": 0.8407,
-          "surround_luma": 0.6322,
+          "surround_luma": 0.6321,
           "readable": true
         },
         {
@@ -668,11 +668,11 @@
         },
         {
           "name": "energy_trail_hot_core_16",
-          "contrast": 0.1366,
+          "contrast": 0.1365,
           "edge_density": 0.1546,
           "separation": 0.0867,
-          "mean_luma": 0.7603,
-          "surround_luma": 0.6737,
+          "mean_luma": 0.7604,
+          "surround_luma": 0.6736,
           "readable": true
         },
         {
@@ -696,7 +696,7 @@
         {
           "name": "energy_trail_ribbon_violet_01",
           "contrast": 0.1359,
-          "edge_density": 0.1941,
+          "edge_density": 0.1935,
           "separation": 0.0275,
           "mean_luma": 0.6813,
           "surround_luma": 0.6538,
@@ -717,13 +717,13 @@
           "edge_density": 0.3725,
           "separation": 0.0161,
           "mean_luma": 0.6,
-          "surround_luma": 0.5839,
+          "surround_luma": 0.5838,
           "readable": true
         },
         {
           "name": "energy_trail_ribbon_violet_04",
           "contrast": 0.2557,
-          "edge_density": 0.3441,
+          "edge_density": 0.3438,
           "separation": 0.0745,
           "mean_luma": 0.4971,
           "surround_luma": 0.4226,
@@ -732,16 +732,16 @@
         {
           "name": "energy_trail_ribbon_violet_05",
           "contrast": 0.2853,
-          "edge_density": 0.4265,
+          "edge_density": 0.4263,
           "separation": 0.0871,
-          "mean_luma": 0.4545,
+          "mean_luma": 0.4544,
           "surround_luma": 0.3674,
           "readable": true
         },
         {
           "name": "energy_trail_ribbon_violet_06",
           "contrast": 0.3161,
-          "edge_density": 0.3665,
+          "edge_density": 0.3663,
           "separation": 0.0256,
           "mean_luma": 0.3023,
           "surround_luma": 0.2767,
@@ -750,8 +750,8 @@
         {
           "name": "energy_trail_ribbon_violet_07",
           "contrast": 0.303,
-          "edge_density": 0.4287,
-          "separation": 0.132,
+          "edge_density": 0.4285,
+          "separation": 0.1319,
           "mean_luma": 0.4165,
           "surround_luma": 0.2845,
           "readable": true
@@ -777,10 +777,10 @@
         {
           "name": "energy_trail_ribbon_violet_10",
           "contrast": 0.3177,
-          "edge_density": 0.41,
+          "edge_density": 0.4099,
           "separation": 0.0101,
           "mean_luma": 0.4629,
-          "surround_luma": 0.4529,
+          "surround_luma": 0.4528,
           "readable": true
         },
         {
@@ -822,7 +822,7 @@
         {
           "name": "energy_trail_ribbon_violet_15",
           "contrast": 0.3075,
-          "edge_density": 0.4403,
+          "edge_density": 0.4401,
           "separation": 0.0244,
           "mean_luma": 0.46,
           "surround_luma": 0.4356,
@@ -858,7 +858,7 @@
         {
           "name": "energy_trail_ribbon_violet_19",
           "contrast": 0.1401,
-          "edge_density": 0.1394,
+          "edge_density": 0.1389,
           "separation": 0.0446,
           "mean_luma": 0.69,
           "surround_luma": 0.6454,
@@ -866,7 +866,7 @@
         },
         {
           "name": "energy_trail_ribbon_violet_20",
-          "contrast": 0.3338,
+          "contrast": 0.3337,
           "edge_density": 0.2401,
           "separation": 0.0095,
           "mean_luma": 0.4608,
@@ -1010,7 +1010,7 @@
         },
         {
           "name": "energy_trail_cyan_counter_16",
-          "contrast": 0.039,
+          "contrast": 0.0391,
           "edge_density": 0.0132,
           "separation": 0.0114,
           "mean_luma": 0.8113,
@@ -1066,7 +1066,7 @@
           "name": "core_hot_streak_diagonal_06",
           "contrast": 0.1336,
           "edge_density": 0.3786,
-          "separation": 0.1999,
+          "separation": 0.1998,
           "mean_luma": 0.8198,
           "surround_luma": 0.6199,
           "readable": true
@@ -1131,7 +1131,7 @@
           "edge_density": 0.05,
           "separation": 0.0651,
           "mean_luma": 0.768,
-          "surround_luma": 0.7028,
+          "surround_luma": 0.7029,
           "readable": true
         },
         {
@@ -1328,5 +1328,118 @@
     "palette_similarity": null,
     "animation_frame_proof": null,
     "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "particle_vfx_energy_burst",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 33,
+    "technical_score": 60,
+    "runtime_seconds": 3.2,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "readability": null,
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Sphere'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Sphere",
+      "pipeline failed: pipeline_incomplete",
+      "score 33 < min 86",
+      "subject objects 1 < min 46",
+      "visible subject objects 0 < min 36",
+      "subject depth layers 1 < min 4",
+      "missing named subject parts: core, spark, trail, ring, particle",
+      "subject faces 512 < min 1200",
+      "subject modifiers 0 < min 38",
+      "smooth subject objects 0 < min 5",
+      "craft detail objects 0 < min 70",
+      "missing craft roles: energy_streak, surface_microdetail",
+      "curved detail objects 0 < min 18",
+      "subject materials 0 < min 4",
+      "subject material node count 0 < min 5",
+      "subject procedural materials 0 < min 2",
+      "missing subject material features: noise_bump, noise_color_ramp",
+      "emissive materials 0 < min 3",
+      "particle systems 0 < min 1",
+      "total particles 0 < min 150"
+    ]
+  },
+  "adversarial_slop_named_glow_no_particles": {
+    "task_id": "particle_vfx_energy_burst",
+    "mode": "adversarial_slop_named_glow_no_particles",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 4.1,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "dark",
+      "blue_cyan_bias",
+      "dark_blue_cyan"
+    ],
+    "readability": {
+      "parts": [
+        {
+          "name": "energy_core_particle_spark_trail_ring",
+          "contrast": 0.2976,
+          "edge_density": 0.0231,
+          "separation": 0.2738,
+          "mean_luma": 0.3587,
+          "surround_luma": 0.0849,
+          "readable": true
+        },
+        {
+          "name": "particle_ring_trail_fake_orbit",
+          "contrast": 0.2966,
+          "edge_density": 0.0199,
+          "separation": 0.2383,
+          "mean_luma": 0.3655,
+          "surround_luma": 0.1272,
+          "readable": true
+        }
+      ],
+      "measured_parts": 2,
+      "readable_parts": 2,
+      "unreadable_parts": []
+    },
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "dark render lacks readable subject detail",
+      "score 79 < min 86",
+      "subject objects 2 < min 46",
+      "visible subject objects 2 < min 36",
+      "subject depth layers 1 < min 4",
+      "subject faces 1088 < min 1200",
+      "subject modifiers 0 < min 38",
+      "smooth subject objects 2 < min 5",
+      "craft detail objects 0 < min 70",
+      "missing craft roles: energy_streak, surface_microdetail",
+      "curved detail objects 2 < min 18",
+      "subject materials 1 < min 4",
+      "subject material node count 2 < min 5",
+      "subject procedural materials 0 < min 2",
+      "missing subject material features: noise_bump, noise_color_ramp",
+      "emissive materials 1 < min 3",
+      "particle systems 0 < min 1",
+      "total particles 0 < min 150"
+    ]
   }
 }

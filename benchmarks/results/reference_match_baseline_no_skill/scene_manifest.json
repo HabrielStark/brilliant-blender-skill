@@ -1,0 +1,20 @@
+{
+  "task_id": "bench_reference_match",
+  "brief": "match dark premium product with blue rim reference",
+  "output_mode": "reference_match",
+  "style": {
+    "mood": "premium dark",
+    "palette": [
+      "black",
+      "cold blue",
+      "white highlights"
+    ]
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "png"
+    ]
+  },
+  "constraints": {}
+}

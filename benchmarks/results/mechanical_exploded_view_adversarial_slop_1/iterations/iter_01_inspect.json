@@ -1,0 +1,282 @@
+{
+  "schema": "scene_inspection/0.1",
+  "collections": [
+    "CAMERAS",
+    "Collection",
+    "ENVIRONMENT",
+    "EXPORT",
+    "FX",
+    "HELPERS",
+    "LIGHTS",
+    "SUBJECT"
+  ],
+  "objects": [
+    {
+      "name": "camera_technical_baseline",
+      "type": "CAMERA",
+      "collection": "CAMERAS",
+      "faces": 0,
+      "verts": 0,
+      "materials": [],
+      "modifiers": [],
+      "location": [
+        5.800000190734863,
+        -7.199999809265137,
+        4.699999809265137
+      ],
+      "world_location": [
+        5.800000190734863,
+        -7.199999809265137,
+        4.699999809265137
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0,
+      "screen_bbox": null,
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "flat_key",
+      "type": "LIGHT",
+      "collection": "LIGHTS",
+      "faces": 0,
+      "verts": 0,
+      "materials": [],
+      "modifiers": [],
+      "location": [
+        -4.0,
+        -4.0,
+        5.0
+      ],
+      "world_location": [
+        -4.0,
+        -4.0,
+        5.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0,
+      "screen_bbox": null,
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "case_battery_board_screw_post_trace_contact_axis_chip_connector_gasket_spring_washer_ribbon_callout_cutaway",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 34,
+      "verts": 64,
+      "materials": [
+        "plain_stack_metal"
+      ],
+      "modifiers": [],
+      "location": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.2376,
+      "screen_bbox": [
+        0.3176,
+        0.0162,
+        0.6772,
+        0.677
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "case_battery_board_screw_post_trace_contact_axis_chip_connector_gasket_spring_washer_ribbon_callout_cutaway_top",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 34,
+      "verts": 64,
+      "materials": [
+        "plain_stack_metal"
+      ],
+      "modifiers": [],
+      "location": [
+        0.0,
+        0.0,
+        1.7000000476837158
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        1.7000000476837158
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.2415,
+      "screen_bbox": [
+        0.309,
+        0.2759,
+        0.6854,
+        0.9175
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    }
+  ],
+  "materials": [
+    {
+      "name": "plain_stack_metal",
+      "metallic": 0.0,
+      "roughness": 0.699999988079071,
+      "node_count": 2,
+      "link_count": 1,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF"
+      ],
+      "users": 2,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "",
+      "image_texture_roles": ""
+    }
+  ],
+  "lights": [
+    {
+      "name": "flat_key",
+      "type": "AREA",
+      "energy": 300.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "active_camera": {
+    "name": "camera_technical_baseline",
+    "lens_mm": 45.0,
+    "dof": false,
+    "focus_target": null,
+    "inside_geometry": false,
+    "clip_end": 1000.0
+  },
+  "cameras": [
+    "camera_technical_baseline"
+  ],
+  "node_groups": [],
+  "geometry_nodes": [],
+  "particles": [],
+  "animation": {
+    "has_action": false,
+    "frame_start": 1,
+    "frame_end": 250,
+    "fps": 24,
+    "keyframed_objects": [],
+    "markers": [],
+    "camera_animated": false,
+    "sampled_objects": [],
+    "moving_object_count": 0
+  },
+  "compositor": {
+    "use_nodes": false,
+    "node_names": [],
+    "raw_render_saved": true
+  },
+  "render": {
+    "engine": "BLENDER_EEVEE",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "samples": 64,
+    "volumetric": false,
+    "view_transform": "AgX"
+  },
+  "metadata": {
+    "blender_cinematic_skill_version": "0.1",
+    "task_id": "bench_exploded",
+    "quality_profile": "balanced",
+    "final_camera": "camera_technical_baseline",
+    "camera_preset": "macro_product",
+    "camera_subject_screen_coverage": 0.6,
+    "camera_safe_margin": 0.08
+  },
+  "camera_path_json": null,
+  "missing_files": []
+}

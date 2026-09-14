@@ -1,0 +1,22 @@
+{
+  "task_id": "bench_low_spec_safe",
+  "brief": "cinematic sci-fi scene that must stay within weak hardware budget",
+  "output_mode": "still",
+  "quality_profile": "safe_laptop",
+  "style": {
+    "mood": "cinematic"
+  },
+  "target": {
+    "render_resolution": [
+      3840,
+      2160
+    ],
+    "final_format": [
+      "blend",
+      "png"
+    ]
+  },
+  "constraints": {
+    "safe_hardware_budget": true
+  }
+}

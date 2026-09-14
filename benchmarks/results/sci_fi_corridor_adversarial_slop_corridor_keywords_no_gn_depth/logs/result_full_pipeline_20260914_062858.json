@@ -1,0 +1,411 @@
+{
+  "ok": true,
+  "action": "full_pipeline",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\final\\scene.blend",
+  "collections": [
+    "CAMERAS",
+    "LIGHTS",
+    "SUBJECT",
+    "ENVIRONMENT",
+    "FX",
+    "HELPERS",
+    "EXPORT"
+  ],
+  "operations": [
+    {
+      "op": "ensure_standard_collections",
+      "collections": [
+        "CAMERAS",
+        "LIGHTS",
+        "SUBJECT",
+        "ENVIRONMENT",
+        "FX",
+        "HELPERS",
+        "EXPORT"
+      ]
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "corridor_floor_ceiling_wall_rib_rail_door_light_panel_box",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "drone_core_ring_sensor_antenna_sphere",
+      "faces": 512
+    },
+    {
+      "op": "apply_transform",
+      "applied": "corridor_floor_ceiling_wall_rib_rail_door_light_panel_box",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "drone_core_ring_sensor_antenna_sphere"
+    },
+    {
+      "op": "create_material",
+      "material": "flat_corridor_dark",
+      "assigned_to": [
+        "corridor_floor_ceiling_wall_rib_rail_door_light_panel_box"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "flat_drone_blue",
+      "assigned_to": [
+        "drone_core_ring_sensor_antenna_sphere"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_lighting_rig",
+      "rig": "flat_corridor_light",
+      "lights": [
+        "cold_key"
+      ]
+    },
+    {
+      "op": "create_camera",
+      "camera": "camera_corridor_keyword",
+      "active": true,
+      "preset": "macro_product",
+      "type": "PERSP"
+    },
+    {
+      "op": "set_scene_metadata",
+      "metadata_keys": [
+        "final_camera"
+      ]
+    }
+  ],
+  "inspection": {
+    "schema": "scene_inspection/0.1",
+    "collections": [
+      "CAMERAS",
+      "Collection",
+      "ENVIRONMENT",
+      "EXPORT",
+      "FX",
+      "HELPERS",
+      "LIGHTS",
+      "SUBJECT"
+    ],
+    "objects": [
+      {
+        "name": "camera_corridor_keyword",
+        "type": "CAMERA",
+        "collection": "CAMERAS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          0.0,
+          -5.0,
+          1.600000023841858
+        ],
+        "world_location": [
+          0.0,
+          -5.0,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "cold_key",
+        "type": "LIGHT",
+        "collection": "LIGHTS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "world_location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "drone_core_ring_sensor_antenna_sphere",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 512,
+        "verts": 482,
+        "materials": [
+          "flat_drone_blue"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          -1.0,
+          1.399999976158142
+        ],
+        "world_location": [
+          0.0,
+          -1.0,
+          1.399999976158142
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.799999475479126,
+          0.7999997138977051,
+          0.800000011920929
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0393,
+        "screen_bbox": [
+          0.4253,
+          0.4069,
+          0.5747,
+          0.6697
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "corridor_floor_ceiling_wall_rib_rail_door_light_panel_box",
+        "type": "MESH",
+        "collection": "ENVIRONMENT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "flat_corridor_dark"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          1.2000000476837158
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          1.2000000476837158
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          5.399999618530273,
+          8.399999618530273,
+          0.23999999463558197
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.5668,
+        "screen_bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.5668
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      }
+    ],
+    "materials": [
+      {
+        "name": "flat_corridor_dark",
+        "metallic": 0.6000000238418579,
+        "roughness": 0.44999998807907104,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 1,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "flat_drone_blue",
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 1,
+        "has_emission": true,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      }
+    ],
+    "lights": [
+      {
+        "name": "cold_key",
+        "type": "AREA",
+        "energy": 300.0,
+        "color": [
+          0.6200000047683716,
+          0.7599999904632568,
+          1.0
+        ]
+      }
+    ],
+    "active_camera": {
+      "name": "camera_corridor_keyword",
+      "lens_mm": 24.0,
+      "dof": false,
+      "focus_target": null,
+      "inside_geometry": false,
+      "clip_end": 1000.0
+    },
+    "cameras": [
+      "camera_corridor_keyword"
+    ],
+    "node_groups": [],
+    "geometry_nodes": [],
+    "particles": [],
+    "animation": {
+      "has_action": false,
+      "frame_start": 1,
+      "frame_end": 250,
+      "fps": 24,
+      "keyframed_objects": [],
+      "markers": [],
+      "camera_animated": false,
+      "sampled_objects": [],
+      "moving_object_count": 0
+    },
+    "compositor": {
+      "use_nodes": false,
+      "node_names": [],
+      "raw_render_saved": true
+    },
+    "render": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "samples": 64,
+      "volumetric": false,
+      "view_transform": "AgX"
+    },
+    "metadata": {
+      "blender_cinematic_skill_version": "0.1",
+      "task_id": "bench_sci_fi_corridor",
+      "quality_profile": "balanced",
+      "final_camera": "camera_corridor_keyword",
+      "camera_preset": "macro_product",
+      "camera_subject_screen_coverage": 0.6,
+      "camera_safe_margin": 0.08
+    },
+    "camera_path_json": null,
+    "missing_files": []
+  },
+  "inspect_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\iterations\\iter_01_inspect.json",
+  "render": {
+    "rendered": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\iterations\\iter_01_preview.png",
+    "frame": 1,
+    "settings": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        480,
+        270
+      ],
+      "samples": 24,
+      "device": "CPU"
+    }
+  },
+  "export": {
+    "exported": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\final\\export_final.glb",
+    "size_bytes": 20224
+  },
+  "saved": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\final\\scene.blend"
+}

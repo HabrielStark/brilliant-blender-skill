@@ -1,0 +1,42 @@
+{
+  "iteration": 1,
+  "hard_fail": true,
+  "passed": false,
+  "scores": {
+    "composition": 9,
+    "lighting": 5,
+    "materials": 0,
+    "geometry_detail": 9,
+    "camera": 0,
+    "technical": 0,
+    "performance": 5,
+    "reference_fidelity": 3,
+    "total": 31
+  },
+  "defects": [
+    "no active camera",
+    "no meaningful lighting",
+    "requested animation has no keyframes",
+    "object has default/auto name: 'Sphere'",
+    "no active camera in scene",
+    "scene has no lights and no world illumination",
+    "important object has no material: Sphere",
+    "animation requested but no keyframes/actions exist"
+  ],
+  "next_actions": [
+    "add and activate a named camera framing the subject",
+    "add a lighting rig (key/fill/rim) or world illumination",
+    "assign a material to the key object",
+    "add keyframes for the requested animation"
+  ],
+  "hard_fail_reasons": [
+    "no active camera",
+    "no meaningful lighting",
+    "requested animation has no keyframes",
+    "object has default/auto name: 'Sphere'",
+    "no active camera in scene",
+    "scene has no lights and no world illumination",
+    "important object has no material: Sphere",
+    "animation requested but no keyframes/actions exist"
+  ]
+}

@@ -1,0 +1,397 @@
+{
+  "ok": true,
+  "action": "full_pipeline",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\architectural_interior_scene_adversarial_slop_1\\final\\scene.blend",
+  "collections": [
+    "CAMERAS",
+    "LIGHTS",
+    "SUBJECT",
+    "ENVIRONMENT",
+    "FX",
+    "HELPERS",
+    "EXPORT"
+  ],
+  "operations": [
+    {
+      "op": "ensure_standard_collections",
+      "collections": [
+        "CAMERAS",
+        "LIGHTS",
+        "SUBJECT",
+        "ENVIRONMENT",
+        "FX",
+        "HELPERS",
+        "EXPORT"
+      ]
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "floor_wall_window_shelf_rug_art_ceiling_baseboard_sun_patch_mullion_floor_plank_mullion_shadow",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+      "faces": 6
+    },
+    {
+      "op": "create_material",
+      "material": "plain_block_room_mat",
+      "assigned_to": [
+        "floor_wall_window_shelf_rug_art_ceiling_baseboard_sun_patch_mullion_floor_plank_mullion_shadow"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "plain_block_furniture_mat",
+      "assigned_to": [
+        "sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_lighting_rig",
+      "rig": "flat_interior_baseline",
+      "lights": [
+        "flat_key"
+      ]
+    },
+    {
+      "op": "create_camera",
+      "camera": "camera_interior_baseline",
+      "active": true,
+      "preset": "macro_product",
+      "type": "PERSP"
+    },
+    {
+      "op": "set_scene_metadata",
+      "metadata_keys": [
+        "final_camera"
+      ]
+    }
+  ],
+  "inspection": {
+    "schema": "scene_inspection/0.1",
+    "collections": [
+      "CAMERAS",
+      "Collection",
+      "ENVIRONMENT",
+      "EXPORT",
+      "FX",
+      "HELPERS",
+      "LIGHTS",
+      "SUBJECT"
+    ],
+    "objects": [
+      {
+        "name": "camera_interior_baseline",
+        "type": "CAMERA",
+        "collection": "CAMERAS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          3.049999952316284,
+          -3.950000047683716,
+          1.659999966621399
+        ],
+        "world_location": [
+          3.049999952316284,
+          -3.950000047683716,
+          1.659999966621399
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "flat_key",
+        "type": "LIGHT",
+        "collection": "LIGHTS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "world_location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "plain_block_furniture_mat"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          0.800000011920929
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          0.800000011920929
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          1.2000000476837158,
+          1.2000000476837158,
+          1.2000000476837158
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.2203,
+        "screen_bbox": [
+          0.3078,
+          0.1258,
+          0.6841,
+          0.7113
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "floor_wall_window_shelf_rug_art_ceiling_baseboard_sun_patch_mullion_floor_plank_mullion_shadow",
+        "type": "MESH",
+        "collection": "ENVIRONMENT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "plain_block_room_mat"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          1.2000000476837158
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          1.2000000476837158
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          4.0,
+          4.0,
+          2.4000000953674316
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 1.0,
+        "screen_bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      }
+    ],
+    "materials": [
+      {
+        "name": "plain_block_furniture_mat",
+        "metallic": 0.0,
+        "roughness": 0.75,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 1,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "plain_block_room_mat",
+        "metallic": 0.0,
+        "roughness": 0.75,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 1,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      }
+    ],
+    "lights": [
+      {
+        "name": "flat_key",
+        "type": "AREA",
+        "energy": 380.0,
+        "color": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "active_camera": {
+      "name": "camera_interior_baseline",
+      "lens_mm": 40.0,
+      "dof": false,
+      "focus_target": null,
+      "inside_geometry": false,
+      "clip_end": 1000.0
+    },
+    "cameras": [
+      "camera_interior_baseline"
+    ],
+    "node_groups": [],
+    "geometry_nodes": [],
+    "particles": [],
+    "animation": {
+      "has_action": false,
+      "frame_start": 1,
+      "frame_end": 250,
+      "fps": 24,
+      "keyframed_objects": [],
+      "markers": [],
+      "camera_animated": false,
+      "sampled_objects": [],
+      "moving_object_count": 0
+    },
+    "compositor": {
+      "use_nodes": false,
+      "node_names": [],
+      "raw_render_saved": true
+    },
+    "render": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "samples": 64,
+      "volumetric": false,
+      "view_transform": "AgX"
+    },
+    "metadata": {
+      "blender_cinematic_skill_version": "0.1",
+      "task_id": "bench_architectural_interior",
+      "quality_profile": "balanced",
+      "final_camera": "camera_interior_baseline",
+      "camera_preset": "macro_product",
+      "camera_subject_screen_coverage": 0.6,
+      "camera_safe_margin": 0.08
+    },
+    "camera_path_json": null,
+    "missing_files": []
+  },
+  "inspect_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\architectural_interior_scene_adversarial_slop_1\\iterations\\iter_01_inspect.json",
+  "render": {
+    "rendered": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\architectural_interior_scene_adversarial_slop_1\\iterations\\iter_01_preview.png",
+    "frame": 1,
+    "settings": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        480,
+        270
+      ],
+      "samples": 24,
+      "device": "CPU"
+    }
+  },
+  "export": {
+    "exported": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\architectural_interior_scene_adversarial_slop_1\\final\\export_final.glb",
+    "size_bytes": 3364
+  },
+  "saved": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\architectural_interior_scene_adversarial_slop_1\\final\\scene.blend"
+}

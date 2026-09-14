@@ -1,0 +1,63 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_baseline_no_skill",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_baseline_no_skill\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_particle_vfx_energy_burst",
+    "brief": "particle VFX energy burst with emissive core and visible sparks",
+    "output_mode": "still",
+    "style": {
+      "mood": "cinematic neon energy"
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ]
+    },
+    "constraints": {}
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 15.1/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "create_mesh_primitive",
+        "type": "uv_sphere",
+        "name": "Sphere",
+        "size": 2
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_baseline_no_skill\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_baseline_no_skill\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_baseline_no_skill\\logs\\result_full_pipeline_20260914_062805.json"
+}

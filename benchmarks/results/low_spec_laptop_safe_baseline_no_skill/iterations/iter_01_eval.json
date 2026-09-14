@@ -1,0 +1,39 @@
+{
+  "iteration": 1,
+  "hard_fail": true,
+  "passed": false,
+  "scores": {
+    "composition": 9,
+    "lighting": 5,
+    "materials": 0,
+    "geometry_detail": 5,
+    "camera": 0,
+    "technical": 2,
+    "performance": 5,
+    "reference_fidelity": 3,
+    "total": 29
+  },
+  "defects": [
+    "no active camera",
+    "no meaningful lighting",
+    "object has default/auto name: 'Cube'",
+    "no active camera in scene",
+    "scene has no lights and no world illumination",
+    "important object has no material: Cube",
+    "premium render: Cube has no bevel/subsurf/smooth"
+  ],
+  "next_actions": [
+    "add and activate a named camera framing the subject",
+    "add a lighting rig (key/fill/rim) or world illumination",
+    "assign a material to the key object",
+    "add bevels/subsurf so edges catch light"
+  ],
+  "hard_fail_reasons": [
+    "no active camera",
+    "no meaningful lighting",
+    "object has default/auto name: 'Cube'",
+    "no active camera in scene",
+    "scene has no lights and no world illumination",
+    "important object has no material: Cube"
+  ]
+}

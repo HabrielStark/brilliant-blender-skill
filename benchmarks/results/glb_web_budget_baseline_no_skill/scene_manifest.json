@@ -1,0 +1,18 @@
+{
+  "task_id": "bench_glb_budget",
+  "brief": "compact web-ready detailed product GLB under size budget",
+  "output_mode": "web_asset",
+  "style": {
+    "mood": "clean premium product"
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "glb"
+    ],
+    "web_runtime": "react-three-fiber"
+  },
+  "constraints": {
+    "max_glb_mb": 5
+  }
+}

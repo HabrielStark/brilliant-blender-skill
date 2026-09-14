@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 9.9,
+    "runtime_seconds": 5.6,
     "iterations": 1,
     "artifacts": [
       "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\landscape_meadow_golden_hour_skill_plus_tools\\iterations\\iter_01_preview.png",
@@ -685,5 +685,93 @@
     "palette_similarity": null,
     "animation_frame_proof": null,
     "failures": []
+  },
+  "baseline_no_skill": {
+    "task_id": "landscape_meadow_golden_hour",
+    "mode": "baseline_no_skill",
+    "pass": false,
+    "visual_score": 29,
+    "technical_score": 60,
+    "runtime_seconds": 3.6,
+    "iterations": 1,
+    "artifacts": [
+      null,
+      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\landscape_meadow_golden_hour_baseline_no_skill\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "missing_preview"
+    ],
+    "readability": null,
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "no active camera",
+      "no meaningful lighting",
+      "object has default/auto name: 'Cube'",
+      "no active camera in scene",
+      "scene has no lights and no world illumination",
+      "important object has no material: Cube",
+      "pipeline failed: pipeline_incomplete",
+      "score 29 < min 84",
+      "subject objects 1 < min 20",
+      "visible subject objects 0 < min 16",
+      "missing named subject parts: mound, boulder, rock, grass, path, stone, leaf, sun",
+      "subject faces 6 < min 900",
+      "subject modifiers 0 < min 4",
+      "smooth subject objects 0 < min 4",
+      "craft detail objects 0 < min 8",
+      "missing named environment parts: meadow, ground, horizon",
+      "subject materials 0 < min 5",
+      "subject procedural materials 0 < min 1"
+    ]
+  },
+  "adversarial_slop_flat_plane_named_landscape_keywords": {
+    "task_id": "landscape_meadow_golden_hour",
+    "mode": "adversarial_slop_flat_plane_named_landscape_keywords",
+    "pass": false,
+    "visual_score": 79,
+    "technical_score": 100,
+    "runtime_seconds": 4.9,
+    "iterations": 1,
+    "artifacts": [
+      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\landscape_meadow_golden_hour_adversarial_slop_flat_plane_named_landscape_keywords\\iterations\\iter_01_preview.png",
+      "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\landscape_meadow_golden_hour_adversarial_slop_flat_plane_named_landscape_keywords\\final\\export_final.glb"
+    ],
+    "visual_style_tags": [
+      "dark"
+    ],
+    "readability": {
+      "parts": [
+        {
+          "name": "mound_boulder_rock_grass_path_stone_leaf_sun_flat",
+          "contrast": 0.0927,
+          "edge_density": 0.0026,
+          "separation": 0.0198,
+          "mean_luma": 0.2408,
+          "surround_luma": 0.221,
+          "readable": true
+        }
+      ],
+      "measured_parts": 1,
+      "readable_parts": 1,
+      "unreadable_parts": []
+    },
+    "reference_metrics": null,
+    "palette_similarity": null,
+    "animation_frame_proof": null,
+    "failures": [
+      "render has no discernible silhouette/detail",
+      "score 79 < min 84",
+      "subject objects 1 < min 20",
+      "visible subject objects 1 < min 16",
+      "subject faces 6 < min 900",
+      "subject modifiers 0 < min 4",
+      "smooth subject objects 0 < min 4",
+      "craft detail objects 0 < min 8",
+      "missing named environment parts: horizon",
+      "subject materials 1 < min 5",
+      "subject procedural materials 0 < min 1"
+    ]
   }
 }

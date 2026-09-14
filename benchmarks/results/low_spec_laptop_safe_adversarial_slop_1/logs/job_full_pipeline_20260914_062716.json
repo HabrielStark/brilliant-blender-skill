@@ -1,0 +1,142 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\low_spec_laptop_safe_adversarial_slop_1",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\low_spec_laptop_safe_adversarial_slop_1\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_low_spec_safe",
+    "brief": "cinematic sci-fi scene that must stay within weak hardware budget",
+    "output_mode": "still",
+    "quality_profile": "safe_laptop",
+    "style": {
+      "mood": "cinematic"
+    },
+    "target": {
+      "render_resolution": [
+        3840,
+        2160
+      ],
+      "final_format": [
+        "blend",
+        "png"
+      ]
+    },
+    "constraints": {
+      "safe_hardware_budget": true
+    }
+  },
+  "budget": {
+    "quality_profile": "safe_laptop",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "CPU",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 1024,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile safe_laptop",
+      "available RAM 15.0/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "monolith_panel_antenna_accent_vent_foot_decal_cap_screen_cable_pedestal_glow",
+        "size": 2.2,
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "flat_dark_named_parts",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "monolith_panel_antenna_accent_vent_foot_decal_cap_screen_cable_pedestal_glow"
+          ],
+          "pbr": {
+            "base_color": [
+              0.03,
+              0.035,
+              0.04,
+              1
+            ],
+            "roughness": 0.8
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "flat_named_baseline",
+          "lights": [
+            {
+              "name": "flat_key",
+              "type": "AREA",
+              "power": 250,
+              "size": 6,
+              "position_role": "front_left_high"
+            }
+          ],
+          "world": {
+            "color": [
+              0.05,
+              0.05,
+              0.05
+            ],
+            "strength": 0.4
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "camera_safe_baseline",
+          "target": "monolith_panel_antenna_accent_vent_foot_decal_cap_screen_cable_pedestal_glow",
+          "look_at": [
+            0,
+            0,
+            1
+          ],
+          "location": [
+            4,
+            -6,
+            2.4
+          ],
+          "lens": {
+            "focal_length_mm": 46
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "camera_safe_baseline"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\low_spec_laptop_safe_adversarial_slop_1\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\low_spec_laptop_safe_adversarial_slop_1\\logs\\result_full_pipeline_20260914_062716.json"
+}

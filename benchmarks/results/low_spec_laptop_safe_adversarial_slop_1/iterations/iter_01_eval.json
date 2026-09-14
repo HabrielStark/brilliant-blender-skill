@@ -1,0 +1,28 @@
+{
+  "iteration": 1,
+  "hard_fail": true,
+  "passed": false,
+  "scores": {
+    "composition": 20,
+    "lighting": 12,
+    "materials": 8,
+    "geometry_detail": 10,
+    "camera": 10,
+    "technical": 10,
+    "performance": 5,
+    "reference_fidelity": 8,
+    "total": 79
+  },
+  "defects": [
+    "render has no discernible silhouette/detail",
+    "render is too flat for visual acceptance",
+    "premium render: monolith_panel_antenna_accent_vent_foot_decal_cap_screen_cable_pedestal_glow has no bevel/subsurf/smooth"
+  ],
+  "next_actions": [
+    "add bevels/subsurf so edges catch light"
+  ],
+  "hard_fail_reasons": [
+    "render has no discernible silhouette/detail",
+    "render is too flat for visual acceptance"
+  ]
+}

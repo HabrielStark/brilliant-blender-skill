@@ -1,0 +1,15 @@
+{
+  "task_id": "bench_organic_soft_surface",
+  "brief": "organic smooth surface and soft material study",
+  "output_mode": "still",
+  "style": {
+    "mood": "soft premium natural"
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "png"
+    ]
+  },
+  "constraints": {}
+}

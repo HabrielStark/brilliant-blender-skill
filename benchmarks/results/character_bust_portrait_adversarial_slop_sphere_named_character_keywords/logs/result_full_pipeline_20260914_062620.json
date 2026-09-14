@@ -1,0 +1,370 @@
+{
+  "ok": true,
+  "action": "full_pipeline",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\character_bust_portrait_adversarial_slop_sphere_named_character_keywords\\final\\scene.blend",
+  "collections": [
+    "CAMERAS",
+    "LIGHTS",
+    "SUBJECT",
+    "ENVIRONMENT",
+    "FX",
+    "HELPERS",
+    "EXPORT"
+  ],
+  "operations": [
+    {
+      "op": "ensure_standard_collections",
+      "collections": [
+        "CAMERAS",
+        "LIGHTS",
+        "SUBJECT",
+        "ENVIRONMENT",
+        "FX",
+        "HELPERS",
+        "EXPORT"
+      ]
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "backdrop_studio_dark",
+      "faces": 1
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "head_neck_shoulder_eye_brow_nose_mouth_ear_hair_pedestal_blob",
+      "faces": 512
+    },
+    {
+      "op": "create_material",
+      "material": "flat_skin",
+      "assigned_to": [
+        "head_neck_shoulder_eye_brow_nose_mouth_ear_hair_pedestal_blob",
+        "backdrop_studio_dark"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_lighting_rig",
+      "rig": "flat",
+      "lights": [
+        "key"
+      ]
+    },
+    {
+      "op": "create_camera",
+      "camera": "cam",
+      "active": true,
+      "preset": "macro_product",
+      "type": "PERSP"
+    },
+    {
+      "op": "set_scene_metadata",
+      "metadata_keys": [
+        "final_camera"
+      ]
+    }
+  ],
+  "inspection": {
+    "schema": "scene_inspection/0.1",
+    "collections": [
+      "CAMERAS",
+      "Collection",
+      "ENVIRONMENT",
+      "EXPORT",
+      "FX",
+      "HELPERS",
+      "LIGHTS",
+      "SUBJECT"
+    ],
+    "objects": [
+      {
+        "name": "cam",
+        "type": "CAMERA",
+        "collection": "CAMERAS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          1.5,
+          -3.4000000953674316,
+          1.7000000476837158
+        ],
+        "world_location": [
+          1.5,
+          -3.4000000953674316,
+          1.7000000476837158
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "key",
+        "type": "LIGHT",
+        "collection": "LIGHTS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "world_location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "head_neck_shoulder_eye_brow_nose_mouth_ear_hair_pedestal_blob",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 512,
+        "verts": 482,
+        "materials": [
+          "flat_skin"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          1.2000000476837158
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          1.2000000476837158
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          1.3999991416931152,
+          1.3999994993209839,
+          1.399999976158142
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.9347,
+        "screen_bbox": [
+          0.0,
+          0.0,
+          0.9347,
+          1.0
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "backdrop_studio_dark",
+        "type": "MESH",
+        "collection": "ENVIRONMENT",
+        "faces": 1,
+        "verts": 4,
+        "materials": [
+          "flat_skin"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          2.5999999046325684,
+          3.200000047683716
+        ],
+        "world_location": [
+          0.0,
+          2.5999999046325684,
+          3.200000047683716
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          16.0,
+          16.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 1.0,
+        "screen_bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      }
+    ],
+    "materials": [
+      {
+        "name": "flat_skin",
+        "metallic": 0.0,
+        "roughness": 0.800000011920929,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 2,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      }
+    ],
+    "lights": [
+      {
+        "name": "key",
+        "type": "AREA",
+        "energy": 400.0,
+        "color": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "active_camera": {
+      "name": "cam",
+      "lens_mm": 68.0,
+      "dof": false,
+      "focus_target": null,
+      "inside_geometry": false,
+      "clip_end": 1000.0
+    },
+    "cameras": [
+      "cam"
+    ],
+    "node_groups": [],
+    "geometry_nodes": [],
+    "particles": [],
+    "animation": {
+      "has_action": false,
+      "frame_start": 1,
+      "frame_end": 250,
+      "fps": 24,
+      "keyframed_objects": [],
+      "markers": [],
+      "camera_animated": false,
+      "sampled_objects": [],
+      "moving_object_count": 0
+    },
+    "compositor": {
+      "use_nodes": false,
+      "node_names": [],
+      "raw_render_saved": true
+    },
+    "render": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "samples": 64,
+      "volumetric": false,
+      "view_transform": "AgX"
+    },
+    "metadata": {
+      "blender_cinematic_skill_version": "0.1",
+      "task_id": "bench_bust",
+      "quality_profile": "balanced",
+      "final_camera": "cam",
+      "camera_preset": "macro_product",
+      "camera_subject_screen_coverage": 0.6,
+      "camera_safe_margin": 0.08
+    },
+    "camera_path_json": null,
+    "missing_files": []
+  },
+  "inspect_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\character_bust_portrait_adversarial_slop_sphere_named_character_keywords\\iterations\\iter_01_inspect.json",
+  "render": {
+    "rendered": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\character_bust_portrait_adversarial_slop_sphere_named_character_keywords\\iterations\\iter_01_preview.png",
+    "frame": 1,
+    "settings": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        480,
+        270
+      ],
+      "samples": 24,
+      "device": "CPU"
+    }
+  },
+  "export": {
+    "exported": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\character_bust_portrait_adversarial_slop_sphere_named_character_keywords\\final\\export_final.glb",
+    "size_bytes": 55404
+  },
+  "saved": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\character_bust_portrait_adversarial_slop_sphere_named_character_keywords\\final\\scene.blend"
+}

@@ -1,0 +1,1566 @@
+{
+  "schema": "scene_inspection/0.1",
+  "collections": [
+    "CAMERAS",
+    "Collection",
+    "ENVIRONMENT",
+    "EXPORT",
+    "FX",
+    "HELPERS",
+    "LIGHTS",
+    "SUBJECT"
+  ],
+  "objects": [
+    {
+      "name": "camera_portrait",
+      "type": "CAMERA",
+      "collection": "CAMERAS",
+      "faces": 0,
+      "verts": 0,
+      "materials": [],
+      "modifiers": [],
+      "location": [
+        1.850000023841858,
+        -4.400000095367432,
+        2.0
+      ],
+      "world_location": [
+        1.850000023841858,
+        -4.400000095367432,
+        2.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0,
+      "screen_bbox": null,
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "key_soft",
+      "type": "LIGHT",
+      "collection": "LIGHTS",
+      "faces": 0,
+      "verts": 0,
+      "materials": [],
+      "modifiers": [],
+      "location": [
+        -4.0,
+        -4.0,
+        5.0
+      ],
+      "world_location": [
+        -4.0,
+        -4.0,
+        5.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0,
+      "screen_bbox": null,
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "fill_soft",
+      "type": "LIGHT",
+      "collection": "LIGHTS",
+      "faces": 0,
+      "verts": 0,
+      "materials": [],
+      "modifiers": [],
+      "location": [
+        3.0,
+        -3.0,
+        4.0
+      ],
+      "world_location": [
+        3.0,
+        -3.0,
+        4.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0,
+      "screen_bbox": null,
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "rim_hair",
+      "type": "LIGHT",
+      "collection": "LIGHTS",
+      "faces": 0,
+      "verts": 0,
+      "materials": [],
+      "modifiers": [],
+      "location": [
+        0.0,
+        4.0,
+        3.0
+      ],
+      "world_location": [
+        0.0,
+        4.0,
+        3.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0,
+      "screen_bbox": null,
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "pedestal_stone_round",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 34,
+      "verts": 64,
+      "materials": [
+        "pedestal_grey_stone"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.30000001192092896
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.30000001192092896
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.100000023841858,
+        1.100000023841858,
+        0.6050000190734863
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0915,
+      "screen_bbox": [
+        0.2067,
+        0.0,
+        0.7607,
+        0.1651
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "pedestal_trim_ring",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 34,
+      "verts": 64,
+      "materials": [
+        "pedestal_grey_stone"
+      ],
+      "modifiers": [],
+      "location": [
+        0.0,
+        0.0,
+        0.5600000023841858
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.5600000023841858
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.1799999475479126,
+        1.1799999475479126,
+        0.10620000213384628
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.1064,
+      "screen_bbox": [
+        0.1838,
+        0.0,
+        0.7786,
+        0.1789
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "shoulder_mass_bust",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "skin_warm_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.9200000166893005
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.9200000166893005
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.5478465557098389,
+        0.7559999823570251,
+        0.6089999675750732
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.3532,
+      "screen_bbox": [
+        0.1607,
+        0.0,
+        0.8326,
+        0.5257
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "neck_column",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 34,
+      "verts": 64,
+      "materials": [
+        "skin_warm_soft"
+      ],
+      "modifiers": [],
+      "location": [
+        0.0,
+        -0.019999999552965164,
+        1.2799999713897705
+      ],
+      "world_location": [
+        0.0,
+        -0.019999999552965164,
+        1.2799999713897705
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.3059999942779541,
+        0.3400000035762787,
+        0.8840000033378601
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.1083,
+      "screen_bbox": [
+        0.4127,
+        0.1599,
+        0.5777,
+        0.8161
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "head_cranium",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "skin_warm_soft"
+      ],
+      "modifiers": [
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0,
+        -0.009999999776482582,
+        1.7200000286102295
+      ],
+      "world_location": [
+        0.0,
+        -0.009999999776482582,
+        1.7200000286102295
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.5331999063491821,
+        0.4959999620914459,
+        0.6696000099182129
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.1265,
+      "screen_bbox": [
+        0.3574,
+        0.5399,
+        0.6323,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "eye_left_white",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "eye_white_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.11500000208616257,
+        -0.23499999940395355,
+        1.7799999713897705
+      ],
+      "world_location": [
+        -0.11500000208616257,
+        -0.23499999940395355,
+        1.7799999713897705
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.07499995827674866,
+        0.041249990463256836,
+        0.07500000298023224
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.002,
+      "screen_bbox": [
+        0.401,
+        0.8146,
+        0.4364,
+        0.8721
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "eye_right_white",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "eye_white_warm"
+      ],
+      "modifiers": [],
+      "location": [
+        0.11500000208616257,
+        -0.23499999940395355,
+        1.7799999713897705
+      ],
+      "world_location": [
+        0.11500000208616257,
+        -0.23499999940395355,
+        1.7799999713897705
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.07499995827674866,
+        0.041249990463256836,
+        0.07500000298023224
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0021,
+      "screen_bbox": [
+        0.4884,
+        0.8108,
+        0.5242,
+        0.8695
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "eye_left_pupil",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "pupil_dark_gloss"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.11500000208616257,
+        -0.26899999380111694,
+        1.7799999713897705
+      ],
+      "world_location": [
+        -0.11500000208616257,
+        -0.26899999380111694,
+        1.7799999713897705
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.03199998289346695,
+        0.012799997813999653,
+        0.03200000151991844
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0004,
+      "screen_bbox": [
+        0.4055,
+        0.8301,
+        0.4199,
+        0.8546
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "eye_right_pupil",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "pupil_dark_gloss"
+      ],
+      "modifiers": [],
+      "location": [
+        0.11500000208616257,
+        -0.26899999380111694,
+        1.7799999713897705
+      ],
+      "world_location": [
+        0.11500000208616257,
+        -0.26899999380111694,
+        1.7799999713897705
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.03199998289346695,
+        0.012799997813999653,
+        0.03200000151991844
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0004,
+      "screen_bbox": [
+        0.4934,
+        0.8266,
+        0.508,
+        0.8517
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "brow_left_arch_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "hair_chestnut"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.11500000208616257,
+        -0.24500000476837158,
+        1.8600000143051147
+      ],
+      "world_location": [
+        -0.11500000208616257,
+        -0.24500000476837158,
+        1.8600000143051147
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.03527172654867172,
+        0.12968911230564117,
+        0.07887226343154907
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0035,
+      "screen_bbox": [
+        0.3852,
+        0.8094,
+        0.4213,
+        0.9069
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "brow",
+      "craft_group": "brow_left_arch",
+      "craft_source": null
+    },
+    {
+      "name": "brow_right_arch_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "hair_chestnut"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.11500000208616257,
+        -0.24500000476837158,
+        1.8600000143051147
+      ],
+      "world_location": [
+        0.11500000208616257,
+        -0.24500000476837158,
+        1.8600000143051147
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.03527172654867172,
+        0.12968911230564117,
+        0.07887226343154907
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0036,
+      "screen_bbox": [
+        0.4723,
+        0.8056,
+        0.5086,
+        0.905
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "brow",
+      "craft_group": "brow_right_arch",
+      "craft_source": null
+    },
+    {
+      "name": "nose_bridge_wedge",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 33,
+      "verts": 33,
+      "materials": [
+        "skin_warm_soft"
+      ],
+      "modifiers": [],
+      "location": [
+        0.0,
+        -0.27000001072883606,
+        1.659999966621399
+      ],
+      "world_location": [
+        0.0,
+        -0.27000001072883606,
+        1.659999966621399
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.06300000101327896,
+        0.13500000536441803,
+        0.09000000357627869
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0035,
+      "screen_bbox": [
+        0.4324,
+        0.7132,
+        0.4796,
+        0.7883
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "mouth_soft_crease",
+      "type": "CURVE",
+      "collection": "SUBJECT",
+      "faces": 0,
+      "verts": 0,
+      "materials": [
+        "mouth_muted_berry"
+      ],
+      "modifiers": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.15960422158241272,
+        0.031663164496421814,
+        0.03994739055633545
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0024,
+      "screen_bbox": [
+        0.4271,
+        0.6455,
+        0.4928,
+        0.6816
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "mouth",
+      "craft_group": "mouth_soft_crease",
+      "craft_source": null
+    },
+    {
+      "name": "ear_left",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "skin_warm_soft"
+      ],
+      "modifiers": [],
+      "location": [
+        -0.27000001072883606,
+        -0.019999999552965164,
+        1.7400000095367432
+      ],
+      "world_location": [
+        -0.27000001072883606,
+        -0.019999999552965164,
+        1.7400000095367432
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.03849998116493225,
+        0.06049998477101326,
+        0.07699999958276749
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0014,
+      "screen_bbox": [
+        0.3878,
+        0.796,
+        0.4119,
+        0.8522
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "ear_right",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 512,
+      "verts": 482,
+      "materials": [
+        "skin_warm_soft"
+      ],
+      "modifiers": [],
+      "location": [
+        0.27000001072883606,
+        -0.019999999552965164,
+        1.7400000095367432
+      ],
+      "world_location": [
+        0.27000001072883606,
+        -0.019999999552965164,
+        1.7400000095367432
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.03849998116493225,
+        0.06049998477101326,
+        0.07699999958276749
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0014,
+      "screen_bbox": [
+        0.5865,
+        0.7865,
+        0.6099,
+        0.8453
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "hair_cap_swept",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 80,
+      "verts": 42,
+      "materials": [
+        "hair_chestnut"
+      ],
+      "modifiers": [
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0,
+        0.04500000178813934,
+        1.8200000524520874
+      ],
+      "world_location": [
+        0.0,
+        0.04500000178813934,
+        1.8200000524520874
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.5900363326072693,
+        0.593999981880188,
+        0.607200026512146
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.1118,
+      "screen_bbox": [
+        0.3477,
+        0.6374,
+        0.6559,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "hair_fringe_front_01",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "hair_chestnut"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.14000000059604645,
+        -0.23999999463558197,
+        1.940000057220459
+      ],
+      "world_location": [
+        -0.14000000059604645,
+        -0.23999999463558197,
+        1.940000057220459
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.08220106363296509,
+        0.17805741727352142,
+        0.163644477725029
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0117,
+      "screen_bbox": [
+        0.3796,
+        0.8014,
+        0.4491,
+        0.9693
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "hair",
+      "craft_group": "hair_fringe_front",
+      "craft_source": null
+    },
+    {
+      "name": "hair_fringe_front_02",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "hair_chestnut"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        -0.04999999701976776,
+        -0.23999999463558197,
+        1.9250000715255737
+      ],
+      "world_location": [
+        -0.04999999701976776,
+        -0.23999999463558197,
+        1.9250000715255737
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.08220106363296509,
+        0.17805741727352142,
+        0.163644477725029
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0116,
+      "screen_bbox": [
+        0.4136,
+        0.7889,
+        0.4824,
+        0.9578
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "hair",
+      "craft_group": "hair_fringe_front",
+      "craft_source": null
+    },
+    {
+      "name": "hair_fringe_front_03",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "hair_chestnut"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.040000006556510925,
+        -0.23999999463558197,
+        1.9100000858306885
+      ],
+      "world_location": [
+        0.040000006556510925,
+        -0.23999999463558197,
+        1.9100000858306885
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.08220106363296509,
+        0.17805741727352142,
+        0.163644477725029
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0116,
+      "screen_bbox": [
+        0.448,
+        0.7763,
+        0.5161,
+        0.9462
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "hair",
+      "craft_group": "hair_fringe_front",
+      "craft_source": null
+    },
+    {
+      "name": "hair_fringe_front_04",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 48,
+      "verts": 63,
+      "materials": [
+        "hair_chestnut"
+      ],
+      "modifiers": [
+        {
+          "type": "SOLIDIFY",
+          "show_render": true
+        },
+        {
+          "type": "SUBSURF",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.1300000101327896,
+        -0.23999999463558197,
+        1.8950001001358032
+      ],
+      "world_location": [
+        0.1300000101327896,
+        -0.23999999463558197,
+        1.8950001001358032
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.08220106363296509,
+        0.17805741727352142,
+        0.163644477725029
+      ],
+      "visible": true,
+      "smooth": true,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0115,
+      "screen_bbox": [
+        0.483,
+        0.7634,
+        0.5503,
+        0.9344
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": "hair",
+      "craft_group": "hair_fringe_front",
+      "craft_source": null
+    },
+    {
+      "name": "backdrop_studio_dark",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 1,
+      "verts": 4,
+      "materials": [
+        "backdrop_charcoal"
+      ],
+      "modifiers": [],
+      "location": [
+        0.0,
+        2.5999999046325684,
+        3.200000047683716
+      ],
+      "world_location": [
+        0.0,
+        2.5999999046325684,
+        3.200000047683716
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        16.0,
+        6.993822125878069e-07,
+        16.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 1.0,
+      "screen_bbox": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "backdrop_floor_sweep",
+      "type": "MESH",
+      "collection": "ENVIRONMENT",
+      "faces": 1,
+      "verts": 4,
+      "materials": [
+        "backdrop_charcoal"
+      ],
+      "modifiers": [],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        20.0,
+        20.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.6528,
+      "screen_bbox": [
+        0.0,
+        0.3472,
+        1.0,
+        1.0
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    }
+  ],
+  "materials": [
+    {
+      "name": "backdrop_charcoal",
+      "metallic": 0.0,
+      "roughness": 0.949999988079071,
+      "node_count": 2,
+      "link_count": 1,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF"
+      ],
+      "users": 2,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "eye_white_warm",
+      "metallic": 0.0,
+      "roughness": 0.25,
+      "node_count": 2,
+      "link_count": 1,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF"
+      ],
+      "users": 2,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "hair_chestnut",
+      "metallic": 0.0,
+      "roughness": 0.550000011920929,
+      "node_count": 4,
+      "link_count": 3,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF",
+        "NG_hair_chestnut_Noise",
+        "NG_hair_chestnut_Bump"
+      ],
+      "users": 7,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "noise_bump",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "mouth_muted_berry",
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "node_count": 2,
+      "link_count": 1,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF"
+      ],
+      "users": 1,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "pedestal_grey_stone",
+      "metallic": 0.0,
+      "roughness": 0.800000011920929,
+      "node_count": 4,
+      "link_count": 3,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF",
+        "NG_pedestal_grey_stone_Noise",
+        "NG_pedestal_grey_stone_Bump"
+      ],
+      "users": 2,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "noise_bump",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "pupil_dark_gloss",
+      "metallic": 0.0,
+      "roughness": 0.15000000596046448,
+      "node_count": 2,
+      "link_count": 1,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF"
+      ],
+      "users": 2,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "",
+      "image_texture_roles": ""
+    },
+    {
+      "name": "skin_warm_soft",
+      "metallic": 0.0,
+      "roughness": 0.6200000047683716,
+      "node_count": 4,
+      "link_count": 3,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF",
+        "NG_skin_warm_soft_Noise",
+        "NG_skin_warm_soft_Bump"
+      ],
+      "users": 6,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "noise_bump",
+      "image_texture_roles": ""
+    }
+  ],
+  "lights": [
+    {
+      "name": "key_soft",
+      "type": "AREA",
+      "energy": 550.0,
+      "color": [
+        1.0,
+        0.8999999761581421,
+        0.800000011920929
+      ]
+    },
+    {
+      "name": "fill_soft",
+      "type": "AREA",
+      "energy": 240.0,
+      "color": [
+        0.8500000238418579,
+        0.8999999761581421,
+        1.0
+      ]
+    },
+    {
+      "name": "rim_hair",
+      "type": "AREA",
+      "energy": 420.0,
+      "color": [
+        1.0,
+        0.8500000238418579,
+        0.699999988079071
+      ]
+    }
+  ],
+  "active_camera": {
+    "name": "camera_portrait",
+    "lens_mm": 68.0,
+    "dof": true,
+    "focus_target": "head_cranium",
+    "inside_geometry": false,
+    "clip_end": 1000.0
+  },
+  "cameras": [
+    "camera_portrait"
+  ],
+  "node_groups": [],
+  "geometry_nodes": [],
+  "particles": [],
+  "animation": {
+    "has_action": false,
+    "frame_start": 1,
+    "frame_end": 250,
+    "fps": 24,
+    "keyframed_objects": [],
+    "markers": [],
+    "camera_animated": false,
+    "sampled_objects": [],
+    "moving_object_count": 0
+  },
+  "compositor": {
+    "use_nodes": false,
+    "node_names": [],
+    "raw_render_saved": true
+  },
+  "render": {
+    "engine": "BLENDER_EEVEE",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "samples": 64,
+    "volumetric": false,
+    "view_transform": "AgX"
+  },
+  "metadata": {
+    "blender_cinematic_skill_version": "0.1",
+    "task_id": "bench_bust",
+    "quality_profile": "balanced",
+    "final_camera": "camera_portrait",
+    "camera_preset": "hero_low_angle",
+    "camera_subject_screen_coverage": 0.55,
+    "camera_safe_margin": 0.12
+  },
+  "camera_path_json": null,
+  "missing_files": []
+}

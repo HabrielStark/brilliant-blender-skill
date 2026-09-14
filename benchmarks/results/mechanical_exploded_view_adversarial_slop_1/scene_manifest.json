@@ -1,0 +1,15 @@
+{
+  "task_id": "bench_exploded",
+  "brief": "mechanical exploded view, technical clarity",
+  "output_mode": "still",
+  "style": {
+    "mood": "technical clean"
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "png"
+    ]
+  },
+  "constraints": {}
+}

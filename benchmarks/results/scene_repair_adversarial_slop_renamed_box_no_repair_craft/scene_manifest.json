@@ -1,0 +1,21 @@
+{
+  "task_id": "bench_scene_repair",
+  "brief": "repair a broken scene: add camera, lights, materials, names",
+  "output_mode": "scene_repair",
+  "style": {
+    "mood": "warm repair studio",
+    "palette": [
+      "warm ivory",
+      "sage green",
+      "brass",
+      "soft gray"
+    ]
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "png"
+    ]
+  },
+  "constraints": {}
+}

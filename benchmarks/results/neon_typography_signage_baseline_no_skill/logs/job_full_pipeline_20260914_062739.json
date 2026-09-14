@@ -1,0 +1,68 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\neon_typography_signage_baseline_no_skill",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\neon_typography_signage_baseline_no_skill\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_neon_sign",
+    "brief": "moody neon typography signage hero shot",
+    "output_mode": "still",
+    "style": {
+      "mood": "moody cinematic neon",
+      "palette": [
+        "charcoal",
+        "hot pink",
+        "warm amber"
+      ]
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ],
+      "web_runtime": "three"
+    }
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 15.0/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "Cube",
+        "size": 2
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\neon_typography_signage_baseline_no_skill\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\neon_typography_signage_baseline_no_skill\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\neon_typography_signage_baseline_no_skill\\logs\\result_full_pipeline_20260914_062739.json"
+}

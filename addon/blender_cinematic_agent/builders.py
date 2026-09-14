@@ -1077,7 +1077,7 @@ def op_create_linear_markers(p):
 
 
 def _organic_surface_mesh(name, length, width, curl, bend, taper, segments_u, segments_v,
-                          shape="taper"):
+                          shape="taper", fold_count=3, fold_depth=0.0):
     """Build a tapered, curved single-sided organic surface mesh."""
     bm = bmesh.new()
     verts = []
@@ -1090,6 +1090,14 @@ def _organic_surface_mesh(name, length, width, curl, bend, taper, segments_u, se
             base = 0.3 + 0.7 * min(v / 0.55, 1.0)
             tip = 1.0 - taper * max(0.0, (v - 0.55) / 0.45)
             taper_width = width * base * max(0.06, tip)
+        elif shape == "drape":
+            # Hanging cloth: near-constant width along the drop with a softly
+            # rounded free hem; visible structure comes from across-width
+            # fold undulation (below), not tapering to a point.
+            hem = 1.0
+            if v > 0.82:
+                hem = max(0.55, math.cos((v - 0.82) / 0.18 * math.pi * 0.5))
+            taper_width = width * (1.0 - 0.15 * taper * v) * hem
         else:
             taper_width = width * (1.0 - taper * v)
             taper_width = max(width * 0.12, taper_width)
@@ -1099,7 +1107,12 @@ def _organic_surface_mesh(name, length, width, curl, bend, taper, segments_u, se
             edge_falloff = 1.0 - min(abs(u) * 2.0, 1.0)
             x = u * taper_width
             z = math.sin(v * math.pi) * curl
-            z += math.sin((u + 0.5) * math.pi) * bend * edge_falloff
+            if shape == "drape":
+                # Alternating ridge/valley folds deepen toward the free hem.
+                z += math.sin(u * fold_count * 2.0 * math.pi) * fold_depth * v * v
+                z += math.sin((u + 0.5) * math.pi) * bend * edge_falloff * 0.25
+            else:
+                z += math.sin((u + 0.5) * math.pi) * bend * edge_falloff
             row.append(bm.verts.new((x, y, z)))
         verts.append(row)
     bm.verts.ensure_lookup_table()
@@ -1129,6 +1142,8 @@ def op_create_organic_surface_details(p):
     bend = float(p.get("bend", 0.02))
     taper = max(0.0, min(0.92, float(p.get("taper", 0.72))))
     shape = str(p.get("shape", "taper")).lower()
+    fold_count = max(1, min(12, int(p.get("folds", 3))))
+    fold_depth = max(0.0, min(2.0, float(p.get("fold_depth", 0.06))))
     seg_u = max(3, min(16, int(p.get("segments_u", 6))))
     seg_v = max(3, min(18, int(p.get("segments_v", 8))))
     tilt = math.radians(float(p.get("tilt_degrees", 18.0)))
@@ -1142,7 +1157,7 @@ def op_create_organic_surface_details(p):
     for i in range(count):
         name = f"{p['name_prefix']}_{i + 1:02d}"
         obj = _organic_surface_mesh(name, length, width, curl, bend, taper, seg_u, seg_v,
-                                    shape=shape)
+                                    shape=shape, fold_count=fold_count, fold_depth=fold_depth)
         if pattern == "linear":
             obj.location = start + step * i
             obj.rotation_euler = rotation

@@ -1,0 +1,249 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\product_hero_watch_adversarial_slop_keyword_disc",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\product_hero_watch_adversarial_slop_keyword_disc\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_product_hero_watch",
+    "brief": "premium cinematic watch product hero",
+    "output_mode": "web_asset",
+    "style": {
+      "mood": "premium cinematic sharp"
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png",
+        "glb"
+      ],
+      "web_runtime": "react-three-fiber"
+    },
+    "constraints": {
+      "max_glb_mb": 20
+    }
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 15.1/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "plane",
+        "name": "reflective_floor",
+        "size": 12,
+        "collection": "ENVIRONMENT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "watch_case_bezel_dial_glass_strap_ridge_marker_hand_crown_disc",
+        "size": 2.0,
+        "location": [
+          0,
+          0,
+          0.55
+        ],
+        "scale": [
+          1,
+          1,
+          0.18
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "watch_case_bezel_dial_glass_strap_ridge_marker_hand_crown_disc",
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "watch_case_bezel_dial_glass_strap_ridge_marker_hand_crown_disc",
+        "smooth": true
+      },
+      {
+        "op": "add_bevel_modifier",
+        "target": "watch_case_bezel_dial_glass_strap_ridge_marker_hand_crown_disc",
+        "width": 0.03,
+        "segments": 2
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "watch_strap_fake_single_bar",
+        "size": 1,
+        "location": [
+          0,
+          -1.5,
+          0.4
+        ],
+        "scale": [
+          0.4,
+          1.0,
+          0.06
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "watch_strap_fake_single_bar",
+        "scale": true
+      },
+      {
+        "op": "add_bevel_modifier",
+        "target": "watch_strap_fake_single_bar",
+        "width": 0.02,
+        "segments": 1
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "brushed_black_titanium",
+          "preset": "brushed_metal",
+          "target_objects": [
+            "watch_case_bezel_dial_glass_strap_ridge_marker_hand_crown_disc"
+          ],
+          "pbr": {
+            "base_color": [
+              0.02,
+              0.022,
+              0.026,
+              1
+            ],
+            "metallic": 1.0,
+            "roughness": 0.34
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "strap_soft_black_rubber",
+          "preset": "rubber_dark",
+          "target_objects": [
+            "watch_strap_fake_single_bar"
+          ],
+          "pbr": {
+            "base_color": [
+              0.012,
+              0.012,
+              0.015,
+              1
+            ],
+            "roughness": 0.78
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "dark_floor",
+          "preset": "glossy_plastic",
+          "target_objects": [
+            "reflective_floor"
+          ],
+          "pbr": {
+            "base_color": [
+              0.008,
+              0.008,
+              0.011,
+              1
+            ],
+            "roughness": 0.18
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "adversarial_product_lit",
+          "lights": [
+            {
+              "name": "key_softbox_left",
+              "type": "AREA",
+              "power": 650,
+              "size": 7,
+              "position_role": "front_left_high"
+            },
+            {
+              "name": "rim_blue_right",
+              "type": "AREA",
+              "power": 220,
+              "size": 2.4,
+              "color": [
+                0.35,
+                0.55,
+                1.0
+              ],
+              "position_role": "rim"
+            }
+          ],
+          "world": {
+            "color": [
+              0.012,
+              0.014,
+              0.02
+            ],
+            "strength": 0.35
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "camera_adversarial_watch",
+          "target": "watch_case_bezel_dial_glass_strap_ridge_marker_hand_crown_disc",
+          "location": [
+            4.8,
+            -6.4,
+            3.6
+          ],
+          "lens": {
+            "focal_length_mm": 70,
+            "dof": true,
+            "focus_target": "watch_case_bezel_dial_glass_strap_ridge_marker_hand_crown_disc"
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "camera_adversarial_watch"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\product_hero_watch_adversarial_slop_keyword_disc\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\product_hero_watch_adversarial_slop_keyword_disc\\iterations\\iter_01_inspect.json",
+    "glb": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\product_hero_watch_adversarial_slop_keyword_disc\\final\\export_final.glb"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\product_hero_watch_adversarial_slop_keyword_disc\\logs\\result_full_pipeline_20260914_062820.json"
+}

@@ -1,0 +1,238 @@
+{
+  "schema": "scene_inspection/0.1",
+  "collections": [
+    "CAMERAS",
+    "Collection",
+    "ENVIRONMENT",
+    "EXPORT",
+    "FX",
+    "HELPERS",
+    "LIGHTS",
+    "SUBJECT"
+  ],
+  "objects": [
+    {
+      "name": "camera_repaired_keyword_box",
+      "type": "CAMERA",
+      "collection": "CAMERAS",
+      "faces": 0,
+      "verts": 0,
+      "materials": [],
+      "modifiers": [],
+      "location": [
+        3.700000047683716,
+        -4.900000095367432,
+        2.25
+      ],
+      "world_location": [
+        3.700000047683716,
+        -4.900000095367432,
+        2.25
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0,
+      "screen_bbox": null,
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "warm_key",
+      "type": "LIGHT",
+      "collection": "LIGHTS",
+      "faces": 0,
+      "verts": 0,
+      "materials": [],
+      "modifiers": [],
+      "location": [
+        -4.0,
+        -4.0,
+        5.0
+      ],
+      "world_location": [
+        -4.0,
+        -4.0,
+        5.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.0,
+      "screen_bbox": null,
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    },
+    {
+      "name": "repaired_base_panel_accent_handle_hinge_screw_label_tick_box",
+      "type": "MESH",
+      "collection": "SUBJECT",
+      "faces": 6,
+      "verts": 8,
+      "materials": [
+        "single_warm_repair_material"
+      ],
+      "modifiers": [
+        {
+          "type": "BEVEL",
+          "show_render": true
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "world_location": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "visible": true,
+      "smooth": false,
+      "in_camera_frame": true,
+      "screen_coverage": 0.6597,
+      "screen_bbox": [
+        0.1424,
+        0.0,
+        0.8357,
+        0.9514
+      ],
+      "non_manifold": false,
+      "flipped_normals": false,
+      "gn_recipe": null,
+      "gn_role": null,
+      "gn_source": null,
+      "craft_role": null,
+      "craft_group": null,
+      "craft_source": null
+    }
+  ],
+  "materials": [
+    {
+      "name": "single_warm_repair_material",
+      "metallic": 0.0,
+      "roughness": 0.550000011920929,
+      "node_count": 2,
+      "link_count": 1,
+      "node_names": [
+        "Material Output",
+        "Principled BSDF"
+      ],
+      "users": 1,
+      "has_emission": false,
+      "has_transmission": false,
+      "web_unsafe": false,
+      "has_fallback": false,
+      "is_default": false,
+      "max_texture_resolution": null,
+      "procedural_features": "",
+      "image_texture_roles": ""
+    }
+  ],
+  "lights": [
+    {
+      "name": "warm_key",
+      "type": "AREA",
+      "energy": 350.0,
+      "color": [
+        1.0,
+        0.8799999952316284,
+        0.6800000071525574
+      ]
+    }
+  ],
+  "active_camera": {
+    "name": "camera_repaired_keyword_box",
+    "lens_mm": 54.0,
+    "dof": false,
+    "focus_target": null,
+    "inside_geometry": false,
+    "clip_end": 1000.0
+  },
+  "cameras": [
+    "camera_repaired_keyword_box"
+  ],
+  "node_groups": [],
+  "geometry_nodes": [],
+  "particles": [],
+  "animation": {
+    "has_action": false,
+    "frame_start": 1,
+    "frame_end": 250,
+    "fps": 24,
+    "keyframed_objects": [],
+    "markers": [],
+    "camera_animated": false,
+    "sampled_objects": [],
+    "moving_object_count": 0
+  },
+  "compositor": {
+    "use_nodes": false,
+    "node_names": [],
+    "raw_render_saved": true
+  },
+  "render": {
+    "engine": "BLENDER_EEVEE",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "samples": 64,
+    "volumetric": false,
+    "view_transform": "AgX"
+  },
+  "metadata": {
+    "blender_cinematic_skill_version": "0.1",
+    "task_id": "bench_scene_repair",
+    "quality_profile": "balanced",
+    "final_camera": "camera_repaired_keyword_box",
+    "camera_preset": "macro_product",
+    "camera_subject_screen_coverage": 0.6,
+    "camera_safe_margin": 0.08
+  },
+  "camera_path_json": null,
+  "missing_files": []
+}

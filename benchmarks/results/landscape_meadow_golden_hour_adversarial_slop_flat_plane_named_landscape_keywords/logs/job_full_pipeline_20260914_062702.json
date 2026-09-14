@@ -1,0 +1,153 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\landscape_meadow_golden_hour_adversarial_slop_flat_plane_named_landscape_keywords",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\landscape_meadow_golden_hour_adversarial_slop_flat_plane_named_landscape_keywords\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_meadow",
+    "brief": "golden-hour meadow landscape hero",
+    "output_mode": "still",
+    "style": {
+      "mood": "warm golden hour pastoral",
+      "palette": [
+        "olive green",
+        "warm amber",
+        "cool shadow"
+      ]
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ],
+      "web_runtime": "three"
+    }
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 14.9/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "plane",
+        "name": "meadow_ground_plane",
+        "size": 20,
+        "collection": "ENVIRONMENT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "mound_boulder_rock_grass_path_stone_leaf_sun_flat",
+        "size": 2.0,
+        "location": [
+          0,
+          0.4,
+          0.5
+        ],
+        "scale": [
+          1.2,
+          1.0,
+          0.3
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "flat_green",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "mound_boulder_rock_grass_path_stone_leaf_sun_flat",
+            "meadow_ground_plane"
+          ],
+          "pbr": {
+            "base_color": [
+              0.2,
+              0.26,
+              0.1,
+              1
+            ],
+            "roughness": 0.9
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "flat",
+          "lights": [
+            {
+              "name": "key",
+              "type": "AREA",
+              "power": 400,
+              "size": 5,
+              "position_role": "front_left_high"
+            }
+          ],
+          "world": {
+            "color": [
+              0.1,
+              0.1,
+              0.1
+            ],
+            "strength": 0.5
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "cam",
+          "target": "mound_boulder_rock_grass_path_stone_leaf_sun_flat",
+          "location": [
+            3,
+            -4.5,
+            1.9
+          ],
+          "lens": {
+            "focal_length_mm": 45
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "cam"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\landscape_meadow_golden_hour_adversarial_slop_flat_plane_named_landscape_keywords\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\landscape_meadow_golden_hour_adversarial_slop_flat_plane_named_landscape_keywords\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\landscape_meadow_golden_hour_adversarial_slop_flat_plane_named_landscape_keywords\\logs\\result_full_pipeline_20260914_062702.json"
+}

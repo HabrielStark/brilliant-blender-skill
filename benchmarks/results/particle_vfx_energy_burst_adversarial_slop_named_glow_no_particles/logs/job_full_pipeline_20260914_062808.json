@@ -1,0 +1,174 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_particle_vfx_energy_burst",
+    "brief": "particle VFX energy burst with emissive core and visible sparks",
+    "output_mode": "still",
+    "style": {
+      "mood": "cinematic neon energy"
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ]
+    },
+    "constraints": {}
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 15.1/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "uv_sphere",
+        "name": "energy_core_particle_spark_trail_ring",
+        "size": 1.2,
+        "location": [
+          0,
+          0,
+          1.2
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "torus",
+        "name": "particle_ring_trail_fake_orbit",
+        "size": 1.6,
+        "location": [
+          0,
+          0,
+          1.2
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "energy_core_particle_spark_trail_ring",
+        "smooth": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "particle_ring_trail_fake_orbit",
+        "smooth": true
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "flat_blue_emissive_core",
+          "preset": "emissive_neon",
+          "target_objects": [
+            "energy_core_particle_spark_trail_ring",
+            "particle_ring_trail_fake_orbit"
+          ],
+          "pbr": {
+            "base_color": [
+              0.1,
+              0.3,
+              1.0,
+              1
+            ],
+            "emission_color": [
+              0.1,
+              0.3,
+              1.0,
+              1
+            ],
+            "emission_strength": 1.2
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "flat_vfx_light",
+          "lights": [
+            {
+              "name": "blue_key",
+              "type": "AREA",
+              "power": 280,
+              "size": 4,
+              "color": [
+                0.4,
+                0.6,
+                1.0
+              ],
+              "position_role": "front_left_high"
+            }
+          ],
+          "world": {
+            "color": [
+              0.01,
+              0.012,
+              0.02
+            ],
+            "strength": 0.3
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "camera_vfx_keyword",
+          "target": "energy_core_particle_spark_trail_ring",
+          "look_at": [
+            0,
+            0,
+            1.2
+          ],
+          "location": [
+            2.45,
+            -4.85,
+            2.22
+          ],
+          "lens": {
+            "focal_length_mm": 68
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "camera_vfx_keyword"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\particle_vfx_energy_burst_adversarial_slop_named_glow_no_particles\\logs\\result_full_pipeline_20260914_062808.json"
+}

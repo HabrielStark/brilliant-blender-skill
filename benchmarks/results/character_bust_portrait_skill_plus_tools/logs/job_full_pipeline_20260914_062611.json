@@ -1,0 +1,805 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\character_bust_portrait_skill_plus_tools",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\character_bust_portrait_skill_plus_tools\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_bust",
+    "brief": "stylized character bust portrait hero",
+    "output_mode": "still",
+    "style": {
+      "mood": "soft portrait studio",
+      "palette": [
+        "warm skin",
+        "dark hair",
+        "charcoal backdrop"
+      ]
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ],
+      "web_runtime": "three"
+    }
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 14.7/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "plane",
+        "name": "backdrop_studio_dark",
+        "size": 16,
+        "location": [
+          0,
+          2.6,
+          3.2
+        ],
+        "rotation": [
+          90,
+          0,
+          0
+        ],
+        "collection": "ENVIRONMENT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "backdrop_studio_dark",
+        "rotation": true,
+        "scale": true
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "plane",
+        "name": "backdrop_floor_sweep",
+        "size": 20,
+        "collection": "ENVIRONMENT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "pedestal_stone_round",
+        "size": 1.1,
+        "location": [
+          0,
+          0,
+          0.3
+        ],
+        "scale": [
+          1,
+          1,
+          0.55
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "pedestal_stone_round",
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "pedestal_stone_round",
+        "smooth": true
+      },
+      {
+        "op": "add_bevel_modifier",
+        "target": "pedestal_stone_round",
+        "width": 0.04,
+        "segments": 2
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "pedestal_trim_ring",
+        "size": 1.18,
+        "location": [
+          0,
+          0,
+          0.56
+        ],
+        "scale": [
+          1,
+          1,
+          0.09
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "pedestal_trim_ring",
+        "scale": true
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "ico_sphere",
+        "name": "shoulder_mass_bust",
+        "size": 1.05,
+        "location": [
+          0,
+          0,
+          0.92
+        ],
+        "scale": [
+          1.55,
+          0.72,
+          0.58
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "shoulder_mass_bust",
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "shoulder_mass_bust",
+        "smooth": true
+      },
+      {
+        "op": "add_subdivision",
+        "target": "shoulder_mass_bust",
+        "levels": 1
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "neck_column",
+        "size": 0.34,
+        "location": [
+          0,
+          -0.02,
+          1.28
+        ],
+        "scale": [
+          0.9,
+          1,
+          2.6
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "neck_column",
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "neck_column",
+        "smooth": true
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "uv_sphere",
+        "name": "head_cranium",
+        "size": 0.62,
+        "location": [
+          0,
+          -0.01,
+          1.72
+        ],
+        "scale": [
+          0.86,
+          0.8,
+          1.08
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "head_cranium",
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "head_cranium",
+        "smooth": true
+      },
+      {
+        "op": "add_subdivision",
+        "target": "head_cranium",
+        "levels": 1
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "uv_sphere",
+        "name": "eye_left_white",
+        "size": 0.075,
+        "location": [
+          -0.115,
+          -0.235,
+          1.78
+        ],
+        "scale": [
+          1,
+          0.55,
+          1
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "uv_sphere",
+        "name": "eye_right_white",
+        "size": 0.075,
+        "location": [
+          0.115,
+          -0.235,
+          1.78
+        ],
+        "scale": [
+          1,
+          0.55,
+          1
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "uv_sphere",
+        "name": "eye_left_pupil",
+        "size": 0.032,
+        "location": [
+          -0.115,
+          -0.269,
+          1.78
+        ],
+        "scale": [
+          1,
+          0.4,
+          1
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "uv_sphere",
+        "name": "eye_right_pupil",
+        "size": 0.032,
+        "location": [
+          0.115,
+          -0.269,
+          1.78
+        ],
+        "scale": [
+          1,
+          0.4,
+          1
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "eye_left_white",
+        "smooth": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "eye_right_white",
+        "smooth": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "eye_left_pupil",
+        "smooth": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "eye_right_pupil",
+        "smooth": true
+      },
+      {
+        "op": "create_organic_surface_details",
+        "name_prefix": "brow_left_arch",
+        "pattern": "linear",
+        "count": 1,
+        "start": [
+          -0.115,
+          -0.245,
+          1.86
+        ],
+        "length": 0.12,
+        "width": 0.03,
+        "shape": "petal",
+        "curl": 0.05,
+        "bend": 0.02,
+        "taper": 0.5,
+        "rotation": [
+          -90,
+          0,
+          90
+        ],
+        "thickness": 0.012,
+        "collection": "SUBJECT",
+        "role": "brow"
+      },
+      {
+        "op": "create_organic_surface_details",
+        "name_prefix": "brow_right_arch",
+        "pattern": "linear",
+        "count": 1,
+        "start": [
+          0.115,
+          -0.245,
+          1.86
+        ],
+        "length": 0.12,
+        "width": 0.03,
+        "shape": "petal",
+        "curl": 0.05,
+        "bend": 0.02,
+        "taper": 0.5,
+        "rotation": [
+          -90,
+          0,
+          90
+        ],
+        "thickness": 0.012,
+        "collection": "SUBJECT",
+        "role": "brow"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cone",
+        "name": "nose_bridge_wedge",
+        "size": 0.09,
+        "location": [
+          0,
+          -0.27,
+          1.66
+        ],
+        "rotation": [
+          90,
+          0,
+          0
+        ],
+        "scale": [
+          0.7,
+          1,
+          1.5
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "nose_bridge_wedge",
+        "rotation": true,
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "nose_bridge_wedge",
+        "smooth": true
+      },
+      {
+        "op": "create_curve_tube",
+        "name": "mouth_soft_crease",
+        "points": [
+          [
+            -0.075,
+            -0.245,
+            1.55
+          ],
+          [
+            -0.03,
+            -0.255,
+            1.53
+          ],
+          [
+            0.03,
+            -0.255,
+            1.53
+          ],
+          [
+            0.075,
+            -0.245,
+            1.55
+          ]
+        ],
+        "bevel_depth": 0.011,
+        "collection": "SUBJECT",
+        "role": "mouth"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "uv_sphere",
+        "name": "ear_left",
+        "size": 0.11,
+        "location": [
+          -0.27,
+          -0.02,
+          1.74
+        ],
+        "scale": [
+          0.35,
+          0.55,
+          0.7
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "uv_sphere",
+        "name": "ear_right",
+        "size": 0.11,
+        "location": [
+          0.27,
+          -0.02,
+          1.74
+        ],
+        "scale": [
+          0.35,
+          0.55,
+          0.7
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "ear_left",
+        "scale": true
+      },
+      {
+        "op": "apply_transform",
+        "target": "ear_right",
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "ear_left",
+        "smooth": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "ear_right",
+        "smooth": true
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "ico_sphere",
+        "name": "hair_cap_swept",
+        "size": 0.66,
+        "location": [
+          0,
+          0.045,
+          1.82
+        ],
+        "scale": [
+          0.94,
+          0.9,
+          0.92
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "hair_cap_swept",
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "hair_cap_swept",
+        "smooth": true
+      },
+      {
+        "op": "add_subdivision",
+        "target": "hair_cap_swept",
+        "levels": 1
+      },
+      {
+        "op": "create_organic_surface_details",
+        "name_prefix": "hair_fringe_front",
+        "pattern": "linear",
+        "count": 4,
+        "start": [
+          -0.14,
+          -0.24,
+          1.94
+        ],
+        "step": [
+          0.09,
+          0,
+          -0.015
+        ],
+        "length": 0.16,
+        "width": 0.075,
+        "shape": "petal",
+        "curl": 0.1,
+        "bend": 0.05,
+        "taper": 0.55,
+        "rotation": [
+          -115,
+          0,
+          0
+        ],
+        "thickness": 0.02,
+        "collection": "SUBJECT",
+        "role": "hair"
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "skin_warm_soft",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "head_cranium",
+            "neck_column",
+            "shoulder_mass_bust",
+            "ear_left",
+            "ear_right",
+            "nose_bridge_wedge"
+          ],
+          "pbr": {
+            "base_color": [
+              0.62,
+              0.42,
+              0.3,
+              1
+            ],
+            "roughness": 0.62
+          },
+          "procedural": {
+            "noise": true,
+            "noise_scale": 22,
+            "bump_strength": 0.02
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "eye_white_warm",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "eye_left_white",
+            "eye_right_white"
+          ],
+          "pbr": {
+            "base_color": [
+              0.9,
+              0.88,
+              0.84,
+              1
+            ],
+            "roughness": 0.25
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "pupil_dark_gloss",
+          "preset": "gloss_black",
+          "target_objects": [
+            "eye_left_pupil",
+            "eye_right_pupil"
+          ],
+          "pbr": {
+            "base_color": [
+              0.05,
+              0.04,
+              0.05,
+              1
+            ],
+            "roughness": 0.15
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "hair_chestnut",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "hair_cap_swept",
+            "hair_fringe_front_01",
+            "hair_fringe_front_02",
+            "hair_fringe_front_03",
+            "hair_fringe_front_04",
+            "brow_left_arch_01",
+            "brow_right_arch_01"
+          ],
+          "pbr": {
+            "base_color": [
+              0.16,
+              0.09,
+              0.05,
+              1
+            ],
+            "roughness": 0.55
+          },
+          "procedural": {
+            "noise": true,
+            "noise_scale": 35,
+            "bump_strength": 0.03
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "mouth_muted_berry",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "mouth_soft_crease"
+          ],
+          "pbr": {
+            "base_color": [
+              0.4,
+              0.16,
+              0.14,
+              1
+            ],
+            "roughness": 0.5
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "pedestal_grey_stone",
+          "preset": "stone_concrete",
+          "target_objects": [
+            "pedestal_stone_round",
+            "pedestal_trim_ring"
+          ],
+          "pbr": {
+            "base_color": [
+              0.4,
+              0.4,
+              0.42,
+              1
+            ],
+            "roughness": 0.8
+          },
+          "procedural": {
+            "noise": true,
+            "noise_scale": 14,
+            "bump_strength": 0.04
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "backdrop_charcoal",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "backdrop_studio_dark",
+            "backdrop_floor_sweep"
+          ],
+          "pbr": {
+            "base_color": [
+              0.13,
+              0.13,
+              0.15,
+              1
+            ],
+            "roughness": 0.95
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "portrait_three_point",
+          "lights": [
+            {
+              "name": "key_soft",
+              "type": "AREA",
+              "power": 550,
+              "size": 3.5,
+              "color": [
+                1.0,
+                0.9,
+                0.8
+              ],
+              "position_role": "front_left_high"
+            },
+            {
+              "name": "fill_soft",
+              "type": "AREA",
+              "power": 240,
+              "size": 4,
+              "color": [
+                0.85,
+                0.9,
+                1.0
+              ],
+              "position_role": "front_right"
+            },
+            {
+              "name": "rim_hair",
+              "type": "AREA",
+              "power": 420,
+              "size": 2.5,
+              "color": [
+                1.0,
+                0.85,
+                0.7
+              ],
+              "position_role": "rim"
+            }
+          ],
+          "world": {
+            "color": [
+              0.09,
+              0.09,
+              0.1
+            ],
+            "strength": 0.5
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "camera_portrait",
+          "preset": "hero_low_angle",
+          "target": "head_cranium",
+          "look_at": [
+            0,
+            0,
+            1.28
+          ],
+          "location": [
+            1.85,
+            -4.4,
+            2.0
+          ],
+          "composition": {
+            "subject_screen_coverage": 0.55,
+            "safe_margin": 0.12
+          },
+          "lens": {
+            "focal_length_mm": 68,
+            "dof": true,
+            "focus_target": "head_cranium"
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "camera_portrait"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\character_bust_portrait_skill_plus_tools\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\character_bust_portrait_skill_plus_tools\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\character_bust_portrait_skill_plus_tools\\logs\\result_full_pipeline_20260914_062611.json"
+}

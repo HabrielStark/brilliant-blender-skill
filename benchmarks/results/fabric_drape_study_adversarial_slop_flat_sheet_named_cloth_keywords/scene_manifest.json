@@ -1,0 +1,20 @@
+{
+  "task_id": "bench_drape",
+  "brief": "soft studio fabric drape hero",
+  "output_mode": "still",
+  "style": {
+    "mood": "soft studio textile study",
+    "palette": [
+      "warm linen",
+      "charcoal steel",
+      "pale grey studio"
+    ]
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "png"
+    ],
+    "web_runtime": "three"
+  }
+}

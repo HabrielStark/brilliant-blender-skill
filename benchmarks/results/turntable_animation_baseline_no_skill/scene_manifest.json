@@ -1,0 +1,18 @@
+{
+  "task_id": "bench_turntable",
+  "brief": "product turntable animation for web",
+  "output_mode": "web_asset",
+  "style": {
+    "mood": "premium product"
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "glb"
+    ],
+    "web_runtime": "three"
+  },
+  "constraints": {
+    "max_glb_mb": 20
+  }
+}

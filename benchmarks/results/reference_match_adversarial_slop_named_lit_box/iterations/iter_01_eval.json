@@ -1,0 +1,26 @@
+{
+  "iteration": 1,
+  "hard_fail": true,
+  "passed": false,
+  "scores": {
+    "composition": 20,
+    "lighting": 10,
+    "materials": 15,
+    "geometry_detail": 10,
+    "camera": 10,
+    "technical": 10,
+    "performance": 5,
+    "reference_fidelity": 6,
+    "total": 79
+  },
+  "defects": [
+    "dark render lacks readable subject detail",
+    "premium render: inset_rim_highlight_groove_lens_sensor_bevel_fake has no bevel/subsurf/smooth"
+  ],
+  "next_actions": [
+    "add bevels/subsurf so edges catch light"
+  ],
+  "hard_fail_reasons": [
+    "dark render lacks readable subject detail"
+  ]
+}

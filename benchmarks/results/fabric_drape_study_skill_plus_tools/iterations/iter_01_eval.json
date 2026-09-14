@@ -1,0 +1,19 @@
+{
+  "iteration": 1,
+  "hard_fail": false,
+  "passed": true,
+  "scores": {
+    "composition": 17,
+    "lighting": 15,
+    "materials": 12,
+    "geometry_detail": 15,
+    "camera": 10,
+    "technical": 10,
+    "performance": 5,
+    "reference_fidelity": 9,
+    "total": 93
+  },
+  "defects": [],
+  "next_actions": [],
+  "hard_fail_reasons": []
+}

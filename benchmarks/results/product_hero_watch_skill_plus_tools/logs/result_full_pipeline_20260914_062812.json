@@ -1,0 +1,3309 @@
+{
+  "ok": true,
+  "action": "full_pipeline",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\product_hero_watch_skill_plus_tools\\final\\scene.blend",
+  "collections": [
+    "CAMERAS",
+    "LIGHTS",
+    "SUBJECT",
+    "ENVIRONMENT",
+    "FX",
+    "HELPERS",
+    "EXPORT"
+  ],
+  "operations": [
+    {
+      "op": "ensure_standard_collections",
+      "collections": [
+        "CAMERAS",
+        "LIGHTS",
+        "SUBJECT",
+        "ENVIRONMENT",
+        "FX",
+        "HELPERS",
+        "EXPORT"
+      ]
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "reflective_floor",
+      "faces": 1
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "watch_case_beveled",
+      "faces": 34
+    },
+    {
+      "op": "apply_transform",
+      "applied": "watch_case_beveled",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "watch_case_beveled"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "watch_case_beveled"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "watch_bezel_ring",
+      "faces": 576
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "watch_bezel_ring"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "watch_bezel_ring"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "watch_dial_glass",
+      "faces": 34
+    },
+    {
+      "op": "apply_transform",
+      "applied": "watch_dial_glass",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "watch_dial_glass"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "strap_upper_rubber",
+      "faces": 6
+    },
+    {
+      "op": "apply_transform",
+      "applied": "strap_upper_rubber",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "strap_upper_rubber"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "strap_lower_rubber",
+      "faces": 6
+    },
+    {
+      "op": "apply_transform",
+      "applied": "strap_lower_rubber",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "strap_lower_rubber"
+    },
+    {
+      "op": "create_material",
+      "material": "brushed_black_titanium",
+      "assigned_to": [
+        "watch_case_beveled",
+        "watch_bezel_ring"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "tinted_sapphire_glass",
+      "assigned_to": [
+        "watch_dial_glass"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "strap_soft_black_rubber",
+      "assigned_to": [
+        "strap_upper_rubber",
+        "strap_lower_rubber"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "strap_edge_rubber",
+      "assigned_to": [],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "face_marking_cool_emission",
+      "assigned_to": [],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_linear_markers",
+      "markers": [
+        "strap_lower_ridge_01",
+        "strap_lower_ridge_02",
+        "strap_lower_ridge_03",
+        "strap_lower_ridge_04",
+        "strap_lower_ridge_05",
+        "strap_lower_ridge_06"
+      ],
+      "count": 6
+    },
+    {
+      "op": "create_linear_markers",
+      "markers": [
+        "strap_upper_ridge_01",
+        "strap_upper_ridge_02",
+        "strap_upper_ridge_03",
+        "strap_upper_ridge_04",
+        "strap_upper_ridge_05",
+        "strap_upper_ridge_06"
+      ],
+      "count": 6
+    },
+    {
+      "op": "create_radial_markers",
+      "markers": [
+        "dial_hour_marker_01",
+        "dial_hour_marker_02",
+        "dial_hour_marker_03",
+        "dial_hour_marker_04",
+        "dial_hour_marker_05",
+        "dial_hour_marker_06",
+        "dial_hour_marker_07",
+        "dial_hour_marker_08",
+        "dial_hour_marker_09",
+        "dial_hour_marker_10",
+        "dial_hour_marker_11",
+        "dial_hour_marker_12"
+      ],
+      "count": 12
+    },
+    {
+      "op": "create_text_label",
+      "created": "watch_dial_logo_text",
+      "type": "FONT",
+      "chars": 4
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "watch_minute_hand",
+      "faces": 6
+    },
+    {
+      "op": "apply_transform",
+      "applied": "watch_minute_hand",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "watch_minute_hand"
+    },
+    {
+      "op": "assign_material",
+      "assigned": "face_marking_cool_emission",
+      "to": "watch_minute_hand"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "watch_hour_hand",
+      "faces": 6
+    },
+    {
+      "op": "apply_transform",
+      "applied": "watch_hour_hand",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "watch_hour_hand"
+    },
+    {
+      "op": "assign_material",
+      "assigned": "face_marking_cool_emission",
+      "to": "watch_hour_hand"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "watch_center_pin",
+      "faces": 34
+    },
+    {
+      "op": "apply_transform",
+      "applied": "watch_center_pin",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "watch_center_pin"
+    },
+    {
+      "op": "assign_material",
+      "assigned": "brushed_black_titanium",
+      "to": "watch_center_pin"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "side_crown_knurled",
+      "faces": 34
+    },
+    {
+      "op": "apply_transform",
+      "applied": "side_crown_knurled",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "side_crown_knurled"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "side_crown_knurled"
+    },
+    {
+      "op": "assign_material",
+      "assigned": "brushed_black_titanium",
+      "to": "side_crown_knurled"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "watch_case_faceted_highlight_left",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "watch_case_faceted_highlight_right",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "dial_glass_diagonal_highlight",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "blue_reflection_edge_streak",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "strap_buckle_brushed_bridge",
+      "faces": 6
+    },
+    {
+      "op": "apply_transform",
+      "applied": "watch_case_faceted_highlight_left",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "watch_case_faceted_highlight_right",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "dial_glass_diagonal_highlight",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "blue_reflection_edge_streak",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "strap_buckle_brushed_bridge",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "watch_case_faceted_highlight_left"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "watch_case_faceted_highlight_right"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "dial_glass_diagonal_highlight"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "blue_reflection_edge_streak"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "strap_buckle_brushed_bridge"
+    },
+    {
+      "op": "create_material",
+      "material": "dark_floor",
+      "assigned_to": [
+        "reflective_floor"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "assign_material",
+      "assigned": "face_marking_cool_emission",
+      "to": "watch_case_faceted_highlight_left"
+    },
+    {
+      "op": "assign_material",
+      "assigned": "face_marking_cool_emission",
+      "to": "watch_case_faceted_highlight_right"
+    },
+    {
+      "op": "assign_material",
+      "assigned": "face_marking_cool_emission",
+      "to": "dial_glass_diagonal_highlight"
+    },
+    {
+      "op": "assign_material",
+      "assigned": "face_marking_cool_emission",
+      "to": "blue_reflection_edge_streak"
+    },
+    {
+      "op": "assign_material",
+      "assigned": "brushed_black_titanium",
+      "to": "strap_buckle_brushed_bridge"
+    },
+    {
+      "op": "create_decal_plane",
+      "created": "dial_sublogo_decal_highlight",
+      "type": "MESH",
+      "role": "decal_plane"
+    },
+    {
+      "op": "create_panel_cutlines",
+      "panel_cutlines": [
+        "strap_hole_cutline_reflection_01",
+        "strap_hole_cutline_reflection_02",
+        "strap_hole_cutline_reflection_03",
+        "strap_hole_cutline_reflection_04",
+        "strap_hole_cutline_reflection_05"
+      ],
+      "count": 5
+    },
+    {
+      "op": "create_lighting_rig",
+      "rig": "studio_product_large_softbox",
+      "lights": [
+        "key_softbox_left",
+        "rim_blue_right"
+      ]
+    },
+    {
+      "op": "create_camera",
+      "camera": "camera_hero_macro",
+      "active": true,
+      "preset": "macro_product",
+      "type": "PERSP"
+    },
+    {
+      "op": "set_scene_metadata",
+      "metadata_keys": [
+        "final_camera"
+      ]
+    }
+  ],
+  "inspection": {
+    "schema": "scene_inspection/0.1",
+    "collections": [
+      "CAMERAS",
+      "Collection",
+      "ENVIRONMENT",
+      "EXPORT",
+      "FX",
+      "HELPERS",
+      "LIGHTS",
+      "SUBJECT"
+    ],
+    "objects": [
+      {
+        "name": "camera_hero_macro",
+        "type": "CAMERA",
+        "collection": "CAMERAS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          6.099999904632568,
+          -8.100000381469727,
+          4.449999809265137
+        ],
+        "world_location": [
+          6.099999904632568,
+          -8.100000381469727,
+          4.449999809265137
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "key_softbox_left",
+        "type": "LIGHT",
+        "collection": "LIGHTS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "world_location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "rim_blue_right",
+        "type": "LIGHT",
+        "collection": "LIGHTS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          0.0,
+          4.0,
+          3.0
+        ],
+        "world_location": [
+          0.0,
+          4.0,
+          3.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "watch_case_beveled",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 34,
+        "verts": 64,
+        "materials": [
+          "brushed_black_titanium"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.4000000059604645
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          0.4000000059604645
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          2.200000047683716,
+          2.200000047683716,
+          0.6159999966621399
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.3055,
+        "screen_bbox": [
+          0.2175,
+          0.1735,
+          0.7721,
+          0.7245
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "watch_bezel_ring",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 576,
+        "verts": 576,
+        "materials": [
+          "brushed_black_titanium"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.550000011920929
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          0.550000011920929
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          2.7139999866485596,
+          2.7139999866485596,
+          0.40906763076782227
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.3903,
+        "screen_bbox": [
+          0.1494,
+          0.1975,
+          0.8348,
+          0.767
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "watch_dial_glass",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 34,
+        "verts": 64,
+        "materials": [
+          "tinted_sapphire_glass"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          0.6800000071525574
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          0.6800000071525574
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          1.8200000524520874,
+          1.8200000524520874,
+          0.06370000541210175
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.1407,
+        "screen_bbox": [
+          0.2671,
+          0.3955,
+          0.7258,
+          0.7021
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "strap_upper_rubber",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_soft_black_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          1.9500000476837158,
+          0.3199999928474426
+        ],
+        "world_location": [
+          0.0,
+          1.9500000476837158,
+          0.3199999928474426
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.41999998688697815,
+          1.4500000476837158,
+          0.07999999821186066
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0271,
+        "screen_bbox": [
+          0.5923,
+          0.5425,
+          0.7698,
+          0.695
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "strap_lower_rubber",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_soft_black_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -1.9500000476837158,
+          0.3199999928474426
+        ],
+        "world_location": [
+          0.0,
+          -1.9500000476837158,
+          0.3199999928474426
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.41999998688697815,
+          1.4500000476837158,
+          0.07999999821186066
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0677,
+        "screen_bbox": [
+          0.1187,
+          0.1112,
+          0.3886,
+          0.3619
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "strap_lower_ridge_01",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -1.149999976158142,
+          0.4300000071525574
+        ],
+        "world_location": [
+          0.0,
+          -1.149999976158142,
+          0.4300000071525574
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5199999809265137,
+          0.03999999910593033,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0048,
+        "screen_bbox": [
+          0.3258,
+          0.3451,
+          0.4075,
+          0.4035
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "linear_marker",
+        "craft_group": "strap_lower_ridge",
+        "craft_source": null
+      },
+      {
+        "name": "strap_lower_ridge_02",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -1.4299999475479126,
+          0.4300000071525574
+        ],
+        "world_location": [
+          0.0,
+          -1.4299999475479126,
+          0.4300000071525574
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5199999809265137,
+          0.03999999910593033,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.005,
+        "screen_bbox": [
+          0.2894,
+          0.3125,
+          0.3719,
+          0.3732
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "linear_marker",
+        "craft_group": "strap_lower_ridge",
+        "craft_source": null
+      },
+      {
+        "name": "strap_lower_ridge_03",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -1.7100000381469727,
+          0.4300000071525574
+        ],
+        "world_location": [
+          0.0,
+          -1.7100000381469727,
+          0.4300000071525574
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5199999809265137,
+          0.03999999910593033,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0053,
+        "screen_bbox": [
+          0.2513,
+          0.2785,
+          0.3346,
+          0.3416
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "linear_marker",
+        "craft_group": "strap_lower_ridge",
+        "craft_source": null
+      },
+      {
+        "name": "strap_lower_ridge_04",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -1.9900000095367432,
+          0.4300000071525574
+        ],
+        "world_location": [
+          0.0,
+          -1.9900000095367432,
+          0.4300000071525574
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5199999809265137,
+          0.03999999910593033,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0055,
+        "screen_bbox": [
+          0.2116,
+          0.2431,
+          0.2957,
+          0.3086
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "linear_marker",
+        "craft_group": "strap_lower_ridge",
+        "craft_source": null
+      },
+      {
+        "name": "strap_lower_ridge_05",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -2.2699999809265137,
+          0.4300000071525574
+        ],
+        "world_location": [
+          0.0,
+          -2.2699999809265137,
+          0.4300000071525574
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5199999809265137,
+          0.03999999910593033,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0058,
+        "screen_bbox": [
+          0.1701,
+          0.2059,
+          0.2551,
+          0.2741
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "linear_marker",
+        "craft_group": "strap_lower_ridge",
+        "craft_source": null
+      },
+      {
+        "name": "strap_lower_ridge_06",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -2.549999952316284,
+          0.4300000071525574
+        ],
+        "world_location": [
+          0.0,
+          -2.549999952316284,
+          0.4300000071525574
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5199999809265137,
+          0.03999999910593033,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0061,
+        "screen_bbox": [
+          0.1268,
+          0.1671,
+          0.2125,
+          0.2381
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "linear_marker",
+        "craft_group": "strap_lower_ridge",
+        "craft_source": null
+      },
+      {
+        "name": "strap_upper_ridge_01",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          1.149999976158142,
+          0.4300000071525574
+        ],
+        "world_location": [
+          0.0,
+          1.149999976158142,
+          0.4300000071525574
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5199999809265137,
+          0.03999999910593033,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0033,
+        "screen_bbox": [
+          0.5771,
+          0.5682,
+          0.6525,
+          0.6125
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "linear_marker",
+        "craft_group": "strap_upper_ridge",
+        "craft_source": null
+      },
+      {
+        "name": "strap_upper_ridge_02",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          1.4299999475479126,
+          0.4300000071525574
+        ],
+        "world_location": [
+          0.0,
+          1.4299999475479126,
+          0.4300000071525574
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5199999809265137,
+          0.03999999910593033,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0032,
+        "screen_bbox": [
+          0.6029,
+          0.591,
+          0.6775,
+          0.6339
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "linear_marker",
+        "craft_group": "strap_upper_ridge",
+        "craft_source": null
+      },
+      {
+        "name": "strap_upper_ridge_03",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          1.7100000381469727,
+          0.4300000071525574
+        ],
+        "world_location": [
+          0.0,
+          1.7100000381469727,
+          0.4300000071525574
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5199999809265137,
+          0.03999999910593033,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0031,
+        "screen_bbox": [
+          0.6277,
+          0.6129,
+          0.7016,
+          0.6546
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "linear_marker",
+        "craft_group": "strap_upper_ridge",
+        "craft_source": null
+      },
+      {
+        "name": "strap_upper_ridge_04",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          1.9900000095367432,
+          0.4300000071525574
+        ],
+        "world_location": [
+          0.0,
+          1.9900000095367432,
+          0.4300000071525574
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5199999809265137,
+          0.03999999910593033,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.003,
+        "screen_bbox": [
+          0.6517,
+          0.6342,
+          0.7249,
+          0.6746
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "linear_marker",
+        "craft_group": "strap_upper_ridge",
+        "craft_source": null
+      },
+      {
+        "name": "strap_upper_ridge_05",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          2.2699999809265137,
+          0.4300000071525574
+        ],
+        "world_location": [
+          0.0,
+          2.2699999809265137,
+          0.4300000071525574
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5199999809265137,
+          0.03999999910593033,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0028,
+        "screen_bbox": [
+          0.675,
+          0.6547,
+          0.7474,
+          0.694
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "linear_marker",
+        "craft_group": "strap_upper_ridge",
+        "craft_source": null
+      },
+      {
+        "name": "strap_upper_ridge_06",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          2.549999952316284,
+          0.4300000071525574
+        ],
+        "world_location": [
+          0.0,
+          2.549999952316284,
+          0.4300000071525574
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5199999809265137,
+          0.03999999910593033,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0027,
+        "screen_bbox": [
+          0.6975,
+          0.6745,
+          0.7692,
+          0.7127
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "linear_marker",
+        "craft_group": "strap_upper_ridge",
+        "craft_source": null
+      },
+      {
+        "name": "dial_hour_marker_01",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.7200000286102295,
+          0.7400000095367432
+        ],
+        "world_location": [
+          0.0,
+          0.7200000286102295,
+          0.7400000095367432
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.054999999701976776,
+          0.17000000178813934,
+          0.02500000037252903
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0006,
+        "screen_bbox": [
+          0.562,
+          0.6316,
+          0.5866,
+          0.6557
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "dial_hour_marker",
+        "craft_source": null
+      },
+      {
+        "name": "dial_hour_marker_02",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.36000001430511475,
+          0.6235383152961731,
+          0.7400000095367432
+        ],
+        "world_location": [
+          0.36000001430511475,
+          0.6235383152961731,
+          0.7400000095367432
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.054999999701976776,
+          0.17000000178813934,
+          0.02500000037252903
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0006,
+        "screen_bbox": [
+          0.6009,
+          0.6038,
+          0.6322,
+          0.6235
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "dial_hour_marker",
+        "craft_source": null
+      },
+      {
+        "name": "dial_hour_marker_03",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.6235383152961731,
+          0.36000001430511475,
+          0.7400000095367432
+        ],
+        "world_location": [
+          0.6235383152961731,
+          0.36000001430511475,
+          0.7400000095367432
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.054999999701976776,
+          0.17000000178813934,
+          0.02500000037252903
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0005,
+        "screen_bbox": [
+          0.6139,
+          0.5657,
+          0.6455,
+          0.5817
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "dial_hour_marker",
+        "craft_source": null
+      },
+      {
+        "name": "dial_hour_marker_04",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.7200000286102295,
+          4.408728404608808e-17,
+          0.7400000095367432
+        ],
+        "world_location": [
+          0.7200000286102295,
+          4.408728404608808e-17,
+          0.7400000095367432
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.054999999701976776,
+          0.17000000178813934,
+          0.02500000037252903
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0008,
+        "screen_bbox": [
+          0.5915,
+          0.5213,
+          0.6238,
+          0.5464
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "dial_hour_marker",
+        "craft_source": null
+      },
+      {
+        "name": "dial_hour_marker_05",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.6235383152961731,
+          -0.36000001430511475,
+          0.7400000095367432
+        ],
+        "world_location": [
+          0.6235383152961731,
+          -0.36000001430511475,
+          0.7400000095367432
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.054999999701976776,
+          0.17000000178813934,
+          0.02500000037252903
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0007,
+        "screen_bbox": [
+          0.5423,
+          0.491,
+          0.5654,
+          0.5209
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "dial_hour_marker",
+        "craft_source": null
+      },
+      {
+        "name": "dial_hour_marker_06",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.36000001430511475,
+          -0.6235383152961731,
+          0.7400000095367432
+        ],
+        "world_location": [
+          0.36000001430511475,
+          -0.6235383152961731,
+          0.7400000095367432
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.054999999701976776,
+          0.17000000178813934,
+          0.02500000037252903
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0004,
+        "screen_bbox": [
+          0.4758,
+          0.4846,
+          0.4905,
+          0.5144
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "dial_hour_marker",
+        "craft_source": null
+      },
+      {
+        "name": "dial_hour_marker_07",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          8.817456809217617e-17,
+          -0.7200000286102295,
+          0.7400000095367432
+        ],
+        "world_location": [
+          8.817456809217617e-17,
+          -0.7200000286102295,
+          0.7400000095367432
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.054999999701976776,
+          0.17000000178813934,
+          0.02500000037252903
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0008,
+        "screen_bbox": [
+          0.4036,
+          0.5025,
+          0.4321,
+          0.5309
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "dial_hour_marker",
+        "craft_source": null
+      },
+      {
+        "name": "dial_hour_marker_08",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.36000001430511475,
+          -0.6235383152961731,
+          0.7400000095367432
+        ],
+        "world_location": [
+          -0.36000001430511475,
+          -0.6235383152961731,
+          0.7400000095367432
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.054999999701976776,
+          0.17000000178813934,
+          0.02500000037252903
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0007,
+        "screen_bbox": [
+          0.3611,
+          0.541,
+          0.3942,
+          0.5622
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "dial_hour_marker",
+        "craft_source": null
+      },
+      {
+        "name": "dial_hour_marker_09",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.6235383152961731,
+          -0.36000001430511475,
+          0.7400000095367432
+        ],
+        "world_location": [
+          -0.6235383152961731,
+          -0.36000001430511475,
+          0.7400000095367432
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.054999999701976776,
+          0.17000000178813934,
+          0.02500000037252903
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0005,
+        "screen_bbox": [
+          0.3563,
+          0.5852,
+          0.3881,
+          0.6008
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "dial_hour_marker",
+        "craft_source": null
+      },
+      {
+        "name": "dial_hour_marker_10",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.7200000286102295,
+          -1.3226185213826425e-16,
+          0.7400000095367432
+        ],
+        "world_location": [
+          -0.7200000286102295,
+          -1.3226185213826425e-16,
+          0.7400000095367432
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.054999999701976776,
+          0.17000000178813934,
+          0.02500000037252903
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0006,
+        "screen_bbox": [
+          0.3857,
+          0.6182,
+          0.4146,
+          0.6405
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "dial_hour_marker",
+        "craft_source": null
+      },
+      {
+        "name": "dial_hour_marker_11",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.6235383152961731,
+          0.36000001430511475,
+          0.7400000095367432
+        ],
+        "world_location": [
+          -0.6235383152961731,
+          0.36000001430511475,
+          0.7400000095367432
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.054999999701976776,
+          0.17000000178813934,
+          0.02500000037252903
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0005,
+        "screen_bbox": [
+          0.4423,
+          0.64,
+          0.4618,
+          0.6647
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "dial_hour_marker",
+        "craft_source": null
+      },
+      {
+        "name": "dial_hour_marker_12",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.36000001430511475,
+          0.6235383152961731,
+          0.7400000095367432
+        ],
+        "world_location": [
+          -0.36000001430511475,
+          0.6235383152961731,
+          0.7400000095367432
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.054999999701976776,
+          0.17000000178813934,
+          0.02500000037252903
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0003,
+        "screen_bbox": [
+          0.5085,
+          0.6453,
+          0.5211,
+          0.6696
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "dial_hour_marker",
+        "craft_source": null
+      },
+      {
+        "name": "watch_dial_logo_text",
+        "type": "FONT",
+        "collection": "SUBJECT",
+        "faces": 0,
+        "verts": 0,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          -0.23999999463558197,
+          0.41999998688697815
+        ],
+        "world_location": [
+          0.0,
+          -0.23999999463558197,
+          0.8199999928474426
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.366239994764328,
+          0.1120000034570694,
+          0.004000000189989805
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0024,
+        "screen_bbox": [
+          0.442,
+          0.5686,
+          0.5078,
+          0.6045
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "text_label",
+        "craft_group": "watch_dial_logo_text",
+        "craft_source": "watch_case_beveled"
+      },
+      {
+        "name": "watch_minute_hand",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.18000000715255737,
+          0.2199999988079071,
+          0.7699999809265137
+        ],
+        "world_location": [
+          0.18000000715255737,
+          0.2199999988079071,
+          0.7699999809265137
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.04500000178813934,
+          0.5799999833106995,
+          0.02500000037252903
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0025,
+        "screen_bbox": [
+          0.4977,
+          0.5876,
+          0.6011,
+          0.6119
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "watch_hour_hand",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.14000000059604645,
+          0.05000000074505806,
+          0.7799999713897705
+        ],
+        "world_location": [
+          -0.14000000059604645,
+          0.05000000074505806,
+          0.7799999713897705
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.054999999701976776,
+          0.3799999952316284,
+          0.029999999329447746
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0018,
+        "screen_bbox": [
+          0.4671,
+          0.5844,
+          0.5043,
+          0.6327
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "watch_center_pin",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 34,
+        "verts": 64,
+        "materials": [
+          "brushed_black_titanium"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          0.8050000071525574
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          0.8050000071525574
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.1599999964237213,
+          0.1599999964237213,
+          0.025599999353289604
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0013,
+        "screen_bbox": [
+          0.4797,
+          0.5869,
+          0.5202,
+          0.6189
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "side_crown_knurled",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 34,
+        "verts": 64,
+        "materials": [
+          "brushed_black_titanium"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          1.340000033378601,
+          0.0,
+          0.4699999988079071
+        ],
+        "world_location": [
+          1.340000033378601,
+          0.0,
+          0.4699999988079071
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.3400000035762787,
+          0.3400000035762787,
+          0.12240000814199448
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0087,
+        "screen_bbox": [
+          0.6767,
+          0.3254,
+          0.7335,
+          0.4782
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "watch_case_faceted_highlight_left",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.7799999713897705,
+          -0.7200000286102295,
+          0.6700000166893005
+        ],
+        "world_location": [
+          -0.7799999713897705,
+          -0.7200000286102295,
+          0.6700000166893005
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.03500000014901161,
+          0.024000000208616257,
+          0.3199999928474426
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.001,
+        "screen_bbox": [
+          0.3036,
+          0.5005,
+          0.3133,
+          0.6009
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "watch_case_faceted_highlight_right",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.8199999928474426,
+          -0.6800000071525574,
+          0.6200000047683716
+        ],
+        "world_location": [
+          0.8199999928474426,
+          -0.6800000071525574,
+          0.6200000047683716
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.03200000151991844,
+          0.024000000208616257,
+          0.2800000011920929
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0008,
+        "screen_bbox": [
+          0.5444,
+          0.3715,
+          0.5525,
+          0.4673
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "dial_glass_diagonal_highlight",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.1599999964237213,
+          -0.41999998688697815,
+          0.8600000143051147
+        ],
+        "world_location": [
+          -0.1599999964237213,
+          -0.41999998688697815,
+          0.8600000143051147
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02800000086426735,
+          0.019999999552965164,
+          0.7200000286102295
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0017,
+        "screen_bbox": [
+          0.426,
+          0.4816,
+          0.4333,
+          0.7078
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "blue_reflection_edge_streak",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.5400000214576721,
+          -0.4000000059604645,
+          0.07999999821186066
+        ],
+        "world_location": [
+          -0.5400000214576721,
+          -0.4000000059604645,
+          0.07999999821186066
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.4399999976158142,
+          0.03500000014901161,
+          0.014000000432133675
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0026,
+        "screen_bbox": [
+          0.3503,
+          0.3695,
+          0.4136,
+          0.4098
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "strap_buckle_brushed_bridge",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "brushed_black_titanium"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -2.619999885559082,
+          0.41999998688697815
+        ],
+        "world_location": [
+          0.0,
+          -2.619999885559082,
+          0.41999998688697815
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.7200000286102295,
+          0.23999999463558197,
+          0.07500000298023224
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.02,
+        "screen_bbox": [
+          0.0846,
+          0.1208,
+          0.2332,
+          0.2553
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "dial_sublogo_decal_highlight",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "face_marking_cool_emission"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.25999999046325684,
+          0.4349999725818634
+        ],
+        "world_location": [
+          0.0,
+          0.25999999046325684,
+          0.8349999785423279
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.3400000035762787,
+          0.07500000298023224,
+          0.009999999776482582
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0017,
+        "screen_bbox": [
+          0.4997,
+          0.6187,
+          0.5562,
+          0.6492
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "decal_plane",
+        "craft_group": "dial_sublogo_decal_highlight",
+        "craft_source": "watch_case_beveled"
+      },
+      {
+        "name": "strap_hole_cutline_reflection_01",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.5700000524520874,
+          0.13500002026557922
+        ],
+        "world_location": [
+          0.0,
+          -1.3799999952316284,
+          0.45500001311302185
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.1599999964237213,
+          0.02800000086426735,
+          0.01600000075995922
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0006,
+        "screen_bbox": [
+          0.3228,
+          0.346,
+          0.3503,
+          0.368
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "panel_cutline",
+        "craft_group": "strap_hole_cutline_reflection",
+        "craft_source": "strap_lower_rubber"
+      },
+      {
+        "name": "strap_hole_cutline_reflection_02",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.3500000238418579,
+          0.13500002026557922
+        ],
+        "world_location": [
+          0.0,
+          -1.600000023841858,
+          0.45500001311302185
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.1599999964237213,
+          0.02800000086426735,
+          0.01600000075995922
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0006,
+        "screen_bbox": [
+          0.2934,
+          0.3204,
+          0.3211,
+          0.343
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "panel_cutline",
+        "craft_group": "strap_hole_cutline_reflection",
+        "craft_source": "strap_lower_rubber"
+      },
+      {
+        "name": "strap_hole_cutline_reflection_03",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.13000011444091797,
+          0.13500002026557922
+        ],
+        "world_location": [
+          0.0,
+          -1.8199999332427979,
+          0.45500001311302185
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.1599999964237213,
+          0.02800000086426735,
+          0.01600000075995922
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0007,
+        "screen_bbox": [
+          0.263,
+          0.2938,
+          0.291,
+          0.3171
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "panel_cutline",
+        "craft_group": "strap_hole_cutline_reflection",
+        "craft_source": "strap_lower_rubber"
+      },
+      {
+        "name": "strap_hole_cutline_reflection_04",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -0.08999991416931152,
+          0.13500002026557922
+        ],
+        "world_location": [
+          0.0,
+          -2.0399999618530273,
+          0.45500001311302185
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.1599999964237213,
+          0.02800000086426735,
+          0.01600000075995922
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0007,
+        "screen_bbox": [
+          0.2316,
+          0.2664,
+          0.2598,
+          0.2904
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "panel_cutline",
+        "craft_group": "strap_hole_cutline_reflection",
+        "craft_source": "strap_lower_rubber"
+      },
+      {
+        "name": "strap_hole_cutline_reflection_05",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "strap_edge_rubber"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -0.309999942779541,
+          0.13500002026557922
+        ],
+        "world_location": [
+          0.0,
+          -2.259999990463257,
+          0.45500001311302185
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.1599999964237213,
+          0.02800000086426735,
+          0.01600000075995922
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0007,
+        "screen_bbox": [
+          0.199,
+          0.238,
+          0.2276,
+          0.2627
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "panel_cutline",
+        "craft_group": "strap_hole_cutline_reflection",
+        "craft_source": "strap_lower_rubber"
+      },
+      {
+        "name": "reflective_floor",
+        "type": "MESH",
+        "collection": "ENVIRONMENT",
+        "faces": 1,
+        "verts": 4,
+        "materials": [
+          "dark_floor"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          18.0,
+          18.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.8959,
+        "screen_bbox": [
+          0.0,
+          0.1041,
+          1.0,
+          1.0
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      }
+    ],
+    "materials": [
+      {
+        "name": "brushed_black_titanium",
+        "metallic": 1.0,
+        "roughness": 0.3400000035762787,
+        "node_count": 6,
+        "link_count": 5,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF",
+          "NG_brushed_black_titanium_Noise",
+          "NG_brushed_black_titanium_Bump",
+          "NG_brushed_black_titanium_RampNoise",
+          "NG_brushed_black_titanium_ColorRamp"
+        ],
+        "users": 5,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "noise_bump,noise_color_ramp",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "dark_floor",
+        "metallic": 0.0,
+        "roughness": 0.18000000715255737,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 1,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "face_marking_cool_emission",
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 20,
+        "has_emission": true,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "strap_edge_rubber",
+        "metallic": 0.0,
+        "roughness": 0.6499999761581421,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 17,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "strap_soft_black_rubber",
+        "metallic": 0.0,
+        "roughness": 0.6000000238418579,
+        "node_count": 4,
+        "link_count": 3,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF",
+          "NG_strap_soft_black_rubber_Wave",
+          "NG_strap_soft_black_rubber_WaveBump"
+        ],
+        "users": 2,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "wave_bump",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "tinted_sapphire_glass",
+        "metallic": 0.0,
+        "roughness": 0.03999999910593033,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 1,
+        "has_emission": false,
+        "has_transmission": true,
+        "web_unsafe": false,
+        "has_fallback": true,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      }
+    ],
+    "lights": [
+      {
+        "name": "key_softbox_left",
+        "type": "AREA",
+        "energy": 700.0,
+        "color": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "rim_blue_right",
+        "type": "AREA",
+        "energy": 240.0,
+        "color": [
+          0.3499999940395355,
+          0.550000011920929,
+          1.0
+        ]
+      }
+    ],
+    "active_camera": {
+      "name": "camera_hero_macro",
+      "lens_mm": 70.0,
+      "dof": true,
+      "focus_target": "watch_case_beveled",
+      "inside_geometry": false,
+      "clip_end": 1000.0
+    },
+    "cameras": [
+      "camera_hero_macro"
+    ],
+    "node_groups": [],
+    "geometry_nodes": [],
+    "particles": [],
+    "animation": {
+      "has_action": false,
+      "frame_start": 1,
+      "frame_end": 250,
+      "fps": 24,
+      "keyframed_objects": [],
+      "markers": [],
+      "camera_animated": false,
+      "sampled_objects": [],
+      "moving_object_count": 0
+    },
+    "compositor": {
+      "use_nodes": false,
+      "node_names": [],
+      "raw_render_saved": true
+    },
+    "render": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "samples": 64,
+      "volumetric": false,
+      "view_transform": "AgX"
+    },
+    "metadata": {
+      "blender_cinematic_skill_version": "0.1",
+      "task_id": "bench_product_hero_watch",
+      "quality_profile": "balanced",
+      "final_camera": "camera_hero_macro",
+      "camera_preset": "macro_product",
+      "camera_subject_screen_coverage": 0.5,
+      "camera_safe_margin": 0.24
+    },
+    "camera_path_json": null,
+    "missing_files": []
+  },
+  "inspect_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_inspect.json",
+  "render": {
+    "rendered": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
+    "frame": 1,
+    "settings": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        480,
+        270
+      ],
+      "samples": 24,
+      "device": "CPU"
+    }
+  },
+  "export": {
+    "exported": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\product_hero_watch_skill_plus_tools\\final\\export_final.glb",
+    "size_bytes": 285240
+  },
+  "saved": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\product_hero_watch_skill_plus_tools\\final\\scene.blend"
+}

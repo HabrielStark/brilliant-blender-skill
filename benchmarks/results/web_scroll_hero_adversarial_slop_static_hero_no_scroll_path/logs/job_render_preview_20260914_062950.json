@@ -1,0 +1,48 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "render_preview",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\scene.blend",
+  "manifest": {},
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 15.2/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": []
+  },
+  "render": {
+    "frames": [
+      1,
+      126,
+      250
+    ],
+    "inspect_per_frame": true
+  },
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\animation_frame_{frame:04d}.png"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\logs\\result_render_preview_20260914_062950.json"
+}

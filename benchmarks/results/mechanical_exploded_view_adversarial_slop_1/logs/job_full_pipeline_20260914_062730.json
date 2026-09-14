@@ -1,0 +1,153 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\mechanical_exploded_view_adversarial_slop_1",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\mechanical_exploded_view_adversarial_slop_1\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_exploded",
+    "brief": "mechanical exploded view, technical clarity",
+    "output_mode": "still",
+    "style": {
+      "mood": "technical clean"
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ]
+    },
+    "constraints": {}
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 15.0/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "case_battery_board_screw_post_trace_contact_axis_chip_connector_gasket_spring_washer_ribbon_callout_cutaway",
+        "size": 2,
+        "location": [
+          0,
+          0,
+          0.5
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "case_battery_board_screw_post_trace_contact_axis_chip_connector_gasket_spring_washer_ribbon_callout_cutaway_top",
+        "size": 2,
+        "location": [
+          0,
+          0,
+          1.7
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "plain_stack_metal",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "case_battery_board_screw_post_trace_contact_axis_chip_connector_gasket_spring_washer_ribbon_callout_cutaway",
+            "case_battery_board_screw_post_trace_contact_axis_chip_connector_gasket_spring_washer_ribbon_callout_cutaway_top"
+          ],
+          "pbr": {
+            "base_color": [
+              0.12,
+              0.12,
+              0.12,
+              1
+            ],
+            "roughness": 0.7
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "flat_technical_baseline",
+          "lights": [
+            {
+              "name": "flat_key",
+              "type": "AREA",
+              "power": 300,
+              "size": 5,
+              "position_role": "front_left_high"
+            }
+          ],
+          "world": {
+            "color": [
+              0.08,
+              0.08,
+              0.08
+            ],
+            "strength": 0.45
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "camera_technical_baseline",
+          "target": "case_battery_board_screw_post_trace_contact_axis_chip_connector_gasket_spring_washer_ribbon_callout_cutaway",
+          "look_at": [
+            0,
+            0,
+            1.1
+          ],
+          "location": [
+            5.8,
+            -7.2,
+            4.7
+          ],
+          "lens": {
+            "focal_length_mm": 45
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "camera_technical_baseline"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\mechanical_exploded_view_adversarial_slop_1\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\mechanical_exploded_view_adversarial_slop_1\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\mechanical_exploded_view_adversarial_slop_1\\logs\\result_full_pipeline_20260914_062730.json"
+}

@@ -1,0 +1,203 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_sci_fi_corridor",
+    "brief": "sci-fi corridor with depth, modular panels, practical emissive lighting, and procedural detail",
+    "output_mode": "still",
+    "style": {
+      "mood": "cinematic sci-fi moody",
+      "palette": [
+        "black",
+        "cold blue",
+        "white highlights"
+      ]
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ]
+    },
+    "constraints": {}
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 14.9/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "corridor_floor_ceiling_wall_rib_rail_door_light_panel_box",
+        "size": 3.0,
+        "location": [
+          0,
+          0,
+          1.2
+        ],
+        "scale": [
+          1.8,
+          2.8,
+          0.08
+        ],
+        "collection": "ENVIRONMENT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "uv_sphere",
+        "name": "drone_core_ring_sensor_antenna_sphere",
+        "size": 0.8,
+        "location": [
+          0,
+          -1.0,
+          1.4
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "corridor_floor_ceiling_wall_rib_rail_door_light_panel_box",
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "drone_core_ring_sensor_antenna_sphere",
+        "smooth": true
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "flat_corridor_dark",
+          "preset": "painted_metal",
+          "target_objects": [
+            "corridor_floor_ceiling_wall_rib_rail_door_light_panel_box"
+          ],
+          "pbr": {
+            "base_color": [
+              0.03,
+              0.035,
+              0.05,
+              1
+            ],
+            "metallic": 0.6,
+            "roughness": 0.45
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "flat_drone_blue",
+          "preset": "emissive_neon",
+          "target_objects": [
+            "drone_core_ring_sensor_antenna_sphere"
+          ],
+          "pbr": {
+            "base_color": [
+              0.1,
+              0.35,
+              1.0,
+              1
+            ],
+            "emission_color": [
+              0.1,
+              0.35,
+              1.0,
+              1
+            ],
+            "emission_strength": 1.0
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "flat_corridor_light",
+          "lights": [
+            {
+              "name": "cold_key",
+              "type": "AREA",
+              "power": 300,
+              "size": 5,
+              "color": [
+                0.62,
+                0.76,
+                1.0
+              ],
+              "position_role": "front_left_high"
+            }
+          ],
+          "world": {
+            "color": [
+              0.006,
+              0.008,
+              0.014
+            ],
+            "strength": 0.25
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "camera_corridor_keyword",
+          "target": "drone_core_ring_sensor_antenna_sphere",
+          "look_at": [
+            0,
+            -0.4,
+            1.2
+          ],
+          "location": [
+            0,
+            -5.0,
+            1.6
+          ],
+          "lens": {
+            "focal_length_mm": 24
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "camera_corridor_keyword"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\sci_fi_corridor_adversarial_slop_corridor_keywords_no_gn_depth\\logs\\result_full_pipeline_20260914_062858.json"
+}

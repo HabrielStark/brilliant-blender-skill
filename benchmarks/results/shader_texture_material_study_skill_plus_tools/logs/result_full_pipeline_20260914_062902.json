@@ -1,0 +1,3500 @@
+{
+  "ok": true,
+  "action": "full_pipeline",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\shader_texture_material_study_skill_plus_tools\\final\\scene.blend",
+  "collections": [
+    "CAMERAS",
+    "LIGHTS",
+    "SUBJECT",
+    "ENVIRONMENT",
+    "FX",
+    "HELPERS",
+    "EXPORT"
+  ],
+  "operations": [
+    {
+      "op": "ensure_standard_collections",
+      "collections": [
+        "CAMERAS",
+        "LIGHTS",
+        "SUBJECT",
+        "ENVIRONMENT",
+        "FX",
+        "HELPERS",
+        "EXPORT"
+      ]
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "reflective_studio_surface",
+      "faces": 1
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "backlight_frosted_blue_panel",
+      "faces": 6
+    },
+    {
+      "op": "apply_transform",
+      "applied": "backlight_frosted_blue_panel",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "backlight_frosted_blue_panel"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "glass_bottle_body",
+      "faces": 34
+    },
+    {
+      "op": "apply_transform",
+      "applied": "glass_bottle_body",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "glass_bottle_body"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "glass_bottle_body"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "blue_liquid_core",
+      "faces": 34
+    },
+    {
+      "op": "apply_transform",
+      "applied": "blue_liquid_core",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "blue_liquid_core"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "blue_liquid_core"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "liquid_bubble_highlight_01",
+      "faces": 512
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "liquid_bubble_highlight_02",
+      "faces": 512
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "liquid_bubble_highlight_03",
+      "faces": 512
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "front_label_checker_texture",
+      "faces": 6
+    },
+    {
+      "op": "apply_transform",
+      "applied": "front_label_checker_texture",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "front_label_checker_texture"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "label_highlight_line",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "label_brass_frame_top",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "label_brass_frame_bottom",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "label_brass_frame_left",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "label_brass_frame_right",
+      "faces": 6
+    },
+    {
+      "op": "apply_transform",
+      "applied": "label_highlight_line",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "label_brass_frame_top",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "label_brass_frame_bottom",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "label_brass_frame_left",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "label_brass_frame_right",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "label_highlight_line"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "label_brass_frame_top"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "label_brass_frame_bottom"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "label_brass_frame_left"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "label_brass_frame_right"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "label_micro_text_top",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "label_micro_text_bottom",
+      "faces": 6
+    },
+    {
+      "op": "apply_transform",
+      "applied": "label_micro_text_top",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "label_micro_text_bottom",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "label_micro_text_top"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "label_micro_text_bottom"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "brushed_cap_metal",
+      "faces": 34
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "bottle_neck_glass_ring",
+      "faces": 576
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "liquid_meniscus_highlight_ring",
+      "faces": 576
+    },
+    {
+      "op": "apply_transform",
+      "applied": "brushed_cap_metal",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "bottle_neck_glass_ring",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "liquid_meniscus_highlight_ring",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "brushed_cap_metal"
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "bottle_neck_glass_ring"
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "liquid_meniscus_highlight_ring"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "brushed_cap_metal"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "nozzle_stem_metal",
+      "faces": 34
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "nozzle_press_bar",
+      "faces": 6
+    },
+    {
+      "op": "apply_transform",
+      "applied": "nozzle_stem_metal",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "nozzle_press_bar",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "nozzle_stem_metal"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "nozzle_press_bar"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "swatch_glass_clear_sphere",
+      "faces": 512
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "swatch_liquid_blue_column",
+      "faces": 34
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "swatch_metal_brushed_ball",
+      "faces": 512
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "swatch_label_checker_tile",
+      "faces": 6
+    },
+    {
+      "op": "apply_transform",
+      "applied": "swatch_liquid_blue_column",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "swatch_label_checker_tile",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "swatch_liquid_blue_column"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "swatch_label_checker_tile"
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "cold_blue_bottle_rim_edge",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "white_glass_top_highlight",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "white_glass_vertical_highlight_left",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "white_glass_vertical_highlight_right",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "reflection_contact_streak",
+      "faces": 6
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "reflection_blue_secondary",
+      "faces": 6
+    },
+    {
+      "op": "apply_transform",
+      "applied": "cold_blue_bottle_rim_edge",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "white_glass_top_highlight",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "white_glass_vertical_highlight_left",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "white_glass_vertical_highlight_right",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "reflection_contact_streak",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "apply_transform",
+      "applied": "reflection_blue_secondary",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "cold_blue_bottle_rim_edge"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "white_glass_top_highlight"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "white_glass_vertical_highlight_left"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "white_glass_vertical_highlight_right"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "reflection_contact_streak"
+    },
+    {
+      "op": "add_bevel_modifier",
+      "modifier": "Bevel",
+      "on": "reflection_blue_secondary"
+    },
+    {
+      "op": "create_material",
+      "material": "bottle_glass_clear",
+      "assigned_to": [
+        "glass_bottle_body",
+        "swatch_glass_clear_sphere",
+        "bottle_neck_glass_ring"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "liquid_blue_gradient",
+      "assigned_to": [
+        "blue_liquid_core",
+        "swatch_liquid_blue_column"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "liquid_bubble_clear",
+      "assigned_to": [
+        "liquid_bubble_highlight_01",
+        "liquid_bubble_highlight_02",
+        "liquid_bubble_highlight_03"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "label_checker_texture",
+      "assigned_to": [
+        "front_label_checker_texture",
+        "swatch_label_checker_tile"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "label_micro_ink",
+      "assigned_to": [
+        "label_micro_text_top",
+        "label_micro_text_bottom"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "cap_brushed_wave",
+      "assigned_to": [
+        "brushed_cap_metal",
+        "nozzle_stem_metal",
+        "nozzle_press_bar",
+        "swatch_metal_brushed_ball",
+        "label_brass_frame_top",
+        "label_brass_frame_bottom",
+        "label_brass_frame_left",
+        "label_brass_frame_right"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_radial_markers",
+      "markers": [
+        "cap_ridge_brushed_marker_01",
+        "cap_ridge_brushed_marker_02",
+        "cap_ridge_brushed_marker_03",
+        "cap_ridge_brushed_marker_04",
+        "cap_ridge_brushed_marker_05",
+        "cap_ridge_brushed_marker_06",
+        "cap_ridge_brushed_marker_07",
+        "cap_ridge_brushed_marker_08",
+        "cap_ridge_brushed_marker_09",
+        "cap_ridge_brushed_marker_10",
+        "cap_ridge_brushed_marker_11",
+        "cap_ridge_brushed_marker_12",
+        "cap_ridge_brushed_marker_13",
+        "cap_ridge_brushed_marker_14"
+      ],
+      "count": 14
+    },
+    {
+      "op": "create_material",
+      "material": "rim_blue_emissive",
+      "assigned_to": [
+        "cold_blue_bottle_rim_edge",
+        "reflection_blue_secondary"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "white_highlight_emissive",
+      "assigned_to": [
+        "white_glass_top_highlight",
+        "white_glass_vertical_highlight_left",
+        "white_glass_vertical_highlight_right",
+        "label_highlight_line",
+        "liquid_meniscus_highlight_ring",
+        "reflection_contact_streak",
+        "backlight_frosted_blue_panel"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "surface_deep_reflective",
+      "assigned_to": [
+        "reflective_studio_surface"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_lighting_rig",
+      "rig": "premium_material_lab_bright",
+      "lights": [
+        "key_softbox_long",
+        "teal_rim_strip",
+        "front_label_kicker"
+      ]
+    },
+    {
+      "op": "create_camera",
+      "camera": "camera_material_macro",
+      "active": true,
+      "preset": "macro_product",
+      "type": "PERSP"
+    },
+    {
+      "op": "set_scene_metadata",
+      "metadata_keys": [
+        "final_camera"
+      ]
+    }
+  ],
+  "inspection": {
+    "schema": "scene_inspection/0.1",
+    "collections": [
+      "CAMERAS",
+      "Collection",
+      "ENVIRONMENT",
+      "EXPORT",
+      "FX",
+      "HELPERS",
+      "LIGHTS",
+      "SUBJECT"
+    ],
+    "objects": [
+      {
+        "name": "camera_material_macro",
+        "type": "CAMERA",
+        "collection": "CAMERAS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          4.550000190734863,
+          -6.25,
+          2.759999990463257
+        ],
+        "world_location": [
+          4.550000190734863,
+          -6.25,
+          2.759999990463257
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "key_softbox_long",
+        "type": "LIGHT",
+        "collection": "LIGHTS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "world_location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "teal_rim_strip",
+        "type": "LIGHT",
+        "collection": "LIGHTS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          0.0,
+          4.0,
+          3.0
+        ],
+        "world_location": [
+          0.0,
+          4.0,
+          3.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "front_label_kicker",
+        "type": "LIGHT",
+        "collection": "LIGHTS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          7.0
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          7.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "backlight_frosted_blue_panel",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "white_highlight_emissive"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.8600000143051147,
+          1.3200000524520874
+        ],
+        "world_location": [
+          0.0,
+          0.8600000143051147,
+          1.3200000524520874
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          1.1799999475479126,
+          0.03500000014901161,
+          1.0199999809265137
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0708,
+        "screen_bbox": [
+          0.5093,
+          0.3386,
+          0.6996,
+          0.7105
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "glass_bottle_body",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 34,
+        "verts": 64,
+        "materials": [
+          "bottle_glass_clear"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.0,
+          1.0499999523162842
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          1.0499999523162842
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          1.2599999904632568,
+          1.2599999904632568,
+          1.7999999523162842
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.2674,
+        "screen_bbox": [
+          0.3231,
+          0.0,
+          0.6828,
+          0.7435
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "blue_liquid_core",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 34,
+        "verts": 64,
+        "materials": [
+          "liquid_blue_gradient"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.8399999737739563
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          0.8399999737739563
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.9768000245094299,
+          0.9768000245094299,
+          0.9176000356674194
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.1195,
+        "screen_bbox": [
+          0.3668,
+          0.0877,
+          0.6415,
+          0.5228
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "liquid_bubble_highlight_01",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 512,
+        "verts": 482,
+        "materials": [
+          "liquid_bubble_clear"
+        ],
+        "modifiers": [],
+        "location": [
+          -0.2199999988079071,
+          -0.18000000715255737,
+          1.0499999523162842
+        ],
+        "world_location": [
+          -0.2199999988079071,
+          -0.18000000715255737,
+          1.0499999523162842
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.11999993026256561,
+          0.119999960064888,
+          0.11999999731779099
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0019,
+        "screen_bbox": [
+          0.432,
+          0.3653,
+          0.4659,
+          0.42
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "liquid_bubble_highlight_02",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 512,
+        "verts": 482,
+        "materials": [
+          "liquid_bubble_clear"
+        ],
+        "modifiers": [],
+        "location": [
+          0.23999999463558197,
+          -0.20000000298023224,
+          0.8399999737739563
+        ],
+        "world_location": [
+          0.23999999463558197,
+          -0.20000000298023224,
+          0.8399999737739563
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.08999998867511749,
+          0.08999998867511749,
+          0.09000000357627869
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0011,
+        "screen_bbox": [
+          0.5087,
+          0.2724,
+          0.5347,
+          0.3162
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "liquid_bubble_highlight_03",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 512,
+        "verts": 482,
+        "materials": [
+          "liquid_bubble_clear"
+        ],
+        "modifiers": [],
+        "location": [
+          0.05000000074505806,
+          -0.2199999988079071,
+          0.5799999833106995
+        ],
+        "world_location": [
+          0.05000000074505806,
+          -0.2199999988079071,
+          0.5799999833106995
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.06999999284744263,
+          0.06999999284744263,
+          0.07000000029802322
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0007,
+        "screen_bbox": [
+          0.4778,
+          0.1948,
+          0.4977,
+          0.2291
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "front_label_checker_texture",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "label_checker_texture"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -0.6600000262260437,
+          1.0299999713897705
+        ],
+        "world_location": [
+          0.0,
+          -0.6600000262260437,
+          1.0299999713897705
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.8199999928474426,
+          0.03200000151991844,
+          0.41999998688697815
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0286,
+        "screen_bbox": [
+          0.3536,
+          0.2392,
+          0.4954,
+          0.4406
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "label_highlight_line",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "white_highlight_emissive"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -0.6949999928474426,
+          1.2799999713897705
+        ],
+        "world_location": [
+          0.0,
+          -0.6949999928474426,
+          1.2799999713897705
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.6600000262260437,
+          0.01600000075995922,
+          0.017999999225139618
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0043,
+        "screen_bbox": [
+          0.3623,
+          0.4143,
+          0.4754,
+          0.4525
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "label_brass_frame_top",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -0.7039999961853027,
+          1.4700000286102295
+        ],
+        "world_location": [
+          0.0,
+          -0.7039999961853027,
+          1.4700000286102295
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.8600000143051147,
+          0.014000000432133675,
+          0.017999999225139618
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0063,
+        "screen_bbox": [
+          0.3447,
+          0.4833,
+          0.4919,
+          0.5259
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "label_brass_frame_bottom",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -0.7039999961853027,
+          0.5799999833106995
+        ],
+        "world_location": [
+          0.0,
+          -0.7039999961853027,
+          0.5799999833106995
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.8600000143051147,
+          0.014000000432133675,
+          0.017999999225139618
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0093,
+        "screen_bbox": [
+          0.3479,
+          0.1406,
+          0.492,
+          0.2049
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "label_brass_frame_left",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.4399999976158142,
+          -0.7039999961853027,
+          1.0299999713897705
+        ],
+        "world_location": [
+          -0.4399999976158142,
+          -0.7039999961853027,
+          1.0299999713897705
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.017999999225139618,
+          0.014000000432133675,
+          0.41999998688697815
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.001,
+        "screen_bbox": [
+          0.3426,
+          0.2859,
+          0.3489,
+          0.4392
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "label_brass_frame_right",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.4399999976158142,
+          -0.7039999961853027,
+          1.0299999713897705
+        ],
+        "world_location": [
+          0.4399999976158142,
+          -0.7039999961853027,
+          1.0299999713897705
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.017999999225139618,
+          0.014000000432133675,
+          0.41999998688697815
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0008,
+        "screen_bbox": [
+          0.4902,
+          0.2337,
+          0.4954,
+          0.3977
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "label_micro_text_top",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "label_micro_ink"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.11999999731779099,
+          -0.6899999976158142,
+          1.1100000143051147
+        ],
+        "world_location": [
+          -0.11999999731779099,
+          -0.6899999976158142,
+          1.1100000143051147
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.2800000011920929,
+          0.012000000104308128,
+          0.012000000104308128
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0009,
+        "screen_bbox": [
+          0.3751,
+          0.3668,
+          0.4226,
+          0.386
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "label_micro_text_bottom",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "label_micro_ink"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.10000000149011612,
+          -0.6899999976158142,
+          0.9100000262260437
+        ],
+        "world_location": [
+          0.10000000149011612,
+          -0.6899999976158142,
+          0.9100000262260437
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.23999999463558197,
+          0.012000000104308128,
+          0.012000000104308128
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0008,
+        "screen_bbox": [
+          0.4147,
+          0.2808,
+          0.4569,
+          0.3
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "brushed_cap_metal",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 34,
+        "verts": 64,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.0,
+          2.0799999237060547
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          2.0799999237060547
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.8799999952316284,
+          0.8799999952316284,
+          0.24639999866485596
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0328,
+        "screen_bbox": [
+          0.3782,
+          0.6908,
+          0.6309,
+          0.8207
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "bottle_neck_glass_ring",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 576,
+        "verts": 576,
+        "materials": [
+          "bottle_glass_clear"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          1.8600000143051147
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          1.8600000143051147
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.8496000170707703,
+          0.8496000170707703,
+          0.0077760000713169575
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0128,
+        "screen_bbox": [
+          0.3836,
+          0.6524,
+          0.6256,
+          0.7054
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "liquid_meniscus_highlight_ring",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 576,
+        "verts": 576,
+        "materials": [
+          "white_highlight_emissive"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          1.3600000143051147
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          1.3600000143051147
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          1.3215999603271484,
+          1.3215999603271484,
+          0.008063999935984612
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0456,
+        "screen_bbox": [
+          0.3165,
+          0.4343,
+          0.6888,
+          0.5567
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "nozzle_stem_metal",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 34,
+        "verts": 64,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.0,
+          2.359999895095825
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          2.359999895095825
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.15399999916553497,
+          0.15399999916553497,
+          0.14000000059604645
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0025,
+        "screen_bbox": [
+          0.4838,
+          0.8351,
+          0.5283,
+          0.8909
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "nozzle_press_bar",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.18000000715255737,
+          -0.019999999552965164,
+          2.549999952316284
+        ],
+        "world_location": [
+          0.18000000715255737,
+          -0.019999999552965164,
+          2.549999952316284
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.41999998688697815,
+          0.07999999821186066,
+          0.054999999701976776
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.002,
+        "screen_bbox": [
+          0.4937,
+          0.9203,
+          0.5759,
+          0.9444
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "swatch_glass_clear_sphere",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 512,
+        "verts": 482,
+        "materials": [
+          "bottle_glass_clear"
+        ],
+        "modifiers": [],
+        "location": [
+          -1.100000023841858,
+          -0.41999998688697815,
+          0.6200000047683716
+        ],
+        "world_location": [
+          -1.100000023841858,
+          -0.41999998688697815,
+          0.6200000047683716
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.1999998688697815,
+          0.19999992847442627,
+          0.20000000298023224
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.005,
+        "screen_bbox": [
+          0.2612,
+          0.2286,
+          0.3165,
+          0.3189
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "swatch_liquid_blue_column",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 34,
+        "verts": 64,
+        "materials": [
+          "liquid_blue_gradient"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.7799999713897705,
+          -0.41999998688697815,
+          0.6200000047683716
+        ],
+        "world_location": [
+          -0.7799999713897705,
+          -0.41999998688697815,
+          0.6200000047683716
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.2199999988079071,
+          0.2199999988079071,
+          0.3190000057220459
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0084,
+        "screen_bbox": [
+          0.3032,
+          0.1887,
+          0.3654,
+          0.3241
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "swatch_metal_brushed_ball",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 512,
+        "verts": 482,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [],
+        "location": [
+          0.8199999928474426,
+          -0.41999998688697815,
+          0.6200000047683716
+        ],
+        "world_location": [
+          0.8199999928474426,
+          -0.41999998688697815,
+          0.6200000047683716
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.17999997735023499,
+          0.17999997735023499,
+          0.18000000715255737
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0054,
+        "screen_bbox": [
+          0.5698,
+          0.1101,
+          0.6252,
+          0.2075
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "swatch_label_checker_tile",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "label_checker_texture"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          1.1399999856948853,
+          -0.4399999976158142,
+          0.6200000047683716
+        ],
+        "world_location": [
+          1.1399999856948853,
+          -0.4399999976158142,
+          0.6200000047683716
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.20000000298023224,
+          0.02800000086426735,
+          0.20000000298023224
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0041,
+        "screen_bbox": [
+          0.6348,
+          0.087,
+          0.6781,
+          0.1819
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "cold_blue_bottle_rim_edge",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "rim_blue_emissive"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.6800000071525574,
+          -0.10000000149011612,
+          1.350000023841858
+        ],
+        "world_location": [
+          0.6800000071525574,
+          -0.10000000149011612,
+          1.350000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02199999988079071,
+          0.41999998688697815,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.002,
+        "screen_bbox": [
+          0.5845,
+          0.4462,
+          0.6369,
+          0.4849
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "white_glass_top_highlight",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "white_highlight_emissive"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.10000000149011612,
+          -0.6200000047683716,
+          1.8200000524520874
+        ],
+        "world_location": [
+          -0.10000000149011612,
+          -0.6200000047683716,
+          1.8200000524520874
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.5199999809265137,
+          0.017999999225139618,
+          0.024000000208616257
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0022,
+        "screen_bbox": [
+          0.3661,
+          0.6333,
+          0.4554,
+          0.6583
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "white_glass_vertical_highlight_left",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "white_highlight_emissive"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.4300000071525574,
+          -0.6399999856948853,
+          1.2599999904632568
+        ],
+        "world_location": [
+          -0.4300000071525574,
+          -0.6399999856948853,
+          1.2599999904632568
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.019999999552965164,
+          0.017999999225139618,
+          0.5799999833106995
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0016,
+        "screen_bbox": [
+          0.3516,
+          0.3435,
+          0.3591,
+          0.5556
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "white_glass_vertical_highlight_right",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "white_highlight_emissive"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.4699999988079071,
+          -0.6399999856948853,
+          1.1799999475479126
+        ],
+        "world_location": [
+          0.4699999988079071,
+          -0.6399999856948853,
+          1.1799999475479126
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.017999999225139618,
+          0.017999999225139618,
+          0.41999998688697815
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0009,
+        "screen_bbox": [
+          0.5038,
+          0.2944,
+          0.5095,
+          0.459
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "reflection_contact_streak",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "white_highlight_emissive"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          -0.36000001430511475,
+          0.054999999701976776
+        ],
+        "world_location": [
+          0.0,
+          -0.36000001430511475,
+          0.054999999701976776
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.8199999928474426,
+          0.04500000178813934,
+          0.012000000104308128
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0075,
+        "screen_bbox": [
+          0.396,
+          0.0,
+          0.5335,
+          0.0544
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "reflection_blue_secondary",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "rim_blue_emissive"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.46000000834465027,
+          -0.4399999976158142,
+          0.06499999761581421
+        ],
+        "world_location": [
+          -0.46000000834465027,
+          -0.4399999976158142,
+          0.06499999761581421
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.3400000035762787,
+          0.03799999877810478,
+          0.012000000104308128
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0018,
+        "screen_bbox": [
+          0.3532,
+          0.0335,
+          0.4094,
+          0.065
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "cap_ridge_brushed_marker_01",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.0,
+          0.41999998688697815,
+          2.0899999141693115
+        ],
+        "world_location": [
+          0.0,
+          0.41999998688697815,
+          2.0899999141693115
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02199999988079071,
+          0.07000000029802322,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0002,
+        "screen_bbox": [
+          0.5489,
+          0.7674,
+          0.5603,
+          0.7817
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "cap_ridge_brushed_marker",
+        "craft_source": null
+      },
+      {
+        "name": "cap_ridge_brushed_marker_02",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.18223117291927338,
+          0.37840691208839417,
+          2.0899999141693115
+        ],
+        "world_location": [
+          0.18223117291927338,
+          0.37840691208839417,
+          2.0899999141693115
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02199999988079071,
+          0.07000000029802322,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0002,
+        "screen_bbox": [
+          0.5729,
+          0.7633,
+          0.5872,
+          0.7774
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "cap_ridge_brushed_marker",
+        "craft_source": null
+      },
+      {
+        "name": "cap_ridge_brushed_marker_03",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.32836923003196716,
+          0.2618657052516937,
+          2.0899999141693115
+        ],
+        "world_location": [
+          0.32836923003196716,
+          0.2618657052516937,
+          2.0899999141693115
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02199999988079071,
+          0.07000000029802322,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0002,
+        "screen_bbox": [
+          0.5845,
+          0.7581,
+          0.5993,
+          0.7716
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "cap_ridge_brushed_marker",
+        "craft_source": null
+      },
+      {
+        "name": "cap_ridge_brushed_marker_04",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.40946972370147705,
+          0.09345879405736923,
+          2.0899999141693115
+        ],
+        "world_location": [
+          0.40946972370147705,
+          0.09345879405736923,
+          2.0899999141693115
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02199999988079071,
+          0.07000000029802322,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0002,
+        "screen_bbox": [
+          0.5792,
+          0.7516,
+          0.5946,
+          0.7662
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "cap_ridge_brushed_marker",
+        "craft_source": null
+      },
+      {
+        "name": "cap_ridge_brushed_marker_05",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.40946972370147705,
+          -0.09345879405736923,
+          2.0899999141693115
+        ],
+        "world_location": [
+          0.40946972370147705,
+          -0.09345879405736923,
+          2.0899999141693115
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02199999801814556,
+          0.06999999284744263,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0002,
+        "screen_bbox": [
+          0.5582,
+          0.746,
+          0.5719,
+          0.7616
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "cap_ridge_brushed_marker",
+        "craft_source": null
+      },
+      {
+        "name": "cap_ridge_brushed_marker_06",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.32836923003196716,
+          -0.2618657052516937,
+          2.0899999141693115
+        ],
+        "world_location": [
+          0.32836923003196716,
+          -0.2618657052516937,
+          2.0899999141693115
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02199999988079071,
+          0.07000000029802322,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.5257,
+          0.7427,
+          0.5346,
+          0.7588
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "cap_ridge_brushed_marker",
+        "craft_source": null
+      },
+      {
+        "name": "cap_ridge_brushed_marker_07",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          0.18223117291927338,
+          -0.37840691208839417,
+          2.0899999141693115
+        ],
+        "world_location": [
+          0.18223117291927338,
+          -0.37840691208839417,
+          2.0899999141693115
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02199999988079071,
+          0.07000000029802322,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.486,
+          0.7425,
+          0.4935,
+          0.7585
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "cap_ridge_brushed_marker",
+        "craft_source": null
+      },
+      {
+        "name": "cap_ridge_brushed_marker_08",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          5.143516582334358e-17,
+          -0.41999998688697815,
+          2.0899999141693115
+        ],
+        "world_location": [
+          5.143516582334358e-17,
+          -0.41999998688697815,
+          2.0899999141693115
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02199999988079071,
+          0.07000000029802322,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0002,
+        "screen_bbox": [
+          0.4466,
+          0.7452,
+          0.4596,
+          0.7609
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "cap_ridge_brushed_marker",
+        "craft_source": null
+      },
+      {
+        "name": "cap_ridge_brushed_marker_09",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.18223117291927338,
+          -0.37840691208839417,
+          2.0899999141693115
+        ],
+        "world_location": [
+          -0.18223117291927338,
+          -0.37840691208839417,
+          2.0899999141693115
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02199999988079071,
+          0.07000000029802322,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0002,
+        "screen_bbox": [
+          0.4206,
+          0.7505,
+          0.4359,
+          0.7653
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "cap_ridge_brushed_marker",
+        "craft_source": null
+      },
+      {
+        "name": "cap_ridge_brushed_marker_10",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.32836923003196716,
+          -0.2618657052516937,
+          2.0899999141693115
+        ],
+        "world_location": [
+          -0.32836923003196716,
+          -0.2618657052516937,
+          2.0899999141693115
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02199999988079071,
+          0.07000000029802322,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0002,
+        "screen_bbox": [
+          0.4126,
+          0.757,
+          0.4271,
+          0.7705
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "cap_ridge_brushed_marker",
+        "craft_source": null
+      },
+      {
+        "name": "cap_ridge_brushed_marker_11",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.40946972370147705,
+          -0.09345879405736923,
+          2.0899999141693115
+        ],
+        "world_location": [
+          -0.40946972370147705,
+          -0.09345879405736923,
+          2.0899999141693115
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02199999988079071,
+          0.07000000029802322,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0002,
+        "screen_bbox": [
+          0.4213,
+          0.7625,
+          0.4359,
+          0.7764
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "cap_ridge_brushed_marker",
+        "craft_source": null
+      },
+      {
+        "name": "cap_ridge_brushed_marker_12",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.40946972370147705,
+          0.09345879405736923,
+          2.0899999141693115
+        ],
+        "world_location": [
+          -0.40946972370147705,
+          0.09345879405736923,
+          2.0899999141693115
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02199999988079071,
+          0.07000000029802322,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0002,
+        "screen_bbox": [
+          0.4457,
+          0.7668,
+          0.4578,
+          0.781
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "cap_ridge_brushed_marker",
+        "craft_source": null
+      },
+      {
+        "name": "cap_ridge_brushed_marker_13",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.32836923003196716,
+          0.2618657052516937,
+          2.0899999141693115
+        ],
+        "world_location": [
+          -0.32836923003196716,
+          0.2618657052516937,
+          2.0899999141693115
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02199999988079071,
+          0.07000000029802322,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.4806,
+          0.7693,
+          0.4882,
+          0.7836
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "cap_ridge_brushed_marker",
+        "craft_source": null
+      },
+      {
+        "name": "cap_ridge_brushed_marker_14",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 6,
+        "verts": 8,
+        "materials": [
+          "cap_brushed_wave"
+        ],
+        "modifiers": [
+          {
+            "type": "BEVEL",
+            "show_render": true
+          }
+        ],
+        "location": [
+          -0.18223117291927338,
+          0.37840691208839417,
+          2.0899999141693115
+        ],
+        "world_location": [
+          -0.18223117291927338,
+          0.37840691208839417,
+          2.0899999141693115
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.02199999988079071,
+          0.07000000029802322,
+          0.03500000014901161
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0001,
+        "screen_bbox": [
+          0.5175,
+          0.7696,
+          0.524,
+          0.7838
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": "radial_marker",
+        "craft_group": "cap_ridge_brushed_marker",
+        "craft_source": null
+      },
+      {
+        "name": "reflective_studio_surface",
+        "type": "MESH",
+        "collection": "ENVIRONMENT",
+        "faces": 1,
+        "verts": 4,
+        "materials": [
+          "surface_deep_reflective"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          16.0,
+          16.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 1.0,
+        "screen_bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      }
+    ],
+    "materials": [
+      {
+        "name": "bottle_glass_clear",
+        "metallic": 0.0,
+        "roughness": 0.03500000014901161,
+        "node_count": 8,
+        "link_count": 7,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF",
+          "NG_bottle_glass_clear_Noise",
+          "NG_bottle_glass_clear_Bump",
+          "NG_bottle_glass_clear_RampNoise",
+          "NG_bottle_glass_clear_ColorRamp",
+          "NG_bottle_glass_clear_RoughnessNoise",
+          "NG_bottle_glass_clear_RoughnessRamp"
+        ],
+        "users": 3,
+        "has_emission": false,
+        "has_transmission": true,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "noise_bump,noise_color_ramp,roughness_variation",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "cap_brushed_wave",
+        "metallic": 1.0,
+        "roughness": 0.23999999463558197,
+        "node_count": 8,
+        "link_count": 7,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF",
+          "NG_cap_brushed_wave_Wave",
+          "NG_cap_brushed_wave_WaveBump",
+          "NG_cap_brushed_wave_RoughnessNoise",
+          "NG_cap_brushed_wave_RoughnessRamp",
+          "NG_cap_brushed_wave_EdgeWearAO",
+          "NG_cap_brushed_wave_EdgeWearRamp"
+        ],
+        "users": 22,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "wave_bump,roughness_variation,edge_wear_subtle,anisotropic_brush",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "label_checker_texture",
+        "metallic": 0.0,
+        "roughness": 0.41999998688697815,
+        "node_count": 14,
+        "link_count": 13,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF",
+          "NG_label_checker_texture_Checker",
+          "NG_label_checker_texture_ScanlineWave",
+          "NG_label_checker_texture_ScanlineRamp",
+          "NG_label_checker_texture_ScanlineLayer",
+          "NG_label_checker_texture_Image_base_color",
+          "NG_label_checker_texture_Image_base_color_TexCoord",
+          "NG_label_checker_texture_Image_base_color_Mapping",
+          "NG_label_checker_texture_ImageBaseLayer",
+          "NG_label_checker_texture_Image_displacement",
+          "NG_label_checker_texture_Image_displacement_TexCoord",
+          "NG_label_checker_texture_Image_displacement_Mapping",
+          "NG_label_checker_texture_ImageDisplacement"
+        ],
+        "users": 2,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": 64,
+        "procedural_features": "checker_texture,scanlines,image_texture_base_color,image_texture_displacement",
+        "image_texture_roles": "base_color,displacement"
+      },
+      {
+        "name": "label_micro_ink",
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 2,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "liquid_blue_gradient",
+        "metallic": 0.0,
+        "roughness": 0.14000000059604645,
+        "node_count": 9,
+        "link_count": 8,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF",
+          "NG_liquid_blue_gradient_Noise",
+          "NG_liquid_blue_gradient_Bump",
+          "NG_liquid_blue_gradient_RampNoise",
+          "NG_liquid_blue_gradient_ColorRamp",
+          "NG_liquid_blue_gradient_EdgeWearAO",
+          "NG_liquid_blue_gradient_EdgeWearRamp",
+          "NG_liquid_blue_gradient_EdgeWearLayer"
+        ],
+        "users": 2,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "noise_bump,noise_color_ramp,edge_wear_subtle",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "liquid_bubble_clear",
+        "metallic": 0.0,
+        "roughness": 0.05000000074505806,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 3,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "rim_blue_emissive",
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 2,
+        "has_emission": true,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "surface_deep_reflective",
+        "metallic": 0.0,
+        "roughness": 0.20000000298023224,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 1,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "white_highlight_emissive",
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 7,
+        "has_emission": true,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      }
+    ],
+    "lights": [
+      {
+        "name": "key_softbox_long",
+        "type": "AREA",
+        "energy": 900.0,
+        "color": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "teal_rim_strip",
+        "type": "AREA",
+        "energy": 160.0,
+        "color": [
+          0.3199999928474426,
+          0.8600000143051147,
+          0.7799999713897705
+        ]
+      },
+      {
+        "name": "front_label_kicker",
+        "type": "AREA",
+        "energy": 260.0,
+        "color": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "active_camera": {
+      "name": "camera_material_macro",
+      "lens_mm": 57.0,
+      "dof": true,
+      "focus_target": "glass_bottle_body",
+      "inside_geometry": false,
+      "clip_end": 1000.0
+    },
+    "cameras": [
+      "camera_material_macro"
+    ],
+    "node_groups": [],
+    "geometry_nodes": [],
+    "particles": [],
+    "animation": {
+      "has_action": false,
+      "frame_start": 1,
+      "frame_end": 250,
+      "fps": 24,
+      "keyframed_objects": [],
+      "markers": [],
+      "camera_animated": false,
+      "sampled_objects": [],
+      "moving_object_count": 0
+    },
+    "compositor": {
+      "use_nodes": false,
+      "node_names": [],
+      "raw_render_saved": true
+    },
+    "render": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "samples": 64,
+      "volumetric": false,
+      "view_transform": "AgX"
+    },
+    "metadata": {
+      "blender_cinematic_skill_version": "0.1",
+      "task_id": "bench_shader_texture_material",
+      "quality_profile": "balanced",
+      "final_camera": "camera_material_macro",
+      "camera_preset": "macro_product",
+      "camera_subject_screen_coverage": 0.68,
+      "camera_safe_margin": 0.18
+    },
+    "camera_path_json": null,
+    "missing_files": []
+  },
+  "inspect_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_inspect.json",
+  "render": {
+    "rendered": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\shader_texture_material_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+    "frame": 1,
+    "settings": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        480,
+        270
+      ],
+      "samples": 24,
+      "device": "CPU"
+    }
+  },
+  "export": {
+    "exported": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\shader_texture_material_study_skill_plus_tools\\final\\export_final.glb",
+    "size_bytes": 462620
+  },
+  "saved": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\shader_texture_material_study_skill_plus_tools\\final\\scene.blend"
+}

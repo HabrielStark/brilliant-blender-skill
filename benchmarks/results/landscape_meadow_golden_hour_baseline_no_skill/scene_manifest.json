@@ -1,0 +1,20 @@
+{
+  "task_id": "bench_meadow",
+  "brief": "golden-hour meadow landscape hero",
+  "output_mode": "still",
+  "style": {
+    "mood": "warm golden hour pastoral",
+    "palette": [
+      "olive green",
+      "warm amber",
+      "cool shadow"
+    ]
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "png"
+    ],
+    "web_runtime": "three"
+  }
+}

@@ -1,0 +1,708 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\fabric_drape_study_skill_plus_tools",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\fabric_drape_study_skill_plus_tools\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_drape",
+    "brief": "soft studio fabric drape hero",
+    "output_mode": "still",
+    "style": {
+      "mood": "soft studio textile study",
+      "palette": [
+        "warm linen",
+        "charcoal steel",
+        "pale grey studio"
+      ]
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ],
+      "web_runtime": "three"
+    }
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 14.7/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "plane",
+        "name": "ground_studio_sweep",
+        "size": 22,
+        "collection": "ENVIRONMENT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "plane",
+        "name": "backdrop_wall_soft",
+        "size": 14,
+        "location": [
+          0,
+          2.4,
+          3.0
+        ],
+        "rotation": [
+          90,
+          0,
+          0
+        ],
+        "collection": "ENVIRONMENT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "backdrop_wall_soft",
+        "rotation": true,
+        "scale": true
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "rail_post_left",
+        "size": 0.08,
+        "location": [
+          -1.45,
+          0,
+          1.05
+        ],
+        "scale": [
+          1,
+          1,
+          26
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "rail_post_right",
+        "size": 0.08,
+        "location": [
+          1.45,
+          0,
+          1.05
+        ],
+        "scale": [
+          1,
+          1,
+          26
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "rail_post_left",
+        "scale": true
+      },
+      {
+        "op": "apply_transform",
+        "target": "rail_post_right",
+        "scale": true
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "rod_crossbar_steel",
+        "size": 0.06,
+        "location": [
+          0,
+          0,
+          2.14
+        ],
+        "rotation": [
+          0,
+          90,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          52
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "rod_crossbar_steel",
+        "rotation": true,
+        "scale": true
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "ico_sphere",
+        "name": "rail_foot_left",
+        "size": 0.22,
+        "location": [
+          -1.45,
+          0,
+          0.08
+        ],
+        "scale": [
+          1.4,
+          1.4,
+          0.5
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "ico_sphere",
+        "name": "rail_foot_right",
+        "size": 0.22,
+        "location": [
+          1.45,
+          0,
+          0.08
+        ],
+        "scale": [
+          1.4,
+          1.4,
+          0.5
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "rail_foot_left",
+        "scale": true
+      },
+      {
+        "op": "apply_transform",
+        "target": "rail_foot_right",
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "rail_post_left",
+        "smooth": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "rail_post_right",
+        "smooth": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "rod_crossbar_steel",
+        "smooth": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "rail_foot_left",
+        "smooth": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "rail_foot_right",
+        "smooth": true
+      },
+      {
+        "op": "create_organic_surface_details",
+        "name_prefix": "cloth_drape_front",
+        "pattern": "linear",
+        "count": 5,
+        "start": [
+          -1.02,
+          -0.055,
+          2.12
+        ],
+        "step": [
+          0.5,
+          0,
+          0
+        ],
+        "length": 1.38,
+        "width": 0.52,
+        "shape": "drape",
+        "folds": 3,
+        "fold_depth": 0.09,
+        "curl": 0.05,
+        "bend": 0.03,
+        "taper": 0.4,
+        "rotation": [
+          -90,
+          0,
+          0
+        ],
+        "segments_u": 16,
+        "segments_v": 18,
+        "thickness": 0.012,
+        "collection": "SUBJECT",
+        "role": "drape"
+      },
+      {
+        "op": "create_organic_surface_details",
+        "name_prefix": "cloth_drape_back",
+        "pattern": "linear",
+        "count": 4,
+        "start": [
+          -0.78,
+          0.055,
+          2.12
+        ],
+        "step": [
+          0.5,
+          0,
+          0
+        ],
+        "length": 1.3,
+        "width": 0.52,
+        "shape": "drape",
+        "folds": 4,
+        "fold_depth": 0.07,
+        "curl": 0.04,
+        "bend": 0.03,
+        "taper": 0.35,
+        "rotation": [
+          -90,
+          0,
+          0
+        ],
+        "segments_u": 16,
+        "segments_v": 18,
+        "thickness": 0.012,
+        "collection": "SUBJECT",
+        "role": "drape"
+      },
+      {
+        "op": "create_organic_surface_details",
+        "name_prefix": "cloth_overfold_top",
+        "pattern": "linear",
+        "count": 3,
+        "start": [
+          -0.55,
+          -0.075,
+          2.2
+        ],
+        "step": [
+          0.55,
+          0,
+          0
+        ],
+        "length": 0.34,
+        "width": 0.56,
+        "shape": "drape",
+        "folds": 3,
+        "fold_depth": 0.05,
+        "curl": 0.16,
+        "bend": 0.04,
+        "taper": 0.2,
+        "rotation": [
+          -90,
+          0,
+          0
+        ],
+        "segments_u": 12,
+        "segments_v": 10,
+        "thickness": 0.014,
+        "collection": "SUBJECT",
+        "role": "cloth"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "pin_wood_clip_01",
+        "size": 0.05,
+        "location": [
+          -0.75,
+          -0.04,
+          2.2
+        ],
+        "scale": [
+          0.8,
+          1.6,
+          2.2
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "pin_wood_clip_02",
+        "size": 0.05,
+        "location": [
+          -0.25,
+          -0.04,
+          2.2
+        ],
+        "scale": [
+          0.8,
+          1.6,
+          2.2
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "pin_wood_clip_03",
+        "size": 0.05,
+        "location": [
+          0.25,
+          -0.04,
+          2.2
+        ],
+        "scale": [
+          0.8,
+          1.6,
+          2.2
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "pin_wood_clip_04",
+        "size": 0.05,
+        "location": [
+          0.75,
+          -0.04,
+          2.2
+        ],
+        "scale": [
+          0.8,
+          1.6,
+          2.2
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "pin_wood_clip_01",
+        "scale": true
+      },
+      {
+        "op": "apply_transform",
+        "target": "pin_wood_clip_02",
+        "scale": true
+      },
+      {
+        "op": "apply_transform",
+        "target": "pin_wood_clip_03",
+        "scale": true
+      },
+      {
+        "op": "apply_transform",
+        "target": "pin_wood_clip_04",
+        "scale": true
+      },
+      {
+        "op": "create_curve_tube",
+        "name": "hem_cord_front_edge",
+        "points": [
+          [
+            -1.05,
+            -0.075,
+            0.79
+          ],
+          [
+            -0.75,
+            -0.085,
+            0.76
+          ],
+          [
+            -0.5,
+            -0.075,
+            0.8
+          ],
+          [
+            -0.25,
+            -0.085,
+            0.77
+          ],
+          [
+            0,
+            -0.075,
+            0.79
+          ],
+          [
+            0.25,
+            -0.085,
+            0.77
+          ],
+          [
+            0.5,
+            -0.075,
+            0.8
+          ],
+          [
+            0.75,
+            -0.085,
+            0.76
+          ],
+          [
+            1.0,
+            -0.075,
+            0.79
+          ]
+        ],
+        "bevel_depth": 0.012,
+        "collection": "SUBJECT",
+        "role": "hem"
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "linen_front_warm",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "cloth_drape_front_01",
+            "cloth_drape_front_02",
+            "cloth_drape_front_03",
+            "cloth_drape_front_04",
+            "cloth_drape_front_05",
+            "cloth_overfold_top_01",
+            "cloth_overfold_top_02",
+            "cloth_overfold_top_03"
+          ],
+          "pbr": {
+            "base_color": [
+              0.78,
+              0.68,
+              0.55,
+              1
+            ],
+            "roughness": 0.92
+          },
+          "procedural": {
+            "noise": true,
+            "noise_scale": 28,
+            "bump_strength": 0.045
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "linen_back_shadow",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "cloth_drape_back_01",
+            "cloth_drape_back_02",
+            "cloth_drape_back_03",
+            "cloth_drape_back_04"
+          ],
+          "pbr": {
+            "base_color": [
+              0.6,
+              0.53,
+              0.44,
+              1
+            ],
+            "roughness": 0.94
+          },
+          "procedural": {
+            "noise": true,
+            "noise_scale": 26,
+            "bump_strength": 0.04
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "steel_charcoal_rail",
+          "preset": "brushed_metal",
+          "target_objects": [
+            "rail_post_left",
+            "rail_post_right",
+            "rod_crossbar_steel",
+            "rail_foot_left",
+            "rail_foot_right"
+          ],
+          "pbr": {
+            "base_color": [
+              0.16,
+              0.17,
+              0.18,
+              1
+            ],
+            "metallic": 0.85,
+            "roughness": 0.38
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "pin_wood_natural",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "pin_wood_clip_01",
+            "pin_wood_clip_02",
+            "pin_wood_clip_03",
+            "pin_wood_clip_04"
+          ],
+          "pbr": {
+            "base_color": [
+              0.52,
+              0.36,
+              0.2,
+              1
+            ],
+            "roughness": 0.7
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "hem_cord_linen_dark",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "hem_cord_front_edge"
+          ],
+          "pbr": {
+            "base_color": [
+              0.5,
+              0.42,
+              0.32,
+              1
+            ],
+            "roughness": 0.9
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "studio_backdrop_pale",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "ground_studio_sweep",
+            "backdrop_wall_soft"
+          ],
+          "pbr": {
+            "base_color": [
+              0.6,
+              0.6,
+              0.62,
+              1
+            ],
+            "roughness": 0.95
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "soft_studio",
+          "lights": [
+            {
+              "name": "key_softbox",
+              "type": "AREA",
+              "power": 650,
+              "size": 4.5,
+              "color": [
+                1.0,
+                0.96,
+                0.9
+              ],
+              "position_role": "front_left_high"
+            },
+            {
+              "name": "fill_soft",
+              "type": "AREA",
+              "power": 300,
+              "size": 5,
+              "color": [
+                0.9,
+                0.94,
+                1.0
+              ],
+              "position_role": "front_right"
+            },
+            {
+              "name": "rim_top",
+              "type": "AREA",
+              "power": 380,
+              "size": 3,
+              "color": [
+                1.0,
+                0.9,
+                0.78
+              ],
+              "position_role": "rim"
+            }
+          ],
+          "world": {
+            "color": [
+              0.32,
+              0.32,
+              0.34
+            ],
+            "strength": 0.75
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "camera_drape",
+          "preset": "hero_low_angle",
+          "target": "rod_crossbar_steel",
+          "look_at": [
+            0,
+            0,
+            1.1
+          ],
+          "location": [
+            3.7,
+            -5.2,
+            2.35
+          ],
+          "composition": {
+            "subject_screen_coverage": 0.55,
+            "safe_margin": 0.14
+          },
+          "lens": {
+            "focal_length_mm": 55,
+            "dof": true,
+            "focus_target": "rod_crossbar_steel"
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "camera_drape"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\fabric_drape_study_skill_plus_tools\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\fabric_drape_study_skill_plus_tools\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\fabric_drape_study_skill_plus_tools\\logs\\result_full_pipeline_20260914_062624.json"
+}

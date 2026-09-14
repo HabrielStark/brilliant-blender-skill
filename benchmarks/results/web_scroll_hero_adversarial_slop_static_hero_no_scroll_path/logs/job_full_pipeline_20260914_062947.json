@@ -1,0 +1,200 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_web_scroll_hero",
+    "brief": "floating aurora kinetic AI core hero for a website with scroll camera",
+    "output_mode": "interactive_web",
+    "style": {
+      "mood": "aurora kinetic sculpture",
+      "palette": [
+        "black",
+        "teal",
+        "magenta",
+        "gold",
+        "warm ivory"
+      ]
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png",
+        "glb"
+      ],
+      "web_runtime": "react-three-fiber"
+    },
+    "constraints": {
+      "max_glb_mb": 20
+    }
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 15.2/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "uv_sphere",
+        "name": "energy_core_orbital_ring_spark_aurora_static",
+        "size": 2.0,
+        "location": [
+          0,
+          0,
+          1.6
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "torus",
+        "name": "orbital_ring_static_gold",
+        "size": 3.2,
+        "location": [
+          0,
+          0,
+          1.6
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "energy_core_orbital_ring_spark_aurora_static",
+        "smooth": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "orbital_ring_static_gold",
+        "smooth": true
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "plain_teal_core",
+          "preset": "emissive_neon",
+          "target_objects": [
+            "energy_core_orbital_ring_spark_aurora_static"
+          ],
+          "pbr": {
+            "base_color": [
+              0.02,
+              0.32,
+              0.3,
+              1
+            ],
+            "emission_color": [
+              0.08,
+              0.9,
+              0.78,
+              1
+            ],
+            "emission_strength": 2.0
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "plain_gold_ring",
+          "preset": "brushed_metal",
+          "target_objects": [
+            "orbital_ring_static_gold"
+          ],
+          "pbr": {
+            "base_color": [
+              0.78,
+              0.52,
+              0.2,
+              1
+            ],
+            "metallic": 1.0,
+            "roughness": 0.35
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "flat_web_hero_light",
+          "lights": [
+            {
+              "name": "teal_key",
+              "type": "AREA",
+              "power": 260,
+              "size": 4,
+              "color": [
+                0.2,
+                0.95,
+                0.78
+              ],
+              "position_role": "front_left_high"
+            }
+          ],
+          "world": {
+            "color": [
+              0.012,
+              0.008,
+              0.022
+            ],
+            "strength": 0.25
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "camera_scroll_static",
+          "target": "energy_core_orbital_ring_spark_aurora_static",
+          "location": [
+            0,
+            -7,
+            2.2
+          ],
+          "lens": {
+            "focal_length_mm": 45
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "camera_scroll_static"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\iter_01_inspect.json",
+    "glb": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\export_final.glb"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\logs\\result_full_pipeline_20260914_062947.json"
+}

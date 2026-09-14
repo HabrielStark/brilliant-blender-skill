@@ -1,0 +1,30 @@
+{
+  "iteration": 1,
+  "hard_fail": true,
+  "passed": false,
+  "scores": {
+    "composition": 20,
+    "lighting": 12,
+    "materials": 8,
+    "geometry_detail": 10,
+    "camera": 10,
+    "technical": 10,
+    "performance": 5,
+    "reference_fidelity": 8,
+    "total": 79
+  },
+  "defects": [
+    "render has almost no contrast (flat/empty)",
+    "render has no discernible silhouette/detail",
+    "render is too flat for visual acceptance",
+    "premium render: sign_letter_tube_bolt_cable_plate_bracket_all_in_one has no bevel/subsurf/smooth"
+  ],
+  "next_actions": [
+    "add bevels/subsurf so edges catch light"
+  ],
+  "hard_fail_reasons": [
+    "render has almost no contrast (flat/empty)",
+    "render has no discernible silhouette/detail",
+    "render is too flat for visual acceptance"
+  ]
+}

@@ -1,0 +1,407 @@
+{
+  "ok": true,
+  "action": "full_pipeline",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\scene.blend",
+  "collections": [
+    "CAMERAS",
+    "LIGHTS",
+    "SUBJECT",
+    "ENVIRONMENT",
+    "FX",
+    "HELPERS",
+    "EXPORT"
+  ],
+  "operations": [
+    {
+      "op": "ensure_standard_collections",
+      "collections": [
+        "CAMERAS",
+        "LIGHTS",
+        "SUBJECT",
+        "ENVIRONMENT",
+        "FX",
+        "HELPERS",
+        "EXPORT"
+      ]
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "energy_core_orbital_ring_spark_aurora_static",
+      "faces": 512
+    },
+    {
+      "op": "create_mesh_primitive",
+      "created": "orbital_ring_static_gold",
+      "faces": 576
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "energy_core_orbital_ring_spark_aurora_static"
+    },
+    {
+      "op": "set_smooth_shading",
+      "smooth": true,
+      "on": "orbital_ring_static_gold"
+    },
+    {
+      "op": "create_material",
+      "material": "plain_teal_core",
+      "assigned_to": [
+        "energy_core_orbital_ring_spark_aurora_static"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_material",
+      "material": "plain_gold_ring",
+      "assigned_to": [
+        "orbital_ring_static_gold"
+      ],
+      "skipped_targets": []
+    },
+    {
+      "op": "create_lighting_rig",
+      "rig": "flat_web_hero_light",
+      "lights": [
+        "teal_key"
+      ]
+    },
+    {
+      "op": "create_camera",
+      "camera": "camera_scroll_static",
+      "active": true,
+      "preset": "macro_product",
+      "type": "PERSP"
+    },
+    {
+      "op": "set_scene_metadata",
+      "metadata_keys": [
+        "final_camera"
+      ]
+    }
+  ],
+  "inspection": {
+    "schema": "scene_inspection/0.1",
+    "collections": [
+      "CAMERAS",
+      "Collection",
+      "ENVIRONMENT",
+      "EXPORT",
+      "FX",
+      "HELPERS",
+      "LIGHTS",
+      "SUBJECT"
+    ],
+    "objects": [
+      {
+        "name": "camera_scroll_static",
+        "type": "CAMERA",
+        "collection": "CAMERAS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          0.0,
+          -7.0,
+          2.200000047683716
+        ],
+        "world_location": [
+          0.0,
+          -7.0,
+          2.200000047683716
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "teal_key",
+        "type": "LIGHT",
+        "collection": "LIGHTS",
+        "faces": 0,
+        "verts": 0,
+        "materials": [],
+        "modifiers": [],
+        "location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "world_location": [
+          -4.0,
+          -4.0,
+          5.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "visible": true,
+        "smooth": false,
+        "in_camera_frame": true,
+        "screen_coverage": 0.0,
+        "screen_bbox": null,
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "energy_core_orbital_ring_spark_aurora_static",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 512,
+        "verts": 482,
+        "materials": [
+          "plain_teal_core"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          1.600000023841858
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          1.9999988079071045,
+          1.9999992847442627,
+          2.0
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.3086,
+        "screen_bbox": [
+          0.2897,
+          0.1069,
+          0.7103,
+          0.8406
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      },
+      {
+        "name": "orbital_ring_static_gold",
+        "type": "MESH",
+        "collection": "SUBJECT",
+        "faces": 576,
+        "verts": 576,
+        "materials": [
+          "plain_gold_ring"
+        ],
+        "modifiers": [],
+        "location": [
+          0.0,
+          0.0,
+          1.600000023841858
+        ],
+        "world_location": [
+          0.0,
+          0.0,
+          1.600000023841858
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dimensions": [
+          3.7760000228881836,
+          3.7760000228881836,
+          0.5759999752044678
+        ],
+        "visible": true,
+        "smooth": true,
+        "in_camera_frame": true,
+        "screen_coverage": 0.281,
+        "screen_bbox": [
+          0.0391,
+          0.3073,
+          0.9609,
+          0.6121
+        ],
+        "non_manifold": false,
+        "flipped_normals": false,
+        "gn_recipe": null,
+        "gn_role": null,
+        "gn_source": null,
+        "craft_role": null,
+        "craft_group": null,
+        "craft_source": null
+      }
+    ],
+    "materials": [
+      {
+        "name": "plain_gold_ring",
+        "metallic": 1.0,
+        "roughness": 0.3499999940395355,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 1,
+        "has_emission": false,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      },
+      {
+        "name": "plain_teal_core",
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "node_count": 2,
+        "link_count": 1,
+        "node_names": [
+          "Material Output",
+          "Principled BSDF"
+        ],
+        "users": 1,
+        "has_emission": true,
+        "has_transmission": false,
+        "web_unsafe": false,
+        "has_fallback": false,
+        "is_default": false,
+        "max_texture_resolution": null,
+        "procedural_features": "",
+        "image_texture_roles": ""
+      }
+    ],
+    "lights": [
+      {
+        "name": "teal_key",
+        "type": "AREA",
+        "energy": 260.0,
+        "color": [
+          0.20000000298023224,
+          0.949999988079071,
+          0.7799999713897705
+        ]
+      }
+    ],
+    "active_camera": {
+      "name": "camera_scroll_static",
+      "lens_mm": 45.0,
+      "dof": false,
+      "focus_target": null,
+      "inside_geometry": false,
+      "clip_end": 1000.0
+    },
+    "cameras": [
+      "camera_scroll_static"
+    ],
+    "node_groups": [],
+    "geometry_nodes": [],
+    "particles": [],
+    "animation": {
+      "has_action": false,
+      "frame_start": 1,
+      "frame_end": 250,
+      "fps": 24,
+      "keyframed_objects": [],
+      "markers": [],
+      "camera_animated": false,
+      "sampled_objects": [],
+      "moving_object_count": 0
+    },
+    "compositor": {
+      "use_nodes": false,
+      "node_names": [],
+      "raw_render_saved": true
+    },
+    "render": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "samples": 64,
+      "volumetric": false,
+      "view_transform": "AgX"
+    },
+    "metadata": {
+      "blender_cinematic_skill_version": "0.1",
+      "task_id": "bench_web_scroll_hero",
+      "quality_profile": "balanced",
+      "final_camera": "camera_scroll_static",
+      "camera_preset": "macro_product",
+      "camera_subject_screen_coverage": 0.6,
+      "camera_safe_margin": 0.08
+    },
+    "camera_path_json": null,
+    "missing_files": []
+  },
+  "inspect_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\iter_01_inspect.json",
+  "render": {
+    "rendered": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\iterations\\iter_01_preview.png",
+    "frame": 1,
+    "settings": {
+      "engine": "BLENDER_EEVEE",
+      "resolution": [
+        480,
+        270
+      ],
+      "samples": 24,
+      "device": "CPU"
+    }
+  },
+  "export": {
+    "exported": true,
+    "path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\export_final.glb",
+    "size_bytes": 47036
+  },
+  "saved": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\web_scroll_hero_adversarial_slop_static_hero_no_scroll_path\\final\\scene.blend"
+}

@@ -1,0 +1,176 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\architectural_interior_scene_adversarial_slop_1",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\architectural_interior_scene_adversarial_slop_1\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_architectural_interior",
+    "brief": "tasteful interior environment with furniture and decor",
+    "output_mode": "still",
+    "style": {
+      "mood": "quiet architectural editorial"
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ]
+    },
+    "constraints": {}
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 14.8/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "floor_wall_window_shelf_rug_art_ceiling_baseboard_sun_patch_mullion_floor_plank_mullion_shadow",
+        "size": 4,
+        "location": [
+          0,
+          0,
+          1.2
+        ],
+        "scale": [
+          1,
+          1,
+          0.6
+        ],
+        "collection": "ENVIRONMENT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+        "size": 1.2,
+        "location": [
+          0,
+          0,
+          0.8
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "plain_block_room_mat",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "floor_wall_window_shelf_rug_art_ceiling_baseboard_sun_patch_mullion_floor_plank_mullion_shadow"
+          ],
+          "pbr": {
+            "base_color": [
+              0.55,
+              0.55,
+              0.55,
+              1
+            ],
+            "roughness": 0.75
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "plain_block_furniture_mat",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb"
+          ],
+          "pbr": {
+            "base_color": [
+              0.24,
+              0.24,
+              0.26,
+              1
+            ],
+            "roughness": 0.75
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "flat_interior_baseline",
+          "lights": [
+            {
+              "name": "flat_key",
+              "type": "AREA",
+              "power": 380,
+              "size": 6,
+              "position_role": "front_left_high"
+            }
+          ],
+          "world": {
+            "color": [
+              0.45,
+              0.45,
+              0.45
+            ],
+            "strength": 0.5
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "camera_interior_baseline",
+          "target": "sofa_table_lamp_book_plant_cushion_curtain_fabric_fold_throw_vase_seam_tassel_lamp_bulb",
+          "look_at": [
+            0,
+            0,
+            0.9
+          ],
+          "location": [
+            3.05,
+            -3.95,
+            1.66
+          ],
+          "lens": {
+            "focal_length_mm": 40
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "camera_interior_baseline"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\architectural_interior_scene_adversarial_slop_1\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\architectural_interior_scene_adversarial_slop_1\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\architectural_interior_scene_adversarial_slop_1\\logs\\result_full_pipeline_20260914_062548.json"
+}

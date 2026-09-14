@@ -1,0 +1,150 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\neon_typography_signage_adversarial_slop_dark_box_named_neon_keywords",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\neon_typography_signage_adversarial_slop_dark_box_named_neon_keywords\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_neon_sign",
+    "brief": "moody neon typography signage hero shot",
+    "output_mode": "still",
+    "style": {
+      "mood": "moody cinematic neon",
+      "palette": [
+        "charcoal",
+        "hot pink",
+        "warm amber"
+      ]
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ],
+      "web_runtime": "three"
+    }
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 14.9/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
+        "size": 2.0,
+        "location": [
+          0,
+          0.5,
+          1.7
+        ],
+        "scale": [
+          1.4,
+          0.06,
+          0.5
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
+        "scale": true
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "flat_dark",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "sign_letter_tube_bolt_cable_plate_bracket_all_in_one"
+          ],
+          "pbr": {
+            "base_color": [
+              0.05,
+              0.05,
+              0.06,
+              1
+            ],
+            "roughness": 0.8
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "flat",
+          "lights": [
+            {
+              "name": "key",
+              "type": "AREA",
+              "power": 300,
+              "size": 4,
+              "position_role": "front_left_high"
+            }
+          ],
+          "world": {
+            "color": [
+              0.03,
+              0.03,
+              0.04
+            ],
+            "strength": 0.4
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "cam",
+          "target": "sign_letter_tube_bolt_cable_plate_bracket_all_in_one",
+          "location": [
+            0,
+            -4,
+            1.7
+          ],
+          "lens": {
+            "focal_length_mm": 52
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "cam"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\neon_typography_signage_adversarial_slop_dark_box_named_neon_keywords\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\neon_typography_signage_adversarial_slop_dark_box_named_neon_keywords\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\neon_typography_signage_adversarial_slop_dark_box_named_neon_keywords\\logs\\result_full_pipeline_20260914_062742.json"
+}

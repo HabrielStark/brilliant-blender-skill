@@ -1,0 +1,15 @@
+{
+  "task_id": "bench_particle_vfx_energy_burst",
+  "brief": "particle VFX energy burst with emissive core and visible sparks",
+  "output_mode": "still",
+  "style": {
+    "mood": "cinematic neon energy"
+  },
+  "target": {
+    "final_format": [
+      "blend",
+      "png"
+    ]
+  },
+  "constraints": {}
+}

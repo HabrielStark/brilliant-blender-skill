@@ -1,0 +1,197 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_shader_texture_material",
+    "brief": "premium shader and texture material study",
+    "output_mode": "still",
+    "style": {
+      "mood": "premium bright editorial material lab",
+      "palette": [
+        "warm ivory",
+        "teal",
+        "brass",
+        "white highlights"
+      ]
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ]
+    },
+    "constraints": {}
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 15.0/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cylinder",
+        "name": "bottle_liquid_cap_label_nozzle_reflection_highlight_swatch_ridge_backlight_cylinder",
+        "size": 1.8,
+        "location": [
+          0,
+          0,
+          1.0
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "front_label_plain_texture_card",
+        "size": 1,
+        "location": [
+          0,
+          -0.7,
+          1.05
+        ],
+        "scale": [
+          0.8,
+          0.03,
+          0.4
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "front_label_plain_texture_card",
+        "scale": true
+      },
+      {
+        "op": "set_smooth_shading",
+        "target": "bottle_liquid_cap_label_nozzle_reflection_highlight_swatch_ridge_backlight_cylinder",
+        "smooth": true
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "plain_glass_like_blue",
+          "preset": "glossy_plastic",
+          "target_objects": [
+            "bottle_liquid_cap_label_nozzle_reflection_highlight_swatch_ridge_backlight_cylinder"
+          ],
+          "pbr": {
+            "base_color": [
+              0.05,
+              0.58,
+              0.54,
+              0.86
+            ],
+            "roughness": 0.18,
+            "alpha": 0.86
+          }
+        }
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "plain_label_white",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "front_label_plain_texture_card"
+          ],
+          "pbr": {
+            "base_color": [
+              0.9,
+              0.91,
+              0.88,
+              1
+            ],
+            "roughness": 0.42
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "flat_material_light",
+          "lights": [
+            {
+              "name": "key_softbox",
+              "type": "AREA",
+              "power": 500,
+              "size": 5,
+              "position_role": "front_left_high"
+            }
+          ],
+          "world": {
+            "color": [
+              0.58,
+              0.55,
+              0.5
+            ],
+            "strength": 0.55
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "camera_material_keyword",
+          "target": "bottle_liquid_cap_label_nozzle_reflection_highlight_swatch_ridge_backlight_cylinder",
+          "look_at": [
+            0,
+            0,
+            1.2
+          ],
+          "location": [
+            4.7,
+            -6.1,
+            2.82
+          ],
+          "composition": {
+            "subject_screen_coverage": 0.82,
+            "safe_margin": 0.08
+          },
+          "lens": {
+            "focal_length_mm": 58
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "camera_material_keyword"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\shader_texture_material_study_adversarial_slop_named_bottle_no_shader_stack\\logs\\result_full_pipeline_20260914_062910.json"
+}

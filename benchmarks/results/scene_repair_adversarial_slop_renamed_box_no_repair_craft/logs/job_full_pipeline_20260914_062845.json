@@ -1,0 +1,157 @@
+{
+  "schema": "blender_job/0.1",
+  "action": "full_pipeline",
+  "workspace": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\scene_repair_adversarial_slop_renamed_box_no_repair_craft",
+  "blend_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\final\\scene.blend",
+  "manifest": {
+    "task_id": "bench_scene_repair",
+    "brief": "repair a broken scene: add camera, lights, materials, names",
+    "output_mode": "scene_repair",
+    "style": {
+      "mood": "warm repair studio",
+      "palette": [
+        "warm ivory",
+        "sage green",
+        "brass",
+        "soft gray"
+      ]
+    },
+    "target": {
+      "final_format": [
+        "blend",
+        "png"
+      ]
+    },
+    "constraints": {}
+  },
+  "budget": {
+    "quality_profile": "balanced",
+    "selected_engine": "EEVEE",
+    "preview_engine": "EEVEE",
+    "device": "GPU_OPTIX",
+    "preview_resolution": [
+      480,
+      270
+    ],
+    "final_resolution": [
+      640,
+      360
+    ],
+    "samples": 24,
+    "texture_cap": 2048,
+    "volumetrics_allowed": false,
+    "ram_guard_ok": false,
+    "reasoning": [
+      "Detected 64GB RAM",
+      "GPU available",
+      "Detected 12GB VRAM",
+      "using requested profile balanced",
+      "available RAM 14.9/63.8GB below 25%: final render should wait for headroom"
+    ]
+  },
+  "recipe": {
+    "operations": [
+      {
+        "op": "ensure_standard_collections"
+      },
+      {
+        "op": "create_mesh_primitive",
+        "type": "cube",
+        "name": "repaired_base_panel_accent_handle_hinge_screw_label_tick_box",
+        "size": 2.0,
+        "location": [
+          0,
+          0,
+          1.0
+        ],
+        "collection": "SUBJECT"
+      },
+      {
+        "op": "apply_transform",
+        "target": "repaired_base_panel_accent_handle_hinge_screw_label_tick_box",
+        "scale": true
+      },
+      {
+        "op": "add_bevel_modifier",
+        "target": "repaired_base_panel_accent_handle_hinge_screw_label_tick_box",
+        "width": 0.03,
+        "segments": 1
+      },
+      {
+        "op": "create_material",
+        "schema": {
+          "name": "single_warm_repair_material",
+          "preset": "matte_plastic",
+          "target_objects": [
+            "repaired_base_panel_accent_handle_hinge_screw_label_tick_box"
+          ],
+          "pbr": {
+            "base_color": [
+              0.82,
+              0.78,
+              0.68,
+              1
+            ],
+            "roughness": 0.55
+          }
+        }
+      },
+      {
+        "op": "create_lighting_rig",
+        "schema": {
+          "lighting_rig": "flat_repair_light",
+          "lights": [
+            {
+              "name": "warm_key",
+              "type": "AREA",
+              "power": 350,
+              "size": 5,
+              "color": [
+                1.0,
+                0.88,
+                0.68
+              ],
+              "position_role": "front_left_high"
+            }
+          ],
+          "world": {
+            "color": [
+              0.55,
+              0.5,
+              0.44
+            ],
+            "strength": 0.45
+          }
+        }
+      },
+      {
+        "op": "create_camera",
+        "schema": {
+          "camera_name": "camera_repaired_keyword_box",
+          "target": "repaired_base_panel_accent_handle_hinge_screw_label_tick_box",
+          "location": [
+            3.7,
+            -4.9,
+            2.25
+          ],
+          "lens": {
+            "focal_length_mm": 54
+          }
+        }
+      },
+      {
+        "op": "set_scene_metadata",
+        "data": {
+          "final_camera": "camera_repaired_keyword_box"
+        }
+      }
+    ]
+  },
+  "render": {},
+  "output": {
+    "image": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\iterations\\iter_01_preview.png",
+    "inspect": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\iterations\\iter_01_inspect.json"
+  },
+  "safety_mode": "strict",
+  "result_path": "C:\\Users\\User\\Desktop\\blenderskill\\benchmarks\\results\\scene_repair_adversarial_slop_renamed_box_no_repair_craft\\logs\\result_full_pipeline_20260914_062845.json"
+}
