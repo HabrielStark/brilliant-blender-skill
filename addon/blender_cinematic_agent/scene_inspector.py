@@ -134,7 +134,7 @@ def _sample_animation_motion(scene, anim_object_names, cam):
             scene.frame_set(frame)
             bpy.context.view_layer.update()
             for obj in targets:
-                samples_by_object[obj.name].append({
+                sample = {
                     "frame": frame,
                     "location": [float(v) for v in obj.location],
                     "rotation": [float(v) for v in obj.rotation_euler],
@@ -145,7 +145,18 @@ def _sample_animation_motion(scene, anim_object_names, cam):
                     # frozen.
                     "energy": float(obj.data.energy)
                     if obj.type == "LIGHT" else None,
-                })
+                    # Rigged characters keyframe pose bones: the armature's
+                    # own transform never changes, so object-level sampling
+                    # would condemn a working rig as frozen.
+                    "bones": {
+                        pb.name: (
+                            [float(v) for v in pb.head],
+                            [float(v) for v in pb.rotation_quaternion],
+                        )
+                        for pb in obj.pose.bones
+                    } if obj.type == "ARMATURE" else None,
+                }
+                samples_by_object[obj.name].append(sample)
     finally:
         scene.frame_set(current_frame)
         bpy.context.view_layer.update()
@@ -165,6 +176,21 @@ def _sample_animation_motion(scene, anim_object_names, cam):
         vis_delta = any(s["hide_render"] != base["hide_render"] for s in samples)
         energies = [s["energy"] for s in samples if s["energy"] is not None]
         energy_delta = (max(energies) - min(energies)) if energies else 0.0
+        bone_delta = 0.0
+        animated_bones = 0
+        if samples[0].get("bones"):
+            bone_names = samples[0]["bones"].keys()
+            for bn in bone_names:
+                bd = 0.0
+                for s in samples[1:]:
+                    if bn in (s.get("bones") or {}):
+                        h0, q0 = samples[0]["bones"][bn]
+                        h1, q1 = s["bones"][bn]
+                        bd = max(bd, _vec_distance(h0, h1),
+                                 _vec_distance(q0, q1))
+                if bd > 0.01:
+                    animated_bones += 1
+                bone_delta = max(bone_delta, bd)
         item = {
             "name": name,
             "sample_count": len(samples),
@@ -174,12 +200,14 @@ def _sample_animation_motion(scene, anim_object_names, cam):
             "max_scale_delta": round(scale_delta, 4),
             "visibility_changes": bool(vis_delta),
             "max_energy_delta": round(energy_delta, 4),
+            "max_bone_delta": round(bone_delta, 4),
+            "animated_bone_count": animated_bones,
         }
         sampled.append(item)
         max_location_delta = max(max_location_delta, loc_delta)
         max_rotation_delta = max(max_rotation_delta, rot_delta)
         if (loc_delta > 0.01 or rot_delta > 0.1 or scale_delta > 0.01
-                or vis_delta or energy_delta > 0.01):
+                or vis_delta or energy_delta > 0.01 or animated_bones > 0):
             moving += 1
         if cam and name == cam.name:
             camera_motion = item
@@ -302,13 +330,17 @@ def inspect_scene():
             "clip_end": cam.data.clip_end,
         }
 
-    anim_objects = [
-        o.name for o in scene.objects
-        if (o.animation_data and o.animation_data.action)
-        or (getattr(o, "data", None) is not None
-            and getattr(o.data, "animation_data", None)
-            and o.data.animation_data.action)
-    ]
+    # Keyframed OR driven — a driver-only scene (create_rig control rigs,
+    # scripted expressions) has no action but still animates: drivers are
+    # evaluated by frame_set, so the sampler sees their motion directly.
+    def _animated(o):
+        ad = o.animation_data
+        if ad and (ad.action or ad.drivers):
+            return True
+        data = getattr(o, "data", None)
+        dad = getattr(data, "animation_data", None)
+        return bool(dad and (dad.action or dad.drivers))
+    anim_objects = [o.name for o in scene.objects if _animated(o)]
     sampled_motion = _sample_animation_motion(scene, anim_objects, cam)
     eng = scene.render.engine
     samples = getattr(scene.cycles, "samples", None) if eng == "CYCLES" else \

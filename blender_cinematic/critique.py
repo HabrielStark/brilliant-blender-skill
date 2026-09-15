@@ -394,14 +394,16 @@ def _check_animation(inspection: dict, manifest: dict | None,
         return
     sampled = anim.get("sampled_objects") or []
     # Frozen = no motion on ANY keyed channel: location, rotation, scale,
-    # visibility (reveal mode keys hide_render) and light energy (light_pulse
-    # keys data.energy). Checking only loc/rot would condemn real animations.
+    # visibility (reveal mode keys hide_render), light energy (light_pulse
+    # keys data.energy) and pose bones (rigged characters move only inside
+    # the armature). Checking only loc/rot would condemn real animations.
     frozen = [s["name"] for s in sampled
               if s.get("max_location_delta", 0) < _MOTION_EPS_LOC
               and s.get("max_rotation_delta", 0) < _MOTION_EPS_ROT
               and s.get("max_scale_delta", 0) < _MOTION_EPS_LOC
               and not s.get("visibility_changes")
-              and s.get("max_energy_delta", 0) < _MOTION_EPS_LOC]
+              and s.get("max_energy_delta", 0) < _MOTION_EPS_LOC
+              and not s.get("animated_bone_count")]
     if sampled and len(frozen) == len(sampled) and not cam_animated:
         out.append(_diag(
             "fail", "animation.static",

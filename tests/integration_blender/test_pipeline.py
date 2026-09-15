@@ -1042,3 +1042,56 @@ def test_critique_loop_converges_on_broken_scene(blender_exe, tmp_path):
     final_metrics = image_sanity(preview)
     assert final_metrics["pct_near_black"] < 0.6, history
     assert not fails, history
+
+
+def test_animation_floor_flags_missing_and_accepts_drivers(blender_exe, tmp_path):
+    """The mechanical animation floor must (a) fail an animation manifest
+    with nothing keyed, (b) NOT flag a driver-animated object — create_rig
+    rigs move via drivers, not actions."""
+    from blender_cinematic.critique import diagnose
+    _, base = task_workspace(tmp_path, "anim_floor")
+    blend = base / "final" / "scene.blend"
+    man = {"output_mode": "animation", "target": {"final_format": ["mp4"]}}
+    # (a) no animation at all
+    runner.run_job(runner.build_job(
+        "full_pipeline", base, blend, budget=PREVIEW_BUDGET,
+        recipe={"operations": BASE_RECIPE},
+        output={"image": str(base / "iterations" / "p.png")}), blender_exe, 300)
+    insp = runner.run_job(runner.build_job("inspect", base, blend),
+                          blender_exe, 120)["inspection"]
+    diags = diagnose(insp, manifest=man)
+    assert any(d["code"] == "animation.missing" and d["severity"] == "fail"
+               for d in diags)
+    # (b) driver animation: ctrl.location.x drives hero_core.rotation_euler.z.
+    # Turntable the control around an off-centre pivot so location.x really
+    # varies; hero_core has NO action — only the driver moves it.
+    recipe = {"operations": [
+        {"op": "create_rig", "schema": {"rig_name": "spin_rig",
+            "controls": [{"name": "ctrl_spin", "drives": []}],
+            "drivers": [{"target": "hero_core.rotation_euler.z",
+                         "driver": "ctrl_spin.location.x"}]}},
+        # the control is born at the origin — offset it so orbiting around
+        # [0,0,0] produces a real location.x sweep for the driver to read
+        {"op": "set_object_transform", "target": "ctrl_spin",
+         "location": [1.5, 0, 0]},
+        {"op": "create_animation", "schema": {"animation_name": "ctrl_move",
+            "mode": "turntable", "frame_start": 1, "frame_end": 24,
+            "fps": 24, "targets": ["ctrl_spin"],
+            "params": {"center": [0, 0, 0]}}},
+    ]}
+    res = runner.run_job(runner.build_job("apply_recipe", base, blend,
+                                          recipe=recipe), blender_exe, 300)
+    assert res["ok"], res
+    insp = runner.run_job(runner.build_job("inspect", base, blend),
+                          blender_exe, 120)["inspection"]
+    anim = insp["animation"]
+    sampled = {o["name"]: o for o in anim["sampled_objects"]}
+    # the control is keyed and orbits; the driven hero has no action but its
+    # driver still counts it as animated, and its rotation delta is real
+    assert "ctrl_spin" in anim["keyframed_objects"]
+    assert sampled["ctrl_spin"]["max_location_delta"] > 0.01
+    assert "hero_core" in anim["keyframed_objects"]  # via driver
+    assert sampled["hero_core"]["max_rotation_delta"] > 0.1, sampled["hero_core"]
+    diags = diagnose(insp, manifest=man)
+    assert not any(d["code"] == "animation.missing" for d in diags)
+    assert not any(d["code"] == "animation.static" for d in diags)

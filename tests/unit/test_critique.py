@@ -450,3 +450,15 @@ def test_animation_light_pulse_energy_counts_as_motion():
          "max_energy_delta": 900.0}])
     diags = diagnose(insp, manifest=_ANIM_MANIFEST)
     assert not any(d["code"] == "animation.static" for d in diags)
+
+
+def test_animation_rigged_bone_motion_counts_as_motion():
+    """A rigged character keys pose bones — the armature object transform
+    never changes, so bone deltas must count as motion."""
+    insp = _anim_inspection(sampled=[
+        {"name": "rig", "max_location_delta": 0.0, "max_rotation_delta": 0.0,
+         "max_scale_delta": 0.0, "visibility_changes": False,
+         "max_energy_delta": 0.0, "max_bone_delta": 0.35,
+         "animated_bone_count": 7}])
+    diags = diagnose(insp, manifest=_ANIM_MANIFEST)
+    assert not any(d["code"] == "animation.static" for d in diags)
