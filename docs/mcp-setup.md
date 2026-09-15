@@ -54,13 +54,21 @@ skill folder (`SKILL.md`) so the agent loads the workflow rules too.
 `lighting_create_setup`, `material_create_pbr`, `geometry_estimate_complexity`,
 `render_budget`, `render_preview`, `render_multiview`, `render_final`, `export_glb`,
 `web_validate_glb`, `web_generate_integration`, `security_scan_python`,
-`security_policy`.
+`security_policy`, `scene_verifier_brief`, `scene_verifier_ops`.
 
 `scene_critique` reads the task's `scene_manifest.json` when `task_id` is
 passed. Declaring `success_criteria.required_parts` in the manifest enables
 the completeness contract: every brief element gets a presence + in-frame +
 placeholder check, and missing parts return a `create_mesh_primitive`
 scaffold op so the repair loop can proceed mechanically.
+
+The verifier loop is mechanical end-to-end: `scene_verifier_brief` emits the
+fresh-eyes prompt (brief + ledger + image paths, requesting class-tagged
+defects and a JSON `suggested_ops` block); `scene_verifier_ops` parses the
+verifier's response into `ops` validated by the same recipe validator as
+`apply_recipe` (free-text `name_hint` fields resolve against object names
+from `scene_inspect`), plus `plans` for defects needing authored work and
+`dropped_ops` with rejection reasons.
 
 ## Resources & prompts
 
