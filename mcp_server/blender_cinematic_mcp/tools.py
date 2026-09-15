@@ -15,7 +15,7 @@ from blender_cinematic import runner
 from blender_cinematic.budget import compute_budget
 from blender_cinematic.evaluation import score_iteration
 from blender_cinematic.glb import validate_glb
-from blender_cinematic.critique import diagnose
+from blender_cinematic.critique import diagnose, parse_verdict
 from blender_cinematic.imaging import image_sanity, subject_readability_report
 from blender_cinematic.linters import lint_scene
 from blender_cinematic.preflight import collect_hardware_report
@@ -31,6 +31,7 @@ from blender_cinematic.security import (
     ensure_raw_python_allowed,
     scan_python_source,
 )
+from blender_cinematic.verifier import parse_verifier_response
 from blender_cinematic.webgen import generate_integration
 from blender_cinematic.workspace import task_workspace
 
@@ -322,11 +323,63 @@ def h_scene_verifier_brief(ctx: ServerContext, task_id: str,
         "VERDICT: PASS | FAIL\n"
         "ledger:\n"
         "  <part>: present | missing | unidentifiable | placeholder\n"
-        "defects (ordered by visual impact):\n"
-        "  1. <what> — <which view shows it> — <what it should look like>\n\n"
+        "defects (ordered by visual impact) — tag each with a class from "
+        "occluded|backdrop_occlusion|placeholder|unidentifiable|missing|"
+        "lighting|material|floating|clipping|scale|framing|environment and "
+        "an affects: <object-or-ledger-part> hint:\n"
+        "  1. [class:<name>] <what> — <which view> — <what it should look "
+        "like> — affects: <part>\n\n"
+        "Then append ONE fenced JSON block so the repair loop can act "
+        "mechanically — each defect may carry suggested_ops using ONLY "
+        "allowlisted op names (create_mesh_primitive, create_material, "
+        "add_light, adjust_light, adjust_world, adjust_material, "
+        "reframe_camera, set_object_transform, delete_object, "
+        "delete_objects_by_prefix, remove_modifier, add_bevel_modifier, "
+        "add_subdivision, create_geometry_nodes, create_curve_tube, "
+        "create_decal_plane, create_text_label, assign_material, apply_post):\n"
+        "```json\n"
+        '{"verdict": "FAIL", "defects": [{"part": "<ledger part>", '
+        '"defect": "<what>", "view": "<which render>", '
+        '"suggested_ops": [{"op": "adjust_world", "strength": 0.4}]}]}\n'
+        "```\n\n"
         "Be strict — a named cube is not the element.")
     return {"ok": True, "verifier_prompt": prompt, "image_paths": imgs,
             "required_parts": required}
+
+
+@_safe
+def h_scene_verifier_ops(ctx: ServerContext, response_text: str,
+                         object_names: list[str] | None = None,
+                         inspection: dict | None = None) -> dict:
+    """scene.verifier_ops — parse a verifier report into validated repair ops.
+
+    Two routing layers merge here:
+
+    - ``suggested_ops`` from the verifier's JSON block are filtered through
+      the same recipe validator apply_recipe uses — only allowlisted,
+      schema-valid ops survive (``name_hint`` resolves via ``object_names``
+      from the latest scene_inspect).
+    - class-tagged defect lines (``[class:occluded]`` etc.) route through the
+      defect-class map; classes needing authored work emit ``plans`` notes
+      instead of fake ops.
+
+    Apply ``ops`` via scene_apply_recipe, author the ``plans``, re-render,
+    re-verify. ``dropped_ops`` shows what was rejected and why.
+    """
+    parsed = parse_verifier_response(response_text, object_names=object_names)
+    routed = parse_verdict(response_text, inspection)
+    ops = list(parsed["ops"])
+    plans: list[str] = []
+    for d in routed["diagnoses"]:
+        for op in d["ops"]:
+            if op.get("op") == "_plan":
+                plans.append(f"{d['code']}: {op['note']}")
+            else:
+                ops.append(op)
+    return {"ok": True, "verdict": parsed["verdict"] or routed["verdict"],
+            "ledger": parsed["ledger"] or routed["ledger"],
+            "defects": parsed["defects"], "ops": ops, "plans": plans,
+            "dropped_ops": parsed["dropped_ops"]}
 
 
 # -------------------------------- export / web ----------------------------- #
@@ -387,6 +440,7 @@ HANDLERS = {
     "evaluate_preview": h_evaluate_preview,
     "scene_critique": h_scene_critique,
     "scene_verifier_brief": h_scene_verifier_brief,
+    "scene_verifier_ops": h_scene_verifier_ops,
     "camera_plan_and_create": h_camera_plan_and_create,
     "lighting_create_setup": h_lighting_create_setup,
     "material_create_pbr": h_material_create_pbr,

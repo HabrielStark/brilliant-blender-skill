@@ -115,3 +115,87 @@ def test_scene_critique_tool_returns_op_ready_diagnoses(ctx, tmp_path):
     # suggested ops must be real allowlisted operations, not advice
     from blender_cinematic.recipes import validate_recipe
     assert validate_recipe({"operations": top["ops"]}).passed
+
+
+def test_scene_verifier_ops_parses_and_validates(ctx):
+    """Verifier prose -> structured ops: only allowlisted, schema-valid ops
+    survive; junk is dropped with reasons."""
+    T.h_project_create_scene_workspace(ctx, "demo",
+                                       {"task_id": "t", "brief": "b", "output_mode": "still"})
+    report = """VERDICT: FAIL
+ledger:
+  window: missing
+  lamp: placeholder
+defects (ordered by visual impact):
+  1. no windows — hero — lit facade cells
+```json
+{"verdict": "FAIL", "defects": [
+  {"part": "window", "defect": "no windows", "view": "hero",
+   "suggested_ops": [
+     {"op": "adjust_world", "strength": 0.4},
+     {"op": "run_arbitrary_python", "code": "import bpy"},
+     {"op": "create_mesh_primitive"}
+   ]}
+]}
+```"""
+    res = T.h_scene_verifier_ops(ctx, report)
+    assert res["ok"] and res["verdict"] == "FAIL"
+    assert res["ledger"] == {"window": "missing", "lamp": "placeholder"}
+    assert [o["op"] for o in res["ops"]] == ["adjust_world"]
+    assert len(res["dropped_ops"]) == 2  # unknown op + missing required param
+
+
+def test_scene_verifier_ops_handles_bare_json_and_no_json(ctx):
+    bare = 'VERDICT: PASS\nsome prose {"verdict": "PASS", "defects": [{"part": "x", "defect": "d", "view": "hero", "suggested_ops": [{"op": "delete_object", "name": "stale"}]}]}'
+    res = T.h_scene_verifier_ops(ctx, bare)
+    assert res["verdict"] == "PASS"
+    assert [o["op"] for o in res["ops"]] == ["delete_object"]
+    empty = T.h_scene_verifier_ops(ctx, "VERDICT: FAIL\nno json at all")
+    assert empty["verdict"] == "FAIL" and empty["ops"] == [] and empty["defects"] == []
+
+
+def test_scene_verifier_ops_resolves_name_hints(ctx):
+    """A vision-only verifier can't see object names — name_hint must resolve
+    to exactly one scene object or the op drops with a proper error."""
+    T.h_project_create_scene_workspace(ctx, "demo",
+                                       {"task_id": "t", "brief": "b", "output_mode": "still"})
+    report = '''VERDICT: FAIL
+```json
+{"defects": [
+  {"part": "lantern", "defect": "floating hook", "view": "all",
+   "suggested_ops": [{"op": "delete_object", "name_hint": "lantern handle"}]},
+  {"part": "pot", "defect": "hovering", "view": "back",
+   "suggested_ops": [{"op": "set_object_transform", "name_hint": "big plant pot", "location": [0,0,0]}]},
+  {"part": "x", "defect": "ghost", "view": "v4",
+   "suggested_ops": [{"op": "delete_object", "name_hint": "zzz nothing"}]}
+]}
+```'''
+    res = T.h_scene_verifier_ops(
+        ctx, report,
+        object_names=["lantern_handle", "plant_c_pot", "patio_floor"])
+    kept = {o["op"]: o for o in res["ops"]}
+    assert kept["delete_object"]["name"] == "lantern_handle"
+    assert kept["set_object_transform"]["target"] == "plant_c_pot"
+    assert len(res["dropped_ops"]) == 1  # unresolvable hint drops cleanly
+
+
+def test_scene_verifier_ops_merges_class_routing(ctx):
+    """Class-tagged defect lines route to template ops/plans even without
+    suggested_ops — the mechanical + planning layers merge."""
+    T.h_project_create_scene_workspace(ctx, "demo",
+                                       {"task_id": "t", "brief": "b", "output_mode": "still"})
+    report = """VERDICT: FAIL
+ledger:
+  chair: placeholder
+defects (ordered by visual impact):
+  1. [class:lighting] scene too dark — hero — needs warm fill — affects: scene
+  2. [class:placeholder] chair is a cube — profile — needs real anatomy — affects: chair
+```json
+{"verdict": "FAIL", "defects": []}
+```"""
+    res = T.h_scene_verifier_ops(ctx, report)
+    assert res["ok"] and res["verdict"] == "FAIL"
+    assert any(o["op"] == "adjust_world" for o in res["ops"])  # lighting class
+    assert any(o["op"] == "add_light" for o in res["ops"])
+    # placeholder without inspection resolves no target -> rebuild plan
+    assert res["plans"] and "anatomy" in res["plans"][0]

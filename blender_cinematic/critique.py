@@ -713,3 +713,152 @@ def diagnose(inspection: dict, image_metrics: dict | None = None,
     order = {"fail": 0, "warn": 1}
     out.sort(key=lambda d: order.get(d["severity"], 2))
     return out
+
+
+# --------------------------------------------------------------------------- #
+# Verifier verdict routing
+# --------------------------------------------------------------------------- #
+# The visual verifier returns a fixed-format verdict. Defect lines carry a
+# ``[class:<name>]`` tag and ``affects: <object-or-ledger-part>`` so the
+# orchestrator can route them mechanically instead of re-deriving ops from
+# prose. Each class maps to a repair family of allowlisted ops.
+
+VERDICT_DEFECT_CLASSES = (
+    "occluded",        # hidden behind geometry or out of frame
+    "backdrop_occlusion",  # environment/wall blocks an orbit view
+    "placeholder",     # named object but bare primitive / unreadable
+    "unidentifiable",  # exists but does not read as what it is
+    "missing",         # ledger element absent from renders
+    "lighting",        # dark, flat, missing pools/emission
+    "material",        # wrong, absent or placeholder-looking material
+    "floating",        # detached part / no contact
+    "clipping",        # intersecting or half-buried geometry
+    "scale",           # wrong proportion vs siblings
+    "framing",         # subject too small / cropped / dead space
+    "environment",     # empty world, missing sky/ground/context
+)
+
+
+def _find_named(objects: list[dict], token: str) -> dict | None:
+    tok = token.lower().strip()
+    for o in objects:
+        if tok and tok in str(o.get("name", "")).lower():
+            return o
+    for o in objects:
+        if part_present(str(o.get("name", "")), tok):
+            return o
+    return None
+
+
+def _verdict_defect_ops(cls: str, target: dict | None, part: str) -> list[dict]:
+    """Map a defect class to concrete allowlisted ops. Classes that need a
+    human-style authoring pass return a 'plan' note instead of fake ops."""
+    loc = (target or {}).get("world_location")
+    if cls == "occluded":
+        return [{"op": "reframe_camera",
+                 "look_at": loc or [0, 0, 0], "pull_back": 0.85}]
+    if cls == "backdrop_occlusion":
+        if target and loc:
+            # lower the occluder to half its height, keep its footprint
+            return [{"op": "set_object_transform", "target": target["name"],
+                     "location": [loc[0], loc[1],
+                                  (target.get("dimensions") or [0, 0, 1])[2] / 4]}]
+        return [{"op": "reframe_camera", "pull_back": 0.8}]
+    if cls in ("placeholder", "unidentifiable"):
+        ops = []
+        if target:
+            ops.append({"op": "delete_object", "name": target["name"]})
+        ops.append({"op": "_plan",
+                    "note": f"rebuild '{part or (target or {}).get('name', '?')}' "
+                            "as real anatomy per docs://anatomy-checklists — "
+                            "base mesh + functional parts + bevel + material"})
+        return ops
+    if cls == "missing":
+        return [{"op": "_plan",
+                 "note": f"create '{part}' — scaffold exists via "
+                         "completeness.part_missing if it is in required_parts"}]
+    if cls == "lighting":
+        return [{"op": "adjust_world", "strength_scale": 1.35},
+                {"op": "add_light", "schema": {"name": "verifier_fill",
+                 "type": "AREA", "power": 150,
+                 "color": [1.0, 0.85, 0.7], "position_role": "fill"}}]
+    if cls == "material":
+        if target:
+            return [{"op": "_plan",
+                     "note": f"rebuild material on '{target['name']}' via "
+                             "create_material with an appropriate preset + pbr"}]
+        return [{"op": "_plan", "note": "assign real materials per preset list"}]
+    if cls in ("floating", "clipping", "scale"):
+        if target:
+            return [{"op": "_plan",
+                     "note": f"correct '{target['name']}' transform via "
+                             "set_object_transform (absolute dims/location, "
+                             "not deltas)"}]
+        return [{"op": "_plan", "note": "fix transforms via set_object_transform"}]
+    if cls == "framing":
+        return [{"op": "reframe_camera",
+                 "look_at": loc or [0, 0, 0], "pull_back": 0.8}]
+    if cls == "environment":
+        return [{"op": "adjust_world", "color": [0.09, 0.11, 0.18],
+                 "strength": 0.4},
+                {"op": "_plan", "note": "add ground/backdrop in ENVIRONMENT "
+                                        "if absent"}]
+    return [{"op": "_plan", "note": "manual inspection needed"}]
+
+
+def parse_verdict(verdict_text: str, inspection: dict | None = None) -> dict:
+    """Parse a fresh-eyes verifier verdict into routable diagnoses.
+
+    Expected shape (emitted by the scene.verifier_brief prompt)::
+
+        VERDICT: FAIL
+        ledger:
+          mug: placeholder
+        defects (ordered by visual impact):
+          1. [class:occluded] chair hidden behind table — mv_profile — should
+             be visible — affects: chair
+
+    Returns {"verdict": "PASS"|"FAIL"|"UNKNOWN", "ledger": {...},
+             "diagnoses": [...]} where diagnoses reuse the critique shape so
+    orchestrators can apply ``ops`` via apply_recipe directly. Lines without a
+    class tag still produce diagnoses with a manual-plan op.
+    """
+    import re
+    objects = (inspection or {}).get("objects", [])
+    verdict = "UNKNOWN"
+    m = re.search(r"VERDICT:\s*(PASS|FAIL)", verdict_text or "", re.I)
+    if m:
+        verdict = m.group(1).upper()
+    ledger = {}
+    in_ledger = False
+    defects: list[dict] = []
+    for line in (verdict_text or "").splitlines():
+        s = line.strip()
+        if s.startswith("ledger"):
+            in_ledger = True
+            continue
+        if in_ledger and s.startswith("defects"):
+            in_ledger = False
+            continue
+        if in_ledger and ":" in s and not s[0].isdigit():
+            k, _, v = s.partition(":")
+            ledger[k.strip()] = v.strip()
+            continue
+        dm = re.match(r"\d+[.)]\s*(.*)", s)
+        if dm:
+            body = dm.group(1)
+            cls_m = re.search(r"\[class:([a-z_]+)\]", body)
+            cls = cls_m.group(1) if cls_m else "manual"
+            aff_m = re.search(r"affects:\s*([\w.\-]+)", body)
+            part = aff_m.group(1) if aff_m else ""
+            defects.append({"class": cls, "text": body, "part": part})
+    diagnoses = []
+    for d in defects:
+        target = _find_named(objects, d["part"]) if d["part"] else None
+        sev = "fail" if d["class"] in ("missing", "placeholder",
+                                       "unidentifiable") else "warn"
+        diagnoses.append(_diag(
+            sev, f"verifier.{d['class']}",
+            d["text"], "visual verifier verdict",
+            _verdict_defect_ops(d["class"], target, d["part"])))
+    return {"verdict": verdict, "ledger": ledger, "diagnoses": diagnoses}

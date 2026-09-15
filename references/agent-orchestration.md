@@ -38,6 +38,15 @@ is never the builder's own claim:
    `PASS` from the verifier plus zero fail diagnoses is the only valid
    done-state.
 
+   The `scene_verifier_brief` tool emits this exact prompt with brief, ledger,
+   and image paths filled in, and asks the verifier to append a fenced JSON
+   block where each defect may carry `suggested_ops`. Feed the verifier's raw
+   response to `scene_verifier_ops`: it returns only ops that pass the same
+   recipe validator `scene_apply_recipe` uses (plus a `dropped_ops` list with
+   rejection reasons). The full loop — `scene_verifier_brief` → verifier →
+   `scene_verifier_ops` → `scene_apply_recipe` → re-render → re-verify — is
+   mechanical; judgment lives in the verifier's eyes, safety in the validator.
+
 The verifier must never be told the score or the builder's interpretation —
 anchoring it to the builder's story defeats the point. If sub-agents are
 unavailable, the orchestrator plays verifier on a fresh read of the render and
