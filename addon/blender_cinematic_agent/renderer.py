@@ -77,29 +77,35 @@ MULTIVIEW_DEFAULT = (
 
 
 def _subject_bounds():
+    """Bounds of the *subject* — ENVIRONMENT is excluded on the first pass so a
+    wide backdrop or floor cannot inflate the orbit radius and shrink the
+    subject in every view (a real verifier run caught a 26m garden wall doing
+    exactly this). Falls back to all geometry when nothing else exists."""
     scene = bpy.context.scene
-    lo = [float("inf")] * 3
-    hi = [float("-inf")] * 3
-    found = False
     from mathutils import Vector
-    for obj in scene.objects:
-        if obj.type not in {"MESH", "CURVE", "SURFACE", "FONT", "META"}:
-            continue
-        coll = obj.users_collection[0].name if obj.users_collection else ""
-        if coll in {"CAMERAS", "LIGHTS", "HELPERS"}:
-            continue
-        # bound_box is local-space; transform each corner to world
-        for corner in obj.bound_box:
-            w = obj.matrix_world @ Vector(corner)
-            for i in range(3):
-                lo[i] = min(lo[i], w[i])
-                hi[i] = max(hi[i], w[i])
-        found = True
-    if not found:
-        return None, None
-    center = [(lo[i] + hi[i]) / 2 for i in range(3)]
-    radius = (sum((hi[i] - lo[i]) ** 2 for i in range(3)) ** 0.5) / 2
-    return center, max(radius, 0.5)
+    skip = {"CAMERAS", "LIGHTS", "HELPERS"}
+    for include_env in (False, True):
+        lo = [float("inf")] * 3
+        hi = [float("-inf")] * 3
+        found = False
+        for obj in scene.objects:
+            if obj.type not in {"MESH", "CURVE", "SURFACE", "FONT", "META"}:
+                continue
+            coll = obj.users_collection[0].name if obj.users_collection else ""
+            if coll in skip or (not include_env and coll == "ENVIRONMENT"):
+                continue
+            # bound_box is local-space; transform each corner to world
+            for corner in obj.bound_box:
+                w = obj.matrix_world @ Vector(corner)
+                for i in range(3):
+                    lo[i] = min(lo[i], w[i])
+                    hi[i] = max(hi[i], w[i])
+            found = True
+        if found:
+            center = [(lo[i] + hi[i]) / 2 for i in range(3)]
+            radius = (sum((hi[i] - lo[i]) ** 2 for i in range(3)) ** 0.5) / 2
+            return center, max(radius, 0.5)
+    return None, None
 
 
 def render_multiview(out_paths, budget, views=None):
