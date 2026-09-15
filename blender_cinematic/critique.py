@@ -362,6 +362,64 @@ def _check_scene_richness(inspection: dict, out: list) -> None:
             f"subjects={len(subjects)} environment={len(env)}", []))
 
 
+_MOTION_EPS_LOC = 1e-3   # metres
+_MOTION_EPS_ROT = 1e-2   # radians
+
+
+def _check_animation(inspection: dict, manifest: dict | None,
+                     out: list) -> None:
+    """Mechanical floor for temporal work: a scene that claims animation but
+    has no keyframes — or whose keyframes move nothing — must fail before the
+    visual verifier is even consulted. The visual layer still owns 'does the
+    motion read correctly'; this layer only proves motion exists."""
+    anim = inspection.get("animation") or {}
+    wants_anim = bool(manifest) and (
+        manifest.get("output_mode") in ("animation", "interactive_web")
+        or "mp4" in (manifest.get("target") or {}).get("final_format", []))
+    keyframed = anim.get("keyframed_objects") or []
+    cam_animated = anim.get("camera_animated")
+    if wants_anim and not (keyframed or cam_animated):
+        out.append(_diag(
+            "fail", "animation.missing",
+            "manifest requires animation but nothing in the scene is "
+            "keyframed — a turntable/flythrough recipe op was never applied "
+            "or silently failed",
+            f"output_mode={(manifest or {}).get('output_mode')!r} "
+            f"keyframed=0 camera_animated={cam_animated}",
+            [{"op": "create_animation",
+              "schema": {"animation_name": "primary_motion",
+                         "mode": "turntable",
+                         "targets": [o["name"] for o in
+                                     _subject_objects(inspection)]}}]))
+        return
+    sampled = anim.get("sampled_objects") or []
+    # Frozen = no motion on ANY keyed channel: location, rotation, scale,
+    # visibility (reveal mode keys hide_render) and light energy (light_pulse
+    # keys data.energy). Checking only loc/rot would condemn real animations.
+    frozen = [s["name"] for s in sampled
+              if s.get("max_location_delta", 0) < _MOTION_EPS_LOC
+              and s.get("max_rotation_delta", 0) < _MOTION_EPS_ROT
+              and s.get("max_scale_delta", 0) < _MOTION_EPS_LOC
+              and not s.get("visibility_changes")
+              and s.get("max_energy_delta", 0) < _MOTION_EPS_LOC]
+    if sampled and len(frozen) == len(sampled) and not cam_animated:
+        out.append(_diag(
+            "fail", "animation.static",
+            "every keyframed object is motionless across the sampled "
+            "timeline — keyframes exist but produce no visible change "
+            "(broken curves, zero-amplitude driver, or keys on the wrong "
+            "property)",
+            f"frozen={frozen}",
+            []))
+    elif frozen:
+        out.append(_diag(
+            "warn", "animation.partially_static",
+            "some keyframed objects never move — dead keys suggest the "
+            "animation didn't reach them (e.g. a turntable target pinned "
+            "at the orbit centre)",
+            f"frozen={frozen}", []))
+
+
 def _check_buried_objects(inspection: dict, out: list) -> None:
     """A small subject fully inside another SOLID object's bbox is invisible —
     the classic weak-model layout bug (props placed at plausible heights
@@ -699,6 +757,7 @@ def diagnose(inspection: dict, image_metrics: dict | None = None,
     """Ordered diagnoses: fails first, then warnings, most-direct fixes first."""
     out: list[dict] = []
     _check_completeness(inspection, manifest, out)
+    _check_animation(inspection, manifest, out)
     _check_lint(lint, inspection, out)
     _check_exposure(image_metrics, out)
     _check_scene_richness(inspection, out)

@@ -363,3 +363,90 @@ def test_adjust_material_warns_on_unknown_param():
     res = validate_recipe(r)
     assert res.passed  # warnings don't fail; the unknown param is flagged
     assert any("unknown param" in i.message for i in res.warnings)
+
+
+def _anim_inspection(keyframed=("a",), sampled=None, cam_animated=False):
+    insp = _inspection(objects=[_subject("a"), _subject("b")])
+    insp["animation"] = {
+        "has_action": bool(keyframed), "frame_start": 1, "frame_end": 48,
+        "fps": 24, "keyframed_objects": list(keyframed),
+        "camera_animated": cam_animated,
+        "sampled_objects": sampled if sampled is not None else [
+            {"name": n, "max_location_delta": 0.5,
+             "max_rotation_delta": 3.0} for n in keyframed],
+    }
+    return insp
+
+
+_ANIM_MANIFEST = {"output_mode": "animation",
+                  "target": {"final_format": ["mp4"]}}
+
+
+def test_animation_missing_fails_when_manifest_requires_motion():
+    """output_mode=animation + zero keyframes must be a hard fail — the
+    animation op was never applied."""
+    insp = _anim_inspection(keyframed=())
+    insp["animation"]["sampled_objects"] = []
+    diags = diagnose(insp, manifest=_ANIM_MANIFEST)
+    miss = [d for d in diags if d["code"] == "animation.missing"]
+    assert miss and miss[0]["severity"] == "fail"
+    # the suggested op must be a real, schema-valid recipe op
+    res = validate_recipe({"operations": miss[0]["ops"]})
+    assert res.passed, [i.message for i in res.issues]
+    schema = miss[0]["ops"][0]["schema"]
+    assert set(schema["targets"]) == {"a", "b"}
+
+
+def test_animation_static_fails_when_keyframes_move_nothing():
+    """Keyframes exist but every sampled object is frozen — broken curves
+    must not pass the mechanical floor."""
+    insp = _anim_inspection(sampled=[
+        {"name": "a", "max_location_delta": 0.0, "max_rotation_delta": 0.001}])
+    diags = diagnose(insp, manifest=_ANIM_MANIFEST)
+    assert any(d["code"] == "animation.static" and d["severity"] == "fail"
+               for d in diags)
+
+
+def test_animation_partially_static_warns_on_dead_keys():
+    insp = _anim_inspection(keyframed=("a", "b"), sampled=[
+        {"name": "a", "max_location_delta": 1.0, "max_rotation_delta": 0.0},
+        {"name": "b", "max_location_delta": 0.0, "max_rotation_delta": 0.0}])
+    diags = diagnose(insp, manifest=_ANIM_MANIFEST)
+    assert any(d["code"] == "animation.partially_static"
+               and d["severity"] == "warn" for d in diags)
+    assert not any(d["code"] == "animation.static" for d in diags)
+
+
+def test_animation_ok_when_objects_move():
+    insp = _anim_inspection()
+    diags = diagnose(insp, manifest=_ANIM_MANIFEST)
+    assert not any(d["code"].startswith("animation.") for d in diags)
+
+
+def test_animation_checks_silent_for_still_manifests():
+    """A still scene must not get animation diagnoses even with keys present."""
+    insp = _anim_inspection(keyframed=())
+    insp["animation"]["sampled_objects"] = []
+    diags = diagnose(insp, manifest={"output_mode": "still"})
+    assert not any(d["code"].startswith("animation.") for d in diags)
+
+
+def test_animation_reveal_visibility_counts_as_motion():
+    """reveal-mode animations keyframe hide_render, not transforms — a pure
+    visibility toggle must NOT read as a frozen animation."""
+    insp = _anim_inspection(sampled=[
+        {"name": "a", "max_location_delta": 0.0, "max_rotation_delta": 0.0,
+         "max_scale_delta": 0.0, "visibility_changes": True,
+         "max_energy_delta": 0.0}])
+    diags = diagnose(insp, manifest=_ANIM_MANIFEST)
+    assert not any(d["code"] == "animation.static" for d in diags)
+
+
+def test_animation_light_pulse_energy_counts_as_motion():
+    """light_pulse keys data.energy — energy deltas must count as motion."""
+    insp = _anim_inspection(sampled=[
+        {"name": "key_l", "max_location_delta": 0.0, "max_rotation_delta": 0.0,
+         "max_scale_delta": 0.0, "visibility_changes": False,
+         "max_energy_delta": 900.0}])
+    diags = diagnose(insp, manifest=_ANIM_MANIFEST)
+    assert not any(d["code"] == "animation.static" for d in diags)

@@ -189,12 +189,22 @@ def h_render_budget(ctx: ServerContext, hardware_report_path: str, requested_pro
 
 
 @_safe
-def h_render_preview(ctx: ServerContext, task_id: str, budget: dict | None = None) -> dict:
-    """render.preview"""
+def h_render_preview(ctx: ServerContext, task_id: str, budget: dict | None = None,
+                     frames: list[int] | None = None) -> dict:
+    """render.preview — a single frame, or a temporal proof strip.
+
+    Pass ``frames`` (e.g. [1, 24, 48, 72]) to render those timeline frames in
+    one Blender session — the verifier needs frame samples to judge animation:
+    one frame can't show motion, a turntable that doesn't turn, or a VFX burst
+    frozen at t=0. Outputs land at preview_####.png (scene_verifier_brief
+    already lists them when the scene is animated).
+    """
     base = ctx.task_dir(task_id)
     out = base / "iterations" / "preview.png"
     job = runner.build_job("render_preview", base, base / "final" / "scene.blend",
-                           budget=budget or {}, output={"image": str(out)}, safety_mode=ctx.safety_mode)
+                           budget=budget or {}, output={"image": str(out)},
+                           render={"frames": frames} if frames else None,
+                           safety_mode=ctx.safety_mode)
     return runner.run_job(job, ctx.blender_exe)
 
 
@@ -306,6 +316,29 @@ def h_scene_verifier_brief(ctx: ServerContext, task_id: str,
     default_imgs = [str(base / "iterations" / "preview.png")] + [
         str(base / "iterations" / f"multiview_{v}.png")
         for v in ("three_quarter", "profile", "back", "top")]
+    # Temporal proof: the verifier needs frame samples — a still can't show
+    # motion. Authoritative frame range comes from the latest scene.inspect
+    # (iterations/inspect.json -> "animation"); fall back to a manifest
+    # "animation" block if a caller stored one there.
+    anim: dict = {}
+    insp_path = base / "iterations" / "inspect.json"
+    if insp_path.exists():
+        try:
+            insp = json.loads(insp_path.read_text(encoding="utf-8"))
+            anim = insp.get("animation") or {}
+        except (json.JSONDecodeError, OSError):
+            pass
+    if not anim.get("frame_end"):
+        cand = manifest.get("animation") or {}
+        if isinstance(cand, dict):
+            anim = cand
+    if anim.get("frame_end"):
+        # render_preview(frames=[...]) writes preview_f####.png.
+        f0, f1 = int(anim.get("frame_start", 1)), int(anim["frame_end"])
+        mid = f0 + (f1 - f0) // 2
+        default_imgs += [
+            str(base / "iterations" / f"preview_{f:04d}.png")
+            for f in (f0, mid, f1)]
     imgs = image_paths or default_imgs
     prompt = (
         "You are a visual verifier for a Blender scene produced by another "
@@ -318,7 +351,18 @@ def h_scene_verifier_brief(ctx: ServerContext, task_id: str,
         "For EACH ledger element: present? identifiable? does it read as what "
         "it is? Three-tier anatomy test (see docs://anatomy-checklists): "
         "(1) silhouette identifies it, (2) functional parts present and "
-        "attached, (3) surface carries material evidence.\n\n"
+        "attached, (3) surface carries material evidence.\n"
+        + (("When frame samples are listed, ALSO verify motion across them: "
+            + (f"keyframed objects are {', '.join(anim['keyframed_objects'])}"
+               "; " if anim.get("keyframed_objects") else "")
+            + ("the camera is animated; " if anim.get("camera_animated") else "")
+            + "the animated elements must visibly change between frames "
+            "(turntable = different angles, pulse = different energy, "
+            "reveal = appearing/disappearing) — identical frames mean the "
+            "animation is broken. Also check that attached parts stay "
+            "attached and nothing clips or detaches mid-motion.\n")
+           if anim.get("frame_end") else "")
+        + "\n"
         "Return EXACTLY this shape:\n\n"
         "VERDICT: PASS | FAIL\n"
         "ledger:\n"

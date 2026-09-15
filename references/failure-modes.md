@@ -27,6 +27,10 @@ The behaviours this skill exists to prevent, and the guard that catches each.
 | Enclosure/backdrop wall occludes orbit views | place backdrop outside the orbit shell or lower it so every orbit angle still shows the subject; an orbit view that shows only wall is a failed view |
 | Refinement pass duplicates generated detail | `remove_modifier` + `delete_objects_by_prefix` the stale family before re-running a `create_geometry_nodes` recipe — replace, never accumulate |
 | Facade recipe scatters onto roofs/undersides | `GN_CityWindows` restricts to near-vertical faces via a normal-dot-Z selection; keep the same pattern for other facade recipes |
+| Animation declared but never keyed | `animation.missing` fail when manifest wants motion and nothing is keyframed |
+| Keyframes exist but nothing moves | `animation.static` fail / `animation.partially_static` warn — sampled deltas cover loc/rot/scale/hide_render/light energy so reveal and pulse modes aren't false-flagged |
+| Still render "proves" an animation | `render_preview(frames=[...])` temporal strip + verifier brief auto-includes frame samples + motion check |
+| Rotationally symmetric subject "verifies" a turntable | verifier is told which objects are keyframed; invisible rotation on symmetric parts is flagged as unverifiable, not passed |
 | Raw Python as the normal path | structured-operation allowlist; raw Python disabled by default |
 | Writing outside the project | `WorkspaceResolver` path sandbox |
 | Shell injection via filenames/params | argument arrays only; no `shell=True` |

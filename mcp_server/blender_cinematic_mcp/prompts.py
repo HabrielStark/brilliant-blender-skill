@@ -28,7 +28,14 @@ _COMMON = (
     "scene_apply_recipe, author the listed plans, re-render, re-verify. Every "
     "declared element must read as what it is from the angles that show it — "
     "a placeholder that merely carries the name is not the element. Only "
-    "then render final."
+    "then render final.\n\n"
+    "Animated scenes: a single still can never prove motion. Render a "
+    "temporal strip with render_preview(frames=[start, mid, end, ...]) — the "
+    "verifier brief lists the sampled frames and asks for motion checks. "
+    "scene_critique fails animation.missing/animation.static mechanically, "
+    "but only the frame renders prove the motion reads correctly: check "
+    "attachments stay attached, nothing clips, and the intended behavior "
+    "(orbit, pulse, reveal) is actually visible across frames."
 )
 
 

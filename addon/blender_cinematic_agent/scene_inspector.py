@@ -138,6 +138,13 @@ def _sample_animation_motion(scene, anim_object_names, cam):
                     "frame": frame,
                     "location": [float(v) for v in obj.location],
                     "rotation": [float(v) for v in obj.rotation_euler],
+                    "scale": [float(v) for v in obj.scale],
+                    "hide_render": bool(obj.hide_render),
+                    # light_pulse and similar modes keyframe data.energy, not
+                    # the object — loc/rot alone would read a real pulse as
+                    # frozen.
+                    "energy": float(obj.data.energy)
+                    if obj.type == "LIGHT" else None,
                 })
     finally:
         scene.frame_set(current_frame)
@@ -154,17 +161,25 @@ def _sample_animation_motion(scene, anim_object_names, cam):
         base = samples[0]
         loc_delta = max(_vec_distance(base["location"], s["location"]) for s in samples)
         rot_delta = max(_vec_distance(base["rotation"], s["rotation"]) for s in samples)
+        scale_delta = max(_vec_distance(base["scale"], s["scale"]) for s in samples)
+        vis_delta = any(s["hide_render"] != base["hide_render"] for s in samples)
+        energies = [s["energy"] for s in samples if s["energy"] is not None]
+        energy_delta = (max(energies) - min(energies)) if energies else 0.0
         item = {
             "name": name,
             "sample_count": len(samples),
             "frames": frames,
             "max_location_delta": round(loc_delta, 4),
             "max_rotation_delta": round(rot_delta, 4),
+            "max_scale_delta": round(scale_delta, 4),
+            "visibility_changes": bool(vis_delta),
+            "max_energy_delta": round(energy_delta, 4),
         }
         sampled.append(item)
         max_location_delta = max(max_location_delta, loc_delta)
         max_rotation_delta = max(max_rotation_delta, rot_delta)
-        if loc_delta > 0.01 or rot_delta > 0.1:
+        if (loc_delta > 0.01 or rot_delta > 0.1 or scale_delta > 0.01
+                or vis_delta or energy_delta > 0.01):
             moving += 1
         if cam and name == cam.name:
             camera_motion = item
@@ -287,7 +302,13 @@ def inspect_scene():
             "clip_end": cam.data.clip_end,
         }
 
-    anim_objects = [o.name for o in scene.objects if o.animation_data and o.animation_data.action]
+    anim_objects = [
+        o.name for o in scene.objects
+        if (o.animation_data and o.animation_data.action)
+        or (getattr(o, "data", None) is not None
+            and getattr(o.data, "animation_data", None)
+            and o.data.animation_data.action)
+    ]
     sampled_motion = _sample_animation_motion(scene, anim_objects, cam)
     eng = scene.render.engine
     samples = getattr(scene.cycles, "samples", None) if eng == "CYCLES" else \

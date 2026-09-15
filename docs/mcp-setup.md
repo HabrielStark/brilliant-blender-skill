@@ -70,6 +70,18 @@ verifier's response into `ops` validated by the same recipe validator as
 from `scene_inspect`), plus `plans` for defects needing authored work and
 `dropped_ops` with rejection reasons.
 
+For animated scenes the loop extends to temporal proof. `scene_inspect`
+reports an `animation` block (frame range, `keyframed_objects`,
+`camera_animated`, and per-object `sampled_objects` motion deltas across
+location/rotation/scale/visibility/light-energy). `scene_critique` uses it
+mechanically: `animation.missing` fails when the manifest wants motion but
+nothing is keyframed; `animation.static` fails when every sampled object is
+frozen on all channels; `animation.partially_static` warns on dead keys.
+`render_preview(frames=[1, 24, 48, ...])` renders a temporal strip in one
+Blender session to `preview_####.png`, and `scene_verifier_brief`
+auto-appends start/mid/end frame paths plus motion-verification
+instructions whenever the latest `inspect.json` shows a keyed timeline.
+
 ## Resources & prompts
 
 - `docs://camera-language`, `docs://visual-critique-rubric`, … (the playbooks).

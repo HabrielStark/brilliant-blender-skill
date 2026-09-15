@@ -92,6 +92,44 @@ def test_scene_verifier_brief_emits_fresh_eyes_prompt(ctx):
     assert res["image_paths"]  # default orbit set when none passed
 
 
+def test_scene_verifier_brief_temporal_from_inspect(ctx):
+    """An animated scene must extend the verifier brief with frame samples —
+    motion can't be judged from a still. Frame range + keyframed names come
+    from the latest inspect.json, not the manifest."""
+    import json as _json
+    T.h_project_create_scene_workspace(ctx, "demo", {
+        "task_id": "t", "brief": "relic on a turntable",
+        "output_mode": "animation",
+        "target": {"final_format": ["mp4"]},
+        "success_criteria": {"required_parts": ["podium", "orb"]},
+    })
+    it = ctx.task_dir("demo") / "iterations"
+    it.mkdir(parents=True, exist_ok=True)
+    (it / "inspect.json").write_text(_json.dumps({"animation": {
+        "has_action": True, "frame_start": 1, "frame_end": 48, "fps": 24,
+        "keyframed_objects": ["podium", "orb"], "camera_animated": False,
+        "sampled_objects": [{"name": "podium", "max_location_delta": 0.0,
+                             "max_rotation_delta": 6.28}]}}))
+    res = T.h_scene_verifier_brief(ctx, "demo")
+    assert res["ok"]
+    assert str(it / "preview_0001.png") in res["image_paths"]
+    assert str(it / "preview_0024.png") in res["image_paths"]
+    assert str(it / "preview_0048.png") in res["image_paths"]
+    p = res["verifier_prompt"]
+    assert "verify motion" in p and "podium, orb" in p
+    assert "identical frames" in p
+
+
+def test_scene_verifier_brief_no_frames_for_still_scene(ctx):
+    """A still manifest + no animation in inspect.json -> no frame samples,
+    no motion instructions."""
+    T.h_project_create_scene_workspace(ctx, "demo", {
+        "task_id": "t", "brief": "a vase", "output_mode": "still"})
+    res = T.h_scene_verifier_brief(ctx, "demo")
+    assert not any("preview_0" in p for p in res["image_paths"])
+    assert "verify motion" not in res["verifier_prompt"]
+
+
 def test_scene_critique_tool_returns_op_ready_diagnoses(ctx, tmp_path):
     """The critique handler must translate a render + inspection into
     ordered diagnoses with suggested ops — not just raw numbers."""
