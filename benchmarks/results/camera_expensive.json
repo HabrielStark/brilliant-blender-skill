@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 4.8,
+    "runtime_seconds": 3.9,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
@@ -81,6 +81,40 @@
     "animation_frame_proof": null,
     "failures": [],
     "diagnoses": [
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'vertical_sapphire_highlight_bar_right' is fully inside 'hero_faceted_luxury_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "vertical_sapphire_highlight_bar_right bbox [0.5649999836459756, -0.6690000258386135, 1.179999977350235]..[0.5949999829754233, -0.6510000266134739, 1.6599999368190765] inside hero_faceted_luxury_body [-0.9647975564002991, -0.89532470703125, 0.5699999928474426]..[0.9647975564002991, 0.89532470703125, 2.39000004529953]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "vertical_sapphire_highlight_bar_right",
+            "location": [
+              0.5799999833106995,
+              -0.6600000262260437,
+              2.6400000250339506
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "framing.edge_crowding",
+        "problem": "'low_black_plinth' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+        "evidence": "screen_bbox=[0.15, 0.0, 0.82, 0.42]",
+        "ops": [
+          {
+            "op": "reframe_camera",
+            "look_at": [
+              0.0010714094553674971,
+              -0.38142857594149454,
+              1.4333928525447845
+            ],
+            "pull_back": 1.12
+          }
+        ]
+      },
       {
         "severity": "warn",
         "code": "material.metal_void",

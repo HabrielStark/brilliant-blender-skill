@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 93,
     "technical_score": 100,
-    "runtime_seconds": 5.1,
+    "runtime_seconds": 4.1,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
@@ -224,6 +224,31 @@
     "palette_similarity": null,
     "animation_frame_proof": null,
     "failures": [],
-    "diagnoses": []
+    "diagnoses": [
+      {
+        "severity": "warn",
+        "code": "completeness.part_is_placeholder",
+        "problem": "'rod' is a single bare primitive (34 faces, no modifiers) \u2014 a scaffold, not developed anatomy. Give it real structure (primary form + secondary details + surface) or the visual verifier should reject it",
+        "evidence": "object=rod_crossbar_steel",
+        "ops": []
+      },
+      {
+        "severity": "warn",
+        "code": "framing.edge_crowding",
+        "problem": "'rail_post_right' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+        "evidence": "screen_bbox=[0.75, 0.01, 0.79, 0.84]",
+        "ops": [
+          {
+            "op": "reframe_camera",
+            "look_at": [
+              -0.009999990463256836,
+              -0.020000000230290672,
+              1.7672726958990097
+            ],
+            "pull_back": 1.12
+          }
+        ]
+      }
+    ]
   }
 }

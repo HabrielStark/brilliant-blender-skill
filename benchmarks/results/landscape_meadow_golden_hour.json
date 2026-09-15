@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 5.4,
+    "runtime_seconds": 4.5,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
@@ -686,6 +686,329 @@
     "animation_frame_proof": null,
     "failures": [],
     "diagnoses": [
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'boulder_secondary_worn' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "boulder_secondary_worn bbox [1.0283668711781502, 0.670961543917656, 0.5657132416963577]..[1.271633081138134, 1.0290385037660599, 0.794286772608757] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "boulder_secondary_worn",
+            "location": [
+              1.149999976158142,
+              0.8500000238418579,
+              1.1710821634531021
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'GN_Meadow_Rocks_rock_chip_01' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "GN_Meadow_Rocks_rock_chip_01 bbox [-0.5448725447058678, -0.409206822514534, 0.8647878132760525]..[-0.37768832594156265, -0.32479141652584076, 0.9565962590277195] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "GN_Meadow_Rocks_rock_chip_01",
+            "location": [
+              -0.4612804353237152,
+              -0.3669991195201874,
+              1.102699620872736
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'GN_Meadow_Rocks_rock_chip_02' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "GN_Meadow_Rocks_rock_chip_02 bbox [-1.2627923376858234, 0.2113701067864895, 0.8675941526889801]..[-1.1592722050845623, 0.297101441770792, 0.9537899196147919] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "GN_Meadow_Rocks_rock_chip_02",
+            "location": [
+              -1.2110322713851929,
+              0.25423577427864075,
+              1.0998932814598084
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'GN_Meadow_Rocks_rock_chip_03' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "GN_Meadow_Rocks_rock_chip_03 bbox [0.254126600921154, 1.3296267576515675, 0.8536904118955135]..[0.41322172433137894, 1.4373877458274364, 0.9676936604082584] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "GN_Meadow_Rocks_rock_chip_03",
+            "location": [
+              0.3336741626262665,
+              1.383507251739502,
+              1.113797022253275
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'GN_Meadow_Rocks_rock_chip_04' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "GN_Meadow_Rocks_rock_chip_04 bbox [-0.9963231384754181, -0.5085976794362068, 0.8737377338111401]..[-0.8666586577892303, -0.37063657492399216, 0.9476463384926319] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "GN_Meadow_Rocks_rock_chip_04",
+            "location": [
+              -0.9314908981323242,
+              -0.4396171271800995,
+              1.0937497003376484
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'GN_Meadow_Rocks_rock_chip_05' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "GN_Meadow_Rocks_rock_chip_05 bbox [0.07381689548492432, -0.6074604168534279, 0.8611459583044052]..[0.1762135624885559, -0.5134313926100731, 0.9602381139993668] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "GN_Meadow_Rocks_rock_chip_05",
+            "location": [
+              0.1250152289867401,
+              -0.5604459047317505,
+              1.1063414758443832
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'GN_Meadow_Rocks_rock_chip_06' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "GN_Meadow_Rocks_rock_chip_06 bbox [-0.21403329819440842, -0.10462680831551552, 0.8721408061683178]..[-0.031132958829402924, 0.024900775402784348, 0.9492432661354542] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "GN_Meadow_Rocks_rock_chip_06",
+            "location": [
+              -0.12258312851190567,
+              -0.039863016456365585,
+              1.0953466279804707
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'GN_Meadow_Rocks_rock_chip_07' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "GN_Meadow_Rocks_rock_chip_07 bbox [0.49915675073862076, -0.1096993200480938, 0.8677553422749043]..[0.7024131640791893, -0.021998587995767593, 0.9536287300288677] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "GN_Meadow_Rocks_rock_chip_07",
+            "location": [
+              0.600784957408905,
+              -0.0658489540219307,
+              1.0997320918738842
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'GN_Meadow_Rocks_rock_chip_08' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "GN_Meadow_Rocks_rock_chip_08 bbox [-1.2963678240776062, 0.7093002311885357, 0.8562299981713295]..[-1.1167333722114563, 0.82975809648633, 0.9651540741324425] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "GN_Meadow_Rocks_rock_chip_08",
+            "location": [
+              -1.2065505981445312,
+              0.7695291638374329,
+              1.111257435977459
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'GN_Meadow_Rocks_rock_chip_09' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "GN_Meadow_Rocks_rock_chip_09 bbox [0.11525194346904755, 0.23018530011177063, 0.8663447573781013]..[0.3031470328569412, 0.37740233540534973, 0.9550393149256706] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "GN_Meadow_Rocks_rock_chip_09",
+            "location": [
+              0.20919948816299438,
+              0.3037938177585602,
+              1.1011426767706871
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'GN_Meadow_Rocks_rock_chip_12' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "GN_Meadow_Rocks_rock_chip_12 bbox [-1.1762479692697525, 0.21697532385587692, 0.8576461933553219]..[-1.0201836675405502, 0.3597789481282234, 0.9637378789484501] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "GN_Meadow_Rocks_rock_chip_12",
+            "location": [
+              -1.0982158184051514,
+              0.28837713599205017,
+              1.1098412407934666
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'GN_Meadow_Rocks_rock_chip_13' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "GN_Meadow_Rocks_rock_chip_13 bbox [-0.47019563615322113, 1.1989447548985481, 0.8738513514399529]..[-0.26939816772937775, 1.2890110537409782, 0.9475327208638191] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "GN_Meadow_Rocks_rock_chip_13",
+            "location": [
+              -0.36979690194129944,
+              1.2439779043197632,
+              1.0936360827088356
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'GN_Meadow_Rocks_rock_chip_14' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "GN_Meadow_Rocks_rock_chip_14 bbox [0.18520550429821014, -0.17586981877684593, 0.8689868450164795]..[0.28152064979076385, -0.06650567427277565, 0.9523972272872925] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "GN_Meadow_Rocks_rock_chip_14",
+            "location": [
+              0.233363077044487,
+              -0.12118774652481079,
+              1.098500589132309
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'path_stone_step_03' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "path_stone_step_03 bbox [0.21123483777046204, -0.7312014251947403, 0.25600000098347664]..[0.6287651360034943, -0.3687985986471176, 0.30400000140070915] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "path_stone_step_03",
+            "location": [
+              0.41999998688697815,
+              -0.550000011920929,
+              1.0807953982055187
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'path_stone_step_04' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "path_stone_step_04 bbox [0.0033859610557556152, -0.10711608454585075, 0.3983999863266945]..[0.39661404490470886, 0.20711608603596687, 0.4415999874472618] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "path_stone_step_04",
+            "location": [
+              0.20000000298023224,
+              0.05000000074505806,
+              1.0783953985571861
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'grass_blade_hero_01' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "grass_blade_hero_01 bbox [-0.019681282341480255, -0.5183420330286026, 0.689147025346756]..[0.019681282341480255, -0.18165789544582367, 0.750853031873703] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "grass_blade_hero_01",
+            "location": [
+              0.0,
+              -0.34999996423721313,
+              1.087648401260376
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'grass_blade_hero_02' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "grass_blade_hero_02 bbox [0.45663269609212875, -0.7933420687913895, 0.6891470272094011]..[0.49599526077508926, -0.45665793120861053, 0.7508530300110579] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "grass_blade_hero_02",
+            "location": [
+              0.476313978433609,
+              -0.625,
+              1.0876483993977308
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'grass_blade_hero_06' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "grass_blade_hero_06 bbox [-0.49599526077508926, -0.7933420687913895, 0.689147025346756]..[-0.45663269609212875, -0.45665793120861053, 0.750853031873703] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "grass_blade_hero_06",
+            "location": [
+              -0.476313978433609,
+              -0.625,
+              1.087648401260376
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "framing.edge_crowding",
+        "problem": "'mound_hero_grassy' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+        "evidence": "screen_bbox=[0.03, 0.0, 0.96, 0.74]",
+        "ops": [
+          {
+            "op": "reframe_camera",
+            "look_at": [
+              0.008587858435532001,
+              0.30617223787185266,
+              0.8996900278207374
+            ],
+            "pull_back": 1.12
+          }
+        ]
+      },
       {
         "severity": "warn",
         "code": "part.unreadable",

@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 6.1,
+    "runtime_seconds": 4.9,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
@@ -350,6 +350,92 @@
     "palette_similarity": null,
     "animation_frame_proof": null,
     "failures": [],
-    "diagnoses": []
+    "diagnoses": [
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'front_panel_screw_head_01' is fully inside 'monolith_core' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "front_panel_screw_head_01 bbox [-0.017500000074505806, -0.1074999738484621, 1.5429999521002173]..[0.017500000074505806, -0.07249997369945049, 1.556999952532351] inside monolith_core [-0.5999999642372131, -0.675000011920929, -0.75]..[0.5999999642372131, 0.675000011920929, 3.25]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "front_panel_screw_head_01",
+            "location": [
+              0.0,
+              -0.0899999737739563,
+              3.2670000002160666
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'antenna_radar_cap_disc' is fully inside 'monolith_core' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "antenna_radar_cap_disc bbox [-0.25999999046325684, -0.12999999523162842, 2.9883000003173947]..[0.25999999046325684, 0.38999998569488525, 3.0116999996826053] inside monolith_core [-0.5999999642372131, -0.675000011920929, -0.75]..[0.5999999642372131, 0.675000011920929, 3.25]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "antenna_radar_cap_disc",
+            "location": [
+              0.0,
+              0.12999999523162842,
+              3.271699999682605
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'side_cable_service_loop_curve_tube' is fully inside 'monolith_core' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "side_cable_service_loop_curve_tube bbox [-0.18448930978775024, -0.16508528590202332, -0.3675970435142517]..[0.18448930978775024, 0.16508528590202332, 0.3675970435142517] inside monolith_core [-0.5999999642372131, -0.675000011920929, -0.75]..[0.5999999642372131, 0.675000011920929, 3.25]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "side_cable_service_loop_curve_tube",
+            "location": [
+              0.0,
+              0.0,
+              3.6275970435142515
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'front_panel_screw_craft_head_01' is fully inside 'monolith_core' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "front_panel_screw_craft_head_01 bbox [-0.023000000044703484, -0.18500000052154064, 1.5458599519915879]..[0.023000000044703484, -0.13900000043213367, 1.5541399526409805] inside monolith_core [-0.5999999642372131, -0.675000011920929, -0.75]..[0.5999999642372131, 0.675000011920929, 3.25]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "front_panel_screw_craft_head_01",
+            "location": [
+              0.0,
+              -0.16200000047683716,
+              3.264140000324696
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "framing.edge_crowding",
+        "problem": "'monolith_core' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+        "evidence": "screen_bbox=[0.39, 0.0, 0.63, 0.86]",
+        "ops": [
+          {
+            "op": "reframe_camera",
+            "look_at": [
+              -0.0008181826296177777,
+              -0.6083000029013915,
+              1.4555454464121298
+            ],
+            "pull_back": 1.12
+          }
+        ]
+      }
+    ]
   }
 }

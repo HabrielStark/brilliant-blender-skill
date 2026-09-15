@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 6.1,
+    "runtime_seconds": 5.0,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
@@ -687,6 +687,108 @@
     "animation_frame_proof": null,
     "failures": [],
     "diagnoses": [
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'grille_hole_ring_01' is fully inside 'speaker_body_soft_rounded' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "grille_hole_ring_01 bbox [-0.017500000074505806, -0.5274999998509884, 1.0875000236555934]..[0.017500000074505806, -0.4725000001490116, 1.1125000240281224] inside speaker_body_soft_rounded [-0.7649999856948853, -0.7649999856948853, 0.5220000147819519]..[0.7649999856948853, 0.7649999856948853, 1.678000032901764]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "grille_hole_ring_01",
+            "location": [
+              0.0,
+              -0.5,
+              1.7005000330880284
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'grille_hole_ring_02' is fully inside 'speaker_body_soft_rounded' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "grille_hole_ring_02 bbox [0.08852624893188477, -0.5461952928453684, 1.0875000236555934]..[0.12352624535560608, -0.4911952968686819, 1.1125000240281224] inside speaker_body_soft_rounded [-0.7649999856948853, -0.7649999856948853, 0.5220000147819519]..[0.7649999856948853, 0.7649999856948853, 1.678000032901764]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "grille_hole_ring_02",
+            "location": [
+              0.10602624714374542,
+              -0.5186952948570251,
+              1.7005000330880284
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'grille_hole_ring_03' is fully inside 'speaker_body_soft_rounded' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "grille_hole_ring_03 bbox [0.181764155626297, -0.6000262144953012, 1.0875000236555934]..[0.2167641520500183, -0.5450262185186148, 1.1125000240281224] inside speaker_body_soft_rounded [-0.7649999856948853, -0.7649999856948853, 0.5220000147819519]..[0.7649999856948853, 0.7649999856948853, 1.678000032901764]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "grille_hole_ring_03",
+            "location": [
+              0.19926415383815765,
+              -0.572526216506958,
+              1.7005000330880284
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'grille_hole_ring_17' is fully inside 'speaker_body_soft_rounded' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "grille_hole_ring_17 bbox [-0.21676415391266346, -0.6000262163579464, 1.0875000236555934]..[-0.18176415376365185, -0.5450262166559696, 1.1125000240281224] inside speaker_body_soft_rounded [-0.7649999856948853, -0.7649999856948853, 0.5220000147819519]..[0.7649999856948853, 0.7649999856948853, 1.678000032901764]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "grille_hole_ring_17",
+            "location": [
+              -0.19926415383815765,
+              -0.572526216506958,
+              1.7005000330880284
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'grille_hole_ring_18' is fully inside 'speaker_body_soft_rounded' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "grille_hole_ring_18 bbox [-0.12352624721825123, -0.5461952947080135, 1.0875000236555934]..[-0.08852624706923962, -0.49119529500603676, 1.1125000240281224] inside speaker_body_soft_rounded [-0.7649999856948853, -0.7649999856948853, 0.5220000147819519]..[0.7649999856948853, 0.7649999856948853, 1.678000032901764]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "grille_hole_ring_18",
+            "location": [
+              -0.10602624714374542,
+              -0.5186952948570251,
+              1.7005000330880284
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "framing.edge_crowding",
+        "problem": "'speaker_bottom_rubber_lip' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+        "evidence": "screen_bbox=[0.11, 0.0, 0.9, 0.35]",
+        "ops": [
+          {
+            "op": "reframe_camera",
+            "look_at": [
+              0.013966943360557241,
+              -0.673082645582266,
+              1.0624793349218762
+            ],
+            "pull_back": 1.12
+          }
+        ]
+      },
       {
         "severity": "warn",
         "code": "part.unreadable",

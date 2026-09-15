@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 5.4,
+    "runtime_seconds": 4.4,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
@@ -175,7 +175,7 @@
           "contrast": 0.1639,
           "edge_density": 0.2595,
           "separation": 0.1108,
-          "mean_luma": 0.3187,
+          "mean_luma": 0.3188,
           "surround_luma": 0.208,
           "readable": true
         },
@@ -251,6 +251,109 @@
     "palette_similarity": 0.7898023011856291,
     "animation_frame_proof": null,
     "failures": [],
-    "diagnoses": []
+    "diagnoses": [
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'blue_liquid_core' is fully inside 'glass_bottle_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "blue_liquid_core bbox [-0.48840001225471497, -0.48840001225471497, 0.3811999559402466]..[0.48840001225471497, 0.48840001225471497, 1.298799991607666] inside glass_bottle_body [-0.6299999952316284, -0.6299999952316284, 0.1499999761581421]..[0.6299999952316284, 0.6299999952316284, 1.9499999284744263]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "blue_liquid_core",
+            "location": [
+              0.0,
+              0.0,
+              2.4187999463081358
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'bottle_neck_glass_ring' is fully inside 'glass_bottle_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "bottle_neck_glass_ring bbox [-0.42480000853538513, -0.42480000853538513, 1.8561120142694563]..[0.42480000853538513, 0.42480000853538513, 1.8638880143407732] inside glass_bottle_body [-0.6299999952316284, -0.6299999952316284, 0.1499999761581421]..[0.6299999952316284, 0.6299999952316284, 1.9499999284744263]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "bottle_neck_glass_ring",
+            "location": [
+              0.0,
+              0.0,
+              1.9638879285100848
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'cap_ridge_brushed_marker_03' is fully inside 'brushed_cap_metal' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "cap_ridge_brushed_marker_03 bbox [0.3173692300915718, 0.2268657051026821, 2.0724999140948057]..[0.3393692299723625, 0.29686570540070534, 2.1074999142438173] inside brushed_cap_metal [-0.4399999976158142, -0.4399999976158142, 1.9567999243736267]..[0.4399999976158142, 0.4399999976158142, 2.2031999230384827]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "cap_ridge_brushed_marker_03",
+            "location": [
+              0.32836923003196716,
+              0.2618657052516937,
+              2.2306999231129883
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'cap_ridge_brushed_marker_06' is fully inside 'brushed_cap_metal' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "cap_ridge_brushed_marker_06 bbox [0.3173692300915718, -0.29686570540070534, 2.0724999140948057]..[0.3393692299723625, -0.2268657051026821, 2.1074999142438173] inside brushed_cap_metal [-0.4399999976158142, -0.4399999976158142, 1.9567999243736267]..[0.4399999976158142, 0.4399999976158142, 2.2031999230384827]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "cap_ridge_brushed_marker_06",
+            "location": [
+              0.32836923003196716,
+              -0.2618657052516937,
+              2.2306999231129883
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'cap_ridge_brushed_marker_10' is fully inside 'brushed_cap_metal' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "cap_ridge_brushed_marker_10 bbox [-0.3393692299723625, -0.29686570540070534, 2.0724999140948057]..[-0.3173692300915718, -0.2268657051026821, 2.1074999142438173] inside brushed_cap_metal [-0.4399999976158142, -0.4399999976158142, 1.9567999243736267]..[0.4399999976158142, 0.4399999976158142, 2.2031999230384827]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "cap_ridge_brushed_marker_10",
+            "location": [
+              -0.32836923003196716,
+              -0.2618657052516937,
+              2.2306999231129883
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'cap_ridge_brushed_marker_13' is fully inside 'brushed_cap_metal' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "cap_ridge_brushed_marker_13 bbox [-0.3393692299723625, 0.2268657051026821, 2.0724999140948057]..[-0.3173692300915718, 0.29686570540070534, 2.1074999142438173] inside brushed_cap_metal [-0.4399999976158142, -0.4399999976158142, 1.9567999243736267]..[0.4399999976158142, 0.4399999976158142, 2.2031999230384827]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "cap_ridge_brushed_marker_13",
+            "location": [
+              -0.32836923003196716,
+              0.2618657052516937,
+              2.2306999231129883
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

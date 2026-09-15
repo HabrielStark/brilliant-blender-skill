@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 8.2,
+    "runtime_seconds": 6.8,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
@@ -223,6 +223,24 @@
       ]
     },
     "failures": [],
-    "diagnoses": []
+    "diagnoses": [
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'inner_white_core' is fully inside 'energy_core' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "inner_white_core bbox [-0.4099998474121094, -0.40999993681907654, 1.1900000274181366]..[0.4099998474121094, 0.40999993681907654, 2.0100000202655792] inside energy_core [-0.9510578513145447, -0.9999999403953552, 0.6000000238418579]..[0.9510578513145447, 0.9999999403953552, 2.600000023841858]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "inner_white_core",
+            "location": [
+              0.0,
+              0.0,
+              3.020000020265579
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

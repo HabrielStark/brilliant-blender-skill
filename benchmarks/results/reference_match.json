@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 98,
     "technical_score": 100,
-    "runtime_seconds": 5.2,
+    "runtime_seconds": 6.3,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
@@ -198,6 +198,74 @@
     "animation_frame_proof": null,
     "failures": [],
     "diagnoses": [
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'top_inset_panel_black_glass' is fully inside 'product_body_layered_beveled_main' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "top_inset_panel_black_glass bbox [-0.5900000035762787, -0.5600000023841858, 1.4124999474734068]..[0.22999998927116394, -0.19999998807907104, 1.4474999476224184] inside product_body_layered_beveled_main [-1.125, -0.5849999785423279, 0.22499996423721313]..[1.125, 0.5849999785423279, 1.574999988079071]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "top_inset_panel_black_glass",
+            "location": [
+              -0.18000000715255737,
+              -0.3799999952316284,
+              1.6024999881535769
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'bottom_contact_shadow_layer' is fully inside 'product_body_layered_beveled_main' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "bottom_contact_shadow_layer bbox [-0.5, -0.42000000178813934, 0.3225000035017729]..[0.5, 0.019999995827674866, 0.3575000036507845] inside product_body_layered_beveled_main [-1.125, -0.5849999785423279, 0.22499996423721313]..[1.125, 0.5849999785423279, 1.574999988079071]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "bottom_contact_shadow_layer",
+            "location": [
+              0.0,
+              -0.20000000298023224,
+              1.6024999881535769
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'body_top_back_bevel_plane' is fully inside 'product_body_layered_beveled_main' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "body_top_back_bevel_plane bbox [-0.49000000953674316, -0.1749999960884452, 1.4630000181496143]..[0.49000000953674316, -0.14499999675899744, 1.4970000199973583] inside product_body_layered_beveled_main [-1.125, -0.5849999785423279, 0.22499996423721313]..[1.125, 0.5849999785423279, 1.574999988079071]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "body_top_back_bevel_plane",
+            "location": [
+              0.0,
+              -0.1599999964237213,
+              1.601999989002943
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'bevel_edge_catch_light_top' is fully inside 'product_body_layered_beveled_main' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "bevel_edge_catch_light_top bbox [-0.48000000044703484, -0.21000000275671482, 1.50299999024719]..[0.5199999995529652, -0.19000000320374966, 1.5169999906793237] inside product_body_layered_beveled_main [-1.125, -0.5849999785423279, 0.22499996423721313]..[1.125, 0.5849999785423279, 1.574999988079071]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "bevel_edge_catch_light_top",
+            "location": [
+              0.019999999552965164,
+              -0.20000000298023224,
+              1.591999988295138
+            ]
+          }
+        ]
+      },
       {
         "severity": "warn",
         "code": "part.unreadable",

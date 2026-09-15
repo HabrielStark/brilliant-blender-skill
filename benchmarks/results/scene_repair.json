@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 99,
     "technical_score": 100,
-    "runtime_seconds": 5.1,
+    "runtime_seconds": 4.2,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
@@ -409,6 +409,23 @@
     "animation_frame_proof": null,
     "failures": [],
     "diagnoses": [
+      {
+        "severity": "warn",
+        "code": "framing.edge_crowding",
+        "problem": "'repaired_base_plinth' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+        "evidence": "screen_bbox=[0.09, 0.0, 1.0, 0.35]",
+        "ops": [
+          {
+            "op": "reframe_camera",
+            "look_at": [
+              0.12634615284892228,
+              -0.4630192295433237,
+              1.1146153939458041
+            ],
+            "pull_back": 1.12
+          }
+        ]
+      },
       {
         "severity": "warn",
         "code": "part.unreadable",

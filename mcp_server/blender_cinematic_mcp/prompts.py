@@ -21,10 +21,14 @@ _COMMON = (
     "guess at fixes the critique did not suggest; if its suggested op fails, "
     "pick the next diagnosis rather than retrying the same op.\n\n"
     "Done means verified, not converged: when no fail diagnoses remain, call "
-    "render_multiview and look at every view (or hand them to a fresh-eyes "
-    "verifier with the brief and required_parts). Every declared element must "
-    "read as what it is from the angles that show it — a placeholder that "
-    "merely carries the name is not the element. Only then render final."
+    "render_multiview and run the verifier loop — scene_verifier_brief emits "
+    "the ready prompt; dispatch it to fresh eyes (or self-review on a fresh "
+    "read); feed the response to scene_verifier_ops together with object "
+    "names from the latest scene_inspect; apply the returned ops via "
+    "scene_apply_recipe, author the listed plans, re-render, re-verify. Every "
+    "declared element must read as what it is from the angles that show it — "
+    "a placeholder that merely carries the name is not the element. Only "
+    "then render final."
 )
 
 

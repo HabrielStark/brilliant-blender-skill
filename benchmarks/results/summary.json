@@ -6,7 +6,7 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 6.3,
+      "runtime_seconds": 5.2,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -801,7 +801,76 @@
       "palette_similarity": null,
       "animation_frame_proof": null,
       "failures": [],
-      "diagnoses": []
+      "diagnoses": [
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'cushion_seam_piped_edge_02' is fully inside 'cushion_round_left_linen_soft' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "cushion_seam_piped_edge_02 bbox [-1.2749999091029167, 0.43999998830258846, 1.0019999900832772]..[-1.1649999096989632, 0.4599999878555536, 1.0179999908432364] inside cushion_round_left_linen_soft [-1.389767050743103, 0.393251147121191, 0.8700000196695328]..[-1.050233006477356, 0.4867488481104374, 1.0900000184774399]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "cushion_seam_piped_edge_02",
+              "location": [
+                -1.21999990940094,
+                0.44999998807907104,
+                1.1080000188574195
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'cushion_seam_piped_edge_04' is fully inside 'cushion_center_lumbar_soft' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "cushion_seam_piped_edge_04 bbox [-0.8749999329447746, 0.43999998830258846, 1.0019999900832772]..[-0.7649999335408211, 0.4599999878555536, 1.0179999908432364] inside cushion_center_lumbar_soft [-1.0099999755620956, 0.3799999989569187, 0.8999999985098839]..[-0.669999971985817, 0.4999999962747097, 1.1000000014901161]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "cushion_seam_piped_edge_04",
+              "location": [
+                -0.8199999332427979,
+                0.44999998807907104,
+                1.1180000018700957
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'cushion_seam_piped_edge_06' is fully inside 'cushion_round_right_linen_soft' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "cushion_seam_piped_edge_06 bbox [-0.47499995678663254, 0.43999998830258846, 1.0019999900832772]..[-0.364999957382679, 0.4599999878555536, 1.0179999908432364] inside cushion_round_right_linen_soft [-0.6597807109355927, 0.39377450570464134, 0.8800000175833702]..[-0.34021928906440735, 0.4862254895269871, 1.0800000205636024]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "cushion_seam_piped_edge_06",
+              "location": [
+                -0.41999995708465576,
+                0.44999998807907104,
+                1.098000020943582
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "warn",
+          "code": "framing.edge_crowding",
+          "problem": "'rug_tassel_front_edge_01' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+          "evidence": "screen_bbox=[0.0, 0.0, 0.02, 0.04]",
+          "ops": [
+            {
+              "op": "reframe_camera",
+              "look_at": [
+                -0.41037735929888375,
+                0.40962264602476695,
+                0.7698584839279922
+              ],
+              "pull_back": 1.12
+            }
+          ]
+        }
+      ]
     }
   },
   {
@@ -811,7 +880,7 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 4.8,
+      "runtime_seconds": 3.9,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -888,6 +957,40 @@
       "failures": [],
       "diagnoses": [
         {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'vertical_sapphire_highlight_bar_right' is fully inside 'hero_faceted_luxury_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "vertical_sapphire_highlight_bar_right bbox [0.5649999836459756, -0.6690000258386135, 1.179999977350235]..[0.5949999829754233, -0.6510000266134739, 1.6599999368190765] inside hero_faceted_luxury_body [-0.9647975564002991, -0.89532470703125, 0.5699999928474426]..[0.9647975564002991, 0.89532470703125, 2.39000004529953]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "vertical_sapphire_highlight_bar_right",
+              "location": [
+                0.5799999833106995,
+                -0.6600000262260437,
+                2.6400000250339506
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "warn",
+          "code": "framing.edge_crowding",
+          "problem": "'low_black_plinth' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+          "evidence": "screen_bbox=[0.15, 0.0, 0.82, 0.42]",
+          "ops": [
+            {
+              "op": "reframe_camera",
+              "look_at": [
+                0.0010714094553674971,
+                -0.38142857594149454,
+                1.4333928525447845
+              ],
+              "pull_back": 1.12
+            }
+          ]
+        },
+        {
           "severity": "warn",
           "code": "material.metal_void",
           "problem": "material 'hero_titanium_faceted' is near-black fully-metallic in a dark world \u2014 a mirror with nothing to reflect renders as a void",
@@ -917,7 +1020,7 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.2,
+      "runtime_seconds": 4.2,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -1100,7 +1203,39 @@
       "palette_similarity": null,
       "animation_frame_proof": null,
       "failures": [],
-      "diagnoses": []
+      "diagnoses": [
+        {
+          "severity": "warn",
+          "code": "completeness.part_is_placeholder",
+          "problem": "'neck' is a single bare primitive (34 faces, no modifiers) \u2014 a scaffold, not developed anatomy. Give it real structure (primary form + secondary details + surface) or the visual verifier should reject it",
+          "evidence": "object=neck_column",
+          "ops": []
+        },
+        {
+          "severity": "warn",
+          "code": "completeness.part_is_placeholder",
+          "problem": "'nose' is a single bare primitive (33 faces, no modifiers) \u2014 a scaffold, not developed anatomy. Give it real structure (primary form + secondary details + surface) or the visual verifier should reject it",
+          "evidence": "object=nose_bridge_wedge",
+          "ops": []
+        },
+        {
+          "severity": "warn",
+          "code": "framing.edge_crowding",
+          "problem": "'pedestal_stone_round' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+          "evidence": "screen_bbox=[0.18, 0.0, 0.78, 0.14]",
+          "ops": [
+            {
+              "op": "reframe_camera",
+              "look_at": [
+                -0.0009999990463256836,
+                -0.13764999909326434,
+                1.5125000149011611
+              ],
+              "pull_back": 1.12
+            }
+          ]
+        }
+      ]
     }
   },
   {
@@ -1110,7 +1245,7 @@
       "pass": true,
       "visual_score": 93,
       "technical_score": 100,
-      "runtime_seconds": 5.1,
+      "runtime_seconds": 4.1,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -1329,7 +1464,32 @@
       "palette_similarity": null,
       "animation_frame_proof": null,
       "failures": [],
-      "diagnoses": []
+      "diagnoses": [
+        {
+          "severity": "warn",
+          "code": "completeness.part_is_placeholder",
+          "problem": "'rod' is a single bare primitive (34 faces, no modifiers) \u2014 a scaffold, not developed anatomy. Give it real structure (primary form + secondary details + surface) or the visual verifier should reject it",
+          "evidence": "object=rod_crossbar_steel",
+          "ops": []
+        },
+        {
+          "severity": "warn",
+          "code": "framing.edge_crowding",
+          "problem": "'rail_post_right' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+          "evidence": "screen_bbox=[0.75, 0.01, 0.79, 0.84]",
+          "ops": [
+            {
+              "op": "reframe_camera",
+              "look_at": [
+                -0.009999990463256836,
+                -0.020000000230290672,
+                1.7672726958990097
+              ],
+              "pull_back": 1.12
+            }
+          ]
+        }
+      ]
     }
   },
   {
@@ -1339,7 +1499,7 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 6.1,
+      "runtime_seconds": 5.0,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -2022,6 +2182,108 @@
       "failures": [],
       "diagnoses": [
         {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'grille_hole_ring_01' is fully inside 'speaker_body_soft_rounded' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "grille_hole_ring_01 bbox [-0.017500000074505806, -0.5274999998509884, 1.0875000236555934]..[0.017500000074505806, -0.4725000001490116, 1.1125000240281224] inside speaker_body_soft_rounded [-0.7649999856948853, -0.7649999856948853, 0.5220000147819519]..[0.7649999856948853, 0.7649999856948853, 1.678000032901764]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "grille_hole_ring_01",
+              "location": [
+                0.0,
+                -0.5,
+                1.7005000330880284
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'grille_hole_ring_02' is fully inside 'speaker_body_soft_rounded' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "grille_hole_ring_02 bbox [0.08852624893188477, -0.5461952928453684, 1.0875000236555934]..[0.12352624535560608, -0.4911952968686819, 1.1125000240281224] inside speaker_body_soft_rounded [-0.7649999856948853, -0.7649999856948853, 0.5220000147819519]..[0.7649999856948853, 0.7649999856948853, 1.678000032901764]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "grille_hole_ring_02",
+              "location": [
+                0.10602624714374542,
+                -0.5186952948570251,
+                1.7005000330880284
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'grille_hole_ring_03' is fully inside 'speaker_body_soft_rounded' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "grille_hole_ring_03 bbox [0.181764155626297, -0.6000262144953012, 1.0875000236555934]..[0.2167641520500183, -0.5450262185186148, 1.1125000240281224] inside speaker_body_soft_rounded [-0.7649999856948853, -0.7649999856948853, 0.5220000147819519]..[0.7649999856948853, 0.7649999856948853, 1.678000032901764]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "grille_hole_ring_03",
+              "location": [
+                0.19926415383815765,
+                -0.572526216506958,
+                1.7005000330880284
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'grille_hole_ring_17' is fully inside 'speaker_body_soft_rounded' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "grille_hole_ring_17 bbox [-0.21676415391266346, -0.6000262163579464, 1.0875000236555934]..[-0.18176415376365185, -0.5450262166559696, 1.1125000240281224] inside speaker_body_soft_rounded [-0.7649999856948853, -0.7649999856948853, 0.5220000147819519]..[0.7649999856948853, 0.7649999856948853, 1.678000032901764]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "grille_hole_ring_17",
+              "location": [
+                -0.19926415383815765,
+                -0.572526216506958,
+                1.7005000330880284
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'grille_hole_ring_18' is fully inside 'speaker_body_soft_rounded' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "grille_hole_ring_18 bbox [-0.12352624721825123, -0.5461952947080135, 1.0875000236555934]..[-0.08852624706923962, -0.49119529500603676, 1.1125000240281224] inside speaker_body_soft_rounded [-0.7649999856948853, -0.7649999856948853, 0.5220000147819519]..[0.7649999856948853, 0.7649999856948853, 1.678000032901764]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "grille_hole_ring_18",
+              "location": [
+                -0.10602624714374542,
+                -0.5186952948570251,
+                1.7005000330880284
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "warn",
+          "code": "framing.edge_crowding",
+          "problem": "'speaker_bottom_rubber_lip' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+          "evidence": "screen_bbox=[0.11, 0.0, 0.9, 0.35]",
+          "ops": [
+            {
+              "op": "reframe_camera",
+              "look_at": [
+                0.013966943360557241,
+                -0.673082645582266,
+                1.0624793349218762
+              ],
+              "pull_back": 1.12
+            }
+          ]
+        },
+        {
           "severity": "warn",
           "code": "part.unreadable",
           "problem": "named part 'grille_micro_slot_07' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
@@ -2085,7 +2347,7 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.4,
+      "runtime_seconds": 4.5,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -2767,6 +3029,329 @@
       "failures": [],
       "diagnoses": [
         {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'boulder_secondary_worn' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "boulder_secondary_worn bbox [1.0283668711781502, 0.670961543917656, 0.5657132416963577]..[1.271633081138134, 1.0290385037660599, 0.794286772608757] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "boulder_secondary_worn",
+              "location": [
+                1.149999976158142,
+                0.8500000238418579,
+                1.1710821634531021
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'GN_Meadow_Rocks_rock_chip_01' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "GN_Meadow_Rocks_rock_chip_01 bbox [-0.5448725447058678, -0.409206822514534, 0.8647878132760525]..[-0.37768832594156265, -0.32479141652584076, 0.9565962590277195] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "GN_Meadow_Rocks_rock_chip_01",
+              "location": [
+                -0.4612804353237152,
+                -0.3669991195201874,
+                1.102699620872736
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'GN_Meadow_Rocks_rock_chip_02' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "GN_Meadow_Rocks_rock_chip_02 bbox [-1.2627923376858234, 0.2113701067864895, 0.8675941526889801]..[-1.1592722050845623, 0.297101441770792, 0.9537899196147919] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "GN_Meadow_Rocks_rock_chip_02",
+              "location": [
+                -1.2110322713851929,
+                0.25423577427864075,
+                1.0998932814598084
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'GN_Meadow_Rocks_rock_chip_03' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "GN_Meadow_Rocks_rock_chip_03 bbox [0.254126600921154, 1.3296267576515675, 0.8536904118955135]..[0.41322172433137894, 1.4373877458274364, 0.9676936604082584] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "GN_Meadow_Rocks_rock_chip_03",
+              "location": [
+                0.3336741626262665,
+                1.383507251739502,
+                1.113797022253275
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'GN_Meadow_Rocks_rock_chip_04' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "GN_Meadow_Rocks_rock_chip_04 bbox [-0.9963231384754181, -0.5085976794362068, 0.8737377338111401]..[-0.8666586577892303, -0.37063657492399216, 0.9476463384926319] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "GN_Meadow_Rocks_rock_chip_04",
+              "location": [
+                -0.9314908981323242,
+                -0.4396171271800995,
+                1.0937497003376484
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'GN_Meadow_Rocks_rock_chip_05' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "GN_Meadow_Rocks_rock_chip_05 bbox [0.07381689548492432, -0.6074604168534279, 0.8611459583044052]..[0.1762135624885559, -0.5134313926100731, 0.9602381139993668] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "GN_Meadow_Rocks_rock_chip_05",
+              "location": [
+                0.1250152289867401,
+                -0.5604459047317505,
+                1.1063414758443832
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'GN_Meadow_Rocks_rock_chip_06' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "GN_Meadow_Rocks_rock_chip_06 bbox [-0.21403329819440842, -0.10462680831551552, 0.8721408061683178]..[-0.031132958829402924, 0.024900775402784348, 0.9492432661354542] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "GN_Meadow_Rocks_rock_chip_06",
+              "location": [
+                -0.12258312851190567,
+                -0.039863016456365585,
+                1.0953466279804707
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'GN_Meadow_Rocks_rock_chip_07' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "GN_Meadow_Rocks_rock_chip_07 bbox [0.49915675073862076, -0.1096993200480938, 0.8677553422749043]..[0.7024131640791893, -0.021998587995767593, 0.9536287300288677] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "GN_Meadow_Rocks_rock_chip_07",
+              "location": [
+                0.600784957408905,
+                -0.0658489540219307,
+                1.0997320918738842
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'GN_Meadow_Rocks_rock_chip_08' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "GN_Meadow_Rocks_rock_chip_08 bbox [-1.2963678240776062, 0.7093002311885357, 0.8562299981713295]..[-1.1167333722114563, 0.82975809648633, 0.9651540741324425] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "GN_Meadow_Rocks_rock_chip_08",
+              "location": [
+                -1.2065505981445312,
+                0.7695291638374329,
+                1.111257435977459
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'GN_Meadow_Rocks_rock_chip_09' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "GN_Meadow_Rocks_rock_chip_09 bbox [0.11525194346904755, 0.23018530011177063, 0.8663447573781013]..[0.3031470328569412, 0.37740233540534973, 0.9550393149256706] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "GN_Meadow_Rocks_rock_chip_09",
+              "location": [
+                0.20919948816299438,
+                0.3037938177585602,
+                1.1011426767706871
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'GN_Meadow_Rocks_rock_chip_12' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "GN_Meadow_Rocks_rock_chip_12 bbox [-1.1762479692697525, 0.21697532385587692, 0.8576461933553219]..[-1.0201836675405502, 0.3597789481282234, 0.9637378789484501] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "GN_Meadow_Rocks_rock_chip_12",
+              "location": [
+                -1.0982158184051514,
+                0.28837713599205017,
+                1.1098412407934666
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'GN_Meadow_Rocks_rock_chip_13' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "GN_Meadow_Rocks_rock_chip_13 bbox [-0.47019563615322113, 1.1989447548985481, 0.8738513514399529]..[-0.26939816772937775, 1.2890110537409782, 0.9475327208638191] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "GN_Meadow_Rocks_rock_chip_13",
+              "location": [
+                -0.36979690194129944,
+                1.2439779043197632,
+                1.0936360827088356
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'GN_Meadow_Rocks_rock_chip_14' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "GN_Meadow_Rocks_rock_chip_14 bbox [0.18520550429821014, -0.17586981877684593, 0.8689868450164795]..[0.28152064979076385, -0.06650567427277565, 0.9523972272872925] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "GN_Meadow_Rocks_rock_chip_14",
+              "location": [
+                0.233363077044487,
+                -0.12118774652481079,
+                1.098500589132309
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'path_stone_step_03' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "path_stone_step_03 bbox [0.21123483777046204, -0.7312014251947403, 0.25600000098347664]..[0.6287651360034943, -0.3687985986471176, 0.30400000140070915] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "path_stone_step_03",
+              "location": [
+                0.41999998688697815,
+                -0.550000011920929,
+                1.0807953982055187
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'path_stone_step_04' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "path_stone_step_04 bbox [0.0033859610557556152, -0.10711608454585075, 0.3983999863266945]..[0.39661404490470886, 0.20711608603596687, 0.4415999874472618] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "path_stone_step_04",
+              "location": [
+                0.20000000298023224,
+                0.05000000074505806,
+                1.0783953985571861
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'grass_blade_hero_01' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "grass_blade_hero_01 bbox [-0.019681282341480255, -0.5183420330286026, 0.689147025346756]..[0.019681282341480255, -0.18165789544582367, 0.750853031873703] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "grass_blade_hero_01",
+              "location": [
+                0.0,
+                -0.34999996423721313,
+                1.087648401260376
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'grass_blade_hero_02' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "grass_blade_hero_02 bbox [0.45663269609212875, -0.7933420687913895, 0.6891470272094011]..[0.49599526077508926, -0.45665793120861053, 0.7508530300110579] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "grass_blade_hero_02",
+              "location": [
+                0.476313978433609,
+                -0.625,
+                1.0876483993977308
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'grass_blade_hero_06' is fully inside 'mound_hero_grassy' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "grass_blade_hero_06 bbox [-0.49599526077508926, -0.7933420687913895, 0.689147025346756]..[-0.45663269609212875, -0.45665793120861053, 0.750853031873703] inside mound_hero_grassy [-1.6792936325073242, -1.006119579076767, -0.20679542422294617]..[1.6792936325073242, 1.806119590997696, 1.0467953979969025]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "grass_blade_hero_06",
+              "location": [
+                -0.476313978433609,
+                -0.625,
+                1.087648401260376
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "warn",
+          "code": "framing.edge_crowding",
+          "problem": "'mound_hero_grassy' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+          "evidence": "screen_bbox=[0.03, 0.0, 0.96, 0.74]",
+          "ops": [
+            {
+              "op": "reframe_camera",
+              "look_at": [
+                0.008587858435532001,
+                0.30617223787185266,
+                0.8996900278207374
+              ],
+              "pull_back": 1.12
+            }
+          ]
+        },
+        {
           "severity": "warn",
           "code": "part.unreadable",
           "problem": "named part 'path_stone_step_03' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
@@ -2803,7 +3388,7 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 6.1,
+      "runtime_seconds": 4.9,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -3148,7 +3733,93 @@
       "palette_similarity": null,
       "animation_frame_proof": null,
       "failures": [],
-      "diagnoses": []
+      "diagnoses": [
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'front_panel_screw_head_01' is fully inside 'monolith_core' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "front_panel_screw_head_01 bbox [-0.017500000074505806, -0.1074999738484621, 1.5429999521002173]..[0.017500000074505806, -0.07249997369945049, 1.556999952532351] inside monolith_core [-0.5999999642372131, -0.675000011920929, -0.75]..[0.5999999642372131, 0.675000011920929, 3.25]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "front_panel_screw_head_01",
+              "location": [
+                0.0,
+                -0.0899999737739563,
+                3.2670000002160666
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'antenna_radar_cap_disc' is fully inside 'monolith_core' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "antenna_radar_cap_disc bbox [-0.25999999046325684, -0.12999999523162842, 2.9883000003173947]..[0.25999999046325684, 0.38999998569488525, 3.0116999996826053] inside monolith_core [-0.5999999642372131, -0.675000011920929, -0.75]..[0.5999999642372131, 0.675000011920929, 3.25]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "antenna_radar_cap_disc",
+              "location": [
+                0.0,
+                0.12999999523162842,
+                3.271699999682605
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'side_cable_service_loop_curve_tube' is fully inside 'monolith_core' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "side_cable_service_loop_curve_tube bbox [-0.18448930978775024, -0.16508528590202332, -0.3675970435142517]..[0.18448930978775024, 0.16508528590202332, 0.3675970435142517] inside monolith_core [-0.5999999642372131, -0.675000011920929, -0.75]..[0.5999999642372131, 0.675000011920929, 3.25]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "side_cable_service_loop_curve_tube",
+              "location": [
+                0.0,
+                0.0,
+                3.6275970435142515
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'front_panel_screw_craft_head_01' is fully inside 'monolith_core' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "front_panel_screw_craft_head_01 bbox [-0.023000000044703484, -0.18500000052154064, 1.5458599519915879]..[0.023000000044703484, -0.13900000043213367, 1.5541399526409805] inside monolith_core [-0.5999999642372131, -0.675000011920929, -0.75]..[0.5999999642372131, 0.675000011920929, 3.25]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "front_panel_screw_craft_head_01",
+              "location": [
+                0.0,
+                -0.16200000047683716,
+                3.264140000324696
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "warn",
+          "code": "framing.edge_crowding",
+          "problem": "'monolith_core' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+          "evidence": "screen_bbox=[0.39, 0.0, 0.63, 0.86]",
+          "ops": [
+            {
+              "op": "reframe_camera",
+              "look_at": [
+                -0.0008181826296177777,
+                -0.6083000029013915,
+                1.4555454464121298
+              ],
+              "pull_back": 1.12
+            }
+          ]
+        }
+      ]
     }
   },
   {
@@ -3158,7 +3829,7 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 6.1,
+      "runtime_seconds": 5.3,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -3806,6 +4477,242 @@
       "failures": [],
       "diagnoses": [
         {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'case_screw_craft_head_01' is fully inside 'case_screw_01' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "case_screw_craft_head_01 bbox [-0.039000000804662704, 0.7809999920427799, 2.9029800854623318]..[0.039000000804662704, 0.8589999936521053, 2.917020086199045] inside case_screw_01 [-0.03999999910593033, 0.7799999937415123, 2.8925000857561827]..[0.03999999910593033, 0.859999991953373, 2.9275000859051943]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "case_screw_craft_head_01",
+              "location": [
+                0.0,
+                0.8199999928474426,
+                2.9445200862735508
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'case_screw_craft_head_02' is fully inside 'case_screw_02' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "case_screw_craft_head_02 bbox [0.5408275499939919, 0.5408275499939919, 2.9029800854623318]..[0.6188275441527367, 0.6188275441527367, 2.917020086199045] inside case_screw_02 [0.5398275516927242, 0.5398275516927242, 2.8925000857561827]..[0.6198275424540043, 0.6198275424540043, 2.9275000859051943]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "case_screw_craft_head_02",
+              "location": [
+                0.5798275470733643,
+                0.5798275470733643,
+                2.9445200862735508
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'case_screw_craft_head_03' is fully inside 'case_screw_03' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "case_screw_craft_head_03 bbox [0.7809999920427799, -0.039000000804662656, 2.9029800854623318]..[0.8589999936521053, 0.03900000080466275, 2.917020086199045] inside case_screw_03 [0.7799999937415123, -0.03999999910593028, 2.8925000857561827]..[0.859999991953373, 0.03999999910593038, 2.9275000859051943]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "case_screw_craft_head_03",
+              "location": [
+                0.8199999928474426,
+                5.021051830901392e-17,
+                2.9445200862735508
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'case_screw_craft_head_04' is fully inside 'case_screw_04' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "case_screw_craft_head_04 bbox [0.5408275499939919, -0.6188275441527367, 2.9029800854623318]..[0.6188275441527367, -0.5408275499939919, 2.917020086199045] inside case_screw_04 [0.5398275516927242, -0.6198275424540043, 2.8925000857561827]..[0.6198275424540043, -0.5398275516927242, 2.9275000859051943]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "case_screw_craft_head_04",
+              "location": [
+                0.5798275470733643,
+                -0.5798275470733643,
+                2.9445200862735508
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'case_screw_craft_head_05' is fully inside 'case_screw_05' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "case_screw_craft_head_05 bbox [-0.03900000080466261, -0.8589999936521053, 2.9029800854623318]..[0.0390000008046628, -0.7809999920427799, 2.917020086199045] inside case_screw_05 [-0.03999999910593023, -0.859999991953373, 2.8925000857561827]..[0.039999999105930426, -0.7799999937415123, 2.9275000859051943]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "case_screw_craft_head_05",
+              "location": [
+                1.0042103661802784e-16,
+                -0.8199999928474426,
+                2.9445200862735508
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'case_screw_craft_head_06' is fully inside 'case_screw_06' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "case_screw_craft_head_06 bbox [-0.618827547878027, -0.618827547878027, 2.9029800854623318]..[-0.5408275462687016, -0.5408275462687016, 2.917020086199045] inside case_screw_06 [-0.6198275461792946, -0.6198275461792946, 2.8925000857561827]..[-0.5398275479674339, -0.5398275479674339, 2.9275000859051943]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "case_screw_craft_head_06",
+              "location": [
+                -0.5798275470733643,
+                -0.5798275470733643,
+                2.9445200862735508
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'case_screw_craft_head_07' is fully inside 'case_screw_07' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "case_screw_craft_head_07 bbox [-0.8589999936521053, -0.03900000080466286, 2.9029800854623318]..[-0.7809999920427799, 0.03900000080466255, 2.917020086199045] inside case_screw_07 [-0.859999991953373, -0.03999999910593048, 2.8925000857561827]..[-0.7799999937415123, 0.039999999105930176, 2.9275000859051943]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "case_screw_craft_head_07",
+              "location": [
+                -0.8199999928474426,
+                -1.5063156154448667e-16,
+                2.9445200862735508
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'case_screw_craft_head_08' is fully inside 'case_screw_08' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "case_screw_craft_head_08 bbox [-0.618827547878027, 0.5408275462687016, 2.9029800854623318]..[-0.5408275462687016, 0.618827547878027, 2.917020086199045] inside case_screw_08 [-0.6198275461792946, 0.5398275479674339, 2.8925000857561827]..[-0.5398275479674339, 0.6198275461792946, 2.9275000859051943]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "case_screw_craft_head_08",
+              "location": [
+                -0.5798275470733643,
+                0.5798275470733643,
+                2.9445200862735508
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'component_shadow_projection_plate_01' is fully inside 'case_bottom_shell' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "component_shadow_projection_plate_01 bbox [-0.8800000250339508, -0.7475000284612179, 0.07399999815970659]..[-0.5600000321865082, -0.6925000287592411, 0.08599999826401472] inside case_bottom_shell [-1.0750000476837158, -1.0750000476837158, -0.013500005006790161]..[1.0750000476837158, 1.0750000476837158, 0.3735000193119049]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "component_shadow_projection_plate_01",
+              "location": [
+                -0.7200000286102295,
+                -0.7200000286102295,
+                0.389500019364059
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'component_shadow_projection_plate_02' is fully inside 'case_bottom_shell' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "component_shadow_projection_plate_02 bbox [-0.40000003576278687, -0.26750003919005394, 0.07399999815970659]..[-0.08000004291534424, -0.21250003948807716, 0.08599999826401472] inside case_bottom_shell [-1.0750000476837158, -1.0750000476837158, -0.013500005006790161]..[1.0750000476837158, 1.0750000476837158, 0.3735000193119049]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "component_shadow_projection_plate_02",
+              "location": [
+                -0.24000003933906555,
+                -0.24000003933906555,
+                0.389500019364059
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'component_shadow_projection_plate_03' is fully inside 'case_bottom_shell' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "component_shadow_projection_plate_03 bbox [0.07999995350837708, 0.21249995008111, 0.07399999815970659]..[0.3999999463558197, 0.2674999497830868, 0.08599999826401472] inside case_bottom_shell [-1.0750000476837158, -1.0750000476837158, -0.013500005006790161]..[1.0750000476837158, 1.0750000476837158, 0.3735000193119049]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "component_shadow_projection_plate_03",
+              "location": [
+                0.2399999499320984,
+                0.2399999499320984,
+                0.389500019364059
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'component_shadow_projection_plate_04' is fully inside 'case_bottom_shell' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "component_shadow_projection_plate_04 bbox [0.5599999129772186, 0.6924999095499516, 0.07399999815970659]..[0.8799999058246613, 0.7474999092519283, 0.08599999826401472] inside case_bottom_shell [-1.0750000476837158, -1.0750000476837158, -0.013500005006790161]..[1.0750000476837158, 1.0750000476837158, 0.3735000193119049]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "component_shadow_projection_plate_04",
+              "location": [
+                0.7199999094009399,
+                0.7199999094009399,
+                0.389500019364059
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "warn",
+          "code": "composition.no_environment",
+          "problem": "subject floats in empty space \u2014 no ground, backdrop, or set dressing; every finished scene needs an ENVIRONMENT layer",
+          "evidence": "subjects=119 environment_objects=0",
+          "ops": [
+            {
+              "op": "create_mesh_primitive",
+              "type": "plane",
+              "name": "ground_plane",
+              "size": 20,
+              "collection": "ENVIRONMENT"
+            }
+          ]
+        },
+        {
+          "severity": "warn",
+          "code": "framing.edge_crowding",
+          "problem": "'case_bottom_shell' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+          "evidence": "screen_bbox=[0.23, 0.0, 0.77, 0.3]",
+          "ops": [
+            {
+              "op": "reframe_camera",
+              "look_at": [
+                -0.11306723301150218,
+                -0.18743697898227626,
+                1.8705462237366108
+              ],
+              "pull_back": 1.12
+            }
+          ]
+        },
+        {
           "severity": "warn",
           "code": "part.unreadable",
           "problem": "named part 'axis_callout_case_text_label' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
@@ -3896,7 +4803,7 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 10.2,
+      "runtime_seconds": 8.6,
       "iterations": 2,
       "repair_history": [
         {
@@ -4152,7 +5059,7 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 7.6,
+      "runtime_seconds": 6.0,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -5087,6 +5994,278 @@
       "failures": [],
       "diagnoses": [
         {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'petal_inner_soft_curved_front_06' is fully inside 'petal_outer_soft_curved_10' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "petal_inner_soft_curved_front_06 bbox [-0.13072320073843002, -0.5287330001592636, 1.2436099275946617]..[0.007116399705410004, -0.09168960154056549, 1.4163901582360268] inside petal_outer_soft_curved_10 [-0.1348978541791439, -0.7515870034694672, 1.1822141110897064]..[0.05545622482895851, -0.004249662160873413, 1.4377857744693756]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "petal_inner_soft_curved_front_06",
+              "location": [
+                -0.06180340051651001,
+                -0.31021130084991455,
+                1.5341758897900581
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'leaf_base_soft_curved_01' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "leaf_base_soft_curved_01 bbox [0.10339899361133575, 0.19228574633598328, 0.47995318844914436]..[0.2933443635702133, 0.8977576792240143, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "leaf_base_soft_curved_01",
+              "location": [
+                0.19837167859077454,
+                0.5450217127799988,
+                1.076896241158247
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'leaf_base_soft_curved_02' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "leaf_base_soft_curved_02 bbox [0.4306857958436012, -0.10761737823486328, 0.47995318844914436]..[0.62063118070364, 0.5978545546531677, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "leaf_base_soft_curved_02",
+              "location": [
+                0.5256584882736206,
+                0.24511858820915222,
+                1.076896241158247
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'leaf_base_soft_curved_03' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "leaf_base_soft_curved_03 bbox [0.45004902780056, -0.55110764503479, 0.47995318844914436]..[0.6399943977594376, 0.15436428785324097, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "leaf_base_soft_curved_03",
+              "location": [
+                0.5450217127799988,
+                -0.19837167859077454,
+                1.076896241158247
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'leaf_base_soft_curved_04' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "leaf_base_soft_curved_04 bbox [0.15014589577913284, -0.8783944249153137, 0.47995318844914436]..[0.3400912806391716, -0.1729225516319275, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "leaf_base_soft_curved_04",
+              "location": [
+                0.24511858820915222,
+                -0.5256584882736206,
+                1.076896241158247
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'leaf_base_soft_curved_05' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "leaf_base_soft_curved_05 bbox [-0.2933443710207939, -0.8977576792240143, 0.47995318844914436]..[-0.10339898616075516, -0.19228574633598328, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "leaf_base_soft_curved_05",
+              "location": [
+                -0.19837167859077454,
+                -0.5450217127799988,
+                1.076896241158247
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'leaf_base_soft_curved_06' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "leaf_base_soft_curved_06 bbox [-0.62063118070364, -0.5978545248508453, 0.47995318844914436]..[-0.4306857958436012, 0.1076173484325409, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "leaf_base_soft_curved_06",
+              "location": [
+                -0.5256584882736206,
+                -0.24511858820915222,
+                1.076896241158247
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'leaf_base_soft_curved_07' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "leaf_base_soft_curved_07 bbox [-0.6399943977594376, -0.15436428785324097, 0.47995318844914436]..[-0.45004902780056, 0.55110764503479, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "leaf_base_soft_curved_07",
+              "location": [
+                -0.5450217127799988,
+                0.19837167859077454,
+                1.076896241158247
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'leaf_base_soft_curved_08' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "leaf_base_soft_curved_08 bbox [-0.3400912806391716, 0.1729225516319275, 0.47995318844914436]..[-0.15014589577913284, 0.8783944249153137, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "leaf_base_soft_curved_08",
+              "location": [
+                -0.24511858820915222,
+                0.5256584882736206,
+                1.076896241158247
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'cloth_fold_soft_curved_highlight_04' is fully inside 'petal_outer_soft_curved_10' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "cloth_fold_soft_curved_highlight_04 bbox [-0.07002136670053005, -0.7189430072903633, 1.2576050031930208]..[-0.029978597536683083, -0.5570570155978203, 1.2903950940817595] inside petal_outer_soft_curved_10 [-0.1348978541791439, -0.7515870034694672, 1.1822141110897064]..[0.05545622482895851, -0.004249662160873413, 1.4377857744693756]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "cloth_fold_soft_curved_highlight_04",
+              "location": [
+                -0.04999998211860657,
+                -0.6380000114440918,
+                1.464180819913745
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'cloth_fold_soft_curved_highlight_05' is fully inside 'petal_outer_soft_curved_09' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "cloth_fold_soft_curved_highlight_05 bbox [0.07997863925993443, -0.7049430087208748, 1.275605009868741]..[0.1200214084237814, -0.5430570170283318, 1.3083951007574797] inside petal_outer_soft_curved_09 [-0.003246709704399109, -0.7423810362815857, 1.1822141110897064]..[0.18710735440254211, 0.004956305027008057, 1.4377857744693756]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "cloth_fold_soft_curved_highlight_05",
+              "location": [
+                0.10000002384185791,
+                -0.6240000128746033,
+                1.464180819913745
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'organic_stamen_filament_thread_06' is fully inside 'petal_front_cascade_soft_curved_04' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "organic_stamen_filament_thread_06 bbox [0.03900000173598528, -0.8250000365078449, 1.4289999431930482]..[0.05100000184029341, -0.715000044554472, 1.4409999423660338] inside petal_front_cascade_soft_curved_04 [-0.052270349115133286, -0.8586170375347137, 1.372287042438984]..[0.06227033957839012, -0.47338297963142395, 1.4977128431200981]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "organic_stamen_filament_thread_06",
+              "location": [
+                0.04500000178813934,
+                -0.7700000405311584,
+                1.513712842706591
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'organic_stamen_filament_thread_07' is fully inside 'petal_front_cascade_soft_curved_05' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "organic_stamen_filament_thread_07 bbox [0.08400000352412462, -0.8070000298321247, 1.4539999193511903]..[0.09600000362843275, -0.6970000378787518, 1.4659999185241759] inside petal_front_cascade_soft_curved_05 [0.06272966042160988, -0.870617002248764, 1.3772870376706123]..[0.17727034911513329, -0.48538294434547424, 1.5027128383517265]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "organic_stamen_filament_thread_07",
+              "location": [
+                0.09000000357627869,
+                -0.7520000338554382,
+                1.5187128379382193
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'organic_stamen_filament_thread_08' is fully inside 'petal_front_cascade_soft_curved_05' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "organic_stamen_filament_thread_08 bbox [0.12899999041110277, -0.7890000231564045, 1.4789998955093324]..[0.1409999905154109, -0.6790000312030315, 1.490999894682318] inside petal_front_cascade_soft_curved_05 [0.06272966042160988, -0.870617002248764, 1.3772870376706123]..[0.17727034911513329, -0.48538294434547424, 1.5027128383517265]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "organic_stamen_filament_thread_08",
+              "location": [
+                0.13499999046325684,
+                -0.734000027179718,
+                1.5187128379382193
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'stem_curved_base' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "stem_curved_base bbox [-0.07349999994039536, 0.10650000721216202, 0.18150001764297485]..[0.07349999994039536, 0.25350000709295273, 0.5385000109672546] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "stem_curved_base",
+              "location": [
+                0.0,
+                0.18000000715255737,
+                1.1953494048118591
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "warn",
+          "code": "framing.edge_crowding",
+          "problem": "'organic_fluted_soft_body' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+          "evidence": "screen_bbox=[0.11, 0.0, 0.89, 0.79]",
+          "ops": [
+            {
+              "op": "reframe_camera",
+              "look_at": [
+                0.005638656089035403,
+                -0.4054117672333196,
+                1.3304453697525154
+              ],
+              "pull_back": 1.12
+            }
+          ]
+        },
+        {
           "severity": "warn",
           "code": "part.unreadable",
           "problem": "named part 'petal_surface_micro_vein_10' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
@@ -5150,7 +6329,7 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 6.9,
+      "runtime_seconds": 5.9,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -5167,7 +6346,7 @@
           {
             "name": "energy_core_particle_emitter",
             "contrast": 0.227,
-            "edge_density": 0.1757,
+            "edge_density": 0.1758,
             "separation": 0.2446,
             "mean_luma": 0.674,
             "surround_luma": 0.4294,
@@ -5186,7 +6365,7 @@
             "name": "core_micro_hot_white_front",
             "contrast": 0.1977,
             "edge_density": 0.2845,
-            "separation": 0.1643,
+            "separation": 0.1642,
             "mean_luma": 0.7682,
             "surround_luma": 0.604,
             "readable": true
@@ -5195,7 +6374,7 @@
             "name": "orbital_ring_primary_blue",
             "contrast": 0.2798,
             "edge_density": 0.1548,
-            "separation": 0.2789,
+            "separation": 0.279,
             "mean_luma": 0.5989,
             "surround_luma": 0.32,
             "readable": true
@@ -5203,8 +6382,8 @@
           {
             "name": "orbital_ring_vertical_blue",
             "contrast": 0.1462,
-            "edge_density": 0.1359,
-            "separation": 0.0946,
+            "edge_density": 0.1354,
+            "separation": 0.0947,
             "mean_luma": 0.7187,
             "surround_luma": 0.624,
             "readable": true
@@ -5221,7 +6400,7 @@
           {
             "name": "particle_core_containment_brushed_metal_ring",
             "contrast": 0.1579,
-            "edge_density": 0.179,
+            "edge_density": 0.1793,
             "separation": 0.083,
             "mean_luma": 0.7571,
             "surround_luma": 0.6741,
@@ -5239,16 +6418,16 @@
           {
             "name": "particle_core_iris_blade_right_metal",
             "contrast": 0.1855,
-            "edge_density": 0.4516,
-            "separation": 0.07,
-            "mean_luma": 0.6845,
+            "edge_density": 0.4496,
+            "separation": 0.0699,
+            "mean_luma": 0.6846,
             "surround_luma": 0.7545,
             "readable": true
           },
           {
             "name": "shockwave_ring_mid_air_amber",
             "contrast": 0.2176,
-            "edge_density": 0.157,
+            "edge_density": 0.1571,
             "separation": 0.2344,
             "mean_luma": 0.6924,
             "surround_luma": 0.4581,
@@ -5258,9 +6437,9 @@
             "name": "spark_particle_visible_dot_02",
             "contrast": 0.0329,
             "edge_density": 0.0152,
-            "separation": 0.0864,
+            "separation": 0.0866,
             "mean_luma": 0.8745,
-            "surround_luma": 0.7881,
+            "surround_luma": 0.7879,
             "readable": true
           },
           {
@@ -5286,7 +6465,7 @@
             "contrast": 0.0499,
             "edge_density": 0.0769,
             "separation": 0.2081,
-            "mean_luma": 0.8453,
+            "mean_luma": 0.8454,
             "surround_luma": 0.6372,
             "readable": true
           },
@@ -5364,11 +6543,11 @@
           },
           {
             "name": "spark_particle_visible_dot_14",
-            "contrast": 0.0732,
+            "contrast": 0.0733,
             "edge_density": 0.25,
             "separation": 0.186,
             "mean_luma": 0.8754,
-            "surround_luma": 0.6893,
+            "surround_luma": 0.6894,
             "readable": true
           },
           {
@@ -5573,16 +6752,16 @@
             "name": "spark_particle_outer_dot_11",
             "contrast": 0.0556,
             "edge_density": 0.0781,
-            "separation": 0.1492,
+            "separation": 0.1493,
             "mean_luma": 0.8816,
-            "surround_luma": 0.7324,
+            "surround_luma": 0.7323,
             "readable": true
           },
           {
             "name": "spark_particle_outer_dot_12",
             "contrast": 0.1068,
             "edge_density": 0.2375,
-            "separation": 0.2073,
+            "separation": 0.2072,
             "mean_luma": 0.8552,
             "surround_luma": 0.6479,
             "readable": true
@@ -5699,8 +6878,8 @@
             "name": "energy_trail_hot_core_03",
             "contrast": 0.1535,
             "edge_density": 0.4956,
-            "separation": 0.023,
-            "mean_luma": 0.7595,
+            "separation": 0.0229,
+            "mean_luma": 0.7594,
             "surround_luma": 0.7365,
             "readable": true
           },
@@ -5710,7 +6889,7 @@
             "edge_density": 0.3975,
             "separation": 0.0946,
             "mean_luma": 0.7183,
-            "surround_luma": 0.6237,
+            "surround_luma": 0.6236,
             "readable": true
           },
           {
@@ -5725,7 +6904,7 @@
           {
             "name": "energy_trail_hot_core_06",
             "contrast": 0.1698,
-            "edge_density": 0.2458,
+            "edge_density": 0.2469,
             "separation": 0.0757,
             "mean_luma": 0.8122,
             "surround_luma": 0.7365,
@@ -5744,7 +6923,7 @@
             "name": "energy_trail_hot_core_08",
             "contrast": 0.0205,
             "edge_density": 0.0,
-            "separation": 0.0027,
+            "separation": 0.0026,
             "mean_luma": 0.8822,
             "surround_luma": 0.8795,
             "readable": false
@@ -5753,9 +6932,9 @@
             "name": "energy_trail_hot_core_09",
             "contrast": 0.1349,
             "edge_density": 0.2902,
-            "separation": 0.0135,
+            "separation": 0.0136,
             "mean_luma": 0.7885,
-            "surround_luma": 0.802,
+            "surround_luma": 0.8021,
             "readable": true
           },
           {
@@ -5796,7 +6975,7 @@
           },
           {
             "name": "energy_trail_hot_core_14",
-            "contrast": 0.167,
+            "contrast": 0.1669,
             "edge_density": 0.3167,
             "separation": 0.0625,
             "mean_luma": 0.6987,
@@ -5807,14 +6986,14 @@
             "name": "energy_trail_hot_core_15",
             "contrast": 0.1236,
             "edge_density": 0.2574,
-            "separation": 0.0474,
+            "separation": 0.0473,
             "mean_luma": 0.7558,
             "surround_luma": 0.7085,
             "readable": true
           },
           {
             "name": "energy_trail_hot_core_16",
-            "contrast": 0.1011,
+            "contrast": 0.1012,
             "edge_density": 0.1063,
             "separation": 0.0701,
             "mean_luma": 0.8231,
@@ -5835,7 +7014,7 @@
             "contrast": 0.1161,
             "edge_density": 0.1875,
             "separation": 0.012,
-            "mean_luma": 0.8335,
+            "mean_luma": 0.8334,
             "surround_luma": 0.8454,
             "readable": true
           },
@@ -5844,15 +7023,15 @@
             "contrast": 0.1159,
             "edge_density": 0.1431,
             "separation": 0.0261,
-            "mean_luma": 0.7411,
-            "surround_luma": 0.715,
+            "mean_luma": 0.7412,
+            "surround_luma": 0.7151,
             "readable": true
           },
           {
             "name": "energy_trail_ribbon_violet_02",
             "contrast": 0.1797,
-            "edge_density": 0.3011,
-            "separation": 0.0357,
+            "edge_density": 0.3009,
+            "separation": 0.0358,
             "mean_luma": 0.7017,
             "surround_luma": 0.666,
             "readable": true
@@ -5863,7 +7042,7 @@
             "edge_density": 0.3166,
             "separation": 0.0199,
             "mean_luma": 0.6963,
-            "surround_luma": 0.6763,
+            "surround_luma": 0.6764,
             "readable": true
           },
           {
@@ -5878,7 +7057,7 @@
           {
             "name": "energy_trail_ribbon_violet_05",
             "contrast": 0.2332,
-            "edge_density": 0.3965,
+            "edge_density": 0.3968,
             "separation": 0.0912,
             "mean_luma": 0.5405,
             "surround_luma": 0.4493,
@@ -5887,7 +7066,7 @@
           {
             "name": "energy_trail_ribbon_violet_06",
             "contrast": 0.2862,
-            "edge_density": 0.3451,
+            "edge_density": 0.3453,
             "separation": 0.0483,
             "mean_luma": 0.3912,
             "surround_luma": 0.3429,
@@ -5896,7 +7075,7 @@
           {
             "name": "energy_trail_ribbon_violet_07",
             "contrast": 0.2575,
-            "edge_density": 0.4044,
+            "edge_density": 0.4046,
             "separation": 0.14,
             "mean_luma": 0.5028,
             "surround_luma": 0.3628,
@@ -5923,7 +7102,7 @@
           {
             "name": "energy_trail_ribbon_violet_10",
             "contrast": 0.2566,
-            "edge_density": 0.3704,
+            "edge_density": 0.3705,
             "separation": 0.0109,
             "mean_luma": 0.5627,
             "surround_luma": 0.5518,
@@ -5932,7 +7111,7 @@
           {
             "name": "energy_trail_ribbon_violet_11",
             "contrast": 0.2883,
-            "edge_density": 0.3911,
+            "edge_density": 0.3912,
             "separation": 0.004,
             "mean_luma": 0.4414,
             "surround_luma": 0.4454,
@@ -5959,7 +7138,7 @@
           {
             "name": "energy_trail_ribbon_violet_14",
             "contrast": 0.2841,
-            "edge_density": 0.3992,
+            "edge_density": 0.3993,
             "separation": 0.1335,
             "mean_luma": 0.4321,
             "surround_luma": 0.2986,
@@ -5968,7 +7147,7 @@
           {
             "name": "energy_trail_ribbon_violet_15",
             "contrast": 0.2486,
-            "edge_density": 0.3948,
+            "edge_density": 0.3949,
             "separation": 0.0281,
             "mean_luma": 0.5569,
             "surround_luma": 0.5288,
@@ -5986,8 +7165,8 @@
           {
             "name": "energy_trail_ribbon_violet_17",
             "contrast": 0.2341,
-            "edge_density": 0.3092,
-            "separation": 0.0433,
+            "edge_density": 0.309,
+            "separation": 0.0434,
             "mean_luma": 0.6599,
             "surround_luma": 0.6165,
             "readable": true
@@ -5996,8 +7175,8 @@
             "name": "energy_trail_ribbon_violet_18",
             "contrast": 0.1326,
             "edge_density": 0.1177,
-            "separation": 0.023,
-            "mean_luma": 0.7631,
+            "separation": 0.0231,
+            "mean_luma": 0.7632,
             "surround_luma": 0.7401,
             "readable": true
           },
@@ -6014,9 +7193,9 @@
             "name": "energy_trail_ribbon_violet_20",
             "contrast": 0.287,
             "edge_density": 0.2018,
-            "separation": 0.0255,
+            "separation": 0.0254,
             "mean_luma": 0.5614,
-            "surround_luma": 0.5359,
+            "surround_luma": 0.536,
             "readable": true
           },
           {
@@ -6061,7 +7240,7 @@
             "edge_density": 0.3773,
             "separation": 0.0364,
             "mean_luma": 0.5365,
-            "surround_luma": 0.5001,
+            "surround_luma": 0.5002,
             "readable": true
           },
           {
@@ -6120,8 +7299,8 @@
           },
           {
             "name": "energy_trail_cyan_counter_12",
-            "contrast": 0.1694,
-            "edge_density": 0.1542,
+            "contrast": 0.1695,
+            "edge_density": 0.1551,
             "separation": 0.0397,
             "mean_luma": 0.8044,
             "surround_luma": 0.7647,
@@ -6149,18 +7328,18 @@
             "name": "energy_trail_cyan_counter_15",
             "contrast": 0.032,
             "edge_density": 0.0104,
-            "separation": 0.0266,
+            "separation": 0.0267,
             "mean_luma": 0.861,
-            "surround_luma": 0.8344,
+            "surround_luma": 0.8343,
             "readable": false
           },
           {
             "name": "energy_trail_cyan_counter_16",
-            "contrast": 0.0316,
+            "contrast": 0.0317,
             "edge_density": 0.0,
-            "separation": 0.009,
+            "separation": 0.0091,
             "mean_luma": 0.8613,
-            "surround_luma": 0.8523,
+            "surround_luma": 0.8522,
             "readable": false
           },
           {
@@ -6183,10 +7362,10 @@
           },
           {
             "name": "core_hot_streak_diagonal_03",
-            "contrast": 0.1066,
+            "contrast": 0.1065,
             "edge_density": 0.1759,
             "separation": 0.1098,
-            "mean_luma": 0.8488,
+            "mean_luma": 0.8489,
             "surround_luma": 0.7391,
             "readable": true
           },
@@ -6194,7 +7373,7 @@
             "name": "core_hot_streak_diagonal_04",
             "contrast": 0.0092,
             "edge_density": 0.0,
-            "separation": 0.0091,
+            "separation": 0.0092,
             "mean_luma": 0.8669,
             "surround_luma": 0.8578,
             "readable": false
@@ -6204,7 +7383,7 @@
             "contrast": 0.2083,
             "edge_density": 0.225,
             "separation": 0.0936,
-            "mean_luma": 0.6262,
+            "mean_luma": 0.6263,
             "surround_luma": 0.7198,
             "readable": true
           },
@@ -6212,18 +7391,18 @@
             "name": "core_hot_streak_diagonal_06",
             "contrast": 0.0866,
             "edge_density": 0.3357,
-            "separation": 0.1495,
+            "separation": 0.1494,
             "mean_luma": 0.8756,
-            "surround_luma": 0.7261,
+            "surround_luma": 0.7262,
             "readable": true
           },
           {
             "name": "core_hot_streak_diagonal_07",
             "contrast": 0.1278,
             "edge_density": 0.3605,
-            "separation": 0.2668,
+            "separation": 0.2669,
             "mean_luma": 0.8021,
-            "surround_luma": 0.5353,
+            "surround_luma": 0.5352,
             "readable": true
           },
           {
@@ -6246,11 +7425,11 @@
           },
           {
             "name": "core_violet_streak_counter_03",
-            "contrast": 0.0474,
+            "contrast": 0.0473,
             "edge_density": 0.0694,
             "separation": 0.0574,
-            "mean_luma": 0.8448,
-            "surround_luma": 0.7874,
+            "mean_luma": 0.8449,
+            "surround_luma": 0.7875,
             "readable": true
           },
           {
@@ -6266,17 +7445,17 @@
             "name": "core_violet_streak_counter_05",
             "contrast": 0.0925,
             "edge_density": 0.2842,
-            "separation": 0.0499,
+            "separation": 0.0498,
             "mean_luma": 0.8033,
-            "surround_luma": 0.7534,
+            "surround_luma": 0.7535,
             "readable": true
           },
           {
             "name": "core_violet_streak_counter_06",
-            "contrast": 0.0241,
+            "contrast": 0.0243,
             "edge_density": 0.0125,
             "separation": 0.0535,
-            "mean_luma": 0.8169,
+            "mean_luma": 0.8168,
             "surround_luma": 0.7634,
             "readable": true
           },
@@ -6302,15 +7481,15 @@
             "name": "energy_trail_amber_shockwave_arc_03",
             "contrast": 0.1497,
             "edge_density": 0.2927,
-            "separation": 0.0179,
+            "separation": 0.018,
             "mean_luma": 0.8235,
             "surround_luma": 0.8055,
             "readable": true
           },
           {
             "name": "energy_trail_amber_shockwave_arc_04",
-            "contrast": 0.1305,
-            "edge_density": 0.1629,
+            "contrast": 0.1306,
+            "edge_density": 0.1638,
             "separation": 0.0051,
             "mean_luma": 0.8229,
             "surround_luma": 0.828,
@@ -6327,7 +7506,7 @@
           },
           {
             "name": "energy_trail_amber_shockwave_arc_06",
-            "contrast": 0.1812,
+            "contrast": 0.1811,
             "edge_density": 0.2228,
             "separation": 0.0705,
             "mean_luma": 0.6996,
@@ -6336,7 +7515,7 @@
           },
           {
             "name": "energy_trail_amber_shockwave_arc_07",
-            "contrast": 0.1602,
+            "contrast": 0.1601,
             "edge_density": 0.278,
             "separation": 0.0932,
             "mean_luma": 0.7173,
@@ -6355,7 +7534,7 @@
           {
             "name": "energy_trail_amber_shockwave_arc_09",
             "contrast": 0.2094,
-            "edge_density": 0.3911,
+            "edge_density": 0.3917,
             "separation": 0.1854,
             "mean_luma": 0.6803,
             "surround_luma": 0.4949,
@@ -6390,7 +7569,7 @@
           },
           {
             "name": "core_iris_micro_glint_01",
-            "contrast": 0.1685,
+            "contrast": 0.1684,
             "edge_density": 0.3636,
             "separation": 0.0427,
             "mean_luma": 0.6848,
@@ -6399,10 +7578,10 @@
           },
           {
             "name": "core_iris_micro_glint_02",
-            "contrast": 0.0724,
+            "contrast": 0.0723,
             "edge_density": 0.0364,
-            "separation": 0.002,
-            "mean_luma": 0.7902,
+            "separation": 0.0021,
+            "mean_luma": 0.7903,
             "surround_luma": 0.7882,
             "readable": true
           },
@@ -6430,7 +7609,7 @@
             "edge_density": 0.384,
             "separation": 0.0545,
             "mean_luma": 0.8374,
-            "surround_luma": 0.783,
+            "surround_luma": 0.7829,
             "readable": true
           },
           {
@@ -6455,9 +7634,9 @@
             "name": "core_iris_micro_glint_08",
             "contrast": 0.0508,
             "edge_density": 0.0435,
-            "separation": 0.0391,
-            "mean_luma": 0.8573,
-            "surround_luma": 0.8182,
+            "separation": 0.039,
+            "mean_luma": 0.8571,
+            "surround_luma": 0.8181,
             "readable": true
           }
         ],
@@ -6481,6 +7660,40 @@
       "animation_frame_proof": null,
       "failures": [],
       "diagnoses": [
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'core_iris_micro_glint_03' is fully inside 'energy_trail_ribbon_violet_17' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "core_iris_micro_glint_03 bbox [0.2270925473421812, -0.32618143782019615, 1.3632107735611498]..[0.2482361365109682, -0.23062166944146156, 1.3767892359755933] inside energy_trail_ribbon_violet_17 [0.1843036785721779, -0.6835566461086273, 1.3025038316845894]..[0.2508874461054802, 0.0797167718410492, 1.4019355699419975]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "core_iris_micro_glint_03",
+              "location": [
+                0.2376643419265747,
+                -0.27840155363082886,
+                1.4187248011492193
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "warn",
+          "code": "framing.edge_crowding",
+          "problem": "'energy_trail_ribbon_violet_11' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+          "evidence": "screen_bbox=[0.64, 0.59, 1.0, 0.72]",
+          "ops": [
+            {
+              "op": "reframe_camera",
+              "look_at": [
+                -0.0020848440761352784,
+                -0.07590679231391856,
+                1.373667462337652
+              ],
+              "pull_back": 1.12
+            }
+          ]
+        },
         {
           "severity": "warn",
           "code": "part.unreadable",
@@ -6761,12 +7974,12 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 4.7,
+      "runtime_seconds": 4.1,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
-        "C:\\Users\\User\\AppData\\Local\\Temp\\holdout3\\bench2\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
-        "C:\\Users\\User\\AppData\\Local\\Temp\\holdout3\\bench2\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\product_hero_watch_skill_plus_tools\\iterations\\iter_01_preview.png",
+        "C:\\Users\\User\\Desktop\\blenderskill\\artifacts\\benchmarks\\product_hero_watch_skill_plus_tools\\final\\export_final.glb"
       ],
       "visual_style_tags": [
         "very_dark"
@@ -7126,23 +8339,6 @@
       "failures": [],
       "diagnoses": [
         {
-          "severity": "fail",
-          "code": "geometry.buried_object",
-          "problem": "'strap_lower_ridge_06' is fully inside 'strap_buckle_brushed_bridge' \u2014 invisible in the render; lift it onto the host's top surface",
-          "evidence": "strap_lower_ridge_06 bbox [-0.25999999046325684, -2.5699999518692493, 0.41250000707805157]..[0.25999999046325684, -2.529999952763319, 0.4475000072270632] inside strap_buckle_brushed_bridge [-0.36000001430511475, -2.739999882876873, 0.38249998539686203]..[0.36000001430511475, -2.499999888241291, 0.45749998837709427]",
-          "ops": [
-            {
-              "op": "set_object_transform",
-              "target": "strap_lower_ridge_06",
-              "location": [
-                0.0,
-                -2.549999952316284,
-                0.4849999884516001
-              ]
-            }
-          ]
-        },
-        {
           "severity": "warn",
           "code": "material.metal_void",
           "problem": "material 'brushed_black_titanium' is near-black fully-metallic in a dark world \u2014 a mirror with nothing to reflect renders as a void",
@@ -7189,7 +8385,7 @@
       "pass": true,
       "visual_score": 98,
       "technical_score": 100,
-      "runtime_seconds": 5.2,
+      "runtime_seconds": 6.3,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -7383,6 +8579,74 @@
       "failures": [],
       "diagnoses": [
         {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'top_inset_panel_black_glass' is fully inside 'product_body_layered_beveled_main' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "top_inset_panel_black_glass bbox [-0.5900000035762787, -0.5600000023841858, 1.4124999474734068]..[0.22999998927116394, -0.19999998807907104, 1.4474999476224184] inside product_body_layered_beveled_main [-1.125, -0.5849999785423279, 0.22499996423721313]..[1.125, 0.5849999785423279, 1.574999988079071]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "top_inset_panel_black_glass",
+              "location": [
+                -0.18000000715255737,
+                -0.3799999952316284,
+                1.6024999881535769
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'bottom_contact_shadow_layer' is fully inside 'product_body_layered_beveled_main' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "bottom_contact_shadow_layer bbox [-0.5, -0.42000000178813934, 0.3225000035017729]..[0.5, 0.019999995827674866, 0.3575000036507845] inside product_body_layered_beveled_main [-1.125, -0.5849999785423279, 0.22499996423721313]..[1.125, 0.5849999785423279, 1.574999988079071]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "bottom_contact_shadow_layer",
+              "location": [
+                0.0,
+                -0.20000000298023224,
+                1.6024999881535769
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'body_top_back_bevel_plane' is fully inside 'product_body_layered_beveled_main' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "body_top_back_bevel_plane bbox [-0.49000000953674316, -0.1749999960884452, 1.4630000181496143]..[0.49000000953674316, -0.14499999675899744, 1.4970000199973583] inside product_body_layered_beveled_main [-1.125, -0.5849999785423279, 0.22499996423721313]..[1.125, 0.5849999785423279, 1.574999988079071]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "body_top_back_bevel_plane",
+              "location": [
+                0.0,
+                -0.1599999964237213,
+                1.601999989002943
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'bevel_edge_catch_light_top' is fully inside 'product_body_layered_beveled_main' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "bevel_edge_catch_light_top bbox [-0.48000000044703484, -0.21000000275671482, 1.50299999024719]..[0.5199999995529652, -0.19000000320374966, 1.5169999906793237] inside product_body_layered_beveled_main [-1.125, -0.5849999785423279, 0.22499996423721313]..[1.125, 0.5849999785423279, 1.574999988079071]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "bevel_edge_catch_light_top",
+              "location": [
+                0.019999999552965164,
+                -0.20000000298023224,
+                1.591999988295138
+              ]
+            }
+          ]
+        },
+        {
           "severity": "warn",
           "code": "part.unreadable",
           "problem": "named part 'body_side_thickness_right_visible_face' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
@@ -7517,7 +8781,7 @@
       "pass": true,
       "visual_score": 99,
       "technical_score": 100,
-      "runtime_seconds": 5.1,
+      "runtime_seconds": 4.2,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -7923,6 +9187,23 @@
       "diagnoses": [
         {
           "severity": "warn",
+          "code": "framing.edge_crowding",
+          "problem": "'repaired_base_plinth' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+          "evidence": "screen_bbox=[0.09, 0.0, 1.0, 0.35]",
+          "ops": [
+            {
+              "op": "reframe_camera",
+              "look_at": [
+                0.12634615284892228,
+                -0.4630192295433237,
+                1.1146153939458041
+              ],
+              "pull_back": 1.12
+            }
+          ]
+        },
+        {
+          "severity": "warn",
           "code": "part.unreadable",
           "problem": "named part 'repaired_base_screw_02' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
           "evidence": "see part_readability",
@@ -8012,7 +9293,7 @@
       "pass": true,
       "visual_score": 97,
       "technical_score": 100,
-      "runtime_seconds": 5.9,
+      "runtime_seconds": 4.9,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -8093,7 +9374,7 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 5.4,
+      "runtime_seconds": 4.4,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -8263,7 +9544,7 @@
             "contrast": 0.1639,
             "edge_density": 0.2595,
             "separation": 0.1108,
-            "mean_luma": 0.3187,
+            "mean_luma": 0.3188,
             "surround_luma": 0.208,
             "readable": true
           },
@@ -8339,7 +9620,110 @@
       "palette_similarity": 0.7898023011856291,
       "animation_frame_proof": null,
       "failures": [],
-      "diagnoses": []
+      "diagnoses": [
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'blue_liquid_core' is fully inside 'glass_bottle_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "blue_liquid_core bbox [-0.48840001225471497, -0.48840001225471497, 0.3811999559402466]..[0.48840001225471497, 0.48840001225471497, 1.298799991607666] inside glass_bottle_body [-0.6299999952316284, -0.6299999952316284, 0.1499999761581421]..[0.6299999952316284, 0.6299999952316284, 1.9499999284744263]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "blue_liquid_core",
+              "location": [
+                0.0,
+                0.0,
+                2.4187999463081358
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'bottle_neck_glass_ring' is fully inside 'glass_bottle_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "bottle_neck_glass_ring bbox [-0.42480000853538513, -0.42480000853538513, 1.8561120142694563]..[0.42480000853538513, 0.42480000853538513, 1.8638880143407732] inside glass_bottle_body [-0.6299999952316284, -0.6299999952316284, 0.1499999761581421]..[0.6299999952316284, 0.6299999952316284, 1.9499999284744263]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "bottle_neck_glass_ring",
+              "location": [
+                0.0,
+                0.0,
+                1.9638879285100848
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'cap_ridge_brushed_marker_03' is fully inside 'brushed_cap_metal' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "cap_ridge_brushed_marker_03 bbox [0.3173692300915718, 0.2268657051026821, 2.0724999140948057]..[0.3393692299723625, 0.29686570540070534, 2.1074999142438173] inside brushed_cap_metal [-0.4399999976158142, -0.4399999976158142, 1.9567999243736267]..[0.4399999976158142, 0.4399999976158142, 2.2031999230384827]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "cap_ridge_brushed_marker_03",
+              "location": [
+                0.32836923003196716,
+                0.2618657052516937,
+                2.2306999231129883
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'cap_ridge_brushed_marker_06' is fully inside 'brushed_cap_metal' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "cap_ridge_brushed_marker_06 bbox [0.3173692300915718, -0.29686570540070534, 2.0724999140948057]..[0.3393692299723625, -0.2268657051026821, 2.1074999142438173] inside brushed_cap_metal [-0.4399999976158142, -0.4399999976158142, 1.9567999243736267]..[0.4399999976158142, 0.4399999976158142, 2.2031999230384827]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "cap_ridge_brushed_marker_06",
+              "location": [
+                0.32836923003196716,
+                -0.2618657052516937,
+                2.2306999231129883
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'cap_ridge_brushed_marker_10' is fully inside 'brushed_cap_metal' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "cap_ridge_brushed_marker_10 bbox [-0.3393692299723625, -0.29686570540070534, 2.0724999140948057]..[-0.3173692300915718, -0.2268657051026821, 2.1074999142438173] inside brushed_cap_metal [-0.4399999976158142, -0.4399999976158142, 1.9567999243736267]..[0.4399999976158142, 0.4399999976158142, 2.2031999230384827]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "cap_ridge_brushed_marker_10",
+              "location": [
+                -0.32836923003196716,
+                -0.2618657052516937,
+                2.2306999231129883
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'cap_ridge_brushed_marker_13' is fully inside 'brushed_cap_metal' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "cap_ridge_brushed_marker_13 bbox [-0.3393692299723625, 0.2268657051026821, 2.0724999140948057]..[-0.3173692300915718, 0.29686570540070534, 2.1074999142438173] inside brushed_cap_metal [-0.4399999976158142, -0.4399999976158142, 1.9567999243736267]..[0.4399999976158142, 0.4399999976158142, 2.2031999230384827]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "cap_ridge_brushed_marker_13",
+              "location": [
+                -0.32836923003196716,
+                0.2618657052516937,
+                2.2306999231129883
+              ]
+            }
+          ]
+        }
+      ]
     }
   },
   {
@@ -8349,7 +9733,7 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 9.1,
+      "runtime_seconds": 7.7,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -8771,6 +10155,142 @@
       "failures": [],
       "diagnoses": [
         {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'product_ring_inner_blue' is fully inside 'product_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "product_ring_inner_blue bbox [-0.8517990708351135, -0.8517990708351135, 1.2094880286604166]..[0.8517990708351135, 0.8517990708351135, 1.2305120285600424] inside product_body [-1.0, -1.0, 0.44999998807907104]..[1.0, 1.0, 1.3499999642372131]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "product_ring_inner_blue",
+              "location": [
+                0.0,
+                0.0,
+                1.370511964187026
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'product_front_indicator_bar' is fully inside 'front_lens_outer_black_ring' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "product_front_indicator_bar bbox [-0.33000001311302185, -1.0524999620392919, 0.8425000142306089]..[0.33000001311302185, -1.0274999616667628, 0.8775000143796206] inside front_lens_outer_black_ring [-0.36000001430511475, -1.0931999683380127, 0.5399999618530273]..[0.36000001430511475, -1.0067999362945557, 1.2599999904632568]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "product_front_indicator_bar",
+              "location": [
+                0.0,
+                -1.0399999618530273,
+                1.2874999905377627
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'product_front_brand_plate' is fully inside 'front_lens_outer_black_ring' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "product_front_brand_plate bbox [-0.27000001072883606, -1.0709999427199364, 0.6475000083446503]..[0.27000001072883606, -1.0489999428391457, 0.7125000059604645] inside front_lens_outer_black_ring [-0.36000001430511475, -1.0931999683380127, 0.5399999618530273]..[0.36000001430511475, -1.0067999362945557, 1.2599999904632568]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "product_front_brand_plate",
+              "location": [
+                0.0,
+                -1.059999942779541,
+                1.302499989271164
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'focus_grip_rib_01' is fully inside 'product_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "focus_grip_rib_01 bbox [-0.013000000268220901, -0.6300000231713057, 0.8824999760836363]..[0.013000000268220901, -0.5700000245124102, 0.9174999762326479] inside product_body [-1.0, -1.0, 0.44999998807907104]..[1.0, 1.0, 1.3499999642372131]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "focus_grip_rib_01",
+              "location": [
+                0.0,
+                -0.6000000238418579,
+                1.377499964311719
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'focus_grip_rib_02' is fully inside 'product_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "focus_grip_rib_02 bbox [0.15116966981440783, -0.6589476130902767, 0.8824999760836363]..[0.17716966848820448, -0.5989476181566715, 0.9174999762326479] inside product_body [-1.0, -1.0, 0.44999998807907104]..[1.0, 1.0, 1.3499999642372131]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "focus_grip_rib_02",
+              "location": [
+                0.16416966915130615,
+                -0.6289476156234741,
+                1.377499964311719
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'focus_grip_rib_03' is fully inside 'product_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "focus_grip_rib_03 bbox [0.29553805012255907, -0.742298748344183, 0.8824999760836363]..[0.3215380487963557, -0.6822987534105778, 0.9174999762326479] inside product_body [-1.0, -1.0, 0.44999998807907104]..[1.0, 1.0, 1.3499999642372131]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "focus_grip_rib_03",
+              "location": [
+                0.3085380494594574,
+                -0.7122987508773804,
+                1.377499964311719
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'focus_grip_rib_17' is fully inside 'product_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "focus_grip_rib_17 bbox [-0.3215380497276783, -0.7422987502068281, 0.8824999760836363]..[-0.2955380491912365, -0.6822987515479326, 0.9174999762326479] inside product_body [-1.0, -1.0, 0.44999998807907104]..[1.0, 1.0, 1.3499999642372131]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "focus_grip_rib_17",
+              "location": [
+                -0.3085380494594574,
+                -0.7122987508773804,
+                1.377499964311719
+              ]
+            }
+          ]
+        },
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'focus_grip_rib_18' is fully inside 'product_body' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "focus_grip_rib_18 bbox [-0.17716966941952705, -0.6589476149529219, 0.8824999760836363]..[-0.15116966888308525, -0.5989476162940264, 0.9174999762326479] inside product_body [-1.0, -1.0, 0.44999998807907104]..[1.0, 1.0, 1.3499999642372131]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "focus_grip_rib_18",
+              "location": [
+                -0.16416966915130615,
+                -0.6289476156234741,
+                1.377499964311719
+              ]
+            }
+          ]
+        },
+        {
           "severity": "warn",
           "code": "part.unreadable",
           "problem": "named part 'product_front_brand_glyph_center' merges into its surround \u2014 no internal contrast, edge detail, or luminance separation",
@@ -8915,7 +10435,7 @@
       "pass": true,
       "visual_score": 100,
       "technical_score": 100,
-      "runtime_seconds": 8.2,
+      "runtime_seconds": 6.8,
       "iterations": 1,
       "repair_history": null,
       "artifacts": [
@@ -9133,7 +10653,25 @@
         ]
       },
       "failures": [],
-      "diagnoses": []
+      "diagnoses": [
+        {
+          "severity": "fail",
+          "code": "geometry.buried_object",
+          "problem": "'inner_white_core' is fully inside 'energy_core' \u2014 invisible in the render; lift it onto the host's top surface",
+          "evidence": "inner_white_core bbox [-0.4099998474121094, -0.40999993681907654, 1.1900000274181366]..[0.4099998474121094, 0.40999993681907654, 2.0100000202655792] inside energy_core [-0.9510578513145447, -0.9999999403953552, 0.6000000238418579]..[0.9510578513145447, 0.9999999403953552, 2.600000023841858]",
+          "ops": [
+            {
+              "op": "set_object_transform",
+              "target": "inner_white_core",
+              "location": [
+                0.0,
+                0.0,
+                3.020000020265579
+              ]
+            }
+          ]
+        }
+      ]
     }
   }
 ]

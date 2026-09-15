@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 6.3,
+    "runtime_seconds": 5.2,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
@@ -800,6 +800,75 @@
     "palette_similarity": null,
     "animation_frame_proof": null,
     "failures": [],
-    "diagnoses": []
+    "diagnoses": [
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'cushion_seam_piped_edge_02' is fully inside 'cushion_round_left_linen_soft' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "cushion_seam_piped_edge_02 bbox [-1.2749999091029167, 0.43999998830258846, 1.0019999900832772]..[-1.1649999096989632, 0.4599999878555536, 1.0179999908432364] inside cushion_round_left_linen_soft [-1.389767050743103, 0.393251147121191, 0.8700000196695328]..[-1.050233006477356, 0.4867488481104374, 1.0900000184774399]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "cushion_seam_piped_edge_02",
+            "location": [
+              -1.21999990940094,
+              0.44999998807907104,
+              1.1080000188574195
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'cushion_seam_piped_edge_04' is fully inside 'cushion_center_lumbar_soft' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "cushion_seam_piped_edge_04 bbox [-0.8749999329447746, 0.43999998830258846, 1.0019999900832772]..[-0.7649999335408211, 0.4599999878555536, 1.0179999908432364] inside cushion_center_lumbar_soft [-1.0099999755620956, 0.3799999989569187, 0.8999999985098839]..[-0.669999971985817, 0.4999999962747097, 1.1000000014901161]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "cushion_seam_piped_edge_04",
+            "location": [
+              -0.8199999332427979,
+              0.44999998807907104,
+              1.1180000018700957
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'cushion_seam_piped_edge_06' is fully inside 'cushion_round_right_linen_soft' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "cushion_seam_piped_edge_06 bbox [-0.47499995678663254, 0.43999998830258846, 1.0019999900832772]..[-0.364999957382679, 0.4599999878555536, 1.0179999908432364] inside cushion_round_right_linen_soft [-0.6597807109355927, 0.39377450570464134, 0.8800000175833702]..[-0.34021928906440735, 0.4862254895269871, 1.0800000205636024]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "cushion_seam_piped_edge_06",
+            "location": [
+              -0.41999995708465576,
+              0.44999998807907104,
+              1.098000020943582
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "framing.edge_crowding",
+        "problem": "'rug_tassel_front_edge_01' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+        "evidence": "screen_bbox=[0.0, 0.0, 0.02, 0.04]",
+        "ops": [
+          {
+            "op": "reframe_camera",
+            "look_at": [
+              -0.41037735929888375,
+              0.40962264602476695,
+              0.7698584839279922
+            ],
+            "pull_back": 1.12
+          }
+        ]
+      }
+    ]
   }
 }

@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 6.9,
+    "runtime_seconds": 5.9,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
@@ -22,7 +22,7 @@
         {
           "name": "energy_core_particle_emitter",
           "contrast": 0.227,
-          "edge_density": 0.1757,
+          "edge_density": 0.1758,
           "separation": 0.2446,
           "mean_luma": 0.674,
           "surround_luma": 0.4294,
@@ -41,7 +41,7 @@
           "name": "core_micro_hot_white_front",
           "contrast": 0.1977,
           "edge_density": 0.2845,
-          "separation": 0.1643,
+          "separation": 0.1642,
           "mean_luma": 0.7682,
           "surround_luma": 0.604,
           "readable": true
@@ -50,7 +50,7 @@
           "name": "orbital_ring_primary_blue",
           "contrast": 0.2798,
           "edge_density": 0.1548,
-          "separation": 0.2789,
+          "separation": 0.279,
           "mean_luma": 0.5989,
           "surround_luma": 0.32,
           "readable": true
@@ -58,8 +58,8 @@
         {
           "name": "orbital_ring_vertical_blue",
           "contrast": 0.1462,
-          "edge_density": 0.1359,
-          "separation": 0.0946,
+          "edge_density": 0.1354,
+          "separation": 0.0947,
           "mean_luma": 0.7187,
           "surround_luma": 0.624,
           "readable": true
@@ -76,7 +76,7 @@
         {
           "name": "particle_core_containment_brushed_metal_ring",
           "contrast": 0.1579,
-          "edge_density": 0.179,
+          "edge_density": 0.1793,
           "separation": 0.083,
           "mean_luma": 0.7571,
           "surround_luma": 0.6741,
@@ -94,16 +94,16 @@
         {
           "name": "particle_core_iris_blade_right_metal",
           "contrast": 0.1855,
-          "edge_density": 0.4516,
-          "separation": 0.07,
-          "mean_luma": 0.6845,
+          "edge_density": 0.4496,
+          "separation": 0.0699,
+          "mean_luma": 0.6846,
           "surround_luma": 0.7545,
           "readable": true
         },
         {
           "name": "shockwave_ring_mid_air_amber",
           "contrast": 0.2176,
-          "edge_density": 0.157,
+          "edge_density": 0.1571,
           "separation": 0.2344,
           "mean_luma": 0.6924,
           "surround_luma": 0.4581,
@@ -113,9 +113,9 @@
           "name": "spark_particle_visible_dot_02",
           "contrast": 0.0329,
           "edge_density": 0.0152,
-          "separation": 0.0864,
+          "separation": 0.0866,
           "mean_luma": 0.8745,
-          "surround_luma": 0.7881,
+          "surround_luma": 0.7879,
           "readable": true
         },
         {
@@ -141,7 +141,7 @@
           "contrast": 0.0499,
           "edge_density": 0.0769,
           "separation": 0.2081,
-          "mean_luma": 0.8453,
+          "mean_luma": 0.8454,
           "surround_luma": 0.6372,
           "readable": true
         },
@@ -219,11 +219,11 @@
         },
         {
           "name": "spark_particle_visible_dot_14",
-          "contrast": 0.0732,
+          "contrast": 0.0733,
           "edge_density": 0.25,
           "separation": 0.186,
           "mean_luma": 0.8754,
-          "surround_luma": 0.6893,
+          "surround_luma": 0.6894,
           "readable": true
         },
         {
@@ -428,16 +428,16 @@
           "name": "spark_particle_outer_dot_11",
           "contrast": 0.0556,
           "edge_density": 0.0781,
-          "separation": 0.1492,
+          "separation": 0.1493,
           "mean_luma": 0.8816,
-          "surround_luma": 0.7324,
+          "surround_luma": 0.7323,
           "readable": true
         },
         {
           "name": "spark_particle_outer_dot_12",
           "contrast": 0.1068,
           "edge_density": 0.2375,
-          "separation": 0.2073,
+          "separation": 0.2072,
           "mean_luma": 0.8552,
           "surround_luma": 0.6479,
           "readable": true
@@ -554,8 +554,8 @@
           "name": "energy_trail_hot_core_03",
           "contrast": 0.1535,
           "edge_density": 0.4956,
-          "separation": 0.023,
-          "mean_luma": 0.7595,
+          "separation": 0.0229,
+          "mean_luma": 0.7594,
           "surround_luma": 0.7365,
           "readable": true
         },
@@ -565,7 +565,7 @@
           "edge_density": 0.3975,
           "separation": 0.0946,
           "mean_luma": 0.7183,
-          "surround_luma": 0.6237,
+          "surround_luma": 0.6236,
           "readable": true
         },
         {
@@ -580,7 +580,7 @@
         {
           "name": "energy_trail_hot_core_06",
           "contrast": 0.1698,
-          "edge_density": 0.2458,
+          "edge_density": 0.2469,
           "separation": 0.0757,
           "mean_luma": 0.8122,
           "surround_luma": 0.7365,
@@ -599,7 +599,7 @@
           "name": "energy_trail_hot_core_08",
           "contrast": 0.0205,
           "edge_density": 0.0,
-          "separation": 0.0027,
+          "separation": 0.0026,
           "mean_luma": 0.8822,
           "surround_luma": 0.8795,
           "readable": false
@@ -608,9 +608,9 @@
           "name": "energy_trail_hot_core_09",
           "contrast": 0.1349,
           "edge_density": 0.2902,
-          "separation": 0.0135,
+          "separation": 0.0136,
           "mean_luma": 0.7885,
-          "surround_luma": 0.802,
+          "surround_luma": 0.8021,
           "readable": true
         },
         {
@@ -651,7 +651,7 @@
         },
         {
           "name": "energy_trail_hot_core_14",
-          "contrast": 0.167,
+          "contrast": 0.1669,
           "edge_density": 0.3167,
           "separation": 0.0625,
           "mean_luma": 0.6987,
@@ -662,14 +662,14 @@
           "name": "energy_trail_hot_core_15",
           "contrast": 0.1236,
           "edge_density": 0.2574,
-          "separation": 0.0474,
+          "separation": 0.0473,
           "mean_luma": 0.7558,
           "surround_luma": 0.7085,
           "readable": true
         },
         {
           "name": "energy_trail_hot_core_16",
-          "contrast": 0.1011,
+          "contrast": 0.1012,
           "edge_density": 0.1063,
           "separation": 0.0701,
           "mean_luma": 0.8231,
@@ -690,7 +690,7 @@
           "contrast": 0.1161,
           "edge_density": 0.1875,
           "separation": 0.012,
-          "mean_luma": 0.8335,
+          "mean_luma": 0.8334,
           "surround_luma": 0.8454,
           "readable": true
         },
@@ -699,15 +699,15 @@
           "contrast": 0.1159,
           "edge_density": 0.1431,
           "separation": 0.0261,
-          "mean_luma": 0.7411,
-          "surround_luma": 0.715,
+          "mean_luma": 0.7412,
+          "surround_luma": 0.7151,
           "readable": true
         },
         {
           "name": "energy_trail_ribbon_violet_02",
           "contrast": 0.1797,
-          "edge_density": 0.3011,
-          "separation": 0.0357,
+          "edge_density": 0.3009,
+          "separation": 0.0358,
           "mean_luma": 0.7017,
           "surround_luma": 0.666,
           "readable": true
@@ -718,7 +718,7 @@
           "edge_density": 0.3166,
           "separation": 0.0199,
           "mean_luma": 0.6963,
-          "surround_luma": 0.6763,
+          "surround_luma": 0.6764,
           "readable": true
         },
         {
@@ -733,7 +733,7 @@
         {
           "name": "energy_trail_ribbon_violet_05",
           "contrast": 0.2332,
-          "edge_density": 0.3965,
+          "edge_density": 0.3968,
           "separation": 0.0912,
           "mean_luma": 0.5405,
           "surround_luma": 0.4493,
@@ -742,7 +742,7 @@
         {
           "name": "energy_trail_ribbon_violet_06",
           "contrast": 0.2862,
-          "edge_density": 0.3451,
+          "edge_density": 0.3453,
           "separation": 0.0483,
           "mean_luma": 0.3912,
           "surround_luma": 0.3429,
@@ -751,7 +751,7 @@
         {
           "name": "energy_trail_ribbon_violet_07",
           "contrast": 0.2575,
-          "edge_density": 0.4044,
+          "edge_density": 0.4046,
           "separation": 0.14,
           "mean_luma": 0.5028,
           "surround_luma": 0.3628,
@@ -778,7 +778,7 @@
         {
           "name": "energy_trail_ribbon_violet_10",
           "contrast": 0.2566,
-          "edge_density": 0.3704,
+          "edge_density": 0.3705,
           "separation": 0.0109,
           "mean_luma": 0.5627,
           "surround_luma": 0.5518,
@@ -787,7 +787,7 @@
         {
           "name": "energy_trail_ribbon_violet_11",
           "contrast": 0.2883,
-          "edge_density": 0.3911,
+          "edge_density": 0.3912,
           "separation": 0.004,
           "mean_luma": 0.4414,
           "surround_luma": 0.4454,
@@ -814,7 +814,7 @@
         {
           "name": "energy_trail_ribbon_violet_14",
           "contrast": 0.2841,
-          "edge_density": 0.3992,
+          "edge_density": 0.3993,
           "separation": 0.1335,
           "mean_luma": 0.4321,
           "surround_luma": 0.2986,
@@ -823,7 +823,7 @@
         {
           "name": "energy_trail_ribbon_violet_15",
           "contrast": 0.2486,
-          "edge_density": 0.3948,
+          "edge_density": 0.3949,
           "separation": 0.0281,
           "mean_luma": 0.5569,
           "surround_luma": 0.5288,
@@ -841,8 +841,8 @@
         {
           "name": "energy_trail_ribbon_violet_17",
           "contrast": 0.2341,
-          "edge_density": 0.3092,
-          "separation": 0.0433,
+          "edge_density": 0.309,
+          "separation": 0.0434,
           "mean_luma": 0.6599,
           "surround_luma": 0.6165,
           "readable": true
@@ -851,8 +851,8 @@
           "name": "energy_trail_ribbon_violet_18",
           "contrast": 0.1326,
           "edge_density": 0.1177,
-          "separation": 0.023,
-          "mean_luma": 0.7631,
+          "separation": 0.0231,
+          "mean_luma": 0.7632,
           "surround_luma": 0.7401,
           "readable": true
         },
@@ -869,9 +869,9 @@
           "name": "energy_trail_ribbon_violet_20",
           "contrast": 0.287,
           "edge_density": 0.2018,
-          "separation": 0.0255,
+          "separation": 0.0254,
           "mean_luma": 0.5614,
-          "surround_luma": 0.5359,
+          "surround_luma": 0.536,
           "readable": true
         },
         {
@@ -916,7 +916,7 @@
           "edge_density": 0.3773,
           "separation": 0.0364,
           "mean_luma": 0.5365,
-          "surround_luma": 0.5001,
+          "surround_luma": 0.5002,
           "readable": true
         },
         {
@@ -975,8 +975,8 @@
         },
         {
           "name": "energy_trail_cyan_counter_12",
-          "contrast": 0.1694,
-          "edge_density": 0.1542,
+          "contrast": 0.1695,
+          "edge_density": 0.1551,
           "separation": 0.0397,
           "mean_luma": 0.8044,
           "surround_luma": 0.7647,
@@ -1004,18 +1004,18 @@
           "name": "energy_trail_cyan_counter_15",
           "contrast": 0.032,
           "edge_density": 0.0104,
-          "separation": 0.0266,
+          "separation": 0.0267,
           "mean_luma": 0.861,
-          "surround_luma": 0.8344,
+          "surround_luma": 0.8343,
           "readable": false
         },
         {
           "name": "energy_trail_cyan_counter_16",
-          "contrast": 0.0316,
+          "contrast": 0.0317,
           "edge_density": 0.0,
-          "separation": 0.009,
+          "separation": 0.0091,
           "mean_luma": 0.8613,
-          "surround_luma": 0.8523,
+          "surround_luma": 0.8522,
           "readable": false
         },
         {
@@ -1038,10 +1038,10 @@
         },
         {
           "name": "core_hot_streak_diagonal_03",
-          "contrast": 0.1066,
+          "contrast": 0.1065,
           "edge_density": 0.1759,
           "separation": 0.1098,
-          "mean_luma": 0.8488,
+          "mean_luma": 0.8489,
           "surround_luma": 0.7391,
           "readable": true
         },
@@ -1049,7 +1049,7 @@
           "name": "core_hot_streak_diagonal_04",
           "contrast": 0.0092,
           "edge_density": 0.0,
-          "separation": 0.0091,
+          "separation": 0.0092,
           "mean_luma": 0.8669,
           "surround_luma": 0.8578,
           "readable": false
@@ -1059,7 +1059,7 @@
           "contrast": 0.2083,
           "edge_density": 0.225,
           "separation": 0.0936,
-          "mean_luma": 0.6262,
+          "mean_luma": 0.6263,
           "surround_luma": 0.7198,
           "readable": true
         },
@@ -1067,18 +1067,18 @@
           "name": "core_hot_streak_diagonal_06",
           "contrast": 0.0866,
           "edge_density": 0.3357,
-          "separation": 0.1495,
+          "separation": 0.1494,
           "mean_luma": 0.8756,
-          "surround_luma": 0.7261,
+          "surround_luma": 0.7262,
           "readable": true
         },
         {
           "name": "core_hot_streak_diagonal_07",
           "contrast": 0.1278,
           "edge_density": 0.3605,
-          "separation": 0.2668,
+          "separation": 0.2669,
           "mean_luma": 0.8021,
-          "surround_luma": 0.5353,
+          "surround_luma": 0.5352,
           "readable": true
         },
         {
@@ -1101,11 +1101,11 @@
         },
         {
           "name": "core_violet_streak_counter_03",
-          "contrast": 0.0474,
+          "contrast": 0.0473,
           "edge_density": 0.0694,
           "separation": 0.0574,
-          "mean_luma": 0.8448,
-          "surround_luma": 0.7874,
+          "mean_luma": 0.8449,
+          "surround_luma": 0.7875,
           "readable": true
         },
         {
@@ -1121,17 +1121,17 @@
           "name": "core_violet_streak_counter_05",
           "contrast": 0.0925,
           "edge_density": 0.2842,
-          "separation": 0.0499,
+          "separation": 0.0498,
           "mean_luma": 0.8033,
-          "surround_luma": 0.7534,
+          "surround_luma": 0.7535,
           "readable": true
         },
         {
           "name": "core_violet_streak_counter_06",
-          "contrast": 0.0241,
+          "contrast": 0.0243,
           "edge_density": 0.0125,
           "separation": 0.0535,
-          "mean_luma": 0.8169,
+          "mean_luma": 0.8168,
           "surround_luma": 0.7634,
           "readable": true
         },
@@ -1157,15 +1157,15 @@
           "name": "energy_trail_amber_shockwave_arc_03",
           "contrast": 0.1497,
           "edge_density": 0.2927,
-          "separation": 0.0179,
+          "separation": 0.018,
           "mean_luma": 0.8235,
           "surround_luma": 0.8055,
           "readable": true
         },
         {
           "name": "energy_trail_amber_shockwave_arc_04",
-          "contrast": 0.1305,
-          "edge_density": 0.1629,
+          "contrast": 0.1306,
+          "edge_density": 0.1638,
           "separation": 0.0051,
           "mean_luma": 0.8229,
           "surround_luma": 0.828,
@@ -1182,7 +1182,7 @@
         },
         {
           "name": "energy_trail_amber_shockwave_arc_06",
-          "contrast": 0.1812,
+          "contrast": 0.1811,
           "edge_density": 0.2228,
           "separation": 0.0705,
           "mean_luma": 0.6996,
@@ -1191,7 +1191,7 @@
         },
         {
           "name": "energy_trail_amber_shockwave_arc_07",
-          "contrast": 0.1602,
+          "contrast": 0.1601,
           "edge_density": 0.278,
           "separation": 0.0932,
           "mean_luma": 0.7173,
@@ -1210,7 +1210,7 @@
         {
           "name": "energy_trail_amber_shockwave_arc_09",
           "contrast": 0.2094,
-          "edge_density": 0.3911,
+          "edge_density": 0.3917,
           "separation": 0.1854,
           "mean_luma": 0.6803,
           "surround_luma": 0.4949,
@@ -1245,7 +1245,7 @@
         },
         {
           "name": "core_iris_micro_glint_01",
-          "contrast": 0.1685,
+          "contrast": 0.1684,
           "edge_density": 0.3636,
           "separation": 0.0427,
           "mean_luma": 0.6848,
@@ -1254,10 +1254,10 @@
         },
         {
           "name": "core_iris_micro_glint_02",
-          "contrast": 0.0724,
+          "contrast": 0.0723,
           "edge_density": 0.0364,
-          "separation": 0.002,
-          "mean_luma": 0.7902,
+          "separation": 0.0021,
+          "mean_luma": 0.7903,
           "surround_luma": 0.7882,
           "readable": true
         },
@@ -1285,7 +1285,7 @@
           "edge_density": 0.384,
           "separation": 0.0545,
           "mean_luma": 0.8374,
-          "surround_luma": 0.783,
+          "surround_luma": 0.7829,
           "readable": true
         },
         {
@@ -1310,9 +1310,9 @@
           "name": "core_iris_micro_glint_08",
           "contrast": 0.0508,
           "edge_density": 0.0435,
-          "separation": 0.0391,
-          "mean_luma": 0.8573,
-          "surround_luma": 0.8182,
+          "separation": 0.039,
+          "mean_luma": 0.8571,
+          "surround_luma": 0.8181,
           "readable": true
         }
       ],
@@ -1336,6 +1336,40 @@
     "animation_frame_proof": null,
     "failures": [],
     "diagnoses": [
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'core_iris_micro_glint_03' is fully inside 'energy_trail_ribbon_violet_17' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "core_iris_micro_glint_03 bbox [0.2270925473421812, -0.32618143782019615, 1.3632107735611498]..[0.2482361365109682, -0.23062166944146156, 1.3767892359755933] inside energy_trail_ribbon_violet_17 [0.1843036785721779, -0.6835566461086273, 1.3025038316845894]..[0.2508874461054802, 0.0797167718410492, 1.4019355699419975]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "core_iris_micro_glint_03",
+            "location": [
+              0.2376643419265747,
+              -0.27840155363082886,
+              1.4187248011492193
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "framing.edge_crowding",
+        "problem": "'energy_trail_ribbon_violet_11' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+        "evidence": "screen_bbox=[0.64, 0.59, 1.0, 0.72]",
+        "ops": [
+          {
+            "op": "reframe_camera",
+            "look_at": [
+              -0.0020848440761352784,
+              -0.07590679231391856,
+              1.373667462337652
+            ],
+            "pull_back": 1.12
+          }
+        ]
+      },
       {
         "severity": "warn",
         "code": "part.unreadable",

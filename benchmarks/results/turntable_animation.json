@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 100,
     "technical_score": 100,
-    "runtime_seconds": 9.1,
+    "runtime_seconds": 7.7,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
@@ -426,6 +426,142 @@
     },
     "failures": [],
     "diagnoses": [
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'product_ring_inner_blue' is fully inside 'product_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "product_ring_inner_blue bbox [-0.8517990708351135, -0.8517990708351135, 1.2094880286604166]..[0.8517990708351135, 0.8517990708351135, 1.2305120285600424] inside product_body [-1.0, -1.0, 0.44999998807907104]..[1.0, 1.0, 1.3499999642372131]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "product_ring_inner_blue",
+            "location": [
+              0.0,
+              0.0,
+              1.370511964187026
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'product_front_indicator_bar' is fully inside 'front_lens_outer_black_ring' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "product_front_indicator_bar bbox [-0.33000001311302185, -1.0524999620392919, 0.8425000142306089]..[0.33000001311302185, -1.0274999616667628, 0.8775000143796206] inside front_lens_outer_black_ring [-0.36000001430511475, -1.0931999683380127, 0.5399999618530273]..[0.36000001430511475, -1.0067999362945557, 1.2599999904632568]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "product_front_indicator_bar",
+            "location": [
+              0.0,
+              -1.0399999618530273,
+              1.2874999905377627
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'product_front_brand_plate' is fully inside 'front_lens_outer_black_ring' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "product_front_brand_plate bbox [-0.27000001072883606, -1.0709999427199364, 0.6475000083446503]..[0.27000001072883606, -1.0489999428391457, 0.7125000059604645] inside front_lens_outer_black_ring [-0.36000001430511475, -1.0931999683380127, 0.5399999618530273]..[0.36000001430511475, -1.0067999362945557, 1.2599999904632568]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "product_front_brand_plate",
+            "location": [
+              0.0,
+              -1.059999942779541,
+              1.302499989271164
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'focus_grip_rib_01' is fully inside 'product_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "focus_grip_rib_01 bbox [-0.013000000268220901, -0.6300000231713057, 0.8824999760836363]..[0.013000000268220901, -0.5700000245124102, 0.9174999762326479] inside product_body [-1.0, -1.0, 0.44999998807907104]..[1.0, 1.0, 1.3499999642372131]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "focus_grip_rib_01",
+            "location": [
+              0.0,
+              -0.6000000238418579,
+              1.377499964311719
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'focus_grip_rib_02' is fully inside 'product_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "focus_grip_rib_02 bbox [0.15116966981440783, -0.6589476130902767, 0.8824999760836363]..[0.17716966848820448, -0.5989476181566715, 0.9174999762326479] inside product_body [-1.0, -1.0, 0.44999998807907104]..[1.0, 1.0, 1.3499999642372131]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "focus_grip_rib_02",
+            "location": [
+              0.16416966915130615,
+              -0.6289476156234741,
+              1.377499964311719
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'focus_grip_rib_03' is fully inside 'product_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "focus_grip_rib_03 bbox [0.29553805012255907, -0.742298748344183, 0.8824999760836363]..[0.3215380487963557, -0.6822987534105778, 0.9174999762326479] inside product_body [-1.0, -1.0, 0.44999998807907104]..[1.0, 1.0, 1.3499999642372131]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "focus_grip_rib_03",
+            "location": [
+              0.3085380494594574,
+              -0.7122987508773804,
+              1.377499964311719
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'focus_grip_rib_17' is fully inside 'product_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "focus_grip_rib_17 bbox [-0.3215380497276783, -0.7422987502068281, 0.8824999760836363]..[-0.2955380491912365, -0.6822987515479326, 0.9174999762326479] inside product_body [-1.0, -1.0, 0.44999998807907104]..[1.0, 1.0, 1.3499999642372131]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "focus_grip_rib_17",
+            "location": [
+              -0.3085380494594574,
+              -0.7122987508773804,
+              1.377499964311719
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'focus_grip_rib_18' is fully inside 'product_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "focus_grip_rib_18 bbox [-0.17716966941952705, -0.6589476149529219, 0.8824999760836363]..[-0.15116966888308525, -0.5989476162940264, 0.9174999762326479] inside product_body [-1.0, -1.0, 0.44999998807907104]..[1.0, 1.0, 1.3499999642372131]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "focus_grip_rib_18",
+            "location": [
+              -0.16416966915130615,
+              -0.6289476156234741,
+              1.377499964311719
+            ]
+          }
+        ]
+      },
       {
         "severity": "warn",
         "code": "part.unreadable",

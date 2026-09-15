@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 7.6,
+    "runtime_seconds": 6.0,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
@@ -939,6 +939,278 @@
     "animation_frame_proof": null,
     "failures": [],
     "diagnoses": [
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'petal_inner_soft_curved_front_06' is fully inside 'petal_outer_soft_curved_10' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "petal_inner_soft_curved_front_06 bbox [-0.13072320073843002, -0.5287330001592636, 1.2436099275946617]..[0.007116399705410004, -0.09168960154056549, 1.4163901582360268] inside petal_outer_soft_curved_10 [-0.1348978541791439, -0.7515870034694672, 1.1822141110897064]..[0.05545622482895851, -0.004249662160873413, 1.4377857744693756]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "petal_inner_soft_curved_front_06",
+            "location": [
+              -0.06180340051651001,
+              -0.31021130084991455,
+              1.5341758897900581
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'leaf_base_soft_curved_01' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "leaf_base_soft_curved_01 bbox [0.10339899361133575, 0.19228574633598328, 0.47995318844914436]..[0.2933443635702133, 0.8977576792240143, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "leaf_base_soft_curved_01",
+            "location": [
+              0.19837167859077454,
+              0.5450217127799988,
+              1.076896241158247
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'leaf_base_soft_curved_02' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "leaf_base_soft_curved_02 bbox [0.4306857958436012, -0.10761737823486328, 0.47995318844914436]..[0.62063118070364, 0.5978545546531677, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "leaf_base_soft_curved_02",
+            "location": [
+              0.5256584882736206,
+              0.24511858820915222,
+              1.076896241158247
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'leaf_base_soft_curved_03' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "leaf_base_soft_curved_03 bbox [0.45004902780056, -0.55110764503479, 0.47995318844914436]..[0.6399943977594376, 0.15436428785324097, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "leaf_base_soft_curved_03",
+            "location": [
+              0.5450217127799988,
+              -0.19837167859077454,
+              1.076896241158247
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'leaf_base_soft_curved_04' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "leaf_base_soft_curved_04 bbox [0.15014589577913284, -0.8783944249153137, 0.47995318844914436]..[0.3400912806391716, -0.1729225516319275, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "leaf_base_soft_curved_04",
+            "location": [
+              0.24511858820915222,
+              -0.5256584882736206,
+              1.076896241158247
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'leaf_base_soft_curved_05' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "leaf_base_soft_curved_05 bbox [-0.2933443710207939, -0.8977576792240143, 0.47995318844914436]..[-0.10339898616075516, -0.19228574633598328, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "leaf_base_soft_curved_05",
+            "location": [
+              -0.19837167859077454,
+              -0.5450217127799988,
+              1.076896241158247
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'leaf_base_soft_curved_06' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "leaf_base_soft_curved_06 bbox [-0.62063118070364, -0.5978545248508453, 0.47995318844914436]..[-0.4306857958436012, 0.1076173484325409, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "leaf_base_soft_curved_06",
+            "location": [
+              -0.5256584882736206,
+              -0.24511858820915222,
+              1.076896241158247
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'leaf_base_soft_curved_07' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "leaf_base_soft_curved_07 bbox [-0.6399943977594376, -0.15436428785324097, 0.47995318844914436]..[-0.45004902780056, 0.55110764503479, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "leaf_base_soft_curved_07",
+            "location": [
+              -0.5450217127799988,
+              0.19837167859077454,
+              1.076896241158247
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'leaf_base_soft_curved_08' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "leaf_base_soft_curved_08 bbox [-0.3400912806391716, 0.1729225516319275, 0.47995318844914436]..[-0.15014589577913284, 0.8783944249153137, 0.6000468544661999] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "leaf_base_soft_curved_08",
+            "location": [
+              -0.24511858820915222,
+              0.5256584882736206,
+              1.076896241158247
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'cloth_fold_soft_curved_highlight_04' is fully inside 'petal_outer_soft_curved_10' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "cloth_fold_soft_curved_highlight_04 bbox [-0.07002136670053005, -0.7189430072903633, 1.2576050031930208]..[-0.029978597536683083, -0.5570570155978203, 1.2903950940817595] inside petal_outer_soft_curved_10 [-0.1348978541791439, -0.7515870034694672, 1.1822141110897064]..[0.05545622482895851, -0.004249662160873413, 1.4377857744693756]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "cloth_fold_soft_curved_highlight_04",
+            "location": [
+              -0.04999998211860657,
+              -0.6380000114440918,
+              1.464180819913745
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'cloth_fold_soft_curved_highlight_05' is fully inside 'petal_outer_soft_curved_09' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "cloth_fold_soft_curved_highlight_05 bbox [0.07997863925993443, -0.7049430087208748, 1.275605009868741]..[0.1200214084237814, -0.5430570170283318, 1.3083951007574797] inside petal_outer_soft_curved_09 [-0.003246709704399109, -0.7423810362815857, 1.1822141110897064]..[0.18710735440254211, 0.004956305027008057, 1.4377857744693756]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "cloth_fold_soft_curved_highlight_05",
+            "location": [
+              0.10000002384185791,
+              -0.6240000128746033,
+              1.464180819913745
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'organic_stamen_filament_thread_06' is fully inside 'petal_front_cascade_soft_curved_04' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "organic_stamen_filament_thread_06 bbox [0.03900000173598528, -0.8250000365078449, 1.4289999431930482]..[0.05100000184029341, -0.715000044554472, 1.4409999423660338] inside petal_front_cascade_soft_curved_04 [-0.052270349115133286, -0.8586170375347137, 1.372287042438984]..[0.06227033957839012, -0.47338297963142395, 1.4977128431200981]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "organic_stamen_filament_thread_06",
+            "location": [
+              0.04500000178813934,
+              -0.7700000405311584,
+              1.513712842706591
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'organic_stamen_filament_thread_07' is fully inside 'petal_front_cascade_soft_curved_05' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "organic_stamen_filament_thread_07 bbox [0.08400000352412462, -0.8070000298321247, 1.4539999193511903]..[0.09600000362843275, -0.6970000378787518, 1.4659999185241759] inside petal_front_cascade_soft_curved_05 [0.06272966042160988, -0.870617002248764, 1.3772870376706123]..[0.17727034911513329, -0.48538294434547424, 1.5027128383517265]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "organic_stamen_filament_thread_07",
+            "location": [
+              0.09000000357627869,
+              -0.7520000338554382,
+              1.5187128379382193
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'organic_stamen_filament_thread_08' is fully inside 'petal_front_cascade_soft_curved_05' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "organic_stamen_filament_thread_08 bbox [0.12899999041110277, -0.7890000231564045, 1.4789998955093324]..[0.1409999905154109, -0.6790000312030315, 1.490999894682318] inside petal_front_cascade_soft_curved_05 [0.06272966042160988, -0.870617002248764, 1.3772870376706123]..[0.17727034911513329, -0.48538294434547424, 1.5027128383517265]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "organic_stamen_filament_thread_08",
+            "location": [
+              0.13499999046325684,
+              -0.734000027179718,
+              1.5187128379382193
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'stem_curved_base' is fully inside 'organic_fluted_soft_body' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "stem_curved_base bbox [-0.07349999994039536, 0.10650000721216202, 0.18150001764297485]..[0.07349999994039536, 0.25350000709295273, 0.5385000109672546] inside organic_fluted_soft_body [-0.8375059366226196, -0.9105931520462036, -0.28684937953948975]..[0.8375059366226196, 0.9105931520462036, 1.0068494081497192]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "stem_curved_base",
+            "location": [
+              0.0,
+              0.18000000715255737,
+              1.1953494048118591
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "framing.edge_crowding",
+        "problem": "'organic_fluted_soft_body' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+        "evidence": "screen_bbox=[0.11, 0.0, 0.89, 0.79]",
+        "ops": [
+          {
+            "op": "reframe_camera",
+            "look_at": [
+              0.005638656089035403,
+              -0.4054117672333196,
+              1.3304453697525154
+            ],
+            "pull_back": 1.12
+          }
+        ]
+      },
       {
         "severity": "warn",
         "code": "part.unreadable",

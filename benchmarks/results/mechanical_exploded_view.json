@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 6.1,
+    "runtime_seconds": 5.3,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
@@ -652,6 +652,242 @@
     "animation_frame_proof": null,
     "failures": [],
     "diagnoses": [
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'case_screw_craft_head_01' is fully inside 'case_screw_01' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "case_screw_craft_head_01 bbox [-0.039000000804662704, 0.7809999920427799, 2.9029800854623318]..[0.039000000804662704, 0.8589999936521053, 2.917020086199045] inside case_screw_01 [-0.03999999910593033, 0.7799999937415123, 2.8925000857561827]..[0.03999999910593033, 0.859999991953373, 2.9275000859051943]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "case_screw_craft_head_01",
+            "location": [
+              0.0,
+              0.8199999928474426,
+              2.9445200862735508
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'case_screw_craft_head_02' is fully inside 'case_screw_02' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "case_screw_craft_head_02 bbox [0.5408275499939919, 0.5408275499939919, 2.9029800854623318]..[0.6188275441527367, 0.6188275441527367, 2.917020086199045] inside case_screw_02 [0.5398275516927242, 0.5398275516927242, 2.8925000857561827]..[0.6198275424540043, 0.6198275424540043, 2.9275000859051943]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "case_screw_craft_head_02",
+            "location": [
+              0.5798275470733643,
+              0.5798275470733643,
+              2.9445200862735508
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'case_screw_craft_head_03' is fully inside 'case_screw_03' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "case_screw_craft_head_03 bbox [0.7809999920427799, -0.039000000804662656, 2.9029800854623318]..[0.8589999936521053, 0.03900000080466275, 2.917020086199045] inside case_screw_03 [0.7799999937415123, -0.03999999910593028, 2.8925000857561827]..[0.859999991953373, 0.03999999910593038, 2.9275000859051943]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "case_screw_craft_head_03",
+            "location": [
+              0.8199999928474426,
+              5.021051830901392e-17,
+              2.9445200862735508
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'case_screw_craft_head_04' is fully inside 'case_screw_04' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "case_screw_craft_head_04 bbox [0.5408275499939919, -0.6188275441527367, 2.9029800854623318]..[0.6188275441527367, -0.5408275499939919, 2.917020086199045] inside case_screw_04 [0.5398275516927242, -0.6198275424540043, 2.8925000857561827]..[0.6198275424540043, -0.5398275516927242, 2.9275000859051943]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "case_screw_craft_head_04",
+            "location": [
+              0.5798275470733643,
+              -0.5798275470733643,
+              2.9445200862735508
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'case_screw_craft_head_05' is fully inside 'case_screw_05' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "case_screw_craft_head_05 bbox [-0.03900000080466261, -0.8589999936521053, 2.9029800854623318]..[0.0390000008046628, -0.7809999920427799, 2.917020086199045] inside case_screw_05 [-0.03999999910593023, -0.859999991953373, 2.8925000857561827]..[0.039999999105930426, -0.7799999937415123, 2.9275000859051943]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "case_screw_craft_head_05",
+            "location": [
+              1.0042103661802784e-16,
+              -0.8199999928474426,
+              2.9445200862735508
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'case_screw_craft_head_06' is fully inside 'case_screw_06' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "case_screw_craft_head_06 bbox [-0.618827547878027, -0.618827547878027, 2.9029800854623318]..[-0.5408275462687016, -0.5408275462687016, 2.917020086199045] inside case_screw_06 [-0.6198275461792946, -0.6198275461792946, 2.8925000857561827]..[-0.5398275479674339, -0.5398275479674339, 2.9275000859051943]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "case_screw_craft_head_06",
+            "location": [
+              -0.5798275470733643,
+              -0.5798275470733643,
+              2.9445200862735508
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'case_screw_craft_head_07' is fully inside 'case_screw_07' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "case_screw_craft_head_07 bbox [-0.8589999936521053, -0.03900000080466286, 2.9029800854623318]..[-0.7809999920427799, 0.03900000080466255, 2.917020086199045] inside case_screw_07 [-0.859999991953373, -0.03999999910593048, 2.8925000857561827]..[-0.7799999937415123, 0.039999999105930176, 2.9275000859051943]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "case_screw_craft_head_07",
+            "location": [
+              -0.8199999928474426,
+              -1.5063156154448667e-16,
+              2.9445200862735508
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'case_screw_craft_head_08' is fully inside 'case_screw_08' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "case_screw_craft_head_08 bbox [-0.618827547878027, 0.5408275462687016, 2.9029800854623318]..[-0.5408275462687016, 0.618827547878027, 2.917020086199045] inside case_screw_08 [-0.6198275461792946, 0.5398275479674339, 2.8925000857561827]..[-0.5398275479674339, 0.6198275461792946, 2.9275000859051943]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "case_screw_craft_head_08",
+            "location": [
+              -0.5798275470733643,
+              0.5798275470733643,
+              2.9445200862735508
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'component_shadow_projection_plate_01' is fully inside 'case_bottom_shell' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "component_shadow_projection_plate_01 bbox [-0.8800000250339508, -0.7475000284612179, 0.07399999815970659]..[-0.5600000321865082, -0.6925000287592411, 0.08599999826401472] inside case_bottom_shell [-1.0750000476837158, -1.0750000476837158, -0.013500005006790161]..[1.0750000476837158, 1.0750000476837158, 0.3735000193119049]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "component_shadow_projection_plate_01",
+            "location": [
+              -0.7200000286102295,
+              -0.7200000286102295,
+              0.389500019364059
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'component_shadow_projection_plate_02' is fully inside 'case_bottom_shell' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "component_shadow_projection_plate_02 bbox [-0.40000003576278687, -0.26750003919005394, 0.07399999815970659]..[-0.08000004291534424, -0.21250003948807716, 0.08599999826401472] inside case_bottom_shell [-1.0750000476837158, -1.0750000476837158, -0.013500005006790161]..[1.0750000476837158, 1.0750000476837158, 0.3735000193119049]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "component_shadow_projection_plate_02",
+            "location": [
+              -0.24000003933906555,
+              -0.24000003933906555,
+              0.389500019364059
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'component_shadow_projection_plate_03' is fully inside 'case_bottom_shell' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "component_shadow_projection_plate_03 bbox [0.07999995350837708, 0.21249995008111, 0.07399999815970659]..[0.3999999463558197, 0.2674999497830868, 0.08599999826401472] inside case_bottom_shell [-1.0750000476837158, -1.0750000476837158, -0.013500005006790161]..[1.0750000476837158, 1.0750000476837158, 0.3735000193119049]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "component_shadow_projection_plate_03",
+            "location": [
+              0.2399999499320984,
+              0.2399999499320984,
+              0.389500019364059
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "fail",
+        "code": "geometry.buried_object",
+        "problem": "'component_shadow_projection_plate_04' is fully inside 'case_bottom_shell' \u2014 invisible in the render; lift it onto the host's top surface",
+        "evidence": "component_shadow_projection_plate_04 bbox [0.5599999129772186, 0.6924999095499516, 0.07399999815970659]..[0.8799999058246613, 0.7474999092519283, 0.08599999826401472] inside case_bottom_shell [-1.0750000476837158, -1.0750000476837158, -0.013500005006790161]..[1.0750000476837158, 1.0750000476837158, 0.3735000193119049]",
+        "ops": [
+          {
+            "op": "set_object_transform",
+            "target": "component_shadow_projection_plate_04",
+            "location": [
+              0.7199999094009399,
+              0.7199999094009399,
+              0.389500019364059
+            ]
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "composition.no_environment",
+        "problem": "subject floats in empty space \u2014 no ground, backdrop, or set dressing; every finished scene needs an ENVIRONMENT layer",
+        "evidence": "subjects=119 environment_objects=0",
+        "ops": [
+          {
+            "op": "create_mesh_primitive",
+            "type": "plane",
+            "name": "ground_plane",
+            "size": 20,
+            "collection": "ENVIRONMENT"
+          }
+        ]
+      },
+      {
+        "severity": "warn",
+        "code": "framing.edge_crowding",
+        "problem": "'case_bottom_shell' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+        "evidence": "screen_bbox=[0.23, 0.0, 0.77, 0.3]",
+        "ops": [
+          {
+            "op": "reframe_camera",
+            "look_at": [
+              -0.11306723301150218,
+              -0.18743697898227626,
+              1.8705462237366108
+            ],
+            "pull_back": 1.12
+          }
+        ]
+      },
       {
         "severity": "warn",
         "code": "part.unreadable",

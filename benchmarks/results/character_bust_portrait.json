@@ -5,7 +5,7 @@
     "pass": true,
     "visual_score": 97,
     "technical_score": 100,
-    "runtime_seconds": 5.2,
+    "runtime_seconds": 4.2,
     "iterations": 1,
     "repair_history": null,
     "artifacts": [
@@ -188,6 +188,38 @@
     "palette_similarity": null,
     "animation_frame_proof": null,
     "failures": [],
-    "diagnoses": []
+    "diagnoses": [
+      {
+        "severity": "warn",
+        "code": "completeness.part_is_placeholder",
+        "problem": "'neck' is a single bare primitive (34 faces, no modifiers) \u2014 a scaffold, not developed anatomy. Give it real structure (primary form + secondary details + surface) or the visual verifier should reject it",
+        "evidence": "object=neck_column",
+        "ops": []
+      },
+      {
+        "severity": "warn",
+        "code": "completeness.part_is_placeholder",
+        "problem": "'nose' is a single bare primitive (33 faces, no modifiers) \u2014 a scaffold, not developed anatomy. Give it real structure (primary form + secondary details + surface) or the visual verifier should reject it",
+        "evidence": "object=nose_bridge_wedge",
+        "ops": []
+      },
+      {
+        "severity": "warn",
+        "code": "framing.edge_crowding",
+        "problem": "'pedestal_stone_round' touches the frame edge \u2014 the eye reads bleed as accidental crop",
+        "evidence": "screen_bbox=[0.18, 0.0, 0.78, 0.14]",
+        "ops": [
+          {
+            "op": "reframe_camera",
+            "look_at": [
+              -0.0009999990463256836,
+              -0.13764999909326434,
+              1.5125000149011611
+            ],
+            "pull_back": 1.12
+          }
+        ]
+      }
+    ]
   }
 }
