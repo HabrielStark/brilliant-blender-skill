@@ -469,7 +469,7 @@ class LightingSchema(_Strict):
 # --------------------------------------------------------------------------- #
 ANIMATION_MODES = (
     "turntable", "camera_flythrough", "scroll_linked", "exploded_view",
-    "reveal", "loop_idle", "light_pulse",
+    "reveal", "loop_idle", "light_pulse", "bone_pose",
 )
 INTERPOLATIONS = ("linear", "ease_in_out", "ease_in", "ease_out", "hold", "bezier", "constant")
 
@@ -628,10 +628,24 @@ class PostManifest(_Strict):
 # --------------------------------------------------------------------------- #
 # Rig (SRS 38.3)
 # --------------------------------------------------------------------------- #
+class RigBone(_Strict):
+    """One armature bone: head/tail in armature space, optional parent."""
+    name: str = Field(min_length=1)
+    head: Vec3 = [0.0, 0.0, 0.0]
+    tail: Vec3 = [0.0, 0.0, 0.25]
+    parent: Optional[str] = None
+
+
 class RigControl(_Strict):
     name: str = Field(min_length=1)
     type: Literal["empty", "bone", "armature"] = "empty"
     drives: list[str] = Field(default_factory=list)
+    # type="armature": a real bpy armature with this bone chain; objects in
+    # drives get parented + Armature-modifier skinning so pose bones deform
+    # them. type="bone" is reserved for bones inside a sibling armature.
+    bones: list[RigBone] = Field(default_factory=list)
+    location: Vec3 = [0.0, 0.0, 0.0]
+    deform_bone: Optional[str] = None  # bone whose vertex group skins drives
 
 
 class RigDriver(_Strict):
@@ -679,5 +693,6 @@ __all__ = [
     "AnimationSchema", "ScrollTimeline", "ScrollSegment", "ANIMATION_MODES",
     "VfxSchema", "VFX_PRESETS",
     "PostManifest", "POST_PRESETS",
-    "RigManifest", "ReferenceMatchManifest",
+    "RigManifest", "RigControl", "RigBone", "RigDriver",
+    "ReferenceMatchManifest",
 ]

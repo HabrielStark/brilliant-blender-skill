@@ -1095,3 +1095,43 @@ def test_animation_floor_flags_missing_and_accepts_drivers(blender_exe, tmp_path
     diags = diagnose(insp, manifest=man)
     assert not any(d["code"] == "animation.missing" for d in diags)
     assert not any(d["code"] == "animation.static" for d in diags)
+
+
+def test_armature_rig_and_bone_pose_are_detectable(blender_exe, tmp_path):
+    """create_rig must build a real armature (not just empties) and
+    bone_pose must keyframe pose bones — the inspector samples bone motion
+    so a rigged character can't read as animation.static."""
+    from blender_cinematic.critique import diagnose
+    _, base = task_workspace(tmp_path, "anim_rig")
+    blend = base / "final" / "scene.blend"
+    recipe = {"operations": BASE_RECIPE + [
+        {"op": "create_rig", "schema": {"rig_name": "char_rig",
+            "controls": [{"name": "char_armature", "type": "armature",
+                "location": [0, 0, 0.5],
+                "drives": ["hero_core"], "deform_bone": "body",
+                "bones": [
+                    {"name": "body", "head": [0,0,0], "tail": [0,0,0.6]},
+                    {"name": "arm_l", "head": [0,0,0.5],
+                     "tail": [0.5,0,0.7], "parent": "body"}]}]}},
+        {"op": "create_animation", "schema": {"animation_name": "wave",
+            "mode": "bone_pose", "frame_start": 1, "frame_end": 24,
+            "fps": 24, "targets": ["char_armature.arm_l"],
+            "params": {"degrees": 40, "axis": "y"}}},
+    ]}
+    res = runner.run_job(runner.build_job(
+        "full_pipeline", base, blend, budget=PREVIEW_BUDGET, recipe=recipe,
+        output={"image": str(base / "iterations" / "p.png")}), blender_exe, 300)
+    assert res["ok"], res
+    anim_ops = [o for o in res["operations"] if o.get("op") == "create_animation"]
+    assert anim_ops and anim_ops[0]["keyed"] == ["char_armature.arm_l"]
+    insp = runner.run_job(runner.build_job("inspect", base, blend),
+                          blender_exe, 120)["inspection"]
+    anim = insp["animation"]
+    assert "char_armature" in anim["keyframed_objects"]
+    rig = next(o for o in anim["sampled_objects"] if o["name"] == "char_armature")
+    assert rig["animated_bone_count"] >= 1, rig
+    assert rig["max_bone_delta"] > 0.01
+    man = {"output_mode": "animation", "target": {"final_format": ["mp4"]}}
+    diags = diagnose(insp, manifest=man)
+    assert not any(d["code"].startswith("animation.") for d in diags), \
+        [d["code"] for d in diags]

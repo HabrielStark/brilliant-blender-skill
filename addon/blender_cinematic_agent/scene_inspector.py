@@ -147,12 +147,12 @@ def _sample_animation_motion(scene, anim_object_names, cam):
                     if obj.type == "LIGHT" else None,
                     # Rigged characters keyframe pose bones: the armature's
                     # own transform never changes, so object-level sampling
-                    # would condemn a working rig as frozen.
+                    # would condemn a working rig as frozen. pb.matrix is
+                    # mode-agnostic — rotation_quaternion stays identity for
+                    # XYZ-keyed bones, so sample the full pose matrix.
                     "bones": {
-                        pb.name: (
-                            [float(v) for v in pb.head],
-                            [float(v) for v in pb.rotation_quaternion],
-                        )
+                        pb.name: [float(v) for row in pb.matrix
+                                  for v in row]
                         for pb in obj.pose.bones
                     } if obj.type == "ARMATURE" else None,
                 }
@@ -184,10 +184,8 @@ def _sample_animation_motion(scene, anim_object_names, cam):
                 bd = 0.0
                 for s in samples[1:]:
                     if bn in (s.get("bones") or {}):
-                        h0, q0 = samples[0]["bones"][bn]
-                        h1, q1 = s["bones"][bn]
-                        bd = max(bd, _vec_distance(h0, h1),
-                                 _vec_distance(q0, q1))
+                        bd = max(bd, _vec_distance(samples[0]["bones"][bn],
+                                                   s["bones"][bn]))
                 if bd > 0.01:
                     animated_bones += 1
                 bone_delta = max(bone_delta, bd)

@@ -2389,6 +2389,33 @@ def op_create_animation(p):
             target_objects.append(target_obj)
     turntable_center = _turntable_center(target_objects, schema.get("params") or {}) if mode == "turntable" else None
     mid_frame = int(round((fs + fe) / 2))
+    if mode == "bone_pose":
+        # targets are "armature.bone" paths: keyframe pose-bone rotation so
+        # rigs can gesture (a wave, a nod) through the recipe path.
+        params = schema.get("params") or {}
+        degrees = math.radians(float(params.get("degrees", 30.0)))
+        axis = str(params.get("axis", "x")).lower()
+        axis_idx = _AXIS_INDEX.get(axis, 0)
+        for target_name in schema.get("targets", []):
+            arm_name, _, bone_name = target_name.partition(".")
+            arm_obj = bpyutil.get_object(arm_name)
+            pb = (arm_obj.pose.bones.get(bone_name)
+                  if arm_obj and arm_obj.type == "ARMATURE" else None)
+            if pb is None:
+                continue
+            pb.rotation_mode = "XYZ"
+            base_rot = pb.rotation_euler.copy()
+            pb.rotation_euler = base_rot
+            pb.keyframe_insert("rotation_euler", frame=fs)
+            mid = pb.rotation_euler.copy()
+            mid[axis_idx] = base_rot[axis_idx] + degrees
+            pb.rotation_euler = mid
+            pb.keyframe_insert("rotation_euler", frame=mid_frame)
+            pb.rotation_euler = base_rot
+            pb.keyframe_insert("rotation_euler", frame=fe)
+            keyed.append(target_name)
+        return {"animation": schema.get("animation_name"), "mode": mode,
+                "keyed": keyed}
     if mode in ("camera_flythrough", "scroll_linked") and camera_obj:
         start = Vector(camera_schema.get("start_location") or list(camera_obj.location))
         end = Vector(camera_schema.get("end_location") or [camera_obj.location.x * 0.55, camera_obj.location.y * 0.55, camera_obj.location.z + 0.45])
@@ -2840,6 +2867,15 @@ def op_create_rig(p):
     coll = "RIGS" if "RIGS" in bpy.data.collections else "HELPERS"
     made = []
     for ctrl in schema.get("controls", []):
+        if ctrl.get("type") == "armature" and ctrl.get("bones"):
+            arm_obj = _build_armature(ctrl, coll)
+            for driven_name in ctrl.get("drives", []):
+                driven = bpyutil.get_object(driven_name)
+                if driven and driven.type == "MESH":
+                    _skin_to_armature(driven, arm_obj,
+                                      ctrl.get("deform_bone"))
+            made.append(arm_obj.name)
+            continue
         empty = bpy.data.objects.new(ctrl["name"], None)
         empty.empty_display_type = "PLAIN_AXES"
         bpyutil.link_to_collection(empty, coll)
@@ -2860,6 +2896,46 @@ def op_create_rig(p):
     if driver_errors:
         result["driver_errors"] = driver_errors
     return result
+
+
+def _build_armature(ctrl, coll):
+    """Real bpy armature from a RigControl: edit-bone chain from the schema,
+    pose-ready. Bone heads/tails are armature-space; parents resolve by
+    name within the same control."""
+    arm_data = bpy.data.armatures.new(f"{ctrl['name']}_data")
+    arm_obj = bpy.data.objects.new(ctrl["name"], arm_data)
+    arm_obj.location = Vector(ctrl.get("location") or (0, 0, 0))
+    arm_obj.show_in_front = True
+    bpyutil.ensure_collection(coll).objects.link(arm_obj)
+    bpy.context.view_layer.objects.active = arm_obj
+    bpy.ops.object.mode_set(mode="EDIT")
+    try:
+        ebones = {}
+        for b in ctrl.get("bones", []):
+            eb = arm_data.edit_bones.new(b["name"])
+            eb.head = Vector(b.get("head") or (0, 0, 0))
+            eb.tail = Vector(b.get("tail") or (0, 0, 0.25))
+            ebones[b["name"]] = eb
+        for b in ctrl.get("bones", []):
+            if b.get("parent") and b["parent"] in ebones:
+                ebones[b["name"]].parent = ebones[b["parent"]]
+    finally:
+        bpy.ops.object.mode_set(mode="OBJECT")
+    return arm_obj
+
+
+def _skin_to_armature(mesh_obj, arm_obj, deform_bone=None):
+    """Parent mesh to armature with an Armature modifier; assign all verts
+    to the deform bone's vertex group (whole-mesh binding — the simplest
+    skinning that still deforms)."""
+    mesh_obj.parent = arm_obj
+    mesh_obj.parent_type = "OBJECT"
+    mod = mesh_obj.modifiers.new(f"skin_{arm_obj.name}", "ARMATURE")
+    mod.object = arm_obj
+    if deform_bone:
+        vg = mesh_obj.vertex_groups.get(deform_bone) or \
+            mesh_obj.vertex_groups.new(name=deform_bone)
+        vg.add(list(range(len(mesh_obj.data.vertices))), 1.0, "REPLACE")
 
 
 _AXIS_INDEX = {"x": 0, "y": 1, "z": 2, "w": 3}
