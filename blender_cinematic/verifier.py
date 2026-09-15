@@ -114,6 +114,76 @@ def _apply_hints(op: dict, object_names: list[str]) -> dict:
     return op
 
 
+def _coerce_op(op: dict, object_names: list[str],
+               part_hint: str | None = None) -> dict:
+    """Best-effort mechanical coercion of near-miss verifier ops.
+
+    A vision-only verifier writes *intent*, not schema: it omits the
+    ``schema:`` wrapper, says ``name`` where the spec wants ``target``, or
+    uses ``energy`` instead of ``power`` for lights. Coerce the structural
+    mismatches; leave semantic gaps (prose locations, missing parts) for
+    the validator to drop honestly.
+    """
+    from .recipes import OPERATION_SPECS
+    op = dict(op)
+    spec = OPERATION_SPECS.get(op.get("op", ""))
+    if spec is None:
+        return op
+    required, optional = spec["required"], spec["optional"]
+
+    # name -> target for ops that target an object but lack a `name` param
+    if "name" in op and "target" in required | optional and "name" not in required | optional:
+        op["target"] = op.pop("name")
+
+    # flat params -> schema wrapper for ops that require one
+    if "schema" in required and "schema" not in op:
+        schema = {k: v for k, v in op.items() if k != "op"}
+        op = {"op": op["op"], "schema": schema}
+
+    schema = op.get("schema")
+    if isinstance(schema, dict):
+        schema = dict(schema)
+        op["schema"] = schema
+        if op["op"] == "add_light":
+            # verifier vocabulary -> Light fields
+            if "light_type" in schema and "type" not in schema:
+                schema["type"] = schema.pop("light_type")
+            if "energy" in schema and "power" not in schema:
+                schema["power"] = schema.pop("energy")
+            if "position" in schema:
+                pos = schema.pop("position")
+                if isinstance(pos, (list, tuple)) and len(pos) == 3:
+                    schema.setdefault("location", list(pos))
+                elif isinstance(pos, str):
+                    schema.setdefault("position_role", pos)
+            if not schema.get("name"):
+                schema["name"] = f"verifier_light_{abs(hash(json.dumps(schema, sort_keys=True, default=str))) % 10000}"
+        elif op["op"] == "create_camera":
+            if "name" in schema and "camera_name" not in schema:
+                schema["camera_name"] = schema.pop("name")
+        elif op["op"] == "create_material":
+            if not schema.get("name"):
+                schema["name"] = "verifier_material"
+            # emission: [r,g,b] -> pbr.emission_color
+            if isinstance(schema.get("emission"), (list, tuple)):
+                pbr = dict(schema.get("pbr") or {})
+                pbr.setdefault("emission_color", list(schema.pop("emission")))
+                schema["pbr"] = pbr
+            if isinstance(schema.get("emission_strength"), (int, float)):
+                pbr = dict(schema.get("pbr") or {})
+                pbr.setdefault("emission_strength", schema.pop("emission_strength"))
+                schema["pbr"] = pbr
+            # a defect's part hint is the natural target when it resolves
+            if not schema.get("target_objects") and part_hint:
+                resolved = _resolve_hint(part_hint, object_names)
+                if resolved:
+                    schema["target_objects"] = [resolved]
+        elif op["op"] == "create_vfx":
+            if not schema.get("vfx_name"):
+                schema["vfx_name"] = "verifier_vfx"
+    return op
+
+
 def parse_verifier_response(text: str,
                             object_names: list[str] | None = None) -> dict[str, Any]:
     """Parse a verifier report into verdict + ledger + validated ops.
@@ -158,6 +228,8 @@ def parse_verifier_response(text: str,
                 dropped.append({"op": op, "errors": ["not an op dict"]})
                 continue
             op = _apply_hints(dict(op), object_names or [])
+            op = _coerce_op(op, object_names or [],
+                            part_hint=d.get("part"))
             res = validate_recipe({"operations": [op]})
             errors = [i.message for i in res.issues
                       if getattr(i, "severity", "") == "error"]

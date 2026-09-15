@@ -237,3 +237,31 @@ defects (ordered by visual impact):
     assert any(o["op"] == "add_light" for o in res["ops"])
     # placeholder without inspection resolves no target -> rebuild plan
     assert res["plans"] and "anatomy" in res["plans"][0]
+
+
+def test_verifier_ops_coerces_schema_wrap_and_light_fields(ctx):
+    """Verifier ops written in natural vocabulary (no schema wrapper,
+    energy instead of power) must be coerced into valid allowlisted ops —
+    the intent is real, only the shape was wrong."""
+    T.h_project_create_scene_workspace(ctx, "demo",
+                                       {"task_id": "t", "brief": "b", "output_mode": "still"})
+    report = '''VERDICT: FAIL
+```json
+{"verdict": "FAIL", "defects": [
+  {"part": "hero", "defect": "flat", "view": "hero", "suggested_ops": [
+    {"op": "add_light", "type": "AREA", "energy": 800, "position": "rim"},
+    {"op": "create_material", "emission": [1, 0.2, 0], "emission_strength": 3},
+    {"op": "set_object_transform", "name": "hero", "rotation": [0, 0, 45]}]}
+]}
+```'''
+    res = T.h_scene_verifier_ops(ctx, report, object_names=["hero", "podium"])
+    ops = {o["op"]: o for o in res["ops"]}
+    assert "add_light" in ops and "create_material" in ops
+    assert "set_object_transform" in ops
+    light = ops["add_light"]["schema"]
+    assert light["type"] == "AREA" and light["power"] == 800
+    assert light["position_role"] == "rim" and light["name"]
+    mat = ops["create_material"]["schema"]
+    assert mat["pbr"]["emission_strength"] == 3
+    assert mat["target_objects"] == ["hero"]  # part hint resolved
+    assert ops["set_object_transform"]["target"] == "hero"
