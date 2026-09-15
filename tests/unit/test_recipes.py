@@ -111,6 +111,17 @@ def test_nested_geometry_and_scroll_animation_schema_are_validated():
     assert validate_recipe(r).passed
 
 
+def test_set_active_camera_op_validates():
+    r = {"operations": [{"op": "set_active_camera", "target": "cam_canal"}]}
+    assert validate_recipe(r).passed
+
+
+def test_set_active_camera_requires_target():
+    r = {"operations": [{"op": "set_active_camera"}]}
+    res = validate_recipe(r)
+    assert not res.passed
+
+
 def test_unknown_op_rejected():
     r = {"operations": [{"op": "run_shell", "cmd": "rm -rf /"}]}
     res = validate_recipe(r)

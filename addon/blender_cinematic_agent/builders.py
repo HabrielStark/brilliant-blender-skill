@@ -911,6 +911,16 @@ def op_reframe_camera(p):
             "look_at": list(look), "pull_back": pull}
 
 
+def op_set_active_camera(p):
+    """Make an existing camera the scene's render camera."""
+    cam = bpyutil.get_object(p["target"])
+    if not cam or cam.type != "CAMERA":
+        return {"error": f"camera not found: {p['target']}"}
+    bpy.context.scene.camera = cam
+    bpy.context.scene["final_camera"] = cam.name
+    return {"active_camera": cam.name}
+
+
 def op_adjust_world(p):
     """Adjust world background color/strength (repair for very_dark /
     very_bright previews without rebuilding the lighting rig)."""
@@ -3002,6 +3012,7 @@ BUILDERS = {
     "assign_material": op_assign_material,
     "create_material": op_create_material,
     "create_camera": op_create_camera,
+    "set_active_camera": op_set_active_camera,
     "create_lighting_rig": op_create_lighting_rig,
     "add_light": op_add_light,
     "create_geometry_nodes": op_create_geometry_nodes,

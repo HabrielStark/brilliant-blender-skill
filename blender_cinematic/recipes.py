@@ -147,6 +147,7 @@ OPERATION_SPECS: dict[str, dict] = {
     "assign_material": _spec({"target": str, "material": str}, {}, "material"),
     "create_material": _spec({"schema": dict}, {}, "material"),
     "create_camera": _spec({"schema": dict}, {}, "camera"),
+    "set_active_camera": _spec({"target": str}, {}),
     "create_lighting_rig": _spec({"schema": dict}, {}, "lighting"),
     "add_light": _spec({"schema": dict}, {"collection": str}, "lighting"),
     "create_geometry_nodes": _spec({"schema": dict}, {}, "geometry"),
