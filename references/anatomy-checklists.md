@@ -100,6 +100,15 @@ exists but tiers 2–3 are missing.
 - **Fruit**: body + stem + subtle asymmetry; a perfect sphere with a stick
   is a placeholder.
 
+## Atmosphere & vapour
+
+- **Steam/smoke**: `create_vfx` preset `smoke_cards` — a column of
+  noise-alpha cards that widen, drift and fade with height. Stacked
+  spheres or beads read as beads, not vapour; HALO particles read as
+  dots. Cards must start at the emitter's surface and dissolve upward.
+- **Dust/motes**: `dust_motes` preset; keep counts low — dust is felt,
+  not seen.
+
 ## Environment floor
 
 Every scene needs: a **ground/support plane** (nothing floats), a

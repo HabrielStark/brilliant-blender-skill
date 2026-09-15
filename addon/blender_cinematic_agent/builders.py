@@ -2519,6 +2519,8 @@ def op_create_vfx(p):
             else:
                 target.data.materials.append(mat)
         return {"vfx": schema.get("vfx_name"), "preset": preset, "applied_to": target.name}
+    if preset == "smoke_cards":
+        return _vfx_smoke_cards(schema, target, params)
     count = min(int(params.get("particle_count", 100)), 2000)
     psys = target.modifiers.new(name=schema.get("vfx_name", "vfx"), type="PARTICLE_SYSTEM")
     settings = psys.particle_system.settings
@@ -2535,6 +2537,125 @@ def op_create_vfx(p):
     if hasattr(settings, "render_type"):
         settings.render_type = str(params.get("render_type", "HALO"))
     return {"vfx": schema.get("vfx_name"), "preset": preset, "particle_count": count}
+
+
+def _vfx_smoke_cards(schema, target, params):
+    """Wispy steam/smoke: a column of noise-alpha cards that widen, drift and
+    fade with height. Reads as vapour in EEVEE where HALO particles read as
+    beads; every card is an editable mesh with a procedural material."""
+    name = schema.get("vfx_name", "smoke")
+    n = max(3, min(int(params.get("card_count", 7)), 24))
+    rise = float(params.get("rise", 0.9))           # column height above target
+    base_size = float(params.get("size", 0.35))     # bottom card width
+    tint = tuple(params.get("color", [0.92, 0.94, 0.97, 1.0]))
+    emit = float(params.get("emission_strength", 0.15))
+    noise_scale = float(params.get("noise_scale", 3.2))
+    spread = float(params.get("spread", 0.35))      # sideways drift per card
+
+    # top of the target = where vapour leaves the surface
+    top_z = target.location.z + target.dimensions.z * 0.5
+    cx, cy = target.location.x, target.location.y
+
+    made = []
+    for i in range(n):
+        t = i / max(n - 1, 1)                       # 0 bottom -> 1 top
+        size = base_size * (0.55 + 1.5 * t)         # widen with height
+        alpha_cap = 0.75 * (1.0 - 0.75 * t)         # fade with height
+        # deterministic pseudo-random drift/rotation (stable across reruns)
+        h = (i * 2654435761 % 97) / 97.0
+        dx = (h - 0.5) * 2.0 * spread * t
+        dy = (((i * 40503) % 89) / 89.0 - 0.5) * 2.0 * spread * t
+        z = top_z + 0.02 + rise * t
+        card = _primitive("plane", f"{name}_card_{i:02d}", size, "FX")
+        card.location = (cx + dx, cy + dy, z)
+        card.rotation_euler = (
+            math.radians(90), 0, math.radians(h * 360.0))
+        mat = _smoke_card_material(f"{name}_mat_{i:02d}", tint,
+                                   alpha_cap, emit, noise_scale, i)
+        card.data.materials.append(mat)
+        made.append(card.name)
+    return {"vfx": name, "preset": "smoke_cards", "cards": made}
+
+
+def _smoke_card_material(name, tint, alpha_cap, emission_strength,
+                         noise_scale, seed_i):
+    """Noise x radial-falloff -> alpha on a Transparent/Emission mix. Vapour
+    must never shade dark: Principled backfaces go black edge-on, while an
+    emissive mix keeps the wisp luminous from every angle."""
+    mat = bpy.data.materials.new(name)
+    mat.use_nodes = True
+    nt = mat.node_tree
+    nt.nodes.clear()
+    out = nt.nodes.new("ShaderNodeOutputMaterial")
+    transparent = nt.nodes.new("ShaderNodeBsdfTransparent")
+    try:
+        emission = nt.nodes.new("ShaderNodeEmission")
+    except RuntimeError:
+        # Blender 5.x merged Emission into Principled
+        emission = nt.nodes.new("ShaderNodeBsdfPrincipled")
+    mix = nt.nodes.new("ShaderNodeMixShader")
+    nt.links.new(transparent.outputs[0], mix.inputs[1])
+    nt.links.new(emission.outputs[0], mix.inputs[2])
+    nt.links.new(mix.outputs[0], out.inputs["Surface"])
+    if emission.bl_idname == "ShaderNodeEmission":
+        emission.inputs["Color"].default_value = tint
+        emission.inputs["Strength"].default_value = max(
+            emission_strength, 0.4)
+    else:
+        _set_input(emission, ["Base Color"], [0.0, 0.0, 0.0, 1.0])
+        _set_input(emission, ["Emission Color", "Emission"], tint)
+        _set_input(emission, ["Emission Strength"],
+                   max(emission_strength, 0.4))
+
+    tex = nt.nodes.new("ShaderNodeTexCoord")
+    mapping = nt.nodes.new("ShaderNodeMapping")
+    noise = nt.nodes.new("ShaderNodeTexNoise")
+    ramp = nt.nodes.new("ShaderNodeValToRGB")
+    noise.inputs["Scale"].default_value = noise_scale
+    if "Detail" in noise.inputs:
+        noise.inputs["Detail"].default_value = 5.0
+    if "Roughness" in noise.inputs:
+        noise.inputs["Roughness"].default_value = 0.7
+    # give each card a different patch of the noise field
+    mapping.inputs["Location"].default_value = (seed_i * 3.7, 0.0, seed_i * 1.3)
+    nt.links.new(tex.outputs["Generated"], mapping.inputs["Vector"])
+    nt.links.new(mapping.outputs["Vector"], noise.inputs["Vector"])
+    # noise breaks the blob into irregular wisps
+    cr = ramp.color_ramp
+    cr.elements[0].position = 0.45
+    cr.elements[0].color = (0.0, 0.0, 0.0, 1.0)
+    cr.elements[1].position = 0.62
+    cr.elements[1].color = (alpha_cap, alpha_cap, alpha_cap, 1.0)
+    nt.links.new(noise.outputs["Fac"], ramp.inputs["Fac"])
+    # radial falloff: distance from card centre -> 0 at edges, so the quad
+    # silhouette never shows no matter what the noise does
+    dist = nt.nodes.new("ShaderNodeVectorMath")
+    dist.operation = "DISTANCE"
+    dist.inputs[1].default_value = (0.5, 0.5, 0.5)
+    nt.links.new(tex.outputs["Generated"], dist.inputs[0])
+    edge = nt.nodes.new("ShaderNodeValToRGB")
+    ecr = edge.color_ramp
+    ecr.elements[0].position = 0.28
+    ecr.elements[0].color = (1.0, 1.0, 1.0, 1.0)
+    ecr.elements[1].position = 0.5
+    ecr.elements[1].color = (0.0, 0.0, 0.0, 1.0)
+    nt.links.new(dist.outputs["Value"], edge.inputs["Fac"])
+    mult = nt.nodes.new("ShaderNodeMixRGB")
+    mult.blend_type = "MULTIPLY"
+    mult.inputs[0].default_value = 1.0
+    nt.links.new(ramp.outputs["Color"], mult.inputs[1])
+    nt.links.new(edge.outputs["Color"], mult.inputs[2])
+    nt.links.new(mult.outputs["Color"], mix.inputs[0])
+    for attr, val in (("surface_render_method", "DITHERED"),
+                      ("blend_method", "BLEND")):
+        if hasattr(mat, attr):
+            try:
+                setattr(mat, attr, val)
+            except (TypeError, ValueError):
+                pass
+    if hasattr(mat, "use_transparency_overlap"):
+        mat.use_transparency_overlap = False
+    return mat
 
 
 def op_apply_post(p):
