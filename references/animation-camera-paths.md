@@ -11,6 +11,7 @@
 | `reveal` | keyframed visibility / material alpha |
 | `loop_idle` | seamless breathing loop: subtle scale pulse + yaw sway returning to rest (params: `sway_degrees`, `breathe`) |
 | `light_pulse` | emission / intensity animation |
+| `bone_pose` | pose-bone gesture on `"armature.bone"` targets (params: `degrees`, `axis`) — rest → swing → rest |
 
 ## Keyframe rules
 
@@ -87,6 +88,25 @@ and every driven part rises with it.
 - Verify it evaluates: move the control, re-inspect, and check the driven
   object's `world_location` actually followed (the integration suite does
   exactly this).
+
+### Armatures
+
+`type: "armature"` builds a real `bpy` armature — bones from
+`controls[].bones` (`name`, `head`, `tail`, `parent`), not an empty.
+Objects in `drives` get an Armature modifier plus a vertex group on
+`deform_bone` (whole-mesh binding) so pose bones deform them. Animate
+bones with `create_animation` mode `bone_pose` and `"armature.bone"`
+targets:
+
+```json
+{"op": "create_animation", "schema": {"animation_name": "wave",
+  "mode": "bone_pose", "frame_start": 1, "frame_end": 24,
+  "targets": ["char_armature.arm_l"], "params": {"degrees": 40, "axis": "y"}}}
+```
+
+The inspector samples `pose.bones[*].matrix` per frame — bone motion is
+visible to `scene_critique`/`sampled_objects` even though the armature
+object itself never moves.
 
 ## Animation linter
 
