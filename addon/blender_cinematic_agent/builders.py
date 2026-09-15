@@ -1997,7 +1997,46 @@ def _add_recipe_visual_details(target, group_name, recipe, seed, count, inst_siz
     base, dims, normal_axis, span_axes, normal = _target_surface_frame(target, max(inst_size, 0.02))
     safe_count = max(1, min(int(count), 48))
 
-    if recipe in ("GN_PanelWall", "GN_TechGreebles", "GN_CityWindows"):
+    if recipe == "GN_CityWindows":
+        # Facade grids: regular rows/columns of emissive cells on every
+        # near-vertical face. Deterministic layout — a verifier flagged random
+        # scatter as "not a window grid" twice.
+        loc = Vector(target.location)
+        face_axes = [ax for ax in range(3) if ax != 2]  # X and Y walls
+        per_face = max(4, safe_count // max(1, len(face_axes) * 2))
+        cols = max(2, min(8, int(math.sqrt(per_face) + 1)))
+        idx = 0
+        for axis in face_axes:
+            for sign in (-1.0, 1.0):
+                wall_axes = [a for a in range(3) if a != axis]
+                half = dims[axis] * 0.5 + max(inst_size, 0.02)
+                # skip walls shorter than two window rows
+                if dims[2] < inst_size * 4:
+                    continue
+                rows = max(1, min(per_face // cols or 1,
+                                  int(dims[2] * 0.8 / (inst_size * 2.6))))
+                for row in range(rows):
+                    v = -0.72 + 1.44 * ((row + 0.5) / rows)
+                    if v > 0.78:  # keep the top row under the parapet line
+                        continue
+                    for col in range(cols):
+                        u = -0.88 + 1.76 * ((col + 0.5) / cols)
+                        co = Vector(loc)
+                        co[axis] += sign * half
+                        co[wall_axes[0]] += u * dims[wall_axes[0]] * 0.44
+                        co[2] += v * dims[2] * 0.55
+                        dimensions = [inst_size * 0.22] * 3
+                        dimensions[wall_axes[0]] = inst_size * 1.15
+                        dimensions[2] = inst_size * 1.7
+                        detail = _box_detail_mesh(
+                            f"{group_name}_window_cell_{idx + 1:03d}", co,
+                            dimensions, collection, material)
+                        made.append(_mark_gn_detail(detail, recipe,
+                                                    "window_cell", target.name))
+                        idx += 1
+        return made
+
+    if recipe in ("GN_PanelWall", "GN_TechGreebles"):
         cols = max(2, min(8, int(math.sqrt(safe_count) + 1)))
         rows = max(2, math.ceil(safe_count / cols))
         for idx in range(safe_count):
@@ -2005,10 +2044,7 @@ def _add_recipe_visual_details(target, group_name, recipe, seed, count, inst_siz
             u = -0.9 + 1.8 * ((col + 0.5) / cols)
             v = -0.9 + 1.8 * ((row + 0.5) / rows)
             co = _place_on_surface(base, dims, span_axes, u, v)
-            if recipe == "GN_CityWindows":
-                role = "window_cell"
-                size_a, size_b, thickness = inst_size * 1.2, inst_size * 1.8, inst_size * 0.25
-            elif recipe == "GN_TechGreebles":
+            if recipe == "GN_TechGreebles":
                 role = "tech_greeble_block"
                 size_a = inst_size * rng.uniform(0.8, 1.8)
                 size_b = inst_size * rng.uniform(0.45, 1.15)
@@ -2166,29 +2202,42 @@ def op_create_geometry_nodes(p):
         span_area = max(0.05, sorted(dims3, reverse=True)[0] * sorted(dims3, reverse=True)[1])
     except Exception:
         pass
-    distribute.inputs["Density"].default_value = max(0.05, count / span_area)
+    # Facade recipes place deterministic grid cells via
+    # _add_recipe_visual_details instead — random scatter reads as noise, not
+    # windows, so the modifier's own distribution is disabled for them.
+    distribute.inputs["Density"].default_value = (
+        0.0 if recipe == "GN_CityWindows" else max(0.05, count / span_area))
     if "Seed" in distribute.inputs:
         distribute.inputs["Seed"].default_value = seed
-    if recipe == "GN_CityWindows" and "Selection" in distribute.inputs:
-        # Facade recipe: windows belong on near-vertical wall faces only —
-        # keep cells off roofs, slabs and ground-facing surfaces.
-        normal = nodes.new("GeometryNodeInputNormal")
-        normal.name = f"{recipe}_FaceNormal"
-        dot = nodes.new("ShaderNodeVectorMath")
-        dot.operation = "DOT_PRODUCT"
-        dot.name = f"{recipe}_NormalDot"
-        dot.inputs[1].default_value = (0.0, 0.0, 1.0)
-        absolute = nodes.new("ShaderNodeMath")
-        absolute.operation = "ABSOLUTE"
-        absolute.name = f"{recipe}_NormalAbs"
-        thresh = nodes.new("ShaderNodeMath")
-        thresh.operation = "LESS_THAN"
-        thresh.name = f"{recipe}_VerticalOnly"
-        thresh.inputs[1].default_value = 0.5
-        links.new(normal.outputs["Normal"], dot.inputs[0])
-        links.new(dot.outputs["Value"], absolute.inputs[0])
-        links.new(absolute.outputs[0], thresh.inputs[0])
-        links.new(thresh.outputs[0], distribute.inputs["Selection"])
+    if recipe == "GN_CityWindows":
+        # Windows read as regular rows, not random confetti — GRID spacing on
+        # faces plus a near-vertical-face selection keeps cells off roofs and
+        # undersides (two verifier runs flagged random scatter as a defect).
+        try:
+            distribute.distribute_method = 'GRID'
+        except (TypeError, ValueError):
+            pass
+        if "Distance Min" in distribute.inputs:
+            distribute.inputs["Distance Min"].default_value = max(
+                0.05, inst_size * 2.4)
+        if "Selection" in distribute.inputs:
+            normal = nodes.new("GeometryNodeInputNormal")
+            normal.name = f"{recipe}_FaceNormal"
+            dot = nodes.new("ShaderNodeVectorMath")
+            dot.operation = "DOT_PRODUCT"
+            dot.name = f"{recipe}_NormalDot"
+            dot.inputs[1].default_value = (0.0, 0.0, 1.0)
+            absolute = nodes.new("ShaderNodeMath")
+            absolute.operation = "ABSOLUTE"
+            absolute.name = f"{recipe}_NormalAbs"
+            thresh = nodes.new("ShaderNodeMath")
+            thresh.operation = "LESS_THAN"
+            thresh.name = f"{recipe}_VerticalOnly"
+            thresh.inputs[1].default_value = 0.5
+            links.new(normal.outputs["Normal"], dot.inputs[0])
+            links.new(dot.outputs["Value"], absolute.inputs[0])
+            links.new(absolute.outputs[0], thresh.inputs[0])
+            links.new(thresh.outputs[0], distribute.inputs["Selection"])
     if recipe == "GN_RockScatter":
         proxy = nodes.new("GeometryNodeMeshIcoSphere")
         proxy.name = f"{recipe}_InstanceProxy"
