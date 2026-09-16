@@ -629,6 +629,103 @@ def _build_material(schema):
             except (TypeError, AttributeError):
                 pass
         features.append("grid_alpha")
+    if proc.get("window_grid"):
+        # Emissive window cells on dark facades: band grid on two generated
+        # axes gives cell rectangles; a per-cell random mask decides which are
+        # lit — night buildings, distant cities, stadium towers.
+        wg = proc.get("window_grid") or {}
+        scale_x = float(wg.get("columns", 6.0))
+        scale_z = float(wg.get("rows", 14.0))
+        lit_frac = float(wg.get("lit_fraction", 0.45))
+        win_color = tuple(wg.get("window_color", [1.0, 0.72, 0.38, 1.0]))
+        strength = float(wg.get("emission_strength", 3.0))
+        line = float(wg.get("line_width", 0.30))
+        ax_pair = tuple(str(wg.get("axes", "XZ")).upper()[:2])
+        if len(ax_pair) < 2:
+            ax_pair = ("X", "Z")
+        tex = nt.nodes.new("ShaderNodeTexCoord")
+        tex.name = f"NG_{name}_WinCoord"
+        sep = nt.nodes.new("ShaderNodeSeparateXYZ")
+        sep.name = f"NG_{name}_WinSep"
+        nt.links.new(tex.outputs["Generated"], sep.inputs[0])
+        strand = None
+        for axis, ax_scale in zip(ax_pair, (scale_x, scale_z)):
+            mult = nt.nodes.new("ShaderNodeMath")
+            mult.operation = "MULTIPLY"
+            mult.inputs[1].default_value = ax_scale
+            nt.links.new(sep.outputs[axis], mult.inputs[0])
+            sine = nt.nodes.new("ShaderNodeMath")
+            sine.operation = "SINE"
+            nt.links.new(mult.outputs[0], sine.inputs[0])
+            absn = nt.nodes.new("ShaderNodeMath")
+            absn.operation = "ABSOLUTE"
+            nt.links.new(sine.outputs[0], absn.inputs[0])
+            thresh = nt.nodes.new("ShaderNodeMath")
+            thresh.operation = "LESS_THAN"
+            thresh.inputs[1].default_value = math.sin(math.pi * line)
+            nt.links.new(absn.outputs[0], thresh.inputs[0])
+            if strand is None:
+                strand = thresh
+            else:
+                comb = nt.nodes.new("ShaderNodeMath")
+                comb.operation = "MAXIMUM"
+                nt.links.new(strand.outputs[0], comb.inputs[0])
+                nt.links.new(thresh.outputs[0], comb.inputs[1])
+                strand = comb
+        cell = nt.nodes.new("ShaderNodeMath")
+        cell.operation = "SUBTRACT"
+        cell.inputs[0].default_value = 1.0
+        nt.links.new(strand.outputs[0], cell.inputs[1])
+        # Per-cell random lit/dark: White Noise keyed on the building object
+        # plus snapped cell ids gives ONE stable value per window cell
+        # instead of a field that tears across the grid.
+        snapped = []
+        for axis, ax_scale in zip(ax_pair, (scale_x, scale_z)):
+            m = nt.nodes.new("ShaderNodeMath")
+            m.operation = "MULTIPLY"
+            m.inputs[1].default_value = ax_scale
+            nt.links.new(sep.outputs[axis], m.inputs[0])
+            fl = nt.nodes.new("ShaderNodeMath")
+            fl.operation = "FLOOR"
+            nt.links.new(m.outputs[0], fl.inputs[0])
+            snapped.append(fl)
+        comb = nt.nodes.new("ShaderNodeCombineXYZ")
+        comb.name = f"NG_{name}_WinCellID"
+        nt.links.new(snapped[0].outputs[0], comb.inputs["X"])
+        nt.links.new(snapped[1].outputs[0], comb.inputs["Y"])
+        nt.links.new(tex.outputs["Object"], comb.inputs["Z"])
+        wn = nt.nodes.new("ShaderNodeTexWhiteNoise")
+        wn.name = f"NG_{name}_WinRandom"
+        nt.links.new(comb.outputs["Vector"], wn.inputs["Vector"])
+        rndramp = nt.nodes.new("ShaderNodeValToRGB")
+        rndramp.name = f"NG_{name}_WinLit"
+        rndramp.color_ramp.interpolation = "CONSTANT"
+        _set_color_ramp(rndramp, None, stops=[
+            {"position": 0.0, "color": (0.0, 0.0, 0.0, 1.0)},
+            {"position": max(0.01, 1.0 - lit_frac), "color": (0.0, 0.0, 0.0, 1.0)},
+            {"position": min(0.99, 1.0 - lit_frac + 0.01),
+             "color": (1.0, 1.0, 1.0, 1.0)},
+            {"position": 1.0, "color": (1.0, 1.0, 1.0, 1.0)},
+        ])
+        nt.links.new(wn.outputs["Value"], rndramp.inputs["Fac"])
+        lit = nt.nodes.new("ShaderNodeMath")
+        lit.operation = "MULTIPLY"
+        nt.links.new(cell.outputs[0], lit.inputs[0])
+        nt.links.new(rndramp.outputs["Color"], lit.inputs[1])
+        emit = nt.nodes.new("ShaderNodeValToRGB")
+        emit.name = f"NG_{name}_WinEmit"
+        _set_color_ramp(emit, None, stops=[
+            {"position": 0.0, "color": (0.0, 0.0, 0.0, 1.0)},
+            {"position": 1.0, "color": win_color},
+        ])
+        nt.links.new(lit.outputs[0], emit.inputs["Fac"])
+        _set_input(bsdf, ["Emission Color", "Emission"], win_color)
+        if "Emission Color" in bsdf.inputs:
+            nt.links.new(emit.outputs["Color"], bsdf.inputs["Emission Color"])
+        elif "Emission" in bsdf.inputs:
+            nt.links.new(emit.outputs["Color"], bsdf.inputs["Emission"])
+        _set_input(bsdf, ["Emission Strength"], strength)
+        features.append("window_grid")
     if proc.get("roughness_variation"):
         rv = proc.get("roughness_variation") or {}
         noise = nt.nodes.new("ShaderNodeTexNoise")
@@ -2800,7 +2897,13 @@ def op_create_animation(p):
     scene["animation_mode"] = mode
     export_spec = schema.get("export") or {}
     scene["animation_clip_name"] = export_spec.get("clip_name", schema.get("animation_name"))
-    scene["animation_export_glb"] = bool(export_spec.get("include_in_glb", False))
+    # Sticky-OR: one op declaring include_in_glb must not be undone by a later
+    # animation op without an export spec (reveal/idle helpers historically
+    # stripped every curve from the GLB).
+    if export_spec.get("include_in_glb"):
+        scene["animation_export_glb"] = True
+    elif not scene.get("animation_export_glb"):
+        scene["animation_export_glb"] = bool(export_spec.get("include_in_glb", False))
     return {"animation": schema.get("animation_name"), "mode": mode, "keyed": keyed,
             "frame_range": [fs, fe], "camera_path": bool(scene.get("camera_path_json"))}
 

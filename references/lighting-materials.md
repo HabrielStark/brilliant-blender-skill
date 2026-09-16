@@ -90,6 +90,16 @@ instead of ad hoc Python:
 - `world.gradient` on `create_lighting_rig` (or `adjust_world.gradient`)
   maps view direction to a below/horizon/zenith ramp — the fix for a night
   sky rendering as a flat black void. Pair with `create_silhouette_ring`.
+  Keep `below` near-black: at night the whole sub-horizon dome renders as a
+  pale slab if it carries any brightness.
+- `window_grid: {columns, rows, lit_fraction, window_color,
+  emission_strength, line_width, axes}` maps a facade into lit window
+  cells — snapped per-cell white-noise decides which are lit, so cells are
+  clean rectangles with stable random lit/dark variation. Night buildings,
+  distant cities, stadium towers. Assign one material to a whole skyline
+  family; per-object Object coords keep each building's pattern unique.
+  Do NOT put full-face emission on skyline buildings — they render as pale
+  monoliths.
 - `anisotropic` plus `wave` makes brushed metal read as machined instead of flat
   yellow/grey Principled BSDF.
 - `image_textures: [...]` loads real file textures or deterministic generated

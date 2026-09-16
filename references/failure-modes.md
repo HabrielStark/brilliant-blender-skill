@@ -35,6 +35,10 @@ The behaviours this skill exists to prevent, and the guard that catches each.
 | Paneled ball as sphere with stuck-on discs | `voronoi_panels` material — recessed seams + darkened cell subset on the shell itself; decals read as polka dots |
 | Night sky = pure black void filling top of frame | `world.gradient` (horizon→zenith ramp) + `create_silhouette_ring` — horizon needs a glow band AND a silhouette line |
 | Thrown/flying object travels a straight line then freezes mid-air | `custom` animation `keys` — arc the up-axis curve, and repeat the rest value in late keys so it *settles* |
+| GLB exports with zero animations | a `create_animation` without `export.include_in_glb` used to reset the scene flag — now sticky-OR; verify `animations` in the GLB JSON chunk before "done" |
+| Skyline/night buildings render as pale glowing slabs | never put full-face `emission` on facades — use `window_grid` material: dark wall + per-cell lit windows |
+| Firework/energy burst reads as flat "angel wings" | `energy_burst_streaks` fans in the XY plane — add a `tilt_degrees: 90, fan_degrees: 360` ring for the camera-facing disc plus tilted rings for depth |
+| Climbing projectile invisible during ascent | bright `create_curve_tube` trail along the flight path + scale-keyed grow, not just a smoke wisp |
 | Material assigned in a later batch silently missing after save/reopen | create the material and assign it in the SAME job (`create_material.target_objects` or same-batch `assign_material`) — orphan materials don't persist |
 | Camera aim applied before a camera animation | keyframed location/rotation overrides the raw transform — `reframe_camera` AFTER `create_animation`, then `set_active_camera` before rendering |
 | Raw Python as the normal path | structured-operation allowlist; raw Python disabled by default |
