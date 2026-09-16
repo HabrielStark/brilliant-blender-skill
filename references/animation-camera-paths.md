@@ -41,6 +41,28 @@ separation, wrong for a directed throw unless the layout is built around it.
     "rotation_y": {"from": 0.0, "to": 12.0, "interpolation": "linear"}}}}
 ```
 
+## `material_curves` — fading light and surfaces
+
+`material_curves` keys scalar Principled BSDF inputs on named materials:
+`emission_strength`, `alpha`, `roughness`, `metallic`. Same curve shapes
+(`keys` or `from`/`to`). This is how trails dissipate, bursts cool, and
+windows flicker — **do not** fake emission fades by scale-collapsing objects;
+scale keys shrink the geometry, emission_strength fades the light itself.
+
+```json
+{"op": "create_animation", "schema": {
+  "animation_name": "trail_fade", "mode": "custom",
+  "frame_start": 1, "frame_end": 48, "targets": [],
+  "material_curves": {
+    "mat_trail": {"emission_strength": {"keys": [[26, 6.0], [44, 0.3]]}}}}}
+```
+
+**Absolute-value rule:** `location`/`scale` keys write absolute values —
+`[[30,0],[48,-8]]` teleports to 0, then -8; it does not "fall 8 from spawn".
+Always key the object's real position, then add the delta. And `inspect`'s
+`world_location` can be a stale identity for objects whose matrix never
+evaluated — trust `location`.
+
 ## Keyframe rules
 
 - Intentional interpolation: `linear`, `ease_in_out`, `ease_in`, `ease_out`, `hold`,

@@ -2889,6 +2889,59 @@ def op_create_animation(p):
                 interp = str(curve.get("interpolation", "")).lower()
                 _key_interp_mode(obj, attr, "LINEAR" if interp == "linear" else "BEZIER")
         keyed.append(tname)
+    # Material channel curves: keyframe Principled BSDF scalar inputs so
+    # emission/alpha can fade over time (dissipating trails, cooling bursts,
+    # flickering windows) — object scale-collapse is a hack, this is the fix.
+    _MAT_INPUTS = {
+        "emission_strength": ["Emission Strength"],
+        "alpha": ["Alpha"],
+        "roughness": ["Roughness"],
+        "metallic": ["Metallic"],
+    }
+    for mat_name, mcurves in (schema.get("material_curves") or {}).items():
+        mat = bpy.data.materials.get(mat_name)
+        bsdf = None
+        if mat and mat.use_nodes and mat.node_tree:
+            bsdf = next((n for n in mat.node_tree.nodes
+                         if n.type == "BSDF_PRINCIPLED"), None)
+        if bsdf is None:
+            continue
+        for channel, curve in mcurves.items():
+            sock = next((bsdf.inputs[n] for n in _MAT_INPUTS.get(channel, [])
+                         if n in bsdf.inputs), None)
+            if sock is None:
+                continue
+            keys = curve.get("keys")
+            if not keys:
+                keys = [[fs, curve.get("from", 0)], [fe, curve.get("to", 0)]]
+            for item in keys:
+                try:
+                    fr, val = int(item[0]), float(item[1])
+                except (TypeError, ValueError, IndexError):
+                    continue
+                sock.default_value = val
+                sock.keyframe_insert("default_value", frame=fr)
+            interp = str(curve.get("interpolation", "")).lower()
+            want = "LINEAR" if interp == "linear" else "BEZIER"
+            ad = mat.node_tree.animation_data
+            fcurves = []
+            act = ad.action if ad else None
+            if act is not None:
+                fcurves = getattr(act, "fcurves", None) or []
+                if not fcurves:
+                    # Blender 4.4+ layered actions: fcurves live on channelbags.
+                    for layer in getattr(act, "layers", []):
+                        for strip in getattr(layer, "strips", []):
+                            for bag in getattr(strip, "channelbags", []):
+                                fcurves = (fcurves or []) + list(getattr(bag, "fcurves", []))
+            if fcurves:
+                sock_idx = list(bsdf.inputs).index(sock)
+                tail = f'inputs[{sock_idx}].default_value'
+                for fc in fcurves:
+                    if fc.data_path.endswith(tail):
+                        for kp in fc.keyframe_points:
+                            kp.interpolation = want
+            keyed.append(f"{mat_name}.{channel}")
     scene.timeline_markers.clear()
     scene.timeline_markers.new("start", frame=fs)
     scene.timeline_markers.new("end", frame=fe)

@@ -511,6 +511,10 @@ class AnimationSchema(_Strict):
     loop: bool = False
     targets: list[str] = Field(default_factory=list)
     curves: dict[str, AnimCurve] = Field(default_factory=dict)
+    # material name -> channel -> curve; channels: emission_strength, alpha,
+    # roughness, metallic — keyframed on the material's Principled BSDF inputs
+    # so trails/glows can fade and windows can flicker without scaling objects.
+    material_curves: dict[str, dict[str, AnimCurve]] = Field(default_factory=dict)
     camera: Optional[AnimCamera] = None
     params: dict[str, Any] = Field(default_factory=dict)
     export: AnimExport = Field(default_factory=AnimExport)

@@ -649,3 +649,29 @@ def test_animation_curve_rejects_empty_shape():
     import pytest
     with pytest.raises(Exception):
         AnimationSchema(animation_name="bad", curves={"x": {"interpolation": "linear"}})
+
+
+def test_animation_material_curves_fade_channels():
+    r = {"operations": [
+        {"op": "create_animation", "schema": {
+            "animation_name": "trail_fade", "mode": "custom",
+            "frame_start": 1, "frame_end": 48, "fps": 24,
+            "targets": [],
+            "material_curves": {
+                "mat_trail": {
+                    "emission_strength": {"keys": [[26, 6.0], [44, 0.3]],
+                                        "interpolation": "bezier"},
+                    "alpha": {"from": 1.0, "to": 0.15, "interpolation": "linear"},
+                }},
+            "export": {"include_in_glb": True, "clip_name": "trail_fade"},
+        }}
+    ]}
+    assert validate_recipe(r).passed
+
+
+def test_animation_material_curves_rejects_bad_curve():
+    from blender_cinematic.schemas import AnimationSchema
+    import pytest
+    with pytest.raises(Exception):
+        AnimationSchema(animation_name="bad",
+                        material_curves={"m": {"alpha": {"interpolation": "linear"}}})
