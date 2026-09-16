@@ -100,6 +100,22 @@ exists but tiers 2–3 are missing.
 - **Fruit**: body + stem + subtle asymmetry; a perfect sphere with a stick
   is a placeholder.
 
+## Sports & nets
+
+- **Goal (football/hockey)**: posts + crossbar + **rear stanchions** angled
+  back + **box net** — back plane, top drape, and side panels sharing the
+  frame edges, with slight sag. A flat curtain of parallel strings behind
+  the mouth is a fence, not a goal net. Use `create_net_lattice` per panel
+  (woven strands both directions); a `grid_alpha` material on a plane is
+  the cheap far-shot fallback.
+- **Ball (paneled)**: sphere + **seam/panel evidence** — `voronoi_panels`
+  gives recessed seams + a darkened cell subset (the football read).
+  Stuck-on discs read as a polka-dot toy, not panels. Under arena light the
+  shell wants a slight sheen (low roughness + clearcoat).
+- **Net anywhere** (tennis, fishing, hammock, fence): interwoven strands in
+  BOTH directions + edge rope/cable + tension sag. Parallel strings in one
+  direction is the classic failure.
+
 ## Atmosphere & vapour
 
 - **Steam/smoke**: `create_vfx` preset `smoke_cards` — a column of
@@ -115,6 +131,11 @@ Every scene needs: a **ground/support plane** (nothing floats), a
 **backdrop or depth layer** (nothing ends in void), and **light that
 motivates** (visible source or plausible direction). `no_environment`
 warn means this floor is missing.
+
+For night/wide shots the depth layer is two-part: `world.gradient`
+(horizon glow → dark zenith — never leave the sky a flat black void)
+**plus** `create_silhouette_ring` masses so the horizon has a silhouette
+line (stands, skyline, treeline). A gradient alone still reads empty.
 
 ## Verifier usage
 

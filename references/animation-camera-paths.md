@@ -12,6 +12,34 @@
 | `loop_idle` | seamless breathing loop: subtle scale pulse + yaw sway returning to rest (params: `sway_degrees`, `breathe`) |
 | `light_pulse` | emission / intensity animation |
 | `bone_pose` | pose-bone gesture on `"armature.bone"` targets (params: `degrees`, `axis`) — rest → swing → rest |
+| `custom` | free-form f-curve animation via `curves` — the generic carrier for authored motion |
+
+## `custom` mode — authored curves
+
+`curves` keys any of `location_x/y/z`, `rotation_x/y/z`, `scale_x/y/z`.
+Two shapes per curve:
+
+- `{"from": a, "to": b, "interpolation": "linear"}` — keys at frame_start /
+  frame_end. Use `linear` for spins; omit interpolation for smooth bezier.
+- `{"keys": [[frame, value], ...]}` — multi-point trajectories. This is the
+  arc/bounce/settle tool: a thrown object is `location_z` rising then
+  falling, a landing is a peak key followed by a flat settle key — not a
+  straight line that freezes mid-air.
+
+Real motion almost always needs **keys, not from/to**: a ball lobbed into a
+net arcs up, dips in, then *settles* (later keys repeat the rest value).
+`exploded_view` only moves radially from world origin — fine for part
+separation, wrong for a directed throw unless the layout is built around it.
+
+```json
+{"op": "create_animation", "schema": {
+  "animation_name": "throw_in", "mode": "custom",
+  "frame_start": 1, "frame_end": 48, "targets": ["ball"],
+  "curves": {
+    "location_y": {"keys": [[1, -11.0], [16, -1.5], [28, 0.9]], "interpolation": "bezier"},
+    "location_z": {"keys": [[1, 0.3], [10, 1.8], [28, 0.9], [48, 0.55]], "interpolation": "bezier"},
+    "rotation_y": {"from": 0.0, "to": 12.0, "interpolation": "linear"}}}}
+```
 
 ## Keyframe rules
 

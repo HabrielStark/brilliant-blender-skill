@@ -62,6 +62,9 @@ MAX_FASTENER_COUNT = 256
 MAX_PANEL_CUTLINE_COUNT = 256
 MAX_GRILLE_SLAT_COUNT = 256
 MAX_SURFACE_MICRODETAIL_COUNT = 256
+MAX_NET_LATTICE_STRANDS = 48
+MAX_NET_LATTICE_SEGMENTS = 48
+MAX_SILHOUETTE_COUNT = 128
 
 
 def _spec(required: dict[str, type], optional: dict[str, type] | None = None,
@@ -211,6 +214,41 @@ OPERATION_SPECS: dict[str, dict] = {
             "role": str,
         },
         "detail",
+    ),
+    "create_net_lattice": _spec(
+        {"name": str, "corners": list},
+        {
+            "u_count": int,
+            "v_count": int,
+            "strand_radius": (int, float),
+            "segments_per_strand": int,
+            "sag": (int, float),
+            "sag_direction": list,
+            "border_radius": (int, float),
+            "collection": str,
+            "material": str,
+            "parent": str,
+            "role": str,
+        },
+        "detail",
+    ),
+    "create_silhouette_ring": _spec(
+        {"name": str},
+        {
+            "center": list,
+            "radius": (int, float),
+            "count": int,
+            "height_min": (int, float),
+            "height_max": (int, float),
+            "width": (int, float),
+            "depth": (int, float),
+            "angle_start": (int, float),
+            "angle_end": (int, float),
+            "seed": int,
+            "collection": str,
+            "material": str,
+            "role": str,
+        },
     ),
     "create_fastener_pattern": _spec(
         {"name_prefix": str},
@@ -604,6 +642,44 @@ def validate_recipe(raw: dict) -> CheckResult:
                 )
             elif any(not isinstance(point, list) or len(point) != 3 for point in points):
                 result.add(error("recipe.curve_tube_shape", "each point must be a 3-component list", loc))
+        if opn.op == "create_net_lattice":
+            corners = opn.params.get("corners", [])
+            if (
+                not isinstance(corners, list)
+                or len(corners) != 4
+                or any(not isinstance(c, list) or len(c) != 3 for c in corners)
+            ):
+                result.add(
+                    error(
+                        "recipe.net_lattice_shape",
+                        "corners must be four [x,y,z] points (BL, BR, TR, TL)",
+                        loc,
+                    )
+                )
+            for label, key, default, low, high in (
+                ("u_count", "u_count", 10, 1, MAX_NET_LATTICE_STRANDS),
+                ("v_count", "v_count", 6, 1, MAX_NET_LATTICE_STRANDS),
+                ("segments_per_strand", "segments_per_strand", 9, 2, MAX_NET_LATTICE_SEGMENTS),
+            ):
+                _numeric_guard(
+                    result,
+                    loc,
+                    "recipe.net_lattice_budget",
+                    label,
+                    opn.params.get(key, default),
+                    low,
+                    high,
+                )
+        if opn.op == "create_silhouette_ring":
+            _numeric_guard(
+                result,
+                loc,
+                "recipe.silhouette_budget",
+                "count",
+                opn.params.get("count", 24),
+                1,
+                MAX_SILHOUETTE_COUNT,
+            )
         if opn.op == "create_fastener_pattern":
             _numeric_guard(
                 result,
@@ -806,6 +882,28 @@ def estimate_complexity(raw: dict, budget_faces: int = 2_000_000) -> dict:
             else:
                 objects += 1
                 faces += max(16, len(points) * 24)
+        elif opn.op == "create_net_lattice":
+            corners = p.get("corners") if isinstance(p.get("corners"), list) else []
+            u = _safe_int(p.get("u_count", 10), 10)
+            v = _safe_int(p.get("v_count", 6), 6)
+            seg = _safe_int(p.get("segments_per_strand", 9), 9)
+            if (len(corners) != 4 or u < 1 or u > MAX_NET_LATTICE_STRANDS
+                    or v < 1 or v > MAX_NET_LATTICE_STRANDS
+                    or seg < 2 or seg > MAX_NET_LATTICE_SEGMENTS):
+                faces += max(0, budget_faces + 1 - faces)
+                notes.append("net lattice shape/budget outside supported range")
+            else:
+                strands = u + v + (4 if float(p.get("border_radius", 0) or 0) > 0 else 0)
+                objects += strands
+                faces += max(16, seg * 24) * strands
+        elif opn.op == "create_silhouette_ring":
+            count = _safe_int(p.get("count", 24), 24)
+            if count < 1 or count > MAX_SILHOUETTE_COUNT:
+                faces += max(0, budget_faces + 1 - faces)
+                notes.append(f"silhouette ring count {count} outside supported range 1..{MAX_SILHOUETTE_COUNT}")
+            else:
+                objects += count
+                faces += 6 * count
         elif opn.op == "create_fastener_pattern":
             count = _safe_int(p.get("count", 8), 8)
             if count < 1 or count > MAX_FASTENER_COUNT:

@@ -77,6 +77,19 @@ instead of ad hoc Python:
   color layer for handled edges, liquid rim highlights, bevel wear, and patina.
 - `scanlines: true` adds a high-frequency wave/color layer for holograms,
   display labels, micro-printing, and technical overlays.
+- `voronoi_panels: {scale, seam_color, seam_width, seam_bump,
+  cell_darken: {fraction, color}}` draws recessed seam lines at voronoi
+  cell edges and darkens a random subset of cells — football panels,
+  cracked earth, tiles, scaled skin. Stuck-on decal discs read as polka
+  dots; seams on the shell itself read as panels.
+- `grid_alpha: {scale, line_width, axes}` turns a plane into a real
+  net/grate — opaque strands along two generated axes (`"XY"` default; use
+  `"XZ"` for a vertical panel) with transparent holes between. Cheap nets,
+  fences, screens at mid/far distance; use `create_net_lattice` geometry
+  when the net is a hero close-up element.
+- `world.gradient` on `create_lighting_rig` (or `adjust_world.gradient`)
+  maps view direction to a below/horizon/zenith ramp — the fix for a night
+  sky rendering as a flat black void. Pair with `create_silhouette_ring`.
 - `anisotropic` plus `wave` makes brushed metal read as machined instead of flat
   yellow/grey Principled BSDF.
 - `image_textures: [...]` loads real file textures or deterministic generated

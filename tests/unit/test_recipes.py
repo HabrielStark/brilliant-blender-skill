@@ -570,3 +570,82 @@ def test_remove_modifier_and_prefix_delete_require_params():
     assert not res.passed
     codes = [i.code for i in res.issues]
     assert codes.count("recipe.missing_param") == 2
+
+
+def test_net_lattice_is_allowlisted_and_budgeted():
+    r = {"operations": [
+        {"op": "create_net_lattice", "name": "net_back",
+         "corners": [[-3, 1, -1], [3, 1, -1], [3, 1, 2], [-3, 1, 2]],
+         "u_count": 12, "v_count": 6, "strand_radius": 0.006,
+         "segments_per_strand": 9, "sag": 0.12, "sag_direction": [0, 0, -1],
+         "border_radius": 0.02, "collection": "SUBJECT", "material": "mat_net"}
+    ]}
+    assert validate_recipe(r).passed
+    est = estimate_complexity(r)
+    assert est["objects"] == 22  # 12 u-strands + 6 v-strands + 4 borders
+
+
+def test_net_lattice_requires_four_corners():
+    r = {"operations": [
+        {"op": "create_net_lattice", "name": "n", "corners": [[0, 0, 0]]}
+    ]}
+    res = validate_recipe(r)
+    assert not res.passed
+    assert any(i.code == "recipe.net_lattice_shape" for i in res.issues)
+
+
+def test_net_lattice_budget_guard():
+    r = {"operations": [
+        {"op": "create_net_lattice", "name": "n",
+         "corners": [[0, 0, 0], [1, 0, 0], [1, 0, 1], [0, 0, 1]],
+         "u_count": 999}
+    ]}
+    res = validate_recipe(r)
+    assert not res.passed
+    assert any(i.code == "recipe.net_lattice_budget" for i in res.issues)
+
+
+def test_silhouette_ring_is_allowlisted_and_budgeted():
+    r = {"operations": [
+        {"op": "create_silhouette_ring", "name": "skyline", "center": [0, 0, 0],
+         "radius": 60, "count": 24, "height_min": 6, "height_max": 18,
+         "seed": 3, "collection": "ENVIRONMENT"}
+    ]}
+    assert validate_recipe(r).passed
+    assert estimate_complexity(r)["objects"] == 24
+
+
+def test_silhouette_ring_count_guard():
+    r = {"operations": [
+        {"op": "create_silhouette_ring", "name": "s", "count": 9999}
+    ]}
+    res = validate_recipe(r)
+    assert not res.passed
+    assert any(i.code == "recipe.silhouette_budget" for i in res.issues)
+
+
+def test_animation_custom_mode_with_multi_key_curves():
+    r = {"operations": [
+        {"op": "create_animation", "schema": {
+            "animation_name": "ball_arc", "mode": "custom",
+            "frame_start": 1, "frame_end": 48, "fps": 24,
+            "targets": ["ball"],
+            "curves": {
+                "location_y": {"keys": [[1, -11.0], [14, -5.0], [28, 0.9]],
+                               "interpolation": "bezier"},
+                "location_z": {"keys": [[1, 0.15], [10, 1.6], [28, 0.7],
+                                        [40, 0.35], [48, 0.35]],
+                               "interpolation": "bezier"},
+                "rotation_y": {"from": 0.0, "to": 12.6,
+                               "interpolation": "linear"},
+            },
+        }}
+    ]}
+    assert validate_recipe(r).passed
+
+
+def test_animation_curve_rejects_empty_shape():
+    from blender_cinematic.schemas import AnimationSchema
+    import pytest
+    with pytest.raises(Exception):
+        AnimationSchema(animation_name="bad", curves={"x": {"interpolation": "linear"}})

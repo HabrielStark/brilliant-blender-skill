@@ -31,6 +31,12 @@ The behaviours this skill exists to prevent, and the guard that catches each.
 | Keyframes exist but nothing moves | `animation.static` fail / `animation.partially_static` warn — sampled deltas cover loc/rot/scale/hide_render/light energy so reveal and pulse modes aren't false-flagged |
 | Still render "proves" an animation | `render_preview(frames=[...])` temporal strip + verifier brief auto-includes frame samples + motion check |
 | Rotationally symmetric subject "verifies" a turntable | verifier is told which objects are keyframed; invisible rotation on symmetric parts is flagged as unverifiable, not passed |
+| Net as curtain of parallel strings | `create_net_lattice` — strands in BOTH directions on a quad patch + sag + border ropes; verifier checks for woven read |
+| Paneled ball as sphere with stuck-on discs | `voronoi_panels` material — recessed seams + darkened cell subset on the shell itself; decals read as polka dots |
+| Night sky = pure black void filling top of frame | `world.gradient` (horizon→zenith ramp) + `create_silhouette_ring` — horizon needs a glow band AND a silhouette line |
+| Thrown/flying object travels a straight line then freezes mid-air | `custom` animation `keys` — arc the up-axis curve, and repeat the rest value in late keys so it *settles* |
+| Material assigned in a later batch silently missing after save/reopen | create the material and assign it in the SAME job (`create_material.target_objects` or same-batch `assign_material`) — orphan materials don't persist |
+| Camera aim applied before a camera animation | keyframed location/rotation overrides the raw transform — `reframe_camera` AFTER `create_animation`, then `set_active_camera` before rendering |
 | Raw Python as the normal path | structured-operation allowlist; raw Python disabled by default |
 | Writing outside the project | `WorkspaceResolver` path sandbox |
 | Shell injection via filenames/params | argument arrays only; no `shell=True` |

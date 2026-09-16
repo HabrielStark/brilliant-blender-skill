@@ -469,17 +469,24 @@ class LightingSchema(_Strict):
 # --------------------------------------------------------------------------- #
 ANIMATION_MODES = (
     "turntable", "camera_flythrough", "scroll_linked", "exploded_view",
-    "reveal", "loop_idle", "light_pulse", "bone_pose",
+    "reveal", "loop_idle", "light_pulse", "bone_pose", "custom",
 )
 INTERPOLATIONS = ("linear", "ease_in_out", "ease_in", "ease_out", "hold", "bezier", "constant")
 
 
 class AnimCurve(_Strict):
-    from_value: float = Field(alias="from")
-    to_value: float = Field(alias="to")
+    from_value: Optional[float] = Field(default=None, alias="from")
+    to_value: Optional[float] = Field(default=None, alias="to")
+    keys: Optional[list[list[float]]] = None
     interpolation: Literal[INTERPOLATIONS] = "ease_in_out"  # type: ignore[valid-type]
 
     model_config = ConfigDict(extra="forbid", populate_by_name=True)
+
+    @model_validator(mode="after")
+    def _keys_or_range(self) -> "AnimCurve":
+        if self.keys is None and (self.from_value is None or self.to_value is None):
+            raise ValueError("curve needs either 'keys' ([[frame, value], ...]) or 'from'+'to'")
+        return self
 
 
 class AnimCamera(_Strict):

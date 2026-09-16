@@ -531,6 +531,104 @@ def _build_material(schema):
         if "Normal" in bsdf.inputs:
             nt.links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
         features.append("wave_bump")
+    if proc.get("voronoi_panels"):
+        # Paneled surfaces: recessed seam lines at cell edges plus optional
+        # per-cell darkening — footballs, cracked earth, tiles, insect eyes.
+        vp = proc.get("voronoi_panels") or {}
+        scale = float(vp.get("scale", 9.0))
+        seam_color = tuple(vp.get("seam_color", [0.02, 0.02, 0.03, 1.0]))
+        seam_width = float(vp.get("seam_width", 0.08))
+        if vp.get("cell_darken"):
+            cd = vp.get("cell_darken") or {}
+            vor_c = nt.nodes.new("ShaderNodeTexVoronoi")
+            vor_c.name = f"NG_{name}_VoronoiCells"
+            vor_c.feature = "F1"
+            vor_c.inputs["Scale"].default_value = scale
+            ramp_c = nt.nodes.new("ShaderNodeValToRGB")
+            ramp_c.name = f"NG_{name}_CellRamp"
+            ramp_c.color_ramp.interpolation = "CONSTANT"
+            dark = tuple(cd.get("color", [0.015, 0.015, 0.02, 1.0]))
+            frac = float(cd.get("fraction", 0.25))
+            _set_color_ramp(ramp_c, None, stops=[
+                {"position": 0.0, "color": dark},
+                {"position": max(0.01, frac), "color": dark},
+                {"position": min(0.99, frac + 0.01), "color": base_color},
+                {"position": 1.0, "color": base_color},
+            ])
+            nt.links.new(vor_c.outputs["Distance"], ramp_c.inputs["Fac"])
+            layer_color(ramp_c.outputs["Color"], f"NG_{name}_CellLayer", 1.0, "MIX")
+        vor = nt.nodes.new("ShaderNodeTexVoronoi")
+        vor.name = f"NG_{name}_VoronoiSeams"
+        vor.feature = "DISTANCE_TO_EDGE"
+        vor.inputs["Scale"].default_value = scale
+        ramp = nt.nodes.new("ShaderNodeValToRGB")
+        ramp.name = f"NG_{name}_SeamRamp"
+        ramp.color_ramp.interpolation = "EASE"
+        _set_color_ramp(ramp, None, stops=[
+            {"position": 0.0, "color": seam_color},
+            {"position": max(0.01, seam_width), "color": seam_color},
+            {"position": min(0.99, seam_width * 2.2), "color": base_color},
+            {"position": 1.0, "color": base_color},
+        ])
+        nt.links.new(vor.outputs["Distance"], ramp.inputs["Fac"])
+        layer_color(ramp.outputs["Color"], f"NG_{name}_SeamLayer", 1.0,
+                    str(vp.get("seam_blend", "DARKEN")))
+        bump = nt.nodes.new("ShaderNodeBump")
+        bump.name = f"NG_{name}_SeamBump"
+        bump.inputs["Strength"].default_value = float(vp.get("seam_bump", 0.3))
+        bump.inputs["Distance"].default_value = 0.05
+        nt.links.new(vor.outputs["Distance"], bump.inputs["Height"])
+        if "Normal" in bsdf.inputs:
+            nt.links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
+        features.append("voronoi_panels")
+    if proc.get("grid_alpha"):
+        # Alpha grid: opaque strands along U and V, transparent holes between —
+        # a real net/grate/screen read on a single plane without geometry.
+        ga = proc.get("grid_alpha") or {}
+        scale = float(ga.get("scale", 24.0))
+        line = float(ga.get("line_width", 0.14))  # strand fraction of a cell
+        axes = str(ga.get("axes", "XY")).upper()  # which generated axes grid on
+        ax_pair = (axes[0], axes[1]) if len(axes) >= 2 else ("X", "Y")
+        tex = nt.nodes.new("ShaderNodeTexCoord")
+        tex.name = f"NG_{name}_GridCoord"
+        sep = nt.nodes.new("ShaderNodeSeparateXYZ")
+        sep.name = f"NG_{name}_GridSep"
+        nt.links.new(tex.outputs["Generated"], sep.inputs[0])
+        last = None
+        for axis in ax_pair:
+            mult = nt.nodes.new("ShaderNodeMath")
+            mult.operation = "MULTIPLY"
+            mult.inputs[1].default_value = scale
+            nt.links.new(sep.outputs[axis], mult.inputs[0])
+            sine = nt.nodes.new("ShaderNodeMath")
+            sine.operation = "SINE"
+            nt.links.new(mult.outputs[0], sine.inputs[0])
+            absn = nt.nodes.new("ShaderNodeMath")
+            absn.operation = "ABSOLUTE"
+            nt.links.new(sine.outputs[0], absn.inputs[0])
+            thresh = nt.nodes.new("ShaderNodeMath")
+            thresh.operation = "LESS_THAN"
+            thresh.inputs[1].default_value = math.sin(math.pi * line)
+            nt.links.new(absn.outputs[0], thresh.inputs[0])
+            if last is None:
+                last = thresh
+            else:
+                comb = nt.nodes.new("ShaderNodeMath")
+                comb.operation = "MAXIMUM"
+                nt.links.new(last.outputs[0], comb.inputs[0])
+                nt.links.new(thresh.outputs[0], comb.inputs[1])
+                last = comb
+        if last is not None and "Alpha" in bsdf.inputs:
+            nt.links.new(last.outputs[0], bsdf.inputs["Alpha"])
+            try:
+                mat.blend_method = "CLIP"
+            except (TypeError, AttributeError):
+                mat.blend_method = "BLEND"
+            try:
+                mat.surface_render_method = "DITHERED"
+            except (TypeError, AttributeError):
+                pass
+        features.append("grid_alpha")
     if proc.get("roughness_variation"):
         rv = proc.get("roughness_variation") or {}
         noise = nt.nodes.new("ShaderNodeTexNoise")
@@ -795,7 +893,39 @@ def op_create_lighting_rig(p):
         if bg:
             bg.inputs[0].default_value = tuple(world.get("color", [0.05, 0.05, 0.05])) + (1.0,)
             bg.inputs[1].default_value = float(world.get("strength", 1.0))
+            if world.get("gradient"):
+                _apply_world_gradient(w, world["gradient"])
     return {"rig": schema.get("lighting_rig"), "lights": made}
+
+
+def _apply_world_gradient(w, grad):
+    """View-direction gradient on the world background: Texture Coordinate
+    Normal.Z -> color ramp. Kills the 'pure black void' read in night/wide
+    scenes — horizon glows faintly, zenith falls dark, ground stays dim."""
+    nt = w.node_tree
+    bg = nt.nodes.get("Background")
+    if bg is None:
+        return {"error": "world has no Background node"}
+    tex = nt.nodes.new("ShaderNodeTexCoord")
+    tex.name = "NG_World_TexCoord"
+    sep = nt.nodes.new("ShaderNodeSeparateXYZ")
+    sep.name = "NG_World_SeparateZ"
+    ramp = nt.nodes.new("ShaderNodeValToRGB")
+    ramp.name = "NG_World_Gradient"
+    below = grad.get("below", grad.get("horizon", [0.05, 0.07, 0.12, 1.0]))
+    horizon = grad.get("horizon", [0.05, 0.07, 0.12, 1.0])
+    zenith = grad.get("zenith", [0.004, 0.006, 0.014, 1.0])
+    _set_color_ramp(ramp, None, stops=[
+        {"position": 0.0, "color": tuple(below)},
+        {"position": 0.16, "color": tuple(horizon)},
+        {"position": 1.0, "color": tuple(zenith)},
+    ])
+    nt.links.new(tex.outputs["Normal"], sep.inputs[0])
+    nt.links.new(sep.outputs["Z"], ramp.inputs["Fac"])
+    nt.links.new(ramp.outputs["Color"], bg.inputs[0])
+    if grad.get("strength") is not None:
+        bg.inputs[1].default_value = float(grad["strength"])
+    return {"world_gradient": True}
 
 
 # --------------------------------- camera ---------------------------------- #
@@ -940,6 +1070,8 @@ def op_adjust_world(p):
     elif p.get("strength_scale") is not None:
         bg.inputs[1].default_value = max(
             0.0, bg.inputs[1].default_value * float(p["strength_scale"]))
+    if p.get("gradient"):
+        _apply_world_gradient(w, p["gradient"])
     return {"world": w.name, "strength": bg.inputs[1].default_value,
             "color": list(bg.inputs[0].default_value)}
 
@@ -1253,6 +1385,103 @@ def op_create_curve_tube(p):
     parented = _parent_if_requested(obj, p.get("parent"))
     _tag_craft_detail(obj, p.get("role", "curve_tube"), p["name"], parented)
     return {"created": obj.name, "type": obj.type, "points": len(points)}
+
+
+def op_create_net_lattice(p):
+    """Woven net on a bilinear quad patch: two families of strand curves with
+    optional parabolic sag and border ropes. Reads as real netting — goals,
+    fences, hammocks, grilles — instead of a curtain of parallel strings.
+
+    corners: [BL, BR, TR, TL] world-space corners of the net patch.
+    u_count strands run BL->TL (constant u), v_count run BL->BR (constant v).
+    sag pushes strand centres along sag_direction, strongest mid-patch."""
+    name = p["name"]
+    corners = [Vector(c) for c in p["corners"]]
+    u_count = max(1, min(48, int(p.get("u_count", 10))))
+    v_count = max(1, min(48, int(p.get("v_count", 6))))
+    strand_r = max(0.001, float(p.get("strand_radius", 0.006)))
+    seg = max(2, min(48, int(p.get("segments_per_strand", 9))))
+    sag = float(p.get("sag", 0.0))
+    sag_dir = Vector(p.get("sag_direction", [0, 0, -1]))
+    sag_dir = sag_dir.normalized() if sag_dir.length > 1e-6 else Vector((0, 0, -1))
+    border_r = float(p.get("border_radius", 0.0))
+    coll = p.get("collection") or "SUBJECT"
+    mat = _material_from_param(p)
+
+    def patch(u, v):
+        return (corners[0] * ((1 - u) * (1 - v)) + corners[1] * (u * (1 - v))
+                + corners[2] * (u * v) + corners[3] * ((1 - u) * v))
+
+    def strand_pts(fixed, along_u):
+        pts = []
+        for j in range(seg):
+            t = j / (seg - 1)
+            u, v = (t, fixed) if along_u else (fixed, t)
+            droop = sag_dir * (sag * math.sin(math.pi * u) * math.sin(math.pi * v))
+            pts.append(patch(u, v) + droop)
+        return pts
+
+    made = []
+    for i in range(u_count):
+        u = i / (u_count - 1) if u_count > 1 else 0.5
+        obj = _create_curve_cable(f"{name}_v{i + 1:02d}", strand_pts(u, False),
+                                  strand_r, coll, mat)
+        parented = _parent_if_requested(obj, p.get("parent"))
+        _tag_craft_detail(obj, p.get("role", "net_strand"), name, parented)
+        made.append(obj.name)
+    for i in range(v_count):
+        v = i / (v_count - 1) if v_count > 1 else 0.5
+        obj = _create_curve_cable(f"{name}_u{i + 1:02d}", strand_pts(v, True),
+                                  strand_r, coll, mat)
+        parented = _parent_if_requested(obj, p.get("parent"))
+        _tag_craft_detail(obj, p.get("role", "net_strand"), name, parented)
+        made.append(obj.name)
+    if border_r > 0.0:
+        for k, (along_u, fixed) in enumerate(
+                ((True, 0.0), (True, 1.0), (False, 0.0), (False, 1.0))):
+            obj = _create_curve_cable(f"{name}_border_{k + 1}",
+                                      strand_pts(fixed, along_u), border_r,
+                                      coll, mat)
+            parented = _parent_if_requested(obj, p.get("parent"))
+            _tag_craft_detail(obj, "net_border", name, parented)
+            made.append(obj.name)
+    return {"net_lattice": made, "count": len(made)}
+
+
+def op_create_silhouette_ring(p):
+    """Deterministic ring/arc of distant dark masses — stadium bowl, skyline,
+    treeline — closing the horizon so night or wide scenes don't render into
+    a void. Seeded jitter keeps the layout reproducible."""
+    name = p["name"]
+    center = Vector(p.get("center", [0, 0, 0]))
+    radius = float(p.get("radius", 60.0))
+    count = max(1, min(128, int(p.get("count", 24))))
+    h0 = float(p.get("height_min", 6.0))
+    h1 = float(p.get("height_max", 18.0))
+    if h1 < h0:
+        h0, h1 = h1, h0
+    width = float(p.get("width", 8.0))
+    depth = float(p.get("depth", 6.0))
+    a0 = math.radians(float(p.get("angle_start", 0.0)))
+    a1 = math.radians(float(p.get("angle_end", 360.0)))
+    rng = random.Random(int(p.get("seed", 7)))  # deterministic layout seed
+    coll = p.get("collection") or "ENVIRONMENT"
+    mat = _material_from_param(p)
+    role = p.get("role", "silhouette")
+    made = []
+    for i in range(count):
+        ang = a0 + (a1 - a0) * (i / count)
+        h = rng.uniform(h0, h1)
+        w = width * rng.uniform(0.7, 1.4)
+        loc = [center.x + radius * math.cos(ang),
+               center.y + radius * math.sin(ang),
+               center.z + h / 2.0]
+        obj = _create_craft_box(
+            f"{name}_{i + 1:02d}", loc,
+            Euler((0.0, 0.0, ang + math.pi / 2.0)),
+            [w, depth, h], coll, mat, role, name, 0.0)
+        made.append(obj.name)
+    return {"silhouette": made, "count": len(made)}
 
 
 def op_create_fastener_pattern(p):
@@ -2347,6 +2576,28 @@ def _key_interp_linear(obj):
             kp.interpolation = "LINEAR"
 
 
+_CURVE_CHANNELS = {
+    "rotation_x": ("rotation_euler", 0),
+    "rotation_y": ("rotation_euler", 1),
+    "rotation_z": ("rotation_euler", 2),
+    "location_x": ("location", 0),
+    "location_y": ("location", 1),
+    "location_z": ("location", 2),
+    "scale_x": ("scale", 0),
+    "scale_y": ("scale", 1),
+    "scale_z": ("scale", 2),
+}
+
+
+def _key_interp_mode(obj, data_path, mode):
+    if not obj.animation_data or not obj.animation_data.action:
+        return
+    for fc in getattr(obj.animation_data.action, "fcurves", []) or []:
+        if fc.data_path == data_path:
+            for kp in fc.keyframe_points:
+                kp.interpolation = mode
+
+
 def _turntable_center(objects, params):
     explicit = (params or {}).get("center")
     if explicit is not None:
@@ -2515,14 +2766,31 @@ def op_create_animation(p):
                 obj.keyframe_insert("scale", frame=frame)
             _key_interp_linear(obj)
         else:
+            # Generic curve channels: rotation/location/scale on any axis.
+            # A curve is either {"from": a, "to": b} (keys at fs/fe) or
+            # {"keys": [[frame, value], ...]} for multi-point trajectories —
+            # arcs, bounces, settle-down endings. "custom" mode lands here.
             for path, curve in (schema.get("curves") or {}).items():
-                axis = {"rotation_x": 0, "rotation_y": 1, "rotation_z": 2}.get(path)
-                if axis is not None:
-                    obj.rotation_euler[axis] = float(curve.get("from", 0))
-                    obj.keyframe_insert("rotation_euler", index=axis, frame=fs)
-                    obj.rotation_euler[axis] = float(curve.get("to", 0))
-                    obj.keyframe_insert("rotation_euler", index=axis, frame=fe)
-                    _key_interp_linear(obj)
+                chan = _CURVE_CHANNELS.get(path)
+                if chan is None:
+                    continue
+                attr, idx = chan
+                keys = curve.get("keys")
+                if keys:
+                    for item in keys:
+                        try:
+                            fr, val = int(item[0]), float(item[1])
+                        except (TypeError, ValueError, IndexError):
+                            continue
+                        getattr(obj, attr)[idx] = val
+                        obj.keyframe_insert(attr, index=idx, frame=fr)
+                else:
+                    getattr(obj, attr)[idx] = float(curve.get("from", 0))
+                    obj.keyframe_insert(attr, index=idx, frame=fs)
+                    getattr(obj, attr)[idx] = float(curve.get("to", 0))
+                    obj.keyframe_insert(attr, index=idx, frame=fe)
+                interp = str(curve.get("interpolation", "")).lower()
+                _key_interp_mode(obj, attr, "LINEAR" if interp == "linear" else "BEZIER")
         keyed.append(tname)
     scene.timeline_markers.clear()
     scene.timeline_markers.new("start", frame=fs)
@@ -3021,6 +3289,8 @@ BUILDERS = {
     "create_text_label": op_create_text_label,
     "create_decal_plane": op_create_decal_plane,
     "create_curve_tube": op_create_curve_tube,
+    "create_net_lattice": op_create_net_lattice,
+    "create_silhouette_ring": op_create_silhouette_ring,
     "create_fastener_pattern": op_create_fastener_pattern,
     "create_panel_cutlines": op_create_panel_cutlines,
     "create_grille": op_create_grille,

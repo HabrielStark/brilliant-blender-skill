@@ -83,10 +83,25 @@ thing, not as generic filler geometry.
 | `create_text_label` | real `FONT` text for brand marks, labels, callouts |
 | `create_decal_plane` | thin plates, badges, decals, interface cards |
 | `create_curve_tube` | real bevelled `CURVE` cables, wires, hoses, trim |
+| `create_net_lattice` | woven nets/grids on a quad patch — goals, fences, hammocks, screens — two strand families + sag + border ropes, never a curtain of parallel strings |
+| `create_silhouette_ring` | deterministic distant-mass ring/arc — stadium bowl, skyline, treeline — closes the horizon so night/wide scenes don't render into void |
 | `create_fastener_pattern` | screws, bolts, rivets, washers |
 | `create_panel_cutlines` | seams, engraved/raised panel cuts, product split lines |
 | `create_grille` | vents, speaker grilles, heatsinks, intakes |
 | `create_surface_microdetails` | raised micro-lines, veins, edge glints, machined hairlines, texture relief geometry |
+
+`create_net_lattice` takes `corners` = four `[x,y,z]` points in **BL, BR, TR,
+TL** order; `u_count` strands run bottom→top, `v_count` run left→right.
+`sag` + `sag_direction` produce the natural droop a taut net shows
+mid-patch; `border_radius` adds the thicker perimeter rope real nets have.
+For a goal/box net, build the back plane *and* the top/side drapes as
+separate patches sharing the frame edges — a single flat patch behind the
+mouth reads as a fence, not a goal.
+
+`create_silhouette_ring` places `count` seeded boxes on an arc
+(`angle_start`→`angle_end`, degrees) at `radius` from `center`, heights
+between `height_min`/`height_max`. Pair it with a `world.gradient` so the
+masses silhouette against a lit horizon instead of floating on black.
 
 Inspection exposes these objects with `craft_role`, `craft_group`, and
 `craft_source`. If a product/mechanical brief needs labels, screws, vents,

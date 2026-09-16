@@ -142,10 +142,11 @@ state. Preserve the last valid artifacts and state the exact next decision.
    are not portable Skill output and may fail validation before Blender opens.
 8. **Use authored craft operations for visible detail:** prefer
    `create_text_label`, `create_decal_plane`, `create_curve_tube`,
+   `create_net_lattice`, `create_silhouette_ring`,
    `create_fastener_pattern`, `create_panel_cutlines`, `create_grille`, and
    `create_surface_microdetails` over generic cubes for labels, badges, cables,
-   screws, seams, vents, intakes, surface veins, machined hairlines, glints, and
-   close-up hard-surface or organic read.
+   woven nets, horizon masses, screws, seams, vents, intakes, surface veins,
+   machined hairlines, glints, and close-up hard-surface or organic read.
 9. **Add anti-slop detail before scoring:** named subject parts, bevels/weighted
    normals, at least 3 purposeful material families, visible micro-detail for
    product/mechanical subjects, and camera framing that leaves safe margins.
@@ -182,8 +183,8 @@ state. Preserve the last valid artifacts and state the exact next decision.
    separate spheres or low-poly cuboid markers that merely have good names.
    For material/shader briefs, read `references/lighting-materials.md` and use
    structured procedural fields such as `color_ramp`, `wave`,
-   `roughness_variation`, `edge_wear`, `scanlines`, `anisotropic`, and
-   `image_textures`. A flat Principled BSDF is not a premium material, even when
+   `roughness_variation`, `edge_wear`, `scanlines`, `voronoi_panels`,
+   `grid_alpha`, `anisotropic`, and `image_textures`. A flat Principled BSDF is not a premium material, even when
    the color/roughness values are named well. Texture briefs must use real or
    generated image texture slots with declared roles such as `base_color`,
    `roughness`, `normal`, `emission`, `alpha`, or `displacement`; use mapping
