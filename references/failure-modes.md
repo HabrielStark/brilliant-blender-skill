@@ -39,6 +39,8 @@ The behaviours this skill exists to prevent, and the guard that catches each.
 | Skyline/night buildings render as pale glowing slabs | never put full-face `emission` on facades — use `window_grid` material: dark wall + per-cell lit windows |
 | Firework/energy burst reads as flat "angel wings" | `energy_burst_streaks` fans in the XY plane — add a `tilt_degrees: 90, fan_degrees: 360` ring for the camera-facing disc plus tilted rings for depth |
 | Climbing projectile invisible during ascent | bright `create_curve_tube` trail along the flight path + scale-keyed grow, not just a smoke wisp |
+| Sky/cloud masses read as floating discs ("UFOs") | discrete flattened blobs float visibly — build a LAYERED sky instead: a low bank sunk to the waterline/horizon + a very wide very thin `cloud_top` canopy whose edges exit the frame (scale X/Y ×2.5+, Z ×0.3) so it reads as overcast deck, not blobs |
+| Light beam ends mid-air as a glowing blob | extend the beam cone past the horizon/frame edge (scale its long axis, recenter so the base stays on the lamp pivot) — a tip that never leaves the frame reads as a comet head; an end-on beam aimed at camera will still read as a flash, which is physically correct |
 | Material assigned in a later batch silently missing after save/reopen | create the material and assign it in the SAME job (`create_material.target_objects` or same-batch `assign_material`) — orphan materials don't persist |
 | Camera aim applied before a camera animation | keyframed location/rotation overrides the raw transform — `reframe_camera` AFTER `create_animation`, then `set_active_camera` before rendering |
 | Raw Python as the normal path | structured-operation allowlist; raw Python disabled by default |
